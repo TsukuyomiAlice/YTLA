@@ -1,0 +1,7 @@
+{
+  "type_name": "占卜",
+  "type_description": "探寻命运",
+
+  "plumYi_subtype_name": "梅花易数",
+  "plumYi_subtype_description": "中国传统占卜中使用数字和《周易》的占卜方式"
+}

@@ -171,6 +171,11 @@ import '@/features/sample/registries/sampleModuleRegistry'
 // timer
 import '@/features/timer/registries/timerModuleRegistry'
 
+// divination
+import { plumYiModuleFlowManager } from '@/features/divination/flows/plumYiFlowManager'
+registerModuleFlowManager('plumYi', plumYiModuleFlowManager)
+import '@/features/divination/registries/plumYiModuleRegistry'
+
 //// initialize layout
 import { useLayoutStore } from '@/core/frame/services/layoutStore.ts'
 const layoutStore = useLayoutStore()

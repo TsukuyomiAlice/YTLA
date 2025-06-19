@@ -130,7 +130,7 @@ export const {module_sub_type}ModuleFlowManager = new {first_letter_upper(module
     # 4. 创建Module Registry（模块注册表）
     # 实现模块的全局注册和配置管理
     registry_content = \
-f'''import {{ createModuleRegistry }} from '@/core/registries/moduleRegistry.ts'
+f'''import {{ createModuleRegistry }} from '@/core/modules/registries/moduleRegistry.ts'
 import {{ defineAsyncComponent }} from 'vue'
 import {{ {module_sub_type}ModuleFlowManager }} from '@/features/{module_type}/flows/{module_sub_type}FlowManager'
 
