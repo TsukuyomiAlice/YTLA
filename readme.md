@@ -1,7 +1,7 @@
 # YTLA (Your T&L Assistant)
 
-> **YTLA 是一个模块化 Web 应用平台**  
-> 用户可通过自由组合 **模块（Modules）** 和 **卡片（Cards）** 快速构建个性化工作流。
+> **YTLA 是一个模块化 Web 应用平台框架**  
+> 用户可通过自由生成并组合 **模块（Modules）** 和 **卡片（Cards）** 快速构建个性化工作流。
 
 ---
 
@@ -40,11 +40,11 @@
 git clone https://github.com/TsukuyomiAlice/YTLA
 
 # 后端依赖安装
-cd backend
+cd ytla_plan
 pip install -r requirements.txt
 
 # 前端依赖安装
-cd ../frontend
+cd ../ytla_plan_vue
 npm install
 
 # 启动开发环境
