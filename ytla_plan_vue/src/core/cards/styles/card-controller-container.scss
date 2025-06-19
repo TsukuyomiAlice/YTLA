@@ -1,0 +1,104 @@
+.controller-container {
+  padding: 0.75rem 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: relative;
+  background: white;
+  z-index: 10;
+}
+
+.filter-group {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.controller-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controller-title {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.5em;
+  color: gray;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.button-group {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+  flex-wrap: nowrap;
+}
+
+.add-button {
+  flex-shrink: 0;
+  padding: 0.5rem 0.75rem;
+  font-size: 1.2em;
+  background: #f0f2f5;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background: #e1e4e8;
+    transform: translateY(-1px);
+  }
+
+  .icon {
+    font-size: 1.2em;
+  }
+
+  .text {
+    font-size: 0.9em;
+    color: #444;
+  }
+}
+
+.add-button.active {
+  background: #e1e4e8;
+  box-shadow: inset 0 0.1rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+.add-now-btn {
+  background: #f39c12;
+  color: white;
+
+  &:hover {
+    background: #e67e22;
+  }
+}
+
+@media (max-width: 768px) {
+  .controller-container {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .button-group {
+    gap: 0.5rem;
+  }
+}
+
+.toggle-expand {
+  padding: 0.25rem 0.5rem;
+  background: #f0f2f5;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.9em;
+
+  &:hover {
+    background: #e1e4e8;
+  }
+}

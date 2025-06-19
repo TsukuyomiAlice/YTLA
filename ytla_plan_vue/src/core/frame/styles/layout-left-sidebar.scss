@@ -1,0 +1,31 @@
+@use 'layout-variables' as vars;
+
+.left-sidebar {
+  left: 0;
+  width: vars.$layout-left-width;
+  background: #2c3e50;
+  z-index: 100;
+
+  .app-container.swapped & {
+    left: auto;
+    right: 0;
+  }
+
+  .left-nav {
+    padding: 1rem 0;
+
+    button {
+      width: 100%;
+      padding: 1rem 0;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background: rgba(255,255,255,0.1);
+      }
+    }
+  }
+}

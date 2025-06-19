@@ -1,0 +1,39 @@
+// src/styles/layout-right-sidebar.scss
+@use 'layout-variables' as vars;
+
+.right-sidebar {
+  width: #{vars.$layout-right-width};
+  background: #f8f9fa;
+  border-left: 1px solid #ddd;
+  right: calc(-1 * #{vars.$layout-right-width});
+  display: flex;
+  flex-direction: column;
+
+  .app-container.right-visible:not(.swapped) & {
+    right: 0;
+  }
+
+  .app-container.right-visible.swapped & {
+    left: 0;
+    right: auto;
+  }
+
+  .app-container.swapped & {
+    right: auto;
+    left: calc(-1 * #{vars.$layout-right-width});
+    border-left: none;
+    border-right: 1px solid #ddd;
+  }
+
+  .sidebar-header {
+    border-bottom: 1px solid #ddd;
+    position: relative;
+  }
+
+  .sidebar-body {
+    position: relative;
+    flex: 1;
+    overflow-y: auto;
+    height: auto;
+  }
+}

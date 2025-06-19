@@ -1,0 +1,15 @@
+@use 'layout-variables' as vars;
+
+.app-container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  transition: vars.$layout-transition-speed;
+}

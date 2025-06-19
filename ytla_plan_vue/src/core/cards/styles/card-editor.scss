@@ -1,0 +1,38 @@
+.expand-area {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 50vh;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(2px);
+  z-index: 100;
+  border-top: 1px solid #eee;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  transform: none;
+
+  &.editor-slide-enter-active,
+  &.editor-slide-leave-active {
+    transition: all 0.3s ease;
+  }
+  &.editor-slide-enter-from,
+  &.editor-slide-leave-to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.expand-area {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .expand-area {
+    height: 50vh;
+    width: 100%;
+  }
+}

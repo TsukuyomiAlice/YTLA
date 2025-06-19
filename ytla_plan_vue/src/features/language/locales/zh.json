@@ -1,0 +1,61 @@
+{
+  "type_name": "语言",
+  "type_description": "学一门新语言，或者是了解自己对一种语言的掌握程度",
+
+  "rating_subtype_name": "评级",
+  "rating_subtype_description": "了解你的语言能力",
+
+  "dictionary_subtype_name": "字典",
+  "dictionary_subtype_description": "检索词汇",
+
+  "assessment_subtype_name": "评估",
+  "assessment_subtype_description": "了解你对一种语言的掌握程度",
+
+  "vocabulary_subtype_name": "词汇",
+  "vocabulary_subtype_description": "学习新单词或词组",
+
+  "readings_subtype_name": "阅读",
+  "readings_subtype_description": "带有辅助地阅读外语文章",
+
+  "learning_subtype_name": "学习",
+  "learning_subtype_description": "学一门新语言",
+
+  "ReturnToPlanDashboardButton_001": "返回计划仪表盘",
+
+  "AssessmentMain_00_000": "估算你的词汇量",
+  "AssessmentMain_00_001": "这个评估由两个部分组成。第一部分由固定的两个轮次组成，而第二部分是动态调整的",
+  "AssessmentMain_00_002": "在你完成评估后，你将获得一个 CEFR 评估等级，它将告诉你你现在的词汇掌握度",
+  "AssessmentMain_00_003": "这只是一个快速评估，所以这个评估的具体数字将不会显示",
+  "AssessmentMain_00_004": "结果仅作为参考，它不会给你的正式考试带来任何影响",
+  "AssessmentMain_00_005": "所以不需要为此作弊，对自己真诚即可",
+  "AssessmentMain_00_006": "如果准备好了，可以点击下面的按钮开始评估",
+
+  "AssessmentMain_11_000": "评估 1 - A",
+  "AssessmentMain_11_001": "如果你知道单词或短语的至少一个含义，请勾选该框。如果你不确定它的准确含义，请留空",
+  "AssessmentMain_12_000": "评估 1 - B",
+  "AssessmentMain_21_000": "PART 2",
+  "AssessmentMain_21_001": "请选择与此最相关的单词或短语: ",
+  "AssessmentMain_99_000": "结果",
+  "AssessmentMain_99_001": "你的CEFR词汇等级可能为: ",
+
+  "AssessmentSub_00_000": "关于该评估",
+  "AssessmentSub_00_001": "评估词汇来源:",
+  "AssessmentSub_00_002": "评估第一部分参考:",
+  "AssessmentStartButton_001": "开始评估",
+  "AssessmentNextButton_001": "下一步",
+  "AssessmentRetakeButton_001": "重新评估",
+  "AssessmentFinishButton_001": "结束评估",
+
+  "DictionarySub_00_000": "关于本字典",
+  "DictionarySub_00_001": "本词典来源于",
+  "DictionarySub_00_002": "牛津高阶英汉双解词典，第八版",
+
+  "VocabularyMain_00_000": "单词本",
+  "VocabularyMain_00_001": "新的单词本",
+  "VocabularyMain_00_002": "还未创建单词本",
+  "VocabularyAddButton_001": "创建新的单词本",
+  "VocabularyOpenButton_001": "打开",
+
+  "VocabularyMain_01_001": "没有单词",
+  "VocabularyReturnButton_001": "返回"
+}

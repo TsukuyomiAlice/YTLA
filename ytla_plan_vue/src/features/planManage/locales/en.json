@@ -1,0 +1,63 @@
+{
+  "type_name": "Plan Manage",
+  "type_description": "The driver modules in YTLA",
+
+  "WelcomePageMain_00_000": "Hola！",
+  "WelcomePageMain_00_001": "Here is YTLA, an (AI-evaluated enterprise-level) web application designed for better... slacking off???",
+  "WelcomePageMain_00_002": "You can use it for various purposes",
+  "WelcomePageMain_00_003": "Studying, reading books, creating photo albums or galleries, workflow collaboration, brainstorming ideas, even visually managing your digital resources and data",
+  "WelcomePageMain_00_004": "......And of course (MUST HAVE!!!) slacking off, that's the most important!",
+  "WelcomePageMain_00_005": "You can also explore its architecture and try to develop your own tool components",
+  "WelcomePageMain_00_100": "Create New Plan",
+
+  "WelcomePageMain_01_000": "Understanding YTLA",
+  "WelcomePageMain_01_001": "YTLA offers two main content types: Templates and Cards",
+  "WelcomePageMain_01_002": "Templates help you efficiently handle various tasks, while Cards provide diverse auxiliary functions",
+  "WelcomePageMain_01_003": "Check the adjacent page for detailed features of Templates and Cards",
+  "WelcomePageMain_01_004": "Create Plans (think of them as folders) to organize templates into different projects",
+  "WelcomePageMain_01_005": "Use the left taskbar to quickly switch between your Plans",
+  "WelcomePageMain_01_006": "Hover over the top-right corner — see the floating black bar? Click it to open the Card Panel",
+  "WelcomePageMain_01_007": "Find the 'Add Card' button at the top of the Card Panel to quickly create new Cards",
+
+  "WelcomePageMain_02_000": "Technique Stacks",
+  "WelcomePageMain_02_001": "Frontend：VUE(pinia + vite + i18n), ts, scss",
+  "WelcomePageMain_02_002": "Backend：Python flask",
+  "WelcomePageMain_02_003": "Data storage using：SQLite",
+
+  "PlanManagerMain_00_000": "Welcome back!",
+  "PlanManagerMain_00_001": "Have you got a new idea? Or just want to check your plans?",
+  "PlanManagerSub_00_000": "Select a plan to see details",
+  "PlanManagerSub_00_001": "If you want to make a new plan, click",
+  "PlanManagerSub_00_002": "If you want to know more about YTLA, click",
+
+  "PlanDashBoardMain_00_000": "Plan Dashboard",
+  "PlanDashBoardMain_00_001": "Ungrouped Modules",
+  "PlanDashBoardMain_00_100": "You must activate this plan first to view the dashboard",
+  "PlanDashBoardSub_00_100": "Deactivate",
+  "PlanDashBoardSub_00_101": "Reactivate",
+  "PlanDashBoardSub_00_102": "Delete",
+
+  "AddModuleMain_00_000": "Add New Module",
+  "AddModuleSub_00_000": "Select a module to add",
+  "AddModuleSub_00_001": "Enter the name of the module",
+  "AddModuleSub_00_002": "module name",
+  "AddModuleSub_00_003": "module description",
+  "AddModuleSub_00_100": "Add",
+  "AddModuleSub_00_101": "Cancel",
+
+  "AddModuleMain_concept_time": "Time",
+  "AddModuleMain_concept_space": "Space",
+  "AddModuleMain_concept_definition": "Definition",
+  "AddModuleMain_concept_relation": "Relation",
+  "AddModuleMain_concept_interaction": "Interaction",
+
+  "MoveToWelcomeButton_001": "Go To Introduction Page",
+  "AddPlanButton_001": "Create New Plan",
+  "AddPlanModuleButton_001": "Add New Module Group",
+  "AddPlanModuleButton_002": "New Module Group",
+  "AddModuleButton_001": "Add New Module",
+  "ReturnToPlanDashboardButton_001": "Return To Plan Dashboard",
+  "ReturnToPlanButton_001": "Return To Plan",
+  "SwitchToModuleConceptButton_001": "List modules by concept",
+  "SwitchToModuleTypeButton_001": "List modules by type"
+}

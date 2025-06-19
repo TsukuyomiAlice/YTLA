@@ -1,0 +1,19 @@
+{
+  "type_name": "基础",
+  "type_description": "YTLA中的基本概念结构",
+
+  "definition_subtype_name": "定义",
+  "definition_subtype_description": "在YTLA中的一个事物、一个事件或一个开始",
+
+  "time_subtype_name": "时间",
+  "time_subtype_description": "时间、频率、或者其它描述它的方式",
+
+  "space_subtype_name": "空间",
+  "space_subtype_description": "空间、位置、或者其它描述它的方式",
+
+  "relation_subtype_name": "关联",
+  "relation_subtype_description": "两者、多重的关系",
+
+  "interaction_subtype_name": "交互",
+  "interaction_subtype_description": "采取的行动，或者事件的效果"
+}

@@ -1,0 +1,11 @@
+// src/styles/layout.scss
+@use 'layout-variables' as vars;
+@use 'layout-base';
+@use 'layout-left-sidebar';
+@use 'layout-right-sidebar';
+@use 'layout-main-content';
+
+:root {
+  --left-width: #{vars.$layout-left-width};
+  --right-width: #{vars.$layout-right-width};
+}

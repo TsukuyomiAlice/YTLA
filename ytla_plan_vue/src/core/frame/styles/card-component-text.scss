@@ -1,0 +1,82 @@
+[contenteditable="true"] {
+  cursor: text;
+  outline: none;
+  border-radius: 0.25rem;
+  padding: 0.1rem 0.3rem;
+  transition: background 0.3s;
+
+  &:focus {
+    background: rgba(33, 150, 243, 0.05);
+    box-shadow: 0 0 0 1px rgba(33, 150, 243, 0.3);
+  }
+
+  &:empty::before {
+    content: attr(data-placeholder);
+    color: #999;
+    display: block;
+  }
+}
+
+.editable-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  min-width: 80px;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 1rem;
+}
+
+.editable-title-large {
+  font-size: 1.2rem;
+  font-weight: 500;
+  min-width: 10rem;
+  max-width: 20rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 1.2rem;
+}
+
+.editable-description {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  border: 1px solid transparent;
+  min-height: 1.2rem;
+
+  &:empty::before {
+    content: attr(data-placeholder);
+    display: block;
+    height: 1.2rem;
+  }
+}
+
+.editable-description-large {
+  color: #666;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  border: 1px solid transparent;
+  min-height: 1.2rem;
+
+  &:empty::before {
+    content: attr(data-placeholder);
+    display: block;
+    height: 1.2rem;
+  }
+}
+
+.description-text, .description-text-large {
+  color: #666;
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+}
+
+.description-text {
+  font-size: 0.85em;
+}
+
+.description-text-large {
+  font-size: 1.2rem;
+}

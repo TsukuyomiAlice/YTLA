@@ -1,0 +1,271 @@
+@use 'layout-variables' as vars;
+
+.main-content-layer {
+  height: 100vh;
+  position: relative;
+  left: #{vars.$layout-left-width};
+  width: calc(100vw - #{vars.$layout-left-width});
+  display: flex;
+  //border: 1px solid #333;
+  overflow: hidden;
+  transition: all vars.$layout-transition-speed;
+
+  &.swapped {
+    left: 0;
+  }
+
+  // 通用子元素样式
+  > * {
+    flex: 0 0 auto;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+
+  // 主内容区域基础样式
+  .main-content-frame {
+    position: fixed;
+    width: calc(100vw - #{vars.$layout-left-width});
+    // border: 1px solid #333;
+    padding: 1rem;
+  }
+
+  // 右侧子区域基础样式
+  .main-content-sub-frame {
+    position: fixed;
+    width: #{vars.$layout-right-width};
+    // border: 1px solid #666;
+    background: white;
+    right: calc(#{vars.$layout-right-width} * -1);
+    padding: 1rem;
+  }
+
+  // 模式1：始终单栏
+  &.mode-1 {
+    .main-content-sub-frame {
+      display: none;
+    }
+  }
+
+  // 模式2：始终双栏
+  &.mode-2 {
+    .main-content-frame {
+      width: calc(100vw - #{vars.$layout-left-width} - #{vars.$layout-right-width});
+      left: #{vars.$layout-left-width};
+    }
+
+    .main-content-sub-frame {
+      right: 0;
+    }
+
+    &.swapped {
+      .main-content-frame {
+        left: 0;
+      }
+
+      .main-content-sub-frame {
+        right: #{vars.$layout-left-width};
+      }
+    }
+  }
+
+  // 模式3：始终双栏
+  &.mode-3 {
+    .main-content-frame {
+      width: calc(100vw - #{vars.$layout-left-width} - #{vars.$layout-right-width});
+    }
+
+    .main-content-sub-frame {
+      right: 0;
+    }
+
+    &.swapped {
+      .main-content-frame {
+        width: calc(100vw - #{vars.$layout-left-width} - #{vars.$layout-right-width});
+        right: #{vars.$layout-left-width};
+      }
+
+      .main-content-sub-frame {
+        left: 0;
+        order: -1; // 子元素顺序调整
+      }
+    }
+  }
+
+  // 模式4：响应侧边栏状态
+  &.mode-4 {
+
+    .main-content-frame {
+      width: calc(100vw - #{vars.$layout-left-width});
+      left: #{vars.$layout-left-width};
+    }
+
+    .main-content-sub-frame {
+      right: 0;
+    }
+
+    &.show-sub-frame {
+      .main-content-frame {
+        width: calc(100vw - #{vars.$layout-left-width});
+        right: #{vars.$layout-left-width};
+      }
+
+      .main-content-sub-frame {
+        right: 0;
+      }
+    }
+
+    &.swapped {
+      .main-content-frame {
+        left: 0;
+      }
+
+      .main-content-sub-frame {
+        right: #{vars.$layout-left-width};
+      }
+    }
+  }
+
+  // 模式5：响应侧边栏状态+位置交换
+  &.mode-5 {
+
+    .main-content-frame {
+      width: calc(100vw - #{vars.$layout-left-width});
+    }
+
+    .main-content-sub-frame {
+      right: 0;
+    }
+
+    &.show-sub-frame {
+      .main-content-frame {
+        width: calc(100vw - #{vars.$layout-left-width});
+      }
+
+      .main-content-sub-frame {
+        right: 0;
+      }
+    }
+
+    // 交换位置时的特殊处理
+    &.swapped {
+      .main-content-frame {
+        width: calc(100vw - #{vars.$layout-left-width});
+        right: #{vars.$layout-left-width};
+      }
+
+      .main-content-sub-frame {
+        left: 0;
+      }
+
+      &.show-sub-frame {
+        .main-content-frame {
+          width: calc(100vw - #{vars.$layout-left-width});
+        }
+
+        .main-content-sub-frame {
+          order: -1; // 子元素顺序调整
+        }
+      }
+    }
+  }
+
+  // 模式6：可展开模式
+  &.mode-6 {
+    .main-content-frame {
+      width: calc(100vw - #{vars.$layout-left-width} - #{vars.$layout-right-width});
+      left: #{vars.$layout-left-width};
+    }
+
+    .main-content-sub-frame {
+      right: 0;
+    }
+
+    // 展开模式（单栏）
+    &.expanded {
+      .main-content-frame {
+        width: calc(100vw - #{vars.$layout-left-width});
+      }
+
+      .main-content-sub-frame {
+        right: calc(#{vars.$layout-right-width} * -1);
+      }
+    }
+
+    &.swapped {
+      .main-content-frame {
+        left: 0;
+      }
+
+      .main-content-sub-frame {
+        right: #{vars.$layout-left-width};
+      }
+    }
+  }
+
+  // 模式7：可展开模式+位置交换
+  &.mode-7 {
+    .main-content-frame {
+      width: calc(100vw - #{vars.$layout-left-width} - #{vars.$layout-right-width});
+    }
+
+    .main-content-sub-frame {
+      right: 0;
+    }
+
+    // 展开模式（单栏）
+    &.expanded {
+      .main-content-frame {
+        width: calc(100vw - #{vars.$layout-left-width});
+      }
+
+      .main-content-sub-frame {
+        right: calc(#{vars.$layout-right-width} * -1);
+      }
+    }
+
+    // 模式7交换位置处理
+    &.swapped {
+      .main-content-frame {
+        width: calc(100vw - #{vars.$layout-left-width} - #{vars.$layout-right-width});
+        right: #{vars.$layout-left-width};
+      }
+
+      .main-content-sub-frame {
+        left: 0;
+        order: -1; // 子元素顺序调整
+      }
+
+      &.expanded {
+        .main-content-frame {
+          width: calc(100vw - #{vars.$layout-left-width});
+        }
+
+        .main-content-sub-frame {
+          right: 100vw;
+        }
+      }
+    }
+  }
+}
+
+// 展开按钮样式
+.expand-button {
+  position: fixed;
+  top: 33.3%;
+  height: 33.3%;
+  z-index: 200;
+  padding: 0.6rem 0.3rem;
+  background: rgba(24, 24, 24, 0.7);
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: vars.$layout-transition-speed;
+  white-space: nowrap;
+  opacity: 0.1;
+
+  &:hover {
+    opacity: 1;
+  }
+}
