@@ -17,7 +17,7 @@
 
 <script setup lang="ts">
 const emit = defineEmits(['next', 'cancelEdit'])
-import type { CardSubType } from '@/core/cards/types/cardTypes.ts'
+import type { CardSubType } from '@/core/sideCards/types/cardTypes.ts'
 
 
 const selectSubType = (subType: CardSubType) => {
@@ -40,5 +40,5 @@ const props = defineProps<{
 </script>
 
 <style lang="scss" scoped>
-@use '@/core/cards/styles/card-editor-flow-selector';
+@use '@/core/sideCards/styles/card-editor-flow-selector';
 </style>

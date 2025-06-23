@@ -1,4 +1,4 @@
-import { createCardRegistry } from '@/core/cards/registries/cardRegistry.ts'
+import { createCardRegistry } from '@/core/sideCards/registries/cardRegistry.ts'
 import type { Component } from 'vue'
 import type {
   TimerCardSubType,
@@ -9,7 +9,7 @@ import type {
 import AlarmCard from '@/features/timer/components/cards/AlarmCard.vue'
 import CountCard from '@/features/timer/components/cards/CountCard.vue'
 import CountdownCard from '@/features/timer/components/cards/CountdownCard.vue'
-import SideCard from '@/core/cards/components/SideCard.vue'
+import SideCard from '@/core/sideCards/components/SideCard.vue'
 
 /**
  * 计时器卡片注册表（基于通用cardRegistry实现）

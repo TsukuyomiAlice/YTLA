@@ -102,5 +102,5 @@ const handleSubmit = async () => {
 </script>
 
 <style lang="scss" scoped>
-@use '@/core/cards/styles/card-editor-flow-navigator';
+@use '@/core/sideCards/styles/card-editor-flow-navigator';
 </style>

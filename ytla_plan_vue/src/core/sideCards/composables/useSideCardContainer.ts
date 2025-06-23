@@ -1,6 +1,6 @@
 import { ref, computed, onMounted } from 'vue'
-import type { BaseCard } from '@/core/cards/types/cardTypes.ts'
-import { useCardStore } from '@/core/cards/stores/cardStore.ts'
+import type { BaseCard } from '@/core/sideCards/types/cardTypes.ts'
+import { useCardStore } from '@/core/sideCards/stores/cardStore.ts'
 import { useSideCardEditor } from './useSideCardEditor.ts'
 
 export const useSideCardContainer = () => {

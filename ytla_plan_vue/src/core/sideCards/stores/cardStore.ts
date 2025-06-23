@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
-import type { BaseCard } from '@/core/cards/types/cardTypes.ts'
-import { CardService } from '@/core/cards/services/cardService.ts'
+import type { BaseCard } from '@/core/sideCards/types/cardTypes.ts'
+import { CardService } from '@/core/sideCards/services/cardService.ts'
 
 // 依赖注入配置
 const API_BASE = import.meta.env.VITE_API_BASE

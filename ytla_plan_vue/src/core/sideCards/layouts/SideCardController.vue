@@ -35,9 +35,9 @@
 
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { useCardStore } from '@/core/cards/stores/cardStore.ts'
-import { useSideCardEditor } from '@/core/cards/composables/useSideCardEditor.ts'
-import SideCardEditor from '@/core/cards/layouts/SideCardEditor.vue'
+import { useCardStore } from '@/core/sideCards/stores/cardStore.ts'
+import { useSideCardEditor } from '@/core/sideCards/composables/useSideCardEditor.ts'
+import SideCardEditor from '@/core/sideCards/layouts/SideCardEditor.vue'
 
 const cardStore = useCardStore()
 const cards = computed(() => cardStore.cards)
@@ -68,5 +68,5 @@ const clearFilter = () => {
 </script>
 
 <style lang="scss" scoped>
-@use '@/core/cards/styles/card-controller-container';
+@use '@/core/sideCards/styles/card-controller-container';
 </style>

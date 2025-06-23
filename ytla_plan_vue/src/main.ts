@@ -20,7 +20,7 @@ createPlanCardRegistry()
 import { createModuleCardRegistry } from '@/core/modules/registries/moduleCardRegistry.ts'
 createModuleCardRegistry()
 
-import { createCardRegistry } from '@/core/cards/registries/cardRegistry.ts'
+import { createCardRegistry } from '@/core/sideCards/registries/cardRegistry.ts'
 
 import { registerModuleFlowManager } from '@/core/modules/flows/moduleFlowRegistry.ts'
 
@@ -34,7 +34,7 @@ import { relaxCardRegistry } from '@/features/relax/registries/relaxCardRegistry
 createCardRegistry('relax', relaxCardRegistry)
 
 // card editor flow (for creation and edit) registry
-import { registerCardEditorFlowManager } from '@/core/cards/flows/cardEditorFlowRegistry.ts'
+import { registerCardEditorFlowManager } from '@/core/sideCards/flows/cardEditorFlowRegistry.ts'
 import { sampleCardEditorFlowManager } from '@/features/sample/flows/sampleCardFlowManager.ts'
 registerCardEditorFlowManager('sample', sampleCardEditorFlowManager)
 import { timerCardEditorFlowManager } from '@/features/timer/flows/timerCardFlowManager.ts'

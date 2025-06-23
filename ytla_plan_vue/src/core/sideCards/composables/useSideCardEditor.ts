@@ -1,8 +1,8 @@
 import { ref, shallowRef } from 'vue'
 import type { Component } from 'vue'
-import { getCardEditorFlowManager, getDefaultCardEditorFlowManager } from '@/core/cards/flows/cardEditorFlowRegistry.ts'
-import { useCardStore } from '@/core/cards/stores/cardStore.ts'
-import type { BaseCard, CardSubType, CardType } from '@/core/cards/types/cardTypes.ts'
+import { getCardEditorFlowManager, getDefaultCardEditorFlowManager } from '@/core/sideCards/flows/cardEditorFlowRegistry.ts'
+import { useCardStore } from '@/core/sideCards/stores/cardStore.ts'
+import type { BaseCard, CardSubType, CardType } from '@/core/sideCards/types/cardTypes.ts'
 
 const editorState = ref({
   mode: null as 'create' | 'edit' | null,

@@ -70,7 +70,7 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
-import SideCardEditorFlowNavigator from '@/core/cards/layouts/SideCardEditorFlowNavigator.vue'
+import SideCardEditorFlowNavigator from '@/core/sideCards/layouts/SideCardEditorFlowNavigator.vue'
 import { formatDateTime, formatDateTimeNoSecs, currentDateTime } from '@/core/frame/utils/timeUtils.ts'
 import type { AlarmCardData, TimerCardSubType } from '@/features/timer/types/timerCardTypes'
 

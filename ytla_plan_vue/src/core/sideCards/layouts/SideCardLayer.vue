@@ -16,10 +16,10 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useCardStore } from '@/core/cards/stores/cardStore.ts'
-import SideCardController from '@/core/cards/layouts/SideCardController.vue'
-import SideCardContainer from '@/core/cards/layouts/SideCardContainer.vue'
-import SideCardEditor from '@/core/cards/layouts/SideCardEditor.vue'
+import { useCardStore } from '@/core/sideCards/stores/cardStore.ts'
+import SideCardController from '@/core/sideCards/layouts/SideCardController.vue'
+import SideCardContainer from '@/core/sideCards/layouts/SideCardContainer.vue'
+import SideCardEditor from '@/core/sideCards/layouts/SideCardEditor.vue'
 
 const cardStore = useCardStore()
 const cards = computed(() => cardStore.cards)

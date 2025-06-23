@@ -158,5 +158,5 @@ onMounted(async () => {
 </script>
 
 <style lang="scss" scoped>
-@use '@/core/cards/styles/card-container';
+@use '@/core/sideCards/styles/card-container';
 </style>

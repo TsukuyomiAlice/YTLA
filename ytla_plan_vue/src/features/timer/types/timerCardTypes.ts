@@ -1,4 +1,4 @@
-import type { BaseCard, CardSubType, CardType } from '@/core/cards/types/cardTypes.ts'
+import type { BaseCard, CardSubType, CardType } from '@/core/sideCards/types/cardTypes.ts'
 
 export type TimerCardType = 'timer';
 export type TimerCardSubType = 'alarm' | 'count' | 'countdown' ;

@@ -19,7 +19,7 @@
 
 <script setup lang="ts">
 import { ref, watch } from 'vue'
-import { useSideCardEditor } from '@/core/cards/composables/useSideCardEditor.ts'
+import { useSideCardEditor } from '@/core/sideCards/composables/useSideCardEditor.ts'
 
 const props = defineProps<{
   cardContainer: {
@@ -45,5 +45,5 @@ watch(
 </script>
 
 <style lang="scss" scoped>
-@use '@/core/cards/styles/card-editor';
+@use '@/core/sideCards/styles/card-editor';
 </style>

@@ -54,7 +54,7 @@
 
 <script setup lang="ts">
 import PanelLayer from '@/core/frame/layouts/PanelLayer.vue'
-import SideCardLayer from '@/core/cards/layouts/SideCardLayer.vue'
+import SideCardLayer from '@/core/sideCards/layouts/SideCardLayer.vue'
 import ModuleLayer from '@/core/modules/layouts/ModuleLayer.vue'
 import { usePersistence } from '@/core/frame/composables/usePersistence.ts'
 

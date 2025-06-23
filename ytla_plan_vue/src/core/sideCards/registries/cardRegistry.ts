@@ -1,5 +1,5 @@
 import type { Component } from 'vue'
-import type { CardType } from '@/core/cards/types/cardTypes.ts'
+import type { CardType } from '@/core/sideCards/types/cardTypes.ts'
 
 export interface CardRegistry<T extends string = string> {
   components: Record<T, Component>

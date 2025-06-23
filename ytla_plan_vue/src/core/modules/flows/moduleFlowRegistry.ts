@@ -1,5 +1,5 @@
 import type { ModuleFlowManager } from '@/core/frame/types/flowManagerTypes.ts'
-import type { CardType } from '@/core/cards/types/cardTypes.ts'
+import type { CardType } from '@/core/sideCards/types/cardTypes.ts'
 
 const flowModuleManagers = new Map<CardType, ModuleFlowManager>()
 

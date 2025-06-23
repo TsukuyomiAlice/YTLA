@@ -224,7 +224,7 @@
 </template>
 
 <script setup lang="ts">
-import type { TagString } from '@/core/cards/types/cardTypes.ts'
+import type { TagString } from '@/core/sideCards/types/cardTypes.ts'
 const props = withDefaults(defineProps<{
   cardType?: string
   cardId?: number
@@ -272,7 +272,7 @@ const emit = defineEmits<{
   (e: 'edit', id: number): void
 }>()
 
-import { useSideCard } from '@/core/cards/composables/useSideCard.ts'
+import { useSideCard } from '@/core/sideCards/composables/useSideCard.ts'
 const {
   isExpanded,
   titleRef,
@@ -313,7 +313,7 @@ const {
 </script>
 
 <style lang="scss" scoped>
-@use '@/core/cards/styles/sidecard';
+@use '@/core/sideCards/styles/sidecard';
 @use '@/core/frame/styles/card-component-button';
 @use '@/core/frame/styles/card-component-icon';
 @use '@/core/frame/styles/card-component-tags';

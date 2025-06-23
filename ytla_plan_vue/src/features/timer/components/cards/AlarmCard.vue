@@ -66,8 +66,8 @@
 
 <script setup lang="ts">
 import { computed, ref, onMounted, onBeforeUnmount, watch } from 'vue'
-import { useSideCardEditor } from '@/core/cards/composables/useSideCardEditor.ts'
-import SideCard from '@/core/cards/components/SideCard.vue'
+import { useSideCardEditor } from '@/core/sideCards/composables/useSideCardEditor.ts'
+import SideCard from '@/core/sideCards/components/SideCard.vue'
 import type { AlarmCardData } from '@/features/timer/types/timerCardTypes'
 
 // 提示音

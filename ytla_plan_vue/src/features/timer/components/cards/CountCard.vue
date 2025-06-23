@@ -105,8 +105,8 @@
 
 <script setup lang="ts">
 import { computed, ref, onMounted, onBeforeUnmount, inject } from 'vue'
-import { useSideCardEditor } from '@/core/cards/composables/useSideCardEditor.ts'
-import SideCard from '@/core/cards/components/SideCard.vue'
+import { useSideCardEditor } from '@/core/sideCards/composables/useSideCardEditor.ts'
+import SideCard from '@/core/sideCards/components/SideCard.vue'
 import type { CountCardData } from '@/features/timer/types/timerCardTypes'
 
 const props = defineProps({

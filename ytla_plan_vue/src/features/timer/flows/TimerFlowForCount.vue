@@ -73,7 +73,7 @@
 
 <script setup lang="ts">
 import { ref, reactive, computed, onMounted } from 'vue'
-import EditorFlowNavigator from '@/core/cards/layouts/SideCardEditorFlowNavigator.vue'
+import EditorFlowNavigator from '@/core/sideCards/layouts/SideCardEditorFlowNavigator.vue'
 import type { CountCardData, TimerCardSubType } from '@/features/timer/types/timerCardTypes'
 import { formatDateTime, formatDateTimeNoSecs, currentDateTime } from '@/core/frame/utils/timeUtils.ts'
 

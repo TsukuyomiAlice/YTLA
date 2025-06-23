@@ -21,10 +21,10 @@
 
 <script setup lang="ts">
 import { computed, nextTick, watch, ref, onMounted } from 'vue'
-import { useSideCardContainer } from '@/core/cards/composables/useSideCardContainer.ts'
+import { useSideCardContainer } from '@/core/sideCards/composables/useSideCardContainer.ts'
 import { useMasonryLayout } from '@/core/frame/composables/useMasonryLayout.ts'
-import { getCardRegistry } from '@/core/cards/registries/cardRegistry.ts'
-import { useCardStore } from '@/core/cards/stores/cardStore.ts'
+import { getCardRegistry } from '@/core/sideCards/registries/cardRegistry.ts'
+import { useCardStore } from '@/core/sideCards/stores/cardStore.ts'
 import { usePersistence } from '@/core/frame/composables/usePersistence.ts'
 
 const { getPersistence, setPersistence } = usePersistence()
@@ -159,5 +159,5 @@ onMounted(async () => {
 </script>
 
 <style lang="scss" scoped>
-@use '@/core/cards/styles/card-container';
+@use '@/core/sideCards/styles/card-container';
 </style>

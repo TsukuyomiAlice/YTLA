@@ -75,8 +75,8 @@
   </SideCard>
 </template>
 <script setup lang="ts">
-import { useSideCardEditor } from '@/core/cards/composables/useSideCardEditor.ts'
-import SideCard from '@/core/cards/components/SideCard.vue'
+import { useSideCardEditor } from '@/core/sideCards/composables/useSideCardEditor.ts'
+import SideCard from '@/core/sideCards/components/SideCard.vue'
 import type { BaseRelaxCard } from '@/features/relax/types/relaxCardTypes'
 
 const props = defineProps({
