@@ -12,6 +12,6 @@ createModuleRegistry('sample', {
   subComponent: defineAsyncComponent(() =>
     import('@/features/sample/modules/sample/SampleSub.vue')
   ),
-  displayMode: 5,
+  displayMode: 7,
   flowManager: sampleModuleFlowManager,
 })
