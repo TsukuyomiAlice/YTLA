@@ -1,5 +1,4 @@
 import { defineStore } from 'pinia'
-import * as THREE from 'three'
 
 interface SphereState {
   theta: number // 弧度值
