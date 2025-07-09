@@ -3,5 +3,7 @@
   "type_description": "学习、研究、可视化",
 
   "sphere_subtype_name": "球面",
-  "sphere_subtype_description": "关于球面的研究"
+  "sphere_subtype_description": "关于球面的研究",
+
+  "ReturnToPlanDashboardButton_001": "返回计划仪表盘"
 }
