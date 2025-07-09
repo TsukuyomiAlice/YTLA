@@ -1,21 +1,21 @@
-import { createCardRegistry } from '@/core/sideCards/registries/cardRegistry.ts'
 import type { Component } from 'vue'
+import type { CardRegistry } from '@/core/sideCards/registries/cardRegistry.ts'
 import type {
   TimerCardSubType,
   AlarmCardData,
   CountCardData,
   CountdownCardData
 } from '@/features/timer/types/timerCardTypes'
-import AlarmCard from '@/features/timer/components/cards/AlarmCard.vue'
-import CountCard from '@/features/timer/components/cards/CountCard.vue'
-import CountdownCard from '@/features/timer/components/cards/CountdownCard.vue'
+import AlarmCard from '@/features/timer/components/cards/alarm/AlarmCard.vue'
+import CountCard from '@/features/timer/components/cards/count/CountCard.vue'
+import CountdownCard from '@/features/timer/components/cards/countdown/CountdownCard.vue'
 import SideCard from '@/core/sideCards/components/SideCard.vue'
 
 /**
  * 计时器卡片注册表（基于通用cardRegistry实现）
  * 注册到全局命名空间 'timer'
  */
-export const timerCardRegistry = createCardRegistry('timer', {
+export const timerCardConfig = <CardRegistry> {
   // 1. 组件映射
   components: {
     default: SideCard as Component,
@@ -78,7 +78,7 @@ export const timerCardRegistry = createCardRegistry('timer', {
         return baseProps
     }
   }
-})
+}
 
 // 4. 类型导出（供外部使用）
 export type {

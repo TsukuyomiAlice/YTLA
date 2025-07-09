@@ -16,10 +16,10 @@ export class RelaxCardEditorFlowManager implements CardEditorFlowManager {
 
 export const relaxCardEditorFlowManager = new RelaxCardEditorFlowManager()
 
-relaxCardEditorFlowManager.initialStep = markRaw(defineAsyncComponent(() => import('@/features/relax/flows/RelaxFlowSelector.vue')))
+relaxCardEditorFlowManager.initialStep = markRaw(defineAsyncComponent(() => import('@/features/relax/components/cards/RelaxCardSelector.vue')))
 
 relaxCardEditorFlowManager.registerFlow('wordle', [
-  markRaw(defineAsyncComponent(() => import('@/features/relax/flows/RelaxFlowForWordle.vue')))
+  markRaw(defineAsyncComponent(() => import('@/features/relax/components/cards/wordle/WordleFlow.vue')))
 ])
 
 declare module '@/features/relax/flows/relaxCardFlowManager.ts' {

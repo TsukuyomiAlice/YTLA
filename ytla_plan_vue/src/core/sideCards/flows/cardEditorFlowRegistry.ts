@@ -3,7 +3,7 @@ import type { CardType } from '@/core/sideCards/types/cardTypes.ts'
 
 const flowCardEditorManagers = new Map<CardType, CardEditorFlowManager>()
 
-export function registerCardEditorFlowManager(
+export function createCardEditorFlowRegistry(
   cardType: CardType,
   manager: CardEditorFlowManager
 ) {

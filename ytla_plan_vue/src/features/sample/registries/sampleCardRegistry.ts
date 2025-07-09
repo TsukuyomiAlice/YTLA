@@ -1,21 +1,21 @@
-import { createCardRegistry } from '@/core/sideCards/registries/cardRegistry.ts'
 import type { Component } from 'vue'
+import type { CardRegistry } from '@/core/sideCards/registries/cardRegistry.ts'
 import type {
   SampleCardSubType,
   Sample1CardData,
   Sample2CardData,
   Sample3CardData
 } from '@/features/sample/types/sampleCardTypes'
-import Sample1Card from '@/features/sample/components/cards/Sample1Card.vue'
-import Sample2Card from '@/features/sample/components/cards/Sample2Card.vue'
-import Sample3Card from '@/features/sample/components/cards/Sample3Card.vue'
+import Sample1Card from '@/features/sample/components/cards/sample1/Sample1Card.vue'
+import Sample2Card from '@/features/sample/components/cards/sample2/Sample2Card.vue'
+import Sample3Card from '@/features/sample/components/cards/sample3/Sample3Card.vue'
 import SideCard from '@/core/sideCards/components/SideCard.vue'
 
 /**
  * 计时器卡片注册表（基于通用cardRegistry实现）
  * 注册到全局命名空间 'sample'
  */
-export const sampleCardRegistry = createCardRegistry('sample', {
+export const sampleCardConfig = <CardRegistry> {
   // 1. 组件映射
   components: {
     default: SideCard as Component,
@@ -71,7 +71,7 @@ export const sampleCardRegistry = createCardRegistry('sample', {
         return baseProps
     }
   }
-})
+}
 
 // 4. 类型导出（供外部使用）
 export type {

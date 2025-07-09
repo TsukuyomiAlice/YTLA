@@ -1,17 +1,17 @@
 import type { ModuleFlowManager } from '@/core/frame/types/flowManagerTypes.ts'
-import type { CardType } from '@/core/sideCards/types/cardTypes.ts'
+import type { ModuleSubType } from '@/core/modules/types/moduleTypes.ts'
 
-const flowModuleManagers = new Map<CardType, ModuleFlowManager>()
+const flowModuleManagers = new Map<ModuleSubType, ModuleFlowManager>()
 
-export function registerModuleFlowManager(
-  moduleType: string,
+export function createModuleFlowRegistry (
+  moduleSubType: ModuleSubType,
   manager: ModuleFlowManager
 ) {
-  flowModuleManagers.set(moduleType, manager)
+  flowModuleManagers.set(moduleSubType, manager)
 }
 
-export function getModuleFlowManager(moduleType: string): ModuleFlowManager | undefined {
-  return flowModuleManagers.get(moduleType)
+export function getModuleFlowManager(moduleSubType: ModuleSubType): ModuleFlowManager | undefined {
+  return flowModuleManagers.get(moduleSubType)
 }
 
 export function getDefaultModuleFlowManager(): ModuleFlowManager {

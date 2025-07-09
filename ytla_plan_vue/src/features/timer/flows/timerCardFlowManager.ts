@@ -22,16 +22,16 @@ declare module '@/features/timer/flows/timerCardFlowManager.ts' {
 
 export const timerCardEditorFlowManager = new TimerCardEditorFlowManager()
 
-timerCardEditorFlowManager.initialStep = markRaw(defineAsyncComponent(() => import('@/features/timer/flows/TimerFlowSelector.vue')))
+timerCardEditorFlowManager.initialStep = markRaw(defineAsyncComponent(() => import('@/features/timer/components/cards/TimerCardSelector.vue')))
 
 timerCardEditorFlowManager.registerFlow('alarm', [
-  markRaw(defineAsyncComponent(() => import('@/features/timer/flows/TimerFlowForAlarm.vue')))
+  markRaw(defineAsyncComponent(() => import('@/features/timer/components/cards/alarm/AlarmFlow.vue')))
 ])
 
 timerCardEditorFlowManager.registerFlow('count', [
-  markRaw(defineAsyncComponent(() => import('@/features/timer/flows/TimerFlowForCount.vue')))
+  markRaw(defineAsyncComponent(() => import('@/features/timer/components/cards/count/CountFlow.vue')))
 ])
 
 timerCardEditorFlowManager.registerFlow('countdown', [
-  markRaw(defineAsyncComponent(() => import('@/features/timer/flows/TimerFlowForCountdown.vue')))
+  markRaw(defineAsyncComponent(() => import('@/features/timer/components/cards/countdown/CountdownFlow.vue')))
 ])

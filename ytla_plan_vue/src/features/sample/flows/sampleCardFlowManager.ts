@@ -14,22 +14,16 @@ export class SampleCardEditorFlowManager implements CardEditorFlowManager {
   }
 }
 
-declare module '@/features/sample/flows/sampleCardFlowManager.ts' {
-  export interface SampleCardEditorFlowManager {
-    getSteps(cardSubType: SampleCardSubType): Component[]
-  }
-}
-
 export const sampleCardEditorFlowManager = new SampleCardEditorFlowManager()
-sampleCardEditorFlowManager.initialStep = markRaw(defineAsyncComponent(() => import('@/features/sample/flows/SampleFlowSelector.vue')))
+sampleCardEditorFlowManager.initialStep = markRaw(defineAsyncComponent(() => import('@/features/sample/components/cards/SampleCardSelector.vue')))
 sampleCardEditorFlowManager.registerFlow('sample1', [
-  markRaw(defineAsyncComponent(() => import('@/features/sample/flows/SampleFlowForSample1.vue')))
+  markRaw(defineAsyncComponent(() => import('@/features/sample/components/cards/sample1/Sample1Flow.vue')))
 ])
 sampleCardEditorFlowManager.registerFlow('sample2', [
-  markRaw(defineAsyncComponent(() => import('@/features/sample/flows/SampleFlowForSample2.vue')))
+  markRaw(defineAsyncComponent(() => import('@/features/sample/components/cards/sample2/Sample2Flow.vue')))
 ])
 sampleCardEditorFlowManager.registerFlow('sample3', [
-  markRaw(defineAsyncComponent(() => import('@/features/sample/flows/SampleFlowForSample3_1.vue'))),
-  markRaw(defineAsyncComponent(() => import('@/features/sample/flows/SampleFlowForSample3_2.vue'))),
-  markRaw(defineAsyncComponent(() => import('@/features/sample/flows/SampleFlowForSample3_3.vue')))
+  markRaw(defineAsyncComponent(() => import('@/features/sample/components/cards/sample3/Sample3Flow_1.vue'))),
+  markRaw(defineAsyncComponent(() => import('@/features/sample/components/cards/sample3/Sample3Flow_2.vue'))),
+  markRaw(defineAsyncComponent(() => import('@/features/sample/components/cards/sample3/Sample3Flow_3.vue')))
 ])

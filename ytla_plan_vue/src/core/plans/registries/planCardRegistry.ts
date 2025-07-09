@@ -6,10 +6,10 @@ export interface PlanCardRegistry {
   getPlanProps: (plan: any) => Record<string, any>
 }
 
-const registryStore = new Map<string, PlanCardRegistry>()
+const planRegistryStore = new Map<string, PlanCardRegistry>()
 
 export const createPlanCardRegistry = (): void => {
-  registryStore.set('plan', {
+  planRegistryStore.set('plan', {
     components: { default: PlanCard },
     getPlanProps: (plan) => ({
       planId: plan.plan_id,
@@ -23,6 +23,6 @@ export const createPlanCardRegistry = (): void => {
 }
 
 export const getPlanCardRegistry = () => {
-  return registryStore.get('plan')
+  return planRegistryStore.get('plan')
 }
 
