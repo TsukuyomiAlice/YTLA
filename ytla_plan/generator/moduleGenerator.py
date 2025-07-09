@@ -98,7 +98,7 @@ f'''<template>
     flow_manager_content = \
 f'''import type {{ Component }} from 'vue'
 import {{ defineAsyncComponent }} from 'vue'
-import type {{ ModuleFlowManager }} from '@/core/types/flowManagerTypes.ts'
+import type {{ ModuleFlowManager }} from '@/core/frame/types/flowManagerTypes.ts'
 
 export class {first_letter_upper(module_sub_type)}ModuleFlowManager implements ModuleFlowManager {{
   private flows = new Map<string, Component[]>()

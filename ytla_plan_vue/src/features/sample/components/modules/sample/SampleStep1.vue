@@ -3,7 +3,6 @@
     <h2>主内容步骤 1</h2>
     <p>这是主内容的第一个步骤的详细信息。</p>
   </div>
-  <SphereContainer/>
   <return-to-plan-dashboard-button/>
 </template>
 
@@ -11,7 +10,6 @@
 // 这里可以添加步骤 1 的逻辑
 import ReturnToPlanDashboardButton
   from '@/features/planManage/components/ui/ReturnToPlanDashboardButton.vue'
-import SphereContainer from '@/core/functions/components/SphereContainer.vue'
 </script>
 
 <style scoped lang="scss">

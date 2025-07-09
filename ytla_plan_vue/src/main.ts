@@ -176,6 +176,11 @@ import { plumYiModuleFlowManager } from '@/features/divination/flows/plumYiFlowM
 registerModuleFlowManager('plumYi', plumYiModuleFlowManager)
 import '@/features/divination/registries/plumYiModuleRegistry'
 
+// mathematics
+import { sphereModuleFlowManager } from '@/features/mathematics/flows/sphereFlowManager'
+registerModuleFlowManager('sphere', sphereModuleFlowManager)
+import '@/features/mathematics/registries/sphereModuleRegistry'
+
 //// initialize layout
 import { useLayoutStore } from '@/core/frame/services/layoutStore.ts'
 const layoutStore = useLayoutStore()

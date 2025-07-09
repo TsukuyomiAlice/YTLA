@@ -7,10 +7,10 @@ createModuleRegistry('sample', {
   moduleSubType: 'sample',
   moduleConcept: 'space',
   mainComponent: defineAsyncComponent(() =>
-    import('@/features/sample/modules/sample/Sample.vue')
+    import('@/features/sample/components/modules/sample/Sample.vue')
   ),
   subComponent: defineAsyncComponent(() =>
-    import('@/features/sample/modules/sample/SampleSub.vue')
+    import('@/features/sample/components/modules/sample/SampleSub.vue')
   ),
   displayMode: 7,
   flowManager: sampleModuleFlowManager,

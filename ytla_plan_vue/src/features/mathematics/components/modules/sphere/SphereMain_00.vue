@@ -24,12 +24,12 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
 import * as THREE from 'three'
-import { useSphere } from '@/core/functions/composables/useSphere.ts'
-import { useStaticAxes } from '@/core/functions/composables/useStaticAxes'
+import { useSphere } from '@/features/mathematics/composables/useSphere.ts'
+import { useStaticAxes } from '@/features/mathematics/composables/useStaticAxes.ts'
 const container = ref<HTMLElement | null>(null)
 const canvas = ref<HTMLCanvasElement | null>(null)
 
-import { useSphereStore } from '@/core/functions/stores/sphereStore'
+import { useSphereStore } from '@/features/mathematics/stores/sphereStore.ts'
 const sphereStore = useSphereStore()
 
 const radString = (rad: number) => `${rad.toFixed(4)} rad`
@@ -161,7 +161,7 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
-@use '@/core/functions/styles/sphere-container';
+@use '@/features/mathematics/styles/sphere-container';
 .angle-info {
   position: absolute;
   top: 10px;

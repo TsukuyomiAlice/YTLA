@@ -15,11 +15,11 @@ export class SampleModuleFlowManager implements ModuleFlowManager {
 
 export const sampleModuleFlowManager = new SampleModuleFlowManager()
 sampleModuleFlowManager.registerFlow('sample-main-steps', [
-  defineAsyncComponent(() => import('@/features/sample/modules/sample/SampleStep1.vue')),
-  defineAsyncComponent(() => import('@/features/sample/modules/sample/SampleStep2.vue')),
-  defineAsyncComponent(() => import('@/features/sample/modules/sample/SampleStep3.vue'))
+  defineAsyncComponent(() => import('@/features/sample/components/modules/sample/SampleStep1.vue')),
+  defineAsyncComponent(() => import('@/features/sample/components/modules/sample/SampleStep2.vue')),
+  defineAsyncComponent(() => import('@/features/sample/components/modules/sample/SampleStep3.vue'))
 ])
 sampleModuleFlowManager.registerFlow('sample-sub-steps', [
-  defineAsyncComponent(() => import('@/features/sample/modules/sample/SampleSubStep1.vue')),
-  defineAsyncComponent(() => import('@/features/sample/modules/sample/SampleSubStep2.vue'))
+  defineAsyncComponent(() => import('@/features/sample/components/modules/sample/SampleSubStep1.vue')),
+  defineAsyncComponent(() => import('@/features/sample/components/modules/sample/SampleSubStep2.vue'))
 ])
