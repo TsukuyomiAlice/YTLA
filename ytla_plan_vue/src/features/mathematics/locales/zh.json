@@ -5,5 +5,9 @@
   "sphere_subtype_name": "球面",
   "sphere_subtype_description": "关于球面的研究",
 
+  "matrix_subtype_name": "矩阵",
+  "matrix_subtype_description": "现行代数相关",
+
+
   "ReturnToPlanDashboardButton_001": "返回计划仪表盘"
 }

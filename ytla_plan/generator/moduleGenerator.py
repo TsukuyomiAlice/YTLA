@@ -127,14 +127,14 @@ export const {module_sub_type}ModuleFlowManager = new {first_letter_upper(module
     with open(module_path / "flows" / f"{module_sub_type}FlowManager.ts", "w", encoding="utf-8") as f:
         f.write(flow_manager_content)
 
-    # 4. 创建Module Registry（模块注册表）
+    # 4. 创建Module Config（模块注册表）
     # 实现模块的全局注册和配置管理
     registry_content = \
-f'''import {{ createModuleRegistry }} from '@/core/modules/registries/moduleRegistry.ts'
-import {{ defineAsyncComponent }} from 'vue'
+f'''import {{ defineAsyncComponent }} from 'vue'
+import type {{ ModuleRegistry }} from '@/core/modules/registries/moduleRegistry.ts'
 import {{ {module_sub_type}ModuleFlowManager }} from '@/features/{module_type}/flows/{module_sub_type}FlowManager'
 
-createModuleRegistry('{module_sub_type}', {{
+export const {module_sub_type}ModuleConfig = <ModuleRegistry> {{
   moduleType: '{module_type}',
   moduleSubType: '{module_sub_type}',
   moduleConcept: 'space',
@@ -146,17 +146,18 @@ createModuleRegistry('{module_sub_type}', {{
   ),
   displayMode: 7,
   flowManager: {module_sub_type}ModuleFlowManager
-}})
+}}
 '''
-    with open(module_path / "registries" / f"{module_sub_type}ModuleRegistry.ts", "w", encoding="utf-8") as f:
+    with open(module_path / "registries" / f"{module_sub_type}ModuleConfig.ts", "w", encoding="utf-8") as f:
         f.write(registry_content)
 
 
     # 输出需要在main.ts添加的代码
-    print("\n// 在 src/main.ts 中添加以下代码：")
+    print("\n// 在 @/features/{module_type}/registries/registries.ts 中添加以下代码：")
     print(f"import {{ {module_sub_type}ModuleFlowManager }} from '@/features/{module_type}/flows/{module_sub_type}FlowManager'")
-    print(f"registerModuleFlowManager('{module_sub_type}', {module_sub_type}ModuleFlowManager)")
-    print(f"import '@/features/{module_type}/registries/{module_sub_type}ModuleRegistry'")
+    print(f"createModuleFlowRegistry('{module_sub_type}', {module_sub_type}ModuleFlowManager)")
+    print(f"import {{ {module_sub_type}ModuleConfig }} from '@/features/{module_type}/registries/{module_sub_type}ModuleConfig'")
+    print(f"createModuleRegistry('{module_sub_type}', {module_sub_type}ModuleConfig)")
     print("\n// 在 locale 中添加以下代码：")
     print(f'"{ module_sub_type}_subtype_name": "{ module_sub_type}(按语种填写)",')
     print(f'"{ module_sub_type}_subtype_description": "(这里填入你的定义)",')

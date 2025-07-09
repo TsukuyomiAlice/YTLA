@@ -12,3 +12,8 @@ import { sphereModuleFlowManager } from '@/features/mathematics/flows/sphereFlow
 createModuleFlowRegistry('sphere', sphereModuleFlowManager)
 import { sphereModuleConfig } from '@/features/mathematics/registries/sphereModuleConfig.ts'
 createModuleRegistry('sphere', sphereModuleConfig)
+
+import { matrixModuleFlowManager } from '@/features/mathematics/flows/matrixFlowManager'
+createModuleFlowRegistry('matrix', matrixModuleFlowManager)
+import { matrixModuleConfig } from '@/features/mathematics/registries/matrixModuleConfig'
+createModuleRegistry('matrix', matrixModuleConfig)

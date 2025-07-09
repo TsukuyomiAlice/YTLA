@@ -5,5 +5,8 @@
   "sphere_subtype_name": "Sphere",
   "sphere_subtype_description": "The relative researches about sphere.",
 
+  "matrix_subtype_name": "Matrix",
+  "matrix_subtype_description": "About linear algebra.",
+
   "ReturnToPlanDashboardButton_001": "Return to Plan Dashboard"
 }
