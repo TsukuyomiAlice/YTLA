@@ -1,6 +1,5 @@
 <template>
   <user-story-sub_00/>
-
 </template>
 
 <script setup lang="ts">

@@ -10,5 +10,7 @@ import { timerCardConfig } from '@/features/timer/registries/timerCardRegistry'
 createCardRegistry('timer', timerCardConfig)
 
 // modules
-import { timerModuleConfig } from '@/features/timer/registries/timerModuleConfig.ts'
+import { timerModuleFlowManager } from '@/features/timer/flows/timerFlowManager'
+createModuleFlowRegistry('timer', timerModuleFlowManager)
+import { timerModuleConfig } from '@/features/timer/registries/timerModuleConfig'
 createModuleRegistry('timer', timerModuleConfig)

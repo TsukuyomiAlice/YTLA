@@ -28,18 +28,18 @@ import '@/features/planManage/registries/registries.ts'
 import '@/features/basic/registries/registries.ts'
 // agile
 import '@/features/agile/registries/registries.ts'
-// relax
-import '@/features/relax/registries/registries.ts'
+// mathematics
+import '@/features/mathematics/registries/registries.ts'
 // language
 import '@/features/language/registries/registries.ts'
+// relax
+import '@/features/relax/registries/registries.ts'
 // sample
 import '@/features/sample/registries/registries.ts'
 // timer
 import '@/features/timer/registries/registries.ts'
 // divination
 import '@/features/divination/registries/registries.ts'
-// mathematics
-import '@/features/mathematics/registries/registries.ts'
 
 //// initialize layout
 import { useLayoutStore } from '@/core/frame/services/layoutStore.ts'
