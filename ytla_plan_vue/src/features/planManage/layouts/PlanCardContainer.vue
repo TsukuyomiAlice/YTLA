@@ -1,6 +1,6 @@
 <template>
   <div class="masonry-container">
-    <div class="plan-masonry-grid">
+    <div :class="{ 'plan-masonry-grid': isMasonrySupported, 'plan-non-masonry-grid': !isMasonrySupported }">
       <transition-group name="fade-scale">
         <component
           :is="getComponent(plan)"
@@ -26,6 +26,10 @@ import { useMasonryLayout } from '@/core/frame/composables/useMasonryLayout.ts'
 import { getPlanCardRegistry } from '@/core/plans/registries/planCardRegistry.ts'
 import { usePlanCardStore } from '@/features/planManage/stores/planCardStore.ts'
 import { usePersistence } from '@/core/frame/composables/usePersistence.ts'
+
+const isMasonrySupported = ref(false)
+const userAgent = navigator.userAgent.toLowerCase()
+isMasonrySupported.value = userAgent.includes('safari') || userAgent.includes('firefox')
 
 const { getPersistence, setPersistence } = usePersistence()
 
@@ -158,5 +162,5 @@ onMounted(async () => {
 </script>
 
 <style lang="scss" scoped>
-@use '@/core/sideCards/styles/card-container';
+@use '@/features/planManage/styles/plan-card-container';
 </style>

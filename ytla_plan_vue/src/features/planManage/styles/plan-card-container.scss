@@ -5,13 +5,13 @@
   flex-direction: column;
 }
 
-.masonry-grid {
+.plan-masonry-grid {
   display: grid;
   gap: 0.5rem;
-  grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
 
   &:has(.card-container.--span-2:nth-last-child(odd)) {
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   }
 
   grid-template-rows: masonry;
@@ -37,7 +37,7 @@
     }
   }
 
-  @media (max-width: 440px) {
+  @media (max-width: 360px) {
     grid-template-columns: 1fr;
 
     .card-container {
@@ -46,22 +46,22 @@
   }
 }
 
-@media (max-width: 660px) {
-  .masonry-grid {
+@media (max-width: 720px) {
+  .plan-masonry-grid {
     --columns: 2;
   }
 }
 
-@media (max-width: 440px) {
-  .masonry-grid {
+@media (max-width: 360px) {
+  .plan-masonry-grid {
     --columns: 1;
   }
 }
 
-.non-masonry-grid {
+.plan-non-masonry-grid {
   display: grid;
   gap: 0.5rem;
-  grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
   position: relative;
   flex-shrink: 1;
   margin-top: 0.5rem;
@@ -75,7 +75,7 @@
     }
   }
 
-  @media (max-width: 440px) {
+  @media (max-width: 360px) {
     grid-template-columns: 1fr;
 
     .card-container {
@@ -84,14 +84,14 @@
   }
 }
 
-@media (max-width: 660px) {
-  .non-masonry-grid {
+@media (max-width: 720px) {
+  .plan-non-masonry-grid {
     --columns: 2;
   }
 }
 
-@media (max-width: 440px) {
-  .non-masonry-grid {
+@media (max-width: 360px) {
+  .plan-non-masonry-grid {
     --columns: 1;
   }
 }

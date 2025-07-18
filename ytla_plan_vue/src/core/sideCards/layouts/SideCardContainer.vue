@@ -1,6 +1,6 @@
 <template>
   <div class="masonry-container">
-    <div class="masonry-grid">
+    <div :class="{ 'masonry-grid': isMasonrySupported, 'non-masonry-grid': !isMasonrySupported }">
       <transition-group name="fade-scale">
         <component
           :is="getComponent(card)"
@@ -26,6 +26,11 @@ import { useMasonryLayout } from '@/core/frame/composables/useMasonryLayout.ts'
 import { getCardRegistry } from '@/core/sideCards/registries/cardRegistry.ts'
 import { useCardStore } from '@/core/sideCards/stores/cardStore.ts'
 import { usePersistence } from '@/core/frame/composables/usePersistence.ts'
+
+const isMasonrySupported = ref(false)
+const userAgent = navigator.userAgent.toLowerCase()
+isMasonrySupported.value = userAgent.includes('safari') || userAgent.includes('firefox')
+
 
 const { getPersistence, setPersistence } = usePersistence()
 
