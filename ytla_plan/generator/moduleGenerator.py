@@ -12,7 +12,7 @@ dataGenerator
 Dao层面控制
 Process层控制
 
-apiGenerator
+routeGenerator
 route层面和service层面联动
 
 """
@@ -82,7 +82,7 @@ def create_module_files(module_type, module_sub_type):
         with open(module_path / "components/modules" / module_sub_type / file, "w", encoding="utf-8") as f:
             f.write(
 f'''<template>
-                
+  
 </template>
 
 <script setup lang="ts">

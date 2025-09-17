@@ -13,6 +13,16 @@ def get_current_time() -> str:
     return time_string
 
 
+def get_current_time_cn() -> str:
+    """Get current time in standard format.
+
+    Returns:
+        str: Current time string in 'YYYY年MM月DD日 HH时MM分' format
+    """
+    time_string = time.strftime('%Y年%m月%d日 %H时%M分', time.localtime())
+    return time_string
+
+
 def show_current_time() -> None:
     """Print current time to console in standard format.
 
