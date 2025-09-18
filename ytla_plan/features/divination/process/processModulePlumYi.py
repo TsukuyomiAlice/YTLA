@@ -1,6 +1,6 @@
 # encode = utf-8
 
-from ytla_ai.client import contentHandler
+from ytla_ai.client import contentHandler, agentHandler
 from ytla_plan.core.basic.func import timeFormat
 from ytla_plan.features.divination.dataset import permanentCalendar
 
@@ -170,7 +170,7 @@ def hexagram_solver(input_date=None, debug=False, lan='cn'):
     prompt = f"""
 # 提示词：你将需要用{language}输出结果。 解卦时，需要按照以下格式进行
 ## 计算过程
-(一共八行。第一、二行为农历时间转换为序数。第三行为上卦计算。第四行为下卦计算。第五行为动爻计算。最后三行生成结果。)
+(一共八行。第一行为农历时间。第二行显示转换后的序数。第三行为上卦计算。第四行为下卦计算。第五行为动爻计算。最后三行生成结果。)
 (上卦取年月日数字之和除以8所余，下挂取年月日时之和除以8所余，动爻年月日时之和除以6所余; 
 年序数取地支序数; 月序数如果正处于闰月，则按该月算序数; 
 正确的年序数、月序数、日序数、时序数分别为{str(date[2])}、{str(date[3])}、{str(date[4])}、{str(date[5])}
@@ -182,10 +182,13 @@ def hexagram_solver(input_date=None, debug=False, lan='cn'):
 ## 解卦
 (一共四行。第一至第三行 解释本卦/互卦/变卦的卦象，并做具体说明; 第四行 补充动爻。)
 ## 综述和建议
-(描述内容应聚焦起卦时即将面对的形势，不要做出任何超过起卦时刻2个小时的长期或长时期预测，亦不要做出过于细致的安排。)
+# 描述内容应聚焦起卦时即将面对的形势。
+# 不要做出任何超过起卦时刻2个小时的长期或长时期预测，亦不要做出过于细致的安排。
+# 文字内容应包容，鼓励，积极。
 
 # 最后不要附带注脚。
-# 在每一章节内容之间空一行。同一章节之内不要有指定行数之外额外的空行。除章节标题行，每一行内容前用'·'记号作为前缀
+# 在每一章节内容之间空一行。同一章节之内不要有指定行数之外额外的空行。除章节标题行，每一行内容前用'·'记号作为前缀。
+# 每一章节的标题需要根据语言要求调整成对应的语种。
 
 现在是{date[0]}，{date[1]}。
 用农历时间按梅花易数解卦
@@ -200,5 +203,46 @@ def hexagram_solver(input_date=None, debug=False, lan='cn'):
 ==============================
         ''')
 
-    message = contentHandler.chat(prompt, [])
-    print(message[1].get('content'))
+    dummy_user_background = """
+## 用户下午没有提到特殊安排
+## 用户没有特殊情况
+"""
+
+    messages = agentHandler.append_background([], dummy_user_background)
+
+    print(f"""
+====== 用户背景 ======
+{dummy_user_background}
+=====================    
+    """)
+
+    message = contentHandler.chat(messages, prompt)
+    print(message[-1].get('content'))
+
+
+
+
+
+"""## 用户今天接下来有6个会议。
+### 13:00 - 13:30 简会
+### 14:00 - 14:45 项目A日常例会
+### 15:00 - 16:15 项目B周会
+### 17:00 - 17:30 项目C下午例会
+### 19:00 - 19:30 项目A客户汇报
+### 20:00 - 21:00 学习会
+"""
+
+"""
+## 用户下午没有提到特殊安排
+## 用户最近长期处于紧张状态。多次表示自己的心理压力比较大
+"""
+
+"""
+## 用户今天的安排
+### 12:00 - 13:00 午睡
+### 13:00 - 17:00 排位赛
+### 17:00 - 17:30 晚饭
+### 18:00 - 20:30 运动
+### 20:30 - 21:00 洗漱
+### 21:00 睡觉
+"""

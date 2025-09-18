@@ -3,7 +3,7 @@
 from ytla_ai.deepseek import caller
 
 
-def chat(text, messages: list):
+def chat(messages: list, text: str) -> list:
 
     # type check
     # prevent the null request

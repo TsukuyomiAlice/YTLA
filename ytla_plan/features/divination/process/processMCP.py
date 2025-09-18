@@ -1,6 +1,6 @@
 # encode = utf-8
 
-from ytla_ai.client import contentHandler
+from ytla_ai.client import contentHandler, agentHandler
 from ytla_plan.features.divination.process import processModulePlumYi
 
 '''
@@ -43,16 +43,16 @@ def chat_to_get_app(request_prompt: str):
 # 以下是你可以给用户提供的应用caller，以及具体的caller设置方法。
 ## 梅花易数
 ### 如果用户希望用时间占卜运势，可以使用梅花易数
-### 梅花易数的默认caller格式如下
+### 梅花易数的默认caller格式如下。如果用户没有提出要求，保持以下内容输出，不要作改动。
 {
   "request_app": "plum_yi",
   "request_params": {"input_date": None, "debug": False, "lan": "cn"}
 }
-如果用户不指定时间，或者指定的是现在时间，那么不用对'input_date'做处理
-如果用户指定了时间，必须把'input_date'的值设置为如下形式：
-'%Y年%m月%d日 %H时%M分'
+如果用户不指定时间，或者指定的是现在时间，不要对'input_date'做处理
+如果用户指定了时间，必须把'input_date'的值设置为如下形式：'%Y年%m月%d日 %H时%M分'
 如果用户希望看到排卦的过程，把'debug'的值设置为True(T必须大写)
 如果用户希望看到英语的结果，把'lan'的值设置为'en'
+如果user content使用的语言是英语并且没有作特殊说明，把'lan'的值设置为'en'
 ## 计时器
 ### 如果用户希望添加一个计时器，可以使用计时器
 ### 计时器的默认caller格式如下
@@ -69,8 +69,8 @@ def chat_to_get_app(request_prompt: str):
   "request_params": {}
 }
     """
-    messages = [{"role": "system", "content": system_prompt}]
-    message = contentHandler.chat(request_prompt, messages)
+    messages = agentHandler.append_agent([], system_prompt)
+    message = contentHandler.chat(messages, request_prompt)
     caller = message[2].get('content')
 
     print(f"""
@@ -83,4 +83,4 @@ caller: {caller}
 
 
 if __name__ == '__main__':
-    chat_to_get_app('请替我在这个时间上算一卦：2025年9月20日下午2点。我想看排卦的结果')
+    chat_to_get_app('Give me a devine for now')
