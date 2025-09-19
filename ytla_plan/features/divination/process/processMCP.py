@@ -48,7 +48,7 @@ def chat_to_get_app(request_prompt: str):
   "request_app": "plum_yi",
   "request_params": {"input_date": None, "debug": False, "lan": "cn"}
 }
-如果用户不指定时间，或者指定的是现在时间，不要对'input_date'做处理
+如果用户不指定时间，或者指定的是现在时间，不要对'input_date'做处理，保持为None
 如果用户指定了时间，必须把'input_date'的值设置为如下形式：'%Y年%m月%d日 %H时%M分'
 如果用户希望看到排卦的过程，把'debug'的值设置为True(T必须大写)
 如果用户希望看到英语的结果，把'lan'的值设置为'en'
@@ -83,4 +83,4 @@ caller: {caller}
 
 
 if __name__ == '__main__':
-    chat_to_get_app('Give me a devine for now')
+    chat_to_get_app('为我现在起一卦，我需要看排卦结果')

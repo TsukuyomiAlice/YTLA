@@ -3,7 +3,7 @@
 import os
 import sqlite3
 
-from core.frame.func import loggerConfig, utilConfigs
+from ytla_plan.core.frame.func import loggerConfig, utilConfigs
 
 
 def database_root(db_name):
