@@ -50,6 +50,8 @@ def trigram_generator_by_datetime(input_date=None):
     upper_gram = (year_order + month_order + day_order) % 8
     lower_gram = (year_order + month_order + day_order + hour_order) % 8
     change_gram = (year_order + month_order + day_order + hour_order) % 6
+    if change_gram == 0:
+        change_gram = 6
 
     return current_time, lunar_date, year_order, month_order, day_order, hour_order, upper_gram, lower_gram, change_gram
 
@@ -72,12 +74,16 @@ def hexagram_generator(upper_gram, lower_gram, change_gram):
             - original_hexagram_name: Name of the original hexagram
             - mutual_hexagram_name: Name of the mutual hexagram
             - change_hexagram_name: Name of the changed hexagram
+            - opposite_hexagram_name: Name of the opposite hexagram
+            - inverted_hexagram_name: Name of the inverted hexagram
     """
     original_hexagram = tuple(hexagram_data.trigram_order.get(upper_gram) + hexagram_data.trigram_order.get(lower_gram))
     original_hexagram_name = hexagram_data.hexagram_table.get(original_hexagram)[0]
 
-    mutual_hexagram = (original_hexagram[-5], original_hexagram[-4], original_hexagram[-3],
-                       original_hexagram[-4], original_hexagram[-3], original_hexagram[-2])
+    mutual_hexagram = (
+        original_hexagram[-5], original_hexagram[-4], original_hexagram[-3],
+        original_hexagram[-4], original_hexagram[-3], original_hexagram[-2]
+    )
     mutual_hexagram_name = hexagram_data.hexagram_table.get(mutual_hexagram)[0]
 
     change_hexagram = list(original_hexagram)
@@ -85,8 +91,21 @@ def hexagram_generator(upper_gram, lower_gram, change_gram):
     change_hexagram = tuple(change_hexagram)
     change_hexagram_name = hexagram_data.hexagram_table.get(change_hexagram)[0]
 
+    opposite_hexagram = (
+        int(not original_hexagram[0]), int(not original_hexagram[1]), int(not original_hexagram[2]),
+        int(not original_hexagram[3]), int(not original_hexagram[4]), int(not original_hexagram[5]),
+    )
+    opposite_hexagram_name = hexagram_data.hexagram_table.get(opposite_hexagram)[0]
+
+    inverted_hexagram =  (
+        original_hexagram[-1], original_hexagram[-2], original_hexagram[-3],
+        original_hexagram[-4], original_hexagram[-5], original_hexagram[-6]
+    )
+    inverted_hexagram_name = hexagram_data.hexagram_table.get(inverted_hexagram)[0]
+
     # return
-    return original_hexagram_name, mutual_hexagram_name, change_hexagram_name
+    return (original_hexagram_name, mutual_hexagram_name, change_hexagram_name, opposite_hexagram_name, inverted_hexagram_name,
+            original_hexagram, mutual_hexagram, change_hexagram, opposite_hexagram, inverted_hexagram)
 
 
 def hexagram_solver(input_date=None, debug=False, lan='cn'):
@@ -110,7 +129,7 @@ def hexagram_solver(input_date=None, debug=False, lan='cn'):
 ====== processor 调试信息 ======
 现在是{date[0]}，{date[1]}。
 正确的年序数、月序数、日序数、时序数分别为{str(date[2])}、{str(date[3])}、{str(date[4])}、{str(date[5])}
-正确的本卦、互卦、变卦的结果为{hexagram[0]}卦、{hexagram[1]}卦、{hexagram[2]}卦。
+正确的本卦、互卦、变卦、错卦、综卦的结果为{hexagram[0]}卦、{hexagram[1]}卦、{hexagram[2]}卦、{hexagram[3]}卦、{hexagram[4]}卦。
 ==============================
         ''')
 
@@ -129,4 +148,3 @@ def hexagram_solver(input_date=None, debug=False, lan='cn'):
 
     message = contentHandler.chat(messages, prompt)
     print(message[-1].get('content'))
-
