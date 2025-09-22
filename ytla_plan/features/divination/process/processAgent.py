@@ -3,15 +3,7 @@
 from ytla_ai.client import contentHandler, agentHandler
 from ytla_plan.features.divination.process import processModulePlumYi
 
-'''
-caller = {
-  'request_app': <request_app_name>,
-  'request_params': {<dict for the params>}
-}
-'''
-
-
-def stub_app_caller(caller: dict):
+def app_caller(caller: dict):
     request_app = caller['request_app']
     if request_app == 'plum_yi':
         params = caller['request_params']
@@ -54,7 +46,7 @@ def chat_to_get_app(request_prompt: str):
     message = contentHandler.chat(messages, request_prompt)
     caller = message[2].get('content')
 
-    stub_app_caller(eval(caller))
+    app_caller(eval(caller))
 
 
 if __name__ == '__main__':

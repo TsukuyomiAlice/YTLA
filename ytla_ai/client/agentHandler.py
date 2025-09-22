@@ -1,5 +1,14 @@
 # encode = utf-8
 
+"""
+SYSTEM PROMPT GUIDE
+This agent handler helps to add the following two kinds of system prompts:
+1 system agent
+2 user background agent
+You can only add either system agent or user background agent or both.
+But, if you want to add a system agent, you must call append_system_agent first and ensure the system agent prompt is listed in the 1st place.
+"""
+
 def append_system_agent(messages: list, agent_prompt: str) -> list:
     """
     Appends or updates an agent prompt to the system message in a conversation history.
