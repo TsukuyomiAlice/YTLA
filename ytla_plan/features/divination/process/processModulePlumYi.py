@@ -2,113 +2,33 @@
 
 from ytla_ai.client import contentHandler, agentHandler
 from ytla_plan.core.basic.func import timeFormat
-from ytla_plan.features.divination.dataset import permanentCalendar
+from ytla_plan.features.divination.dataset import permanentCalendar, hexagram_data
+from ytla_plan.features.divination.prompt import promptPlumYi
 
-trigram_order = {
-    0: [0, 0, 0], # 8坤☷
-    1: [1, 1, 1], # 1乾☰
-    2: [0, 1, 1], # 2兑☱
-    3: [1, 0, 1], # 3离☲
-    4: [0, 0, 1], # 4震☳
-    5: [1, 1, 0], # 5巽☴
-    6: [0, 1, 0], # 6坎☵
-    7: [1, 0, 0], # 7艮☶
-}
-
-hexagram_table = {
-    (1, 1, 1, 1, 1, 1): ['乾', 1, '䷀', '第一卦', '乾为天', '乾上乾下'],
-    (0, 0, 0, 0, 0, 0): ['坤', 2, '䷁', '第二卦', '坤为地', '坤上坤下'],
-    (0, 1, 0, 0, 0, 1): ['屯', 3, '䷂', '第三卦', '水雷屯', '坎上震下'],
-    (1, 0, 0, 0, 1, 0): ['蒙', 4, '䷃', '第四卦', '山水蒙', '艮上坎下'],
-    (0, 1, 0, 1, 1, 1): ['需', 5, '䷄', '第五卦', '水天需', '坎上乾下'],
-    (1, 1, 1, 0, 1, 0): ['讼', 6, '䷅', '第六卦', '天水讼', '乾上坎下'],
-    (0, 0, 0, 0, 1, 0): ['师', 7, '䷆', '第七卦', '地水师', '坤上坎下'],
-    (0, 1, 0, 0, 0, 0): ['比', 8, '䷇', '第八卦', '水地比', '坎上坤下'],
-    (1, 1, 0, 1, 1, 1): ['小畜', 9, '䷈', '第九卦', '风天小畜', '巽上乾下'],
-    (1, 1, 1, 0, 1, 1): ['履', 10, '䷉', '第十卦', '天泽履', '乾上兑下'],
-    (0, 0, 0, 1, 1, 1): ['泰', 11, '䷊', '第十一卦', '天地泰', '坤上乾下'],
-    (1, 1, 1, 0, 0, 0): ['否', 12, '䷋', '第十二卦', '地天否', '乾上坤下'],
-    (1, 1, 1, 1, 0, 1): ['同人', 13, '䷌', '第十三卦', '天火同人', '乾上离下'],
-    (1, 0, 1, 1, 1, 1): ['大有', 14, '䷍', '第十四卦', '火天大有', '离上乾下'],
-    (0, 0, 0, 1, 0, 0): ['谦', 15, '䷎', '第十五卦', '地山谦', '坤上艮下'],
-    (0, 0, 1, 0, 0, 0): ['豫', 16, '䷏', '第十六卦', '雷地豫', '震上坤下'],
-    (0, 1, 1, 0, 0, 1): ['随', 17, '䷐', '第十七卦', '泽雷随', '兑上震下'],
-    (1, 0, 0, 1, 1, 0): ['蛊', 18, '䷑', '第十八卦', '山风蛊', '艮上巽下'],
-    (0, 0, 0, 0, 1, 1): ['临', 19, '䷒', '第十九卦', '地泽临', '坤上兑下'],
-    (1, 1, 0, 0, 0, 0): ['观', 20, '䷓', '第二十卦', '风地观', '巽上坤下'],
-    (1, 0, 1, 0, 0, 1): ['噬嗑', 21, '䷔', '第二十一卦', '火雷噬嗑', '离上震下'],
-    (1, 0, 0, 1, 0, 1): ['贲', 22, '䷕', '第二十二卦', '山火贲', '艮上离下'],
-    (1, 0, 0, 0, 0, 0): ['剥', 23, '䷖', '第二十三卦', '山地剥', '艮上坤下'],
-    (0, 0, 0, 0, 0, 1): ['复', 24, '䷗', '第二十四卦', '地雷复', '坤上震下'],
-    (1, 1, 1, 0, 0, 1): ['无妄', 25, '䷘', '第二十五卦', '天雷无妄', '乾上震下'],
-    (1, 0, 0, 1, 1, 1): ['大畜', 26, '䷙', '第二十六卦', '山天大畜', '艮上乾下'],
-    (1, 0, 0, 0, 0, 1): ['颐', 27, '䷚', '第二十七卦', '山雷颐', '艮上震下'],
-    (0, 1, 1, 1, 1, 0): ['大过', 28, '䷛', '第二十八卦', '泽风大过', '兑上巽下'],
-    (0, 1, 0, 0, 1, 0): ['坎', 29, '䷜', '第二十九卦', '坎为水', '坎上坎下'],
-    (1, 0, 1, 1, 0, 1): ['离', 30, '䷝', '第三十卦', '离为火', '离上离下'],
-    (0, 1, 1, 1, 0, 0): ['咸', 31, '䷞', '第三十一卦', '泽山咸', '兑上艮下'],
-    (0, 0, 1, 1, 1, 0): ['恒', 32, '䷟', '第三十二卦', '雷风恒', '震上巽下'],
-    (1, 1, 1, 1, 0, 0): ['遁', 33, '䷠', '第三十三卦', '天山遁', '乾上艮下'],
-    (0, 0, 1, 1, 1, 1): ['大壮', 34, '䷡', '第三十四卦', '雷天大壮', '震上乾下'],
-    (1, 0, 1, 0, 0, 0): ['晋', 35, '䷢', '第三十五卦', '火地晋', '离上坤下'],
-    (0, 0, 0, 1, 0, 1): ['明夷', 36, '䷣', '第三十六卦', '地火明夷', '坤上离下'],
-    (1, 1, 0, 1, 0, 1): ['家人', 37, '䷤', '第三十七卦', '风火家人', '巽上离下'],
-    (1, 0, 1, 0, 1, 1): ['睽', 38, '䷥', '第三十八卦', '火泽睽', '离上兑下'],
-    (0, 1, 0, 1, 0, 0): ['蹇', 39, '䷦', '第三十九卦', '水山蹇', '坎上艮下'],
-    (0, 0, 1, 0, 1, 0): ['解', 40, '䷧', '第四十卦', '雷水解', '震上坎下'],
-    (1, 0, 0, 0, 1, 1): ['损', 41, '䷨', '第四十一卦', '山泽损', '艮上兑下'],
-    (1, 1, 0, 0, 0, 1): ['益', 42, '䷩', '第四十二卦', '风雷益', '巽上震下'],
-    (0, 1, 1, 1, 1, 1): ['夬', 43, '䷪', '第四十三卦', '泽天夬', '兑上乾下'],
-    (1, 1, 1, 1, 1, 0): ['姤', 44, '䷫', '第四十四卦', '天风姤', '乾上巽下'],
-    (0, 1, 1, 0, 0, 0): ['萃', 45, '䷬', '第四十五卦', '泽地萃', '兑上坤下'],
-    (0, 0, 0, 1, 1, 0): ['升', 46, '䷭', '第四十六卦', '地风升', '坤上巽下'],
-    (0, 1, 1, 0, 1, 0): ['困', 47, '䷮', '第四十七卦', '泽水困', '兑上坎下'],
-    (0, 1, 0, 1, 1, 0): ['井', 48, '䷯', '第四十八卦', '水风井', '坎上巽下'],
-    (0, 1, 1, 1, 0, 1): ['革', 49, '䷰', '第四十九卦', '泽火革', '兑上离下'],
-    (1, 0, 1, 1, 1, 0): ['鼎', 50, '䷱', '第五十卦', '火风鼎', '离上巽下'],
-    (0, 0, 1, 0, 0, 1): ['震', 51, '䷲', '第五十一卦', '震为雷', '震上震下'],
-    (1, 0, 0, 1, 0, 0): ['艮', 52, '䷳', '第五十二卦', '艮为山', '艮上艮下'],
-    (1, 1, 0, 1, 0, 0): ['渐', 53, '䷴', '第五十三卦', '风山渐', '巽上艮下'],
-    (0, 0, 1, 0, 1, 1): ['归妹', 54, '䷵', '第五十四卦', '雷泽归妹', '震上兑下'],
-    (0, 0, 1, 1, 0, 1): ['丰', 55, '䷶', '第五十五卦', '雷火丰', '震上离下'],
-    (1, 0, 1, 1, 0, 0): ['旅', 56, '䷷', '第五十六卦', '火山旅', '离上艮下'],
-    (1, 1, 0, 1, 1, 0): ['巽', 57, '䷸', '第五十七卦', '巽为风', '巽上巽下'],
-    (0, 1, 1, 0, 1, 1): ['兑', 58, '䷹', '第五十八卦', '兑为泽', '兑上兑下'],
-    (1, 1, 0, 0, 1, 0): ['涣', 59, '䷺', '第五十九卦', '风水涣', '巽上坎下'],
-    (0, 1, 0, 0, 1, 1): ['节', 60, '䷻', '第六十卦', '水泽节', '坎上兑下'],
-    (1, 1, 0, 0, 1, 1): ['中孚', 61, '䷼', '第六十一卦', '风泽中孚', '巽上兑下'],
-    (0, 0, 1, 1, 0, 0): ['小过', 62, '䷽', '第六十二卦', '雷山小过', '震上艮下'],
-    (0, 1, 0, 1, 0, 1): ['既济', 63, '䷾', '第六十三卦', '水火既济', '坎上离下'],
-    (1, 0, 1, 0, 1, 0): ['未济', 64, '䷿', '第六十四卦', '火水未济', '离上坎下'],
-}
-
-earthly_branches = {
-    '子': 1, '丑': 2, '寅': 3, '卯': 4, '辰': 5, '巳': 6,
-    '午': 7, '未': 8, '申': 9, '酉': 10, '戌': 11, '亥': 12,
-}
-
-hour_branch = {
-    '00': '子', '01': '丑', '02': '丑', '03': '寅', '04': '寅', '05': '卯',
-    '06': '卯', '07': '辰', '08': '辰', '09': '巳', '10': '巳', '11': '午',
-    '12': '午', '13': '未', '14': '未', '15': '申', '16': '申', '17': '酉',
-    '18': '酉', '19': '戌', '20': '戌', '21': '亥', '22': '亥', '23': '子',
-}
-
-month_branch = {
-    '正': 1, '二': 2, '三': 3, '四': 4, '五': 5, '六': 6,
-    '七': 7, '八': 8, '九': 9, '十': 10, '十一': 11, '十二': 12,
-}
-
-day_branch = {
-    '初一': 1, '初二': 2, '初三': 3, '初四': 4, '初五': 5, '初六': 6,
-    '初七': 7, '初八': 8, '初九': 9, '初十': 10, '十一': 11, '十二': 12,
-    '十三': 13, '十四': 14, '十五': 15, '十六': 16, '十七': 17, '十八': 18,
-    '十九': 19, '二十': 20, '廿一': 21, '廿二': 22, '廿三': 23, '廿四': 24,
-    '廿五': 25, '廿六': 26, '廿七': 27, '廿八': 28, '廿九': 29, '三十': 30,
-}
 
 def trigram_generator_by_datetime(input_date=None):
-    # generate the year_order, month_order, day_order, hour_order
+    """Generates trigrams based on datetime (current or provided) for Plum Blossom Yi Jing divination.
+
+    This function calculates the necessary components (year, month, day, hour orders) from a given or current datetime,
+    converts them to lunar calendar values, and computes the upper trigram, lower trigram, and change line (动爻) using
+    traditional Plum Blossom Yi Jing algorithms.
+
+    Parameters:
+        input_date (str, optional): A datetime string in the format "xxxx年xx月xx日 xx时xx分". If None, uses current time
+            retrieved via timeFormat.get_current_time_cn(). Defaults to None.
+
+    Returns:
+        tuple: A tuple containing 9 elements in the following order:
+            - current_time (str): The input or current datetime string used for calculation
+            - lunar_date (str): Corresponding lunar calendar date string (e.g., "庚子年闰四月初五")
+            - year_order (int): Ordinal value of the lunar year's earthly branch
+            - month_order (int): Ordinal value of the lunar month's branch (adjusted for leap months)
+            - day_order (int): Ordinal value of the lunar day's branch
+            - hour_order (int): Ordinal value of the hour's earthly branch
+            - upper_gram (int): Upper trigram number (0-7) calculated from (year_order + month_order + day_order) % 8
+            - lower_gram (int): Lower trigram number (0-7) calculated from (year_order + month_order + day_order + hour_order) % 8
+            - change_gram (int): Change line number (1-6) calculated from (year_order + month_order + day_order + hour_order) % 6
+    """
     if input_date is None:
         current_time = timeFormat.get_current_time_cn()
     else:
@@ -117,14 +37,14 @@ def trigram_generator_by_datetime(input_date=None):
     lunar_date = permanentCalendar.dictionary.get(day_part)[0]
 
     lunar_year = lunar_date.split('年')[0][-1]
-    year_order = earthly_branches.get(lunar_year)
+    year_order = hexagram_data.earthly_branches.get(lunar_year)
     lunar_month = lunar_date.split('年')[1].split('月')[0].replace('閏', '')
-    month_order = month_branch.get(lunar_month)
+    month_order = hexagram_data.month_branch.get(lunar_month)
     lunar_day = lunar_date.split('月')[1].split('日')[0]
-    day_order = day_branch.get(lunar_day)
+    day_order = hexagram_data.day_branch.get(lunar_day)
 
     hour_part = current_time.split(' ')[1].split('时')[0]
-    hour_order = earthly_branches.get(hour_branch.get(hour_part))
+    hour_order = hexagram_data.earthly_branches.get(hexagram_data.hour_branch.get(hour_part))
 
     # generate the upper_gram, lower_gram and change_gram
     upper_gram = (year_order + month_order + day_order) % 8
@@ -135,19 +55,35 @@ def trigram_generator_by_datetime(input_date=None):
 
 
 def hexagram_generator(upper_gram, lower_gram, change_gram):
+    """
+    Generates original, mutual, and change hexagrams based on input trigrams and change line.
 
-    # generate the original_hexagram, mutual_hexagram and change_hexagram
-    original_hexagram = tuple(trigram_order.get(upper_gram) + trigram_order.get(lower_gram))
-    original_hexagram_name = hexagram_table.get(original_hexagram)[0]
+    This function combines upper and lower trigrams to form the original hexagram,
+    derives the mutual hexagram from specific lines of the original, and creates
+    the change hexagram by modifying the specified line in the original hexagram.
+
+    Parameters:
+        upper_gram (int): Numeric identifier for the upper trigram
+        lower_gram (int): Numeric identifier for the lower trigram
+        change_gram (int): The line number (1-6) that changes in the hexagram
+
+    Returns:
+        tuple: A tuple containing three strings:
+            - original_hexagram_name: Name of the original hexagram
+            - mutual_hexagram_name: Name of the mutual hexagram
+            - change_hexagram_name: Name of the changed hexagram
+    """
+    original_hexagram = tuple(hexagram_data.trigram_order.get(upper_gram) + hexagram_data.trigram_order.get(lower_gram))
+    original_hexagram_name = hexagram_data.hexagram_table.get(original_hexagram)[0]
 
     mutual_hexagram = (original_hexagram[-5], original_hexagram[-4], original_hexagram[-3],
                        original_hexagram[-4], original_hexagram[-3], original_hexagram[-2])
-    mutual_hexagram_name = hexagram_table.get(mutual_hexagram)[0]
+    mutual_hexagram_name = hexagram_data.hexagram_table.get(mutual_hexagram)[0]
 
     change_hexagram = list(original_hexagram)
     change_hexagram[-change_gram] = int(not change_hexagram[-change_gram])
     change_hexagram = tuple(change_hexagram)
-    change_hexagram_name = hexagram_table.get(change_hexagram)[0]
+    change_hexagram_name = hexagram_data.hexagram_table.get(change_hexagram)[0]
 
     # return
     return original_hexagram_name, mutual_hexagram_name, change_hexagram_name
@@ -167,32 +103,7 @@ def hexagram_solver(input_date=None, debug=False, lan='cn'):
 
     language = '中文' if lan == 'cn' else '英文'
 
-    prompt = f"""
-# 提示词：你将需要用{language}输出结果。 解卦时，需要按照以下格式进行
-## 计算过程
-(一共八行。第一行为农历时间。第二行显示转换后的序数。第三行为上卦计算。第四行为下卦计算。第五行为动爻计算。最后三行生成结果。)
-(上卦取年月日数字之和除以8所余，下挂取年月日时之和除以8所余，动爻年月日时之和除以6所余; 
-年序数取地支序数; 月序数如果正处于闰月，则按该月算序数; 
-正确的年序数、月序数、日序数、时序数分别为{str(date[2])}、{str(date[3])}、{str(date[4])}、{str(date[5])}
-正确的本卦、互卦、变卦的结果为{hexagram[0]}、{hexagram[1]}、{hexagram[2]}。
-你的卦象结果必须以我提供的正确结果为准。)
-## 卦象
-(一共七行。前六行分别解释本卦/互卦/变卦，每卦各两行。最后一行解释动爻。)
-(解释本卦/互卦/变卦时，使用以下格式：第一行 (本卦/互卦/变卦)：卦象 卦型 (卦辞原文); 第二行 解释。)
-## 解卦
-(一共四行。第一至第三行 解释本卦/互卦/变卦的卦象，并做具体说明; 第四行 补充动爻。)
-## 综述和建议
-# 描述内容应聚焦起卦时即将面对的形势。
-# 不要做出任何超过起卦时刻2个小时的长期或长时期预测，亦不要做出过于细致的安排。
-# 文字内容应包容，鼓励，积极。
-
-# 最后不要附带注脚。
-# 在每一章节内容之间空一行。同一章节之内不要有指定行数之外额外的空行。除章节标题行，每一行内容前用'·'记号作为前缀。
-# 每一章节的标题需要根据语言要求调整成对应的语种。
-
-现在是{date[0]}，{date[1]}。
-用农历时间按梅花易数解卦
-"""
+    prompt = promptPlumYi.agent_prompt(language, date, hexagram)
 
     if debug:
         print(f'''
@@ -219,30 +130,3 @@ def hexagram_solver(input_date=None, debug=False, lan='cn'):
     message = contentHandler.chat(messages, prompt)
     print(message[-1].get('content'))
 
-
-
-
-
-"""## 用户今天接下来有6个会议。
-### 13:00 - 13:30 简会
-### 14:00 - 14:45 项目A日常例会
-### 15:00 - 16:15 项目B周会
-### 17:00 - 17:30 项目C下午例会
-### 19:00 - 19:30 项目A客户汇报
-### 20:00 - 21:00 学习会
-"""
-
-"""
-## 用户下午没有提到特殊安排
-## 用户最近长期处于紧张状态。多次表示自己的心理压力比较大
-"""
-
-"""
-## 用户今天的安排
-### 12:00 - 13:00 午睡
-### 13:00 - 17:00 排位赛
-### 17:00 - 17:30 晚饭
-### 18:00 - 20:30 运动
-### 20:30 - 21:00 洗漱
-### 21:00 睡觉
-"""

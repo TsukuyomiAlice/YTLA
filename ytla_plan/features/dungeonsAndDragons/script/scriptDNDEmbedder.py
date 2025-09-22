@@ -86,7 +86,7 @@ class DNDEmbedder:
             # 基于句子的分割（在下一个方法中实现）
             return self._chunk_by_sentences(text, chunk_size, overlap)
 
-    def _chunk_by_sentences(self, text: str, chunk_size: int = 300, overlap: int = 50) -> List[str]:
+    def _chunk_by_sentences(self, text: str, chunk_size: int = 512, overlap: int = 20) -> List[str]:
         """
         基于句子边界分割文本，保留句子完整性
 
@@ -485,8 +485,8 @@ if __name__ == "__main__":
         # 运行完整的嵌入流程，使用更精细的分割设置
         embedder.run_full_embedding_process(
             clear_existing=True,
-            chunk_size=300,
-            overlap=50,
+            chunk_size=512,
+            overlap=20,
             preserve_sentences=True
         )
 

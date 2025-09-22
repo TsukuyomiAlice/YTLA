@@ -14,21 +14,10 @@ caller = {
 def stub_app_caller(caller: dict):
     request_app = caller['request_app']
     if request_app == 'plum_yi':
-        print(f"""
-======= MCP呼叫结果 =======
-request_app: {request_app}
-request_params: {caller['request_params']}
-==========================
-""")
         params = caller['request_params']
         processModulePlumYi.hexagram_solver(input_date=params['input_date'], debug=params['debug'], lan=params['lan'])
     else:
-        print(f"""
-======= MCP呼叫结果 =======
-unknown request app: {request_app}
-request_params: {caller['request_params']}
-==========================
-""")
+        pass
 
 
 def chat_to_get_app(request_prompt: str):
@@ -48,20 +37,12 @@ def chat_to_get_app(request_prompt: str):
   "request_app": "plum_yi",
   "request_params": {"input_date": None, "debug": False, "lan": "cn"}
 }
-如果用户不指定时间，或者指定的是现在时间，不要对'input_date'做处理，保持为None
+如果用户不指定时间，或者指定的是现在时间，把'input_date'的值设置为None，绝对不要设置为null
 如果用户指定了时间，必须把'input_date'的值设置为如下形式：'%Y年%m月%d日 %H时%M分'
 如果用户希望看到排卦的过程，把'debug'的值设置为True(T必须大写)
 如果用户希望看到英语的结果，把'lan'的值设置为'en'
 如果user content使用的语言是英语并且没有作特殊说明，把'lan'的值设置为'en'
-## 计时器
-### 如果用户希望添加一个计时器，可以使用计时器
-### 计时器的默认caller格式如下
-{
-  "request_app": "timer",
-  "request_params": {"time": None}
-}
-如果用户指定了时间，必须把'time'的值设置为如下形式：
-'%H:%M:%S'
+
 ## 其他应用
 ### 如果用户请求的应用不在以上列表中，返回以下caller
 {
@@ -69,15 +50,9 @@ def chat_to_get_app(request_prompt: str):
   "request_params": {}
 }
     """
-    messages = agentHandler.append_agent([], system_prompt)
+    messages = agentHandler.append_system_agent([], system_prompt)
     message = contentHandler.chat(messages, request_prompt)
     caller = message[2].get('content')
-
-    print(f"""
-======== MCP 模拟结果 =======
-caller: {caller}
-======== MCP 呼叫结束 ==========
-""")
 
     stub_app_caller(eval(caller))
 

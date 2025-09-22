@@ -348,7 +348,7 @@ class DnDQueryTool:
                     f"块索引: {item['metadata'].get('chunk_index', '未知')}/{item['metadata'].get('total_chunks', '未知')}")
 
                 # 打印部分内容，避免输出过长
-                content_preview = item['document'][:200] + "..." if len(item['document']) > 200 else item['document']
+                content_preview = item['document']
                 print(f"内容预览: {content_preview}")
 
                 # 如果有距离信息（相似度），也打印出来
@@ -428,14 +428,14 @@ if __name__ == "__main__":
         print(f"   包含内容的页数: {len(stats['pages_with_content'])}")
 
         # 2. 相似度搜索示例
-        print("\n2. 相似度搜索示例 - '战士职业':")
-        results = query_tool.similarity_search("战士职业", n_results=3)
-        query_tool.pretty_print_results(results, "战士职业")
+        print("\n2. 相似度搜索示例 - '牧师':")
+        results = query_tool.similarity_search("牧师", n_results=3)
+        query_tool.pretty_print_results(results, "牧师")
 
         # 3. 另一个相似度搜索示例
         print("\n3. 相似度搜索示例 - '法术列表':")
-        results = query_tool.similarity_search("法术列表", n_results=3)
-        query_tool.pretty_print_results(results, "法术列表")
+        results = query_tool.similarity_search("法术", n_results=3)
+        query_tool.pretty_print_results(results, "法术")
 
         # 4. 元数据过滤搜索示例 - 单一条件
         print("\n4. 元数据过滤搜索示例 - 特定页码:")
@@ -463,8 +463,8 @@ if __name__ == "__main__":
 
         # 6. 使用距离阈值的相似度搜索
         print("\n6. 使用距离阈值的相似度搜索示例 - '战士职业'（仅保留高相似度结果）:")
-        results = query_tool.similarity_search("战士职业", n_results=5, distance_threshold=0.5)
-        query_tool.pretty_print_results(results, "战士职业")
+        results = query_tool.similarity_search("战士", n_results=5, distance_threshold=0.5)
+        query_tool.pretty_print_results(results, "战士")
 
         # 7. 带内容过滤的搜索
         print("\n7. 带内容过滤的搜索示例 - '法师' 包含关键词 '法术':")
