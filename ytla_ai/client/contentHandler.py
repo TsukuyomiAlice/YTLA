@@ -24,3 +24,22 @@ def chat(messages: list, text: str) -> list:
 
     # return
     return messages
+
+
+def add_system_message(messages: list, text: str) -> list:
+
+    # type check
+    # prevent the null request
+    if text == "":
+        print("The text is null")
+        return messages
+    # prevent the wrong type
+    if type(messages) is not list:
+        print("The messages is not list")
+        return messages
+
+    # assemble the message -> send -> receive -> assemble the response
+    messages.append({"role": "system", "content": text})
+
+    # return
+    return messages

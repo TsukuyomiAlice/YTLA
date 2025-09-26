@@ -463,7 +463,7 @@ if __name__ == "__main__":
 
         # 6. 使用距离阈值的相似度搜索
         print("\n6. 使用距离阈值的相似度搜索示例 - '战士职业'（仅保留高相似度结果）:")
-        results = query_tool.similarity_search("战士", n_results=5, distance_threshold=0.5)
+        results = query_tool.similarity_search("战士", n_results=5, distance_threshold=0.7)
         query_tool.pretty_print_results(results, "战士")
 
         # 7. 带内容过滤的搜索

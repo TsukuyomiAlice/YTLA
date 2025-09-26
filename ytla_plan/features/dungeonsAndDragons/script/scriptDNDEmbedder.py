@@ -101,12 +101,14 @@ class DNDEmbedder:
         separators = ['.', '。', '!', '！', '?', '？', ';', '；']
 
         for char in text:
-            current_sentence += char
-            if char in separators:
-                # 确保句子有一定长度
-                if len(current_sentence.strip()) > 10:
-                    sentences.append(current_sentence)
-                    current_sentence = ""
+            if char != '\n':
+                current_sentence += char
+                if char in separators:
+                    # 确保句子有一定长度
+                    if len(current_sentence.strip()) > 10:
+                        sentences.append(current_sentence)
+                        current_sentence = ""
+
 
         # 添加最后一个句子（如果有）
         if current_sentence.strip():

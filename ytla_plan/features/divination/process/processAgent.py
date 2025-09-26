@@ -1,6 +1,6 @@
 # encode = utf-8
 
-from ytla_ai.client import contentHandler, agentHandler
+from ytla_ai.client import contentHandler
 from ytla_plan.features.divination.process import processModulePlumYi
 
 def app_caller(caller: dict):
@@ -14,6 +14,7 @@ def app_caller(caller: dict):
 
 def chat_to_get_app(request_prompt: str):
     system_prompt = """
+# 提示词
 # 你的任务是根据用户的请求生成对应的caller。你的返回结果只包含caller，不要夹带其它任何内容。
 ## caller格式如下
 {
@@ -42,7 +43,7 @@ def chat_to_get_app(request_prompt: str):
   "request_params": {}
 }
     """
-    messages = agentHandler.append_system_agent([], system_prompt)
+    messages = contentHandler.add_system_message([], system_prompt)
     message = contentHandler.chat(messages, request_prompt)
     caller = message[2].get('content')
 

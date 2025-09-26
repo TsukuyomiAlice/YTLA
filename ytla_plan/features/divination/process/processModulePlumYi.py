@@ -1,6 +1,6 @@
 # encode = utf-8
 
-from ytla_ai.client import contentHandler, agentHandler
+from ytla_ai.client import contentHandler
 from ytla_plan.core.basic.func import timeFormat
 from ytla_plan.features.divination.dataset import permanentCalendar, hexagram_data
 from ytla_plan.features.divination.prompt import promptPlumYi
@@ -134,11 +134,12 @@ def hexagram_solver(input_date=None, debug=False, lan='cn'):
         ''')
 
     dummy_user_background = """
-## 用户下午没有提到特殊安排
+# 用户背景
+## 用户今天没有提到特殊安排
 ## 用户没有特殊情况
 """
 
-    messages = agentHandler.append_background([], dummy_user_background)
+    messages = contentHandler.add_system_message([], dummy_user_background)
 
     print(f"""
 ====== 用户背景 ======
