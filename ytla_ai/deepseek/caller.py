@@ -6,7 +6,7 @@ from openai import OpenAI
 """
 Base information
 """
-deepSeek_API_key = "sk-1a09e92cc2334b2b9a39b07a1a85e686"
+deepSeek_API_key = ""
 base_url = "https://api.deepseek.com"
 client = OpenAI(api_key=deepSeek_API_key, base_url=base_url)
 
