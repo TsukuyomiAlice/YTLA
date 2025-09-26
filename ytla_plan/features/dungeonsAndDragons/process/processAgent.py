@@ -42,7 +42,6 @@ topic_word_list = {
     "inspirational_readings": ["inspirational_readings"],
 }
 
-
 def create_keyword_list(topic_list: dict[str: list]):
     keyword_list = {}
     for key in topic_list.keys():
@@ -100,6 +99,10 @@ def create_keyword_list(topic_list: dict[str: list]):
     return keyword_list
 
 
+def search_keywords_simply(keywords: list[str]):
+    pass
+
+
 def create_article(topic_list: dict[str: list]) -> str:
     article = ""
     for key in topic_list.keys():
@@ -154,6 +157,30 @@ def create_article(topic_list: dict[str: list]) -> str:
             for item in topic_list[key]:
                 article = article + dnd_5e_player_016_inspirationalReadings.inspirational_readings_articles[item]
     return article
+
+
+def question_keyword_picker(request_prompt: str) -> list[str]:
+    system_prompt = f"""
+# 提示词
+## 你是一个忠于游戏设定的龙与地下城游戏设定的信息检索员。
+你需要根据用户发送的信息来判断，用户提出的问题中有哪些DND术语关键词。
+## 你需要联想用户的问题和DND术语之间的关系
+## 你需要依靠你已有的知识，提供尽可能多，但互相不重叠的回答。
+## 不要遗漏基本的关键词。
+
+## 回答的格式如下:
+["关键词1"， "关键词2"， "关键词3", ...]
+这些关键词都应当是DND中出现的标准术语。按相关度从高到低排序。
+
+## 如果你认为用户的问题与DND游戏无关，回复:
+[]
+    """
+    message_list = contentHandler.add_system_message([], system_prompt)
+    message_list = contentHandler.chat(message_list, request_prompt, temperature=1.0)
+    caller = message_list[2].get('content')
+    print("=" * 21, "关键词辨别结果", "=" * 21 )
+    print(caller)
+    return caller
 
 
 def select_keyword_topics(request_prompt: str) -> str:
@@ -240,12 +267,15 @@ def guide_answer(topic_chat, keyword_chat, request_prompt: str):
     message_list = contentHandler.add_system_message(message_list, article)
     message_list = contentHandler.chat(message_list, request_prompt)
     caller = message_list[3].get('content')
-    print("=" * 20, "最终回答", "=" * 20 )
+    print("=" * 23, "最终回答", "=" * 23 )
     print(caller)
     return caller
 
 
 def query(chat):
+    key_word_picker = question_keyword_picker(chat)
+    print("=" * 55)
+    chat = chat + '\n' + '附加提示词:' + key_word_picker
     topic_chat = select_keyword_topics(chat)
     print("=" * 55)
     keyword_chat = select_keyword_list(eval(topic_chat), chat)
@@ -255,5 +285,5 @@ def query(chat):
 
 
 query("""
-可以获取工匠套组的角色或职业
+能扑倒玩家的中立生物
 """)

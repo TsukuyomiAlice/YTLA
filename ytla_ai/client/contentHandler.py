@@ -3,7 +3,7 @@
 from ytla_ai.deepseek import caller
 
 
-def chat(messages: list, text: str) -> list:
+def chat(messages: list, text: str, temperature: float = 0.0) -> list:
 
     # type check
     # prevent the null request
@@ -17,7 +17,7 @@ def chat(messages: list, text: str) -> list:
 
     # assemble the message -> send -> receive -> assemble the response
     messages.append({"role": "user", "content": text})
-    response = caller.chat_caller(messages)
+    response = caller.chat_caller(messages, temperature=temperature)
     # reasoning = response.reasoning_content
     answer = response.content
     messages.append({"role": "assistant", "content": answer})
