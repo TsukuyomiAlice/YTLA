@@ -1,5 +1,5 @@
 # encode = utf-8
-
+from ytla_plan.core.basic.func import timeFormat
 from ytla_plan.features.divination.dataset import hexagram_data
 from ytla_plan.features.divination.process import processModulePlumYi
 
@@ -15,4 +15,6 @@ def time_solver(day:str):
         print(
             f"{hour}时 {hexagram[0]}({hexagram_data.hexagram_table.get(hexagram[5])[1]}) {hexagram[1]}({hexagram_data.hexagram_table.get(hexagram[6])[1]}) {hexagram[2]}({hexagram_data.hexagram_table.get(hexagram[7])[1]})(*{date[8]}) {hexagram[3]}({hexagram_data.hexagram_table.get(hexagram[8])[1]}) {hexagram[4]}({hexagram_data.hexagram_table.get(hexagram[9])[1]})")
 
-time_solver('2025年9月26日')
+
+date = timeFormat.get_current_time_cn().split(' ')[0].replace('年0','年').replace('月0','月')
+time_solver(date)

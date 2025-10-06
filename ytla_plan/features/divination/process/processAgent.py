@@ -15,7 +15,7 @@ def app_caller(caller: dict):
 def chat_to_get_app(request_prompt: str):
     system_prompt = """
 # 提示词
-# 你的任务是根据用户的请求生成对应的caller。你的返回结果只包含caller，不要夹带其它任何内容。
+# 你的任务是根据用户的请求生成对应的caller。这个caller是一个python dict，不是json。你的返回结果只包含caller，不要夹带其它任何内容。
 ## caller格式如下
 {
   'request_app': <request_app_name>,
