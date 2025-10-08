@@ -3,7 +3,7 @@ from ytla_plan.core.basic.func import timeFormat
 from ytla_plan.features.divination.dataset import hexagram_data
 from ytla_plan.features.divination.process import processModulePlumYi
 
-def time_solver(day:str):
+def time_solver(day: str):
     print(day)
     hour_schema = ['00', '01', '03', '05', '07', '09', '11', '13', '15', '17', '19', '21', '23']
     for hour in hour_schema:

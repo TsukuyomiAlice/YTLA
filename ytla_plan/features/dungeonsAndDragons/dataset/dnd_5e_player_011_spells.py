@@ -1,7 +1,6 @@
 # encode = utf-8
-from features.dungeonsAndDragons.dataset.dnd_5e_player_010_spellcasting import spell_description_prompt
 
-spells_keyword_list = {
+bard_spells_list = {
     "Bard_spells": [
         "吟游诗人法术 Bard Spells",
         "0环 戏法",
@@ -135,6 +134,9 @@ spells_keyword_list = {
         "律令死亡 Power Word Kill",
         "完全变形术 True Polymorph",
     ],
+}
+
+cleric_spells_list = {
     "Cleric_spells": [
         "牧师法术 Cleric Spells",
         "0环 戏法",
@@ -254,6 +256,9 @@ spells_keyword_list = {
         "群体医疗术 Mass Heal",
         "完全复生术 True Resurrection",
     ],
+}
+
+druid_spells_list = {
     "Druid_spells": [
         "德鲁伊法术 Druid Spells",
         "0环 戏法",
@@ -377,7 +382,10 @@ spells_keyword_list = {
         "复仇风暴 Storm of Vengeance",
         "完全复生术 True Resurrection",
     ],
-    "Paladin_Spells": [
+}
+
+paladin_Spells_list = {
+    "Paladin_spells": [
         "圣武士法术 Paladin Spells",
         "1环",
         "祝福术 Bless",
@@ -430,6 +438,9 @@ spells_keyword_list = {
         "指使术 Geas",
         "死者复活 Raise Dead",
     ],
+}
+
+ranger_spells_list = {
     "Ranger_spells": [
         "游侠法术 Ranger Spells",
         "1环",
@@ -484,6 +495,9 @@ spells_keyword_list = {
         "迅捷箭袋 Swift Quiver",
         "树跃术 Tree Stride",
     ],
+}
+
+sorcerer_spells_list = {
     "Sorcerer_spells": [
         "术士法术 Sorcerer Spells",
         "0环 戏法",
@@ -626,6 +640,9 @@ spells_keyword_list = {
         "时间停止 Time Stop",
         "祈愿术 Wish",
     ],
+}
+
+warlock_spells_list = {
     "Warlock_spells": [
         "邪术师法术 Warlock Spells",
         "0环 戏法",
@@ -713,6 +730,9 @@ spells_keyword_list = {
         "律令死亡 Power Word Kill",
         "完全变形术 True Polymorph",
     ],
+}
+
+wizard_spells_list = {
     "Wizard_spells": [
         "法师法术 Wizard Spells",
         "0环 戏法",
@@ -4743,3 +4763,13 @@ spell_article = {
     "Warlock_spells": spell_descriptions_list,
     "Wizard_spells": spell_descriptions_list,
 }
+
+spells_keyword_list = {}
+spells_keyword_list.update(bard_spells_list)
+spells_keyword_list.update(cleric_spells_list)
+spells_keyword_list.update(druid_spells_list)
+spells_keyword_list.update(paladin_Spells_list)
+spells_keyword_list.update(ranger_spells_list)
+spells_keyword_list.update(sorcerer_spells_list)
+spells_keyword_list.update(warlock_spells_list)
+spells_keyword_list.update(wizard_spells_list)

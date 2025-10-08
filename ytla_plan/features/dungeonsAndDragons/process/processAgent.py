@@ -167,7 +167,7 @@ def create_article(topic_list: dict[str: list]) -> str:
             for item in topic_list[key]:
                 article = article + dnd_5e_player_010_spellcasting.spellcasting_article[item]
         if key == 'spells':
-            article = article + dnd_5e_player_011_spells.spell_description_prompt
+            article = article + dnd_5e_player_011_spells.spell_descriptions_list
         if key == 'conditions':
             for item in topic_list[key]:
                 article = article + dnd_5e_player_012_conditions.conditions_article[item]
@@ -329,7 +329,7 @@ def select_keyword_list(topic_list: list, request_prompt: str, temperature=0.0) 
 { <章节名1>: [<关键词1>, <关键词2>, <关键词3>...],
   <章节名2>: [<关键词1>, <关键词2>, <关键词3>...], 
  ... }
-你需要根据用户发送的信息来判断应该检索哪些章节的内容以获取正确答案。rrrrrrrrrrrrrrrrrrr
+你需要根据用户发送的信息来判断应该检索哪些章节的内容以获取正确答案。
 
 ## 回答的格式如下：
 ## 如果有你认为应该检索的内容，按以下格式回复：
@@ -398,4 +398,4 @@ def query(chat):
     print("=" * 55)
 
 
-query("能说龙裔语的种族和职业")
+query("怎样无效一个8环法术？")
