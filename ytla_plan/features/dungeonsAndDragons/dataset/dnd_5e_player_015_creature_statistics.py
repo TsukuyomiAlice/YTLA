@@ -1,6 +1,6 @@
 # encode = utf-8
 
-creature_statistics_keyword_list = {
+keyword_list = {
     "creature_statistics": [
         "蝙蝠 Bat",
         "黑熊 Black Bear",
@@ -517,6 +517,6 @@ AC 具装
 ### 猛击 Slam。近战武器攻击：命中+3，触及 5 尺，单一目标。伤害：4（1d6+1）点钝击伤害。
 """
 
-creature_statistics_article = {
+article = {
     "creature_statistics": creature_statistics_prompt,
 }

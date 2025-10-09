@@ -1,6 +1,6 @@
 # encode = utf-8
 
-inspirationalReadings_keyword_list = {
+keyword_list = {
     "inspirational_readings": [
         "附录 E：启蒙读物 Inspirational Reading",],
 }
@@ -69,6 +69,6 @@ inspirational_readings_prompt = """
 罗杰·泽拉兹尼 Roger Zelazny。《Jack of Shadows》《安珀九王子 Nine Princes in Amber》和其他“安珀志 Amber”系列。
 """
 
-inspirational_readings_articles = {
+article = {
     "inspirational_readings": inspirational_readings_prompt,
 }

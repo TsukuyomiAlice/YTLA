@@ -1,7 +1,7 @@
 # encode = utf-8
 
-class_keyword_list = {
-    "class_select": [
+keyword_list = {
+    "classes": [
         "第 3 章：职业 Classes",
         "职业表", ],
     "Barbarian": [
@@ -629,7 +629,7 @@ class_keyword_list = {
     ],
 }
 
-class_select_prompt = """
+classes_prompt = """
 # 第 3 章：职业 Classes
 冒险者们都是非凡的人，他们渴望刺激并过着他人不敢涉及的生活。身为英雄，他们注定要去探索世界的黑暗角落，并面对那些稍微不够格都会招致失败的挑战。
 职业是对角色能做何事最主要的概括。它不仅仅是一项专业，还是该角色躬行实践所有行为的定义。职业的概念塑造了你对世界的思考和互动方法，以及你与多元宇宙中其他人或力量的关联。例如，一名战士可能将世界看作是个规律变动的固有区间，而她自己则是这个大棋盘中的一只走卒。相反，一名牧师可能自认作一名忠心的奴仆，并协助推进某神祇的计划，或是参与到各种神能的阴谋斗争中。因而这名战士会与一支雇佣兵团或是军队接触，而牧师则可能会认识一些与其拥有共同信仰的教士、圣武士和信徒。
@@ -3728,8 +3728,8 @@ Wizard_prompt = """
 你用变化师之石触碰一个自愿的生物，并将该生物的表面年龄减少 3d10 年（至少减少 13 年的表面年龄）。不过该效应并不能延长生物的寿命。
 """
 
-class_article = {
-    "class_select": class_select_prompt,
+article = {
+    "classes": classes_prompt,
     "Barbarian": Barbarian_prompt,
     "Bard": Bard_prompt,
     "Cleric": Cleric_prompt,

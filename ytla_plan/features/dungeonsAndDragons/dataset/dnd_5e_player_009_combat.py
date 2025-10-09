@@ -1,6 +1,6 @@
 # encode = utf-8
 
-combat_keyword_list = {
+keyword_list = {
     "The_order_of_combat": [
         "第 9 章：战斗 Combat",
         "战斗流程 The Order of Combat",
@@ -473,7 +473,7 @@ Underwater_Combat_prompt = """
 完全没入水中的生物和物件对火焰伤害具有抗性。
 """
 
-combat_article = {
+article = {
     "The_order_of_combat": The_order_of_combat_prompt,
     "Movement_and_position": Movement_and_position_prompt,
     "Action_in_combat": Action_in_combat_prompt,

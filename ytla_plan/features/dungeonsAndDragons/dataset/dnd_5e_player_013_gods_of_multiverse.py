@@ -1,6 +1,6 @@
 # encode = utf-8
 
-gods_of_multiverse_keyword_list = {
+keyword_list = {
     "DND_Pantheons": [
         "附录 B：多元宇宙诸神 Gods of the Multiverse",
         "龙与地下城神系 D&D Pantheons",
@@ -311,7 +311,7 @@ Fantasy_historical_pantheons_prompt = """
 乌勒尔 Uller，狩猎和寒冬之神 hunting & winter CN 自然 长弓
 """
 
-gods_of_multiverse_article = {
+article = {
     "DND_Pantheons": DND_Pantheons_prompt,
     "Fantasy_historical_pantheons": Fantasy_historical_pantheons_prompt,
 }

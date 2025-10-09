@@ -1,19 +1,19 @@
 # encode=utf-8
 
-prologue_keyword_list = {
+keyword_list = {
     "Preface": [
         "前言 Preface", ],
     "Introduction": [
         "简介 Introduction",
         "充满冒险的世界 World of Adventure",
         "使用本书 Using This Book", ],
-    "game_rule": [
+    "How_to_play": [
         "如何进行游戏 How to Play",
         "骰子 Game Dice",
         "二十面骰 The D20",
         "优势与劣势 Advantage and Disadvantage",
         "向下取整 Round Down", ],
-    "adventure_description": [
+    "Adventures": [
         "冒险 Adventures",
         "冒险三要素 The Three Pillars of Adventure",
         "神奇的魔法 The Wonders of Magic"],
@@ -71,7 +71,7 @@ Introduction_prompt = """
 第 3 部分与魔法相关。包括 D&D 世界中魔法的本质，施展法术的规则以及魔法使用者（和怪物）所能使用的各种法术。
 """
 
-game_rule_prompt = """
+How_to_play_prompt = """
 # 如何进行游戏 How to Play
 龙与地下城的游戏按照以下的基础框架运行。
 1.由 DM 描述环境。DM 向玩家们说明冒险小队身处何地，他们四周的环境，以及一些可供角色行动的选项。（房间里有几扇门、桌上放着些什么、有谁在旅店里，诸如此类。）
@@ -108,7 +108,7 @@ game_rule_prompt = """
 你需要记住另一条基础规则：每当你在游戏中进行除法运算时，必须舍去所有小数，即使其数值大于 0.5。
 """
 
-adventure_description_prompt = """
+Adventures_prompt = """
 # 冒险 Adventures
 龙与地下城的游戏，是一队冒险者踏上地下城主所呈现之冒险的过程。每个角色都会用自己的特长为冒险做出贡献。他们搭配了各不相同的属性值、技能、职业特性、种族特质、装备和魔法物品，从而使每个角色既有不同的长短处却又独一无二。在最棒的冒险者小队中，各角色会互补不足并通力合作完成冒险。
 而冒险则是游戏的核心，是一个具备起承转折的故事。冒险内容可能来自地下城主自己的设计，也可能是买回来再由其作一些修改。而不论是哪种冒险，其内都包含着奇幻般的场景如：地下城、半毁的城堡、广袤的荒野和繁华的都市。其中也有丰富多彩的人物，有玩家扮演的冒险者，也有非玩家角色（NPC）。他们可以是委托人、盟友、敌人、雇员和背景中的配角。通常还会有一名非玩家角色担任冒险中的最终敌人，并以此推动整个冒险。
@@ -131,10 +131,10 @@ adventure_description_prompt = """
 """
 
 
-prologue_article = {
+article = {
     "Preface": Preface_prompt,
     "Introduction": Introduction_prompt,
-    "game_rule": game_rule_prompt,
-    "adventure_description": adventure_description_prompt,
+    "How_to_play": How_to_play_prompt,
+    "Adventures": Adventures_prompt,
 }
 

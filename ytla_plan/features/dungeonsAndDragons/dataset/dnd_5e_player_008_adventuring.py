@@ -1,6 +1,6 @@
 # encode = utf-8
 
-adventuring_keyword_list = {
+keyword_list = {
     "time": [
         "第 8 章：冒险 Adventuring",
         "时间 Time", ],
@@ -28,7 +28,7 @@ adventuring_keyword_list = {
         "其他活动 Other Activities",
         "导航 Navigate。",
         "追踪 Track。", ],
-    "environment": [
+    "the_environment": [
         "环境 The Environment",
         "坠落 Falling",
         "窒息 Suffocating",
@@ -171,7 +171,7 @@ DM 判定冒险者们在旅途中遭遇其他生物时，遭遇双方的决定�
 该角色可以追踪另一个生物遗留的踪迹，DM可以在适当的时机要求其进行一次感知（生存）检定。（关于追踪的详细规则可参考《城主指南》。）觅食 Forage。该角色可以寻找潜在的食物与饮水补给源，DM 可以在适当的时机要求其进行一次感知（生存）检定。（关于采集的详细规则可参考《城主指南》的相关内容。）
 """
 
-environment_prompt = """
+the_environment_prompt = """
 # 环境 The Environment
 冒险的本质，即是深入漆黑、危险、神秘的地域进行探险。
 本节所述内容是关于冒险者与此类冒险环境间的一些互动规则。
@@ -321,10 +321,10 @@ between_adventure_prompt = """
 在你付出所需的时间和费用后，就可以习得相应的新语言，或获得新工具的熟练项。
 """
 
-adventuring_article = {
+article = {
     "time": time_prompt,
     "movement": movement_prompt,
-    "environment": environment_prompt,
+    "the_environment": the_environment_prompt,
     "social_interaction": social_interaction_prompt,
     "resting": resting_prompt,
     "between_adventure": between_adventure_prompt,

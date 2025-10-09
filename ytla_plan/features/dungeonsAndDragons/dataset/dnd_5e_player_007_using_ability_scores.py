@@ -1,12 +1,18 @@
 # encode = utf-8
 
-ability_keyword_list = {
-    "Ability": [
+keyword_list = {
+    "Ability_Scores_and_Modifiers": [
         "第 7 章：属性值应用 Using Ability Scores",
         "属性值与调整值 Ability Scores and Modifiers",
         "属性值与调整值 Ability Scores and Modifiers",
+    ],
+    "Advantage_and_Disadvantage": [
         "优势与劣势 Advantage and Disadvantage",
+    ],
+    "Proficiency_Bonus": [
         "熟练加值 Proficiency Bonus",
+    ],
+    "Ability_Checks":[
         "属性检定 Ability Checks",
         "常用难度等级 Typical Difficulty Classes",
         "对抗 Contests",
@@ -15,7 +21,10 @@ ability_keyword_list = {
         "被动检定 Passive Checks",
         "合作 Working Together",
         "团体检定 Group Checks",
-        "各属性值应用 Using Each Ability", ],
+    ],
+    "Using_Each_Ability":[
+        "各属性值应用 Using Each Ability",
+    ],
     "Strength": [
         "力量 Strength",
         "力量检定 Strength Checks",
@@ -26,7 +35,8 @@ ability_keyword_list = {
         "载重 Carrying Capacity。",
         "推 Push、拉 Drag、抬 Lift。",
         "体型与力量 Size and Strength。",
-        "变体：负重Variant: Encumbrance", ],
+        "变体：负重Variant: Encumbrance",
+    ],
     "Dexterity": [
         "敏捷 Dexterity",
         "敏捷检定 Dexterity Checks",
@@ -39,11 +49,13 @@ ability_keyword_list = {
         "你能看到什么 What Can You See？",
         "攻击检定与伤害 Attack Rolls and Damage",
         "护甲等级 Armor Class",
-        "先攻 Initiative", ],
+        "先攻 Initiative",
+    ],
     "Constitution": [
         "体质 Constitution",
         "体质检定 Constitution Checks",
-        "生命值 Hit Points", ],
+        "生命值 Hit Points",
+    ],
     "Intelligence": [
         "智力 Intelligence",
         "智力检定 Intelligence Checks",
@@ -52,7 +64,8 @@ ability_keyword_list = {
         "调查 Investigation。",
         "自然 Nature。",
         "其它智力检定。",
-        "施法关键属性 Spellcasting Ability", ],
+        "施法关键属性 Spellcasting Ability",
+    ],
     "Wisdom": [
         "感知 Wisdom",
         "感知检定 Wisdom Checks",
@@ -63,7 +76,8 @@ ability_keyword_list = {
         "求生 Survival。",
         "其他感知检定。",
         "寻找隐藏物件 Finding a Hidden Object",
-        "施法关键属性 Spellcasting Ability", ],
+        "施法关键属性 Spellcasting Ability",
+    ],
     "Charisma": [
         "魅力 Charisma",
         "魅力检定 Charisma Checks",
@@ -72,12 +86,14 @@ ability_keyword_list = {
         "表演 Performance。",
         "游说 Persuasion。",
         "其他魅力检定。",
-        "施法关键属性 Spellcasting Ability", ],
+        "施法关键属性 Spellcasting Ability",
+    ],
     "Saving_throws": [
-        "豁免检定 Saving Throws", ],
+        "豁免检定 Saving Throws",
+    ],
 }
 
-Ability_prompt = """
+Ability_Scores_and_Modifiers_prompt = """
 # 第 7 章：属性值应用 Using Ability Scores
 六项属性值是生物个体身心特色的核心指标：
 ⚫力量 Strength，体能的量化
@@ -115,21 +131,26 @@ Ability_prompt = """
 26~27 +8
 28~29 +9
 30 +10
-
+"""
+Advantage_and_Disadvantage_prompt = """
 ## 优势与劣势 Advantage and Disadvantage
 有时候，你所进行的属性检定，攻击检定或豁免检定会具有优势或劣势这种特殊调整。此时，你在进行相应的掷骰后要再掷一次 d20，具有优势时采用骰值较高者，劣势则采用值低者。例如，具有劣势时，你掷出 17 和 5，则采用 5。若你在具有优势时掷出同一数组，则你采用 17。
 当有多个情况使你同时具有复数的优势或劣势时，你都只能额外掷一次 d20。例如，当两项有利情况都使你具有优势，则你依然只额外掷一次 d20。
 如果某次掷骰同时具有优势和劣势，则两边效果互相抵消，即你只掷一次 d20。即使两边的数量不对等也一样。此时，你视为没有优势也没有劣势。
 当你具有优势或劣势，且可以重掷或取代 d20 值时（比如半身人“幸运”特性的作用），你可以选择重掷或取代两粒骰其中一个。例如，一名半身人进行一次具有优势或劣势的属性检定，并掷出 1 和 13，则他可以使用其特性重掷骰值 1 的掷骰。
 通常你会因特殊能力、动作、法术而具有优势或劣势。另外，激励（见第 4 章）也可以使角色在进行关于个人特点、理想或牵绊的检定时具有优势。而 DM 也可以对你的形势优劣作出判断，然后给予你相应的优势或劣势。
+"""
 
+Proficiency_Bonus_prompt = """
 ## 熟练加值 Proficiency Bonus
 如本书第 1 章所述，每个角色都具有一项由等级决定的熟练加值。对于怪物的情况，同样类型的加值则是直接注明在其属性数据中。该加值适用于属性检定、豁免检定和攻击检定。
 你的熟练加值不能在同一次掷骰或同一数值上应用多于一次。例如，当有两条不同的规则项允许你将熟练加值加给某感知豁免时，你依然只能在此豁免中使用一次熟练加值。
 有时候，你的熟练加值会在进行乘除运算后（比如加倍或减半）再作应用。例如，游荡者的职业特性“专精 Expertise”就会将某类属性检定的熟练加值翻倍。如果有情况允许你在一次掷骰多次使用熟练加值，则你依然只使用一次加值，也只作一次倍率运算。
 另一种情况是：当某项特性或效应让你对熟练加值进行运算，而你所进行的属性检定不允许应用熟练加值时，则你依然无法将熟练加值加上。换言之，你进行该检定时的熟练加值为0，而 0 乘任何数都为 0。例如，不具有历史技能熟练项的角色，就算拥有加倍熟练加值的特性，其进行智力（历史）检定时，也不能加上双倍的熟练加值。
 一般情况下，攻击检定和豁兔检定的熟练加值不会有倍率运算。而当某些特性或效应产生相似作用时，则以上规则同样适用。
+"""
 
+Ability_Checks_prompt = """
 ## 属性检定 Ability Checks
 属性检定用以判定角色或怪物的天赋和训练是否足以克服某项考验。当角色或怪物试图执行一个动作（非攻击动作）时，如果 DM 认为其结果有可能失败，则需要进行属性检定。即让未知的未来交由掷骰决定。
 每当需要进行属性检定时，DM 会先选定一项适合当前状况的属性，再确定该事件的难度，即事件的难度等级（DC）。事件越难完成，则其 DC 越高。表格“常用难度等级”中列出了最常见的各项 DC 数值。
@@ -188,10 +209,12 @@ Ability_prompt = """
 团体检定并不是常见的事，比较适用于全体一起成功或一起失败的情况。例如，冒险者们在沼泽中寻路时，DM 可以要求进行团体感知（生存）检定，以判断他们能否避开路上的流沙、渗坑及其他在该环境下的自然危害物。如果最少一半人成功，则这些成功的人能够带领大家离开险境。否则大家将一同受困于这些危害物。
 """
 
-Strength_check_prompt = """
+Using_Each_Ability_prompt = """
 # 各属性值应用 Using Each Ability
 角色或怪物在游戏内做的每一件事都囊括在六项属性的范畴内。本节将详细说明这些属性值的含义及其在游戏中的应用。
+"""
 
+Strength_check_prompt = """
 # 力量 Strength
 力量代表肌肉力量、运动训练及所能发挥的肉体潜能。
 
@@ -411,8 +434,12 @@ Saving_throws_prompt = """
 DM 可以因应环境和形势给予豁免加值或减值，而豁免成功或失败的后果也会在引发它的效应中进行说明。通常豁免成功的生物都能回避或减低可能需要承受的伤害。
 """
 
-ability_article = {
-    "Ability": Ability_prompt,
+article = {
+    "Ability_Scores_and_Modifiers": Ability_Scores_and_Modifiers_prompt,
+    "Advantage_and_Disadvantage": Advantage_and_Disadvantage_prompt,
+    "Proficiency_Bonus": Proficiency_Bonus_prompt,
+    "Ability_Checks": Ability_Checks_prompt,
+    "Using_Each_Ability": Using_Each_Ability_prompt,
     "Strength": Strength_check_prompt,
     "Dexterity": Dexterity_check_prompt,
     "Constitution": Constitution_check_prompt,

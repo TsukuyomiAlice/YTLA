@@ -1,6 +1,6 @@
 # encode = utf-8
 
-customize_keyword_list = {
+keyword_list = {
     "Multiclassing": [
         "第 6 章：自定义选项 Customization Options",
         "兼职 Multiclassing",
@@ -412,7 +412,7 @@ Feats_prompt = """
 • 你从简易武器和军用武器列表中，共选择四种武器并获得其熟练项。
 """
 
-customize_article = {
+article = {
     "Multiclassing": Multiclassing_prompt,
     "Feats": Feats_prompt,
 }

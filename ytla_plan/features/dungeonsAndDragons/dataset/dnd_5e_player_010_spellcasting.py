@@ -1,6 +1,6 @@
 # encode = utf-8
 
-spellcasting_keyword_list = {
+keyword_list = {
     "spell_description": [
         "第 10 章：施法 Spellcasting",
         "法术是什么 What Is a Spell?",
@@ -218,7 +218,7 @@ D&D 多元宇宙中的世界都是充满魔法的地方，其内所有存在都�
 每一个被创造出的魔法效应都是魔网的经纬经过缠结、扭曲、折叠等操作塑造出的效果。某个角色施展预言法术如侦测魔法detect magic 或者鉴定术 identify 时即是瞥见魔网本身。法术如解除魔法 dispel magic 即是抚平魔网，而法术如反魔法力场 anti magic field 则是将魔网重新修整，并让魔法在法术范围之外流过，而不是穿行其中。而在魔网受损或被阻断的地方，魔法的效应将变得不可预测，甚至彻底消失。
 """
 
-spellcasting_article = {
+article = {
     "spell_description": spell_description_prompt,
     "cast_spell": cast_spell_prompt,
 }

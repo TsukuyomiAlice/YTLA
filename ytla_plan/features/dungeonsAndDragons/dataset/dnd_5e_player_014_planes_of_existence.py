@@ -1,6 +1,6 @@
 # encode = utf-8
 
-planes_of_existence_keyword_list = {
+keyword_list = {
     "the_material_plane": [
         "附录 C：存在位面 The Planes of Existence",
         "物质位面 The Material Plane",
@@ -112,7 +112,7 @@ beyond_the_material_plane_prompt = """
 其它的一些传送门也许仍然存在，甚至还一直向物质位面泄露着异界之力，并在不断制造腐蚀的同时形成一道标记。
 """
 
-planes_of_existence_article = {
+article = {
     "the_material_plane": the_material_plane_prompt,
     "beyond_the_material_plane": beyond_the_material_plane_prompt,
 }

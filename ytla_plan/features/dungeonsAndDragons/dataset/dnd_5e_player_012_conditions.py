@@ -1,6 +1,6 @@
 # encode = utf-8
 
-conditions_keyword_list = {
+keyword_list = {
     "conditions": [
         "附录 A：状态 Conditions",
         "目盲 Blinded",
@@ -108,6 +108,6 @@ conditions_prompt = """
 生物在获得足够的饮食，并完成一次长休后，其力竭等级即可降低 1 级。生物从死亡状态复活时，其力竭等级也可以降低 1 级。
 """
 
-conditions_article = {
+article = {
     "conditions": conditions_prompt,
 }

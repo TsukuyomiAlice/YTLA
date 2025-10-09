@@ -1,6 +1,6 @@
 # encode = utf-8
-personality_background_keyword_list = {
-    "Character_detail": [
+keyword_list = {
+    "Character_details": [
         "第 4 章：个性与背景 Personality and Background",
         "角色细节 Character Details",
         "姓名 Name",
@@ -26,7 +26,7 @@ personality_background_keyword_list = {
         "激励 Inspiration",
         "获得激励 Gaining Inspiration",
         "使用激励 Using Inspiration", ],
-    "Background": [
+    "Backgrounds": [
         "背景 Backgrounds",
         "熟练项 Proficiencies",
         "语言 Languages",
@@ -209,7 +209,7 @@ personality_background_keyword_list = {
         "d6 缺点", ],
 }
 
-Character_detail_prompt = """
+Character_details_prompt = """
 # 第 4 章：个性与背景 Personality and Background
 除种族和职业之外，一个角色还可以拥有更多作为补充的描述内容。作为独特的个体，他们自身的故事、兴趣、人脉和能力还可以用其他要素作定义。本章详细解释了每个角色区别于他人的各种细节，包括名字和身体特征，背景与语言的规则，以及个性和阵营的闪光点。
 
@@ -352,7 +352,7 @@ Inspiration_prompt = """
 另外，你所拥有的激励可以使用在其他玩家身上，用以协助其更好的扮演角色，或是用于一个巧妙的时机，又或者只是用来让游戏显得更有意思。当你觉得另一位玩家角色的行为让故事发展变的更欢乐更有趣时，你可以考虑将自己的激励给予该角色以推动故事发展。
 """
 
-Background_prompt = """
+Backgrounds_prompt = """
 # 背景 Backgrounds
 每个故事都有一个开头。角色的背景项解释了其来历，如何成为一名冒险者，以及其在世界中的地位。你的战士可能曾经是一名勇敢的骑士或一名爱哭爱抱怨的士兵。你的法师可能曾经是一名贤者或一名工匠。你的游荡者可能曾经是一名公会盗贼或是一名蛊惑大众的宫廷弄臣。
 选择一个背景为你提供了关于该角色身份的重要故事提示。
@@ -1203,10 +1203,10 @@ Urchin_prompt = """
 6 自己顾不好自己的家伙，只能算活该。
 """
 
-personality_background_article = {
-    "Character_detail": Character_detail_prompt,
+article = {
+    "Character_details": Character_details_prompt,
     "Inspiration": Inspiration_prompt,
-    "Background": Background_prompt,
+    "Backgrounds": Backgrounds_prompt,
     "Acolyte": Acolyte_prompt,
     "Charlatan": Charlatan_prompt,
     "Criminal": Criminal_prompt,

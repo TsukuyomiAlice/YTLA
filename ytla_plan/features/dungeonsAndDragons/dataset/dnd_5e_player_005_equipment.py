@@ -1,15 +1,17 @@
 # encode = utf-8
 
-equipment_keyword_list = {
+keyword_list = {
+    "Starting_Equipment": [
+        "起始装备 Starting Equipment",
+    ],
     "Wealth": [
         "第 5 章：装备 Equipment",
-        "起始装备 Starting Equipment",
         "财富 Wealth",
         "对应职业的起始财富 Starting Wealth by Class",
         "币制 Coinage",
         "标准兑换率 Standard Exchange Rates",
         "出售财宝 Selling Treasure", ],
-    "Armor": [
+    "Armor_and_shields": [
         "护甲与盾牌 Armor and Shields",
         "护甲表 Armor",
         "护甲熟练项 Armor Proficiency。",
@@ -121,7 +123,7 @@ equipment_keyword_list = {
         "领航工具 Navigator’s Tools。",
         "制毒工具 Poisoner’s Kit。",
         "盗贼工具 Thieves’ Tools。", ],
-    "Mounts_vehicles": [
+    "Mounts_and_vehicles": [
         "坐骑与载具 Mounts and Vehicles",
         "具装 Barding。",
         "鞍座 Saddles。",
@@ -156,7 +158,7 @@ equipment_keyword_list = {
         "饰品 Trinkets", ],
 }
 
-Wealth_prompt = """
+Starting_Equipment_prompt = """
 # 第 5 章：装备 Equipment
 某个大型城市的集市里聚集了各种买卖者：矮人铁匠和精灵木雕师，半身人农民与侏儒珠宝匠，还有来自不同国家不同文化，外貌、体型、肤色各异的人类。在最大的城市中，你几乎能买到任何能想到的东西，从异国香料和奢华服装，到藤编篮子和练习用剑，应有尽有。
 作为一名冒险者，护甲、武器、背囊、绳索等货物的补给至关重要，毕竟在地下城与未开化的荒野中，是否备有合适的装备直接意味着生与死的区别。本章将详细说明冒险者们在D&D 世界中面对威胁时，能够派上用场的或平淡或稀奇的各类货品。
@@ -164,8 +166,9 @@ Wealth_prompt = """
 # 起始装备 Starting Equipment
 创建角色时，你会收到基于该角色职业和背景的装备。或者你也可以选择基于职业的一笔金钱代替这些起始装备，并使用其购买本章所述的物品。对应金钱的具体数额可以参考表格“对应职业的起始财富”。
 你可以设定你的角色如何得到这些起始装备。它可能是一笔遗产，或是该角色在其的成长时期买到的商品。你可以带着一把武器，一具护甲和一个背包以作为曾经服役的军需。或者说这些装备根本就是自己偷来的。一把武器可以是家族的传家宝，世代相传直到最终由你的角色继承并以此追寻某位先祖的冒险足迹。
+"""
 
-# 财富 Wealth
+Wealth_prompt = """# 财富 Wealth
 财富在 D&D 世界中的形式多种多样。货币，宝石，贸易货物，艺术品，动物和不动产，它们同时还能反映角色稳定的财富状况。农民阶级以谷物和乳酪作为商品出售或是用来以物易物，并以之满足日常的需求或缴纳税款。贵族们则是以法定权限如采矿权，停泊权或开垦权等作为商品出售，其价值均是以磅计量的金砖而非以币量衡量。只有商人、冒险者和那些提供专业雇佣服务的人才总是用货币进行交易。
 
 ## 对应职业的起始财富 Starting Wealth by Class
@@ -212,7 +215,7 @@ Wealth_prompt = """
 贸易货物 Trade Goods。在边境地带，许多人通过物物交换经营交易。像宝石和艺术品一样，贸易货物（铁条、袋装的盐巴以及牲畜等）在市场中都可以以其全额价值进行交易，因此也可以直接用作交易用的通币。
 """
 
-Armor_prompt = """
+Armor_and_shields_prompt = """
 # 护甲与盾牌 Armor and Shields
 D&D 世界是一张由各种不同文明交织成的巨大挂毯，其中每个文明都有着不同的科技水平。因此，冒险者们可能会遇到各种不同类型的护甲，从皮甲到链甲再到昂贵的板甲，以及其他许多种类的护甲。“护甲表”收集了游戏中最常见护甲种类，并且将其归类为三大类别：轻甲、中甲和重甲。此外，许多武士还会为他们的护甲加配一面盾牌。
 “护甲表”记录了 D&D 游戏世界中出现的各种常见护甲，以及其相应的价格、重量和其他属性。
@@ -709,7 +712,7 @@ Tool_prompt = """
 ＊参见“坐骑与载具”一节
 """
 
-Mounts_vehicles_prompt = """
+Mounts_and_vehicles_prompt = """
 # 坐骑与载具 Mounts and Vehicles
 一匹好坐骑可以助你迅速穿越荒野，而其主要用途则是为你装载那些减慢行进速度的重物。表格“坐骑和其他动物”列出了各种相关动物的速度及其基础载重能力。
 拉动客车、货车、战车、木橇或篷车的动物，可以驱动最大等于其五倍基础载重的重量。复数的动物协同拉动一个载具时，其载重能力可以相互叠加。
@@ -986,13 +989,14 @@ d100 饰品
 100 一只装有英雄骨灰的金属瓮
 """
 
-equipment_article = {
+article = {
+    "Starting_Equipment": Starting_Equipment_prompt,
     "Wealth": Wealth_prompt,
-    "Armor": Armor_prompt,
+    "Armor_and_shields": Armor_and_shields_prompt,
     "Weapon": Weapon_prompt,
     "Adventure_gear": Adventure_gear_prompt,
     "Tool": Tool_prompt,
-    "Mounts_vehicles": Mounts_vehicles_prompt,
+    "Mounts_and_vehicles": Mounts_and_vehicles_prompt,
     "Trade_goods": Trade_goods_prompt,
     "Expenses": Expenses_prompt,
     "Trinkets": Trinkets_prompt,
