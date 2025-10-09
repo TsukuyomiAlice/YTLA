@@ -173,12 +173,13 @@ def create_article(topic_list: dict[str: list], keyword_list: dict[str: list]) -
         if key == 'spellcasting':
             for item in topic_list[key]:
                 article = article + dnd_5e_player_010_spellcasting.article[item]
+
         if key == 'spells':
-            for dicts in topic_list[key]:
-                # todo: so fuxxing. spells is a list of dict, each dict is a spell
-                for topic in dicts.keys():
-                    for spell in dicts[topic]:
-                        article = article + dnd_5e_player_011_spells.spell_descriptions_list[spell]
+            for group in topic_list[key]:
+                if group in keyword_list.keys():
+                    for item in keyword_list[group]:
+                        article = article + dnd_5e_player_011_spells.spell_descriptions_list[item]
+
         if key == 'conditions':
             for item in topic_list[key]:
                 article = article + dnd_5e_player_012_conditions.article[item]
@@ -238,8 +239,8 @@ def select_keyword_topics(request_prompt: str, temperature=0.0) -> str:
     return caller
 
 
-def select_keyword_list(topic_list: list, request_prompt: str, temperature=0.0) -> str:
-    keyword_list = create_keyword_list(topic_list)
+def select_keyword_list(topic_chat, request_prompt: str, temperature=0.0) -> str:
+    keyword_list = create_keyword_list(eval(topic_chat))
     system_prompt = promptGuideKeywordList.prompt
     message_list = contentHandler.add_system_message([], system_prompt)
     message_list = contentHandler.add_system_message(message_list, str(json.dumps(keyword_list, ensure_ascii=False)))
@@ -279,11 +280,11 @@ def query(chat):
     topic_chat = select_keyword_topics(chat)
     print("=" * 55)
 
-    keyword_chat = select_keyword_list(eval(topic_chat), chat)
+    keyword_chat = select_keyword_list(topic_chat, chat)
     print("=" * 55)
 
     guide_chat = guide_answer(topic_chat, keyword_chat, chat)
     print("=" * 55)
 
 
-query("能释放出9环法术的职业有哪些？")
+query("我有点忘记这个法术的具体名字了，好像是叫gigby's hand，能把人托举起来的那个")
