@@ -71,7 +71,7 @@ topic_word_list = {
     "planes_of_existence": [
         "the_material_plane", "beyond_the_material_plane", ],
     "creature_statistics": [
-        "creature_statistics", ],
+        "creature_statistics_list", ],
     "inspirational_readings": [
         "inspirational_readings"],
 }
@@ -190,8 +190,10 @@ def create_article(topic_list: dict[str: list], keyword_list: dict[str: list]) -
             for item in topic_list[key]:
                 article = article + dnd_5e_player_014_planes_of_existence.article[item]
         if key == 'creature_statistics':
-            for item in topic_list[key]:
-                article = article + dnd_5e_player_015_creature_statistics.article[item]
+            for group in topic_list[key]:
+                if group in keyword_list.keys():
+                    for item in keyword_list[group]:
+                        article = article + dnd_5e_player_015_creature_statistics.creature_statistics_list[item]
         if key == 'inspirational_readings':
             for item in topic_list[key]:
                 article = article + dnd_5e_player_016_inspirational_readings.article[item]
@@ -287,4 +289,4 @@ def query(chat):
     print("=" * 55)
 
 
-query("我有点忘记这个法术的具体名字了，好像是叫gigby's hand，能把人托举起来的那个")
+query("哪些动物可以在战斗中扑倒玩家")

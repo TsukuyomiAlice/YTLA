@@ -1,6 +1,6 @@
 # encode = utf-8
 
-introduction_keyword_list = {
+keyword_list = {
     "introduction": [
         "简介 Introduction",
         "如何使用本书 How to Use ThisBook"
@@ -392,3 +392,10 @@ legendary_creatures_prompt = """
 ### 区域效应 Regional Effects
 该栏目描述了传奇生物的存在可能使周围环境产生的惊人怪异效应。传奇生物死亡后，这些区域效应可能立即消失或是随着时间逐渐消退。
 """
+
+article = {
+    "introduction": introduction_prompt,
+    "monster": monster_prompt,
+    "statistics": statistics_prompt,
+    "legendary_creatures": legendary_creatures_prompt,
+}
