@@ -1,5 +1,10 @@
 # encode = utf-8
 
+topics = {
+    "spellcasting": [
+        "spell_description", "cast_spell", ],
+}
+
 keyword_list = {
     "spell_description": [
         "第 10 章：施法 Spellcasting",

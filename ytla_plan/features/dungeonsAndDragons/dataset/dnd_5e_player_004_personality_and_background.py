@@ -1,4 +1,12 @@
 # encode = utf-8
+
+topics = {
+    "personality_and_background": [
+        "Character_details", "Inspiration", "Backgrounds", "Acolyte", "Charlatan", "Criminal",
+        "Entertainer", "Folk_hero", "Guild_artisan", "Hermit", "Noble", "Outlander", "Sage",
+        "Sailor", "Soldier", "Urchin", ],
+}
+
 keyword_list = {
     "Character_details": [
         "第 4 章：个性与背景 Personality and Background",

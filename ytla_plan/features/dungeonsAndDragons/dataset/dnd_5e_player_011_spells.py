@@ -1,5 +1,11 @@
 # encode = utf-8
 
+topics = {
+    "spells": [
+        "Bard_spells", "Cleric_spells", "Druid_spells", "Paladin_spells", "Ranger_spells", "Sorcerer_spells",
+        "Warlock_spells", "Wizard_spells", "total_spells_list"],
+}
+
 bard_spells_list = {
     "Bard_spells": [
         "0环 戏法",
@@ -1079,6 +1085,18 @@ total_spells_list = {
                           '魔能爆 Eldritch Blast', '魔魂壶 Magic Jar', '鹰眼术 Clairvoyance', '黑暗术 Darkness',
                           '黑暗视觉 Darkvision']
 }
+
+keyword_list = {}
+keyword_list.update(bard_spells_list)
+keyword_list.update(cleric_spells_list)
+keyword_list.update(druid_spells_list)
+keyword_list.update(paladin_Spells_list)
+keyword_list.update(ranger_spells_list)
+keyword_list.update(sorcerer_spells_list)
+keyword_list.update(warlock_spells_list)
+keyword_list.update(wizard_spells_list)
+keyword_list.update(total_spells_list)
+
 
 spell_descriptions_list = {
 "0环 戏法": """
@@ -5657,14 +5675,3 @@ d2环 防护
 
 """
 }
-
-keyword_list = {}
-keyword_list.update(bard_spells_list)
-keyword_list.update(cleric_spells_list)
-keyword_list.update(druid_spells_list)
-keyword_list.update(paladin_Spells_list)
-keyword_list.update(ranger_spells_list)
-keyword_list.update(sorcerer_spells_list)
-keyword_list.update(warlock_spells_list)
-keyword_list.update(wizard_spells_list)
-keyword_list.update(total_spells_list)

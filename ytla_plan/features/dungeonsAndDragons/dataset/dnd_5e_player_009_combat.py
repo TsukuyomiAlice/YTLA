@@ -1,5 +1,11 @@
 # encode = utf-8
 
+topics = {
+    "combat": [
+        "The_order_of_combat", "Movement_and_position", "Action_in_combat", "Making_an_attack", "Cover",
+        "Damage_and_healing", "Mounted_combat", "Underwater_Combat", ],
+}
+
 keyword_list = {
     "The_order_of_combat": [
         "第 9 章：战斗 Combat",

@@ -1,5 +1,10 @@
 # encode = utf-8
 
+topics = {
+    "conditions": [
+        "conditions", ],
+}
+
 keyword_list = {
     "conditions": [
         "附录 A：状态 Conditions",
@@ -17,8 +22,7 @@ keyword_list = {
         "震慑 Stunned",
         "昏迷 Unconscious",
         "力竭 Exhaustion",
-
-    ]
+    ],
 }
 
 conditions_prompt = """

@@ -1,6 +1,10 @@
 # encode = utf-8
 
-introduction_keyword_list = {
+topics = {
+    "Introduction": ["Introduction", ]
+}
+
+keyword_list = {
     "Introduction": [
         "简介 Introduction",
         "地下城主 The Dungeon Master",
@@ -118,6 +122,6 @@ D&D 的规则可以协助你与其他玩家愉快的游戏，但是不能指望�
 • 给予 NPC 们赋予可供冒险者们深挖的理想、牵绊和缺点。
 """
 
-introduction_article = {
+article = {
     "Introduction": introduction_prompt,
 }

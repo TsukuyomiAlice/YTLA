@@ -1,5 +1,10 @@
 # encode=utf-8
 
+topics = {
+    "step_by_step_characters": [
+        "step_by_step_characters", "beyond_1st_level"],
+}
+
 keyword_list = {
     "step_by_step_characters": [
         "第 1 章：一步步创建角色 Step-by-Step Characters",

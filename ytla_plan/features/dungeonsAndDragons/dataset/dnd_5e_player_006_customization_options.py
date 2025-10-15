@@ -1,5 +1,10 @@
 # encode = utf-8
 
+topics = {
+    "customization_options": [
+        "Multiclassing", "Feats", ],
+}
+
 keyword_list = {
     "Multiclassing": [
         "第 6 章：自定义选项 Customization Options",

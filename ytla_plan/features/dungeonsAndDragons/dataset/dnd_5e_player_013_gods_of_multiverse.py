@@ -1,5 +1,10 @@
 # encode = utf-8
 
+topics = {
+    "gods_of_multiverse": [
+        "DND_Pantheons", "Fantasy_historical_pantheons", ],
+}
+
 keyword_list = {
     "DND_Pantheons": [
         "附录 B：多元宇宙诸神 Gods of the Multiverse",

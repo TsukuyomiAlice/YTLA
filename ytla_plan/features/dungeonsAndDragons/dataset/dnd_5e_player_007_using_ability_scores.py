@@ -1,5 +1,12 @@
 # encode = utf-8
 
+topics = {
+    "using_ability_scores": [
+        "Ability_Scores_and_Modifiers", "Advantage_and_Disadvantage", "Proficiency_Bonus", "Ability_Checks",
+        "Using_Each_Ability", "Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma",
+        "Saving_throws", ],
+}
+
 keyword_list = {
     "Ability_Scores_and_Modifiers": [
         "第 7 章：属性值应用 Using Ability Scores",
@@ -12,7 +19,7 @@ keyword_list = {
     "Proficiency_Bonus": [
         "熟练加值 Proficiency Bonus",
     ],
-    "Ability_Checks":[
+    "Ability_Checks": [
         "属性检定 Ability Checks",
         "常用难度等级 Typical Difficulty Classes",
         "对抗 Contests",
@@ -22,7 +29,7 @@ keyword_list = {
         "合作 Working Together",
         "团体检定 Group Checks",
     ],
-    "Using_Each_Ability":[
+    "Using_Each_Ability": [
         "各属性值应用 Using Each Ability",
     ],
     "Strength": [

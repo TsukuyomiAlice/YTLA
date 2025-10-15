@@ -1,5 +1,10 @@
 # encode = utf-8
 
+topics = {
+    "planes_of_existence": [
+        "the_material_plane", "beyond_the_material_plane", ],
+}
+
 keyword_list = {
     "the_material_plane": [
         "附录 C：存在位面 The Planes of Existence",

@@ -1,5 +1,10 @@
 # encode = utf-8
 
+topics = {
+    "inspirational_readings": [
+        "inspirational_readings"],
+}
+
 keyword_list = {
     "inspirational_readings": [
         "附录 E：启蒙读物 Inspirational Reading",],

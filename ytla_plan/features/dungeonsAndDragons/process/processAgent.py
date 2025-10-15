@@ -30,51 +30,26 @@ from ytla_plan.features.dungeonsAndDragons.prompt import (
     promptGuideAnswer
 )
 
-topic_word_list = {
-    "Preface": [
-        "Preface", "Introduction", "How_to_play", "Adventures", ],
-    "step_by_step_characters": [
-        "step_by_step_characters", "beyond_1st_level"],
-    "races": [
-        "race_select", "Dwarf", "Elf", "Halfling", "Human", "Dragonborn", "Gnome", "Half_Elf", "Half_Orc",
-        "Tiefling", ],
-    "classes": [
-        "classes", "Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue",
-        "Sorcerer", "Warlock", "Wizard", ],
-    "personality_and_background": [
-        "Character_details", "Inspiration", "Backgrounds", "Acolyte", "Charlatan", "Criminal",
-        "Entertainer", "Folk_hero", "Guild_artisan", "Hermit", "Noble", "Outlander", "Sage",
-        "Sailor", "Soldier", "Urchin", ],
-    "equipment": [
-        "Starting_Equipment", "Wealth", "Armor_and_shields", "Weapon", "Adventure_gear", "Tool", "Mounts_and_vehicles",
-        "Trade_goods", "Expenses", "Trinkets", ],
-    "customization_options": [
-        "Multiclassing", "Feats", ],
-    "using_ability_scores": [
-        "Ability_Scores_and_Modifiers", "Advantage_and_Disadvantage", "Proficiency_Bonus", "Ability_Checks",
-        "Using_Each_Ability", "Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma",
-        "Saving_throws", ],
-    "adventuring": [
-        "time", "movement", "the_environment", "social_interaction", "resting", "between_adventure", ],
-    "combat": [
-        "The_order_of_combat", "Movement_and_position", "Action_in_combat", "Making_an_attack", "Cover",
-        "Damage_and_healing", "Mounted_combat", "Underwater_Combat", ],
-    "spellcasting": [
-        "spell_description", "cast_spell", ],
-    "spells": [
-        "Bard_spells", "Cleric_spells", "Druid_spells", "Paladin_spells", "Ranger_spells", "Sorcerer_spells",
-        "Warlock_spells", "Wizard_spells", "total_spells_list"],
-    "conditions": [
-        "conditions", ],
-    "gods_of_multiverse": [
-        "DND_Pantheons", "Fantasy_historical_pantheons", ],
-    "planes_of_existence": [
-        "the_material_plane", "beyond_the_material_plane", ],
-    "creature_statistics": [
-        "creature_statistics_list", ],
-    "inspirational_readings": [
-        "inspirational_readings"],
-}
+def topic_word_list():
+    topics = {}
+    topics.update(dnd_5e_player_000_preface.topics)
+    topics.update(dnd_5e_player_001_step_by_step_characters.topics)
+    topics.update(dnd_5e_player_002_races.topics)
+    topics.update(dnd_5e_player_003_classes.topics)
+    topics.update(dnd_5e_player_004_personality_and_background.topics)
+    topics.update(dnd_5e_player_005_equipment.topics)
+    topics.update(dnd_5e_player_006_customization_options.topics)
+    topics.update(dnd_5e_player_007_using_ability_scores.topics)
+    topics.update(dnd_5e_player_008_adventuring.topics)
+    topics.update(dnd_5e_player_009_combat.topics)
+    topics.update(dnd_5e_player_010_spellcasting.topics)
+    topics.update(dnd_5e_player_011_spells.topics)
+    topics.update(dnd_5e_player_012_conditions.topics)
+    topics.update(dnd_5e_player_013_gods_of_multiverse.topics)
+    topics.update(dnd_5e_player_014_planes_of_existence.topics)
+    topics.update(dnd_5e_player_015_creature_statistics.topics)
+    topics.update(dnd_5e_player_016_inspirational_readings.topics)
+    return topics
 
 
 def create_keyword_list(topic_list: dict[str: list]):
@@ -232,7 +207,7 @@ def masked_keyword_topics(request_prompt: str, temperature=0.0) -> str:
 
 def select_keyword_topics(request_prompt: str, temperature=0.0) -> str:
     system_prompt = promptGuideKeywordTopics.prompt_front + str(
-        json.dumps(topic_word_list, ensure_ascii=False)) + promptGuideKeywordTopics.prompt_back
+        json.dumps(topic_word_list(), ensure_ascii=False)) + promptGuideKeywordTopics.prompt_back
     message_list = contentHandler.add_system_message([], system_prompt)
     message_list = contentHandler.chat(message_list, request_prompt, temperature=temperature)
     caller = message_list[2].get('content')
@@ -287,6 +262,5 @@ def query(chat):
 
     guide_chat = guide_answer(topic_chat, keyword_chat, chat)
     print("=" * 55)
-
 
 query("哪些动物可以在战斗中扑倒玩家")

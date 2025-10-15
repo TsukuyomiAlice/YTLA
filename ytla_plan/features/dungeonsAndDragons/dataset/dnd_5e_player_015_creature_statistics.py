@@ -1,5 +1,10 @@
 # encode = utf-8
 
+topics = {
+    "creature_statistics": [
+        "creature_statistics_list", ],
+}
+
 keyword_list = {
     "creature_statistics": [
         "附录 D：生物资料 Creature Statistics"
@@ -69,7 +74,8 @@ creature_statistics_list = {
 ## AC：11（天生护甲）
 ## HP：19（3d8+6）
 ## 速度：40 尺，攀爬 30 尺
-## 力量 15（+2） 敏捷 10（+0） 体质 14（+2）智力 2（-4） 感知 12（+1） 魅力 7（-2）## 技能：察觉+3
+## 力量 15（+2） 敏捷 10（+0） 体质 14（+2）智力 2（-4） 感知 12（+1） 魅力 7（-2）
+## 技能：察觉+3
 ## 感官：被动察觉 13
 ## 语言：—
 ## 挑战等级：1/2（100 XP）

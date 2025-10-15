@@ -1,6 +1,10 @@
 # encode = utf-8
 
-a_world_of_your_own_keyword_list = {
+topics = {
+
+}
+
+keyword_list = {
 
 }
 
@@ -992,7 +996,7 @@ flavors_of_fantasy_prompt = """
 D&D 同时还根植于科学假设和科学幻想元素之中，而你的战役也可以以此为想象力来源。你让角色们冲进一面魔法镜子并进入刘易斯卡罗尔的仙境 Lewis Carroll’s Wonderland，带他们搭上穿梭星际的飞船，或是将你的战役设定为镭射发射器和魔法飞弹 magic missiles 并存的遥远未来世界都是绝对可行的点子。在这里存在着无限的可能性。第 9 章的“城主工坊”里还提供了一些帮你开拓这些可能性的工具。
 """
 
-a_world_of_your_own_article = {
+article = {
     "the_big_picture": the_big_picture_prompt,
     "gods_of_your_world": gods_of_your_world_prompt,
     "mapping_your_campaign": mapping_your_campaign_prompt,

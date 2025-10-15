@@ -1,5 +1,11 @@
 # encode = utf-8
 
+topics = {
+    "classes": [
+        "classes", "Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue",
+        "Sorcerer", "Warlock", "Wizard", ],
+}
+
 keyword_list = {
     "classes": [
         "第 3 章：职业 Classes",

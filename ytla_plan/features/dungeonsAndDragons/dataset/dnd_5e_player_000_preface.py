@@ -1,11 +1,18 @@
 # encode=utf-8
 
+topics = {
+    "Preface": [
+        "Preface", "Introduction", "World_of_Adventure", "Using_This_Book", "How_to_play", "Adventures", ],
+}
+
 keyword_list = {
     "Preface": [
         "前言 Preface", ],
     "Introduction": [
-        "简介 Introduction",
-        "充满冒险的世界 World of Adventure",
+        "简介 Introduction", ],
+    "World_of_Adventure": [
+        "充满冒险的世界 World of Adventure", ],
+    "Using_This_Book": [
         "使用本书 Using This Book", ],
     "How_to_play": [
         "如何进行游戏 How to Play",
@@ -57,13 +64,17 @@ Introduction_prompt = """
 接下来 DM 将会判定冒险者们行动的结果，然后根据结果描述出冒险者遭遇的经历。因为 DM 可以根据玩家们的行动做出应变，所以 D&D 拥有无限的灵活性。这也使得每一场冒险独一无二，同时激动人心。
 游戏并没有真正的结局。一段故事或任务告一段落后，另一段传奇便会开始。这种连续的冒险故事称为战役 campaign。很多玩家的战役可以持续数月甚至数年，他们每周与朋友相聚，然后继续上一周的冒险。冒险者在战役的进行过程中会越发强大。每一个被打倒的怪物，每一次完成的冒险和获得的宝藏不仅仅使得战役得以继续，还会给予冒险者新的能力。这种力量的提升则通过冒险者的等级系统表现。
 龙与地下城的游戏中并没有输赢的概念，至少与通常情况下我们所理解的有所不同。勇敢的冒险者们克服艰难苦难的精彩故事需要由 DM 与玩家们一同编写。有时冒险者会被凶猛的怪物打败，或被穷凶极恶的敌人所害而导致悲剧结尾。即使如此，其他的冒险者仍可通过探寻强大的魔法来复活他们逝去的同伴。而玩家也可以创造一个新的角色继续冒险。队伍可能会遭遇失败，但是只要每一个成员都度过了美好的时光并创造了令人回味的故事，那么所有人都是赢家。
+"""
 
+World_of_Adventure_prompt = """
 # 充满冒险的世界 World of Adventure
 龙与地下城的诸多世界中充满了魔法和怪物，以及勇敢的斗士和壮丽的冒险。这一切以中世纪奇幻风格为基础，并加入能让这个世界变得独一无二的生物、地点和魔法。
 龙与地下城的诸世界都位于一个叫多元宇宙 multiverse的广袤宇宙当中。这些世界以神秘而奇异的方式互相连接，并关联至诸多的存在位面。比如火元素位面 Elemental Plane ofFire 和无底深渊 Infinite Depths of the Abyss。多元宇宙中存在着数不清的世界，其中也有许多是出版过的官方设定。各个世界的传奇在多元宇宙中被交织在一起，其中包括被遗忘国度Forgotten Realms、龙枪 Dragonlance、灰鹰 Greyhawk、浩劫残阳 Dark Sun、密斯塔拉 Mystara 和艾伯伦 Eberron。除此之外，还有各世代 D&D 规则下玩家创造的无数个世界。而在富饶的多元宇宙中，你或许也会创造出属于自己的世界。
 这些世界有一些共同之处，但是每个世界都拥有独特的历史与文化、怪物与种族、奇幻般的地理、古老的地下城和诡计多端的恶敌。在不同世界中相同的种族有着不同的特性。比如浩劫残阳中的半身人是栖息在雨林中的食人族，而精灵则是沙漠中的游牧者。有些世界有着独一无二的种族，比如艾伯伦的机关人 warforged。他们是为投入终末战争 Last War 而被注入生命的士兵。另一些世界是围绕着一个故事进行的，比如长枪之战 War of the Lance 便是龙枪设定中的核心事件。而它们全都是 D&D 的世界。你可以使用本书中的规则创造一名角色，然后在这些世界中畅游。
 你的 DM 可能会将战役设定与这些世界之一，或是其自创的世界。因为有太多的 D&D 世界可供选择，你需要与你的 DM确认好房规，因为这将影响到整个游戏。而即使是公开出版的设定，地下城主也是战役与设定的权威解释者。
+"""
 
+Using_This_Book_prompt = """
 # 使用本书 Using This Book
 《玩家手册》分为三部分。
 第 1 部分的主要内容是创建角色。这里给出了创作一名角色所需的规则和指导。其中包括不同的种族、职业、背景、装备和其他的自定义选项。第 1 部分中的很多内容需要第 2 部分和第 3 部分的支持。如果你在第 1 部分中遇到了不理解的问题，请查询书中的索引。
@@ -134,6 +145,8 @@ Adventures_prompt = """
 article = {
     "Preface": Preface_prompt,
     "Introduction": Introduction_prompt,
+    "World_of_Adventure": World_of_Adventure_prompt,
+    "Using_This_Book": Using_This_Book_prompt,
     "How_to_play": How_to_play_prompt,
     "Adventures": Adventures_prompt,
 }

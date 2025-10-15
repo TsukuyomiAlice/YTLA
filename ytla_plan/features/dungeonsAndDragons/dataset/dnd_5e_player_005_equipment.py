@@ -1,5 +1,11 @@
 # encode = utf-8
 
+topics = {
+    "equipment": [
+        "Starting_Equipment", "Wealth", "Armor_and_shields", "Weapon", "Adventure_gear", "Tool", "Mounts_and_vehicles",
+        "Trade_goods", "Expenses", "Trinkets", ],
+}
+
 keyword_list = {
     "Starting_Equipment": [
         "起始装备 Starting Equipment",

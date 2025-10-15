@@ -1,5 +1,10 @@
 # encode = utf-8
 
+topics = {
+    "adventuring": [
+        "time", "movement", "the_environment", "social_interaction", "resting", "between_adventure", ],
+}
+
 keyword_list = {
     "time": [
         "第 8 章：冒险 Adventuring",
