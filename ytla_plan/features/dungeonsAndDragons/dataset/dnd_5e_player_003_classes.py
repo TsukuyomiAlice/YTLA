@@ -2,25 +2,43 @@
 
 topics = {
     "classes": [
-        "classes", "Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue",
-        "Sorcerer", "Warlock", "Wizard", ],
+        "classes",
+        "Barbarian_background", "Creating_a_Barbarian", "Barbarian_Features",
+        "Barbarian_class_table", "Path_of_the_Berserker", "Path_of_the_Totem_Warrior",
+        "Bard_background", "Creating_a_Bard", "Bard_Features",
+        "Bard_class_table", "College_of_Lore", "College_of_Valor",
+        "Cleric_background", "Creating_a_Cleric", "Cleric_Features",
+        "Cleric_class_table", "Knowledge_Domains", "Life_Domains", "Light_Domains", "Nature_Domains",
+        "Tempest_Domains", "War_Domains",
+        "Druid",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Sorcerer",
+        "Warlock",
+        "Wizard", ],
 }
 
 keyword_list = {
     "classes": [
         "第 3 章：职业 Classes",
         "职业表", ],
-    "Barbarian": [
+    "Barbarian_background": [
         "野蛮人 Barbarian",
         "原始直觉 Primal Instinct",
-        "危险的生活 A Life of Danger",
+        "危险的生活 A Life of Danger", ],
+    "Creating_a_Barbarian": [
         "创建野蛮人 Creating a Barbarian",
-        "快速建卡 Quick Build",
+        "快速建卡 Quick Build", ],
+    "Barbarian_Features": [
         "职业特性 Class Features",
         "生命值 Hit Point",
         "熟练项 Proficiencies",
-        "装备 Equipment",
-        "野蛮人职业表",
+        "装备 Equipment", ],
+    "Barbarian_class_table": [
+        "野蛮人职业表 Barbarian class table",
         "狂暴 Rage",
         "无甲防御 Unarmored Defense",
         "鲁莽攻击 Reckless Attack",
@@ -35,29 +53,33 @@ keyword_list = {
         "持久狂暴 Persistent Rage",
         "不屈勇武 Indomitable Might",
         "原初斗士 Primal Champion",
-        "原初道途 Primal Path",
+        "原初道途 Primal Path", ],
+    "Path_of_the_Berserker": [
         "狂战士道途 Path of the Berserker",
         "狂怒 Frenzy",
         "无我狂暴 Mindless Rage",
         "威慑之姿 Intimidating Presence",
-        "报偿 Retaliation",
+        "报偿 Retaliation", ],
+    "Path_of_the_Totem_Warrior": [
         "图腾武者道途 Path of the Totem Warrior",
         "精魄寻者 Spirit Seeker",
         "图腾精魄 Totem Spirit",
-        "兽之形 Apect of the Beast",
-        "精魄行者 Spirit Wlaker",
+        "兽之形 Aspect of the Beast",
+        "精魄行者 Spirit Walker",
         "图腾同调 Totemic Attunement", ],
-    "Bard": [
+    "Bard_background": [
         "吟游诗人 Bard",
         "音乐与魔法 Music and Magic",
-        "从经验中学习 Learning from Experience",
+        "从经验中学习 Learning from Experience", ],
+    "Creating_a_Bard": [
         "创建吟游诗人 Creating a Bard",
         "快速建卡 Quick Build",
         "职业特性 Class Features",
         "生命值 Hit Points",
         "熟练项 Proficiencies",
-        "装备 Equipment",
-        "吟游诗人职业表",
+        "装备 Equipment", ],
+    "Bard_class_table": [
+        "吟游诗人职业表 Bard class table",
         "施法 Spellcasting",
         "戏法 Cantrips",
         "法术位 Spell Slots",
@@ -74,35 +96,40 @@ keyword_list = {
         "激励之源 Font of Inspiration",
         "反迷惑 Countercharm",
         "先发激励 Superior Inspiration",
-        "吟游诗人学院 Bard College",
+        "吟游诗人学院 Bard College", ],
+    "College_of_Lore": [
         "逸闻学院 College of Lore",
         "附赠熟练项 Bonus Proficiencies",
         "语出惊人 Cutting Words",
         "额外魔法奥秘 Additional Magical Secrets",
-        "超凡技艺 Peerless Skill",
+        "超凡技艺 Peerless Skill", ],
+    "College_of_Valor": [
         "勇气学院 College of Valor",
         "附赠熟练项 Bonus Proficiencies",
         "战斗激励 Combat Inspiration",
         "额外攻击 Extra Attack",
         "战斗魔法 Battle Magic",
     ],
-    "Cleric": [
+    "Cleric_background": [
         "牧师 Cleric",
         "医者和战士 Healers and Warriors",
-        "神能代理 Divine Agents",
+        "神能代理 Divine Agents", ],
+    "Creating_a_Cleric": [
         "创建牧师 Creating a Cleric",
-        "快速建卡 Quick Build",
+        "快速建卡 Quick Build", ],
+    "Cleric_Features": [
         "职业特性 Class Features",
         "生命值 Hit Points",
         "熟练项 Proficiencies",
-        "装备 Equipment",
-        "牧师职业表",
+        "装备 Equipment", ],
+    "Cleric_class_table": [
+        "牧师职业表 Cleric class table",
         "施法 Spellcasting",
         "戏法 Cantrips",
         "施法关键属性 Spellcasting Ability",
         "仪式施法 Ritual Casting",
         "法器 Spellcasting Focus",
-        "神圣领域 Divine Domain",
+        "神圣领域 Divine Domains",
         "领域法术 Domain Spells",
         "引导神力 Channel Divinity",
         "引导神力：驱散不死生物Channel Divinity: Turn Undead",
@@ -110,8 +137,9 @@ keyword_list = {
         "摧毁不死生物 Destroy Undead",
         "摧毁不死生物 Destroy Undead",
         "神圣干预 Divine Intervention",
-        "神圣领域 Divine Domain",
-        "知识领域 Knowledge Domain",
+        "神圣领域 Divine Domain", ],
+    "Knowledge_Domains": [
+        "知识领域 Knowledge Domains",
         "知识领域法术 Knowledge Domain Spells",
         "知识祝福 Blessing of Knowledge",
         "引导神力：岁月知识 Channel Divinity: Knowledge of The Ages",
@@ -119,23 +147,26 @@ keyword_list = {
         "强力施法 Potent Spellcasting",
         "透视过去 Visions of the Past",
         "物件解读 Object Reading。",
-        "区域解读 Area Reading。",
-        "生命领域 Life Domain",
-        "生命领域法术 Life Domian Spells",
+        "区域解读 Area Reading。", ],
+    "Life_Domains": [
+        "生命领域 Life Domains",
+        "生命领域法术 Life Domain Spells",
         "附赠熟练项 Bonus Proficiency",
         "生命门徒 Disciple of Life",
         "引导神力：维持生命Channel Divinity: Preserve Life",
         "神佑医者 Blessed Healer",
         "神圣打击 Divine Strike",
-        "极效治疗 Supreme Healing",
-        "光明领域 LIght Domain",
+        "极效治疗 Supreme Healing", ],
+    "Light_Domains": [
+        "光明领域 Light Domains",
         "光明领域法术 Light Domain Spells",
         "附赠戏法 Bonus Cantrips",
         "守御闪光 Warding Flare",
         "引导神力：黎明曙光Channel Divinity: Radiance of the Dawn",
         "精通闪光 Improved Flare",
         "强力施法 Potent Spellcasting",
-        "光冕 Corona of Light",
+        "光冕 Corona of Light", ],
+    "Nature_Domains": [
         "自然领域 Nature Domains",
         "自然领域法术 Nature Domain Spells",
         "自然侍僧 Acolyte of Nature",
@@ -143,8 +174,9 @@ keyword_list = {
         "引导神力：魅惑动植物Channel Divinity: Charm Animals and Plants",
         "抑制元素 Dampen Elements",
         "神圣打击 Divine Strike",
-        "自然大师 Master of Nature",
-        "风暴领域 Tempest Domai",
+        "自然大师 Master of Nature", ],
+    "Tempest_Domains": [
+        "风暴领域 Tempest Domains",
         "风暴领域法术 Tempest Domain Spells",
         "附赠熟练项 Bonus Proficiencies",
         "风暴狂怒 Wrath of the Storm",
@@ -158,7 +190,8 @@ keyword_list = {
         "引导神力：召唤分身Channel Divinity: Invoke Duplicity",
         "引导神力：幽影斗篷Channel Divinity: Cloak of Shadows",
         "神圣打击 Divine Strike",
-        "精通分身 Improved Duplicity",
+        "精通分身 Improved Duplicity", ],
+    "War_Domains": [
         "战争领域 War Domains",
         "战争领域法术 War Domain Spells",
         "战争祭司 War Priest",
@@ -659,7 +692,7 @@ classes_prompt = """
 法师 可以使用魔法操纵现实架构的学术派施法者 d6 智力 智力和感知 匕首，飞镖，投石索，长棍，轻弩
 """
 
-Barbarian_prompt = """
+Barbarian_background_prompt = """
 # 野蛮人 Barbarian
 披裘执斧的高个男人奔走于暴风雪中，大笑着冲向那些胆敢在其族人饲养的麋鹿群中偷猎的霜巨人。
 半兽人向其挑战者发出咆哮。为了维护自己在这个狂野部族中的权威，她已经徒手扯断了六个对手的脖子，而她正打算对这最后一个对手故技重施。
@@ -674,14 +707,18 @@ Barbarian_prompt = """
 ## 危险的生活 A Life of Danger
 并非每个被文明社会的年轻人称作“野蛮人”的部族成员都是野蛮人。这其中真正的野蛮人就像城市里老练的战士一样少见。而这少数的野蛮人则扮演者族人的保护者和战斗领导者的角色。荒野生活充满了危险，他们必须面对敌对的部族，致命的气候，以及各种可怕的怪物。而野蛮人会迅猛的冲向那些危险，以保护自己的族人不受威胁。
 野蛮人面对危险时的英勇让他们非常适合冒险。不断迁徙本就是其部族的生活方式，因此居无定所的冒险生活也不会对野蛮人造成困扰。某些野蛮人会怀念部族中亲密的家族关系，但最终也会发现冒险团队的成员间建立的情谊也同样珍贵。
+"""
 
+Creating_a_Barbarian_prompt = """
 ## 创建野蛮人 Creating a Barbarian
 创造一名野蛮人时，可以先思考其来历及其归属地。与DM商议确定角色的起源。你是来自远方，对战役环境非常陌生的异乡人？或是对战役发生的凶险边境十分熟悉的野蛮人？
 你为何选择了冒险生活？你是被财富的许诺吸引到了城市，还是和城市的士兵们共同对抗敌人？也许怪物的入侵把你赶出了故乡，成了流离失所的难民？或许你在战争中被俘，被抓到“文明”地区后刚刚重获自由。或者，你因为犯下罪行，触犯禁忌而被族人驱逐。又或者你就是刚被政变推翻的部落领袖？
 
 ## 快速建卡 Quick Build
 你可以按以下建议快速创建一名野蛮人。首先，将你最高的属性分配给力量，次高的分配给体质。然后选择化外之民背景。
+"""
 
+Barbarian_Features_prompt = """
 # 职业特性 Class Features
 作为一名野蛮人，你获得以下职业特性。
 
@@ -702,8 +739,10 @@ Barbarian_prompt = """
 •（a）一把巨斧或（b）任意一把军用近战武器
 •（a）两把手斧或（b）任意一把简易武器
 • 一个探索套组和四支标枪
+"""
 
-## 野蛮人职业表
+Barbarian_class_table_prompt = """
+## 野蛮人职业表 Barbarian class table
 职业等级 熟练加值 职业特性 狂暴次数 狂暴伤害
 1st +2 狂暴，无甲防御 2 +2
 2nd +2 鲁莽攻击，险境感知 2 +2
@@ -784,7 +823,9 @@ Barbarian_prompt = """
 
 ### 原初道途 Primal Path
 怒火在每个野蛮人心中燃烧，并助其成就伟业。而每个野蛮人对其怒火的源头有着不同的认知。某些人将内心积攒的痛苦、哀伤和愤怒锻造成钢铁般强硬的狂怒；而另一些人则视怒火为图腾兽馈赠的精魄祝福。
+"""
 
+Path_of_the_Berserker_prompt = """
 ### 狂战士道途 Path of the Berserker
 某些野蛮人认为狂暴即是其归宿，而这种归宿形式无比残暴。狂战士之道追求鲜血与无拘的狂怒。当你进入狂战士式狂暴时，你在战斗的混沌快感中兴奋，舍生忘死的投入厮杀。
 
@@ -800,7 +841,9 @@ Barbarian_prompt = """
 
 #### 报偿 Retaliation
 第 14 级起，身边 5 尺内敌人对你造成伤害时，你可以用反应对该生物发动一次近战武器攻击。
+"""
 
+Path_of_the_Totem_Warrior_prompt = """
 ### 图腾武者道途 Path of the Totem Warrior
 图腾武者道途是灵魂修炼的旅途。走上此道的野蛮人以一种兽魂作为其向导、保护者和力量源泉。在战斗中，你的图腾精魄将超自然的力量灌输于你，为你的狂暴注入魔法力量。
 大多数野蛮人部族将图腾兽视为氏族的一员，因此很少有人同时拥有两种或更多图腾精魄，但这样的特例依然存在。
@@ -816,13 +859,13 @@ Barbarian_prompt = """
 狼 Wolf。狂暴时，如果你周围５尺范围内有任何敌对生物，则你的盟友对这些生物发动近战攻击时的攻击检定具有优势。
 狼之精魄让你成为猎手中的领袖。
 
-#### 兽之形 Apect of the Beast
+#### 兽之形 Aspect of the Beast
 第 6 级时，你根据所选的图腾兽获得一项魔法能力。你可以选择和第 3 级时相同的图腾，也可以另做选择。
 熊 Bear。你拥有熊之巨力。你的载重（包括最大负重和最大举重）翻倍，并且你在推、拉、举和破坏物件时进行的力量检定具有优势。
 鹰 Eagle。你拥有鹰之锐目。你可以轻易的看清 1 里之内的范围，细节之处与 100 尺距离内的影像一样清晰。此外，你在微光环境中进行感知（察觉）检定时不会具有劣势。
 狼 Wolf。你拥有狼之敏锐。你可以在用快速步调旅行的同时追踪其他生物，也可以在用正常步调旅行时保持隐匿（旅行步调见第 8 章）。
 
-#### 精魄行者 Spirit Wlaker
+#### 精魄行者 Spirit Walker
 第 10 级时，你获得以仪式施法方式施展法术问道自然commune 的能力。施展此法术时，你所选的图腾兽会以精魄形态现身并回答你的疑问。
 
 #### 图腾同调 Totemic Attunement
@@ -833,7 +876,7 @@ Barbarian_prompt = """
 狼 Wolf。狂暴时，如果你在自己回合内以近战武器攻击命中一名大型或更小体型的生物，则你可以用一个附赠动作顺势将其打击至倒地。
 """
 
-Bard_prompt = """
+Bard_background_prompt = """
 # 吟游诗人 Bard
 久远的废墟中，她用手指在一座古旧的纪念碑上徐徐划过，身着毛皮的半精灵在此寻求刻骨铭心的英知，并尝试用音乐和魔法将它展现再世——那些古圣先贤记载在纪念碑上的传奇和它所赞颂的诗篇。
 面容坚定的人类勇士有节奏地用长剑敲击自己的鳞甲，随着节拍吟诵英雄史诗鼓励他的伙伴铭记勇气与信念。而魔力渐渐在音乐中笼罩着他们。
@@ -848,14 +891,18 @@ Bard_prompt = """
 真正的吟游诗人在世上并不常见。并不是在小酒馆里吹拉弹唱的歌手，或在贵族宫廷里欢唱耍跳的弄臣就能被称作吟游诗人。要想发现隐藏在音乐中的魔力，需要长时间的学习，以及最重要的天赋，而那正是大多数歌手和弄臣最渴望却最稀缺的东西。不过，外行人依然难以区分真正的吟游诗人和单纯的艺人。吟游诗人的一生都在大地巡游中度过，他们搜集逸闻、分享故事、然后享受听众的掌声。这跟一般艺人其实没区别，只是在知识的深度，音乐技巧的层次，对魔法的触动上，吟游诗人就不能和那些普通货色相比了。
 只有很少吟游诗人会在一个地方长期驻足，诗人们的天性就是旅行——寻找新的可以讲述的诗篇，学习未曾习得的技巧，从地平线的另一端发现新的事物等等，因而进行一场新的冒险只是其天性使然。每场冒险都是一次机遇，诗人们学习新的东西，练习诸般技艺，探索古老的陵墓，重现过去的魔法，解析旧有的文献，历险诡异境地，遭遇奇特生物。那些能够用个人经历化作故事激励人心的诗人就迥异于那些足不出门的家伙。
 而且，讲述了诸多英雄史诗及其结局后，许多诗人都会对故事有所共鸣，然后又在自己故事中扮演这些英雄的角色。
+"""
 
+Creating_a_Bard_prompt = """
 ## 创建吟游诗人 Creating a Bard
 吟游诗人靠故事吃饭，你不用管故事的真假。因此你的角色背景和动机不需要像听来的故事那样惊心动魄。也许你的童年是安稳而平凡的。也许你说你的童年没有什么好事，因为你是在腐臭的沼泽中被鬼婆抚养长大的。当然你的童年也许正跟传说中的故事一样，多姿多彩。某些吟游诗人还会从一些特别的存在身上获悉音乐的魔力，比如妖精或其它一些超自然的存在。
 你在开始冒险之前，有跟随更有经验的吟游诗人大师学习，度过一段学徒期吗？或者你是考入了学院学习各种知识练习你的魔力音乐？也许你是一个逃奴或孤儿，意外结识了日后成为你导师的诗人？又或者你拥有富裕的家庭，直接请了吟游诗人做你的引路人？或许你误打误撞进了鬼婆集会，被迫签订一个契约来获得了操控音乐魔力的方法，你的代价又是什么呢？
 
 ## 快速建卡 Quick Build
 你可以按以下建议快速创建一名吟游诗人。首先，将最高属性分配给魅力，次高属性分配给敏捷。然后选择艺人背景。最后选择戏法舞光术 dancing light 和恶言相加 vicious mockery，选择 1 环法术魅惑人类 charm person、侦测魔法 detect magic、治愈真言 healing word 和雷鸣波 thunderwave。
+"""
 
+Bard_Features_prompt = """
 # 职业特性 Class Features
 作为一名吟游诗人，你获得下列职业特性。
 
@@ -877,7 +924,9 @@ Bard_prompt = """
 •（a）一个大使套组或（b）一个艺人套组
 •（a）一个鲁特琴或（b）其它乐器
 • 皮甲和一把匕首
+"""
 
+Bard_class_table = """
 ## 吟游诗人职业表
 职业等级 熟练加值 职业特性 已知戏法 已知法术 ——每环法术位——1 环 2 环 3 环 4 环 5 环 6 环 7 环 8 环 9 环
 1st +2 施法，诗人激励(d6) 2 4 2 — — — — — — — —
@@ -968,7 +1017,9 @@ Bard_prompt = """
 
 ### 吟游诗人学院 Bard College
 吟游诗人之道也是交际之道。诗人们互相之间交换曲目和故事，吹嘘自己的造诣，并分享所得的知识。他们建立起架构松散的协会（即所谓的诗人学院），以此促进诗人团体的发展和维持他们的传统。
+"""
 
+College_of_Lore_prompt = """
 ### 逸闻学院 College of Lore
 逸闻学院的诗人们无所不知。他们从日常点滴中搜集信息，从名家古墓到乡野传言无孔不入。无论是小酒馆的歌唱家还是大宫廷里的大作家，都会运用自己诗人的天赋来聚集更多的听众。掌声响毕后，聚拢的听众将会发现相互之间最真实的一面：忠贞的信徒向牧师坦诚自己的信仰；仁义的民众也向国王表达内心的忠诚。
 诗人们只忠于其追求的真与美，而不向任何君王或神祇奉承尽忠。那些供养吟游诗人的贵族基本都理解他们的使者或顾问更趋向于诚实而非利益。
@@ -985,7 +1036,9 @@ Bard_prompt = """
 
 #### 超凡技艺 Peerless Skill
 第 14 级起，你进行属性检定时，可以花费一次诗人激励次数并掷一次激励骰，然后将结果加到你的属性检定上。你可以在掷完属性检定后，DM 宣布结果前决定是否使用此特性。
+"""
 
+College_of_Valor_prompt = """
 ### 勇气学院 College of Valor
 勇气学院是那些怀念逝去英雄的歌者聚集之地，也是新英雄诗篇的诞生地。诗人们或汇聚在金色大厅里，或围坐在熊熊篝火旁，颂唱着古往今来那些英勇事迹。他们行走大陆亲身见识体验那些伟大的事件，确保那些值得记忆的事不会被世界所遗忘。他们以激昂的诗歌激励旁人，向着英雄们的道路不倦的前进。
 
@@ -1002,7 +1055,7 @@ Bard_prompt = """
 第 14 级起，你可以自如地同时使用音乐魔法和武器。每当用动作施展一个诗人法术时，你同时还可以用附赠动作发动一次武器攻击。
 """
 
-Cleric_prompt = """
+Cleric_background_prompt = """
 # 牧师 Cleric
 精灵抬起双手，一袭光芒随着其抬眼吟诵的祷言笼罩全身，并生成能量开始医治受伤的同伴。
 荣耀之歌诵起，矮人举起他的斧头挥砍周围大批的兽人，并在每个敌人倒下时大声呼叫其守护神的名字。
@@ -1018,14 +1071,18 @@ Cleric_prompt = """
 并不是每个寺庙或神殿的侍僧和主祭都是牧师。某些回应召唤的祭司，只是在寺庙中通过服务、祈祷与献身的方式践行其守护神的意志，而不是作为神祇魔法与力量的武力。在一些城市里，祭司阶级同时也会出任政府机构的一些职务，而这些职位只是人们通往更高权力的垫脚石，而非真正与神祇交流的权位。当然，真正的牧师在这些地方少之又少。
 选择冒险生活的牧师通常都是为了回应其守护神的要求。为完成神祇的目标，他们将面对文明世界高墙外的危险，躬行惩戒邪恶或是在远古遗迹中寻回圣物。一些牧师会被要求保护神祇的信徒，期间可能迎战粗野的兽人，或是与正在作战两方势力协商，甚至必须前往关闭某个将会放出恶魔亲王的传送门。
 冒险中的牧师大多会提前与同信仰的神庙或教团建立联系。而神庙或其中的高阶祭司也可能会请求冒险牧师的帮助。
+"""
 
+Creating_a_Cleric_prompt = """
 ## 创建牧师 Creating a Cleric
 创造一名牧师时最重要的问题是你要信仰哪位神祇，遵循什么原则。附录 B 中列明了多元宇宙中众多的神祇可供选择。与你的 DM 商议讨论，再决定你在战役中可选择信仰的神祇。
 选定一位神祇后，下一个问题就是你的牧师和这位神祇的关系。你是否自愿服务于神？还是神选择了你并强迫你为其服务？你的最终目标是什么？神有没有给你什么特殊任务？或者你是否要证明自己是出任某个伟大任务的适宜的人选？
 
 ## 快速建卡 Quick Build
 你可以按以下建议快速创建一名牧师。首先，你将最高属性分配给感知，次高分配给力量或体质。然后选择侍僧背景。
+"""
 
+Cleric_Features_prompt = """
 # 职业特性 Class Features
 作为一名牧师，你获得以下职业特性。
 
@@ -1048,7 +1105,9 @@ Cleric_prompt = """
 •（a）一把轻弩和 20 支弩矢或（b）任意简易武器
 •（a）一个祭司套组或（b）一个探索套组
 • 一个盾牌和一个圣徽
+"""
 
+Cleric_class_table_prompt = """
 ## 牧师职业表
 职业等级 熟练加值 职业特性 已知戏法 ——每环法术位—— 1 环 2 环 3 环 4 环 5 环 6 环 7 环 8 环 9 环
 1st +2 施法，选择领域 3 2 — — — — — — — —
@@ -1136,7 +1195,9 @@ Cleric_prompt = """
 在万神殿中，每个神祇都会对凡人生活和文明的特定方面产生影响，亦即相应神衹的领域。一名神祇所有掌管的领域被称作为其神职。例如，希腊神祇阿波罗 Apollo 的神职即包含有知识、生命和光明领域。作为一个牧师，你将选择神祇职能的其中一个方面来着重体现，同时你也将被授予有关该领域的部分权能。
 你的选择可能对应于献身神祇的其中一个特别教派。还是以阿波罗为例，他在某个地区被崇敬以福玻斯 Phoebus（“光耀”）阿波罗之名，他们强调了祂在光明领域造成的影响；而在另个地区则被称为阿波罗阿刻西俄斯 Acesius（“医师”），强调祂的教团着重于生命领域。作为另一可能，你对领域的选择也可以只是单纯由于个人偏好，然后再去选择可以满足你这方面要求的神祇。
 每个领域的描述中都提供了在相应领域具影响力的神祇例子。范例中的神祇可能来自包括费伦、灰鹰、龙枪和艾伯伦等战役设定集的世界中，也可能来自凯尔特、希腊、北欧和埃及的古老神话。
+"""
 
+Knowledge_Domains_prompt = """
 ### 知识领域 Knowledge Domain
 知识之神们（包括欧格玛 Oghma、博卡布 Boccob、吉立安Gilean、奥林 Aureon 和透特 Thoth）视学习与求知高于一切。
 其中某些教义致力于将知识收集于图书馆和院校中分享，或是促进关于工匠与发明的特定知识。一些神祇会秘藏知识，并让其成为自己人的秘闻。而另一些则向其追随者们承诺，揭示多元宇宙的秘密将赋予其无上的大能。这些神祇的追随者们终日埋头于研究秘密学识，搜集老旧典籍，深入地下秘境中，以此尽其所能的进行学习研究。某些知识领域的神祇会促进工匠与发明方面的知识，其中就有铁匠神祇如贡德 Gond、李奥克斯Reorx、昂那塔 Onatar、摩拉丁 Moradin、赫菲斯托斯 Hephaestus以及戈伊布尼乌 Goibhniu。
@@ -1175,11 +1236,13 @@ Cleric_prompt = """
 
 #### 区域解读 Area Reading。
 你在冥想时看到的景象是身处位置最近发生的事件（某处的房间、街道、地道、空地，或是与之类似的 50 尺立方空间），可回溯的日数等于你的感知值。每个重要事件的幻象都将额外花费你 1 分钟的时间。这些重大事件通常涉及强烈的情感，比如战争和背叛、结婚和谋杀、出生和葬礼等。而这其中也可能包含有一些当时看似平凡无奇，眼下却显得至关重要的事情。
+"""
 
+Life_Domains_prompt = """
 ### 生命领域 Life Domain
 生命领域专注于活跃的正能量，其既是组成宇宙的主能量之一，也是维持所有生命延续的基础。生命之神的神职就是恢复人们的健康和伤痛，照顾需要帮助者，同时对抗死亡和不死的力量。几乎所有的非邪恶神祇都可以宣称在这一领域有影响，特别是农业神（如裳禔亚 Chauntea、阿拉瓦依 Arawai 和德墨忒尔 Demeter）、太阳神（洛山达 Lathander、培罗 Pelor 和拉·赫拉克提 Re-Horakhty）、医疗或者坚韧之神（如伊尔梅特 Ilmater、米莎凯 Mishakal、阿波罗 Apollo 和迪安斯彻特 Diancecht）以及家庭和社会之神（如赫斯提亚 Hestia，哈托尔 Hathor 和博得雷 Boldrei）。
 
-## 生命领域法术 Life Domian Spells
+## 生命领域法术 Life Domain Spells
 牧师等级 法术
 1st 祝福术 bless，疗伤术 cure wounds
 3rd 次级复原术 lesser restoration，灵体武器 spiritual weapon
@@ -1205,8 +1268,10 @@ Cleric_prompt = """
 
 #### 极效治疗 Supreme Healing
 第 17 级起，当你需要用一个法术来掷一粒或多粒骰子计算你所恢复的生命值时，所有骰子将取其最高值。例如，法术为某一生物恢复 2d6 生命值，则其结果直接取 12。
+"""
 
-### 光明领域 LIght Domain
+Light_Domains_prompt = """
+### 光明领域 Light Domain
 光明之神（包括海姆 Helm、洛山达 Lathander、佛尔图斯Pholtus、布兰查拉 branchala、银焰 Silver Flame、巴莱纳斯Belenus、阿波罗 Apollo 以及拉･赫拉克提 Re-Horakh-ty）促进世间的理念如重生和革新，真理，警觉，以及美丽，其通常的象征为太阳。某些这类的神祇会被描绘为太阳本身，或是驾着战车引领太阳划过天际。还有一些则是不懈的哨兵之眼，时刻洞穿每一片阴影与诡计。而其中某些美与才艺的神祇其教义还会诠释艺术即灵魂晋升容器的理念。光明之神的牧师们致力于指引灌输光耀的灵魂，其守护神的力量洞悉幻象，驱散谎言并烧尽一切晦暗。
 
 ## 光明领域法术 Light Domain Spells
@@ -1236,7 +1301,9 @@ Cleric_prompt = """
 
 #### 光冕 Corona of Light
 第 17 级起，你可以用你的动作启动日光的灵光，其效应持续 1 分钟或直至你用另一个动作将其解散。你将释放出半径60 尺的亮光光照，以及其外延伸 30 尺的微光光照。身处该亮光光照中的敌人，为抵抗任何火焰或光耀伤害的法术而进行豁免检定时具有劣势。
+"""
 
+Nature_Domains_prompt = """
 ### 自然领域 Nature Domains
 自然之神正如自然界本身一样变化多端，从宛如迷一般居于密林之中的神祇（如西凡那斯 Silvanus、欧拜･亥 Obad-Hai、奇思洛夫 Chislev、巴力诺 Balinor 和潘 Pan）到关联为特定花朵与灌木的友善神祇（如埃达丝 Eldath）都有存在。崇拜自然界本身的德鲁伊也会服务于其中一个神祇，并用德鲁伊的秘密语言练习其神秘仪式，以及背诵那些早被遗忘的祷文。许多这些神祇同样拥有相应的牧师，而这些勇士会帮助特定的自然神祇出任更需要积极冒险的任务。他们可能会前去狩猎破坏林地的邪恶怪物，去护佑忠实信徒们的收获，或是去诅咒那些渎神者的庄稼使其枯萎。
 
@@ -1267,8 +1334,10 @@ Cleric_prompt = """
 
 #### 自然大师 Master of Nature
 第 17 级起，你获得命令动物和植物生物的能力。当生物受你的魅惑动植物特性魅惑时，你可以在自己回合内执行一个附赠动作并发出一个口头指令，而所有这些受魅惑生物都将在其下一回合执行该指令。
+"""
 
-### 风暴领域 Tempest Domai
+Tempest_Domains_prompt = """
+### 风暴领域 Tempest Domains
 神职囊括风暴领域的神祗（包括塔洛斯 Talos、安博里Umberlee、寇德 Kord、赛波音 Zeboim、吞噬 Devourer、宙斯Zeus 以及索尔 Thor）统治着风暴、大海与天空。祂们包括闪电与雷鸣之神，地震之神，一部分火神，和某些暴力、体力和勇气之神。在一些神系中，风暴领域的神祇管理其他诸神并以风驰电掣的正义闪电制裁而闻名。而另一些海民神系里，该领域的诸神都属于海洋之神并眷顾着水手们。风暴诸神往往派遣他们的牧师前去激发民众的恐惧，从而确保这些人不会偏离正直之路或鼓励他们献上祭品以免触犯神怒。
 
 ## 风暴领域法术 Tempest Domain Spells
@@ -1298,7 +1367,9 @@ Cleric_prompt = """
 
 #### 风暴降生 Stormborn
 第 17 级起，当你不在地底或室内时，你得到等同于你步行速度的飞行速度。
+"""
 
+Trickery_Domains_prompt = """
 ### 诡术领域 Trickery Domains
 诡术之神们（如泰摩拉 Tymora、本莎芭 Beshaba、渥利达马拉 Olidammara、旅者 Traveler、加尔·闪金 Garl Glittergold、和洛基 Loki）均是恶作剧者，同时也是挑拨凡人或神明去颠覆现有秩序的煽动者。祂们是小偷、恶棍、赌徒、叛乱者和解放者的庇护人。其牧师则是世界的颠覆者，他们打击骄傲者的自尊，嘲弄暴君，窃盗富人，释放俘虏，并且蔑视毫无意义的传统。他们喜欢花言巧语、恶作剧、欺骗和盗窃要远远多于正面对抗。
 
@@ -1318,7 +1389,7 @@ Cleric_prompt = """
 作为一个动作，你可以创造一个完美的自身幻象。该幻象持续存在一分钟，或直至你失去对该特性的专注（等同于专注一个法术）。该幻象出现在你身边 30 尺内一个你能看见且未被占据的空间。你在自己回合内可以用一个附赠动作让该幻象移动至多 30 尺到某个你能看见的地方，但其必须始终保持离你120 尺以内。
 在幻象持续期间，你可以从幻象所在位置施展法术，但仍必须使用你自己的感官。当你和幻象都在同一个目标身边 5 尺内，且该目标可以看见幻象时，由于幻象对目标造成的干扰，你对该目标发动攻击而进行的攻击检定具有优势。
 
-#### 引导神力：幽影斗篷Channel Divinity: Cloak of Shadows
+#### 引导神力：幽影斗篷 Channel Divinity: Cloak of Shadows
 第 6 级起，你可以用引导神力特性来消失不见。
 作为一个动作，你变成隐形状态，该状态将持续至你的下一回合结束。当你攻击或施法时，将随即显形。
 
@@ -1327,7 +1398,9 @@ Cleric_prompt = """
 
 #### 精通分身 Improved Duplicity
 第 17 级起，你使用召唤分身时可以同时制造至多四个自身的幻象分身而非一个。作为你自己回合内的一个附赠动作，你可以让任意数量的该分身移动至多 30 尺到某个你可以看见的地方，但幻象必须始终保持离你 120 尺之内。
+"""
 
+War_Domains_prompt = """
 ### 战争领域 War Domains
 战争有许多种表现形式。它可以造就普通人成为英雄。它充满绝望与恐惧，伴随着残忍与懦弱的行为却也交织着卓越与勇气。不论何种情况，战争之神都会守望着武者们并为他们伟大的行为作出奖赏。这些神祇的牧师们善于战斗，也鼓舞其他人在战斗中赢取荣耀，或献上暴力行为作为祈祷。战争之神包括充满荣誉和骑士精神的勇士（如托姆 Torm，海若尼斯Heironeous 以及克里乔里斯 Kiri-Jolith），破坏和掠夺之神（如厄瑞斯努 Erythnul、愤恨 Fury、格乌什 Gruumsh 以及阿瑞斯Ares）以及征服和统治之神（如班恩 Bane、海克斯托 Hextor 以及玛格鲁比耶 Maglubiyet）。其他战争神（如坦帕斯 Tempus、尼刻 Nike 和努阿达 Nuada）则采取更中立的立场，推动战争的一切表现并支持处于任何境遇之下战士。
 
@@ -1343,11 +1416,11 @@ Cleric_prompt = """
 第 1 级起，你的守护神在战斗中给你激励。当你执行攻击动作时，你可以用一个附赠动作发动一次武器攻击。
 你可以使用该特性的次数等于你的感知调整值（至少为一次）。而你将在完成一次长休后重新恢复所有的使用次数。
 
-#### 引导神力：导引打击Channel Divinity: Guided Strike
+#### 引导神力：导引打击 Channel Divinity: Guided Strike
 第 2 级起，你可以用引导神力特性作出精准的打击。你在进行攻击检定时，可以使用引导神力令该次检定获得 +10 加值。
 你可以在看到掷骰结果后 DM 公布是否命中前，决定是否使用该特性。
 
-#### 引导神力：战神祝福Channel Divinity: War God Blessing
+#### 引导神力：战神祝福 Channel Divinity: War God Blessing
 第 6 级起，身处你周边 30 尺范围内的一个生物进行攻击检定时，你可以用一个反应使用引导神力令该检定获得 +10 加值。你可以在看到掷骰结果后 DM 公布是否命中前，决定是否使用该特性。
 
 #### 神圣打击 Divine Strike
@@ -3736,9 +3809,9 @@ Wizard_prompt = """
 
 article = {
     "classes": classes_prompt,
-    "Barbarian": Barbarian_prompt,
-    "Bard": Bard_prompt,
-    "Cleric": Cleric_prompt,
+    "Barbarian_background": Barbarian_background_prompt,
+    "Bard_background": Bard_background_prompt,
+    "Cleric_background": Cleric_background_prompt,
     "Druid": Druid_prompt,
     "Fighter": Fighter_prompt,
     "Monk": Monk_prompt,

@@ -1100,7 +1100,7 @@ keyword_list.update(total_spells_list)
 
 spell_descriptions_list = {
 "0环 戏法": """
-0环法术或戏法。
+0环戏法。
 """,
 
 "1环": """

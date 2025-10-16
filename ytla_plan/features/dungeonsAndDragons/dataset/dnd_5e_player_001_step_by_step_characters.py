@@ -2,34 +2,41 @@
 
 topics = {
     "step_by_step_characters": [
-        "step_by_step_characters", "beyond_1st_level"],
+        "step_by_step_characters", "1_Choose_a_Race", "2_Choose_a_Class", "3_Determine_Ability_Scores",
+        "4_Describe_Your_Character", "5_Choose_Equipment", "6_Come_Together", "beyond_1st_level"],
 }
 
 keyword_list = {
     "step_by_step_characters": [
         "第 1 章：一步步创建角色 Step-by-Step Characters",
-        "创建布鲁诺 Building Bruenor",
+        "创建布鲁诺 Building Bruenor", ],
+    "1_Choose_a_Race": [
         "1.选择种族 Choose a Race",
-        "创建布鲁诺，步骤 1 Building Bruenor, Step 1",
+        "创建布鲁诺，步骤 1 Building Bruenor, Step 1", ],
+    "2_Choose_a_Class": [
         "2.选择职业 Choose a Class",
         "等级 Level",
         "快速建卡 Quick Build",
         "生命值与生命骰 Hit Point and Hit Dice",
         "熟练加值 Proficiency Bonus",
-        "创建布鲁诺，步骤 2 Building Bruenor, Step 2",
+        "创建布鲁诺，步骤 2 Building Bruenor, Step 2", ],
+    "3_Determine_Ability_Scores": [
         "3.决定属性值 Determine Ability Scores",
         "属性值摘要 Ability Score Summary",
         "属性值和调整值 Ability Scores and Modifiers",
         "创建布鲁诺，步骤 3 Building Bruenor, Step 3",
         "变体：自定义属性值 Variant: Customizing Ability Scores",
-        "属性值花费点数 Ability Score Point Cost",
+        "属性值花费点数 Ability Score Point Cost", ],
+    "4_Describe_Your_Character": [
         "4.描述你的角色 Describe Your Character",
         "角色各属性 Your Character’s Abilities",
-        "创建布鲁诺，步骤 4 Building Bruenor, Step 4",
+        "创建布鲁诺，步骤 4 Building Bruenor, Step 4", ],
+    "5_Choose_Equipment": [
         "5.选择装备 Choose Equipment",
         "护甲等级 Armor Class",
         "武器 Weapons",
-        "创建布鲁诺，步骤 5 Building Bruenor, Step 5",
+        "创建布鲁诺，步骤 5 Building Bruenor, Step 5", ],
+    "6_Come_Together": [
         "6.集结 Come Together",
     ],
     "beyond_1st_level": [
@@ -47,7 +54,9 @@ step_by_step_characters_prompt = """
 
 ### 创建布鲁诺 Building Bruenor
 创建角色的每一个步骤都会配上一个相应的例子，即一位名叫鲍勃的玩家如何创造他的一名矮人角色，布鲁诺
+"""
 
+Choose_a_Race_prompt = """
 ## 1.选择种族 Choose a Race
 每个角色都有其所属种族，即生为 D&D 世界中众多智慧类人种族中的一员。玩家角色里最常见的角色种族是矮人，精灵，半身人和人类。某些种族还包括了相应的亚种 subraces，如山地矮人或木精灵。第 2 章提供了关于这些种族的更多信息，以及一些少见的种族包括龙裔，侏儒，半精灵，半兽人和提夫林。
 你所选的种族还包含一些源于其文化和先祖的基本外貌与天赋特质，因而有助于你定义角色的身份。角色种族所提供的种族特质包括有：特殊的感官，特定武器或工具的熟练项，某个或某几个技能的熟练项，使用某个戏法的能力，等。这些特性有时候可以契合特定的职业能力（见第 2 步）。例如，轻足半身人的种族特质使他们能成为特别杰出的游荡者，而高等精灵则倾向于成为强力的法师。不过有时扮演反其道而行同样很有趣。一名半兽人圣武士或山地矮人法师可以是一个不寻常但使人印象深刻的角色。
@@ -55,7 +64,9 @@ step_by_step_characters_prompt = """
 
 ### 创建布鲁诺，步骤 1 Building Bruenor, Step 1
 鲍勃坐下来创造他的角色。他决定用一个粗野的山地矮人来扮演他心目中的人物。于是，他在自己的角色卡上记下了所有矮人的种族特质，以及 25 尺速度和角色知晓的语言：通用语与矮人语。
+"""
 
+Choose_a_Class_prompt = """
 ## 2.选择职业 Choose a Class
 每个冒险者都是某职业中的一员。而职业则宽泛地描述了该角色的工作能力，其拥有的特殊天赋，以及其是否能胜任地城探险与怪物战斗，或进行紧张谈判等状况。关于职业的内容在本书第 3 章。
 你的角色会从所选的职业中获得大量的增益。许多这类增益属于职业特性 class features，即那些使你的角色与其他职业成员有所区别的能力（包括施法）。你还可以获得一系列的熟练项 proficiencies：护甲，武器，技能，豁免，以及某些工具。你的熟练项定义了你特别擅长的一系列事情，诸如使用特定武器，或讲一个令人信服的谎言。
@@ -88,7 +99,9 @@ step_by_step_characters_prompt = """
 ### 创建布鲁诺，步骤 2 Building Bruenor, Step 2
 鲍勃设想布鲁诺会带着一把战斧，一个折断了一只角的头盔冲进战斗。他使布鲁诺成为了一名战士，并将战士的熟练项和 1 级职业特性记录在其角色卡上。
 作为一名 1 级战士，布鲁诺拥有 1 枚生命骰——即一枚d10，而其开始时的生命值数值为 10＋其体质调整值。鲍勃将这些信息记下，并准备好将其加至布鲁诺的体质最终值中（见第 3 步）。鲍勃还记下了其 1 级角色的熟练加值，即+2。
+"""
 
+Determine_Ability_Scores_prompt = """
 ## 3.决定属性值 Determine Ability Scores
 你的角色在游戏中所能做的事情大都取决于其六项属性：力量 Strength，敏捷 Dexterity，体质 Constitution，智力Intelligence，感知 Wisdom 和魅力 Charisma。每项属性对应一个数值，即你记录在你的角色卡上的数值。
 六项属性值在游戏中的方法将在第 7 章中说明。“属性值摘要表”则提供了一个方便概述，其中包含了各属性分别衡量了哪些素质，而各属性又分别因属于哪个种族而有所提升，以及各职业特别看重哪些属性。
@@ -171,7 +184,9 @@ step_by_step_characters_prompt = """
 13 5
 14 7
 15 9
+"""
 
+Describe_Your_Character_prompt = """
 ## 4.描述你的角色 Describe Your Character
 完成角色的在游戏中的基本样子后，你就可以为其捏上血肉使其成为更生动的角色。你的角色需要一个名字。然后再花几分钟想一想其模样以及平时的行为习惯。
 你可以用第 4 章的资料塑造角色的外表和个人特征。选择角色的阵营 alignment（引导其做决定的道德指标）以及理想ideals。第 4 章还可以帮助你确认那些你的角色视若珍宝之事物，它们被称为牵绊 bonds，以及那些有朝一日可能使其葬送自己的缺点 flaws。
@@ -192,7 +207,9 @@ step_by_step_characters_prompt = """
 鲍勃决定设定布鲁诺生有贵族血统，但其氏族在他很小时候就被驱逐出家园。而他长大后则成了冰风谷一偏僻小村的铁匠。但布鲁诺有着英雄的使命——收复他的家乡，所以鲍勃为他的矮人选择了平民英雄这一背景，并记下该背景为角色提供的熟练项和特性。
 鲍勃在脑海中对布鲁诺的个性有个清晰的印象，所以他略过了平民英雄背景中提到的个人特征，而换成自己的想法：布鲁诺是一个谨慎而敏感的矮人。他真诚地爱着自己的朋友和同伴，却用粗野的举止和大嗓门将自己柔软的心隐藏起来。记下这些背景信息后，他选择了背景项所提供清单中公平的理想，并记下：布鲁诺相信没人可以凌驾于法律之上。
 布鲁诺的牵绊在其背景故事中显而易见：他渴望有朝一日能从驱逐矮人们离开的影龙手上收复秘银厅，也即其故乡。他的缺点与他谨慎敏感的天性联系在一起——他对孤儿和迷途之人特别温柔，这使他可能即便在毫无得益时仍会对这类人网开一面。
+"""
 
+Choose_Equipment_prompt = """
 ## 5.选择装备 Choose Equipment
 角色的起始装备 starting equipment 取决于其职业和背景，其内容包括有武器、护甲以及其他冒险用品。在你的角色卡上记下这些装备。所有这类装备的细节信息都列在第 5 章的内容中。
 而另一种作为替代的方案，则是以购买的方式决定你的起始装备。你基于所选择的职业获得一定数量的金币 gold pieces（gp）用以购买装备，其具体数额将在第 5 章中列明。大量附有价格的装备列表也将在该章列出。若你愿意，你还可以免费拥有一件饰品（参见第 5 章末尾的饰品列表）。
@@ -213,7 +230,9 @@ step_by_step_characters_prompt = """
 ### 创建布鲁诺，步骤 5 Building Bruenor, Step 5
 鲍勃写下了从战士职业和平民英雄背景中得到的起始装备，具体包括链甲 chain mail 和一面盾牌 shield，而这一组合使布鲁诺的护甲等级为 18。
 鲍勃选择了一把战斧和两把手斧作为布鲁诺的武器。他的战斧是一把近战武器，所以布鲁诺以该武器发动攻击所进行的攻击检定和伤害掷骰使用其力量调整值。此时他的攻击加值为其力量调整值（+3）加上其熟练加值（+2），总计为+5。战斧造成 1d8 点挥砍伤害，并且布鲁诺在命中时将其力量调整值加到伤害中，总计为 1d8+3 点挥砍伤害。布鲁诺掷出一把手斧时可以使用同样的攻击加值（作为投掷武器时，手斧的攻击检定和伤害掷骰使用力量调整值），而该武器在命中时造成 1d6+3点挥砍伤害。
+"""
 
+Come_Together_prompt = """
 ## 6.集结 Come Together
 大多 D&D 中的角色都不是独行侠。一个为了同一目标而通力合作的冒险者团体中，或者说一支队伍 party 中，都是由各个角色各司其职。而团队间的协作与配合可以让队伍在龙与地下城世界的众多危险中获得更高的存活率。与你的玩家伙伴和 DM 一同讨论决定你们的角色是否互相认识，他们怎么聚在一起以及这个群体可能承担着何种使命。
 """
@@ -259,5 +278,11 @@ beyond_1st_level_prompt = """
 
 article = {
     "step_by_step_characters": step_by_step_characters_prompt,
+    "1_Choose_a_Race": Choose_a_Race_prompt,
+    "2_Choose_a_Class": Choose_a_Class_prompt,
+    "3_Determine_Ability_Scores": Determine_Ability_Scores_prompt,
+    "4_Describe_Your_Character": Describe_Your_Character_prompt,
+    "5_Choose_Equipment": Choose_Equipment_prompt,
+    "6_Come_Together": Come_Together_prompt,
     "beyond_1st_level": beyond_1st_level_prompt,
 }

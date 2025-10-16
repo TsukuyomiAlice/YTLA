@@ -164,11 +164,13 @@ def create_article(topic_list: dict[str: list], keyword_list: dict[str: list]) -
         if key == 'planes_of_existence':
             for item in topic_list[key]:
                 article = article + dnd_5e_player_014_planes_of_existence.article[item]
+
         if key == 'creature_statistics':
             for group in topic_list[key]:
                 if group in keyword_list.keys():
                     for item in keyword_list[group]:
                         article = article + dnd_5e_player_015_creature_statistics.creature_statistics_list[item]
+
         if key == 'inspirational_readings':
             for item in topic_list[key]:
                 article = article + dnd_5e_player_016_inspirational_readings.article[item]
@@ -263,4 +265,4 @@ def query(chat):
     guide_chat = guide_answer(topic_chat, keyword_chat, chat)
     print("=" * 55)
 
-query("哪些动物可以在战斗中扑倒玩家")
+query("我想创建一个新的角色。我现在需要一份标准的空白角色文档，能给我设计一份么")

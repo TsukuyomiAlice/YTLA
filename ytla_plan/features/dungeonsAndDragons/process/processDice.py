@@ -2,7 +2,7 @@
 
 def roll_dice(dice: str) -> tuple:
     """
-    Simulate rolling dice
+    Simulate rolling dices
     :param dice: Dice expression, e.g., "2d6" means rolling 2 six-sided dice
     :return: A tuple containing total points and a list of individual dice results
     """

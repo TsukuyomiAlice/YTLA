@@ -2,8 +2,16 @@
 
 topics = {
     "races": [
-        "race_select", "Dwarf", "Elf", "Halfling", "Human", "Dragonborn", "Gnome", "Half_Elf", "Half_Orc",
-        "Tiefling", ],
+        "race_select",
+        "Dwarf_Background", "Dwarf_Names", "Dwarf_Traits", "Dwarf_Subrace",
+        "Elf_Background", "Elf_Names", "Elf_Traits", "Elf_Subrace",
+        "Halfling_Background", "Halfling_Names", "Halfling_Traits", "Halfling_Subrace",
+        "Human_Background", "Human_Names_and_Ethnicities", "Human_Traits", "Variant_Human_Traits",
+        "Dragonborn_Background", "Dragonborn_Names", "Dragonborn_Traits", "Draconians",
+        "Gnome_Background", "Gnome_Names", "Gnome_Traits", "Gnome_Subrace",
+        "Half_Elf_Background", "Half_Elf_Names", "Half_Elf_Traits",
+        "Half_Orc_Background", "Half_Orc_Names", "Half_Orc_Traits",
+        "Tiefling_Background", "Tiefling_Names", "Tiefling_Traits", ],
 }
 
 keyword_list = {
@@ -17,14 +25,16 @@ keyword_list = {
         "速度 Speed",
         "语言 Languages",
         "亚种 Subraces", ],
-    "Dwarf": [
+    "Dwarf_Background": [
         "矮人 Dwarf",
         "矮小敦实 Short and stout",
         "记忆久远，仇恨长存 Long Memory, Long Grudges",
         "氏族与王国 Clans and Kingdoms",
         "众神，黄金与氏族 Gods, Gold, and Clan",
-        "从不轻信 Slow to Trust",
-        "矮人姓名 Dwarf Names",
+        "从不轻信 Slow to Trust", ],
+    "Dwarf_Names": [
+        "矮人姓名 Dwarf Names", ],
+    "Dwarf_Traits": [
         "矮人特质 Dwarf Traits",
         "属性值加成 Ability Score Increase。你的体质加 2。",
         "年龄 Age。矮人成长的速度和人类相仿，但他们直到 50 岁前都能被认为是年轻矮人。他们平均能够活 350 年。",
@@ -35,7 +45,8 @@ keyword_list = {
         "矮人战斗训练 Dwaven Combat Training。你具有战斧，手斧，轻锤和战锤等武器的熟练项。",
         "工具熟练项 Tool Proficiency。你获得一个工匠工具的熟练项，从以下项目中自选其一：铁匠工具，酿酒工具或石匠工具。",
         "石中精妙 Stonecunning。每当你对一件石制品的起源做智力（历史）检定时，你视为具有历史技能的熟练项，并可以在检定中加上双倍的熟练加值，而非你平时的熟练加值。",
-        "语言 Language。你能够说、读、写通用语和矮人语。矮人语中充满了硬辅音和喉音，这使得矮人在讲其他语言时也会带上这些特点。",
+        "语言 Language。你能够说、读、写通用语和矮人语。矮人语中充满了硬辅音和喉音，这使得矮人在讲其他语言时也会带上这些特点。", ],
+    "Dwarf_Subrace": [
         "亚种 Subrace",
         "丘陵矮人 Hill Dwarf",
         "属性值加成 Ability Score Increase。你的感知值加 1。",
@@ -45,14 +56,16 @@ keyword_list = {
         "矮人护甲训练 Dwarven Armor Training。你拥有轻甲和中甲的熟练项。",
         "灰矮人 Duergar",
     ],
-    "Elf": [
+    "Elf_Background": [
         "精灵 Elf",
         "纤瘦而优雅 Slender and Graceful",
         "永恒视角 A Timeless Perspective",
         "林中秘境 Hidden Woodland Realms",
         "探索与冒险 Exploration and Adventure",
-        "高傲却和善 Haughty but Gracious",
-        "精灵姓名 Elf Names",
+        "高傲却和善 Haughty but Gracious", ],
+    "Elf_Names": [
+        "精灵姓名 Elf Names", ],
+    "Elf_Traits": [
         "精灵特质 Elf Traits",
         "属性值加成 Ability Score Increase。你的敏捷加 2。",
         "年龄 Age。尽管精灵的生理成熟速度和人类差不多，但成年的精灵除生理成熟外，还必须拥有成熟的处世经验。一般而言，精灵一般在 100 岁前后宣布成年，寿命可达 750 岁。",
@@ -62,7 +75,8 @@ keyword_list = {
         "敏锐感官 Keen Senses。你拥有察觉技能的熟练项。",
         "精类血统 Fey Ancestry。你进行对抗魅惑的豁免时具有优势，并且不会因魔法效应而陷入睡眠。",
         "出神 Trance。精灵不需要睡眠。他们会在需要休息时陷入持续 4 个小时的半清醒深度冥想中（通用语中描述此状态的词是“出神 Trance”）。冥想时精灵也会做梦，这种梦其实是反应多年来现实生活的思维活动。以这种方式休息后，你获得人类睡眠 8 小时的全部益处。",
-        "语言 language。你能够说、读、写通用语和精灵语。精灵语如流体般流畅，有着微妙的语调变化和复杂的语法结构。精灵文学十分丰富多彩，他们的诗歌在其他种族里也享有很高的评价。许多吟游诗人都会学习精灵语，并将其韵律运用在他们自己的诗作中。",
+        "语言 language。你能够说、读、写通用语和精灵语。精灵语如流体般流畅，有着微妙的语调变化和复杂的语法结构。精灵文学十分丰富多彩，他们的诗歌在其他种族里也享有很高的评价。许多吟游诗人都会学习精灵语，并将其韵律运用在他们自己的诗作中。", ],
+    "Elf_Subrace": [
         "亚种 Subrace。 ",
         "高等精灵 High Elf ",
         "属性值加成 Ability Score Increase。你的智力加 1。",
@@ -79,15 +93,17 @@ keyword_list = {
         "日照敏感 Sunlight Sensitivity。你进行攻击检定和依赖视觉的感知（察觉）检定时，如果你本人、你的攻击目标或你尝试察觉的东西位于阳光直射下，则你所进行的相应检定具有劣势。",
         "卓尔魔法 Drow Magic。你掌握戏法舞光术 dancing light。达到 3 级后，你可以每日使用一次法术妖火 faerie fire。达到 5 级后，你可以每日使用一次法术黑暗术 darkness。这些每日施展一次的法术其施法关键属性是魅力。你必须完成一次长休才能再次以该特质施展这些法术。",
         "卓尔武器训练 Drow Weapon Training。你拥有刺剑、短剑和手弩等武器的熟练项。", ],
-    "Halfling": [
+    "Halfling_Background": [
         "半身人 Halfling",
         "小而实在 Small and Practical",
         "和蔼又好奇 Kind and Curious",
         "融入人群 Blend into the Crowd",
         "牧养之乐 Pastoral Pleasantries",
         "探索机缘 Exploring Opportunities",
-        "积极而友好 Affable and Positive",
-        "半身人姓名 Halfing Names",
+        "积极而友好 Affable and Positive",],
+    "Halfling_Names": [
+        "半身人姓名 Halfing Names", ],
+    "Halfling_Traits": [
         "半身人特质 Halfling Traits",
         "属性值加成 Ability Score Increase。你的敏捷加 2。",
         "年龄 Age。半身人约 20 岁成年，一般能活到 150 岁。",
@@ -96,7 +112,8 @@ keyword_list = {
         "幸运 Lucky。当攻击检定、属性检定以及豁免检定掷出 1 时，你可以再重掷一次，但必须使用重掷的结果。",
         "勇气 Brave。你进行对抗恐慌的豁免时具有优势。",
         "半身人灵巧 Halfling Nimbleness。你可以穿越任何体形比你大的生物所在空间。",
-        "语言 Language。你能够说、读、写通用语和半身人语。虽然半身人语不是甚么秘密语言，但半身人很厌恶将它教给外人。",
+        "语言 Language。你能够说、读、写通用语和半身人语。虽然半身人语不是甚么秘密语言，但半身人很厌恶将它教给外人。", ],
+    "Halfling_Subrace": [
         "亚种 Subrace。",
         "轻足半身人 Lightfoot",
         "属性值加成 Ability Score Increase。你的魅力加 1。",
@@ -104,14 +121,15 @@ keyword_list = {
         "敦实半身人 Stout",
         "属性值加成 Ability Score Increase。你的体质加 1。",
         "敦实体魄 Stout Resilience。你进行对抗毒素的豁免时具有优势，你拥有毒素伤害的伤害抗性。", ],
-    "Human": [
+    "Human_Background": [
         "人类 Human",
         "大族谱 A Broad Spectrum",
         "人种差异 Variety in All Things",
         "流传习俗 Lasting Institutions",
         "模范野心家 Exemplars of Ambition",
-        "大家的第二好友 Everyone’s Second-Best Friends",
-        "人类姓名与人种分类 Human Names andEthnicities",
+        "大家的第二好友 Everyone’s Second-Best Friends", ],
+    "Human_Names_and_Ethnicities": [
+        "人类姓名与人种分类 Human Names and Ethnicities",
         "卡林珊人 Calishite",
         "琼达斯人 Chondathan",
         "达马拉人 Damaran",
@@ -120,7 +138,8 @@ keyword_list = {
         "莱瑟曼人 Rashemi",
         "受国人 Shou ",
         "泰瑟尔人 Tethyrian ",
-        "图拉米人 Turami ",
+        "图拉米人 Turami ", ],
+    "Human_Traits": [
         "人类特质 Human Traits",
         "属性值加成 Ability Score Increase。你的全部属性值加 1。",
         "年龄 Age。人类不到 20 岁成年，而很少活过 100 岁。",
@@ -131,12 +150,16 @@ keyword_list = {
         "属性值加成 Ability Score Increase。自选两项不同属性各加 1。",
         "技能 Skills。你获得一项自选的技能作为熟练项。",
         "专长 Feat。你获得一项自选的专长。", ],
-    "Dragonborn": [
+    "Variant_Human_Traits": [
+        "变体人类特质 Variant Human Traits", ],
+    "Dragonborn_Background": [
         "龙裔 Dragonborn",
         "龙族之傲 Proud Dragon Kin",
         "氏族之傲 Self-Sufficient Clans",
-        "罕见种族 Uncommon Races",
-        "龙裔姓名 Dragonborn Names",
+        "罕见种族 Uncommon Races", ],
+    "Dragonborn_Names": [
+        "龙裔姓名 Dragonborn Names", ],
+    "Dragonborn_Traits": [
         "龙裔特质 Dragonborn Traits",
         "属性值加成 Ability Score Increase。你力量加 2，魅力加 1。",
         "年龄 Age。年幼的龙裔成长速度很快，在孵化后几小时就可以行走。其 3 岁时就达到了人类 10 岁儿童的体型和发育水平，然后在 15 岁时成年。其一生总共能活大约 80 年。",
@@ -146,18 +169,21 @@ keyword_list = {
         "龙族血统 Dranconic Ancestry",
         "吐息武器 Breath Weapon。你可以使用动作呼出破坏性的能量。你的龙族血统决定了吐息的范围、形状以及其伤害类型。",
         "伤害抗性 Damage Resistance。你的龙族血统为你带来相应伤害类型的伤害抗性。",
-        "语言 Language。你能够说、读、写通用语和龙语。龙语被认为是最古老的语言之一，且时常被人用于魔法的研习中。对其他生物来说，龙语听起来非常刺耳，其中还饱含了很多硬辅音和齿擦音。",
+        "语言 Language。你能够说、读、写通用语和龙语。龙语被认为是最古老的语言之一，且时常被人用于魔法的研习中。对其他生物来说，龙语听起来非常刺耳，其中还饱含了很多硬辅音和齿擦音。", ],
+    "Draconians": [
         "龙人 Draconians",
     ],
-    "Gnome": [
+    "Gnome_Background": [
         "侏儒 Gnome",
         "充满生机 Vibrant Expression",
         "献身于快乐 Delighted Dedication",
         "明亮的地洞 Bright Burrows",
         "放眼世界 Seeing the World",
         "满怀感恩 Always Appreciant",
-        "罕见种族 Uncommon Races",
-        "侏儒姓名 Gnome Names",
+        "罕见种族 Uncommon Races", ],
+    "Gnome_Names": [
+        "侏儒姓名 Gnome Names", ],
+    "Gnome_Traits": [
         "侏儒特质 Gnome Traits",
         "属性值加成 Ability Score Increase。你的智力加 2。",
         "年龄 Age。侏儒成长速度与人类相同，大多侏儒预计在 40 岁左右便定居过上成人生活。他们能活到 350 到接近 500 岁。",
@@ -165,7 +191,8 @@ keyword_list = {
         "速度 Speed。你的基础步行速度为 25 尺。",
         "黑暗视觉 Darkvision。你习惯了地下生活，因而在黑暗和微光光照下有着良好的视力 。在微光光照下，你身边 60 尺内可以视为等同于明亮光照。而在黑暗中，该范围内可视为等同于微光光照。你无法在黑暗中分辨颜色，只能看到有灰度的黑白画面。",
         "侏儒狡黠 Gnome Cunning。你进行对抗魔法的智力、感知和魅力豁免时具有优势。",
-        "语言 Language。你能够说、读、写通用语和侏儒语。侏儒语是一种借用矮人语文字系统的语言，因其技术性的论文集以及对自然界的学术分类而闻名。",
+        "语言 Language。你能够说、读、写通用语和侏儒语。侏儒语是一种借用矮人语文字系统的语言，因其技术性的论文集以及对自然界的学术分类而闻名。", ],
+    "Gnome_Subrace": [
         "亚种 Subrace。",
         "森林侏儒 Forest Gnome ",
         "属性值加成 Ability Score Increase。你的敏捷加 1。",
@@ -176,13 +203,15 @@ keyword_list = {
         "工匠学识 Artificer’s Lore。当你进行关于魔法物品、炼金物品或是工艺元件的智力（历史）检定时，你可以在检定中加上双倍的熟练加值，而非你平时的熟练加值。",
         "修补匠 Tinker。你拥有工匠工具（修理工具）的熟练项。使用这些工具时，你可以花费 1 小时时间和 10gp 材料制作一个超小型的发条机械装置（AC5，HP1）。该装置在 24 小时后将自动停止运作（除非你再花费 1 小时来修理它让它保持运作），你也可以使用你的动作主动使其停止运作。它停止运作后，你将收回用来制造它的材料。你最多可以同时激活三个这样的装置。",
     ],
-    "Half_Elf": [
+    "Half_Elf_Background": [
         "半精灵 Half-Elf",
         "同属两个世界 Of Two Worlds",
         "说客或浪人 Diplomats or Wanderers",
         "优秀的使节 Excellent Ambassadors",
-        "罕见种族 Uncommon Races",
-        "半精灵姓名 Half-Elf Names",
+        "罕见种族 Uncommon Races", ],
+    "Half_Elf_Names": [
+        "半精灵姓名 Half-Elf Names", ],
+    "Half_Elf_Traits": [
         "半精灵特质 Half-Elf Traits",
         "属性值加成 Ability Score Increase。你的魅力加 2。再选择其他两项属性值各加 1。",
         "年龄 Age。半精灵的成长速度与人类相同。他们 20 岁左右成年，但却拥有毕人类更长的寿命。半精灵通常能活到 180岁以上。",
@@ -191,15 +220,18 @@ keyword_list = {
         "黑暗视觉 Darkvision。得益于你的精灵血统，你在黑暗和微光光照中有着超出常人的视力。在微光光照下，你身边 60 尺内可以视为等同于明亮光照。而在黑暗中，该范围内可视为等同于微光光照。你无法在黑暗中分辨颜色，只能看到有灰度的黑白画面。",
         "精类血统 Fey Ancestry。你进行对抗魅惑的豁免时具有优势，并且不会因魔法效应而陷入睡眠。",
         "多才多艺 Skill Versatility。你获得两项自选技能的熟练项。",
-        "语言 Language。你能够说、读、写通用语和精灵语，以及任意一门自选语言。", ],
-    "Half_Orc": [
+        "语言 Language。你能够说、读、写通用语和精灵语，以及任意一门自选语言。",
+    ],
+    "Half_Orc_Background": [
         "半兽人 Half-Orc",
         "疤痕与强壮 Scarred and Strong",
         "格乌什的印记 The Mark of Gruumsh",
         "部族与贫民窟 Tribes and Slums",
         "强迫认同 Grudging Acceptance",
-        "罕见种族 Uncommon Races",
-        "半兽人名字 Half-Orc Names",
+        "罕见种族 Uncommon Races", ],
+    "Half_Orc_Names": [
+        "半兽人名字 Half-Orc Names",],
+    "Half_Orc_Traits": [
         "半兽人特质 Half-Orc Traits",
         "属性值加成 Ability Score Increase。你的力量加 2，你的体质加 1。",
         "年龄 Age。半兽人比人类更快成熟。他们在 14 岁左右便成年，而其衰老也明显而快速。很少有半兽人可以活过 75 岁。",
@@ -208,13 +240,15 @@ keyword_list = {
         "凶蛮攻击 Savage Attacks。使用近战武器攻击造成重击时，你可以额外掷一个该武器的伤害骰，并将其数值加入到重击的额外伤害中。",
         "语言 Language。你可以说、读、写通用语和兽人语。兽人语是使用辅音的一种粗糙而难听的语言。兽人语没有自己的文字，但可以借用矮人语的文字进行书写。",
     ],
-    "Tiefling": [
+    "Tiefling_Background": [
         "提夫林 Tiefling",
         "地狱血脉 Infernal Bloodline",
         "自恃而多疑 Self-Reliant and Suspicious",
         "互不信任 Mutual Mistrust",
-        "罕见种族 Uncommon Races",
-        "提夫林姓名 Tiefling Names",
+        "罕见种族 Uncommon Races",],
+    "Tiefling_Names": [
+        "提夫林姓名 Tiefling Names",],
+    "Tiefling_Traits": [
         "提夫林特质 Tiefling Traits",
         "属性值加成 Ability Score Increase。你的智力加 1，你的魅力加 2。",
         "年龄 Age。提夫林成年的岁数与人类相仿，但寿命会长数年。",
@@ -288,13 +322,17 @@ Dwarf_prompt = """
 精灵 Elves。“依赖精灵可不是件明智的事儿。你永远猜不到一个精灵下一秒会干什么。你砸中兽人脑袋时，他开始唱歌和拔剑的机率一样大。他们总是单纯又轻浮。不过必须承认他们确实能制造出相当精美的武器和盔甲，然而他们却没几个铁匠。不过，当兽人和地精从山上潮涌而出时，有个精灵在身后倒也不差。虽然他们没矮人靠谱，不过他们毕竟跟咱一样痛恨那些兽人。”
 半身人 Halflings。“他们确实讨人喜欢，不过，你见过半身人英雄么？或者半身人的帝国？半身人的胜利之师？最不济，半身人创造的远古宝藏有么？一个什么都没有的种族，你怎么能把他们当回事儿。”
 人类 Humans。“等你了解一个人类的时候，她的生命也已经走到最后一刻了。幸运的话，她可能有个像她一样好的女儿或孙女。当你认为是时候和一个人类变为朋友了，却又要眼看着他们逝去。人类总能得到他们想要的东西，无论是巨龙的宝藏还是帝国的王座。你不得不敬佩他们的执着和为此而奉献的精神，当然这也经常使他们惹得一身麻烦。”
+"""
 
+Dwarf_Names_prompt = """
 ## 矮人姓名 Dwarf Names
 依照传统，矮人必须由氏族长老命名并重复使用代代相传的名字。矮人的名字不属于自己，而是属于氏族。若矮人让名字蒙羞，其名字将被氏族剥夺。依照矮人的律法，被剥夺名字的矮人禁止再使用矮人的名字。
 男性名字 Male Names：阿德里克 Adrik、阿贝里希 Alberich、巴恩 Baern、巴伦德 Barendd、布洛托 Brottor、布鲁诺 Bruenor、达因 Dain、达拉克 Darrak、德尔格 Delg、艾帕克 Eberk、因克 Einkil、法格林 Fargrim、弗林特 Flint、加代因 Gardain、哈比克 Harbek、基尔德拉克 Kildrak、莫格兰 Morgran、欧斯克 Orsik、奥斯卡 Oskar、朗格琳 Rangrim、鲁瑞克 Rurik、塔可林 Taklinn、索拉丁 Thoradin、索林 Thorin、托达克 Tordek、特若本 Traubon、特拉沃克 Travok、伍夫加 Ulfgar、维特 Veit、冯达尔 Vondal
 女性名字 Female Names：安珀 Amber、爱汀 Artin、欧德希德 Audhild、巴德莱恩 Bardryn、达格娜 Dagnal、黛萨 Diesa、艾尔德芙 Eldeth、法尔克伦 Falkrunn、菲涅伦 Finellen、冈罗妲 Gunnloda、古尔蒂斯 Gurdis、赫尔嘉 Helja、贺琳 Hlin、卡夫拉 Kathra、克丽丝莱德 Kristryd、伊尔蒂 Ilde、丽芙拉萨 Liftrasa、玛德雷德 Mardred、丽丝怀恩 Riswynn、珊诺 Sannl、托贝拉 Torbera、托嘉 Torgga、维斯特拉 Vistra
 氏族名称 Clan Names：巴尔德克 Balderk、战锤 Battlehammer、布劳南威尔 Brawnanvil、丹吉尔 Dankil、火铸 Fireforge、霜须 Frostbeard、果伦 Gorunn、豪德赫克 Holderhek、铁拳 Ironfist、罗德尔 Loderr、鲁格 Lutgehr、伦纳海姆 Rumnaheim、史特拉肯 Strakeln、托伦 Torunn、乌加特 Ungart
+"""
 
+Dwarf_Traits_prompt = """
 ## 矮人特质 Dwarf Traits
 你的矮人角色拥有一系列与生俱来的能力。这是矮人一族的天赋特质，也是矮人角色特点的重要组成部分。
 #### 属性值加成 Ability Score Increase。你的体质加 2。
@@ -307,7 +345,9 @@ Dwarf_prompt = """
 #### 工具熟练项 Tool Proficiency。你获得一个工匠工具的熟练项，从以下项目中自选其一：铁匠工具，酿酒工具或石匠工具。
 #### 石中精妙 Stonecunning。每当你对一件石制品的起源做智力（历史）检定时，你视为具有历史技能的熟练项，并可以在检定中加上双倍的熟练加值，而非你平时的熟练加值。
 #### 语言 Language。你能够说、读、写通用语和矮人语。矮人语中充满了硬辅音和喉音，这使得矮人在讲其他语言时也会带上这些特点。
+"""
 
+Dwarf_Subrace_prompt = """
 ## 亚种 Subrace
 D&D 世界中居住着以下两种主要的矮人亚种：丘陵矮人 hill dwarves 和山地矮人 mountain dwarves。你可以从这些亚种选项中选择其一。
 
@@ -356,7 +396,9 @@ Elf_prompt = """
 矮人 Dwarves。“矮人都是沉闷的呆瓜莽汉。不过他们浑身都是勇气，也就只是缺点幽默感，不够世故又不懂礼貌而已。而且必须承认，他们最好的铁匠生产的艺术品已经几乎能达到精灵的质量标准了。”
 半身人 Halflings。“半身人是单纯快乐的民族，而这种品性不该被鄙视。他们都是好人，而且又会互相照顾还会搞园艺，而且他们还能在必要时证明自己比看起顽强得多。”
 人类 Humans。“人类总是匆匆忙忙。他们野心勃勃又总想在其短暂的人生完成某些事情。人类的那些事业看起来那么的苍白无力，但有时转眼间又会让你震惊于他们的成就。只是如果他们能静下心来，再学点文雅作风那就最好了。
+""",
 
+Elf_Names_prompt = """
 ## 精灵姓名 Elf Names
 精灵通常会在百岁生日后宣布自己成年，然后为自己选择一个名字。在此之前这名精灵都会被看作是个孩子，并用其小名作称谓。
 宣布自己成年后，精灵将为自己选择一个正式的名字。但就算是知道他已成年的人，仍可能继续用先前的幼名称呼他，而他本人也不见得介意。成年精灵的名字完全自创，虽然可能反映他喜欢的某些人名，或家人的名字。精灵男女名字的差异不大，而下述分组只是表示一般的倾向。此外，精灵也有家族姓氏，通常是由一些普通精灵词汇组合而成。有些精灵在旅行时会将姓氏译为通用语，有些则仍保留精灵语的用法。
@@ -364,7 +406,9 @@ Elf_prompt = """
 成年男性名字 Male Adult Names：阿德兰 Adran、埃勒 Aelar、阿拉密尔 Aramil、阿兰尼斯 Arannis、欧斯特 Aust、贝罗 Beiro、贝里安 Berrian、卡里克 Carric、埃里温 Erevan、恩尼亚里斯Enialis、厄丹 Erdan、利阿丹 Riardon、戈林登 Galinndan、哈达拉伊 Hadarai、海安 Heian、西摩 Himo、伊米罗 Immeral、伊维里欧斯 Ivellios、劳西安 Laucian、明达提斯 Mindartis、佩伦 Peren、皮里阿斯 Paelias、奎里昂 Quarion、罗伦 Rolen、索维里斯 Soveliss、萨米尔 Thamior、萨里伏 Tharivol、瓦瑞斯 Varis
 成年女性名字 Female Adult Names：阿德丽 Adrie、阿尔泰亚Althaea、安娜斯崔娜 Anastrianna、安德拉斯特 Andraste、安缇诺雅 Antinua、贝丝瑞娜 Bethrynna、比蕾尔 Birel、施琳 Caelynn、德鲁希丽雅 Drusilia、恩娜 Enna、菲珞西尔Felosial、依莲尼亚 Ielenia、吉莲尼丝 Jelenneth、凯勒丝Keyleth、莉雅 Lia、乐珊娜 Leshanna、梅莉乐 Meriele、米雅莉 Mialee、奈瓦拉 Naivara、奎莲娜 Quelenna、希拉瑰 Sariel、瑰拉瑟 Quillathe、莎奈拉 Shanairra、夏瓦 Shava、希菈瑰Silaqui、提尔拉斯卓 Theirastra、泰雅 Thia、瓦丹尼亚 Vadania、维兰瑟 Valanthe、珊娜菲亚 Xanaphia
 家族姓氏 Family Names（通用语译名）:阿玛吉尔 Amakiir （宝石花 Gemflower）、阿玛斯塔夏 Amastacia（星之花 Starflower）、嘉兰诺德 Galanodel（月之呢喃 Moonwhisper）、荷里米昂Holimion（钻石露 Diamonddew）、伊普吉尔 Ilphelkiir（宝石花丛 Gemblossom）、利亚顿 Liadon（银叶 Silverfrond）、梅利安涅 Meliamne（橡树末 Oakenheel）、耐罗 Nailo（夜风Nightbreeze）、暹诺德 Siannodel（月溪 Moonbrook）、西罗先 Xiloscient（金瓣 Goldpetal）
+""",
 
+Elf_Traits_prompt = """
 ## 精灵特质 Elf Traits
 你的精灵角色拥有的各种天赋能力，都是精灵族千年淬炼的体现。
 #### 属性值加成 Ability Score Increase。你的敏捷加 2。
@@ -376,7 +420,9 @@ Elf_prompt = """
 #### 精类血统 Fey Ancestry。你进行对抗魅惑的豁免时具有优势，并且不会因魔法效应而陷入睡眠。
 #### 出神 Trance。精灵不需要睡眠。他们会在需要休息时陷入持续 4 个小时的半清醒深度冥想中（通用语中描述此状态的词是“出神 Trance”）。冥想时精灵也会做梦，这种梦其实是反应多年来现实生活的思维活动。以这种方式休息后，你获得人类睡眠 8 小时的全部益处。
 #### 语言 language。你能够说、读、写通用语和精灵语。精灵语如流体般流畅，有着微妙的语调变化和复杂的语法结构。精灵文学十分丰富多彩，他们的诗歌在其他种族里也享有很高的评价。许多吟游诗人都会学习精灵语，并将其韵律运用在他们自己的诗作中。
+""",
 
+Elf_Subrace_prompt = """
 ## 亚种 Subrace。 
 精灵族自古以来的分离使得今天的精灵可以分为三个亚种：高等精灵 high elves，木精灵 wood elves，和一般被称为卓尔 drow 的黑暗精灵 dark elves。你可以从这些亚种选项中选择其一。在某些世界设定中，这些亚种族会被进一步细分（如被遗忘的国度设定中的日精灵 sun elves 和月精灵moon elves）。因此，你也可以随意选择这些进一步细分的亚种。
 
@@ -438,13 +484,17 @@ Halfling_prompt = """
 矮人 Dwarves。“矮人们是忠实的朋友，而且他们说话算话。不过让他们偶尔笑笑难道不好么？”
 精灵 Elves。“他们真美！不止脸蛋漂亮，音乐动听，举止文雅，什么都美。就好像从美梦中走出来一样。不过他们总不肯说自己到底在笑什么，我敢肯定除了他们说的那些理由一定还有些别的什么东西。”
 人类 Humans。“人类跟咱们很像。真的。或者说至少有些人类是真像。你可以在城堡或哨站外看看那些农夫和牧民，他们都是善良淳朴的人。我不是说那些男爵和战士有啥不对。虽然他们老自说自话就给别人定罪，不过他们保护自己的土地之余也会守护咱的地方，这挺好的。
+"""
 
+Halfling_Names_prompt = """
 ## 半身人姓名 Halfing Names
 半身人有名字，有姓氏，有时还有昵称。他们有很多姓氏都源于昵称，由于印象过于深刻因此一代代传了下来。
 男性名字 Male Names：阿尔顿 Alton、安德 Ander、卡德 Cade、柯林 Corrin、艾尔顿 Eldon、埃里奇 Errich、芬南 Finnan、盖瑞 Garret、林逹尔 Lindal、里尔 Lyle、梅里克 Merric、米罗 Milo、欧斯朋 Osborn、佩林 Perrin、威德 Reed、罗斯科Roscoe、韦尔比 Wellby
 女性名字 Female Names：安德妮 Andry、布妮 Bree、卡莉 Callie、蔻拉 Cora、尤菲米娅 Euphemia、吉莉安 Jillian、卡芙里 Kithri、拉薇妮亚 Lavinia、莉达 Lidda、玛拉 Merla、奈达 Nedda、佩拉 Paela、波蒂亚 Portia、瑟拉菲娜 Seraphina、希尔娜Shaena、赛研 Trym、梵妮 Vani、薇娜 Verna
 家族姓氏 Family Names：集刷 Brushgather、良桶 Goodbarrel、绿瓶 Greenbottle、高丘 High-hill、垮丘 Hilltopple、无纪Leagallow、茶叶 Tealeaf、刺子 Thorngage、投石 Tosscobble、枝底 Underbough
+"""
 
+Halfling_Traits_prompt = """
 ## 半身人特质 Halfling Traits
 你的半身人角色跟其它半身人一样具有以下特质。
 #### 属性值加成 Ability Score Increase。你的敏捷加 2。
@@ -456,7 +506,9 @@ Halfling_prompt = """
 #### 半身人灵巧 Halfling Nimbleness。你可以穿越任何体形比你大的生物所在空间。
 #### 语言 Language。你能够说、读、写通用语和半身人语。虽然半身人语不是甚么秘密语言，但半身人很厌恶将它教给外人。
 他们很少书写，因此没有丰富的文学典藏。但他们有非常丰富的口述传统。几乎所有半身人都会说通用语，以便跟居住地或旅途上遇见的人进行交流。
+"""
 
+Halfling_Subrace_prompt = """
 ## 亚种 Subrace。
 两种主要的半身人（轻足半身人 lightfoot 和敦实半身人 stout）与其说是亚种反而更像是同一家族里的亲戚关系。你可以从这些亚种选项中选择其一。
 
@@ -499,8 +551,10 @@ Human_prompt = """
 矮人 Dwarves。“他们身板结实，又是坚定的朋友，而且说话算话。不过他们对金钱的欲望很可能会成为其失败的理由。”
 精灵 Elves。“尽量不要走进精灵的森林。他们不喜欢入侵者，而你被迷惑的可能性和被射成刺猬一样高。不过，如果那些精灵可以放下该死的种族骄傲，好好的跟你平等相处，你就可以从他们身上学到很多东西。”
 半身人 Halfling。“在半身人的房子里用餐时脑袋总会撞到天花板，然而那确实是美食故事加温暖火炉的好地方。如果半身人们能有点追求的话，兴许还真能干点什么大事。”
+"""
 
-## 人类姓名与人种分类 Human Names andEthnicities
+Human_Names_and_Ethnicities_prompt = """
+## 人类姓名与人种分类 Human Names and Ethnicities
 与其他文化不同，人类有着多种不同的民风特色而无法统一出一种典型的命名传统。一些人类父母会给自己的孩子起一个外语名字，比如矮人语或精灵语（多少有点发音不准），不过大多数父母会根据所在地区的传统或先祖流传下来的命名方式为孩子命名。
 人类的物质文化和个人特征随地域的不同会存在巨大的差别。例如在被遗忘国度里，各处都奉行各自不同的衣着、建筑、烹饪、音乐和文学：大陆西北部的银色联邦 Silver Marches 与远在东部地区的突米斯 Turmish 或因布图 Impiltur 大相径庭，而遥远的卡拉图 Kara-Tur 则更甚。人类的生理特征随着其先祖的迁徙演变至今已经各不相同，因此在银色联邦里可能会有各种不同肤色和特质的人类存在。
 在被遗忘国度里，存在九种众所周知的人类人种类别，而在费伦的各地区还存在着十多种额外的本土人种。这些人种的成员都有典型的命名原则，并且可以在任何世界设定中用作你人类角色的创作灵感。
@@ -563,7 +617,9 @@ Human_prompt = """
 （男性 male）安东 Anton、迭罗 Diero、马孔 Marcon、皮埃隆 Pieron、瑞玛度 Rimardo、罗梅罗 Romero、萨拉查 Salazar、恩贝罗 Umbero
 （女性 female）巴莱玛 Balama、唐娜 Dona、菲拉 Faila、朱莱娜 Jalana、路易莎 Luisa、玛尔塔 Marta、夸拉 Quara、瑟丽丝 Selise、旺达 Vonda
 （姓氏 surnames）阿戈斯图 Agosto、阿斯托利欧 Astorio、卡拉布拉 Calabra、多米内 Domine、法洛内 Falone、玛瑞旺迪 Marivaldi、皮萨卡 Pisacar、拉蒙多 Ramondo
+"""
 
+Human_Traits_prompt = """
 ## 人类特质 Human Traits
 人类很难一概而论，你的人类角色具有以下种族特质。
 #### 属性值加成 Ability Score Increase。你的全部属性值加 1。
@@ -571,7 +627,9 @@ Human_prompt = """
 #### 体型 Size。人类身高差距很大，有的刚好 5 尺高，而有的甚至高过 6 尺。不论你有多高，你的体型皆为中型。
 #### 速度 Speed。你的基础步行速度为 30 尺。
 #### 语言 Languages。你能够说、读、写通用语和一门额外的自选语言。在与他人交流时，人类通常会主动去学习对方的语言，其中也包括了一些晦涩的方言。他们还喜欢在说话时夹杂其他语言的腔调，如兽人粗口，精灵乐调，矮人军号，等等。
+"""
 
+Variant_Human_Traits_prompt = """
 ## 变体人类特质 Variant Human Traits
 若你的战役选用第 5 章所述的可选专长规则，DM 就可以允许你使用本变体特质，并以下列几项特质替换人类的属性值加成特质。
 #### 属性值加成 Ability Score Increase。自选两项不同属性各加 1。
@@ -601,21 +659,25 @@ Dragonborn_prompt = """
 龙裔属于罕见种族。他们不一定存在于所有的 D&D 世界中，而就算是在其存在的世界里，他们的分布也比矮人、精灵、半身人和人类少的多。
 在 D&D 多元宇宙中一些种族混杂的城市中，大部分人都能时常见到各种最罕见种族的新鲜面孔。但在乡下的村镇情况却不太一样。那里的普通村民通常都没见识过这些异种族，而他们的表现也会非常符合这点。
 龙裔 Dragonborn。龙裔会非常容易的被误认为是怪物，特别是其那些明显有真龙鳞色遗传的个体更是如此。不过，除非龙裔开始喷火或者制造破坏，否则人们还是会小心的跟其交流而不是直接惊恐逃窜。
+"""
 
+Dragonborn_Names_prompt = """
 ## 龙裔姓名 Dragonborn Names
 龙裔在出生时会被赐予一个名字，但是他们会将氏族名称放在自己名字之前以示荣耀。乳名和绰号则常在同期孵化的亲属间用作为俗称或者爱称。而这个名字还可能纪念某次事件或描述个人习惯。
 男性名字 Male Names：阿祖罕 Arjhan、巴拉沙尔 Balasar、本哈拉什 Bharash、多纳尔 Donaar、盖什 Ghesh、赫斯坎 Heskan、克利夫 Kriv、梅卓拉什 Medrash、迈罕 Mehen、纳达尔 Nadarr、潘杰德 Pandjed、帕特林 Patrin、洛加尔 Rhogar、萨玛什Shamash、薛迪因 Shedinn、塔尔贺 Tarhun、托因 Torinn
 女性名字 Female Names：阿卡拉 Akra、碧里 Biri、达尔 Daar、法里德赫 Farideh、赫拉恩 Harann、芙勒维拉 Flavilar、杰莉 Jheri、卡瓦 Kava、科瑞恩 Korinn、米莎恩 Mishann、娜拉Nala、佩尔拉 Perra、雷伊恩 Raiann、索拉 Sora、苏琳娜 Surina、萨瓦 Thava、瓦德吉特 Uadjit
 乳名 Childhood Names：爬爬 Climber、聪聪 Earbender、小跳 Leaper、小信 Pious、啃盾儿 Shieldbiter、泽洛斯（狂热）Zealous
 氏族名称 Clan Names：克勒斯汀蒂而罗 Clethtinthiallor、达尔丹朱利恩 Daardendrian、戴尔弥勒夫 Delmirev、卓奇丹迪安Drachedandion、芬肯卡布拉登 Fenkenkabradon、科佩什克莫里克 Kepeshkmolik 、 科尔骇隆 Kerrhylon 、 金巴图尔Kimbatuul、林克萨卡杉达罗 Linxakasendalor、米亚斯坦 Myastan、涅莫尼斯 Nemmonis、诺里克修斯 Norixius、欧芬殊特拉吉尔 Ophinshtalajiir、普列斯贾迪林 Prexijandilin、夏斯丹迪丽雅斯 Shestendeliath、特奴洛夫 Turnuroth、维迪沙索吉尔斯 Verthisathurgiesh、雅吉利特 Yarjerit
+"""
 
+Dragonborn_Traits_prompt = """
 ## 龙裔特质 Dragonborn Traits
 你的龙裔角色与他的同族一起分享着巨龙的遗泽。
 #### 属性值加成 Ability Score Increase。你力量加 2，魅力加 1。
 #### 年龄 Age。年幼的龙裔成长速度很快，在孵化后几小时就可以行走。其 3 岁时就达到了人类 10 岁儿童的体型和发育水平，然后在 15 岁时成年。其一生总共能活大约 80 年。
 #### 体型 Size。龙裔比人类更高大。体重也更高。其直立身高超过 6 尺，平均体重 250 磅。属于中型体型。
 #### 速度 Speed。你的基础步行速度为 30 尺。
-#### 龙族血统 Draconic Ancestry。你拥有巨龙的血统。在表格“龙族血统”中选择一个龙种，并基于所选龙种，决定你吐息的形式和具有的伤害抗性。
+#### 龙族血统 Draconic Ancestry。你拥有巨龙的血统。在表格'龙族血统'中选择一个龙种，并基于所选龙种，决定你吐息的形式和具有的伤害抗性。
 ## 龙族血统 Dranconic Ancestry
 龙种 伤害类型 吐息
 黑 强酸 30 尺长 5 尺宽，线状(敏捷豁免)
@@ -633,10 +695,11 @@ Dragonborn_prompt = """
 使用吐息后，你必须完成一次长休或短休后才能再次使用。
 #### 伤害抗性 Damage Resistance。你的龙族血统为你带来相应伤害类型的伤害抗性。
 #### 语言 Language。你能够说、读、写通用语和龙语。龙语被认为是最古老的语言之一，且时常被人用于魔法的研习中。对其他生物来说，龙语听起来非常刺耳，其中还饱含了很多硬辅音和齿擦音。
+"""
 
+Draconians_prompt = """
 > 龙人 Draconians 
 > 在龙枪设定中，邪恶女神塔克西丝 Takhisis 的追随者们研发出一种可以将金属龙龙蛋腐化的黑暗仪式，并最终生产出一些被称作龙人 draconians 的邪恶龙裔。这些产物最终都投放到龙枪之战中为塔克西丝而战，他们对应了五种金属龙种分别为：奥瑞克龙人auraks（金）、巴兹龙人 baaz（黄铜）、波扎克龙人 bozak（青铜）、卡帕克龙人 kapak（赤铜）、以及西瓦克龙人 sivak（银）。他们没有对应龙种的吐息，但是都有着独特的魔法能力。
-
 """
 
 Gnome_prompt = """
@@ -669,14 +732,18 @@ Gnome_prompt = """
 侏儒属于罕见种族。他们不一定存在于所有的 D&D 世界中，而就算是在其存在的世界里，他们的分布也比矮人、精灵、半身人和人类少的多。
 在 D&D 多元宇宙中一些种族混杂的城市中，大部分人都能时常见到各种最罕见种族的新鲜面孔。但在乡下的村镇情况却不太一样。那里的普通村民通常都没见识过这些异种族，而他们的表现也会非常符合这点。
 侏儒 Gnome。侏儒看起来人畜无害，并且会迅速以幽默接触对方的戒心。那些从没见过侏儒的普通村民通常会对侏儒充满好奇，但村民们很少对因此而表现出敌意或恐惧。
+"""
 
+Gnome_Names_prompt = """
 ## 侏儒姓名 Gnome Names
 侏儒们喜欢取名字，而他们大都拥有半打左右的名字。侏儒在成长时期，母亲会为他取个名字，父亲会为他取个名字，族中长老为他取个名字，叔叔阿姨们也会为他取名字，而几乎任何人都会为他取个绰号。侏儒的名字通常是将祖先或远亲的名字稍作改动，有些则是自创。他们知道其他种族对于取名的态度都很“保守”，所以遇到其他种族时，只宣称三个名字，即本人姓名、氏族名称和绰号。遇到只能选一个名字的场合时，侏儒通常会使用听起来最有趣的名字。
 男性名字 Male Names：奥斯顿 Alston、艾尔文 Alvyn、包迪拿 Boddynock、布洛克 Brocc、布里高 Burgell、丁宝 Dimble、埃尔登 Eldon、埃尔基 Erky、方克林 Fonklin、弗鲁格 Frug、杰儿博 Gerbo、葛尔宝 Gimble、格林 Glim、杰比多 Jebeddo、凯伦 Kellen、南富多 Namfoodle、奥莱 Orryn、朗达 Roondar、喜宝 Seebo、辛德里 Sindri、沃莱恩 Warryn、雷恩 Wrenn、朱克 Zook
 女性名字 Female Names：彬娜汀 Bimpnottin、布瑞娜 Breena、卡拉蜜 Caramip、卡琳 Carlin、唐尼拉 Donella、杜法米 Duvamil、艾拉 Ella、艾利卓贝 Ellyjobell、艾利薇 Ellywick、莉莉 Lilli、露莫汀 Loopmottin、罗瑞拉 Lorilla、玛娜布 Mardnab、尼莎 Nissa、奈克斯 Nyx、奥达 Oda、奥尔拉 Orla、洛伊维 Roywyn、夏蜜尔 Shamil、塔娜 Tana、维渥琪 Waywocket、扎娜 Zanna
 氏族名称 Clan Names：贝伦 Beren、德哥 Daergel、福克 Folkor、加立克 Garrick、那可 Nackle、摩宁 Murnig、宁哥 Ningel、罗那 Raulnor、夏本 Scheppen、廷伯斯 Timbers、图兰 Turen
 绰号 Nicknames：麦酒 Aleslosh、灰炉 Ashhearth、獾 Badger、斗篷 Cloak、双锁 Doublelock、小泥棒 Filchbatter、镊子 Nipper、古 Ku、偷儿 Nim、单鞋 Oneshoe、麻子 Pock、闪光宝石Sparklegem、跛鸭 Stumbleduck
+"""
 
+Gnome_Traits_prompt = """
 ## 侏儒特质 Gnome Traits
 你的侏儒角色跟其它侏儒族角色一样具有以下特质。
 #### 属性值加成 Ability Score Increase。你的智力加 2。
@@ -686,7 +753,9 @@ Gnome_prompt = """
 #### 黑暗视觉 Darkvision。你习惯了地下生活，因而在黑暗和微光光照下有着良好的视力 。在微光光照下，你身边 60 尺内可以视为等同于明亮光照。而在黑暗中，该范围内可视为等同于微光光照。你无法在黑暗中分辨颜色，只能看到有灰度的黑白画面。
 #### 侏儒狡黠 Gnome Cunning。你进行对抗魔法的智力、感知和魅力豁免时具有优势。
 #### 语言 Language。你能够说、读、写通用语和侏儒语。侏儒语是一种借用矮人语文字系统的语言，因其技术性的论文集以及对自然界的学术分类而闻名。
+"""
 
+Gnome_Subrace_prompt = """
 ## 亚种 Subrace。
 D&D 世界中居住着以下两种主要的侏儒亚种：森林侏儒 forest gnomes 和岩侏儒 rock gnomes。你可以从这些亚种选项中选择其一。
 
@@ -734,10 +803,14 @@ Half_Elf_prompt = """
 半精灵属于罕见种族。他们不一定存在于所有的 D&D 世界中，而就算是在其存在的世界里，他们的分布也比矮人、精灵、半身人和人类少的多。
 在 D&D 多元宇宙中一些种族混杂的城市中，大部分人都能时常见到各种最罕见种族的新鲜面孔。但在乡下的村镇情况却不太一样。那里的普通村民通常都没见识过这些异种族，而他们的表现也会非常符合这点。
 半精灵 Half-Elf。尽管很多人都没见过半精灵，但不少人听说过他们的存在。一名半精灵陌生人的到来通常会引起紧随着他的流言蜚语和窥视目光，但很少会引发公然的挑衅或公开的讨论。
+"""
 
+Half_Elf_Names_prompt = """
 ## 半精灵姓名 Half-Elf Names
 半精灵按照精灵或人类的习俗取名。讽刺的是，在人类社会长大的半精灵常取精灵名字，而在精灵社会中的半精灵则常取人类名字，就仿佛在强调他们并不真正属于任何一方。
+"""
 
+Half_Elf_Traits_prompt = """
 ## 半精灵特质 Half-Elf Traits
 你的半精灵角色拥有一些和精灵相同的特质，也有一些只有半精灵才拥有的特质。
 #### 属性值加成 Ability Score Increase。你的魅力加 2。再选择其他两项属性值各加 1。
@@ -748,7 +821,6 @@ Half_Elf_prompt = """
 #### 精类血统 Fey Ancestry。你进行对抗魅惑的豁免时具有优势，并且不会因魔法效应而陷入睡眠。
 #### 多才多艺 Skill Versatility。你获得两项自选技能的熟练项。
 #### 语言 Language。你能够说、读、写通用语和精灵语，以及任意一门自选语言。
-
 """
 
 Half_Orc_prompt = """
@@ -777,12 +849,16 @@ Half_Orc_prompt = """
 半兽人属于罕见种族。他们不一定存在于所有的 D&D 世界中，而就算是在其存在的世界里，他们的分布也比矮人、精灵、半身人和人类少的多。
 在 D&D 多元宇宙中一些种族混杂的城市中，大部分人都能时常见到各种最罕见种族的新鲜面孔。但在乡下的村镇情况却不太一样。那里的普通村民通常都没见识过这些异种族，而他们的表现也会非常符合这点。
 半兽人 Half-Orc。通常认定一名半兽人是脾气暴躁的好斗分子是一种保险措施。因此人们看到不熟悉的半兽人时都会有所自觉。店家会在见到半兽人进店时收起贵重或易碎的商品，酒馆的客人看到半兽人时都认为很快就会爆发一场斗殴因而相继默默地离开。
+"""
 
+Half_Orc_Names_prompt = """
 ## 半兽人名字 Half-Orc Names
 半兽人通常拥有符合其成长环境文化形式的名字。想要和人类打成一片的半兽人可能会将兽人名换成人类名。而一些拥有人类名的半兽人会为了更有威慑力而采用一个带喉音的兽人名。
 男性兽人名字 Male Orc Names：丹契 Dench、锋 Feng、嘎尔Gell、哼克 Henk、豪格 Holg、伊姆吁 Imsh、凯斯 Keth、库斯克 Krusk、穆赫雷 Mhurren、隆特 Ront、夏普 Shump、梭克 Thokk
 女性兽人名 Female Orc Names：巴姬 Baggi、爱门 Emen、恩红 Engong、坎西芙 Kansif、美弗 Myev、妮加 Neega、欧娃Ovak、欧玟卡 Ownka、小叉 Shautha、苏塔 Sutha、芙拉 Vola、芙伦 Volen、伊瓦达 Yevelda
+"""
 
+Half_Orc_Traits_prompt = """
 ## 半兽人特质 Half-Orc Traits
 你的半兽人角色拥有某些从你的兽人血统中获得的特质。
 #### 属性值加成 Ability Score Increase。你的力量加 2，你的体质加 1。
@@ -818,13 +894,17 @@ Tiefling_prompt = """
 提夫林属于罕见种族。他们不一定存在于所有的 D&D 世界中，而就算是在其存在的世界里，他们的分布也比矮人、精灵、半身人和人类少的多。
 在 D&D 多元宇宙中一些种族混杂的城市中，大部分人都能时常见到各种最罕见种族的新鲜面孔。但在乡下的村镇情况却不太一样。那里的普通村民通常都没见识过这些异种族，而他们的表现也会非常符合这点。
 提夫林 Tiefling。人们会对半兽人采取比较实在的措施，然而提夫林不同。作为能使人产生超自然恐惧的对象，其邪恶的遗传特征无法隐藏而表露无遗，因此大多数人都会将其直接当成是来自九层地狱的魔鬼。当提夫林出现时，人们会警戒的监视着他，见到他时会特意绕开，而商家甚至会提早关店而将其拒之门外。
+"""
 
+Tiefling_Names_prompt = """
 ## 提夫林姓名 Tiefling Names
 提夫林的名字主要分为三个大类。那些出生在其他文明里的提夫林其名字通常也反映着该文明的传统。有的提夫林名字则是从炼狱语演化而来，甚至经历了世代的传承，并同时反映着他们的邪魔血统。而那些努力寻找生存空间的年轻提夫林通常会采用一个名字来展现一种美德，或者表达出一种理想。有些提夫林会认为其名字意味着崇高的追求。而另一些则认为其名字预示着残酷的命运。
 男性地狱名 Male Infernal Names：阿克门诺斯 Akmenos、阿姆农 Amnon、巴拉卡斯 Barakas、达玛柯斯 Damakos、埃克蒙 Ekemon、伊阿多斯 Iados、凯隆 Kairon、卢西斯 Leucis、米勒 Melech、摩达伊 Mordai、摩霍斯 Morthos、普莱欧斯Pelaios、斯卡摩斯 Skamos、德莱伊 Therai
 女性地狱名 Female Infernal Names：艾克塔 Akta、阿娜克伊丝 Anakis、布莱塞伊丝 Bryseis、克里艾拉 Criella、达玛雅Damaia、埃亚 Ea、卡丽思塔 Kallista、蕾瑞莎 Lerissa、玛卡瑞亚 Makaria、妮美雅 Nemeia、奥莉安娜 Orianna、菲莱亚Phelaia，莉尔塔 Rieta“
 美德”化名 “Virtue” Names：阿特（艺术）Art、卡里翁（不洁）Carrion、钱特（颂歌）Chant、克里德（信条）Creed、迪斯佩尔（绝望）Despair、艾克瑟李斯（美德）Excellence、菲尔（恐惧）Fear、格洛里（荣誉）Glory、霍普（希望）Hope、艾德尔（理想）Ideal、缪斯克（音乐）Music、诺希尔（漂泊）Nowhere、欧佩恩（放开）Open、珀伊渠（诗歌）Poetry、奎斯特（探寻）Quest、孪登（随意）Random、孪瓦伦斯（尊重）Reverence、索罗（哀伤）Sorrow、特玛里提（蛮勇）Temerity、托曼特（折磨）Torment、维尔利（厌倦）Weary
+"""
 
+Tiefling_Traits_prompt = """
 ## 提夫林特质 Tiefling Traits
 提夫林们同享着他们来自炼狱的家族血统，以及因此而来的种族特质。
 #### 属性值加成 Ability Score Increase。你的智力加 1，你的魅力加 2。
@@ -839,13 +919,37 @@ Tiefling_prompt = """
 
 article = {
     "choosing_a_race": choosing_a_race_prompt,
-    "Dwarf": Dwarf_prompt,
-    "Elf": Elf_prompt,
-    "Halfling": Halfling_prompt,
-    "Human": Human_prompt,
-    "Dragonborn": Dragonborn_prompt,
-    "Gnome": Gnome_prompt,
-    "Half_elf": Half_Elf_prompt,
-    "Half_Orc": Half_Orc_prompt,
-    "Tiefling": Tiefling_prompt,
+    "Dwarf_Background": Dwarf_prompt,
+    "Dwarf_Names": Dwarf_Names_prompt,
+    "Dwarf_Traits": Dwarf_Traits_prompt,
+    "Dwarf_Subrace": Dwarf_Subrace_prompt,
+    "Elf_Background": Elf_prompt,
+    "Elf_Names": Elf_Names_prompt,
+    "Elf_Traits": Elf_Traits_prompt,
+    "Elf_Subrace": Elf_Subrace_prompt,
+    "Halfling_Background": Halfling_prompt,
+    "Halfling_Names": Halfling_Names_prompt,
+    "Halfling_Traits": Halfling_Traits_prompt,
+    "Halfling_Subrace": Halfling_Subrace_prompt,
+    "Human_Background": Human_prompt,
+    "Human_Names_and_Ethnicities": Human_Names_and_Ethnicities_prompt,
+    "Human_Traits": Human_Traits_prompt,
+    "Variant_Human_Traits": Variant_Human_Traits_prompt,
+    "Dragonborn_Background": Dragonborn_prompt,
+    "Dragonborn_Names": Dragonborn_Names_prompt,
+    "Dragonborn_Traits": Dragonborn_Traits_prompt,
+    "Draconians": Draconians_prompt,
+    "Gnome_Background": Gnome_prompt,
+    "Gnome_Names": Gnome_Names_prompt,
+    "Gnome_Traits": Gnome_Traits_prompt,
+    "Gnome_Subrace": Gnome_Subrace_prompt,
+    "Half_elf_Background": Half_Elf_prompt,
+    "Half_elf_Names": Half_Elf_Names_prompt,
+    "Half_elf_Traits": Half_Elf_Traits_prompt,
+    "Half_Orc_Background": Half_Orc_prompt,
+    "Half_Orc_Names": Half_Orc_Names_prompt,
+    "Half_Orc_Traits": Half_Orc_Traits_prompt,
+    "Tiefling_Background": Tiefling_prompt,
+    "Tiefling_Names": Tiefling_Names_prompt,
+    "Tiefling_Traits": Tiefling_Traits_prompt,
 }
