@@ -44,7 +44,7 @@ keyword_list = {
     ],
 }
 
-creature_statistics_prompt = """
+creature_statistics_article = """
 # 附录 D：生物资料 Creature Statistics
 一些法术和职业特性允许角色变成动物，召唤生物作魔宠，或是创造不死生物。为了便于使用，这些生物的资料都被分类列在这个附录中。使用这些资料板的详细方式可参阅《怪物图鉴》的相关内容。如有冲突也以图鉴的内容为主。
 """
@@ -622,6 +622,6 @@ AC 具装
 }
 
 article = {
-    "creature_statistics": creature_statistics_prompt,
+    "creature_statistics": creature_statistics_article,
     "creature_statistics_list": creature_statistics_list,
 }

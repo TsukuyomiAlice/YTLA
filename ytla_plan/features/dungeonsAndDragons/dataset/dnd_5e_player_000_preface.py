@@ -32,7 +32,7 @@ keyword_list = {
         "神奇的魔法 The Wonders of Magic"],
 }
 
-Preface_prompt = """
+Preface_article = """
 前言 Preface
 距今很久很久的从前，在一个名为联邦中西部 Midwestern United States 的地区（具体在明尼苏达 Minnesota 和威斯康星 Wisconsin 之间的地区），一群朋友聚在了一起，然后永远改变了游戏的历史。
 他们并不是有意为之。他们也只是再也受不了那个充满魔法、怪物和冒险的世界只能从故事中体验。他们想要在那个世界中游玩，而不是只能单单的观望。这股渴望驱使他们发明了龙与地下城 Dungeons & Dragons，并由此点燃了持续至今的游戏革命，以及传颂至今的两样东西。
@@ -51,7 +51,7 @@ D&D 是一种以合作形式进行创造的体验。在这个创造过程中，�
 Mike Mearls 2014. 05
 """
 
-Introduction_prompt = """
+Introduction_article = """
 简介 Introduction
 龙与地下城是一款剑与魔法奇幻背景的叙事性角色扮演游戏。与孩提时代的过家家扮演游戏相似，D&D 依靠的是玩家无穷的想象力。你所需要做的，即是描述场景如暴风骤雨里，夜空下的某座高耸古堡。然后想象奇幻世界中的冒险者们会如何迎接即将到来的挑战。
 > 地下城主（DM）：翻过崎岖的山峦后，道路忽然拐往东边，鸦阁堡便耸立在你们前方。似乎是废弃哨所的残破高塔静静地守望着前方的道路。塔后横着一道深不见底的裂谷，其内弥漫着稠密的浓雾。一座吊桥已被落下，桥的另一头坐落着一道通往庭院的拱门。吊桥的铁索在风中吱呀作响，而锈蚀的铁环则仿佛随时要被扯断。石质的石像鬼塑像在高墙之上的用空洞的眼睛凝视着你，脸上的狞笑也让人毛骨悚然。城堡入口正上方吊着的朽烂栅门附满了青苔。再近一步，鸦阁堡的大门向你敞开，一束暖光挥洒在庭院的中央。
@@ -72,7 +72,7 @@ Introduction_prompt = """
 龙与地下城的游戏中并没有输赢的概念，至少与通常情况下我们所理解的有所不同。勇敢的冒险者们克服艰难苦难的精彩故事需要由 DM 与玩家们一同编写。有时冒险者会被凶猛的怪物打败，或被穷凶极恶的敌人所害而导致悲剧结尾。即使如此，其他的冒险者仍可通过探寻强大的魔法来复活他们逝去的同伴。而玩家也可以创造一个新的角色继续冒险。队伍可能会遭遇失败，但是只要每一个成员都度过了美好的时光并创造了令人回味的故事，那么所有人都是赢家。
 """
 
-World_of_Adventure_prompt = """
+World_of_Adventure_article = """
 充满冒险的世界 World of Adventure
 龙与地下城的诸多世界中充满了魔法和怪物，以及勇敢的斗士和壮丽的冒险。这一切以中世纪奇幻风格为基础，并加入能让这个世界变得独一无二的生物、地点和魔法。
 龙与地下城的诸世界都位于一个叫多元宇宙 multiverse的广袤宇宙当中。这些世界以神秘而奇异的方式互相连接，并关联至诸多的存在位面。比如火元素位面 Elemental Plane ofFire 和无底深渊 Infinite Depths of the Abyss。多元宇宙中存在着数不清的世界，其中也有许多是出版过的官方设定。各个世界的传奇在多元宇宙中被交织在一起，其中包括被遗忘国度Forgotten Realms、龙枪 Dragonlance、灰鹰 Greyhawk、浩劫残阳 Dark Sun、密斯塔拉 Mystara 和艾伯伦 Eberron。除此之外，还有各世代 D&D 规则下玩家创造的无数个世界。而在富饶的多元宇宙中，你或许也会创造出属于自己的世界。
@@ -80,7 +80,7 @@ World_of_Adventure_prompt = """
 你的 DM 可能会将战役设定与这些世界之一，或是其自创的世界。因为有太多的 D&D 世界可供选择，你需要与你的 DM确认好房规，因为这将影响到整个游戏。而即使是公开出版的设定，地下城主也是战役与设定的权威解释者。
 """
 
-Using_This_Book_prompt = """
+Using_This_Book_article = """
 使用本书 Using This Book
 《玩家手册》分为三部分。
 第 1 部分的主要内容是创建角色。这里给出了创作一名角色所需的规则和指导。其中包括不同的种族、职业、背景、装备和其他的自定义选项。第 1 部分中的很多内容需要第 2 部分和第 3 部分的支持。如果你在第 1 部分中遇到了不理解的问题，请查询书中的索引。
@@ -88,7 +88,7 @@ Using_This_Book_prompt = """
 第 3 部分与魔法相关。包括 D&D 世界中魔法的本质，施展法术的规则以及魔法使用者（和怪物）所能使用的各种法术。
 """
 
-How_to_play_prompt = """
+How_to_play_article = """
 如何进行游戏 How to Play
 龙与地下城的游戏按照以下的基础框架运行。
 1.由 DM 描述环境。DM 向玩家们说明冒险小队身处何地，他们四周的环境，以及一些可供角色行动的选项。（房间里有几扇门、桌上放着些什么、有谁在旅店里，诸如此类。）
@@ -99,7 +99,7 @@ How_to_play_prompt = """
 通常游戏中的行动只存在于玩家和 DM 的想象中，其中大多都要依赖 DM 的口述说明。有些 DM 会用音乐、插图、声效等营造气氛，也有很多玩家和 DM 会用不同嗓音扮演不同的冒险者、怪物以及其他游戏中的人物角色。DM 可能会用地图和指示物物或微缩模型来表现一个场景内的生物，以帮助玩家记录角色所在的位置。
 """
 
-Game_Dice_prompt = """
+Game_Dice_article = """
 骰子 Game Dice
 游戏会用到不同面数的骰子。你可以在桌游店中买到这些东西。在本规则中，不同的骰子用字母 d 以及后面跟一个骰子的面数表示：即 d4、d6、d8、d10、d12、d20。比如 d6 即是一粒六面骰（也就是很多游戏所使用的正方体骰子）。
 百分骰，也就是 d100 的投掷方法有些不同。你需要投两枚不同的 10 面骰来生成 1 到 100 之间的一个值。其中一枚骰子（需要在投之前指定）给出十位数的值，而另一枚给出个位数。比如如果你投出 7 和 1，结果就是 71。两个 0 则代表 100。有些十面骰的数字以十为单位（00、10、20，如此类推），这些骰子使用起来能更容易地分辨出十位骰和个位骰。这时投出 70和 1 就是 71，而 00 和 0 就是 100。
@@ -120,18 +120,18 @@ Game_Dice_prompt = """
 更多关于优势劣势的细节可参看第 7 章相关内容。
 """
 
-Specific_Beats_General_prompt = """
+Specific_Beats_General_article = """
 特例优先于常规 Specific Beats General
 本书内包括了许多规则，其中第 2 部分及第 3 部分中的规则控制着整个游戏的运行。但是很多种族特质、职业特性、法术、魔法物品和怪物能力等游戏元素都会打破这些通用规则而给游戏带来一些例外。此时你只需记住：当有特殊规则违背了通用规则，那么使用特殊规则。
 例外的规则通常效用较弱。比如，许多冒险者不具有长弓的熟练项，但每个木精灵可以从其种族特质中获得该项目。该特质在游戏即为一个小例外。另一个破坏规则的例子则更加常见。比如，冒险者通常无法穿过墙壁，但某些法术可以让其变为可能。而事实上大多数的例外规则都来自某些魔法。
 """
 
-Round_Down_prompt = """
+Round_Down_article = """
 向下取整 Round Down
 你需要记住另一条基础规则：每当你在游戏中进行除法运算时，必须舍去所有小数，即使其数值大于 0.5。
 """
 
-Adventures_prompt = """
+Adventures_article = """
 冒险 Adventures
 龙与地下城的游戏，是一队冒险者踏上地下城主所呈现之冒险的过程。每个角色都会用自己的特长为冒险做出贡献。他们搭配了各不相同的属性值、技能、职业特性、种族特质、装备和魔法物品，从而使每个角色既有不同的长短处却又独一无二。在最棒的冒险者小队中，各角色会互补不足并通力合作完成冒险。
 而冒险则是游戏的核心，是一个具备起承转折的故事。冒险内容可能来自地下城主自己的设计，也可能是买回来再由其作一些修改。而不论是哪种冒险，其内都包含着奇幻般的场景如：地下城、半毁的城堡、广袤的荒野和繁华的都市。其中也有丰富多彩的人物，有玩家扮演的冒险者，也有非玩家角色（NPC）。他们可以是委托人、盟友、敌人、雇员和背景中的配角。通常还会有一名非玩家角色担任冒险中的最终敌人，并以此推动整个冒险。
@@ -147,7 +147,7 @@ Adventures_prompt = """
 战斗 combat 的相关内容集中在第 9 章。具体是指角色和其他生物们相互间的对抗，其内容涉及挥剑、施法、走位等，其目的大多为厮杀、俘虏、驱逐。战斗是 D&D 最具结构性的部分。其时每个生物轮流行动，而冒险者们即使在激战之中仍能充分施展其特技。例如，坐着盾牌滑下阶梯，调查环境（拉下神秘拉杆等行为），以及跟其他生物互动（包括朋友、敌人或中立角色）
 """
 
-The_Wonders_of_Magic_prompt = """
+The_Wonders_of_Magic_article = """
 神奇的魔法 The Wonders of Magic
 很少有 D&D 冒险不涉及魔法。事实上，魔法总会不时的出现在冒险者的生涯中，它们有时候会成为帮助而有时则是阻碍。关于魔法的内容将在第 10 和第 11 章中说明。
 在龙与地下城的世界中，真正的魔法使用者都是一些才华出众的人，因而他们并不多见。而平民则可能经常会目睹一些小规模的魔法现象，诸如奇幻的生物，得到回应的祷告或是街上闲逛的法师身旁跟着的一个活动盾牌保镖。
@@ -156,14 +156,14 @@ The_Wonders_of_Magic_prompt = """
 """
 
 article = {
-    "Preface": Preface_prompt,
-    "Introduction": Introduction_prompt,
-    "World_of_Adventure": World_of_Adventure_prompt,
-    "Using_This_Book": Using_This_Book_prompt,
-    "How_to_play": How_to_play_prompt,
-    "Game_Dice": Game_Dice_prompt,
-    "Specific_Beats_General": Specific_Beats_General_prompt,
-    "Round_Down": Round_Down_prompt,
-    "Adventures": Adventures_prompt,
-    "The_Wonders_of_Magic": The_Wonders_of_Magic_prompt,
+    "Preface": Preface_article,
+    "Introduction": Introduction_article,
+    "World_of_Adventure": World_of_Adventure_article,
+    "Using_This_Book": Using_This_Book_article,
+    "How_to_play": How_to_play_article,
+    "Game_Dice": Game_Dice_article,
+    "Specific_Beats_General": Specific_Beats_General_article,
+    "Round_Down": Round_Down_article,
+    "Adventures": Adventures_article,
+    "The_Wonders_of_Magic": The_Wonders_of_Magic_article,
 }

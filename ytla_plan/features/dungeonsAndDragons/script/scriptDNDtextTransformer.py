@@ -6,7 +6,7 @@ def changer():
     # 简单的句子分割，使用常见的中文和英文句子分隔符
     sentences = []
     current_sentence = ""
-    separators = ['.', '。', '!', '！', '?', '？', ';', '；']
+    separators = ['.', '。', '!', '！', '?', '？', ';', '；', '：']
 
     last_char = ""
     for char in scriptDNDtext.original_text:

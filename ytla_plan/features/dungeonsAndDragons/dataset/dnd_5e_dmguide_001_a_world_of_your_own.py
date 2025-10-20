@@ -8,7 +8,7 @@ keyword_list = {
 
 }
 
-the_big_picture_prompt = """
+the_big_picture_article = """
 第 1 章：你的世界 A World of Your Own
 你的世界即是你战役的设定，是其冒险发生的所在地。即使直接使用现有设定（如被遗忘国度 Forgotten Realms），你将冒险设置于此，创作其中的角色以及依你的战役对其更改时，该设定就成了你自己的世界。本章主要内容，便是讲述如何建立你的世界以及如何在其中创作战役。
 
@@ -44,7 +44,7 @@ the_big_picture_prompt = """
 如果众神时常行走于大地会怎样？如果角色们能够挑战众神并获得其神力又会如何？又或者，如果众神遥不可及，甚至连天使都从不与凡人接触又会如何？在浩劫残阳设定中，众神极其疏远于世（甚至可能并不存在），而其中的牧师则以元素之力代以实现其魔法。
 """
 
-gods_of_your_world_prompt = """
+gods_of_your_world_article = """
 世间诸神 Gods of Your World
 《玩家手册》中的附录 B 列明了一些神系（不被统一教条或哲理联合在一起的松散神祇集合）供你应用于自己的游戏中，其中包括了一些现有完善的 D&D 世界其内的神祇，以及历史上的奇幻神系。你可以从中选择一整个神系应用于你的战役，或是在其中随意挑选一些神祇或其相关概念。本节的“神系范例”段落可以作为其中一种参考。
 你的世界存在百万众神，或是所有教堂只供奉单一神祇都不会与游戏的相关规则产生冲突。所有的规则条款中，牧师只是选择领域而非特定神祇，因此你的世界可以随意的将任何领域赋予任何你所指定的神祇。
@@ -145,7 +145,7 @@ gods_of_your_world_prompt = """
 契灵 Vestiges 是几乎失去所有信徒，并接近凡人意义之死亡的神祇。一些秘传的仪式有时可以连接这些存在并引出其潜藏之力。
 """
 
-mapping_your_campaign_prompt = """
+mapping_your_campaign_article = """
 绘制战役 Mapping YourCampaign
 你会需要一副地图来协助你创建战役所在的世界。此时，你可以选用两种方法完成这件事：自上而下或是自下而上。某些 DM 喜欢由上部开始，在战役开始时先创建世界的全局观，从一幅展示全大陆的地图开始，再放大某个较小的区域。另一些 DM 则会选择相反的方式，先以一个省份或王国尺度的小范围地图作为战役开始的小区，当冒险带着任务进入新区域时再放大至更广的区域。
 无论采用何种方式，以六角网格绘制地图来表达户外的旅行环境可以更直观的体现方向自由度和距离计算等要素。
@@ -172,7 +172,7 @@ mapping_your_campaign_prompt = """
 无论从何种尺度入手，你都可以随意放大或缩小你的地图比例尺。在大陆尺度时，1 六角格所代表的区域相当于王国尺度下 10 格。在大陆地图上，两座 3 六角格（180 里）的城市在王国尺度下将占据 30 个六角格的区域，甚至会因此覆盖整张细节地图的两端。王国尺度下 1 六角格等于省区尺度下 6格，因此你可以将你的省区尺度地图置于王国尺度地图的中心，并在其周围创作一些有趣的区域。
 """
 
-settlements_prompt = """
+settlements_article = """
 聚居地 Settlements
 人们经营生活的地点——繁荣的城镇或者与数里农田相依的村庄，都定义了你世界中文明的本质。一个聚居地（作为冒险者们的大本营）是设计战役或构筑世界的好开头。在创建任何你世界中的集聚地时，思考下列问题：
 • 它在你游戏中作何用途？
@@ -360,7 +360,7 @@ d100 政体
 创作与特殊地点相关联的铸币（如深水城的陶尔 toal 和银月联邦的月食币 eclipsed moon），则可以产生另一层面的细节。只要你让这些新创铸币的价值维持明晰（或者换个说法，不要将一枚铸币的价值定为 1.62gp），那么你就可以为你世界中的某个关键地点增加特色，同时又不会显得过于繁复。
 """
 
-languages_and_dialects_prompt = """
+languages_and_dialects_article = """
 语言与方言 Languages and Dialects
 你在给自创的世界填充内容时，还可以创作一些全新的语言和方言，并以此反映一些独特的地理或历史状况。你可以用一门全新的语言替代《玩家手册》中的某个常规语言，或是从某门语言中分化出若干不同的方言。
 在某些世界里，地域差异会比种族差异更为重要。同一王国里的所有居民，包括矮人、精灵、人类可能都使用同一门通用的语言，而相邻的王国却说着另一门完全不同的语言。这种情况还可能导致两国间的交流（以及外交活动）困难重重。
@@ -369,7 +369,7 @@ languages_and_dialects_prompt = """
 在一些地区里，如果其内诸种族受被一种族征服，则征服者的语言同时也可能会作为一种社会身份的象征。同时，法律也可能会规定该语言只能由社会中的上等人士使用。
 """
 
-factions_and_organizations_prompt = """
+factions_and_organizations_article = """
 派系与组织 Factions and Organizations
 神庙、公会、教团、秘密社团和学院等社会组织在每个文明中都是一些举足轻重的势力。它们的影响力可以覆盖复数的城镇，有时还会同时作为区域的政治权威。这些组织可以在玩家角色的生活中起重要作用，如同单独的非玩家角色一样成为主顾，盟友或敌人。角色加入组织后便成为比自身更大实体的一份子，并以此将冒险与广阔世界更紧密的联系起来。
 
@@ -470,7 +470,7 @@ factions_and_organizations_prompt = """
 50 高阶竖琴手 High Harper 公正之手 Righteous Hand 荒野大师 Master of the Wild 狮冠 Lioncrown 恐惧魔王 Dread Lord
 """
 
-magic_in_your_world_prompt = """
+magic_in_your_world_article = """
 世界中的魔法 Magic in YourWorld
 在大多数 D&D 世界里魔法是自然存在之物，但其本身依然会令人觉得惊奇与恐惧。人们都知道魔法的存在，且大部分人都在自己生活中见证过魔法的痕迹。它充斥并流淌在宇宙的每个角落，在那些被远古之物附身的传奇英雄们身上，在那些覆亡帝国的神秘遗迹里，在那些被众神眷顾的人以及从超自然力中诞生的生物体内，或是在某些研习多元宇宙秘密的个体手中。而在各种历史与闲聊故事中，也都活跃着各种魔法的操持者。
 普通民众对魔法的认知程度取决于他生活于何处，或是他是否认识某些使用魔法的人。在一些与世隔绝的小村子里，其居民可能几代人都没见识过真正的魔法，又或者他们也只是悄悄的谈论着居住在附近丛林里的某个隐士所拥有的神秘力量。在被遗忘国度设定的深水城里，有一个称作安民法师会Watchful Order of Magistis and Protectors 的法师公会。其内的奥术师们致力于推广法师的相关事物，并使会员门内得以通过出售其服务而从中获益。
@@ -504,7 +504,7 @@ magic_in_your_world_prompt = """
 一个灵魂无法在非自愿的状态下被复活。若是不不想的话不不能被复活。灵魂清楚知道任何意图复活它的对象其名字、所述阵营和守护神（如果有），也可能因此而拒绝受其复活。举个例子，如果荣耀的骑士史东·布莱特布雷德 SturmBrightblade 被杀害，而尸体落入一名塔克西斯 Takhisis（恶龙之神）的高阶女祭司手上。此时，史东可能会不愿意被这位祭司复活，而她所进行的任何复活尝试都会直接判为失败。如果这名邪恶牧师想要复活史东来对其进行审讯，她必须设法瞒过他的灵魂，比如蒙骗某个善良牧师复活他，并在他复活的当时马上将其抓住。
 """
 
-creating_a_campaign_prompt = """
+creating_a_campaign_article = """
 创作战役 Creating a Campaign
 你所创造的世界是你为冒险者们量身定做的舞台。除此之外，你不用有太多的其他想法。你可以用发散的形式运作各种冒险，而冒险者们则可以作为其中唯一常驻的元素。你还可以围绕冒险者们编造主题，以此将角色在世界上的成就整合成一篇长篇史诗。
 规划一整个战役看起来像是一份任务繁重的工作，不过你并不需要一开始就设定好所有细节。你可以从最基本的内容开始运作几个冒险，然后考虑如何随着战役的推进将情节展开。你可以随自己心意大量或者一点点的丰富其中的细节。
@@ -544,7 +544,7 @@ creating_a_campaign_prompt = """
 创建新背景的指引在第 9 章“城主工坊”
 """
 
-campaign_events_prompt = """
+campaign_events_article = """
 战役事件 Campaign Events
 奇幻世界中的重要历史事件会引起翻天覆地的变化：善良势力与邪恶之间的史诗对峙引起的各种战争，摧毁整个文明的自然灾害，军团或异域部落的大规模入侵，世界级领导的暗杀事件等。这些惊世的事件标志着一个历史时期的开始。
 一场 D&D 游戏里，许多的这类事件可以在你维持和推进战役时提供灵感。许多普通而又没头没尾的系列故事往往会轻易的落入俗套。就像许多电视节目和系列漫画一样，一场D&D 战役也会在经历多次酒瓶装新酒的操作后变得索然无味。
@@ -804,7 +804,7 @@ d10 发现
 结束当前战役后，就可以开始一场新的战役。如果你打算用同一组玩家开始一场新战役，则这些玩家曾经的传奇行为也可以作为基础参考资料投入到新设定中。让新角色体会旧角色们如何改变了世界。但最终开始的新战役会是一个有着全新角色的全新故事。而角色们也不必一定要带着则曾经获得的英雄光环。
 """
 
-play_style_prompt = """
+play_style_article = """
 游戏风格 Play Style
 当你构筑好一个新世界（或直接选用现成的设定），并创作在该战役中发生的关键事件后，就算是成功定型了战役的内容。你的下一步便是确定如何运作你的战役。
 如何正确运作一场战役？这取决于你的游戏风格以及参与玩家的动机。思考参与玩家的口味，你作为 DM 的权力，桌面规则（在第 3 部分进行讨论），以及你想要运作的游戏类型。
@@ -862,7 +862,7 @@ play_style_prompt = """
 如果你的战役大量涉及密谋、神秘事物和角色扮演，那你的玩家也许会享受偶尔造访地下城的主意——尤其是当故事出现转机并揭晓某个战役中的大阴谋时。如果冒险者中多数人倾向地城远征，则可以将那些紧凑的城中神秘事物作一些转换，然后把队伍引导到某个废弃建筑或塔楼里进行地城探险。如果你主持一场每周开展的恐怖冒险，则可以尝试使用一个普通的反派，或者甚至是有点傻的反派。幽默的解说在几乎所有D&D 战役里都是一种优秀的转折，有时甚至玩家自己也会创作这种转机。
 """
 
-tiers_of_play_prompt = """
+tiers_of_play_article = """
 游戏阶段 Tiers of Play
 随着角色力量成长，他们改变周边世界的能力也随之增值。而提前总结这些改变有助于你对战役所作的创作。当角色们对世界造成冲击时，他们也将不得不面对重大的危机。强大的派系势力会将他们视为威胁并针对他们策划阴谋，而友方势力则试图与其联系并将其视作实在的盟友。
 游戏的阶段是选择使用到当前战役中惊世事件时的概念标准。角色们解决一个事件后，一个新的危机又开始抬头，或者先前的问题因角色们的行为而转变成另一个新威胁。而这些事件深度和广度也需要随着角色们变强而强化，以增加其风险与戏剧性。这种对应会迫使你将自己的设计碎片化。只能一次对应某个阶段来准备冒险、NPC、地图等创作材料。你只需要在角色们接近下一阶段时在考虑对细节进行调整。甚至有时在战役转向某些意料之外的发展时，你也可以用上这些设计而不需要再做什么额外的准备工作。
@@ -903,7 +903,7 @@ tiers_of_play_prompt = """
 17th-20th 20000 gp 外加 1d10×250 gp，两件非普通魔法物品，基础起始装备; 20000 gp 外加 1d10×250 gp，两件非普通魔法物品，一件珍稀物品，基础起始装备; 20000 gp 外加 1d10×250 gp，三件非普通魔法物品，两件珍稀物品，一件极珍稀物品，基础起始装备
 """
 
-flavors_of_fantasy_prompt = """
+flavors_of_fantasy_article = """
 奇幻风格 Flavors of Fantasy
 龙与地下城是奇幻游戏的一种，不过在这个泛意的分类里还有许多不同的种类。许多奇幻小说和电影作品中就有着各种不同风格。你是否想要一个恐怖型战役，其灵感还要来自H. P. 洛夫克拉夫 H. P. Lovecraft 或克拉克·A·史密斯 ClarkAshton Smith 的作品？或者你否想到一个生活着筋肉野蛮人和敏捷盗贼的世界，一如罗伯特·霍华德 Robert E. Howard 和弗里茨·莱伯 Fritz Leiber 笔下经典的剑与魔法世界？你的选择便是决定该战役风格的要因。
 英雄奇幻 Heroic Fantasy
@@ -997,15 +997,15 @@ D&D 同时还根植于科学假设和科学幻想元素之中，而你的战役�
 """
 
 article = {
-    "the_big_picture": the_big_picture_prompt,
-    "gods_of_your_world": gods_of_your_world_prompt,
-    "mapping_your_campaign": mapping_your_campaign_prompt,
-    "settlements": settlements_prompt,
-    "languages_and_dialects": languages_and_dialects_prompt,
-    "factions_and_organizations": factions_and_organizations_prompt,
-    "magic_in_your_world": magic_in_your_world_prompt,
-    "creating_a_campaign": creating_a_campaign_prompt,
-    "play_style": play_style_prompt,
-    "tiers_of_play": tiers_of_play_prompt,
-    "flavors_of_fantasy": flavors_of_fantasy_prompt,
+    "the_big_picture": the_big_picture_article,
+    "gods_of_your_world": gods_of_your_world_article,
+    "mapping_your_campaign": mapping_your_campaign_article,
+    "settlements": settlements_article,
+    "languages_and_dialects": languages_and_dialects_article,
+    "factions_and_organizations": factions_and_organizations_article,
+    "magic_in_your_world": magic_in_your_world_article,
+    "creating_a_campaign": creating_a_campaign_article,
+    "play_style": play_style_article,
+    "tiers_of_play": tiers_of_play_article,
+    "flavors_of_fantasy": flavors_of_fantasy_article,
 }
