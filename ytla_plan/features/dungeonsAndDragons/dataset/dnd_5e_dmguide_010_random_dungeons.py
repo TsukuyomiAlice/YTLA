@@ -635,7 +635,7 @@ d100 效应
 
 dice_table_trick_objects = """
 唬人物件 Trick Objects
-d20 物件 d20 物件
+d20 物件
 1 书本
 2 保存在一个罐子里的大脑
 3 燃烧的火焰
@@ -697,7 +697,7 @@ d100 唬人效应
 
 dice_table_noises = """
 响声 Noises
-d100 效应 d100 效应
+d100 效应
 01~05 猛烈拍打声
 06 咆哮轰鸣
 07 嗡嗡蜂鸣
