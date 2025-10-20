@@ -926,7 +926,7 @@ Bard_Features_article = """
 • 皮甲和一把匕首
 """
 
-Bard_class_table = """
+Bard_class_table_article = """
 # 吟游诗人职业表
 职业等级 熟练加值 职业特性 已知戏法 已知法术 ——每环法术位——1 环 2 环 3 环 4 环 5 环 6 环 7 环 8 环 9 环
 1st +2 施法，诗人激励(d6) 2 4 2 — — — — — — — —
