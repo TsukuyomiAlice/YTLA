@@ -1,13 +1,5 @@
 # encode = utf-8
 
-topics = {
-
-}
-
-keyword_list = {
-
-}
-
 article_random_dungeons = """
 # 附录 A：随机地下城 Random dungeons
 本附录可以帮你快速生成地下城。下列诸表格会频繁用到。首先，掷骰决定一个起始区域，再掷骰来确定在该地区发现的通道和门。有了初始的通道和门后，再确定之后的通道、门、房间、楼梯等等，而其中每项都由不同的表格掷骰得来。
@@ -23,7 +15,7 @@ article_starting_area = """
 """
 
 dice_table_starting_area = """
-# 起始区域 Starting Area
+# d-10 起始区域 Starting Area
 d10 配置
 1 正方形，20 x 20 尺；每面墙上有通道
 2 正方形，20 x 20 尺；两面墙上有门，第三面墙上有通道
@@ -44,7 +36,7 @@ article_passage = """
 """
 
 dice_table_passage = """
-# 通道 Passage
+# d-20 通道 Passage
 d20 细节
 1~2 继续笔直延伸 30 尺，没有门或侧通道。
 3 继续笔直延伸 20 尺，右侧有一扇门，再延伸 10 尺
@@ -62,7 +54,7 @@ d20 细节
 """
 
 dice_table_passage_width = """
-# 通道宽度 Passage Width
+# d-12/d-20 通道宽度 Passage Width
 d12/d20 宽度
 1~2 5 尺
 3~12 10 尺
@@ -80,7 +72,7 @@ article_doors = """
 """
 
 dice_table_door_type = """
-# 门类型 Door Type
+# d-20 门类型 Door Type
 d20 门类型
 1~10 木质
 11~12 木质，栓住或上锁
@@ -95,7 +87,7 @@ d20 门类型
 """
 
 dice_table_beyond_a_door = """
-# 门后 Beyond a Door
+# d-20 门后 Beyond a Door
 d20 特征物
 1~2 通道延伸 10 尺到达 T 型路口，其左右岔道各延伸10 尺
 3~8 通道笔直延伸 20 尺
@@ -111,7 +103,7 @@ article_chambers = """
 """
 
 dice_table_chamber = """
-# 房间 Chamber
+# d-20 房间 Chamber
 d20 房间
 1~2 正方形，20 x 20 尺¹
 3~4 正方形，30 x 30 尺¹
@@ -130,7 +122,7 @@ d20 房间
 """
 
 dice_table_chamber_exits = """
-# 房间出口 Chamber Exits
+# d-20 房间出口 Chamber Exits
 d20 普通房间 大型房间
 1~3 0 0
 4~5 0 1
@@ -145,7 +137,7 @@ d20 普通房间 大型房间
 """
 
 dice_table_exit_location = """
-# 出口位置 Exit Location
+# d-20 出口位置 Exit Location
 d20 位置
 1~7 入口对面的墙壁
 8~12 入口左边的墙壁
@@ -154,7 +146,7 @@ d20 位置
 """
 
 dice_table_exit_type = """
-# 出口类型 Exit Type
+# d-20 出口类型 Exit Type
 d20 类型
 1~10 门（按表格“门类型”掷骰）
 11~20 走廊，10 尺长
@@ -166,7 +158,7 @@ article_stairs = """
 """
 
 dice_table_stairs = """
-# 楼梯 Stairs
+# d-20 楼梯 Stairs
 d20 楼梯
 1~4 下降一层至一个房间
 5~8 下降一层至一条长 20 尺通道
@@ -243,7 +235,7 @@ article_stocking_a_dungeon = """
 """
 
 dice_table_dungeon_death_trap = """
-# 地下城 Dungeon：死亡困境 Death Trap
+# d-20 地下城 Dungeon：死亡困境 Death Trap
 d20 用途
 1 接待室 antechamber 或等候室 waiting room，供观众使用
 2~8 警卫室 guardroom，被加固用以抵挡入侵者
@@ -254,7 +246,7 @@ d20 用途
 """
 
 dice_table_dungeon_lair = """
-# 地下城 Dungeon：巢穴 Lair
+# d-20 地下城 Dungeon：巢穴 Lair
 d20 用途
 1 军械库 armory，里备有武器和护甲
 2 接见室 audience chamber，用于接待访客
@@ -277,7 +269,7 @@ d20 用途
 """
 
 dice_table_dungeon_death_maze = """
-# 地下城 Dungeon：迷宫 Maze
+# d-20 地下城 Dungeon：迷宫 Maze
 d20 用途
 1 召唤室 conjuring room，用来召唤生物守卫迷宫
 2~5 警卫室 guardroom，供巡逻迷宫的哨兵放哨
@@ -291,7 +283,7 @@ d20 用途
 """
 
 dice_table_dungeon_mine = """
-# 地下城 Dungeon：矿场 Mine
+# d-20 地下城 Dungeon：矿场 Mine
 d20 用途
 1~2 兵营 barracks，作为矿工们的住处
 3 卧室 bedroom，供一位上级或主管使用
@@ -308,7 +300,7 @@ d20 用途
 """
 
 dice_table_dungeon_planar_gate = """
-# 地下城 Dungeon：异界之门 Planar Gate
+# d-100 地下城 Dungeon：异界之门 Planar Gate
 d100 用途
 01~03 精心粉饰的休息厅 foyer 或接待室 antechamber
 04~08 军械库 armory，供传送门的护卫使用
@@ -340,7 +332,7 @@ d100 用途
 """
 
 dice_table_dungeon_stronghold = """
-地下城 Dungeon：要塞 Stronghold
+# d-100 地下城 Dungeon：要塞 Stronghold
 d100 用途
 01~02 接待室 antechamber，要进入要塞的访客在这里等候
 03~05 军械库 armory，备有高质量的装备，包括各种轻型攻城武器，比如弩炮 ballistas
@@ -374,7 +366,7 @@ d100 用途
 """
 
 dice_table_dungeon_temple_or_shrine = """
-地下城 Dungeon：神庙或圣地 Temple or Shrine
+# d-100 地下城 Dungeon：神庙或圣地 Temple or Shrine
 d100 用途
 01~03 军械库 armory，其内装满武器、护甲、战旗和标旗
 04~05 接见室 audience chamber，神庙祭司接见平民与低阶访客的地方
@@ -407,7 +399,7 @@ d100 用途
 """
 
 dice_table_dungeon_tomb = """
-地下城 Dungeon：陵墓 Tomb
+# d-20 地下城 Dungeon：陵墓 Tomb
 d20 用途
 1 接待室 antechamber，用于让人在此向死者致敬，或在此准备出席安葬仪式
 2~3 礼拜堂 chapel，供奉守护死者并确保其安息的神祇
@@ -424,7 +416,7 @@ d20 用途
 """
 
 dice_table_dungeon_treasure_vault = """
-地下城 Dungeon：宝库 Treasure Vault
+# d-20 地下城 Dungeon：宝库 Treasure Vault
 d20 用途
 1 接待室 antechamber，用于接待来访贵宾
 2 军械库 armory，存放着宝库警卫使用的普通和魔法设备
@@ -441,7 +433,7 @@ d20 用途
 """
 
 dice_table_general_dungeon_chambers = """
-通用地下城房间 General Dungeon Chambers
+# d-100 通用地下城房间 General Dungeon Chambers
 d100 用途
 01 接待室 antechamber
 02~03 军械库 armory
@@ -505,7 +497,7 @@ d100 用途
 """
 
 dice_table_current_chamber_state = """
-房间现状 Current Chamber State
+# d-20 房间现状 Current Chamber State
 d20 特征物
 1~3 瓦砾，天花板部分倒塌
 4~5 坑洞，地面部分倒塌
@@ -519,7 +511,7 @@ d20 特征物
 """
 
 dice_table_dungeon_chamber_contents = """
-地下城房间内容 Dungeon Chamber Contents
+# d-100 地下城房间内容 Dungeon Chamber Contents
 d100 内容
 01~08 怪物（主要生物）
 09~15 怪物（主要生物）与宝藏
@@ -538,7 +530,7 @@ d100 内容
 """
 
 dice_table_monster_motivation = """
-怪物动机 Monster Motivation
+# d-20 怪物动机 Monster Motivation
 d20 目标 d20 目标
 1~2 寻找一个避难所
 3~5 征服地下城
@@ -551,7 +543,7 @@ d20 目标 d20 目标
 """
 
 dice_table_dungeon_hazards = """
-地下城危害物 Dungeon Hazards
+# d-20 地下城危害物 Dungeon Hazards
 d20 危害物 d20 危害物
 1~3 棕霉菌 brown mold
 4~8 绿软泥 green slime
@@ -562,7 +554,7 @@ d20 危害物 d20 危害物
 """
 
 dice_table_obstacles = """
-障碍 Obstacles
+# d-20 障碍 Obstacles
 d20 障碍
 1 防生物灵光覆盖一片半径 1d10 x 10 尺的区域；灵光内的活体生物不能回复生命值
 2 冲击的风会使移动速度减半，同时使远程攻击检定具有劣势
@@ -579,7 +571,7 @@ d20 障碍
 """
 
 dice_table_trap_trigger = """
-陷阱触发 Trap Trigger
+# d-6 陷阱触发 Trap Trigger
 d6 触发
 1 踩踏（地板，楼梯）
 2 走过（门道，过道）
@@ -590,7 +582,7 @@ d6 触发
 """
 
 dice_table_trap_damage_severity = """
-陷阱危害度 Trap Damage Severity
+# d-6 陷阱危害度 Trap Damage Severity
 d6 危害度
 1~2 挫折 setback
 3~5 危险 dangerous
@@ -598,7 +590,7 @@ d6 危害度
 """
 
 dice_table_trap_effects = """
-陷阱效应 Trap Effects
+# d-100 陷阱效应 Trap Effects
 d100 效应
 01~04 魔法飞弹 magic missiles 从雕像或物件中射出
 05~07 坍塌的梯道生成一个斜坡使人物跌至其下端一个陷坑中
@@ -634,7 +626,7 @@ d100 效应
 """
 
 dice_table_trick_objects = """
-唬人物件 Trick Objects
+# d-20 唬人物件 Trick Objects
 d20 物件
 1 书本
 2 保存在一个罐子里的大脑
@@ -659,7 +651,7 @@ d20 物件
 """
 
 dice_table_tricks = """
-唬人把戏 Tricks
+# d-100 唬人把戏 Tricks
 d100 唬人效应
 01~03 使第一触碰物件的人衰老
 04~06 使被触碰物件活化，或活化它附近的其他物件
@@ -696,7 +688,7 @@ d100 唬人效应
 """
 
 dice_table_noises = """
-响声 Noises
+# d-100 响声 Noises
 d100 效应
 01~05 猛烈拍打声
 06 咆哮轰鸣
@@ -756,7 +748,7 @@ d100 效应
 """
 
 dice_table_air = """
-空气 Air
+# d-100 空气 Air
 d100 状况
 01~60 纯净而潮湿 
 61~70 纯净而通风 
@@ -771,7 +763,7 @@ d100 状况
 """
 
 dice_table_odors = """
-气味 Odors
+# d-100 气味 Odors
 d100 状况
 01~03 刺鼻 
 04~05 氯气味 
@@ -790,7 +782,7 @@ d100 状况
 """
 
 dice_table_general_features = """
-通用特征物 General Features
+# d-100 通用特征物 General Features
 d100 物品
 01 破烂的箭
 02~04 灰烬
@@ -847,7 +839,7 @@ d100 物品
 """
 
 dice_table_general_furnishings_and_appointments = """
-通用设备与摆设 General Furnishings and Appointments
+# d-100 通用设备与摆设 General Furnishings and Appointments
 d100 物品
 01 祭坛
 02 扶手椅
@@ -940,7 +932,7 @@ d100 物品
 """
 
 dice_table_religious_articles_and_furnishings = """
-宗教饰物与设备 Religious Articles and Furnishings
+# d-100 宗教饰物与设备 Religious Articles and Furnishings
 d100 物品
 01~05 祭坛
 06~08 钟铃
@@ -986,7 +978,7 @@ d100 物品
 """
 
 dice_table_mage_furnishings = """
-魔法师设备 Mage Furnishings
+# d-100 魔法师设备 Mage Furnishings
 d100 物品
 01~03 蒸馏器
 04~05 天平
@@ -1051,7 +1043,7 @@ d100 物品
 """
 
 dice_table_utensils_and_personal_items = """
-生活器具和个人物品 Utensils and Personal Items
+# d-100 生活器具和个人物品 Utensils and Personal Items
 d100 物品
 01 锥子
 02 绷带
@@ -1133,7 +1125,7 @@ d100 物品
 """
 
 dice_table_container_contents = """
-容器内容物 Container Contents
+# d-100 容器内容物 Container Contents
 d100 物品
 01~03 灰烬
 04~06 树皮
@@ -1165,7 +1157,7 @@ d100 物品
 """
 
 dice_table_books_scrolls_tomes = """
-书 Books，卷轴 Scrolls 和卷册 Tomes
+# d-100 书 Books，卷轴 Scrolls 和卷册 Tomes
 d100 物品
 01~02 帐目记录
 03~04 炼金师的笔记本
@@ -1218,7 +1210,3 @@ d100 物品
 97~99 异域游记
 00 位面游记
 """
-
-article = {
-
-}

@@ -1,51 +1,5 @@
 # encode=utf-8
 
-topics = {
-    "step_by_step_characters": [
-        "step_by_step_characters", "1_Choose_a_Race", "2_Choose_a_Class", "3_Determine_Ability_Scores",
-        "4_Describe_Your_Character", "5_Choose_Equipment", "6_Come_Together", "beyond_1st_level"],
-}
-
-keyword_list = {
-    "step_by_step_characters": [
-        "第 1 章：一步步创建角色 Step-by-Step Characters",
-        "创建布鲁诺 Building Bruenor", ],
-    "1_Choose_a_Race": [
-        "1.选择种族 Choose a Race",
-        "创建布鲁诺，步骤 1 Building Bruenor, Step 1", ],
-    "2_Choose_a_Class": [
-        "2.选择职业 Choose a Class",
-        "等级 Level",
-        "快速建卡 Quick Build",
-        "生命值与生命骰 Hit Point and Hit Dice",
-        "熟练加值 Proficiency Bonus",
-        "创建布鲁诺，步骤 2 Building Bruenor, Step 2", ],
-    "3_Determine_Ability_Scores": [
-        "3.决定属性值 Determine Ability Scores",
-        "属性值摘要 Ability Score Summary",
-        "属性值和调整值 Ability Scores and Modifiers",
-        "创建布鲁诺，步骤 3 Building Bruenor, Step 3",
-        "变体：自定义属性值 Variant: Customizing Ability Scores",
-        "属性值花费点数 Ability Score Point Cost", ],
-    "4_Describe_Your_Character": [
-        "4.描述你的角色 Describe Your Character",
-        "角色各属性 Your Character’s Abilities",
-        "创建布鲁诺，步骤 4 Building Bruenor, Step 4", ],
-    "5_Choose_Equipment": [
-        "5.选择装备 Choose Equipment",
-        "护甲等级 Armor Class",
-        "武器 Weapons",
-        "创建布鲁诺，步骤 5 Building Bruenor, Step 5", ],
-    "6_Come_Together": [
-        "6.集结 Come Together",
-    ],
-    "beyond_1st_level": [
-        "高于 1 级 Beyond 1st Level",
-        "游戏阶段 Tiers of Play",
-        "角色升级表 Character Advancement",
-    ],
-}
-
 step_by_step_characters_article = """
 # 第 1 章：一步步创建角色 Step-by-Step Characters
 要参与龙与地下城的冒险，你的第一步即是想象及创作一名自己的角色。你的角色由一堆游戏数据，一点扮演成分以及你的想象力综合而成。你选择一个种族（比如人类或半身人）以及一种职业（比如战士或法师），然后再设定角色的个人特征，外形以及其角色背景故事。设定完成后，你的角色便是你在游戏中的代表，你在龙与地下城世界中的化身。在开始之前，你可以先想象一下自己想要扮演一名什么样的冒险者。你可以是勇敢的战士，隐伏的游荡者，狂热的牧师或是酷炫的法师。又或者你可能对非传统角色更有兴趣，比如喜欢用拳头解决问题的蛮力游荡者，或是从远方逐一干掉敌人的狙击手。你喜欢奇幻小说里的矮人或精灵吗？你也可以试着创造一名这样的角色。你想不想你的角色成为团里最强横的冒险者？考虑一下战士。如果你不知从何入手，可以翻翻看本书的插图有没有能让你感兴趣的点子。
@@ -146,7 +100,7 @@ Determine_Ability_Scores_article = """
 种族加值：
 半精灵（+2） 龙裔（+1）卓尔（+1） 人类（+1）轻足半身人（+1） 提夫林（+2）
 
-# 属性值和调整值 Ability Scores and Modifiers
+# table 属性值和调整值 Ability Scores and Modifiers
 属性值 调整值 
 1 -5 
 2~3 -4 
@@ -174,7 +128,7 @@ Determine_Ability_Scores_article = """
 你获得总计 27 点可花费的点数用于兑换各属性值，每个属性值的花费在“属性值花费点数”表中显示。例如，一个属性值 14 需要花费 7 点进行兑换。以该方式能兑换到的属性值在加入种族增益前其最值为 15。而你也不能拥有低于 8 的属性值。
 这种决定属性值的方式可让你得到三个相等的高数值和三个相等的低数值组成的组合（15、15、15、8、8、8），或一个平均值更高但各数值几乎相等的数值组合（13、13、13、12、12、12），或是任何这两个极端之间的数值集合。
 
-# 属性值花费点数 Ability Score Point Cost
+# table 属性值花费点数 Ability Score Point Cost
 属性值 花费 
 8 0 
 9 1 
@@ -245,7 +199,7 @@ beyond_1st_level_article = """
 体质调整值每提升 1 点，你的生命值上限将随之提升，其数值等于你的当前等级。例如，布鲁诺作为战士从第 7 级提升到第 8 级时，他将体质值从 17 提升到 18，而他的体质调整值也因此从+3 提升到+4。此时其生命值上限也因此增加 8。
 “角色升级表”总结了你第 1 至第 20 级间各等级升级时所需的 XP。以及相应等级角色的熟练加值。升级所获得的其他收益，还可以参考与该角色相对应的职业描述。
 
-# 角色升级表 Character Advancement
+# table 角色升级表 Character Advancement
 经验值 等级 熟练加值
 0 1 +2
 300 2 +2
@@ -275,14 +229,3 @@ beyond_1st_level_article = """
 在第三阶段（第 11~16 级），角色们达到了远超平庸大众的境界，甚至在冒险者群体中也是技艺超群。第 11 级时，许多施法者将获得 6 环法术，这类法术所创造的某些效应，玩家角色们在该阶段前都无法实现。其它角色则可以获得更多的攻击次数，或是得以在攻击的同时实现更多惊人之举。这些强大的冒险者面对的则是那些威胁整个区域乃至整个大陆的事物。
 在第四阶段（第 17~20 级），角色们达到其职业特性的巅峰，并凭着其自身的资质成为了模范的英雄（或反派）。他们的冒险活动影响着世界的命运，乃至多元宇宙的秩序。
 """
-
-article = {
-    "step_by_step_characters": step_by_step_characters_article,
-    "1_Choose_a_Race": Choose_a_Race_article,
-    "2_Choose_a_Class": Choose_a_Class_article,
-    "3_Determine_Ability_Scores": Determine_Ability_Scores_article,
-    "4_Describe_Your_Character": Describe_Your_Character_article,
-    "5_Choose_Equipment": Choose_Equipment_article,
-    "6_Come_Together": Come_Together_article,
-    "beyond_1st_level": beyond_1st_level_article,
-}

@@ -1,15 +1,5 @@
 # encode = utf-8
 
-topics = {
-    "inspirational_readings": [
-        "inspirational_readings"],
-}
-
-keyword_list = {
-    "inspirational_readings": [
-        "附录 E：启蒙读物 Inspirational Reading",],
-}
-
 inspirational_readings_article = """
 # 附录 E：启蒙读物 Inspirational Reading
 我所有奇幻作品的灵感都是来源于我小时候父亲给我的爱，他花许多时间给我讲他编的故事，能实现愿望的斗篷老人、魔戒与宝剑、邪恶的术士与勇敢的剑客……所有人在小时候都从格林兄弟 Brothers Grimm或安德鲁·朗格 Andrew Lang等人所写的童话故事里接触过奇幻。这往往会引导人们去阅读神话故事书、翻阅动物寓言集，以及参考各地方人民神话的汇编。大约 1950年以后，因为上面的这些原因我建立起对奇幻的兴趣，逐渐成为一个科幻小说与奇幻文学的书迷。以下列表提及的作家对我影响较深。
@@ -73,7 +63,3 @@ inspirational_readings_article = """
 吉恩·沃尔夫 Gene Wolfe。《拷问者之影 The Shadow of theTorturer》和其他“新日之书 The Book of the New Sun”系列。
 罗杰·泽拉兹尼 Roger Zelazny。《Jack of Shadows》《安珀九王子 Nine Princes in Amber》和其他“安珀志 Amber”系列。
 """
-
-article = {
-    "inspirational_readings": inspirational_readings_article,
-}

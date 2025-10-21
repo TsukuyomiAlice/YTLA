@@ -1,96 +1,5 @@
 # encode = utf-8
 
-topics = {
-    "combat": [
-        "The_order_of_combat", "Movement_and_position", "Action_in_combat", "Making_an_attack", "Cover",
-        "Damage_and_healing", "Mounted_combat", "Underwater_Combat", ],
-}
-
-keyword_list = {
-    "The_order_of_combat": [
-        "第 9 章：战斗 Combat",
-        "战斗流程 The Order of Combat",
-        "战斗步骤 Combat Step by Step",
-        "突袭 Surprise",
-        "先攻 Initiative",
-        "你的回合 Your Turn",
-        "附赠动作 Bonus Action",
-        "自己回合中的其他活动 Other Activity on Your Turn",
-        "反应 Reactions", ],
-    "Movement_and_position": [
-        "移动与位置 Movement and Position",
-        "与身边物件互动 Interacting with Objects Around You",
-        "分拆移动 Breaking Up Your Move",
-        "攻击间移动 Moving between Attacks",
-        "使用不同速度 Using Different Speeds",
-        "困难地型 Difficult Terrain",
-        "倒地 Being Prone",
-        "绕过其他生物 Moving Around Other Creatures",
-        "飞行移动 Flying Movement",
-        "生物体型 Creature Size",
-        "体型分类 Size Categories",
-        "空间 Space",
-        "挤身通过狭窄空间 Squeezing into a Smaller Space",
-        "变体：格子地图 Variant: Playing on a Grid", ],
-    "Action_in_combat": [
-        "战斗动作 Action in Combat",
-        "攻击 Attack",
-        "施法 Cast a Spell",
-        "疾走 Dash",
-        "撒离 Disengage",
-        "回避 Dodge",
-        "协助 Help",
-        "躲藏 Hide",
-        "即兴动作 Improvised Action",
-        "预备 Ready",
-        "搜索 Search",
-        "使用物件 Use an Object", ],
-    "Making_an_attack": [
-        "发动攻击 Making an Attack",
-        "攻击检定 Attack Roll",
-        "攻击检定调整值 Modifiers to the Roll",
-        "属性调整值 Ability Modifier。",
-        "熟练加值 Proficiency Bonus。",
-        "骰出 1 或 20 Rolling 1 or 20",
-        "看不见的敌人 Unseen Attackers and Targets",
-        "远程攻击 Ranged Attack",
-        "射程 Range",
-        "近身远程攻击 Ranged Attacks in Close Combat",
-        "近战攻击 Melee Attack",
-        "借机攻击 Opportunity Attack",
-        "战斗中的对抗 Contests in Combat",
-        "双持武器战斗 Two-Weapon Fighting",
-        "擒抱 Grapple",
-        "逃脱擒抱 Escaping a Grapple。",
-        "擒抱中移动 Moving a Grappled Creature。",
-        "推撞 Shoving a Creature", ],
-    "Cover": [
-        "掩护 Cover", ],
-    "Damage_and_healing": [
-        "伤害与治疗 Damage and Healing",
-        "生命值 Hit Point",
-        "伤害掷骰 Damage Rolls",
-        "重击 Critical Hits",
-        "伤害类型 Damage Types",
-        "描述伤害效果 Describing the Effects of Damage",
-        "伤害的抗性与易伤 Damage Resistance and Vulnerability",
-        "治疗 Healing",
-        "降至 0 生命值 Dropping to 0 Hit Points",
-        "即时死亡 Instant Death",
-        "陷入昏迷 Falling Unconscious",
-        "死亡豁免 Death Saving Throws",
-        "稳定伤势 Stabilizing a Creature",
-        "怪物与死亡 Monsters and Death",
-        "击晕 Knocking a Creature Out",
-        "临时生命值 Temporary Hit Points", ],
-    "Mounted_combat": [
-        "骑乘战斗 Mounted Combat",
-        "骑乘的开始与结束 Mounting and Dismounting",
-        "控制坐骑 Controlling a Mount", ],
-    "Underwater_Combat": [
-        "水下战斗 Underwater Combat", ],
-}
-
 The_order_of_combat_article = """
 # 第 9 章：战斗 Combat
 利剑击打盾牌的铿锵声。怪物爪子刺穿护甲的撕裂声。法师用法术施放烈焰凝成的火球，并爆出耀眼的闪光。刺鼻的血腥味在怪物们的恶臭中弥漫。狂怒的咆哮、胜利的欢呼、痛苦的惨叫。这就是 D&D 中混乱、致命、迷人的战斗场景。
@@ -204,7 +113,7 @@ Movement_and_position_article = """
 # 生物体型 Creature Size
 每个生物都占据着不同大小的空间。表格“体型分类”列出了战斗中受控的特定体型生物所占据空间的大小。有时候物件也会使用相同的体型分类。
 
-# 体型分类 Size Categories
+# table 体型分类 Size Categories
 体型 占据空间
 微型 Tiny 2½×2½尺
 小型 Small 5×5 尺
@@ -478,14 +387,3 @@ Underwater_Combat_article = """
 所有对常规射程外目标发动的远程武器攻击 rangedweapon attack 均直接判定为未命中。即使目标在常规射程内，该攻击的攻击检定也具有劣势，除非该武器是弩，捕网或与标枪类似的投掷武器（包括矛、三叉戟、飞标）。
 完全没入水中的生物和物件对火焰伤害具有抗性。
 """
-
-article = {
-    "The_order_of_combat": The_order_of_combat_article,
-    "Movement_and_position": Movement_and_position_article,
-    "Action_in_combat": Action_in_combat_article,
-    "Making_an_attack": Making_an_attack_article,
-    "Cover": Cover_article,
-    "Damage_and_healing": Damage_and_healing_article,
-    "Mounted_combat": Mounted_combat_article,
-    "Underwater_Combat": Underwater_Combat_article,
-}

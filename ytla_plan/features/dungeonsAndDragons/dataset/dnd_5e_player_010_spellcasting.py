@@ -1,53 +1,5 @@
 # encode = utf-8
 
-topics = {
-    "spellcasting": [
-        "spell_description", "cast_spell", ],
-}
-
-keyword_list = {
-    "spell_description": [
-        "第 10 章：施法 Spellcasting",
-        "法术是什么 What Is a Spell?",
-        "法术环阶 Spell Level",
-        "已知法术和准备法术 Known and Prepared Spells",
-        "法术位 Spell Slots",
-        "升环施法 Casting a Spell at a Higher Level",
-        "着甲施法 Casting in Armor",
-        "戏法 Cantrips",
-        "仪式 Rituals",
-    ],
-    "cast_spell": [
-        "施展法术 Casting a Spell",
-        "施法时间 Casting Time",
-        "附赠动作 Bonus Action",
-        "反应 Reaction",
-        "长时间施展 Longer Casting Times",
-        "施法距离 Range",
-        "法术成分 Components",
-        "言语 Verbal（V）",
-        "姿势 Somatic（S）",
-        "材料 Material（M）",
-        "魔法学派 Schools of Magic",
-        "持续时间 Duration",
-        "立即 Instantaneous",
-        "专注 Concentration",
-        "目标 Targets",
-        "与目标间畅通无阻 Clear Path to the Target",
-        "以自身为目标 Targeting Yourself",
-        "效应范围 Areas of Effect",
-        "锥状 Cone",
-        "立方 Cube",
-        "柱状 Cylinder",
-        "线状 Line",
-        "球状 Sphere",
-        "豁免检定 Saving Throws",
-        "攻击检定 Attack Rolls",
-        "法术效应混合 Combining Magical Effects",
-        "魔法之网 The Weave of Magic",
-
-    ]
-}
 
 spell_description_article = """
 # 第 10 章：施法 Spellcasting
@@ -222,8 +174,3 @@ D&D 多元宇宙中的世界都是充满魔法的地方，其内所有存在都�
 这些施法者会直接牵动魔网的经纬，来创造出所需的效应。奥法骑士和诡术师也同样使用奥术魔法。而牧师、德鲁伊、圣武士和游侠的法术则称为神术魔法 divine magic。这些施法者与魔网的联系还要借助各种神圣力量——众神、大自然的神力或是圣武士誓言的神圣意义。
 每一个被创造出的魔法效应都是魔网的经纬经过缠结、扭曲、折叠等操作塑造出的效果。某个角色施展预言法术如侦测魔法detect magic 或者鉴定术 identify 时即是瞥见魔网本身。法术如解除魔法 dispel magic 即是抚平魔网，而法术如反魔法力场 anti magic field 则是将魔网重新修整，并让魔法在法术范围之外流过，而不是穿行其中。而在魔网受损或被阻断的地方，魔法的效应将变得不可预测，甚至彻底消失。
 """
-
-article = {
-    "spell_description": spell_description_article,
-    "cast_spell": cast_spell_article,
-}

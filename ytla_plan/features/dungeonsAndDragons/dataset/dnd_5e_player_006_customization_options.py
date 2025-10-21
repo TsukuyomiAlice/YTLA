@@ -1,77 +1,5 @@
 # encode = utf-8
 
-topics = {
-    "customization_options": [
-        "Multiclassing", "Feats", ],
-}
-
-keyword_list = {
-    "Multiclassing": [
-        "第 6 章：自定义选项 Customization Options",
-        "兼职 Multiclassing",
-        "兼职范例 Multiclassing Example",
-        "先决条件 Prerequisites",
-        "经验值 Experience Points",
-        "生命值与生命骰 Hit Points and Hit Dice",
-        "熟练加值 Proficiency Bonus",
-        "熟练项 Proficiencies",
-        "兼职熟练项 Multiclassing Proficiencies",
-        "职业特性 Class Features",
-        "引导神力 Channel Divinity",
-        "额外攻击 Extra Attack",
-        "无甲防御 Unarmored Defense",
-        "施法 Spellcasting",
-        "已知法术和已准备法术 Spells Known and Prepared。",
-        "法术位 Spell Slots。",
-        "兼职施法者：对应施法等级拥有的法术位",
-        "契约魔法 Pact Magic。", ],
-    "Feats": [
-        "专长 Feats",
-        "警觉 Alert",
-        "运动员 Athlete",
-        "演员 Actor",
-        "冲锋手 Charger",
-        "强弩专家 Crossbow Expert",
-        "防御式决斗 Defensive Duelist",
-        "双持客 Dual Wielder",
-        "地城探索者 Dungeon Delver",
-        "耐性 Durable",
-        "元素导师 Elemental Adept",
-        "擒抱者 Grappler",
-        "巨武器大师 Great Weapon Master",
-        "医疗师 Healer",
-        "重甲运用 Heavily Armored",
-        "重甲大师 Heavy Armor Master",
-        "领袖之证 Inspiring Leader",
-        "敏锐心灵 Keen Mind",
-        "轻甲运用 Lightly Armored",
-        "语言学家 Linguist",
-        "幸运 Lucky",
-        "巫师杀手 Mage Slayer",
-        "魔法学徒 Magic Initiate",
-        "战技专家 Martial Adept",
-        "中甲大师 Medium Armor Master",
-        "灵活移动 Mobile",
-        "中甲运用 Moderately Armored",
-        "骑乘战斗 Mounted Combatant",
-        "观察力 Observant",
-        "长柄武器大师 Polearm Master",
-        "强健身心 Resilient",
-        "仪式施法者 Ritual Caster",
-        "凶蛮打手 Savage Attacker",
-        "哨兵 Sentinel",
-        "神射手 Sharpshooter",
-        "盾牌大师 Shield Master",
-        "熟习 Skilled",
-        "隐伏者 Skulker",
-        "法术射手 Spell Sniper",
-        "斗殴高手 Tavern Brawler",
-        "健壮 Tough",
-        "战地施法者 War Caster",
-        "武器大师 Weapon Master",
-    ]
-}
-
 Multiclassing_article = """
 # 第 6 章：自定义选项 Customization Options
 属性值、种族、职业以及背景等各选项结合起来定义了你的角色在游戏中能做到的事情，而你在创作角色时对各细节的选定则使你的角色更加独一无二。通常在选定职业和种族后，角色的能力大小已经大体定型。而本章的内容则允许玩家在角色设定完成后，遵照 DM 指示为角色作进一步调整。
@@ -83,7 +11,7 @@ Multiclassing_article = """
 随着等级的提升，你可能会以原职业为主，只兼任几级的其他职业，又或者你可能会完全转型而放弃之前的职业方向。
 你甚至可以开展第三种甚至第四种职业。而相比同级的专职角色，你相当于舍弃专精来换取多样性。
 
-> 兼职范例 Multiclassing Example
+# 兼职范例 Multiclassing Example
 > 格雷正扮演一名 4 级战士。当他的角色获得足够到达第 5 级的经验值时，格雷决定让他的角色兼职一个其他职业而不是继续发展其战士水平。格雷的战士已经跟戴夫的游荡者一起混了相当长一段时间，而且已经在当地的盗贼行会中以打手的身份完成了一些工作。
 > 因此格雷决定让其角色兼职一些游荡者等级，因此其角色成为一名4 级战士兼 1 级游荡者（写作战士 4／游荡者 1）。
 > 当格雷的角色获得到足够达第 6 级的经验值时，他可以选择再提升一个战士等级（成为战士 5／游荡者 1），或是再提升一个游荡者等级（成为战士 4／游荡者 2）。或者，他也许会在冒险时获得一本关于神秘学识的典籍，并因此启发他去兼职第三种法系职业（也许是成为战士 4／游荡者 1／法师 1）。
@@ -106,7 +34,7 @@ Multiclassing_article = """
 # 熟练项 Proficiencies
 提升一个新的兼职职业时，你只能获得该职业的部分熟练项，如表格“兼职熟练项”所示。
 
-# 兼职熟练项 Multiclassing Proficiencies
+# table 兼职熟练项 Multiclassing Proficiencies
 职业 获得熟练项
 野蛮人 盾牌、简易武器、军用武器
 吟游诗人 轻甲、一项自选技能、一种自选乐器
@@ -149,7 +77,7 @@ Multiclassing_article = """
 如果你兼职了复数的施法职业，则你可能依照列表而具有比你已知法术或可准备法术更高环阶的法术位。而即使你并没有习得该环阶的法术，你仍可以使用这些法术位施展低环阶法术。如果你的某些法术在升环施法时有强化效应（例如法术燃烧之手 burning hands），你也可以在这种情况下达成这些强化效应。
 例如，假设你是前文所述的游侠 4/法师 3，则你再结算法术位时将视为一名 5 级施法者：你拥有四枚 1 环法术位，三枚2 环法术位，以及两枚 3 环法术位。然而你并没有任何三环的已知法术，也没有任何 2 环已知的游侠法术。不过你可用这些法术位施展你已知的其他法术——还可以引发这些法术的潜在增效。
 
-# 兼职施法者：对应施法等级拥有的法术位
+# table 兼职施法者：对应施法等级拥有的法术位
 Multiclass Spellcaster: Spell Slots per Spell Level
 等级 1环 2环 3环 4环 5环 6环 7环 8环 9环
 1st 2 — — — — — — — —
@@ -416,8 +344,3 @@ Feats_article = """
 • 你的力量或敏捷加 1，上限为 20。
 • 你从简易武器和军用武器列表中，共选择四种武器并获得其熟练项。
 """
-
-article = {
-    "Multiclassing": Multiclassing_article,
-    "Feats": Feats_article,
-}

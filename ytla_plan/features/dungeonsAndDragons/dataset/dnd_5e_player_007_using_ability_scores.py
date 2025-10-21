@@ -1,105 +1,5 @@
 # encode = utf-8
 
-topics = {
-    "using_ability_scores": [
-        "Ability_Scores_and_Modifiers", "Advantage_and_Disadvantage", "Proficiency_Bonus", "Ability_Checks",
-        "Using_Each_Ability", "Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma",
-        "Saving_throws", ],
-}
-
-keyword_list = {
-    "Ability_Scores_and_Modifiers": [
-        "第 7 章：属性值应用 Using Ability Scores",
-        "属性值与调整值 Ability Scores and Modifiers",
-        "属性值与调整值 Ability Scores and Modifiers",
-    ],
-    "Advantage_and_Disadvantage": [
-        "优势与劣势 Advantage and Disadvantage",
-    ],
-    "Proficiency_Bonus": [
-        "熟练加值 Proficiency Bonus",
-    ],
-    "Ability_Checks": [
-        "属性检定 Ability Checks",
-        "常用难度等级 Typical Difficulty Classes",
-        "对抗 Contests",
-        "技能 Skills",
-        "变体：技能搭配其他属性 Variant: Skills with Different Abilities",
-        "被动检定 Passive Checks",
-        "合作 Working Together",
-        "团体检定 Group Checks",
-    ],
-    "Using_Each_Ability": [
-        "各属性值应用 Using Each Ability",
-    ],
-    "Strength": [
-        "力量 Strength",
-        "力量检定 Strength Checks",
-        "运动 Athletics。",
-        "其他力量检定。",
-        "攻击检定与伤害 Attack Rolls and Damage",
-        "抬举与载重 Lifting and Carrying",
-        "载重 Carrying Capacity。",
-        "推 Push、拉 Drag、抬 Lift。",
-        "体型与力量 Size and Strength。",
-        "变体：负重Variant: Encumbrance",
-    ],
-    "Dexterity": [
-        "敏捷 Dexterity",
-        "敏捷检定 Dexterity Checks",
-        "体操 Acrobatics。",
-        "巧手 Sleight of Hand。",
-        "隐匿 Stealth。",
-        "其他敏捷检定。",
-        "躲藏 Hiding",
-        "被动察觉 Passive Perception。",
-        "你能看到什么 What Can You See？",
-        "攻击检定与伤害 Attack Rolls and Damage",
-        "护甲等级 Armor Class",
-        "先攻 Initiative",
-    ],
-    "Constitution": [
-        "体质 Constitution",
-        "体质检定 Constitution Checks",
-        "生命值 Hit Points",
-    ],
-    "Intelligence": [
-        "智力 Intelligence",
-        "智力检定 Intelligence Checks",
-        "奥秘 Arcana。",
-        "历史 History。",
-        "调查 Investigation。",
-        "自然 Nature。",
-        "其它智力检定。",
-        "施法关键属性 Spellcasting Ability",
-    ],
-    "Wisdom": [
-        "感知 Wisdom",
-        "感知检定 Wisdom Checks",
-        "驯兽 Animal Handling。",
-        "洞悉 Insight。",
-        "医药 Medicine。",
-        "察觉 Perception。",
-        "求生 Survival。",
-        "其他感知检定。",
-        "寻找隐藏物件 Finding a Hidden Object",
-        "施法关键属性 Spellcasting Ability",
-    ],
-    "Charisma": [
-        "魅力 Charisma",
-        "魅力检定 Charisma Checks",
-        "欺瞒 Deception。",
-        "威吓 Intimidation。",
-        "表演 Performance。",
-        "游说 Persuasion。",
-        "其他魅力检定。",
-        "施法关键属性 Spellcasting Ability",
-    ],
-    "Saving_throws": [
-        "豁免检定 Saving Throws",
-    ],
-}
-
 Ability_Scores_and_Modifiers_article = """
 # 第 7 章：属性值应用 Using Ability Scores
 六项属性值是生物个体身心特色的核心指标：
@@ -120,7 +20,7 @@ Ability_Scores_and_Modifiers_article = """
 决定某个属性数值未包含在表中范围的属性值其调整值时，只需将相应的属性值减去 10 然后除以 2（向下取整）。
 属性调整值几乎影响所有的攻击检定、属性检定和豁免检定，因此调整值在游戏中甚至比属性值本身更为常用。
 
-# 属性值与调整值 Ability Scores and Modifiers
+# table 属性值与调整值 Ability Scores and Modifiers
 属性值 调整值
 1 -5
 2~3 -4
@@ -163,7 +63,7 @@ Ability_Checks_article = """
 每当需要进行属性检定时，DM 会先选定一项适合当前状况的属性，再确定该事件的难度，即事件的难度等级（DC）。事件越难完成，则其 DC 越高。表格“常用难度等级”中列出了最常见的各项 DC 数值。
 进行属性检定的过程如下：你掷一粒 d20 并加上适用的属性调整值。跟其他 d20 掷骰一样，加上各种适用的加值或减值后，再将总结果跟 DC 相比。如果你的总值大于等于 DC，则检定成功。即意味着进行检定的生物克服了眼前的难关。否则就是检定失败，即意味着该角色或怪物在该事件上可能没有进展，也可能是进展缓慢，其具体情况则由 DM 作最终判定。
 
-# 常用难度等级 Typical Difficulty Classes
+# table 常用难度等级 Typical Difficulty Classes
 事件难度 DC
 非常容易 5
 容易 10
@@ -440,18 +340,3 @@ Saving_throws_article = """
 豁免检定的难度等级由引发豁免的效应决定。例如，法术引发豁免时，其 DC 取决于施术者的施法关键属性和熟练加值。
 DM 可以因应环境和形势给予豁免加值或减值，而豁免成功或失败的后果也会在引发它的效应中进行说明。通常豁免成功的生物都能回避或减低可能需要承受的伤害。
 """
-
-article = {
-    "Ability_Scores_and_Modifiers": Ability_Scores_and_Modifiers_article,
-    "Advantage_and_Disadvantage": Advantage_and_Disadvantage_article,
-    "Proficiency_Bonus": Proficiency_Bonus_article,
-    "Ability_Checks": Ability_Checks_article,
-    "Using_Each_Ability": Using_Each_Ability_article,
-    "Strength": Strength_check_article,
-    "Dexterity": Dexterity_check_article,
-    "Constitution": Constitution_check_article,
-    "Intelligence": Intelligence_check_article,
-    "Wisdom": Wisdom_check_article,
-    "Charisma": Charisma_check_article,
-    "Saving_throws": Saving_throws_article,
-}

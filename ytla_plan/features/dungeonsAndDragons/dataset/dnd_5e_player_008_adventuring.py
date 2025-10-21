@@ -1,75 +1,5 @@
 # encode = utf-8
 
-topics = {
-    "adventuring": [
-        "time", "movement", "the_environment", "social_interaction", "resting", "between_adventure", ],
-}
-
-keyword_list = {
-    "time": [
-        "第 8 章：冒险 Adventuring",
-        "时间 Time", ],
-    "movement": [
-        "移动 Movement",
-        "速度 Speed",
-        "旅行步调 Travel Pace ",
-        "赶路 Forced March。",
-        "坐骑与载具 Mounts and Vehicles。",
-        "旅行步调 Travel Pace",
-        "困难地型 Difficult Terrain",
-        "特殊移动模式 Special Types of Movement",
-        "攀爬、游泳、匍匐 Climbing, Swimming, Crawling",
-        "跳跃 Jumping",
-        "跳远 Long Jump。",
-        "跳高 High Jump。",
-        "旅途中活动 Activity While Traveling",
-        "行进队列 Marching Order",
-        "少于三列 Fewer Than Three Ranks。",
-        "拆分队伍 Spliztting Up the Party",
-        "隐匿 Stealth",
-        "发觉威胁 Notcing Threats",
-        "遭遇生物 Encountering Creatures。",
-        "突袭敌人 Surprising Foes。",
-        "其他活动 Other Activities",
-        "导航 Navigate。",
-        "追踪 Track。", ],
-    "the_environment": [
-        "环境 The Environment",
-        "坠落 Falling",
-        "窒息 Suffocating",
-        "视觉与光照 Vision and Light",
-        "明亮光照 Bright Light。",
-        "微光光照 Dim Light。",
-        "黑暗 Darkness。",
-        "盲视 Blind sight",
-        "黑暗视觉 Dark vision",
-        "真实视觉 Truesight",
-        "饮食 Food and Water",
-        "进食 Food",
-        "饮水 Water",
-        "物件互动 Interacting with Objects", ],
-    "social_interaction": [
-        "社交 Social Interaction",
-        "角色扮演 Roleplaying",
-        "第三人称扮演 Descriptive Approach to Roleplaying",
-        "第一人称扮演 Active Approach to Roleplaying",
-        "扮演的结果 Results of Roleplaying",
-        "属性检定 Ability Checks", ],
-    "resting": [
-        "休息 Resting",
-        "短休 Short Rest",
-        "长休 Long Rest", ],
-    "between_adventure": [
-        "冒险之余 Between Adventures",
-        "生活开支 Lifestyle Expenses",
-        "休整期活动 Downtime Activities",
-        "手作 Crafting",
-        "专业实践 Practicing a Profession",
-        "休养 Recuperating",
-        "深入调查 Researching",
-        "训练 Training", ],
-}
-
 time_article = """
 # 第 8 章：冒险 Adventuring
 在远古可怖陵墓深处探索，在深水城后街小巷中穿行，或是在恐怖岛厚重丛林里开路前进——这些都是龙与地下城冒险的组成部分。你的角色在游戏中可以探索被遗忘的废墟和未知的大陆，揭露黑暗秘密与险恶阴谋，屠戮肮脏的怪物。如果诸事顺利，你的角色将带回丰厚的收获，然后再着手开启新的冒险。
@@ -108,7 +38,7 @@ DM 可以直接给冒险者们的移动事件作出总结，而不需要计算�
 乘坐客车，货车，或其他陆上载具的角色可以自选旅行步调。乘坐水上载具的角色受制于船只的速度（见第 5 章），因此既不因快速步调受减益，也无法从慢速步调得益。根据船舶的种类与船员人数状况，船只至多可以一日活动 24 小时。
 此外，部分特殊坐骑例如飞马，狮鹫或特殊载具（如魔法飞毯 carpet of flying），都可以助你高速旅行。更多关于特殊旅行方式的资料请参照《城主指南》的相关内容。
 
-# 旅行步调 Travel Pace
+# table 旅行步调 Travel Pace
 单位时间内旅程
 步调 分 时 日 效应
 快速 400 尺 4 里 30 里 被动感知（察觉）-5
@@ -325,12 +255,3 @@ between_adventure_article = """
 完成整个训练活动需要花费 250 日，且每日还要花费 1gp。
 在你付出所需的时间和费用后，就可以习得相应的新语言，或获得新工具的熟练项。
 """
-
-article = {
-    "time": time_article,
-    "movement": movement_article,
-    "the_environment": the_environment_article,
-    "social_interaction": social_interaction_article,
-    "resting": resting_article,
-    "between_adventure": between_adventure_article,
-}

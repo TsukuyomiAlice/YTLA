@@ -1,673 +1,5 @@
 # encode = utf-8
 
-topics = {
-    "classes": [
-        "classes",
-        "Barbarian_background", "Creating_a_Barbarian", "Barbarian_Features",
-        "Barbarian_class_table", "Path_of_the_Berserker", "Path_of_the_Totem_Warrior",
-        "Bard_background", "Creating_a_Bard", "Bard_Features",
-        "Bard_class_table", "College_of_Lore", "College_of_Valor",
-        "Cleric_background", "Creating_a_Cleric", "Cleric_Features",
-        "Cleric_class_table", "Knowledge_Domains", "Life_Domains", "Light_Domains", "Nature_Domains",
-        "Tempest_Domains", "War_Domains",
-        "Druid",
-        "Fighter",
-        "Monk",
-        "Paladin",
-        "Ranger",
-        "Rogue",
-        "Sorcerer",
-        "Warlock",
-        "Wizard", ],
-}
-
-keyword_list = {
-    "classes": [
-        "第 3 章：职业 Classes",
-        "职业表", ],
-    "Barbarian_background": [
-        "野蛮人 Barbarian",
-        "原始直觉 Primal Instinct",
-        "危险的生活 A Life of Danger", ],
-    "Creating_a_Barbarian": [
-        "创建野蛮人 Creating a Barbarian",
-        "快速建卡 Quick Build", ],
-    "Barbarian_Features": [
-        "职业特性 Class Features",
-        "生命值 Hit Point",
-        "熟练项 Proficiencies",
-        "装备 Equipment", ],
-    "Barbarian_class_table": [
-        "野蛮人职业表 Barbarian class table",
-        "狂暴 Rage",
-        "无甲防御 Unarmored Defense",
-        "鲁莽攻击 Reckless Attack",
-        "险境感知 Danger Sense",
-        "原初道途 Primal Path",
-        "属性值提升 Ability Score Improvement",
-        "额外攻击 Extra Attack",
-        "快速移动 Fast Movement",
-        "野性直觉 Feral Instinct",
-        "凶蛮重击 Brutal Critical",
-        "坚韧狂暴 Relentless Rage",
-        "持久狂暴 Persistent Rage",
-        "不屈勇武 Indomitable Might",
-        "原初斗士 Primal Champion",
-        "原初道途 Primal Path", ],
-    "Path_of_the_Berserker": [
-        "狂战士道途 Path of the Berserker",
-        "狂怒 Frenzy",
-        "无我狂暴 Mindless Rage",
-        "威慑之姿 Intimidating Presence",
-        "报偿 Retaliation", ],
-    "Path_of_the_Totem_Warrior": [
-        "图腾武者道途 Path of the Totem Warrior",
-        "精魄寻者 Spirit Seeker",
-        "图腾精魄 Totem Spirit",
-        "兽之形 Aspect of the Beast",
-        "精魄行者 Spirit Walker",
-        "图腾同调 Totemic Attunement", ],
-    "Bard_background": [
-        "吟游诗人 Bard",
-        "音乐与魔法 Music and Magic",
-        "从经验中学习 Learning from Experience", ],
-    "Creating_a_Bard": [
-        "创建吟游诗人 Creating a Bard",
-        "快速建卡 Quick Build",
-        "职业特性 Class Features",
-        "生命值 Hit Points",
-        "熟练项 Proficiencies",
-        "装备 Equipment", ],
-    "Bard_class_table": [
-        "吟游诗人职业表 Bard class table",
-        "施法 Spellcasting",
-        "戏法 Cantrips",
-        "法术位 Spell Slots",
-        "已知法术 Spell Known of 1st Level and Higher",
-        "施法关键属性 Spellcasting Ability",
-        "仪式施法 Ritual Casting",
-        "法器 Spellcasting Focus",
-        "诗人激励 Bardic Inspiration",
-        "万事通 Jack of All Trades",
-        "休憩曲 Song of Rest",
-        "吟游诗人学院 Bard College",
-        "专精 Expertise",
-        "属性值提升 Ability Score Improvement",
-        "激励之源 Font of Inspiration",
-        "反迷惑 Countercharm",
-        "先发激励 Superior Inspiration",
-        "吟游诗人学院 Bard College", ],
-    "College_of_Lore": [
-        "逸闻学院 College of Lore",
-        "附赠熟练项 Bonus Proficiencies",
-        "语出惊人 Cutting Words",
-        "额外魔法奥秘 Additional Magical Secrets",
-        "超凡技艺 Peerless Skill", ],
-    "College_of_Valor": [
-        "勇气学院 College of Valor",
-        "附赠熟练项 Bonus Proficiencies",
-        "战斗激励 Combat Inspiration",
-        "额外攻击 Extra Attack",
-        "战斗魔法 Battle Magic",
-    ],
-    "Cleric_background": [
-        "牧师 Cleric",
-        "医者和战士 Healers and Warriors",
-        "神能代理 Divine Agents", ],
-    "Creating_a_Cleric": [
-        "创建牧师 Creating a Cleric",
-        "快速建卡 Quick Build", ],
-    "Cleric_Features": [
-        "职业特性 Class Features",
-        "生命值 Hit Points",
-        "熟练项 Proficiencies",
-        "装备 Equipment", ],
-    "Cleric_class_table": [
-        "牧师职业表 Cleric class table",
-        "施法 Spellcasting",
-        "戏法 Cantrips",
-        "施法关键属性 Spellcasting Ability",
-        "仪式施法 Ritual Casting",
-        "法器 Spellcasting Focus",
-        "神圣领域 Divine Domains",
-        "领域法术 Domain Spells",
-        "引导神力 Channel Divinity",
-        "引导神力：驱散不死生物Channel Divinity: Turn Undead",
-        "属性值提升 Ability Score Improvement",
-        "摧毁不死生物 Destroy Undead",
-        "摧毁不死生物 Destroy Undead",
-        "神圣干预 Divine Intervention",
-        "神圣领域 Divine Domain", ],
-    "Knowledge_Domains": [
-        "知识领域 Knowledge Domains",
-        "知识领域法术 Knowledge Domain Spells",
-        "知识祝福 Blessing of Knowledge",
-        "引导神力：岁月知识 Channel Divinity: Knowledge of The Ages",
-        "引导神力：读心 Channel Divinity: Read Thoughts",
-        "强力施法 Potent Spellcasting",
-        "透视过去 Visions of the Past",
-        "物件解读 Object Reading。",
-        "区域解读 Area Reading。", ],
-    "Life_Domains": [
-        "生命领域 Life Domains",
-        "生命领域法术 Life Domain Spells",
-        "附赠熟练项 Bonus Proficiency",
-        "生命门徒 Disciple of Life",
-        "引导神力：维持生命Channel Divinity: Preserve Life",
-        "神佑医者 Blessed Healer",
-        "神圣打击 Divine Strike",
-        "极效治疗 Supreme Healing", ],
-    "Light_Domains": [
-        "光明领域 Light Domains",
-        "光明领域法术 Light Domain Spells",
-        "附赠戏法 Bonus Cantrips",
-        "守御闪光 Warding Flare",
-        "引导神力：黎明曙光Channel Divinity: Radiance of the Dawn",
-        "精通闪光 Improved Flare",
-        "强力施法 Potent Spellcasting",
-        "光冕 Corona of Light", ],
-    "Nature_Domains": [
-        "自然领域 Nature Domains",
-        "自然领域法术 Nature Domain Spells",
-        "自然侍僧 Acolyte of Nature",
-        "附赠熟练项 Bonus Proficiency",
-        "引导神力：魅惑动植物Channel Divinity: Charm Animals and Plants",
-        "抑制元素 Dampen Elements",
-        "神圣打击 Divine Strike",
-        "自然大师 Master of Nature", ],
-    "Tempest_Domains": [
-        "风暴领域 Tempest Domains",
-        "风暴领域法术 Tempest Domain Spells",
-        "附赠熟练项 Bonus Proficiencies",
-        "风暴狂怒 Wrath of the Storm",
-        "引导神力：毁灭狂怒Channel Divinity: Destructive Wrath",
-        "雷鸣打击 Thunderbolt Strike",
-        "神圣打击 Divine Strike",
-        "风暴降生 Stormborn",
-        "诡术领域 Trickery Domains",
-        "诡术领域法术 Trickery Domain Spells",
-        "诡术祝福 Blessing of the Trickster",
-        "引导神力：召唤分身Channel Divinity: Invoke Duplicity",
-        "引导神力：幽影斗篷Channel Divinity: Cloak of Shadows",
-        "神圣打击 Divine Strike",
-        "精通分身 Improved Duplicity", ],
-    "War_Domains": [
-        "战争领域 War Domains",
-        "战争领域法术 War Domain Spells",
-        "战争祭司 War Priest",
-        "引导神力：导引打击Channel Divinity: Guided Strike",
-        "引导神力：战神祝福Channel Divinity: War God Blessing",
-        "神圣打击 Divine Strike",
-        "战斗化身 Avatar of Battle",
-    ],
-    "Druid": [
-        "德鲁伊 Druid",
-        "自然之力 Power of Nature",
-        "维持平衡 Preserve the Balance",
-        "德鲁伊与诸神 Druids and the Gods",
-        "创建德鲁伊 Creting a Druid",
-        "快速建卡 Quick Build",
-        "职业特性 Class Features",
-        "生命值 Hit Points",
-        "熟练项 Proficiencies",
-        "装备 Equipment",
-        "德鲁伊职业表",
-        "德鲁伊语 Druidic",
-        "施法 Spellcasting",
-        "戏法 Cantrips",
-        "法术的准备和施展 Preparing and Casting Spells",
-        "圣树与圣木 Sacred Plants and Wood",
-        "施法关键属性 Spellcasting Ability",
-        "仪式施法 Ritual Casting",
-        "法器 Spellcasting Focus",
-        "荒野形态 Wild Shape",
-        "野兽形态 Beast Shapes",
-        "德鲁伊结社 Druid Circle",
-        "属性值提升 Ability Score Improvement",
-        "不朽身 Timeless Body",
-        "野兽施法 Beast Spells",
-        "大德鲁伊 Archdruid",
-        "德鲁伊结社 Druid Circle",
-        "大地结社 Circle of the Land",
-        "附赠戏法 Bonus Cantrip",
-        "自然恢复 Natural Recovery",
-        "结社法术 Circle Spells",
-        "极地 Arctic",
-        "海岸 Coast",
-        "荒漠 Desert",
-        "森林 Forest",
-        "草原 Grassland",
-        "山地 Mountain",
-        "沼泽 Swamp",
-        "幽暗地域 Underdark",
-        "大地行者 Land’s Stride",
-        "自然之护 Nature’s Ward",
-        "自然庇护所 Nature’s Sanctuary",
-        "月亮结社 Circle of the Moon",
-        "战斗荒野形态 Combat Wild Shape",
-        "结社形态 Circle Forms",
-        "原初打击 Primal Strike",
-        "元素荒野形态 Elemental Wild Shape",
-        "千面相 Thousand Forms",
-    ],
-    "Fighter": [
-        "战士 Fighter",
-        "全能武斗家 Well-Rounded Specialists",
-        "为冒险而生 Trained for Danger",
-        "创建战士 Creating a Fighter",
-        "快速建卡 Quick Build",
-        "职业特性 Class Features",
-        "生命值 Hit Points",
-        "熟练项 Proficiencies",
-        "装备 Equipment",
-        "战士职业表",
-        "战斗风格 Fighting Style",
-        "回气 Second Wind",
-        "动作如潮 Action Surge",
-        "武术范型 Martial Archetype",
-        "属性值提升 Ability Score Improvement",
-        "额外攻击 Extra Attack",
-        "不屈 Indomitable",
-        "武术范型 Martial Archetypes",
-        "勇士 Champion",
-        "精通重击 Improved Critical",
-        "运动健将 Remarkable Athlete",
-        "额外战斗风格 Additional Fighting Style",
-        "高效重击 Superior Critical",
-        "生还者 Survivor",
-        "战斗大师 Battle Master",
-        "卓越战技 Combat Superiority",
-        "战技 Maneuvers。",
-        "卓越骰 Superiority Dice。",
-        "豁免 Saving Throws。",
-        "战争学徒 Student of War",
-        "知己知彼 Know Your Enemy",
-        "精通卓越战技 Improved Combat Superiority",
-        "坚韧 Relentless",
-        "战技 Maneuvers",
-        "奥法骑士 Eldritch Knight",
-        "奥法骑士施法能力 Eldritch Knight Spellcasting",
-        "施法 Spellcasting",
-        "戏法 Cantrips。",
-        "法术位 Spell Slots。",
-        "施法关键属性 Spellcasting Ability。",
-        "武器联结 Weapon Bond",
-        "战争魔法 War Magic",
-        "秘法打击 Eldritch Strike",
-        "秘法冲锋 Arcane Charge",
-        "精通战争魔法 Improved War Magic",
-    ],
-    "Monk": [
-        "武僧 Monk",
-        "气之魔法 The Magic of Ki",
-        "修练和苦行 Training and Asceticism",
-        "创建武僧 Creating a Monk",
-        "快速建卡 Quick Build",
-        "职业特性 Class Features作为一名武僧，你获得以下职业特性。",
-        "生命值 Hit Points",
-        "熟练项 Proficiencies",
-        "装备 Equipment",
-        "武僧职业表",
-        "无甲防御 Unarmored Defense",
-        "武艺 Martial Arts",
-        "气 Ki",
-        "无甲移动 Unarmored Movement",
-        "宗派 Monastic Tradition",
-        "拨挡飞弹 Deflect Missiles",
-        "属性值提升 Ability Score Improvement",
-        "轻身坠 Slow Fall",
-        "额外攻击 Extra Attack",
-        "震慑拳 Stunning Strike",
-        "真气驻拳 Ki-Empowered Strikes",
-        "反射闪避 Evasion",
-        "心如止水 Stillness of Mind",
-        "百病不侵 Purity of Body",
-        "天语通 Tongue of the Sun and Moon",
-        "金刚魂 Diamond Soul",
-        "不朽身 Timeless Body",
-        "空灵体 Empty Body",
-        "超凡入圣 Perfect Self",
-        "修行宗派 Monastic Traditions",
-        "散打宗 Way of the Open Hand",
-        "散打技巧 Open Hand Technique",
-        "混元体 Wholeness of Body",
-        "宁神境 Tranquility",
-        "渗透劲 Quivering Palm",
-        "暗影宗 Way of Shadow",
-        "暗影技艺 Shadow Arts",
-        "暗影步 Shadow Step",
-        "幽影斗篷 Cloak of Shadows",
-        "灵机一斩 Opportunist",
-        "四象宗 Way of the Four Elements",
-        "四象门徒 Disciple of the Elements",
-        "施放元素法术 Casting Elemental Spells。",
-        "气与法术 Spells and Ki Points",
-        "法门 Elemental Disciplines",
-        "武僧修道会 Monastic Orders",
-    ],
-    "Paladin": [
-        "圣武士 Paladin",
-        "公义的事业 The Cause of Righteousness",
-        "超凡脱俗 Beyond the Mundane Life",
-        "创建圣武士 Creating a Paladin",
-        "快速建卡 Quick Build",
-        "职业特性 Class Features",
-        "生命值 Hit Points",
-        "熟练项 Proficiencies",
-        "装备 Equipment",
-        "圣武士职业表",
-        "神圣感知 Divine Sense",
-        "圣疗 Lay on Hands",
-        "战斗风格 Fighting Style",
-        "防御 Defense",
-        "对决 Dueling",
-        "巨武器战斗 Great Weapon Fighting",
-        "守护 Protection",
-        "施法 Spellcasting",
-        "法术的准备与施展 Preparing and Casting Spells",
-        "施法关键属性 Spellcasting Ability",
-        "法器 Spellcasting Focus",
-        "至圣斩 Divine Smite",
-        "神佑 Divine Health",
-        "神圣誓言 Sacred Oath",
-        "圣誓法术 Oath Spells",
-        "引导神力 Channel Divinity",
-        "属性值提升 Ability Score Improvement",
-        "额外攻击 Extra Attack",
-        "守护灵光 Aura of Protection",
-        "勇气灵光 Aura of Courage",
-        "精通至圣斩 Improved Divine Smite",
-        "净化之触 Cleansing Touch",
-        "神圣誓言 Sacred Oaths",
-        "奉献之誓 Oath of Devotion",
-        "圣誓法术 Oath Spells",
-        "引导神力 Channel Divinity",
-        "背弃誓言 Breaking Your Oath",
-        "奉献灵光 Aura of Devotion",
-        "纯净之魂 Purity of Spirit",
-        "至圣光轮 Holy Nimbus",
-        "古贤之誓 Oath of the Ancients",
-        "圣誓法术 Oath Spells",
-        "引导神力 Channel Divinity",
-        "守御灵光 Aura of Warding",
-        "不灭哨卫 Undying Sentinel",
-        "上古斗士 Elder Champion",
-        "复仇之誓 Oath of Vengeance",
-        "圣誓法术 Oath Spells",
-        "引导神力 Channel Divinity",
-        "坚韧复仇 Relentless Avenger",
-        "复仇之魂 Soul of Vengeance",
-        "复仇天使 Avenging Angel",
-    ],
-    "Ranger": [
-        "游侠 Ranger",
-        "致命的猎人 Deadly Hunters",
-        "孤独的冒险家 Independent Adventurers",
-        "创建游侠 Creating a Ranger",
-        "快速建卡 Quick Build",
-        "职业特性 Class Features",
-        "生命值 Hit Points",
-        "熟练项 Proficiencies",
-        "装备 Equipment",
-        "游侠职业表",
-        "宿敌 Favored Enemy",
-        "自然探索者 Natural Explorer",
-        "战斗风格 Fighting Style",
-        "施法 Spellcasting",
-        "法术位 Spell Slots",
-        "已知法术 Spell Known of 1st Level and Higher",
-        "施法关键属性 Spellcasting Ability",
-        "游侠范型 Ranger Archetype",
-        "原初意识 Primeval Awareness",
-        "属性值提升 Ability Score Improvement",
-        "额外攻击 Extra Attack",
-        "大地行者 Land’s Stride",
-        "遁术 Hide in Plain Sight",
-        "无踪步 Vanish",
-        "野性感官 Feral Senses",
-        "屠灭众敌 Foe Slayer",
-        "游侠范型 Ranger Archetypes",
-        "猎人 Hunter",
-        "猎物 Hunter’s Prey",
-        "防守战术 Defensive Tactics",
-        "多重攻击 Multi attack",
-        "高效猎人防术 Superior Hunter’s Defense",
-        "Beast Master 驯兽师 ",
-        "游侠伴侣 Ranger’s Companion",
-        "特殊训练 Exceptional Training",
-        "兽性狂怒 Bestial Fury",
-        "法术共享 Share Spells",
-    ],
-    "Rogue": [
-        "游荡者 Rogue",
-        "技能和精准 Skill and Precision",
-        "阴暗生活 A Shady Living",
-        "创建游荡者 Creating a Rogue",
-        "快速建卡 Quick Build",
-        "职业特性 Class Features",
-        "生命值 Hit Point",
-        "熟练项 Proficiencies",
-        "装备 Equipment",
-        "游荡者职业表",
-        "专精 Expertise",
-        "偷袭 Sneak Attack",
-        "盗贼黑话 Thieves’ Cant",
-        "灵巧动作 Cunning Action",
-        "游荡者范型 Roguish Archetypes",
-        "属性值提升 Ability Score Improvement",
-        "直觉闪避 Uncanny Dodge",
-        "反射闪避 Evasion",
-        "可靠才能 Reliable Talent",
-        "听声辨位 Blind sense",
-        "圆滑心智 Slippery Mind",
-        "飘忽不定 Elusive",
-        "幸运一击 Stroke of Luck",
-        "游荡者范型 Roguish Archetypes",
-        "盗贼 Thief",
-        "快手 Fast Hands",
-        "梁上君子 Second-Story Work",
-        "极效潜行 Supreme Sneak",
-        "使用魔法装置 Use Magic Device",
-        "窃盗本能 Thief’s Reflexes",
-        "刺客 Assassin",
-        "附赠熟练项 Bonus Proficiencies",
-        "暗杀 Assassinate",
-        "专业渗透 Infiltration Expertise",
-        "冒充者 Impostor",
-        "致命一击 Death Strike",
-        "诡术师 Arcane Trickster",
-        "诡术师施法能力 Arcane Trickster Spellcasting",
-        "施法 Spellcasting",
-        "戏法 Cantrips。",
-        "法术位 Spell SLots。",
-        "已知法术 Spells Known of 1st-Level and Higher。",
-        "施法关键属性 Spellcasting Ability。",
-        "诈术 Mage Hand Legerdemain",
-        "诡术伏击 Magical Ambush",
-        "万能诡术 Versatile Trickster",
-        "法术窃贼 Spell Thief",
-    ],
-    "Sorcerer": [
-        "术士 Sorcerer",
-        "原生魔法 Raw Magic",
-        "未知力量 Unexplained Powers",
-        "创建术士 Creating a Sorcerer",
-        "快速建卡 Quick Build",
-        "职业特性 Class Features",
-        "生命值 Hit Points",
-        "熟练项 Proficiencies",
-        "装备 Equipment",
-        "术士职业表",
-        "施法 Spellcasting",
-        "戏法 Cantrips",
-        "法术位 Spell Slots",
-        "已知法术 Spells Known of 1st Level and Higher",
-        "施法关键属性 Spellcasting Ability",
-        "法器 Spellcasting Focus",
-        "术法起源 Sorcerous Origin",
-        "魔力泉涌 Font of Magic",
-        "术法点 Sorcery Points",
-        "灵活施法 Flexible Casting",
-        "生成法术位 Creating Spell Slots。",
-        "生成法术位 Creating Spell Slots",
-        "法术位转换术法点 Converting a Spell Slot to SorceryPoints。",
-        "超魔法 Metamagic",
-        "谨慎法术 Careful Spell",
-        "远程法术 Distant Spell",
-        "强效法术 Empowered Spel",
-        "延效法术 Extended Spell",
-        "升阶法术 Heightened Spell",
-        "瞬发法术 Quickened Spell",
-        "精妙法术 Subtle Spell",
-        "孪生法术 Twinned Spell",
-        "术法复苏 Sorcerous Restoration",
-        "术法起源 Sorcerous Origins",
-        "龙族血脉 Draconic Bloodline",
-        "巨龙先祖 Dragon Ancestor",
-        "巨龙先祖 Draconic Ancestry",
-        "龙族体魄 Draconic Resilience",
-        "元素亲和 Elemental Affinity",
-        "龙翼 Dragon Wings",
-        "真龙姿态 Draconic Presence",
-        "狂野魔法 Wild Magic",
-        "狂野魔法浪涌 Wild Magic Surge",
-        "混乱之潮 Tides of Chaos",
-        "扭曲幸运 Bend Luck",
-        "操控混沌 Controlled Chaos",
-        "法术轰击 Spell Bombardment",
-        "狂野魔法浪涌 Wild Magic Surge",
-    ],
-    "Warlock": [
-        "邪术师 Warlock",
-        "宣誓与义务 Sworn and Beholden",
-        "奥秘探寻者 Delvers into Secrets",
-        "创建邪术师 Creating a Warlock",
-        "快速建卡 Quick Build",
-        "职业特性 Class Features",
-        "生命值 Hit Points",
-        "熟练项 Proficiencies",
-        "装备 Equipment",
-        "邪术师职业表",
-        "异界宗主 Otherworldly Patron",
-        "契约魔法 Pact Magic",
-        "戏法 Cantrips",
-        "法术位 Spell Slots",
-        "已知法术 Spell Known of 1st Level and Higher",
-        "施法关键属性 Spellcasting Ability",
-        "法器 Spellcasting Focus",
-        "魔能祈唤 Eldritch Invocations",
-        "魔契恩泽 Pact Boon",
-        "链之魔契 Pact of the Chain",
-        "刃之魔契 Pact of the Blade",
-        "书之魔契 Pact of the Tome",
-        "魔契恩泽 Your Pact Boon",
-        "属性值提升 Ability Score Improvement",
-        "玄奥秘法 Mystic Arcanum",
-        "魔能掌控 Eldritch Master",
-        "异界宗主 Otherworldly Patrons",
-        "至高妖精 The Archfey",
-        "扩展法术列表 Expanded Spell List",
-        "至高妖精扩展法术 Archfey Expanded Spells",
-        "妖精仪态 Fey Presence",
-        "雾遁 Misty Escape",
-        "转星移 Beguiling Defenses",
-        "幻影黑幕 Dark Delirium",
-        "邪魔 The Fiend",
-        "扩展法术列表 Expanded Spell List",
-        "邪魔宗主扩展法术 Fiend Expanded Spells",
-        "黑暗赐福 Dark One’s Blessing",
-        "黑暗强运 Dark One’s Own Luck",
-        "邪魔体魄 Fiendish Resilience",
-        "直坠噩梦 Hurl Through Hell",
-        "旧日支配者 The Great Old One",
-        "扩展法术列表 Expanded Spell List",
-        "旧日支配者扩展法术 Great Old One Expanded Spells",
-        "唤醒心灵 Awakened Mind",
-        "熵光结界 Entropic Ward",
-        "思维之盾 Thought Shield",
-        "创造奴仆 Create Thrall",
-        "魔能祈唤 Eldritch Invocations",
-    ],
-    "Wizard": [
-        "法师 Wizard",
-        "奥术学者 Scholars of the Arcane",
-        "知识的诱惑 The Lure of Knowledge",
-        "创建法师 Creating a Wizard",
-        "快速建卡 Quick Build",
-        "职业特性 Class Features",
-        "生命值 Hit Points",
-        "熟练项 Proficiencies",
-        "装备 Equipment",
-        "法师职业表",
-        "施法 Spellcasting",
-        "戏法 Cantrips",
-        "法术书 Spellbook",
-        "法术的准备和施展 Preparing and Casting Spells",
-        "施法关键属性 Spellcasting Ability",
-        "仪式施法 Ritual Casting",
-        "法器 Spellcasting Focus",
-        "学习法术 Learning Spells of 1st Level and Higher",
-        "你的法术书 Your Spellbook",
-        "奥术回想 Arcane Recovery",
-        "奥术传承 Arcane Tradition",
-        "属性值提升 Ability Score Improvement",
-        "法术精通 Spell Mastery",
-        "招牌法术 Signature Spells",
-        "奥术传承 Arcane Traditions",
-        "防护学派 School of Abjuration",
-        "防护学者 Abjuration Savant",
-        "奥术守御 Arcane Ward",
-        "投射守御 Projected Ward",
-        "精通防护 Improved Abjuration",
-        "法术抗性 Spell Resistance",
-        "咒法学派 School of Conjuration",
-        "咒法学者 Conjuration Savant",
-        "次级咒术 Minor Conjuration",
-        "王车易位 Benign Transposition",
-        "咒法专注 Focused Conjuration",
-        "强韧召唤 Durable Summons",
-        "预言学派 School of Divination",
-        "预言学者 Divination Savant",
-        "预兆 Portent",
-        "预言专家 Expert Divination",
-        "天眼通 The Third Eye",
-        "黑暗视觉 Darkvision。",
-        "以太视界 Ethereal Sight。",
-        "高等理解力 Greater Comprehension。",
-        "识破隐形 See Invisibility。",
-        "高等预兆 Greater Portent",
-        "附魔学派 School of Enchantment",
-        "附魔学者 Enchantment Savant",
-        "催眠凝视 Hypnotic Gaze",
-        "直觉魅惑 Instinctive Charm",
-        "分裂附魔 Split Enchantment",
-        "编演记忆 Alter Memories",
-        "塑能学派 School of Evocation",
-        "塑能学者 Evocation Savant",
-        "法术塑形 Sculpt Spells",
-        "强效塑能 Empowered Evocation",
-        "超限导能 Over channel",
-        "幻术学派 School of Illusion",
-        "幻术学者 Illusion Savant",
-        "精通次级幻影 Improved Minor Illusion",
-        "易变幻象 Malleable Illusions",
-        "幻影化形 Illusory Self",
-        "亦真亦幻 Illusory Reality",
-        "死灵学派 School of Necromancy",
-        "死灵学者 Necromancy Savant",
-        "惧怖收割 Grim Harvest",
-        "不死奴仆 Undead Thralls",
-        "不死适应 Inured to Undeath",
-        "命令亡灵 Command Undead",
-        "变化学派 School of Transmutation",
-        "变化学者 Transmutation Savant",
-        "次级炼金 Minor Alchemy",
-        "变化师之石 Transmuter’s Stone",
-        "变形生物 Shape changer",
-        "变化宗师 Master Transmuter",
-    ],
-}
-
 classes_article = """
 # 第 3 章：职业 Classes
 冒险者们都是非凡的人，他们渴望刺激并过着他人不敢涉及的生活。身为英雄，他们注定要去探索世界的黑暗角落，并面对那些稍微不够格都会招致失败的挑战。
@@ -676,7 +8,7 @@ classes_article = """
 冒险者有时候还会向着多种职业的方向发展。一名游荡者可能会改变其生活方式而转向奉献于圣武士的誓言。一名野蛮人可能发现自己潜藏的魔法能力进而涉猎术士之道，却依然以野蛮人的身份继续冒险。精灵们以结合武艺与魔法的修炼，并同时提升其战士与法师水平而闻名。以这种方式运作的混合职业可选规则为兼职，其详情将在第 6 章说明。
 十二种基础职业（如“职业表”中所列）定义了绝大多数类型的冒险者，且几乎可以在所有 D&D 世界中出现。
 
-# 职业表
+# table 职业表
 职业 描述 生命骰 主属性 豁免熟练项 护甲与武器熟练项
 野蛮人 带着原始背景的凶猛战士，可以在战斗中进入狂暴 d12 力量 力量和体质 轻甲，中甲，盾牌，简易武器，军用武器
 吟游诗人 鼓舞人心的魔法师，其力量是创生之乐的回响 d8 魅力 敏捷和魅力 轻甲，简易武器，手弩，长剑，刺剑，短剑
@@ -742,7 +74,7 @@ Barbarian_Features_article = """
 """
 
 Barbarian_class_table_article = """
-# 野蛮人职业表 Barbarian class table
+# table 野蛮人职业表 Barbarian class table
 职业等级 熟练加值 职业特性 狂暴次数 狂暴伤害
 1st +2 狂暴，无甲防御 2 +2
 2nd +2 鲁莽攻击，险境感知 2 +2
@@ -927,7 +259,7 @@ Bard_Features_article = """
 """
 
 Bard_class_table_article = """
-# 吟游诗人职业表
+# table 吟游诗人职业表
 职业等级 熟练加值 职业特性 已知戏法 已知法术 ——每环法术位——1 环 2 环 3 环 4 环 5 环 6 环 7 环 8 环 9 环
 1st +2 施法，诗人激励(d6) 2 4 2 — — — — — — — —
 2nd +2 万事通，休憩曲(d6) 2 5 3 — — — — — — — —
@@ -1108,7 +440,7 @@ Cleric_Features_article = """
 """
 
 Cleric_class_table_article = """
-# 牧师职业表
+# table 牧师职业表
 职业等级 熟练加值 职业特性 已知戏法 ——每环法术位—— 1 环 2 环 3 环 4 环 5 环 6 环 7 环 8 环 9 环
 1st +2 施法，选择领域 3 2 — — — — — — — —
 2nd +2 引导神力（1/休），领域特性 3 3 — — — — — — — —
@@ -1177,7 +509,7 @@ Cleric_class_table_article = """
 # 摧毁不死生物 Destroy Undead
 第 5 级起，当不死生物进行对抗你驱散特性的豁免失败时，如果其挑战等级等于或低于一个既定的下限，则该不死生物将被即时摧毁。相应的数值列举在表格“摧毁不死生物”中。
 
-# 摧毁不死生物 Destroy Undead
+# table 摧毁不死生物 Destroy Undead
 牧师等级 摧毁不死生物的挑战等级
 5th 1/2 或更低
 8th 1 或更低
@@ -1202,7 +534,7 @@ Knowledge_Domains_article = """
 知识之神们（包括欧格玛 Oghma、博卡布 Boccob、吉立安Gilean、奥林 Aureon 和透特 Thoth）视学习与求知高于一切。
 其中某些教义致力于将知识收集于图书馆和院校中分享，或是促进关于工匠与发明的特定知识。一些神祇会秘藏知识，并让其成为自己人的秘闻。而另一些则向其追随者们承诺，揭示多元宇宙的秘密将赋予其无上的大能。这些神祇的追随者们终日埋头于研究秘密学识，搜集老旧典籍，深入地下秘境中，以此尽其所能的进行学习研究。某些知识领域的神祇会促进工匠与发明方面的知识，其中就有铁匠神祇如贡德 Gond、李奥克斯Reorx、昂那塔 Onatar、摩拉丁 Moradin、赫菲斯托斯 Hephaestus以及戈伊布尼乌 Goibhniu。
 
-# 知识领域法术 Knowledge Domain Spells
+# table 知识领域法术 Knowledge Domain Spells
 牧师等级 法术
 1st 命令术 command、鉴定术 identify
 3rd 卜筮术 augury、暗示术 suggestion
@@ -1242,7 +574,7 @@ Life_Domains_article = """
 # 生命领域 Life Domain
 生命领域专注于活跃的正能量，其既是组成宇宙的主能量之一，也是维持所有生命延续的基础。生命之神的神职就是恢复人们的健康和伤痛，照顾需要帮助者，同时对抗死亡和不死的力量。几乎所有的非邪恶神祇都可以宣称在这一领域有影响，特别是农业神（如裳禔亚 Chauntea、阿拉瓦依 Arawai 和德墨忒尔 Demeter）、太阳神（洛山达 Lathander、培罗 Pelor 和拉·赫拉克提 Re-Horakhty）、医疗或者坚韧之神（如伊尔梅特 Ilmater、米莎凯 Mishakal、阿波罗 Apollo 和迪安斯彻特 Diancecht）以及家庭和社会之神（如赫斯提亚 Hestia，哈托尔 Hathor 和博得雷 Boldrei）。
 
-# 生命领域法术 Life Domain Spells
+# table 生命领域法术 Life Domain Spells
 牧师等级 法术
 1st 祝福术 bless，疗伤术 cure wounds
 3rd 次级复原术 lesser restoration，灵体武器 spiritual weapon
@@ -1274,7 +606,7 @@ Light_Domains_article = """
 # 光明领域 Light Domain
 光明之神（包括海姆 Helm、洛山达 Lathander、佛尔图斯Pholtus、布兰查拉 branchala、银焰 Silver Flame、巴莱纳斯Belenus、阿波罗 Apollo 以及拉･赫拉克提 Re-Horakh-ty）促进世间的理念如重生和革新，真理，警觉，以及美丽，其通常的象征为太阳。某些这类的神祇会被描绘为太阳本身，或是驾着战车引领太阳划过天际。还有一些则是不懈的哨兵之眼，时刻洞穿每一片阴影与诡计。而其中某些美与才艺的神祇其教义还会诠释艺术即灵魂晋升容器的理念。光明之神的牧师们致力于指引灌输光耀的灵魂，其守护神的力量洞悉幻象，驱散谎言并烧尽一切晦暗。
 
-# 光明领域法术 Light Domain Spells
+# table 光明领域法术 Light Domain Spells
 牧师等级 法术
 1st 燃烧之手 burning hands、妖火 faerie fire
 3rd 炽焰法球 flaming sphere、灼热射线 scorching ray
@@ -1307,7 +639,7 @@ Nature_Domains_article = """
 # 自然领域 Nature Domains
 自然之神正如自然界本身一样变化多端，从宛如迷一般居于密林之中的神祇（如西凡那斯 Silvanus、欧拜･亥 Obad-Hai、奇思洛夫 Chislev、巴力诺 Balinor 和潘 Pan）到关联为特定花朵与灌木的友善神祇（如埃达丝 Eldath）都有存在。崇拜自然界本身的德鲁伊也会服务于其中一个神祇，并用德鲁伊的秘密语言练习其神秘仪式，以及背诵那些早被遗忘的祷文。许多这些神祇同样拥有相应的牧师，而这些勇士会帮助特定的自然神祇出任更需要积极冒险的任务。他们可能会前去狩猎破坏林地的邪恶怪物，去护佑忠实信徒们的收获，或是去诅咒那些渎神者的庄稼使其枯萎。
 
-# 自然领域法术 Nature Domain Spells
+# table 自然领域法术 Nature Domain Spells
 牧师等级 法术
 1st 化兽为友 animal friendship、动物交谈 speak with animals
 3rd 树肤术 bark skin、荆棘丛生 spike growth
@@ -1340,7 +672,7 @@ Tempest_Domains_article = """
 # 风暴领域 Tempest Domains
 神职囊括风暴领域的神祗（包括塔洛斯 Talos、安博里Umberlee、寇德 Kord、赛波音 Zeboim、吞噬 Devourer、宙斯Zeus 以及索尔 Thor）统治着风暴、大海与天空。祂们包括闪电与雷鸣之神，地震之神，一部分火神，和某些暴力、体力和勇气之神。在一些神系中，风暴领域的神祇管理其他诸神并以风驰电掣的正义闪电制裁而闻名。而另一些海民神系里，该领域的诸神都属于海洋之神并眷顾着水手们。风暴诸神往往派遣他们的牧师前去激发民众的恐惧，从而确保这些人不会偏离正直之路或鼓励他们献上祭品以免触犯神怒。
 
-# 风暴领域法术 Tempest Domain Spells
+# table 风暴领域法术 Tempest Domain Spells
 牧师等级 法术
 1st 云雾术 fog cloud、雷鸣波 thunder wave
 3rd 造风术 gust of wind、粉碎音波 shatter
@@ -1373,7 +705,7 @@ Trickery_Domains_article = """
 # 诡术领域 Trickery Domains
 诡术之神们（如泰摩拉 Tymora、本莎芭 Beshaba、渥利达马拉 Olidammara、旅者 Traveler、加尔·闪金 Garl Glittergold、和洛基 Loki）均是恶作剧者，同时也是挑拨凡人或神明去颠覆现有秩序的煽动者。祂们是小偷、恶棍、赌徒、叛乱者和解放者的庇护人。其牧师则是世界的颠覆者，他们打击骄傲者的自尊，嘲弄暴君，窃盗富人，释放俘虏，并且蔑视毫无意义的传统。他们喜欢花言巧语、恶作剧、欺骗和盗窃要远远多于正面对抗。
 
-# 诡术领域法术 Trickery Domain Spells
+# table 诡术领域法术 Trickery Domain Spells
 牧师等级 法术
 1st 魅惑人类 charm person、易容术 disguise self
 3rd 镜影术 mirror image、行动无踪 pass without trace
@@ -1404,7 +736,7 @@ War_Domains_article = """
 # 战争领域 War Domains
 战争有许多种表现形式。它可以造就普通人成为英雄。它充满绝望与恐惧，伴随着残忍与懦弱的行为却也交织着卓越与勇气。不论何种情况，战争之神都会守望着武者们并为他们伟大的行为作出奖赏。这些神祇的牧师们善于战斗，也鼓舞其他人在战斗中赢取荣耀，或献上暴力行为作为祈祷。战争之神包括充满荣誉和骑士精神的勇士（如托姆 Torm，海若尼斯Heironeous 以及克里乔里斯 Kiri-Jolith），破坏和掠夺之神（如厄瑞斯努 Erythnul、愤恨 Fury、格乌什 Gruumsh 以及阿瑞斯Ares）以及征服和统治之神（如班恩 Bane、海克斯托 Hextor 以及玛格鲁比耶 Maglubiyet）。其他战争神（如坦帕斯 Tempus、尼刻 Nike 和努阿达 Nuada）则采取更中立的立场，推动战争的一切表现并支持处于任何境遇之下战士。
 
-# 战争领域法术 War Domain Spells
+# table 战争领域法术 War Domain Spells
 牧师等级 法术
 1st 神恩 divine favor、虔诚护盾 shield of faith
 3rd 魔化武器 magic weapon、灵体武器 spiritual weapon
@@ -1481,7 +813,7 @@ Druid_article = """
 •（a）一把弯刀或（b）任意简易近战武器
 • 皮甲，一个探索套组和一件德鲁伊法器
 
-# 德鲁伊职业表
+# table 德鲁伊职业表
 职业等级 熟练加值 职业特性 已知戏法 ——每环法术位—— 1 环 2 环 3 环 4 环 5 环 6 环 7 环 8 环 9 环
 1st +2 德鲁伊语，施法 2 2 — — — — — — — —
 2nd +2 荒野形态，选择德鲁伊结社 2 3 — — — — — — — —
@@ -1539,7 +871,7 @@ Druid_article = """
 第 2 级起，你可以用动作以魔力变化为曾见识过的野兽形态。该特性可以使用两次，且在完成一次短休或长休后，你将重新获得所有消耗掉的荒野形态次数。
 你的德鲁伊职业等级决定了你可以变化的野兽种类，你可以变化成任意没有飞行或游泳速度且挑战等级为 1/4 或更低的野兽形态。
 
-# 野兽形态 Beast Shapes
+# table 野兽形态 Beast Shapes
 等级 最高 CR 限制 范例
 2nd 1/4 没有飞行或游泳速度 狼 wolf
 4th 1/2 没有飞行速度 鳄鱼 crocodile
@@ -1589,56 +921,56 @@ Druid_article = """
 你跟大地之间的神秘链接让你可以施展特别的法术。在第3、第 5、第 7、第 9 级时，你根据成为德鲁伊时的所在地获得相应的结社法术。选择一个地形：极地、海岸、荒漠、森林、草原、山地、沼泽，并依此获得相应的法术。
 结社法术一旦获得，将会一直在你的已准备法术列表中，且不计入你的每日准备法术上限。任何结社法术对你而言都是德鲁伊法术，而不论其是否在德鲁伊法术列表之上。
 
-# 极地 Arctic
+# table 极地 Arctic
 德鲁伊等级 结社法术
 3rd 人类定身术 hold person，荆棘丛生 spikegrowth
 5th 雪雨暴 sleet storm，缓慢术 slow
 7th 行动自如 freedom of movement，冰风暴 icestorm
 9th 问道自然 commune with nature，寒冰锥 coneof cold
 
-# 海岸 Coast
+# table 海岸 Coast
 德鲁伊等级 结社法术
 3rd 镜影术 mirror image，迷踪步 misty step
 5th 水下呼吸 water breathing，水面行走 water walk
 7th 操控水体 control water，行动自如 freedom of movement
 9th 召唤元素生物 conjure elemental，探知 scrying
 
-# 荒漠 Desert
+# table 荒漠 Desert
 德鲁伊等级 结社法术
 3rd 朦胧术 blur，沉默术 silence
 5th 造粮术 create food and water，防护能量伤害 protection from energy
 7th 枯萎术 blight，幻景 hallucinatory terrain
 9th 疫病虫群 insect plague，石墙术 wall of stone
 
-# 森林 Forest
+# table 森林 Forest
 德鲁伊等级 结社法术
 3rd 树肤术 bark skin，蛛行术 spider climb
 5th 召雷术 call lightning，植物滋长 plant growth
 7th 预言术 divination，行动自如 freedom of movement
 9th 问道自然 commune with nature，树跃术 tree stride4
 
-# 草原 Grassland
+# table 草原 Grassland
 德鲁伊等级 结社法术
 3rd 隐形术 invisibility，行动无踪 pass without trace
 5th 昼明术 daylight，加速术 haste
 7th 预言术 divination，行动自如 freedom of movement
 9th 托梦术 dream，疫病虫群 insect plague
 
-# 山地 Mountain
+# table 山地 Mountain
 德鲁伊等级 结社法术
 3rd 蛛行术 spider climb，荆棘丛生 spike growth
 5th 闪电束 lightning bolt，融身入石 meld into stone
 7th 塑石术 stone shape，石肤术 stone skin
 9th 穿墙术 pass wall，石墙术 wall of stone
 
-# 沼泽 Swamp
+# table 沼泽 Swamp
 德鲁伊等级 结社法术
 3rd 黑暗术 darkness，马友夫强酸箭 acid arrow
 5th 水上行走 water walk，臭云术 stinking cloud
 7th 行动自如 freedom of movement，生物定位术 locate creature
 9th 疫病虫群 insect plague，探知 scrying
 
-# 幽暗地域 Underdark
+# table 幽暗地域 Underdark
 德鲁伊等级 结社法术
 3rd 蛛行术 spider climb，蛛网术 web
 5th 气化形体 gaseous form，臭云术 stinking cloud
@@ -1722,7 +1054,7 @@ Fighter_article = """
 •（a）一把轻弩和 20 支弩矢或（b）两把手斧
 •（a）一个地城套组或（b）一个探索套组
 
-# 战士职业表
+# table 战士职业表
 职业等级 熟练加值 职业特性
 1st +2 战斗风格，回气
 2nd +2 动作如潮（一次）
@@ -1887,7 +1219,7 @@ Fighter_article = """
 奥法骑士将战士的武术与严谨的魔法研究相结合。他们使用与法师类似的魔法技巧，但只专注于两个学派：防护和塑能。
 他们以防护法术保护自身，再以塑能法术同时攻击多个敌人，因而使其在战场上更加全面。奥法骑士只能掌握较少的法术，因此只需靠记忆完成而无需使用法术书。
 
-# 奥法骑士施法能力 Eldritch Knight Spellcasting
+# table 奥法骑士施法能力 Eldritch Knight Spellcasting
 战士等级 已知戏法 已知法术 ——每环法术位—— 1 环 2 环 3 环 4 环
 3rd 2 3 2 — — —
 4th 2 4 3 — — —
@@ -1991,7 +1323,7 @@ Monk_article = """
 •（a）一个地城套组或（b）一个探索套组
 • 10 支飞镖
 
-# 武僧职业表
+# table 武僧职业表
 职业等级 熟练加值 武艺 气 无甲移动 职业特性
 1st +2 1d4 — — 无甲防御，武艺
 2nd +2 1d4 2 +10 尺 气，无甲移动
@@ -2146,7 +1478,7 @@ Monk_article = """
 第 5 级起，你可以通过消耗额外的气来提升以法门施展法术的环阶，使得法术更具威力。每额外消耗 1 点气，法术环阶就提升 1 级。例如，作为一名 5 级武僧，你通过飞炎击法门来施展法术燃烧之手 burning hands。则此时你可以消耗 3 点气来施展 2 环的燃烧之手（该法门的基本消耗 2 加上额外消耗 1）。
 你以该方式施展法术可消耗气的数量上限如上表（该消耗上限包括法门的基本消耗加上额外消耗），其具体情况与你的武僧等级相关联。
 
-# 气与法术 Spells and Ki Points
+# table 气与法术 Spells and Ki Points
 武僧等级 施法最高气消耗量
 5th~8th 3
 9th~12th 4
@@ -2266,7 +1598,7 @@ Paladin_article = """
 •（a）一个祭司套组或（b）一个探索套组
 • 链甲和一个圣徽
 
-# 圣武士职业表
+# table 圣武士职业表
 职业等级 熟练加值 职业特性 ——每环法术位—— 1 环 2 环 3 环 4 环 5 环
 1st +2 神圣感知，圣疗 — — — — —
 2nd +2 至圣斩，战斗风格，施法 2 — — — —
@@ -2388,7 +1720,7 @@ Paladin_article = """
 
 # 圣誓法术 Oath Spells
 你获得以下圣誓法术。
-奉献圣誓法术 Oath of Devotion Spells
+# table 奉献圣誓法术 Oath of Devotion Spells
 圣武士等级 法术
 3rd 防护善恶 protection from evil and good，庇护术sanctuary
 5th 次级复原术 lesser restoration，诚实之域 zone of truth
@@ -2435,7 +1767,7 @@ Paladin_article = """
 
 # 圣誓法术 Oath Spells
 你获得以下圣誓法术。
-古贤圣誓法术 Oath of the Ancients Spells
+# table 古贤圣誓法术 Oath of the Ancients Spells
 圣武士等级 法术
 3rd 诱捕打击 ensnaring strike、动物交谈术 speak with animals
 5th 月华之光 moonbeam、迷雾步 misty step
@@ -2479,7 +1811,7 @@ Paladin_article = """
 
 # 圣誓法术 Oath Spells
 你获得以下圣誓法术。
-复仇圣誓法术 Oath of Vengeance Spells
+# table 复仇圣誓法术 Oath of Vengeance Spells
 圣武士等级 法术
 3rd 灾祸术 bane、猎人印记 hunter's mark
 5th 人类定身术 hold person、迷踪步 misty step
@@ -2553,7 +1885,7 @@ Ranger_article = """
 •（a）一个地城套组或（b）一个探索套组
 • 一把长弓和一个箭袋（内含 20 支箭）
 
-# 游侠职业表
+# table 游侠职业表
 职业等级 熟练加值 职业特性 已知法术 ——每环法术位——1 环 2 环 3 环 4 环 5 环
 1st +2 宿敌，自然探索者 — — — — — —
 2nd +2 战斗风格，施法 2 2 — — — —
@@ -2742,7 +2074,7 @@ Rogue_article = """
 •（a）一个窃贼套组，（b）一个地城套组或（c）一个探索套组
 • 皮甲，两把匕首和盗贼工具
 
-# 游荡者职业表
+# table 游荡者职业表
 职业等级 熟练加值 偷袭 职业特性
 1st +2 1d6 专精，偷袭，盗贼黑话
 2nd +2 1d6 灵巧动作
@@ -2856,7 +2188,7 @@ Rogue_article = """
 # 诡术师 Arcane Trickster
 一些游荡者会学习幻术系和附魔系的诡术，以这些魔法来提高自己已经相当老练的隐匿和灵动水平。这些游荡者包括扒手和窃贼，也包括一些恶作剧者或离间者，也有相当一些成为冒险者。
 
-# 诡术师施法能力 Arcane Trickster Spellcasting
+# table 诡术师施法能力 Arcane Trickster Spellcasting
 游荡者等级 已知戏法 已知法术 ——每环法术位—— 1 环 2 环 3 环 4 环
 3rd 3 3 2 — — —
 4th 3 4 3 — — —
@@ -2965,7 +2297,7 @@ Sorcerer_article = """
 •（a）一个地城套组或（b）一个探索套组
 • 两把匕首
 
-# 术士职业表
+# table 术士职业表
 职业等级 熟练加值 术法点 职业特性 已知戏法 已知法术 ——每环法术位—— 1 环 2 环 3 环 4 环 5 环 6 环 7 环 8 环 9 环
 1st +2 — 施法，术法起源 4 2 2 — — — — — — — —
 2nd +2 2 魔力泉涌 4 3 3 — — — — — — — —
@@ -3028,7 +2360,7 @@ Sorcerer_article = """
 # 生成法术位 Creating Spell Slots。
 你可以在自己回合内以附赠动作将未使用的术法点转换为法术位。表格“生成法术位”中列出了生成各法术位所需的术法点数。另外，你无法生成高于 5 环的法术位。以此方式生成的法术位将在完成一次长休后消散。
 
-# 生成法术位 Creating Spell Slots
+# table 生成法术位 Creating Spell Slots
 法术位环阶 术法点消耗
 1 环 2
 2 环 3
@@ -3078,7 +2410,7 @@ l为法术进行伤害掷骰时，你可以使用 1 术法点重掷其中一定�
 第 1 级时，你选择一种巨龙作为你的先祖。对应的伤害类型将在随后获得的特性中用到。
 你可以说、读、写龙语。此外，你与巨龙互动时进行的魅力检定可以使用熟练加值时，可以加上双倍的加值。
 
-# 巨龙先祖 Draconic Ancestry
+# table 巨龙先祖 Draconic Ancestry
 龙种 伤害类型
 黑 black 强酸
 蓝 blue 闪电
@@ -3127,7 +2459,7 @@ l为法术进行伤害掷骰时，你可以使用 1 术法点重掷其中一定�
 # 法术轰击 Spell Bombardment
 第 18 级起，你法术中的伤害性能量极度扩张。你在为法术进行伤害掷骰时，如果其中的任何一粒骰子掷出最大值，则选择这些骰子之一再骰一次，并将其结果加在伤害数值上。你每回合只能使用一次该特性。
 
-# 狂野魔法浪涌 Wild Magic Surge
+# d-100 狂野魔法浪涌 Wild Magic Surge
 d100 效应
 01~02 下 1 分钟内，你在每次自己回合开始时重骰本表，并在后续的掷骰中跳过本结果。
 03~04 下 1 分钟内，你可以看到任何处于你视线范围内的隐形生物。
@@ -3233,7 +2565,7 @@ Warlock_article = """
 • 皮甲、任意简易武器和两把匕首
 
 
-# 邪术师职业表
+# table 邪术师职业表
 职业等级 熟练加值 职业特性 已知戏法 已知法术 法术位 法术位环阶 已知祈唤
 1st +2 选择异界宗主，契约魔法 2 2 1 1 环 —
 2nd +2 魔能祈唤 2 3 2 1 环 2
@@ -3301,7 +2633,7 @@ Warlock_article = """
 你的宗主给予你一本名为“影之书”的魔法书。获得该特性后，从任意职业法术列表中选择三个戏法（这三个戏法不必来自同一个列表）。该魔法书在你身上时，你可以随意施展那些法术。它们不算入你的已知戏法数量中。这些法术就算本来不属于邪术师法术列表，你也将其视为邪术师法术。
 如果你丢失了自己的影之书，你可以举行一个 1 小时的仪式，并从你的宗主处获得一个替代品。仪式可以在短休或长休期间完成，而它会摧毁之前的魔法书。当你死亡时，该书也将化为灰烬。
 
-> 魔契恩泽 Your Pact Boon
+# 魔契恩泽 Your Pact Boon
 > 每种魔契恩泽都呈现为一种独特的生物或物品，并反应出你的宗主的本质。
 > 链之魔契 Pact of the Chain。你的魔宠比普通的魔宠更加机敏。其默认形态是你的宗主的侧面体现，如至高妖精宗主的是小妖精和伪龙，邪魔宗主则是小魔鬼和夸赛魔。因为旧日支配者不可名状的本质，任何形态的魔宠都适合它。
 > 刃之魔契 Pact of the Blade。如果你的宗主是至高妖精，那么你的武器可能是一把被藤蔓所缠绕的细长剑刃。如果你的宗主是邪魔，你的武器则可能是一柄由黑金属铸成并雕以火焰纹饰的斧头。如果你的宗主是旧日支配者，那么你的武器可能是一把样式古朴的长矛，一颗精心雕琢过的宝石镶嵌在矛头上，如同一只可怖的不瞑之目。
@@ -3328,7 +2660,7 @@ Warlock_article = """
 # 扩展法术列表 Expanded Spell List
 学习邪术师法术时，你的至高妖精宗主赐予你将以下法术加入邪术师法术列表进行选择的权力。
 
-# 至高妖精扩展法术 Archfey Expanded Spells
+# table 至高妖精扩展法术 Archfey Expanded Spells
 法术环阶 法术
 1 环妖火 faerie fire，睡眠术 sleep
 2 环安定心神 calm emotions，魅影之力 phantasmal force
@@ -3362,7 +2694,7 @@ Warlock_article = """
 # 扩展法术列表 Expanded Spell List
 学习邪术师法术时，你的邪魔宗主赐予你将以下法术加入邪术师法术列表进行选择的权力。
 
-# 邪魔宗主扩展法术 Fiend Expanded Spells
+# table 邪魔宗主扩展法术 Fiend Expanded Spells
 法术环阶 法术
 1 环燃烧之手 burning hands，命令术 command
 2 环目盲／耳聋术 deafness/blindness，灼热射线 scorching ray
@@ -3392,7 +2724,7 @@ Warlock_article = """
 # 扩展法术列表 Expanded Spell List
 学习邪术师法术时，你的旧日支配者宗主赐予你将以下法术加入邪术师法术列表进行选择的权力。
 
-# 旧日支配者扩展法术 Great Old One Expanded Spells
+# table 旧日支配者扩展法术 Great Old One Expanded Spells
 法术环阶 法术
 1 环不谐低语 dissonant whispers，塔莎狂笑术 Tasha’shideous laughter
 2 环侦测思想 detect thoughts，魅影之力 phantasmalforce
@@ -3534,7 +2866,7 @@ Wizard_article = """
 •（a）一个学者套组或（b）一个探索套组
 • 一本法术书
 
-# 法师职业表
+# table 法师职业表
 职业等级 熟练加值 职业特性 已知戏法 ——每环法术位—— 1 环 2 环 3 环 4 环 5 环 6 环 7 环 8 环 9 环
 1st +2 施法，奥术回想 3 2 － － － － － － － －
 2nd +2 选择奥术传承 3 3 － － － － － － － －
@@ -3806,19 +3138,3 @@ Wizard_article = """
 返老还童 Restore Youth。
 你用变化师之石触碰一个自愿的生物，并将该生物的表面年龄减少 3d10 年（至少减少 13 年的表面年龄）。不过该效应并不能延长生物的寿命。
 """
-
-article = {
-    "classes": classes_article,
-    "Barbarian_background": Barbarian_background_article,
-    "Bard_background": Bard_background_article,
-    "Cleric_background": Cleric_background_article,
-    "Druid": Druid_article,
-    "Fighter": Fighter_article,
-    "Monk": Monk_article,
-    "Paladin": Paladin_article,
-    "Ranger": Ranger_article,
-    "Rogue": Rogue_article,
-    "Sorcerer": Sorcerer_article,
-    "Warlock": Warlock_article,
-    "Wizard": Wizard_article,
-}

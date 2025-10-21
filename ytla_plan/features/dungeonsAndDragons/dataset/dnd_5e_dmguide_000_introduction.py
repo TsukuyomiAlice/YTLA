@@ -1,29 +1,6 @@
 # encode = utf-8
 
-topics = {
-    "Introduction": ["Introduction", ]
-}
-
-keyword_list = {
-    "Introduction": [
-        "简介 Introduction",
-        "地下城主 The Dungeon Master",
-        "如何使用本书 How to Use This Book",
-        "第 1 部分：世界之主 Master of Worlds",
-        "第 2 部分：冒险之主 Master of Adventures",
-        "第 3 部分：规则之主 Master of Rules",
-        "了解你的玩家 Know Your Players",
-        "扮演 Acting",
-        "探索 Exploring",
-        "推进事件 Instigating",
-        "战斗 Fighting",
-        "优化 Optimizing",
-        "解决问题 Problem Solving",
-        "叙事 Storytelling",
-    ]
-}
-
-introduction_article = """
+article_introduction = """
 # 简介 Introduction
 担当地下城主是一件美妙的事！你不仅能以此讲述那些充满英雄与恶棍、怪物与魔法的故事，还可以用这些故事创造一个世界。你可能已经主持过 D&D 游戏，或是刚刚对此提起兴趣，不论如何，本书正是为你而作。
 本《城主指南》的内容会先假设你已了解 D&D 这个桌上角色扮演游戏的基本规则。如果你从未接触过这个游戏，那么《龙与地下城新手包》对新手的玩家和 DM 们都是个很好的起点。
@@ -121,7 +98,3 @@ D&D 的规则可以协助你与其他玩家愉快的游戏，但是不能指望�
 • 让各角色的行动协助引导未来事件。
 • 给予 NPC 们赋予可供冒险者们深挖的理想、牵绊和缺点。
 """
-
-article = {
-    "Introduction": introduction_article,
-}

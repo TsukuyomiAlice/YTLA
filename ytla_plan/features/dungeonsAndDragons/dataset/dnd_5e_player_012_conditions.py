@@ -1,30 +1,5 @@
 # encode = utf-8
 
-topics = {
-    "conditions": [
-        "conditions", ],
-}
-
-keyword_list = {
-    "conditions": [
-        "附录 A：状态 Conditions",
-        "目盲 Blinded",
-        "魅惑 Charmed",
-        "耳聋 Deafened",
-        "恐慌 Frightened",
-        "擒抱 Grappled",
-        "失能 Incapacitated",
-        "隐形 Invisible",
-        "麻痹 Paralyzed",
-        "石化 Petrified",
-        "毒 Poisoned",
-        "束缚 Restrained",
-        "震慑 Stunned",
-        "昏迷 Unconscious",
-        "力竭 Exhaustion",
-    ],
-}
-
 conditions_article = """
 # 附录 A：状态 Conditions
 生物的能力受状态的影响。特殊状态可能来源于法术、职业特性、怪物能力等因素。大部分状态对角色不利，例如目盲。
@@ -99,6 +74,8 @@ conditions_article = """
 
 # 力竭 Exhaustion
 某些特殊能力和环境危害（例如遭受饥饿，或是长时间暴露在极热或极冷的温度下），会导致名为力竭的特殊状态。力竭状态分为六个递增的等级。当特定效应造成力竭时，根据其具体描述的不同可能令生物陷入一级或更高等级的力竭中。
+
+# table 力竭等级
 力竭等级 效果
 1 属性检定具有劣势
 2 速度减半
@@ -106,12 +83,9 @@ conditions_article = """
 4 生命值上限减半
 5 速度降为 0
 6 死亡
+
 已力竭的生物如果受另一效应影响而再次遭受力竭，则将其当前力竭等级与该效应造成的力竭等级相叠加。
 再度遭受高等级力竭的生物承受其当前力竭等级及所有更低级力竭的效应。例如，受 2 级力竭影响的生物进行属性检定时具有劣势，且速度减半。
 移除力竭的效应按其描述降低力竭等级。力竭等级小于 1 时，所有力竭产生的效果结束。
 生物在获得足够的饮食，并完成一次长休后，其力竭等级即可降低 1 级。生物从死亡状态复活时，其力竭等级也可以降低 1 级。
 """
-
-article = {
-    "conditions": conditions_article,
-}

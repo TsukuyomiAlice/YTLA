@@ -1,30 +1,5 @@
 # encode = utf-8
 
-topics = {
-    "planes_of_existence": [
-        "the_material_plane", "beyond_the_material_plane", ],
-}
-
-keyword_list = {
-    "the_material_plane": [
-        "附录 C：存在位面 The Planes of Existence",
-        "物质位面 The Material Plane",
-        "物质映射 Material Echoes",
-        "正负位面 Positive and Negative Planes",
-    ],
-    "beyond_the_material_plane": [
-        "物质界外 Beyond the Material",
-        "位面旅行 Planar Travel",
-        "中转位面 Transitive Plane",
-        "内层位面 Inner Planes",
-        "外层位面 Outer Planes",
-        "外层位面 Outer Planes",
-        "其他位面",
-        "印记城和外域 Sigil and the Outlands",
-        "半位面 Demiplanes",
-        "遥远国度 The Far Realm",
-    ],
-}
 
 the_material_plane_article = """
 # 附录 C：存在位面 The Planes of Existence
@@ -76,7 +51,7 @@ beyond_the_material_plane_article = """
 比较有名的外层位面一共有十六个，对应着八大阵营（绝对中立除外）和他们之间的差别。
 包含有善良成分的位面被称为上层位面 Upper Planes，其间居住着天使、飞马这样的天界生物。包含有邪恶成分的位面被称为下层位面 Lower Planes，居住着恶魔、魔鬼还有尤格罗斯魔这样的邪魔。每个位面的阵营是它的本质，一名与位面阵营不符的角色在其间会感到极端不适。比如当一名善良生物访问极乐境 Elysium 时，它可以感觉到与这个位面的调合，而邪恶生物就会感到格格不入以及明显的不适。
 
-# 外层位面 Outer Planes
+# table 外层位面 Outer Planes
 外层位面 阵营
 天界山 Mount Celestia 的七层天堂 LG
 双生天堂 Bytopia 的孪生伊甸 LG,NG
@@ -116,8 +91,3 @@ beyond_the_material_plane_article = """
 没有任何已知的传送门可以通向遥远国度，至少现存能运转的门确实都无法去到那里。远古时代的精灵们曾使用炎爆峰Firestorm Peak 中的巨大传送门洞穿了亘古恒存的界壁，连接到了遥远国度之中，他们的文明也随之在血淋淋的恐怖中崩塌，而传送们的地点也连同其所在的世界一起被遗忘于历史长河。
 其它的一些传送门也许仍然存在，甚至还一直向物质位面泄露着异界之力，并在不断制造腐蚀的同时形成一道标记。
 """
-
-article = {
-    "the_material_plane": the_material_plane_article,
-    "beyond_the_material_plane": beyond_the_material_plane_article,
-}

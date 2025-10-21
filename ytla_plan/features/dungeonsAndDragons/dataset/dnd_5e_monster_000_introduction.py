@@ -1,80 +1,5 @@
 # encode = utf-8
 
-topics = {
-    "introduction": [
-        "introduction", "monster", "statistics", "legendary_creatures",
-    ],
-}
-
-keyword_list = {
-    "introduction": [
-        "简介 Introduction",
-        "如何使用本书 How to Use ThisBook"
-    ],
-    "monster": [
-        "怪物是什么 What Is a Monster?",
-        "怪物栖息在什么地方 Where Do Monsters Dwell?",
-        "地下城 Dungeon",
-        "幽暗地域 The Underdark",
-        "野外 The Wilderness",
-        "城镇 Towns and Cities",
-        "水下 Underwater",
-        "其它位面 The Planes of Existence",
-        "选择使用什么怪物 What Monster to Use?"
-    ],
-    "statistics": [
-        "资料 Statistics",
-        "体型 Size",
-        "体型分类 Size Categorise",
-        "种类 Type",
-        "自定义生物 Modifying Creatures",
-        "种类附标 Tags",
-        "阵营 Alignment",
-        "护甲等级 Armor Class",
-        "生命值 Hit Points",
-        "体型对应生命骰 Hit Dice by Size",
-        "速度 Speed",
-        "掘穴 Burrow",
-        "攀爬 Climb",
-        "飞行 Fly",
-        "游泳 Swim",
-        "属性值 Ablility Scores",
-        "豁免检定 Saving Throws",
-        "技能 Skills",
-        "挑战等级对应熟练加值 Proficiency Bonus by ChallengeRating",
-        "护甲、武器和工具的熟练项 Armor, Weapon, and Tool Proficiencies",
-        "易伤、抗性和免疫 Vulnerabilities, Resistances, and Immunities",
-        "感官 Senses",
-        "盲视 Blindsight",
-        "黑暗视觉 Darkvision",
-        "颤动感知 Tremorsense",
-        "语言 Languages",
-        "心灵感应 Telepathy",
-        "战力 Challenge",
-        "经验值 Experience Points",
-        "挑战等级对应经验值 Experience Points by ChallengeRating",
-        "专有特质 Special Traits",
-        "天生施法 Innate Spellcasting",
-        "施法 Spellcasting",
-        "灵能 Psionics",
-        "动作 Actions",
-        "近战与远程攻击 Melee and Ranged Attacks",
-        "怪物的擒抱规则 Grapple Rules for Monsters",
-        "多重攻击 Multiattack",
-        "弹药 Ammunition",
-        "反应 Reactions",
-        "次数限制 Limited Usage",
-        "装备 Equipment",
-    ],
-    "legendary_creatures": [
-        "传奇生物 Legendary Creatures",
-        "传奇动作 Legendary Action",
-        "传奇生物巢穴 A Legendary Creature’s Lair传",
-        "巢穴动作 Lair Actions",
-        "区域效应 Regional Effects",
-    ]
-}
-
 introduction_article = """
 # 简介 Introduction
 本书是一本为讲故事或是构建世界而服务的生物图鉴。当你想为朋友们主持一场 D&D 游戏时，不管是进行一夜疯狂的随性冒险，还是剧情丰富的漫长战役，你都可以从本宝典的每页得到迸发的灵感。你可以从书中寻找邪恶的敌人，或是友善的帮手，这里就是各种生物的一站式商店。
@@ -157,7 +82,7 @@ statistics_article = """
 怪物可以是微型 Tiny、小型 Small、中型 Medium、大型 Large、巨型 Huge 或是超巨型 Gargantuan。体型分类列表展示了每只特定体型怪物在战斗中所占据空间的具体大小。
 《玩家手册》中可以获得关于生物体型和空间的更多信息。
 
-# 体型分类 Size Categorise
+# table 体型分类 Size Categorise
 体型 占据空间 范例
 微型  2½ x 2½ 尺 小魔鬼 imp，小妖精 sprite
 小型  5 x 5 尺 巨鼠 giant rat，地精 goblin
@@ -206,7 +131,7 @@ statistics_article = """
 怪物用于计算生命值大小的生命骰取决于其体型，体型对应生命骰列表列出了对应的数值。
 怪物的体质调整值也会影响其拥有的生命值。将怪物体质调整值乘以拥有的生命骰数量值，再将所得数值额外增加到其生命值中。例如，一个拥有体质 12（+1）和 2d8 生命骰的怪物，拥有 2d8+2 的生命值（平均 11）。
 
-# 体型对应生命骰 Hit Dice by Size
+# table 体型对应生命骰 Hit Dice by Size
 怪物体型 生命骰 平均生命值
 微型 d4 2½
 小型 d6 3½
@@ -243,7 +168,7 @@ statistics_article = """
 技能条目描述该怪物所精通的一项或多项技能。例如，某怪物善于洞察与隐匿时，具有额外的感知（洞察）和敏捷（隐匿）检定加值。
 技能检定加值是怪物相关属性调整值与其熟练加值的总和，其中怪物的熟练加值决定于怪物的挑战等级（具体数值列于表格“挑战等级对应熟练加值”中）。该加值还可以加入其他的调整值，此时，怪物具有的更高加值（通常使用双倍的熟练加值）表示其具有更高的专业技术。
 
-# 挑战等级对应熟练加值 Proficiency Bonus by ChallengeRating
+# table 挑战等级对应熟练加值 Proficiency Bonus by ChallengeRating
 挑战等级 熟练加值 挑战等级 熟练加值
 0 +2 14 +5
 1/8 +2 15 +5
@@ -305,7 +230,7 @@ statistics_article = """
 除非获得某些额外的说明，否则被法术或者魔法能力召唤出来的怪物同样拥有其资料卡中所列明的 XP。
 如何使用 XP 预算来创建遭遇，以及如何调整遭遇难度的相关内容在《城主指南》中已有说明。
 
-# 挑战等级对应经验值 Experience Points by ChallengeRating
+# table 挑战等级对应经验值 Experience Points by ChallengeRating
 挑战等级 XP
 0 0 或 10
 1/8 25
@@ -415,10 +340,3 @@ legendary_creatures_article = """
 # 区域效应 Regional Effects
 该栏目描述了传奇生物的存在可能使周围环境产生的惊人怪异效应。传奇生物死亡后，这些区域效应可能立即消失或是随着时间逐渐消退。
 """
-
-article = {
-    "introduction": introduction_article,
-    "monster": monster_article,
-    "statistics": statistics_article,
-    "legendary_creatures": legendary_creatures_article,
-}

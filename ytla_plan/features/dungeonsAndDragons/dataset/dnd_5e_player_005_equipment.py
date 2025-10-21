@@ -1,169 +1,5 @@
 # encode = utf-8
 
-topics = {
-    "equipment": [
-        "Starting_Equipment", "Wealth", "Armor_and_shields", "Weapon", "Adventure_gear", "Tool", "Mounts_and_vehicles",
-        "Trade_goods", "Expenses", "Trinkets", ],
-}
-
-keyword_list = {
-    "Starting_Equipment": [
-        "起始装备 Starting Equipment",
-    ],
-    "Wealth": [
-        "第 5 章：装备 Equipment",
-        "财富 Wealth",
-        "对应职业的起始财富 Starting Wealth by Class",
-        "币制 Coinage",
-        "标准兑换率 Standard Exchange Rates",
-        "出售财宝 Selling Treasure", ],
-    "Armor_and_shields": [
-        "护甲与盾牌 Armor and Shields",
-        "护甲表 Armor",
-        "护甲熟练项 Armor Proficiency。",
-        "护甲等级 Armor Class（AC）。",
-        "沉重的护甲 Heavy Armor。",
-        "隐匿 Stealth。",
-        "盾牌 Shields。",
-        "轻甲 Light Armor",
-        "布甲 Padded。",
-        "皮甲 Leather。",
-        "镶钉皮甲 Studded Leather。",
-        "中甲 Medium Armor",
-        "兽皮甲 Hide。",
-        "链甲衫 Chain Shirt。",
-        "鳞甲 Scale Mail。",
-        "胸甲 Breastplate。",
-        "半身板甲 Half Plate。",
-        "重甲 Heavy Armor",
-        "环甲 Ring Mail。",
-        "链甲 Chain Mail。",
-        "板条甲 Splint。",
-        "板甲 Plate。",
-        "着甲与卸甲 Getting Into and Out of Armor",
-        "装着 Don。",
-        "卸除 Doff。",
-        "护甲的装与卸 Donning and Doffing Armor",
-        "变体：装备者体型 Variant: Equipment Sizes", ],
-    "Weapon": [
-        "武器 Weapons",
-        "武器熟练项 Weapon Proficiency",
-        "武器表 Weapons",
-        "武器属性 Weapon Properties",
-        "弹药 Ammunition。",
-        "灵巧 Finesse。",
-        "重型 Heavy。",
-        "轻型 Light。",
-        "装填 Loading。",
-        "射程 Range。",
-        "触及 Reach。",
-        "特殊 Special。",
-        "投掷 Thrown。",
-        "双手 Two-Handed。",
-        "两用 Versatile。",
-        "临时武器 Improvised Weapons",
-        "银质武器 Silvered Weapons",
-        "特殊武器 Special Weapons", ],
-    "Adventure_gear": [
-        "冒险用品 Adventuring Gear",
-        "强酸 Acid。",
-        "炽火胶 Alchemist’s Fire。",
-        "抗毒剂 Antitoxin。",
-        "奥术法器 Arcane Focus。",
-        "滚珠 Ball Bearings。",
-        "滑轮组 Block and Tackle。",
-        "书本 book。",
-        "铁蒺藜 Caltrops。",
-        "蜡烛 Candle。",
-        "弩矢匣 Crossbow Bolt Case。",
-        "地图或卷轴匣 Map or Scroll Case。",
-        "链条 Chain。",
-        "攀爬工具 Climber’s Kit。",
-        "材料包 Component Pouch。",
-        "撬棍 Crowbar。",
-        "德鲁伊法器 Drudic Focus。",
-        "渔具 Fishing Tackle。",
-        "医疗包 Healer’s Kit。",
-        "圣徽 Holy Symbol。",
-        "圣水 Holy Water。",
-        "狩猎陷阱 Hunting Trap。",
-        "油灯 Lamp。",
-        "牛眼提灯 Bullseye Lantern。",
-        "附盖提灯 Hooded Lantern。",
-        "锁 Lock。",
-        "放大镜 Magnifying Glass。",
-        "镣铐 Manacles。",
-        "野炊工具 Mess Kit。",
-        "灯油 Oil。",
-        "基础毒药 Poison, Basic。",
-        "治疗药水 Potion of Healing。",
-        "小包 Pouch。",
-        "箭袋 Quiver。",
-        "便携式攻城锤 Ram, Portable。",
-        "口粮 Rations。",
-        "绳索 Rope。",
-        "商用天平 Merchant’s Scale。",
-        "法术书 Spellbook。",
-        "望远镜 Spyglass。",
-        "帐篷 Tent。",
-        "火绒盒 Tinderbox。",
-        "火把 Torch。",
-        "装备套组 Equipment Packs",
-        "窃贼套组 Burglar’s Pack（16 gp）。",
-        "大使套组 Diplomat’s Pack（39 gp）。",
-        "地城套组 Dungeoneer’s Pack（12 gp）。",
-        "艺人套组 Entertainer’s Pack（40 gp）。",
-        "探索套组 Explorer’s Pack（10 gp）。",
-        "祭司套组 Priest’s Pack（19 gp）。",
-        "学者套组 Scholar’s Pack（40 gp）。",
-        "冒险用品表 Adventuring Gear",
-        "容器容量 Container Capacity", ],
-    "Tool": [
-        "工具 Tools",
-        "工匠工具 Artisan’s Tools。",
-        "易容工具 Disguise Kit。",
-        "文书伪造工具 Forgery Kit。",
-        "赌具 Gaming Set。",
-        "草药工具 Herbalism Kit。",
-        "乐器 Musical Instrument。",
-        "领航工具 Navigator’s Tools。",
-        "制毒工具 Poisoner’s Kit。",
-        "盗贼工具 Thieves’ Tools。", ],
-    "Mounts_and_vehicles": [
-        "坐骑与载具 Mounts and Vehicles",
-        "具装 Barding。",
-        "鞍座 Saddles。",
-        "载具熟练项 Vehicle Proficiency。",
-        "划船 Rowed Vessels。",
-        "坐骑和其他动物 Mounts and Other Animals",
-        "鞍具、挽具及陆运载具 Tack, Harness, and Drawn Vehicles",
-        "鞍座 saddle",
-        "水运载具 Waterborne Vehicles", ],
-    "Trade_goods": [
-        "贸易商品 Trade Goods",
-        "贸易商品 Trade Goods", ],
-    "Expenses": [
-        "开支 Expenses",
-        "生活开支 Lifestyle Expenses",
-        "生活开支 Lifestyle Expenses",
-        "乞食 Wretched。",
-        "流浪 Squalid。",
-        "穷困 Poor。",
-        "俭朴 Modest。",
-        "舒适 Comfortable。",
-        "富裕 Wealthy。",
-        "奢华 Aristocratic。",
-        "自给自足 Self-Sufficiency",
-        "饮食与住宿 Food, Drink, and Lodging",
-        "饮食与住宿 Food, Drink, and Lodging",
-        "服务 Services",
-        "服务 Services",
-        "施法服务 Spellcasting Services", ],
-    "Trinkets": [
-        "饰品 Trinkets",
-        "饰品 Trinkets", ],
-}
-
 Starting_Equipment_article = """
 # 第 5 章：装备 Equipment
 某个大型城市的集市里聚集了各种买卖者：矮人铁匠和精灵木雕师，半身人农民与侏儒珠宝匠，还有来自不同国家不同文化，外貌、体型、肤色各异的人类。在最大的城市中，你几乎能买到任何能想到的东西，从异国香料和奢华服装，到藤编篮子和练习用剑，应有尽有。
@@ -174,10 +10,11 @@ Starting_Equipment_article = """
 你可以设定你的角色如何得到这些起始装备。它可能是一笔遗产，或是该角色在其的成长时期买到的商品。你可以带着一把武器，一具护甲和一个背包以作为曾经服役的军需。或者说这些装备根本就是自己偷来的。一把武器可以是家族的传家宝，世代相传直到最终由你的角色继承并以此追寻某位先祖的冒险足迹。
 """
 
-Wealth_article = """# 财富 Wealth
+Wealth_article = """
+# 财富 Wealth
 财富在 D&D 世界中的形式多种多样。货币，宝石，贸易货物，艺术品，动物和不动产，它们同时还能反映角色稳定的财富状况。农民阶级以谷物和乳酪作为商品出售或是用来以物易物，并以之满足日常的需求或缴纳税款。贵族们则是以法定权限如采矿权，停泊权或开垦权等作为商品出售，其价值均是以磅计量的金砖而非以币量衡量。只有商人、冒险者和那些提供专业雇佣服务的人才总是用货币进行交易。
 
-# 对应职业的起始财富 Starting Wealth by Class
+# table 对应职业的起始财富 Starting Wealth by Class
 职业 资金
 野蛮人 2d4×10 gp
 吟游诗人 5d4×10 gp
@@ -205,7 +42,7 @@ Wealth_article = """# 财富 Wealth
 一枚银金币价值五枚银币，而一枚铂金币价值十枚金币。
 一枚标准的货币约重三分之一盎司 ounce，所以五十枚货币重约一磅 pound。
 
-# 标准兑换率 Standard Exchange Rates
+# table 标准兑换率 Standard Exchange Rates
 货币 cp sp ep gp pp
 铜币(cp) 1 1/10 1/50 1/100 1/1000
 银币(sp) 10 1 1/5 1/10 1/100
@@ -226,7 +63,7 @@ Armor_and_shields_article = """
 D&D 世界是一张由各种不同文明交织成的巨大挂毯，其中每个文明都有着不同的科技水平。因此，冒险者们可能会遇到各种不同类型的护甲，从皮甲到链甲再到昂贵的板甲，以及其他许多种类的护甲。“护甲表”收集了游戏中最常见护甲种类，并且将其归类为三大类别：轻甲、中甲和重甲。此外，许多武士还会为他们的护甲加配一面盾牌。
 “护甲表”记录了 D&D 游戏世界中出现的各种常见护甲，以及其相应的价格、重量和其他属性。
 
-# 护甲表 Armor
+# table 护甲表 Armor
 护甲 价格 护甲等级（AC） 力量 隐匿 重量
 轻甲 Light Armor
 布甲 padded 5 gp 11＋敏捷调整值 － 劣势 8 磅
@@ -298,7 +135,7 @@ D&D 世界是一张由各种不同文明交织成的巨大挂毯，其中每个�
 # 卸除 Doff。
 即脱下护甲所花费的时间。如果你有人从旁协助，你的卸甲时间可以减半。
 
-# 护甲的装与卸 Donning and Doffing Armor
+# table 护甲的装与卸 Donning and Doffing Armor
 类别 装着 Don 卸除 Doff
 轻甲 1 分钟 1 分钟
 中甲 5 分钟 1 分钟
@@ -321,7 +158,7 @@ Weapon_article = """
 大多数武士会选使军用武器，以便于发挥自身的战斗风格以及充分发挥其专业训练的成果。
 拥有相应武器熟练项时，你可以把熟练加值加在持用该武器进行攻击的攻击检定中。不具有相应武器的熟练项时，则你不能将熟练加值加在持用该武器攻击的攻击检定中。
 
-# 武器表 Weapons
+# table 武器表 Weapons
 名称 价格 伤害 重量 属性
 简易近战武器 Simple Melee Weapon
 短棒 club 1 sp 1d4 钝击 2 磅 轻型
@@ -524,7 +361,7 @@ Adventure_gear_article = """
 包括一个背包、一本学科书、一瓶墨水，一只墨水笔，十张羊皮纸，一小袋沙和一把小刀。
 
 
-# 冒险用品表 Adventuring Gear
+# table 冒险用品表 Adventuring Gear
 物品 价格 重量
 算盘 abacus 2 gp 2 磅
 强酸 acid（小瓶 vial） 25 gp 1 磅
@@ -630,7 +467,7 @@ Adventure_gear_article = """
 水袋 waterskin 2 sp 5 磅(承满)
 磨刀石 whetstone 1 cp 1 磅
 
-# 容器容量 Container Capacity
+# table 容器容量 Container Capacity
 容器 容量
 背包 backpack* 1 立方尺／30 磅物品
 粗腰桶 barrel 40 加仑液体，4 立方尺固体
@@ -672,7 +509,7 @@ Tool_article = """
 # 盗贼工具 Thieves’ Tools。
 整套的工具包括一把细锉刀、一套撬锁工具、一个附炳小镜、一把尖嘴剪和一把镊子。拥有盗贼工具熟练项的角色，在使用该工具进行解除陷阱或撬锁的属性检定时，可以将其熟练加值加入检定结果中。
 
-工具表 Tools
+# table 工具表 Tools
 物品 价格 重量
 工匠工具 artisan’s tools
 炼金工具 alchemist’s supplies 50 gp 8 磅
@@ -733,7 +570,7 @@ D&D 世界里还活跃着许多还没收录到表格中的坐骑，只是它们�
 # 划船 Rowed Vessels。
 在湖泊或河流中驾驶龙骨船或划艇时，其速度会受水流影响。顺流驾船时，其速度可以加上水流速度（通常为每小时 3 里）。这几种载具无法逆流而上，但可以在岸上用动物作拉纤。一只划艇重 100 磅，因而冒险者还可以抬着它在陆上行动。
 
-# 坐骑和其他动物 Mounts and Other Animals
+# table 坐骑和其他动物 Mounts and Other Animals
 项目 价格 速度 载重
 骆驼 camel 50 gp 50 尺 480 磅
 驴 donkey 或骡 mule 8 gp 40 尺 420 磅
@@ -744,7 +581,7 @@ D&D 世界里还活跃着许多还没收录到表格中的坐骑，只是它们�
 矮种马 pony 30 gp 40 尺 225 磅
 战马 warhorse 400 gp 60 尺 540 磅
 
-# 鞍具、挽具及陆运载具 Tack, Harness, and Drawn Vehicles
+# table 鞍具、挽具及陆运载具 Tack, Harness, and Drawn Vehicles
 项目 价格 重量
 具装 boarding ×4 ×2
 辔具 bit and bridle 2 gp 1 磅
@@ -753,7 +590,7 @@ D&D 世界里还活跃着许多还没收录到表格中的坐骑，只是它们�
 二轮战车 chariot 250 gp 100 磅
 饲料 feed（每日份） 5 cp 10 磅
 
-# 鞍座 saddle
+# table 鞍座 saddle
 特制 exotic 60 gp 40 磅
 军用 military 20 gp 30 磅
 驮役 pack 5 gp 15 磅
@@ -763,7 +600,7 @@ D&D 世界里还活跃着许多还没收录到表格中的坐骑，只是它们�
 马厩 stabling（每日租） 5 sp －
 四轮货车 wagon 35 gp 400 磅
 
-# 水运载具 Waterborne Vehicles
+# table 水运载具 Waterborne Vehicles
 项目 价格 速度
 桨帆船 galley 30000 gp 4 mph
 龙骨船 keel boat 3000 gp 1 mph
@@ -778,7 +615,7 @@ Trade_goods_article = """
 很多情况下，财富并不以货币的数量为衡量，而是以牲畜、谷物、土地、税权或者（矿或森林的）开采权等作评估。
 公会，贵族和皇室掌控着世界的贸易活动。那些获特许经营权的公司可以行走特殊的贸易路线，其商船可以特许进港，或者获许买卖特定的商品。公会则会为他们控制的商品或服务进行定价，并决定谁可以或不可提供它们。市场上，商人常常不使用货币而直接以物易物。部分商品价格列举在表格“贸易商品”中。
 
-# 贸易商品 Trade Goods
+# table 贸易商品 Trade Goods
 价格 商品
 1 cp 1 磅小麦 wheat
 2 cp 1 磅面粉 flour 或 1 只鸡 chicken
@@ -804,7 +641,7 @@ Expenses_article = """
 在每周或每月开始时，你从“生活开支”表中自选一种生活方式，并支付相应的金额取维持生活。列表中的价格为每日的开支，因此如果你是每三十日进行结算时则需要乘以 30。根据你自身资金的状况，你可以每个时段过不同方式的生活，也可以在整段冒险生涯中维持同一种生活方式。
 不同的生活方式也会对你产生不同的影响。维持富泰的生活可以结识其他权贵，但也可能招致盗贼光顾。而保持俭朴的生活可以避开罪犯，却无法获得更好的人脉资源。
 
-# 生活开支 Lifestyle Expenses
+# table 生活开支 Lifestyle Expenses
 生活方式 每日支出
 乞食 wretched －
 流浪 squalid 1 sp
@@ -836,7 +673,7 @@ Expenses_article = """
 # 饮食与住宿 Food, Drink, and Lodging
 表格“饮食与住宿”列出了各项单点饮食和单晚住宿的价格。选择生活开支时，这些项目的消费则已经包含其中。
 
-# 饮食与住宿 Food, Drink, and Lodging
+# table 饮食与住宿 Food, Drink, and Lodging
 项目 价格
 麦酒 ale
 每加仑 gallon 2 sp
@@ -870,7 +707,7 @@ Expenses_article = """
 还有一些雇工可以提供专业或高风险的服务。冒险者可以雇佣佣兵战士扫荡大地精的军队，也可以雇佣贤者取研究古老或秘传的知识。如果高等级的冒险者建立起自己的堡垒，它还可以雇用一系列的侍从和代理来执行管理工作。上至堡主管家，下至清洁马方的工人，而这些雇工大多都签订了合理的包有住宿的长期合同。
 某些与熟练项相关的工作（包括武器、工具、技能），雇以工作的人员同样视为熟练雇工：比如佣兵、工匠、文员等。表中所列出的工价只是其下限，某些技能精湛的专家可能会向你要求更高的薪酬。新手雇工则只能从事不需要特定技能的工作，包括苦力、送货员、女仆等工人工作。
 
-# 服务 Services
+# table 服务 Services
 服务 工钱
 计程客车 coach cab
 城际 between towns 3 cp 每里
@@ -891,7 +728,7 @@ Trinkets_article = """
 # 饰品 Trinkets
 你在创作角色时，可以参照“饰品”表骰得一件饰品——一件被神秘轻微点化的物品。DM 有时候也会用到本表格，比如用来点缀地下城的房间，或者用来装满某个生物的口袋。
 
-# 饰品 Trinkets
+# d-100 饰品 Trinkets
 d100 饰品
 01 一只风干的地精手臂
 02 一块月光下微微发光的水晶
@@ -994,16 +831,3 @@ d100 饰品
 99 一只陶底木盒内装着一条两头都长着脑袋的活蠕虫
 100 一只装有英雄骨灰的金属瓮
 """
-
-article = {
-    "Starting_Equipment": Starting_Equipment_article,
-    "Wealth": Wealth_article,
-    "Armor_and_shields": Armor_and_shields_article,
-    "Weapon": Weapon_article,
-    "Adventure_gear": Adventure_gear_article,
-    "Tool": Tool_article,
-    "Mounts_and_vehicles": Mounts_and_vehicles_article,
-    "Trade_goods": Trade_goods_article,
-    "Expenses": Expenses_article,
-    "Trinkets": Trinkets_article,
-}
