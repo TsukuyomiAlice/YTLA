@@ -14,19 +14,29 @@ from ytla_plan.features.dungeonsAndDragons.prompt import (
 )
 
 def topic_word_list():
-    topics = datasetJsonPicker.extract_topic_keys(datasetJsonPicker.get_data_file_list())
+    topics = datasetJsonPicker.generate_topic_key_list()
     return topics
 
 
 def create_keyword_list(topic_list: dict[str: list]):
-    keyword_list = {}
+    keyword_list = datasetJsonPicker.generate_topic_keyword_list(topic_list)
     return keyword_list
 
 
-def create_article(topic_list: dict[str: list], keyword_list: dict[str: list]) -> str:
-    article = ""
+def grab_article(keyword_list: dict[str: list]) -> str:
+    article = datasetJsonPicker.generate_article_part(keyword_list)
     return article
 
+
+def grab_article_by_keyword(keyword_list, article: str) -> str:
+    keywords = eval(keyword_list)['asked']
+    for keyword in keywords:
+        article = datasetJsonPicker.generate_article_part_by_whole_search(keyword, article)
+    return article
+
+"""
+pre answer groups
+"""
 
 def question_keyword_picker(request_prompt: str, temperature=0.1) -> str:
     system_prompt = promptGuideKeywordPicker.prompt
@@ -57,6 +67,9 @@ def masked_keyword_topics(request_prompt: str, temperature=0.0) -> str:
     print(caller)
     return caller
 
+"""
+topic index
+"""
 
 def select_keyword_topics(request_prompt: str, temperature=0.0) -> str:
     system_prompt = promptGuideKeywordTopics.prompt_front + str(
@@ -71,6 +84,7 @@ def select_keyword_topics(request_prompt: str, temperature=0.0) -> str:
 
 def select_keyword_list(topic_chat, request_prompt: str, temperature=0.0) -> str:
     keyword_list = create_keyword_list(eval(topic_chat))
+    print(keyword_list)
     system_prompt = promptGuideKeywordList.prompt
     message_list = contentHandler.add_system_message([], system_prompt)
     message_list = contentHandler.add_system_message(message_list, str(json.dumps(keyword_list, ensure_ascii=False)))
@@ -80,10 +94,13 @@ def select_keyword_list(topic_chat, request_prompt: str, temperature=0.0) -> str
     print(caller)
     return caller
 
+"""
+grab article and answer
+"""
 
-def guide_answer(topic_chat, keyword_chat, request_prompt: str, temperature=0.0) -> str:
-    article = create_article(eval(topic_chat), eval(keyword_chat))
-    print(article)
+def guide_answer(keyword_chat, question_keywords, request_prompt: str, temperature=0.0) -> str:
+    article = grab_article(eval(keyword_chat))
+    article = grab_article_by_keyword(question_keywords, article)
     system_prompt = promptGuideAnswer.prompt_front + keyword_chat + promptGuideAnswer.prompt_back
     message_list = contentHandler.add_system_message([], system_prompt)
     message_list = contentHandler.add_system_message(message_list, article)
@@ -113,7 +130,7 @@ def query(chat):
     keyword_chat = select_keyword_list(topic_chat, chat)
     print("=" * 55)
 
-    guide_chat = guide_answer(topic_chat, keyword_chat, chat)
+    guide_answer(keyword_chat, question_keywords, chat)
     print("=" * 55)
 
-query("什么法术可以让释放了纠缠术的植物松开？")
+query("在你的知识库里，哪些章节描述了如何创建一个地下城迷宫的方法？")

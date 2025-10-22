@@ -4,6 +4,29 @@ import ast
 import json
 import os
 
+def get_data_file_list():
+    """
+    获取当前目录下所有PY文件的文件名（不包含路径）
+
+    返回:
+        list: 所有PY文件的文件名列表（不包含路径）
+    """
+    # 获取当前文件所在目录
+    current_dir = os.path.dirname(__file__)
+    # 存储PY文件名的列表
+    py_files = []
+
+    # 遍历目录下所有条目
+    for entry in os.listdir(current_dir):
+        # 拼接完整路径以检查是否为文件
+        entry_path = os.path.join(current_dir, entry)
+        # 检查是否为文件且以.py结尾（不区分大小写）
+        if (os.path.isfile(entry_path) and entry.lower().endswith('.py')
+                and entry not in ['__init__.py', 'datasetJsonPicker.py', 'datasetPyToJson.py']):
+            py_files.append(entry)  # 添加文件名到列表
+
+    return py_files
+
 
 def extract_topics_and_articles(py_file_path):
     """从每个字符串常量中同时提取topics和articles（键名关联）"""
@@ -52,9 +75,10 @@ def convert_to_json(py_file_path):
         json.dump(json_data, f, ensure_ascii=False, indent=2)
 
     print(f"转换完成，JSON文件已保存至: {json_file_path}")
-    print(f"关联结果：topics键数量={len(topics)}, articles键数量={len(articles)}")  # 验证键数量是否一致
+    print(f"关联结果：topics键数量={len(topics)}, articles键数量={len(articles)}")
 
 
 if __name__ == "__main__":
-    target_py_file = r"dnd_5e_player_015_creature_statistics.py"
-    convert_to_json(target_py_file)
+    files = get_data_file_list()
+    for file in files:
+        convert_to_json(file)
