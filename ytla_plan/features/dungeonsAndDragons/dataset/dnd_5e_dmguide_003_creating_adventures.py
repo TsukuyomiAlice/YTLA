@@ -1,6 +1,6 @@
 # encode = utf-8
 
-creating_adventures_article = """
+article_creating_adventures = """
 # 第 3 章：创建冒险 Creating Adventures
 处理冒险是作为地下城主最有意思的事情之一。你可以借此表达自己，并设计一些奇幻的地点，以及在其中所遭遇的怪物、陷阱、谜题和战斗。在你设计的冒险中，你说了算。你可以完全按照自己的方式行事。
 本质上讲，冒险即是故事。一次冒险与一部小说、一部电影、一期漫画或一部电视剧都有着许多相同的特性。系列漫画和连载电视剧则是更贴切的对比——单个的冒险限制了篇幅，但结合起来则可以创作出一个长编故事。每一期或每一集的冒险连载一起便是一场系列战役。
@@ -8,7 +8,7 @@ creating_adventures_article = """
 创建一场冒险，包括将探索、社交互动和战斗的场景融合到一个统一的整体中，以满足玩家和战役本身的需要。但它仍不止于此。好故事的基本要素应该引导你贯穿整个过程，才能够让你的玩家体验冒险的故事，而不仅仅是一系列不连贯的遭遇。
 """
 
-elements_of_a_great_adventure_article ="""
+article_elements_of_a_great_adventure ="""
 # 大冒险的基本要素 Elements of a Great Adventure
 最好的冒险都具有若干共同之处。
 
@@ -45,7 +45,7 @@ elements_of_a_great_adventure_article ="""
 出版的冒险也可以为你提供灵感。你可能不会像它所书写的那样去冒险，但它仍可以激发你的想象力，或者你也可以把其中的一部分提取出来在按自己的需求重新设计。例如，你可能会用上一张神庙的地图，但却用自己选择的怪物填充其中，或者你也可以选用其中的追逐情节作为自己战役中追捕场景的模型。
 """
 
-adventure_structure_article = """
+article_adventure_structure = """
 # 冒险故事结构 Adventure Structure
 跟每个故事一样，典型的冒险也包含开始、中间与结尾。
 
@@ -64,7 +64,7 @@ adventure_structure_article = """
 故事结尾不一定要仓促的整理好所有的东西。故事的线索可以暂时搁置，并留待以后的冒险去解决。留下一点未竟的事业，也是用于过渡到另一场冒险的简便方法。
 """
 
-adventure_types_article = """
+article_adventure_types = """
 # 冒险类型 Adventure Types
 冒险可以基于地点，也可以基于事件。详述如下。
 
@@ -453,7 +453,7 @@ d8 支线任务
 8 确保该地区的一个角色或生物可以提供协助。
 """
 
-creating_encounters_article = """
+article_creating_encounters = """
 # 创建遭遇 Creating Encounters
 遭遇是整个冒险大故事中的单独场景。
 一场遭遇首先，同时也最重要的是它必须要给玩家带来乐趣。第二，你应该可以有逃跑的机会。除此之外，精心设计的遭遇通常有一个直接的目标，也有一些与战役故事主线相关的事物。这些构建到遭遇中的东西同时也预示着未来发生的遭遇。
@@ -604,7 +604,7 @@ lst 25 50 75 100
 • 不同类型的怪物混在一起
 """
 
-random_encounters_article = """
+article_random_encounters = """
 # 随机遭遇 Random Encounters
 角色们在探索野外区域或地下城网络时，必定会遭遇到一些意想不到的事物。随机遭遇便是表示这种意外性的手段。它通常以表格的形式呈现。一场随机遭遇发生时，你掷一次骰子然后按表格查找出队伍的遭遇。
 一些玩家和 DM 将冒险中的随机遭遇视为浪费时间，不过精心设计的随机遭遇仍可以实现多种不同的作用：

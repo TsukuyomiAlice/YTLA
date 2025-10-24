@@ -1,11 +1,13 @@
 # encode = utf-8
 
-choosing_a_race_article = """
+article_Races = """
 # 第 2 章：种族 Races
 深水城 Water deep，灰鹰世界里的自由城邦或是奇妙的众门之城 City of Doors：印记城 Sigil，这些 D&D 世界的大都市总能让其拜访者感到各种应接不暇。在这里，各种交谈声中夹杂着不同的语言。拥挤而肮脏的街道散发着怪味，其中还夹杂着数十种不同料理的味道。城中风格迥异的各种建筑同时也反映了居民们各异的文化渊源。
 城里的居民也各色各样。各种不同的体型、样貌、肤色、毛色，以及形形色色的服装表现了各人独有的种族特色。其中有小巧灵活的半身人，粗犷壮硕的矮人，庄严华美的精灵，甚至还有多种不同民族的人类。
 居民中还隐藏着一些真正的外来种族：一名高大的龙裔正打算穿过拥挤的人群，而不远处的阴影中潜伏着一名精明狡诈的提夫林，其眼内还不时闪烁着不安分。一群侏儒围在一起，对着一个激活后自主活动的精巧木头玩具欢声大笑。半精灵和半兽人无法得到父母所属的族群接纳，只能在人类社群里作息。而在某个远离阳光的角落里，正坐着一位孤身的卓尔——这名来自幽暗地域广阔地底世界的逃亡者正尝试在一个畏惧其所属种族的世界中维持生计。
+"""
 
+article_Choosing_a_Race = """
 # 选择一个种族 Choosing a Race
 人类是 D&D 世界中最常见的居民，而矮人、精灵、半身人以及许多其他神奇的奇幻种族也一样在这个世界中生活工作。而你的角色就是这些族群的成员之一。
 多元宇宙中的智慧种族并非都适合成为受玩家控制的冒险者角色。矮人、精灵、半身人以及人类是在冒险小队中最常见的种族。龙裔、侏儒、半精灵、半兽人以及提夫林则较少成为冒险者。卓尔，作为一种精灵亚种也属于比较少见的例子。
@@ -34,7 +36,7 @@ choosing_a_race_article = """
 某些种族还存在一些亚种。属于某亚种的角色除了拥有该种族共有的特质外，还会有一些该亚种独有的特质。亚种间的关系在不同的种族，不同的世界中都会有所不同。
 """
 
-Dwarf_article = """
+article_Dwarf = """
 # 矮人 Dwarf
 > “精灵！你迟到了！”一个熟悉的低沉声音传来。布鲁诺･战锤从雪猿的尸体上踩过，完全不顾压在怪物尸体下的精灵朋友。虽然他的痛苦只是有增无减，但崔斯特还是很乐意见到矮人那时常断掉的尖鼻子和带着几许银丝的满嘴红胡子。“为什么每次来找你的时候，你都惹了一堆麻烦啊？”
 > ——R. A. Salvatore，《碎魔晶 The Crystal Shard》
@@ -64,7 +66,7 @@ Dwarf_article = """
 人类 Humans。“等你了解一个人类的时候，她的生命也已经走到最后一刻了。幸运的话，她可能有个像她一样好的女儿或孙女。当你认为是时候和一个人类变为朋友了，却又要眼看着他们逝去。人类总能得到他们想要的东西，无论是巨龙的宝藏还是帝国的王座。你不得不敬佩他们的执着和为此而奉献的精神，当然这也经常使他们惹得一身麻烦。”
 """
 
-Dwarf_Names_article = """
+article_Dwarf_Names = """
 # 矮人姓名 Dwarf Names
 依照传统，矮人必须由氏族长老命名并重复使用代代相传的名字。矮人的名字不属于自己，而是属于氏族。若矮人让名字蒙羞，其名字将被氏族剥夺。依照矮人的律法，被剥夺名字的矮人禁止再使用矮人的名字。
 男性名字 Male Names：阿德里克 Adrik、阿贝里希 Alberich、巴恩 Baern、巴伦德 Barendd、布洛托 Brottor、布鲁诺 Bruenor、达因 Dain、达拉克 Darrak、德尔格 Delg、艾帕克 Eberk、因克 Einkil、法格林 Fargrim、弗林特 Flint、加代因 Gardain、哈比克 Harbek、基尔德拉克 Kildrak、莫格兰 Morgran、欧斯克 Orsik、奥斯卡 Oskar、朗格琳 Rangrim、鲁瑞克 Rurik、塔可林 Taklinn、索拉丁 Thoradin、索林 Thorin、托达克 Tordek、特若本 Traubon、特拉沃克 Travok、伍夫加 Ulfgar、维特 Veit、冯达尔 Vondal
@@ -72,7 +74,7 @@ Dwarf_Names_article = """
 氏族名称 Clan Names：巴尔德克 Balderk、战锤 Battlehammer、布劳南威尔 Brawnanvil、丹吉尔 Dankil、火铸 Fireforge、霜须 Frostbeard、果伦 Gorunn、豪德赫克 Holderhek、铁拳 Ironfist、罗德尔 Loderr、鲁格 Lutgehr、伦纳海姆 Rumnaheim、史特拉肯 Strakeln、托伦 Torunn、乌加特 Ungart
 """
 
-Dwarf_Traits_article = """
+article_Dwarf_Traits = """
 # 矮人特质 Dwarf Traits
 你的矮人角色拥有一系列与生俱来的能力。这是矮人一族的天赋特质，也是矮人角色特点的重要组成部分。
 # 属性值加成 Ability Score Increase。你的体质加 2。
@@ -87,7 +89,7 @@ Dwarf_Traits_article = """
 # 语言 Language。你能够说、读、写通用语和矮人语。矮人语中充满了硬辅音和喉音，这使得矮人在讲其他语言时也会带上这些特点。
 """
 
-Dwarf_Subrace_article = """
+article_Dwarf_Subrace = """
 # 亚种 Subrace
 D&D 世界中居住着以下两种主要的矮人亚种：丘陵矮人 hill dwarves 和山地矮人 mountain dwarves。你可以从这些亚种选项中选择其一。
 
@@ -105,7 +107,7 @@ D&D 世界中居住着以下两种主要的矮人亚种：丘陵矮人 hill dwar
 > 灰矮人，或称杜尔加矮人生活在幽暗地域深处的城市中。这些邪恶而行踪隐秘的奴隶贩子会袭击地表世界然后抓走俘虏，再将它们的猎物卖给幽暗地域的其他族类。他们天生的魔法能力使他们可以隐形，还可使身型短时间内巨化。
 """
 
-Elf_article = """
+article_Elf = """
 # 精灵 Elf
 > “我从来没想到会有这么美丽的地方，”金月轻声说。一整天的跋涉非常辛苦，但最后的报偿却远远超乎他们的想像。大伙站在一个悬崖上远眺着传说中的城市奎灵诺斯。
 > 四只细长的尖塔从城市的四个角落高耸入云，白色的大理石建筑闪耀着眩目的银光。优雅的拱桥从一个尖塔跳跃到另一个尖塔，在空中画出美丽的弧形。这些拱桥出自古老矮人工匠的手艺，可以支撑一整批部队，外表看起来却似乎连小鸟都能够破坏它优美的平衡。这些闪耀着的拱形是城市的唯一界限。
@@ -138,7 +140,7 @@ Elf_article = """
 人类 Humans。“人类总是匆匆忙忙。他们野心勃勃又总想在其短暂的人生完成某些事情。人类的那些事业看起来那么的苍白无力，但有时转眼间又会让你震惊于他们的成就。只是如果他们能静下心来，再学点文雅作风那就最好了。
 """,
 
-Elf_Names_article = """
+article_Elf_Names = """
 # 精灵姓名 Elf Names
 精灵通常会在百岁生日后宣布自己成年，然后为自己选择一个名字。在此之前这名精灵都会被看作是个孩子，并用其小名作称谓。
 宣布自己成年后，精灵将为自己选择一个正式的名字。但就算是知道他已成年的人，仍可能继续用先前的幼名称呼他，而他本人也不见得介意。成年精灵的名字完全自创，虽然可能反映他喜欢的某些人名，或家人的名字。精灵男女名字的差异不大，而下述分组只是表示一般的倾向。此外，精灵也有家族姓氏，通常是由一些普通精灵词汇组合而成。有些精灵在旅行时会将姓氏译为通用语，有些则仍保留精灵语的用法。
@@ -148,7 +150,7 @@ Elf_Names_article = """
 家族姓氏 Family Names（通用语译名）:阿玛吉尔 Amakiir （宝石花 Gemflower）、阿玛斯塔夏 Amastacia（星之花 Starflower）、嘉兰诺德 Galanodel（月之呢喃 Moonwhisper）、荷里米昂Holimion（钻石露 Diamonddew）、伊普吉尔 Ilphelkiir（宝石花丛 Gemblossom）、利亚顿 Liadon（银叶 Silverfrond）、梅利安涅 Meliamne（橡树末 Oakenheel）、耐罗 Nailo（夜风Nightbreeze）、暹诺德 Siannodel（月溪 Moonbrook）、西罗先 Xiloscient（金瓣 Goldpetal）
 """,
 
-Elf_Traits_article = """
+article_Elf_Traits = """
 # 精灵特质 Elf Traits
 你的精灵角色拥有的各种天赋能力，都是精灵族千年淬炼的体现。
 # 属性值加成 Ability Score Increase。你的敏捷加 2。
@@ -162,7 +164,7 @@ Elf_Traits_article = """
 # 语言 language。你能够说、读、写通用语和精灵语。精灵语如流体般流畅，有着微妙的语调变化和复杂的语法结构。精灵文学十分丰富多彩，他们的诗歌在其他种族里也享有很高的评价。许多吟游诗人都会学习精灵语，并将其韵律运用在他们自己的诗作中。
 """,
 
-Elf_Subrace_article = """
+article_Elf_Subrace = """
 # 亚种 Subrace。 
 精灵族自古以来的分离使得今天的精灵可以分为三个亚种：高等精灵 high elves，木精灵 wood elves，和一般被称为卓尔 drow 的黑暗精灵 dark elves。你可以从这些亚种选项中选择其一。在某些世界设定中，这些亚种族会被进一步细分（如被遗忘的国度设定中的日精灵 sun elves 和月精灵moon elves）。因此，你也可以随意选择这些进一步细分的亚种。
 
@@ -192,7 +194,7 @@ Elf_Subrace_article = """
 # 卓尔武器训练 Drow Weapon Training。你拥有刺剑、短剑和手弩等武器的熟练项。
 """
 
-Halfling_article = """
+article_Halfling = """
 # 半身人 Halfling
 > 瑞吉斯，这个方圆百里内唯一的半身人正用双手作枕靠在一棵长满青苔的树干上。即使用半身人的标准看，瑞吉斯也是个矮子。他站直的身高加上那头棕色的卷发也只是刚好三尺而已。不过贪吃的瑞吉斯从没放过任何一顿到口的美食，因而他的腰围也日渐丰满。他用毛茸茸的脚指钳住一枝用作钓竿的弯木棒，伸出到平静的都尔登湖面上，并在那明亮的湖面上反射出完美的倒影。
 > ——R. A. Salvatore，《碎魔晶 The Crystal Shard》
@@ -226,7 +228,7 @@ Halfling_article = """
 人类 Humans。“人类跟咱们很像。真的。或者说至少有些人类是真像。你可以在城堡或哨站外看看那些农夫和牧民，他们都是善良淳朴的人。我不是说那些男爵和战士有啥不对。虽然他们老自说自话就给别人定罪，不过他们保护自己的土地之余也会守护咱的地方，这挺好的。
 """
 
-Halfling_Names_article = """
+article_Halfling_Names = """
 # 半身人姓名 Halfing Names
 半身人有名字，有姓氏，有时还有昵称。他们有很多姓氏都源于昵称，由于印象过于深刻因此一代代传了下来。
 男性名字 Male Names：阿尔顿 Alton、安德 Ander、卡德 Cade、柯林 Corrin、艾尔顿 Eldon、埃里奇 Errich、芬南 Finnan、盖瑞 Garret、林逹尔 Lindal、里尔 Lyle、梅里克 Merric、米罗 Milo、欧斯朋 Osborn、佩林 Perrin、威德 Reed、罗斯科Roscoe、韦尔比 Wellby
@@ -234,7 +236,7 @@ Halfling_Names_article = """
 家族姓氏 Family Names：集刷 Brushgather、良桶 Goodbarrel、绿瓶 Greenbottle、高丘 High-hill、垮丘 Hilltopple、无纪Leagallow、茶叶 Tealeaf、刺子 Thorngage、投石 Tosscobble、枝底 Underbough
 """
 
-Halfling_Traits_article = """
+article_Halfling_Traits = """
 # 半身人特质 Halfling Traits
 你的半身人角色跟其它半身人一样具有以下特质。
 # 属性值加成 Ability Score Increase。你的敏捷加 2。
@@ -248,7 +250,7 @@ Halfling_Traits_article = """
 他们很少书写，因此没有丰富的文学典藏。但他们有非常丰富的口述传统。几乎所有半身人都会说通用语，以便跟居住地或旅途上遇见的人进行交流。
 """
 
-Halfling_Subrace_article = """
+article_Halfling_Subrace = """
 # 亚种 Subrace。
 两种主要的半身人（轻足半身人 lightfoot 和敦实半身人 stout）与其说是亚种反而更像是同一家族里的亲戚关系。你可以从这些亚种选项中选择其一。
 
@@ -264,7 +266,7 @@ Halfling_Subrace_article = """
 # 敦实体魄 Stout Resilience。你进行对抗毒素的豁免时具有优势，你拥有毒素伤害的伤害抗性。
 """
 
-Human_article = """
+article_Human = """
 # 人类 Human
 > 其内讲述了一个很久以前的故事，其时一群狂躁的人类乘着单帆长船在江海四处发起恐怖袭击与掠夺，并最终定居某处。书中的每页歌词都蕴含着一种能量，一种对冒险的热爱。丽芮尔随着一根根耗尽的珍贵蜡烛，在漫长的夜晚里用心品读着这一切。
 > 从前她并没有关心过那些人类的事，而这些故事确实让她着迷。泛黄的书页里所记述的故事说到武勇的英雄、奇异而凶猛的动物、强大的原初神祇、以及作为那遥远土地组成成分之一的魔法。
@@ -293,7 +295,7 @@ Human_article = """
 半身人 Halfling。“在半身人的房子里用餐时脑袋总会撞到天花板，然而那确实是美食故事加温暖火炉的好地方。如果半身人们能有点追求的话，兴许还真能干点什么大事。”
 """
 
-Human_Names_and_Ethnicities_article = """
+article_Human_Names_and_Ethnicities = """
 # 人类姓名与人种分类 Human Names and Ethnicities
 与其他文化不同，人类有着多种不同的民风特色而无法统一出一种典型的命名传统。一些人类父母会给自己的孩子起一个外语名字，比如矮人语或精灵语（多少有点发音不准），不过大多数父母会根据所在地区的传统或先祖流传下来的命名方式为孩子命名。
 人类的物质文化和个人特征随地域的不同会存在巨大的差别。例如在被遗忘国度里，各处都奉行各自不同的衣着、建筑、烹饪、音乐和文学：大陆西北部的银色联邦 Silver Marches 与远在东部地区的突米斯 Turmish 或因布图 Impiltur 大相径庭，而遥远的卡拉图 Kara-Tur 则更甚。人类的生理特征随着其先祖的迁徙演变至今已经各不相同，因此在银色联邦里可能会有各种不同肤色和特质的人类存在。
@@ -359,7 +361,7 @@ Human_Names_and_Ethnicities_article = """
 （姓氏 surnames）阿戈斯图 Agosto、阿斯托利欧 Astorio、卡拉布拉 Calabra、多米内 Domine、法洛内 Falone、玛瑞旺迪 Marivaldi、皮萨卡 Pisacar、拉蒙多 Ramondo
 """
 
-Human_Traits_article = """
+article_Human_Traits = """
 # 人类特质 Human Traits
 人类很难一概而论，你的人类角色具有以下种族特质。
 # 属性值加成 Ability Score Increase。你的全部属性值加 1。
@@ -369,7 +371,7 @@ Human_Traits_article = """
 # 语言 Languages。你能够说、读、写通用语和一门额外的自选语言。在与他人交流时，人类通常会主动去学习对方的语言，其中也包括了一些晦涩的方言。他们还喜欢在说话时夹杂其他语言的腔调，如兽人粗口，精灵乐调，矮人军号，等等。
 """
 
-Variant_Human_Traits_article = """
+article_Variant_Human_Traits = """
 # 变体人类特质 Variant Human Traits
 若你的战役选用第 5 章所述的可选专长规则，DM 就可以允许你使用本变体特质，并以下列几项特质替换人类的属性值加成特质。
 # 属性值加成 Ability Score Increase。自选两项不同属性各加 1。
@@ -377,7 +379,7 @@ Variant_Human_Traits_article = """
 # 专长 Feat。你获得一项自选的专长。
 """
 
-Dragonborn_article = """
+article_Dragonborn = """
 # 龙裔 Dragonborn
 > 她的父亲站在传送门下三层阶梯的第一阶上一动不动。克兰里斯･迈罕脸上的鳞片已经开始变得灰白，但看起来似乎依旧能独战一头恐熊。他身上不再是那身熟悉的旧盔甲，而是穿着一身亮银饰边的紫色鳞甲。他胳膊上还有一个纹章，看上去是某个异国家族的族徽。然而，早在他从阿勒斯･维也安之门发现襁褓中被遗弃双胞胎前，他背后就带着一把有着同样标记的剑。
 > 法里德赫深深明白，在有生之年里能读懂父亲的面部表情是一件多么幸运的事。一个不懂得捕捉她和哈维拉眼神变化的人在克兰里斯･迈罕的脸上只会看到一张冷漠的龙脸。而实际上，鳞片的转向，脊背的曲伸，眼神的角度，牙齿的显藏，都是父亲脸上丰富的表述。
@@ -401,7 +403,7 @@ Dragonborn_article = """
 龙裔 Dragonborn。龙裔会非常容易的被误认为是怪物，特别是其那些明显有真龙鳞色遗传的个体更是如此。不过，除非龙裔开始喷火或者制造破坏，否则人们还是会小心的跟其交流而不是直接惊恐逃窜。
 """
 
-Dragonborn_Names_article = """
+article_Dragonborn_Names = """
 # 龙裔姓名 Dragonborn Names
 龙裔在出生时会被赐予一个名字，但是他们会将氏族名称放在自己名字之前以示荣耀。乳名和绰号则常在同期孵化的亲属间用作为俗称或者爱称。而这个名字还可能纪念某次事件或描述个人习惯。
 男性名字 Male Names：阿祖罕 Arjhan、巴拉沙尔 Balasar、本哈拉什 Bharash、多纳尔 Donaar、盖什 Ghesh、赫斯坎 Heskan、克利夫 Kriv、梅卓拉什 Medrash、迈罕 Mehen、纳达尔 Nadarr、潘杰德 Pandjed、帕特林 Patrin、洛加尔 Rhogar、萨玛什Shamash、薛迪因 Shedinn、塔尔贺 Tarhun、托因 Torinn
@@ -410,7 +412,7 @@ Dragonborn_Names_article = """
 氏族名称 Clan Names：克勒斯汀蒂而罗 Clethtinthiallor、达尔丹朱利恩 Daardendrian、戴尔弥勒夫 Delmirev、卓奇丹迪安Drachedandion、芬肯卡布拉登 Fenkenkabradon、科佩什克莫里克 Kepeshkmolik 、 科尔骇隆 Kerrhylon 、 金巴图尔Kimbatuul、林克萨卡杉达罗 Linxakasendalor、米亚斯坦 Myastan、涅莫尼斯 Nemmonis、诺里克修斯 Norixius、欧芬殊特拉吉尔 Ophinshtalajiir、普列斯贾迪林 Prexijandilin、夏斯丹迪丽雅斯 Shestendeliath、特奴洛夫 Turnuroth、维迪沙索吉尔斯 Verthisathurgiesh、雅吉利特 Yarjerit
 """
 
-Dragonborn_Traits_article = """
+article_Dragonborn_Traits = """
 # 龙裔特质 Dragonborn Traits
 你的龙裔角色与他的同族一起分享着巨龙的遗泽。
 # 属性值加成 Ability Score Increase。你力量加 2，魅力加 1。
@@ -437,12 +439,12 @@ Dragonborn_Traits_article = """
 # 语言 Language。你能够说、读、写通用语和龙语。龙语被认为是最古老的语言之一，且时常被人用于魔法的研习中。对其他生物来说，龙语听起来非常刺耳，其中还饱含了很多硬辅音和齿擦音。
 """
 
-Draconians_article = """
+article_Draconians = """
 > 龙人 Draconians 
 > 在龙枪设定中，邪恶女神塔克西丝 Takhisis 的追随者们研发出一种可以将金属龙龙蛋腐化的黑暗仪式，并最终生产出一些被称作龙人 draconians 的邪恶龙裔。这些产物最终都投放到龙枪之战中为塔克西丝而战，他们对应了五种金属龙种分别为：奥瑞克龙人auraks（金）、巴兹龙人 baaz（黄铜）、波扎克龙人 bozak（青铜）、卡帕克龙人 kapak（赤铜）、以及西瓦克龙人 sivak（银）。他们没有对应龙种的吐息，但是都有着独特的魔法能力。
 """
 
-Gnome_article = """
+article_Gnome = """
 # 侏儒 Gnome
 > 细瘦的身形，亚麻色的头发，胡桃棕色的皮肤，鲜亮的绿松石色眼睛，只有埃隆一半身高的勃盖尔需要爬上凳子才能从猫眼里向外观察。这个廉价公寓跟欧贝尔其他众多居所一样，由于是以人类为建造标准，对身材稍小的住民只能尽可能的克服由此带来的尴尬。
 > 不过这个相对巨大的公寓至少能为勃盖尔提供房间放置他所有侏儒尺寸的工具。靠前一间房是他的工作坊，里面放置着一整套令人眼花缭乱的工具，包括：锤、凿、锯、开锁器、有色透镜、珠宝商的放大镜，还有装着粉末或碎块施法材料的瓶子。一只灰色的肥猫，作为法师的魔宠蜷缩在魔法书上。它睁开黄色的眼睛给埃隆一个轻视的眼神后优雅的离去，似乎是去睡觉了。
@@ -474,7 +476,7 @@ Gnome_article = """
 侏儒 Gnome。侏儒看起来人畜无害，并且会迅速以幽默接触对方的戒心。那些从没见过侏儒的普通村民通常会对侏儒充满好奇，但村民们很少对因此而表现出敌意或恐惧。
 """
 
-Gnome_Names_article = """
+article_Gnome_Names = """
 # 侏儒姓名 Gnome Names
 侏儒们喜欢取名字，而他们大都拥有半打左右的名字。侏儒在成长时期，母亲会为他取个名字，父亲会为他取个名字，族中长老为他取个名字，叔叔阿姨们也会为他取名字，而几乎任何人都会为他取个绰号。侏儒的名字通常是将祖先或远亲的名字稍作改动，有些则是自创。他们知道其他种族对于取名的态度都很“保守”，所以遇到其他种族时，只宣称三个名字，即本人姓名、氏族名称和绰号。遇到只能选一个名字的场合时，侏儒通常会使用听起来最有趣的名字。
 男性名字 Male Names：奥斯顿 Alston、艾尔文 Alvyn、包迪拿 Boddynock、布洛克 Brocc、布里高 Burgell、丁宝 Dimble、埃尔登 Eldon、埃尔基 Erky、方克林 Fonklin、弗鲁格 Frug、杰儿博 Gerbo、葛尔宝 Gimble、格林 Glim、杰比多 Jebeddo、凯伦 Kellen、南富多 Namfoodle、奥莱 Orryn、朗达 Roondar、喜宝 Seebo、辛德里 Sindri、沃莱恩 Warryn、雷恩 Wrenn、朱克 Zook
@@ -483,7 +485,7 @@ Gnome_Names_article = """
 绰号 Nicknames：麦酒 Aleslosh、灰炉 Ashhearth、獾 Badger、斗篷 Cloak、双锁 Doublelock、小泥棒 Filchbatter、镊子 Nipper、古 Ku、偷儿 Nim、单鞋 Oneshoe、麻子 Pock、闪光宝石Sparklegem、跛鸭 Stumbleduck
 """
 
-Gnome_Traits_article = """
+article_Gnome_Traits = """
 # 侏儒特质 Gnome Traits
 你的侏儒角色跟其它侏儒族角色一样具有以下特质。
 # 属性值加成 Ability Score Increase。你的智力加 2。
@@ -495,7 +497,7 @@ Gnome_Traits_article = """
 # 语言 Language。你能够说、读、写通用语和侏儒语。侏儒语是一种借用矮人语文字系统的语言，因其技术性的论文集以及对自然界的学术分类而闻名。
 """
 
-Gnome_Subrace_article = """
+article_Gnome_Subrace = """
 # 亚种 Subrace。
 D&D 世界中居住着以下两种主要的侏儒亚种：森林侏儒 forest gnomes 和岩侏儒 rock gnomes。你可以从这些亚种选项中选择其一。
 
@@ -519,7 +521,7 @@ D&D 世界中居住着以下两种主要的侏儒亚种：森林侏儒 forest gn
 > 侏儒第三个亚种，地底侏儒（或称斯涅布力 svirfneblin）以小集群散居在幽暗地域中。跟邻居灰矮人和卓尔不同，地底侏儒跟其地表近亲一样善良。只是他们的幽默感和热情依然会受压迫的环境影响而受抑制，而其创新天赋则大多表现在石艺领域。
 """
 
-Half_Elf_article = """
+article_Half_Elf = """
 # 半精灵 Half-Elf
 > 佛林特眯着双眼注视着被日落余晖所照耀的小径。他看到了小径上有人漫步而来，佛林特走到一株松树的树荫底下，好让自己看的更清楚些。来人的步伐散发着蛮不在乎的优雅——某种专属于精灵的优雅，但他的体魄却有着人类的壮硕和厚实的肌肉，满脸的络腮胡更是人类才有的特征。在绿色的斗篷遮蔽下，佛林特只看到这人的褐色皮肤和红褐色胡须。他的肩上背着长弓，左手边的腰际则挂着把长剑。他穿著软皮靴，皮靴上有着精灵族喜爱的精致雕饰。但在克莱恩的世界里，是没有任何精灵会留着一脸胡子的……没有精灵会，除了……坦尼斯？”佛林特对着逐渐走来的男子狐疑地问道。
 > “正是。”来人的满脸胡须裂出了一个宽阔的笑容。他张开了双手，在佛林特阻止他之前，便将他从地上一把抱了起来。
@@ -545,12 +547,12 @@ Half_Elf_article = """
 半精灵 Half-Elf。尽管很多人都没见过半精灵，但不少人听说过他们的存在。一名半精灵陌生人的到来通常会引起紧随着他的流言蜚语和窥视目光，但很少会引发公然的挑衅或公开的讨论。
 """
 
-Half_Elf_Names_article = """
+article_Half_Elf_Names = """
 # 半精灵姓名 Half-Elf Names
 半精灵按照精灵或人类的习俗取名。讽刺的是，在人类社会长大的半精灵常取精灵名字，而在精灵社会中的半精灵则常取人类名字，就仿佛在强调他们并不真正属于任何一方。
 """
 
-Half_Elf_Traits_article = """
+article_Half_Elf_Traits = """
 # 半精灵特质 Half-Elf Traits
 你的半精灵角色拥有一些和精灵相同的特质，也有一些只有半精灵才拥有的特质。
 # 属性值加成 Ability Score Increase。你的魅力加 2。再选择其他两项属性值各加 1。
@@ -563,7 +565,7 @@ Half_Elf_Traits_article = """
 # 语言 Language。你能够说、读、写通用语和精灵语，以及任意一门自选语言。
 """
 
-Half_Orc_article = """
+article_Half_Orc = """
 # 半兽人 Half-Orc
 > 酋长穆赫雷从他的睡毯和女人中醒来，拉过沉重铁环编成的短锁子甲披上他长满壮实肌肉的身躯。他常常比手下的勇士们起来的更早，一来是由于身体里流淌的人类血统所驱使，还有就是他觉得晨光刚好可以让他悄悄逃开部族所带来的烦恼。
 > 在血颅部落里，勇士必须根据其强壮、勇猛和智慧为标准作综合选拔。人类血统不会成为勇士的缺陷——前提是他必须与其纯血近亲一样强健、持久和嗜血。血颅部落或是其他的部落的半兽人，如果比他们的兽人同伴弱太多的话就活不长。然而实际上，一部分的人类血统让这些战士拥有了恰到好处的狡猾、野心和自律，使他们如同穆赫雷所一样走的更远。他是一个可聚集两千长矛手的大部族领导者，塔尔最强大的酋长。
@@ -591,14 +593,14 @@ Half_Orc_article = """
 半兽人 Half-Orc。通常认定一名半兽人是脾气暴躁的好斗分子是一种保险措施。因此人们看到不熟悉的半兽人时都会有所自觉。店家会在见到半兽人进店时收起贵重或易碎的商品，酒馆的客人看到半兽人时都认为很快就会爆发一场斗殴因而相继默默地离开。
 """
 
-Half_Orc_Names_article = """
+article_Half_Orc_Names = """
 # 半兽人名字 Half-Orc Names
 半兽人通常拥有符合其成长环境文化形式的名字。想要和人类打成一片的半兽人可能会将兽人名换成人类名。而一些拥有人类名的半兽人会为了更有威慑力而采用一个带喉音的兽人名。
 男性兽人名字 Male Orc Names：丹契 Dench、锋 Feng、嘎尔Gell、哼克 Henk、豪格 Holg、伊姆吁 Imsh、凯斯 Keth、库斯克 Krusk、穆赫雷 Mhurren、隆特 Ront、夏普 Shump、梭克 Thokk
 女性兽人名 Female Orc Names：巴姬 Baggi、爱门 Emen、恩红 Engong、坎西芙 Kansif、美弗 Myev、妮加 Neega、欧娃Ovak、欧玟卡 Ownka、小叉 Shautha、苏塔 Sutha、芙拉 Vola、芙伦 Volen、伊瓦达 Yevelda
 """
 
-Half_Orc_Traits_article = """
+article_Half_Orc_Traits = """
 # 半兽人特质 Half-Orc Traits
 你的半兽人角色拥有某些从你的兽人血统中获得的特质。
 # 属性值加成 Ability Score Increase。你的力量加 2，你的体质加 1。
@@ -609,7 +611,7 @@ Half_Orc_Traits_article = """
 # 语言 Language。你可以说、读、写通用语和兽人语。兽人语是使用辅音的一种粗糙而难听的语言。兽人语没有自己的文字，但可以借用矮人语的文字进行书写。
 """
 
-Tiefling_article = """
+article_Tiefling = """
 # 提夫林 Tiefling
 > “但你也注意到人们看待你的方式了，魔鬼之子。”
 > 那双冷若冰霜的黑色眼睛似乎直穿她的内心，而他声音中突然透露出的严肃也震住了她。
@@ -636,7 +638,7 @@ Tiefling_article = """
 提夫林 Tiefling。人们会对半兽人采取比较实在的措施，然而提夫林不同。作为能使人产生超自然恐惧的对象，其邪恶的遗传特征无法隐藏而表露无遗，因此大多数人都会将其直接当成是来自九层地狱的魔鬼。当提夫林出现时，人们会警戒的监视着他，见到他时会特意绕开，而商家甚至会提早关店而将其拒之门外。
 """
 
-Tiefling_Names_article = """
+article_Tiefling_Names = """
 # 提夫林姓名 Tiefling Names
 提夫林的名字主要分为三个大类。那些出生在其他文明里的提夫林其名字通常也反映着该文明的传统。有的提夫林名字则是从炼狱语演化而来，甚至经历了世代的传承，并同时反映着他们的邪魔血统。而那些努力寻找生存空间的年轻提夫林通常会采用一个名字来展现一种美德，或者表达出一种理想。有些提夫林会认为其名字意味着崇高的追求。而另一些则认为其名字预示着残酷的命运。
 男性地狱名 Male Infernal Names：阿克门诺斯 Akmenos、阿姆农 Amnon、巴拉卡斯 Barakas、达玛柯斯 Damakos、埃克蒙 Ekemon、伊阿多斯 Iados、凯隆 Kairon、卢西斯 Leucis、米勒 Melech、摩达伊 Mordai、摩霍斯 Morthos、普莱欧斯Pelaios、斯卡摩斯 Skamos、德莱伊 Therai
@@ -644,7 +646,7 @@ Tiefling_Names_article = """
 美德”化名 “Virtue” Names：阿特（艺术）Art、卡里翁（不洁）Carrion、钱特（颂歌）Chant、克里德（信条）Creed、迪斯佩尔（绝望）Despair、艾克瑟李斯（美德）Excellence、菲尔（恐惧）Fear、格洛里（荣誉）Glory、霍普（希望）Hope、艾德尔（理想）Ideal、缪斯克（音乐）Music、诺希尔（漂泊）Nowhere、欧佩恩（放开）Open、珀伊渠（诗歌）Poetry、奎斯特（探寻）Quest、孪登（随意）Random、孪瓦伦斯（尊重）Reverence、索罗（哀伤）Sorrow、特玛里提（蛮勇）Temerity、托曼特（折磨）Torment、维尔利（厌倦）Weary
 """
 
-Tiefling_Traits_article = """
+article_Tiefling_Traits = """
 # 提夫林特质 Tiefling Traits
 提夫林们同享着他们来自炼狱的家族血统，以及因此而来的种族特质。
 # 属性值加成 Ability Score Increase。你的智力加 1，你的魅力加 2。

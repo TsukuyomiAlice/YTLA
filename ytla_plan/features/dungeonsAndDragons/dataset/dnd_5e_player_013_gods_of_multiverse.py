@@ -1,7 +1,7 @@
 # encode = utf-8
 
 
-DND_Pantheons_article = """
+article_DND_Pantheons = """
 # 附录 B：多元宇宙诸神 Gods of the Multiverse
 宗教是 D&D 多元宇宙生命的重要组成部分。其内诸神行走世间，牧师引导神圣之力，邪教团在地下巢穴举行黑暗献祭，闪光的圣武士矗立着有如对抗黑暗的灯塔，这一切都让人难以忽视或否认神祇的存在。
 在 D&D 世界中，人们会因应不同时间与环境敬拜不同的神祇。比如，在被遗忘国度中，人们可能为爱情能交上好运而向淑妮祈祷，去市场前先给渥金供奉，然后在肆虐的风暴到来前祈求塔洛斯息怒，而这一切甚至可能发生于同一天。很多人也会偏爱诸神中的一位，并遵循这位神祇的理念与教义成为其信徒。有些人甚至将自己完全奉献给某位特定的神祇，还可能作为其祭司或斗士躬行贯彻其理想。
@@ -183,7 +183,7 @@ LN 生命、光明 璀璨的水晶
 悠妲拉 Yondalla，半身人生育和保护女神 halfling goddess of ferlility & protection LG 生命 盾牌
 """
 
-Fantasy_historical_pantheons_article = """
+article_Fantasy_historical_pantheons = """
 # 现实史传奇幻神系 Fantasy-Historical Pantheons
 凯尔特、埃及、希腊以及北欧神系是现实人类发展史上曾经真实存在的古老宗教。撇开其真实的历史脉络后，经过重新系统的整合，这些神袛刚好可以在 D&D 的游戏中使用。
 

@@ -1,6 +1,6 @@
 # encode = utf-8
 
-conditions_article = """
+article_conditions = """
 # 附录 A：状态 Conditions
 生物的能力受状态的影响。特殊状态可能来源于法术、职业特性、怪物能力等因素。大部分状态对角色不利，例如目盲。
 但也有少数状态对角色有利，例如隐形。
