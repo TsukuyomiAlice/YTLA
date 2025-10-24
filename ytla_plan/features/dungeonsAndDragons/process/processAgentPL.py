@@ -15,6 +15,7 @@ from ytla_plan.features.dungeonsAndDragons.prompt import (
 
 def topic_word_list():
     topics = datasetJsonPicker.generate_topic_key_list()
+    print(topics)
     return topics
 
 
@@ -84,7 +85,6 @@ def select_keyword_topics(request_prompt: str, temperature=0.0) -> str:
 
 def select_keyword_list(topic_chat, request_prompt: str, temperature=0.0) -> str:
     keyword_list = create_keyword_list(eval(topic_chat))
-    print(keyword_list)
     system_prompt = promptGuideKeywordList.prompt
     message_list = contentHandler.add_system_message([], system_prompt)
     message_list = contentHandler.add_system_message(message_list, str(json.dumps(keyword_list, ensure_ascii=False)))
@@ -133,4 +133,4 @@ def query(chat):
     guide_answer(keyword_chat, question_keywords, chat)
     print("=" * 55)
 
-query("在你的知识库里，哪些章节描述了如何创建一个地下城迷宫的方法？")
+query("默认的游戏版本中可以获得哪些法杖？")

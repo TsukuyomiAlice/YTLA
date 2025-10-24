@@ -3229,7 +3229,7 @@ magic_item_withering_staff = """
 """
 
 magic_item_earth_elementals_stone = """
-# 命令元素石核 Stone of Controlling EarthElementals
+# 命令元素石核 Stone of Controlling Earth Elementals
 奇物，珍稀
 只要这块石头与地面接触，你就可以用一个动作说出它的命令语并召唤一个土元素 earth elemental，如同你施展了召唤元素生物 conjure elemental 法术。直到次日黎明前石头无法再次启动。命令元素石核重 5 磅。
 幸运石 Stone of Good Luck (Luckstone)奇物，非普通（需同调）把这块光亮的玛瑙 agate 带在身上时，你在属性检定和豁免获得+1 加值。
