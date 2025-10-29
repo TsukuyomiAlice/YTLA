@@ -1,6 +1,6 @@
 # encode = utf-8
 
-question_1 = """
+question_1_1 = """
 # DRAG DROP -
 You have 100 chatbots that each has its own Language Understanding model.
 Frequently, you must add the same phrases to each model.
@@ -47,7 +47,7 @@ Box 2: PhraselistCreateObject -
 https://docs.microsoft.com/en-us/azure/cognitive-services/luis/client-libraries-rest-api
 """
 
-question_2 = """
+question_1_2 = """
 # DRAG DROP -
 You plan to use a Language Understanding application named app1 that is deployed to a container.
 App1 was developed by using a Language Understanding authoring resource named lu1.
@@ -97,7 +97,7 @@ Run the container, with the required input mount and billing settings.
 https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-container-howto
 """
 
-question_3 = """
+question_1_3 = """
 # QUESTION
 You need to build a chatbot that meets the following requirements:
 ✑ Supports chit-chat, knowledge base, and multilingual models
@@ -122,7 +122,7 @@ A, B, D: Dispatch uses sample utterances for each of your bot's different tasks 
 https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/ https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/overview/overview
 """
 
-question_4 = """
+question_1_4 = """
 # QUESTION
 Your company wants to reduce how long it takes for employees to log receipts in expense reports. All the receipts are in English.
 You need to extract top-level information from the receipts, such as the vendor and the transaction total. The solution must minimize development effort.
@@ -142,7 +142,7 @@ Form Recognizer is composed of custom document processing models, prebuilt model
 https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer
 """
 
-question_5 = """
+question_1_5 = """
 # HOTSPOT -
 You need to create a new resource that will be used to perform sentiment analysis and optical character recognition (OCR). The solution must meet the following requirements:
 ✑ Use a single key and endpoint to access multiple services.
@@ -187,7 +187,7 @@ https://docs.microsoft.com/en-us/rest/api/deviceupdate/resourcemanager/accounts/
 https://www.analyticsvidhya.com/blog/2020/12/microsoft-azure-cognitive-services-api-for-ai-development
 """
 
-question_6 = """
+question_1_6 = """
 # QUESTION
 You are developing a new sales system that will process the video and text from a public-facing website.
 You plan to monitor the sales system to ensure that it provides equitable results regardless of the user's location or background.
@@ -209,7 +209,7 @@ Reference:
 https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/responsible-ai
 """
 
-question_7 = """
+question_1_7 = """
 # DRAG DROP -
 You plan to use containerized versions of the Anomaly Detector API on local devices for testing and in on-premises datacenters.
 You need to ensure that the containerized deployments meet the following requirements:
@@ -243,11 +243,10 @@ Use the docker run command to run the containers.
 https://docs.microsoft.com/en-us/azure/container-registry/container-registry-intro
 """
 
-question_8 = """
+question_1_8 = """
 # HOTSPOT -
 You plan to deploy a containerized version of an Azure Cognitive Services service that will be used for text analysis.
-You configure https://contoso.cognitiveservices.azure.com as the endpoint URI for the service, and you pull the latest version of the Text Analytics
-Sentiment Analysis container.
+You configure https://contoso.cognitiveservices.azure.com as the endpoint URI for the service, and you pull the latest version of the Text Analytics Sentiment Analysis container.
 You need to run the container on an Azure virtual machine by using Docker.
 How should you complete the command? To answer, select the appropriate options in the answer area.
 NOTE: Each correct selection is worth one point.
@@ -282,7 +281,7 @@ Reference:
 https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-install-containers?tabs=sentiment
 """
 
-question_9 = """
+question_1_9 = """
 # QUESTION
 You have the following C# method for creating Azure Cognitive Services resources programmatically.
 static void create_resource (CognitiveServicesManagementClient client, string resource_name, string kind, string account_tier, string location)
@@ -312,7 +311,7 @@ https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-api
 https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/limits-and-quotas
 """
 
-question_10 = """
+question_1_10 = """
 # QUESTION 
 You successfully run the following HTTP request.
 POST https://management.azure.com/subscriptions/18c51a87-3a69-47a8-aedc-a54745f708a1/resourceGroups/RG1/providers/Microsoft.CognitiveServices/accounts/contoso1/regenerateKey?api-version=2017-04-18
@@ -334,7 +333,7 @@ Reference:
 https://docs.microsoft.com/en-us/rest/api/cognitiveservices/accountmanagement/accounts/regeneratekey
 """
 
-question_11 = """
+question_1_11 = """
 # QUESTION 
 You build a custom Form Recognizer model.
 You receive sample les to use for training the model as shown in the following table.
@@ -369,7 +368,7 @@ File size must be less than 50 MB.
 https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer/overview
 """
 
-question_12 = """
+question_1_12 = """
 # QUESTION 
 A customer uses Azure Cognitive Search.
 The customer plans to enable a server-side encryption and use customer-managed keys (CMK) stored in Azure.
@@ -389,7 +388,7 @@ ABE
 https://docs.microsoft.com/en-us/azure/search/search-security-overview
 """
 
-question_13 = """
+question_1_13 = """
 # QUESTION 
 You are developing a new sales system that will process the video and text from a public-facing website.
 You plan to notify users that their data has been processed by the sales system.
@@ -406,7 +405,7 @@ Reference:
 https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/responsible-ai
 """
 
-question_14 = """
+question_1_14 = """
 # SCENARIO
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
 After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
@@ -429,7 +428,7 @@ Private Link service can be accessed from approved private endpoints in any publ
 https://docs.microsoft.com/en-us/azure/private-link/private-link-overview
 """
 
-question_15 = """
+question_1_15 = """
 # SCENARIO
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
 After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
@@ -451,7 +450,7 @@ Instead deploy service1 and a private (not public) endpoint to a new virtual net
 https://docs.microsoft.com/en-us/azure/private-link/private-link-overview
 """
 
-question_16 = """
+question_1_16 = """
 # SCENARIO
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
 After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
@@ -473,7 +472,7 @@ Instead deploy service1 and a private (not public) endpoint to a new virtual net
 https://docs.microsoft.com/en-us/azure/private-link/private-link-overview
 """
 
-question_17 = """
+question_1_17 = """
 # QUESTION
 You plan to perform predictive maintenance.
 You collect IoT sensor data from 100 industrial machines for a year. Each machine has 50 different sensors that generate data at one-minute
@@ -489,7 +488,7 @@ D. Custom Vision
 A
 """
 
-question_18 = """
+question_1_18 = """
 # HOTSPOT -
 You are developing a streaming Speech to Text solution that will use the Speech SDK and MP3 encoding.
 You need to develop a method to convert speech to text for streaming MP3 data.
@@ -515,7 +514,7 @@ AudioStreamFormat.getCompressedFormat, SpeechRecognizer
 https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/how-to-use-codec-compressed-audio-input-streams?tabs=debian&pivots=programming- language-csharp
 """
 
-question_19 = """
+question_1_19 = """
 # HOTSPOT -
 You are developing an internet-based training solution for remote learners.
 Your company identifies that during the training, some learners leave their desk for long periods or become distracted.
@@ -535,7 +534,7 @@ Face, Face, Speech
 https://docs.microsoft.com/en-us/azure/cognitive-services/what-are-cognitive-services
 """
 
-question_20 = """
+question_1_20 = """
 # QUESTION
 You plan to provision a QnA Maker service in a new resource group named RG1.
 In RG1, you create an App Service plan named AP1.
@@ -554,7 +553,7 @@ DE
 https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/how-to/set-up-qnamaker-service-azure?tabs=v1#delete-azure-resources
 """
 
-question_21 = """
+question_1_21 = """
 # QUESTION
 You are building a language model by using a Language Understanding (classic) service.
 You create a new Language Understanding (classic) resource.
@@ -571,7 +570,7 @@ B
 https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-how-to-collaborate
 """
 
-question_22 = """
+question_1_22 = """
 # SCENARIO
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
 After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
@@ -595,7 +594,7 @@ A simple x to most throttling issues is to throw more resources at the search se
 https://docs.microsoft.com/en-us/azure/search/search-performance-analysis
 """
 
-question_23 = """
+question_1_23 = """
 # DRAG DROP -
 You need to develop an automated call handling system that can respond to callers in their own language. The system will support only French and English.
 Which Azure Cognitive Services service should you use to meet each requirement? To answer, drag the appropriate services to the correct requirements. Each service may be used once, more than once, or not at all. You may need to drag the split bat between panes or scroll to view content.
@@ -628,7 +627,7 @@ https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos
 https://docs.microsoft.com/en-us/azure/cognitive-services/translator/translator-overview
 """
 
-question_24 = """
+question_1_24 = """
 # QUESTION
 You have receipts that are accessible from a URL.
 You need to extract data from the receipts by using Form Recognizer and the SDK. The solution must use a prebuilt model.
@@ -653,7 +652,7 @@ Uri(receiptUrl)).WaitForCompletionAsync();
 https://docs.microsoft.com/en-us/azure/applied-ai-services/form-recognizer/quickstarts/client-library
 """
 
-question_25 = """
+question_1_25 = """
 # QUESTION
 You have a collection of 50,000 scanned documents that contain text.
 You plan to make the text available through Azure Cognitive Search.
@@ -673,7 +672,7 @@ The Computer Vision API uses text recognition APIs to extract and recognize text
 https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/cognitive-search-with-skillsets
 """
 
-question_26 = """
+question_1_26 = """
 # SCENARIO
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
 After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
@@ -698,7 +697,7 @@ Note: A simple x to most throttling issues is to throw more resources at the sea
 https://docs.microsoft.com/en-us/azure/search/search-performance-analysis
 """
 
-question_27 = """
+question_1_27 = """
 # SCENARIO
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
 After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
@@ -724,7 +723,7 @@ Note: A simple x to most throttling issues is to throw more resources at the sea
 https://docs.microsoft.com/en-us/azure/search/search-performance-analysis
 """
 
-question_28 = """
+question_1_28 = """
 # SCENARIO
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
 After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
@@ -752,7 +751,7 @@ The service could be an Azure service such as:
 https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-overview
 """
 
-question_29 = """
+question_1_29 = """
 # QUESTION
 You have a Language Understanding resource named lu1.
 You build and deploy an Azure bot named bot1 that uses lu1.
@@ -776,7 +775,7 @@ Not B: The Active learning suggestions feature allows you to improve the quality
 https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/direct-line-speech
 """
 
-question_30 = """
+question_1_30 = """
 # HOTSPOT -
 You are building an app that will process incoming email and direct messages to either French or English language support teams.
 Which Azure Cognitive Services API should you use? To answer, select the appropriate options in the answer area.
@@ -811,7 +810,7 @@ https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v
 https://westcentralus.dev.cognitive.microsoft.com/docs/services/TextAnalytics-v3-1/operations/EntitiesRecognitionGenera
 """
 
-question_31 = """
+question_1_31 = """
 # QUESTION
 You have an Azure Cognitive Search instance that indexes purchase orders by using Form Recognizer.
 You need to analyze the extracted information by using Microsoft Power BI. The solution must minimize development effort.
@@ -835,7 +834,7 @@ Not File: File is used when you need to save normalized, binary image les.
 https://docs.microsoft.com/en-us/azure/search/knowledge-store-projection-overview
 """
 
-question_32 = """
+question_1_32 = """
 # SCENARIO
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
 After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
@@ -861,7 +860,7 @@ reason why throttling is occurring at all.
 https://docs.microsoft.com/en-us/azure/search/search-performance-analysis
 """
 
-question_33 = """
+question_1_33 = """
 # SIMULATION
 You need to create a Text Analytics service named Text12345678, and then enable logging for Text12345678. The solution must ensure that any changes to Text12345678 will be stored in a Log Analytics workspace.
 To complete this task, sign in to the Azure portal.
@@ -886,7 +885,7 @@ It can take up to two hours before logging data is available to query and analyz
 https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account https://docs.microsoft.com/en-us/azure/cognitive-services/diagnostic-logging
 """
 
-question_34 = """
+question_1_34 = """
 # SIMULATION
 You need to create a search service named search12345678 that will index a sample Azure Cosmos DB database named hotels-sample. The solution must ensure that only English language fields are retrievable.
 To complete this task, sign in to the Azure portal.
@@ -912,7 +911,7 @@ Step 10: Continue and finish the wizard.
 https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account https://docs.microsoft.com/en-us/azure/search/search-get-started-portal
 """
 
-question_35 = """
+question_1_35 = """
 # SIMULATION
 You plan to create a solution to generate captions for images that will be read from Azure Blob Storage.
 You need to create a service in Azure Cognitive Services for the solution. The service must be named captions12345678 and must use the Free pricing tier.
@@ -934,7 +933,7 @@ In Connect to your data, choose Azure Blob Storage. Choose an existing connectio
 https://docs.microsoft.com/en-us/azure/search/search-create-service-portal https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-ocr
 """
 
-question_36 = """
+question_1_36 = """
 # SIMULATION
 You need to create a Form Recognizer resource named fr12345678.
 Use the Form Recognizer sample labeling tool at https://fott-2-1.azurewebsites.net/ to analyze the invoice located in the
@@ -958,7 +957,7 @@ Step 9: Save the results as C:\Resources\Invoices\Results.json.
 https://docs.microsoft.com/en-us/azure/applied-ai-services/form-recognizer/quickstarts/try-sample-label-tool
 """
 
-question_37 = """
+question_1_37 = """
 # QUESTION
 You have a factory that produces food products.
 You need to build a monitoring solution for staff compliance with personal protective equipment (PPE) requirements. The solution must meet the following requirements:
@@ -983,7 +982,7 @@ Features include face detection that perceives facial features and attributes su
 https://azure.microsoft.com/en-us/services/cognitive-services/face/
 """
 
-question_38 = """
+question_1_38 = """
 # QUESTION
 You have an Azure Cognitive Search solution and a collection of blog posts that include a category eld.
 You need to index the posts. The solution must meet the following requirements:
@@ -1009,7 +1008,7 @@ Fields have data types and attributes. The check boxes across the top are index 
 https://docs.microsoft.com/en-us/azure/search/search-get-started-portal
 """
 
-question_39 = """
+question_1_39 = """
 # SIMULATION
 Use the following login credentials as needed:
 To enter your username, place your cursor in the Sign in box and click on the username below.
@@ -1047,7 +1046,7 @@ https://docs.microsoft.com/en-us/learn/modules/analyze-images-computer-vision/3-
 https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/overview-image-analysis
 """
 
-question_40 = """
+question_1_40 = """
 # SIMULATION
 Use the following login credentials as needed:
 To enter your username, place your cursor in the Sign in box and click on the username below.
@@ -1085,7 +1084,7 @@ https://docs.microsoft.com/en-us/learn/modules/analyze-images-computer-vision/3-
 https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/overview-image-analysis
 """
 
-question_41 = """
+question_1_41 = """
 # SIMULATION
 Use the following login credentials as needed:
 To enter your username, place your cursor in the Sign in box and click on the username below.
@@ -1118,7 +1117,7 @@ Step 3: Save the insights to the C:\Resources\Video\Insights.json folder.
 https://docs.microsoft.com/en-us/azure/azure-video-indexer/use-editor-create-project
 """
 
-question_42 = """
+question_1_42 = """
 # SIMULATION
 Use the following login credentials as needed:
 To enter your username, place your cursor in the Sign in box and click on the username below.
@@ -1156,7 +1155,7 @@ Open the configuration file, C:\Resources\Caption\Params.json. and update the co
 https://microsoftlearning.github.io/AI-102-AIEngineer/Instructions/15-computer-vision.html
 """
 
-question_43 = """
+question_1_43 = """
 # SIMULATION
 Use the following login credentials as needed:
 To enter your username, place your cursor in the Sign in box and click on the username below.
@@ -1190,7 +1189,7 @@ Integrate with private DNS zone: Select Yes.
 https://docs.microsoft.com/en-us/azure/private-link/tutorial-private-endpoint-webapp-portal
 """
 
-question_44 = """
+question_1_44 = """
 # SIMULATION
 Use the following login credentials as needed:
 To enter your username, place your cursor in the Sign in box and click on the username below.
@@ -1218,7 +1217,7 @@ Reference:
 https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/azure-maps/how-to-manage-authentication.md
 """
 
-question_45 = """
+question_1_45 = """
 # QUESTION
 You have an Azure IoT hub that receives sensor data from machinery.
 You need to build an app that will perform the following actions:
@@ -1237,7 +1236,7 @@ D. Anomaly Detector
 D
 """
 
-question_46 = """
+question_1_46 = """
 # QUESTION
 You have an app that analyzes images by using the Computer Vision API.
 You need to configure the app to provide an output for users who are vision impaired. The solution must provide the output in complete sentences.
@@ -1251,7 +1250,7 @@ D. describeImageInStreamAsync
 D
 """
 
-question_47 = """
+question_1_47 = """
 # DRAG DROP
 You have a Custom Vision service project that performs object detection. The project uses the General domain for classification and contains a trained model.
 You need to export the model for use on a network that is disconnected from the internet.
@@ -1270,7 +1269,7 @@ Retrain the model.
 Export the model.
 """
 
-question_48 = """
+question_1_48 = """
 # QUESTION
 You are building an AI solution that will use Sentiment Analysis results from surveys to calculate bonuses for customer service staff.
 You need to ensure that the solution meets the Microsoft responsible AI principles.
@@ -1284,7 +1283,7 @@ D. Publish the raw survey data to a central location and provide the staff with 
 A
 """
 
-question_49 = """
+question_1_49 = """
 # QUESTION
 You have an Azure subscription that contains a Language service resource named ta1 and a virtual network named vnet1.
 You need to ensure that only resources in vnet1 can access ta1.
@@ -1298,7 +1297,7 @@ D. a Language service container for ta1
 C
 """
 
-question_50 = """
+question_1_50 = """
 # QUESTION
 You are developing a monitoring system that will analyze engine sensor data, such as rotation speed, angle, temperature, and pressure. The
 system must generate an alert in response to atypical values.
@@ -1312,7 +1311,7 @@ D. Univariate Anomaly Detection
 C
 """
 
-question_51 = """
+question_1_51 = """
 # QUESTION
 You have an app named App1 that uses an Azure Cognitive Services model to identify anomalies in a time series data stream.
 You need to run App1 in a location that has limited connectivity. The solution must minimize costs.
@@ -1326,7 +1325,7 @@ D. the Docker Engine
 C
 """
 
-question_52 = """
+question_1_52 = """
 # HOTSPOT
 You have an Azure Cognitive Search resource named Search1 that is used by multiple apps.
 You need to secure Search1. The solution must meet the following requirements:
@@ -1343,7 +1342,7 @@ To limit access to queries: ______ (/ Create a private endpoint. / Use Azure rol
 Create a private endpoint., Use key authorization.
 """
 
-question_53 = """
+question_1_53 = """
 # QUESTION
 You are building a solution that will detect anomalies in sensor data from the previous 24 hours.
 You need to ensure that the solution scans the entire dataset, at the same time, for anomalies.
@@ -1356,7 +1355,7 @@ C. change points
 A
 """
 
-question_54 = """
+question_1_54 = """
 # DRAG DROP
 
 You are building an app that will scan confidential documents and use the Language service to analyze the contents.
@@ -1379,7 +1378,7 @@ Provision an on-premises Kubernetes cluster that is isolated from the internet.
 Run the container and specify an API key and the Endpoint URL of the Cognitive Services resource.
 """
 
-question_55 = """
+question_1_55 = """
 # HOTSPOT
 
 You have an Azure subscription that has the following configurations:
@@ -1406,7 +1405,7 @@ https://management.azure.com/______/resourceGroups/OCRProject/providers/______/a
 subscriptions/8d3591aa-96b8-4737-ad09-00f9b1ed35ad, Microsoft.CognitiveServices
 """
 
-question_56 = """
+question_1_56 = """
 # QUESTION
 You have an Azure subscription that contains an Anomaly Detector resource.
 You deploy a Docker host server named Server1 to the on-premises network.
@@ -1421,7 +1420,7 @@ D. Mounts
 B
 """
 
-question_57 = """
+question_1_57 = """
 # QUESTION
 You are building an app that will use the Speech service.
 You need to ensure that the app can authenticate to the service by using a Microsoft Azure Active Directory (Azure AD), part of Microsoft Entra, token.
@@ -1437,7 +1436,7 @@ E. Create a Conditional Access policy.
 CE
 """
 
-question_58 = """
+question_1_58 = """
 # HOTSPOT
 
 You plan to deploy an Azure OpenAI resource by using an Azure Resource Manager (ARM) template.
@@ -1466,7 +1465,7 @@ Answer Area
 "capacity", 100
 """
 
-question_59 = """
+question_1_59 = """
 # DRAG DROP
 
 You have an app that manages feedback.
@@ -1487,7 +1486,7 @@ Provision the Language service resource in Azure.
 Run the container and query the prediction endpoint.
 """
 
-question_60 = """
+question_1_60 = """
 # HOTSPOT
 
 You have an Azure OpenAI resource named AI1 that hosts three deployments of the GPT 3.5 model. Each deployment is optimized for a unique workload.
@@ -1502,4 +1501,575 @@ Connect to the deployment by using: ______ (An API key / A deployment endpoint /
 
 # Correct Answer:
 A bearer token, A deployment endpoint
+"""
+
+question_1_61 = """
+# QUESTION
+You build a bot by using the Microsoft Bot Framework SDK.
+You start the bot on a local computer.
+You need to validate the functionality of the bot.
+What should you do before you connect to the bot?
+A. Run the Bot Framework Emulator.
+B. Run the Bot Framework Composer.
+C. Register the bot with Azure Bot Service.
+D. Run Windows Terminal.
+
+# Correct Answer:
+A
+"""
+
+question_1_62 = """
+# QUESTION
+You have an Azure OpenAI model named AI1.
+You are building a web app named App1 by using the Azure OpenAI SDK.
+You need to configure App1 to connect to AI1.
+What information must you provide?
+A. the endpoint, key, and model name
+B. the deployment name, key, and model name
+C. the deployment name, endpoint, and key
+D. the endpoint, key, and model type
+
+# Correct Answer:
+C
+"""
+
+question_1_63 = """
+# QUESTION
+You are building a solution in Azure that will use Azure Cognitive Service for Language to process sensitive customer data.
+You need to ensure that only specific Azure processes can access the Language service. The solution must minimize administrative effort.
+What should you include in the solution?
+A. IPsec rules
+B. Azure Application Gateway
+C. a virtual network gateway
+D. virtual network rules
+
+# Correct Answer:
+D
+"""
+
+question_1_64 = """
+# QUESTION
+You plan to perform predictive maintenance.
+You collect IoT sensor data from 100 industrial machines for a year. Each machine has 50 different sensors that generate data at one-minute intervals. In total, you have 5,000 time series datasets.
+You need to identify unusual values in each time series to help predict machinery failures.
+Which Azure service should you use?
+A. Azure AI Computer Vision
+B. Cognitive Search
+C. Azure AI Document Intelligence
+D. Azure AI Anomaly Detector
+
+# Correct Answer:
+D
+"""
+
+question_1_65 = """
+# HOTSPOT
+
+You plan to deploy a containerized version of an Azure Cognitive Services service that will be used for sentiment analysis.
+You configure https://contoso.cognitiveservices.azure.com as the endpoint URI for the service.
+You need to run the container on an Azure virtual machine by using Docker.
+How should you complete the command? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area 
+docker run --rm -it -p 5000:5000 --memory 8g --cpus 1 \  
+______ \ 
+(
+http://contoso.blob.core.windows.net
+https://contoso.cognitiveservices.azure.com
+mcr.microsoft.com/azure-cognitive-services/textanalytics/keyphrase
+mcr.microsoft.com/azure-cognitive-services/textanalytics/sentiment
+)
+Eula=accept \ 
+Billing= ______ \ 
+(
+http://contoso.blob.core.windows.net
+https://contoso.cognitiveservices.azure.com
+mcr.microsoft.com/azure-cognitive-services/textanalytics/keyphrase
+mcr.microsoft.com/azure-cognitive-services/textanalytics/sentiment
+)
+apiKey=xxxxxxxxxxxxxxxxxx
+
+# Correct Answer:
+mcr.microsoft.com/azure-cognitive-services/textanalytics/sentiment, https://contoso.cognitiveservices.azure.com
+"""
+
+question_1_66 = """
+# QUESTION
+You are developing a system that will monitor temperature data from a data stream. The system must generate an alert in response to a typical values. The solution must minimize development effort.
+What should you include in the solution?
+A. Multivariate Anomaly Detection
+B. Azure Stream Analytics
+C. metric alerts in Azure Monitor
+D. Univariate Anomaly Detection
+
+# Correct Answer:
+D
+"""
+
+question_1_67 = """
+# QUESTION
+You have a Microsoft OneDrive folder that contains a 20-GB video le named File1.avi.
+You need to index File1.avi by using the Azure Video Indexer website.
+What should you do?
+A. Upload File1.avi to the www.youtube.com webpage, and then copy the URL of the video to the Azure AI Video Indexer website.
+B. Download File1.avi to a local computer, and then upload the le to the Azure AI Video Indexer website.
+C. From OneDrive, create a download link, and then copy the link to the Azure AI Video Indexer website.
+D. From OneDrive, create a sharing link for File1.avi, and then copy the link to the Azure AI Video Indexer website.
+
+# Correct Answer:
+C
+"""
+
+question_1_68 = """
+# QUESTION
+You have an Azure subscription that contains an Azure AI Service resource named CSAccount1 and a virtual network named VNet1.
+CSAaccount1 is connected to VNet1.
+You need to ensure that only specific resources can access CSAccount1. The solution must meet the following requirements:
+• Prevent external access to CSAccount1.
+• Minimize administrative effort.
+Which two actions should you perform? Each correct answer presents part of the solution.
+NOTE: Each correct answer is worth one point.
+A. In VNet1, enable a service endpoint for CSAccount1.
+B. In CSAccount1, configure the Access control (IAM) settings.
+C. In VNet1, modify the virtual network settings.
+D. In VNet1, create a virtual subnet.
+E. In CSAccount1, modify the virtual network settings.
+
+# Correct Answer:
+AD
+"""
+
+question_1_69 = """
+# QUESTION
+You are building an internet-based training solution. The solution requires that a user's camera and microphone remain enabled.
+You need to monitor a video stream of the user and detect when the user asks an instructor a question. The solution must minimize development effort.
+What should you include in the solution?
+A. speech-to-text in the Azure AI Speech service
+B. language detection in Azure AI Language Service
+C. the Face service in Azure AI Vision
+D. object detection in Azure AI Custom Vision
+
+# Correct Answer:
+A
+"""
+
+question_1_70 = """
+# QUESTION
+You have an Azure DevOps pipeline named Pipeline1 that is used to deploy an app. Pipeline1 includes a step that will create an Azure AI
+services account.
+You need to add a step to Pipeline1 that will identify the created Azure AI services account. The solution must minimize development effort.
+Which Azure Command-Line Interface (CLI) command should you run?
+A. az resource link
+B. az cognitiveservices account network-rule
+C. az cognitiveservices account show
+D. az account list
+
+# Correct Answer:
+C
+"""
+
+question_1_71 = """
+# HOTSPOT
+You have 1,000 scanned images of hand-written survey responses. The surveys do NOT have a consistent layout.
+You have an Azure subscription that contains an Azure AI Document Intelligence resource named AIdoc1.
+You open Document Intelligence Studio and create a new project.
+You need to extract data from the survey responses. The solution must minimize development effort.
+To where should you upload the images, and which type of model should you use? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area 
+Upload to: ______ (An Azure Cosmos DB account / An Azure Files share / An Azure Storage account)
+Model type: ______ (Custom neural / Custom template / Identity document (ID))
+
+# Correct Answer:
+An Azure Storage account, Custom neural
+"""
+
+question_2_1 = """
+# HOTSPOT
+
+You are developing an application that will use the Computer Vision client library. The application has the following cod
+
+public async TaskAnalyzeImage(ComputerVisionClient client, string localImage)
+{
+    List<VisualFeatureTypes> features = new List<VisualFeatureTypes>()
+        {
+            VisualFeatureTypes.Description,
+            VisualFeatureTypes.Tags,
+        };
+    using (Stream imageStream = File.OpenRead(localImage))
+    {
+        try
+        {
+            imageAnalysis results = await client.AnalyzeImageInStreamAsync(imageStream, features);
+            foreach (var caption in results.Description.Captions)
+            {
+                Console.WriteLine($"(caption.Text) with confidence (caption.Confidence)");
+            }
+            foreach (var tag in results.Tags)
+            {
+                Console.WriteLine($"{tag.Name} {tag.Confidence}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+}
+
+For each of the following statements, select Yes if the statement is true. Otherwise, select No.
+NOTE: Each correct selection is worth one point.
+
+Hot Area
+Statements
+The code will perform face recognition.
+The code will list tags and their associate confidence.
+The code will read a file from the local file system.
+
+# Correct Answer:
+No, Yes, No
+
+Box 1: No -
+Box 2: Yes -
+The ComputerVision.analyzeImageInStreamAsync operation extracts a rich set of visual features based on the image content.
+Box 3: No -
+Images will be read from a stream.
+
+# Reference:
+https://docs.microsoft.com/en-us/java/api/com.microsoft.azure.cognitiveservices.vision.computervision.computervision.analyzeimageinstreamasync
+"""
+
+question_2_2 = """
+# QUESTION
+
+You are developing a method that uses the Computer Vision client library. The method will perform optical character recognition (OCR) in images. The method has the following code.
+
+public static async Task ReadFileUrl(ComputerVisionClient client, string urlFile)
+{
+    const int numberOfcharsInOperationId = 36;
+    
+    var txtHeaders = await client.ReadAsync(urlFile, language: "en");
+    
+    string opLocation = textHeaders.OperationLocation;
+    string operationId = opLocation.Substring(opLocation.Length - numberOfcharsInOperationId);
+    
+    ReadOperationResult results;
+    
+    results = await client.GetReadResultAsync(Guid.Parse(operationId));
+    
+    var textUrlFileResults = results.AnalyzeResult.ReadResults;
+    foreach (ReadResult page in textUrlFileResults)
+    {
+        foreach (Line line in page.Lines)
+        {
+            Console.WriteLine(line.Text);
+        }
+    }
+}
+
+During testing, you discover that the call to the GetReadResultAsync method occurs before the read operation is complete.
+You need to prevent the GetReadResultAsync method from proceeding until the read operation is complete.
+Which two actions should you perform? Each correct answer presents part of the solution.
+NOTE: Each correct selection is worth one point.
+A. Remove the Guid.Parse(operationId) parameter.
+B. Add code to verify the results.Status value.
+C. Add code to verify the status of the txtHeaders.Status value.
+D. Wrap the call to GetReadResultAsync within a loop that contains a delay.
+
+# Correct Answer:
+BD
+
+Example code :
+do
+{
+results = await client.GetReadResultAsync(Guid.Parse(operationId));
+}
+while ((results.Status == OperationStatusCodes.Running || results.Status == OperationStatusCodes.NotStarted));
+
+Reference:
+https://github.com/Azure-Samples/cognitive-services-quickstart-code/blob/master/dotnet/ComputerVision/ComputerVisionQuickstart.cs
+"""
+
+question_2_3 = """
+# HOTSPOT
+You have a Computer Vision resource named contoso1 that is hosted in the West US Azure region.
+You need to use contoso1 to make a different size of a product photo by using the smart cropping feature.
+How should you complete the API URL? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Hot Area:
+curl -H "Ocp-Apim-Subscription-Key: xxx" -o "sample.png" -H "Content-Type: application/json" ______/vision/v3.1/______?width=100&height=100&smartCropping=true" -d "{\"url\":\"https://upload.litwareinc.org/litware/bicycle.jpg\"}"
+("https:api.projectoxford.ai / "https://contoso1.cognitiveservices.azure.com / "https://westus.api.cognitive.microsoft.com)
+(areaOfinterest / detect / generateThumbnail)
+
+# Correct Answer:
+"https://westus.api.cognitive.microsoft.com , generateThumbnail
+
+# Reference:
+https://westus.dev.cognitive.microsoft.com/docs/services/computer-vision-v3-2/operations/56f91f2e778daf14a499f21b
+https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/concept-generating-thumbnails#examples
+"""
+
+question_2_4 = """
+# DRAG DROP
+You are developing a webpage that will use the Azure Video Analyzer for Media (previously Video Indexer) service to display videos of internal company meetings.
+You embed the Player widget and the Cognitive Insights widget into the page.
+You need to configure the widgets to meet the following requirements:
+✑ Ensure that users can search for keywords.
+✑ Display the names and faces of people in the video.
+✑ Show captions in the video in English (United States).
+How should you complete the URL for each widget? To answer, drag the appropriate values to the correct targets. Each value may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content.
+NOTE: Each correct selection is worth one point.
+
+Select and Place:
+Values
+en-US
+false
+people,keywords
+people,search
+search
+true
+
+Answer Area
+Cognitive insights widget
+https://www.videoindexer.ai/embed/insights/<accountId>/<videoId>/?widgets=______controls=______
+Player Widget
+https://www.videoindexer.ai/embed/player/<accountId>/<videoId>/?showcaptions=______captions=______
+
+# Correct Answer
+people,keywords, search, true, en-US
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/azure-video-analyzer/video-analyzer-for-media-docs/video-indexer-embed-widgets
+"""
+
+question_2_5 = """
+# DRAG DROP
+You train a Custom Vision model to identify a company's products by using the Retail domain.
+You plan to deploy the model as part of an app for Android phones.
+You need to prepare the model for deployment.
+Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.
+
+Select and Place:
+Change the model domain.
+Retrain the model.
+Test the model.
+Export the model.
+
+# Correct Answer
+Change the model domain.
+Retrain the model.
+Test the model.
+Export the model.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/export-your-model
+"""
+
+question_2_6 = """
+# HOTSPOT
+You are developing an application to recognize employees' faces by using the Face Recognition API. Images of the faces will be accessible from a URI endpoint.
+The application has the following code.
+
+def add_face(subscription_key, person_group_id, person_id, image_uri):
+    headers = {
+        'Content-Type': 'application/json',
+        'Ocp-Apim-Subscription-Key': subscription_key
+        }
+    body = {
+        'url': image_uri
+        }
+    conn = httplib.HTTPSConnection('westus.api.cognitive.microsoft.com')
+    conn.request("POST", F"/face/v1.0/persongroups/{person_group_id}/persons/{person_id}', f'{body}', headers)')
+    response = conn.getresponse()
+    response_data = response.read()
+    
+For each of the following statements, select Yes if the statement is true. Otherwise, select No.
+NOTE: Each correct selection is worth one point.
+
+Hot Area:
+Statements
+The code will add a face image to a person object in a person group.
+The code will work for up to 10000 people.
+add_face can be called multiple times to add multiple face images to a person object.
+
+# Correct Answer:
+Yes, No, Yes
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/use-persondirectory
+"""
+
+question_2_7 = """
+# DRAG DROP
+
+You have a Custom Vision resource named acvdev in a development environment.
+You have a Custom Vision resource named acvprod in a production environment.
+In acvdev, you build an object detection model named obj1 in a project named proj1.
+You need to move obj1 to acvprod.
+Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and
+arrange them in the correct order.
+
+Select and Place:
+Actions
+Use the ExportProject endpoint on acvdev.
+Use the GetProjects endpoint on acvdev.
+Use the ImportProject endpoint on acvprod.
+Use the ExportIteration endpoint on acvdev.
+Use the GetIterations endpoint on acvdev.
+Use the UpdateProject endpoint on acvprod.
+
+# Correct Answer:
+Use the GetProjects endpoint on acvdev.
+Use the ExportProject endpoint on acvdev.
+Use the ImportProject endpoint on acvprod.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/copy-move-projects
+"""
+
+question_2_8 = """
+# DRAG DROP
+
+You are developing an application that will recognize faults in components produced on a factory production line. The components are specific to your business.
+You need to use the Custom Vision API to help detect common faults.
+Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.
+
+Select and Place:
+Actions
+Train the classifier model.
+Upload and tag images.
+Initialize the training dataset.
+Train the object detection model.
+Create a Project.
+
+# Correct Answer
+Create a Project.
+Upload and tag images.
+Train the classifier model.
+
+Step 1: Create a project
+Create a new project.
+Step 2: Upload and tag the images
+Choose training images. Then upload and tag the images.
+Step 3: Train the classier model.
+Train the classier
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-build-a-classier
+"""
+
+question_2_9 = """
+# HOTSPOT
+You are building a model that will be used in an iOS app.
+You have images of cats and dogs. Each image contains either a cat or a dog.
+You need to use the Custom Vision service to detect whether the images is of a cat or a dog.
+How should you configure the project in the Custom Vision portal? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Hot Area:
+Project Types: ______ (Classification / Object Detection)
+Classification Types: ______ (Multiclass (Single tag per image) / Multilabel (Multiple tags per image))
+Domains: ______ (Audit / Food / General / General(compact) / Landmarks / Landmarks(compact) / Retail / Retail(compact))
+
+# Correct Answer
+Classification / Multiclass (Single tag per image) / General
+
+Box 1: Classification
+Incorrect Answers:
+An object detection project is for detecting which objects, if any, from a set of candidates are present in an image.
+Box 2: Multiclass
+A multiclass Classification project is for classifying images into a set of tags, or target labels. An image can be assigned to one tag only.
+Incorrect Answers:
+A multilabel Classification project is similar, but each image can have multiple tags assigned to it.
+Box 3: General -
+General: Optimized for a broad range of image Classification tasks. If none of the other specific domains are appropriate, or if you're unsure of which domain to choose, select one of the General domains.
+
+Reference:
+https://cran.r-project.org/web/packages/AzureVision/vignettes/customvision.html
+"""
+
+question_2_10 = """
+# QUESTION
+You have an Azure Video Analyzer for Media (previously Video Indexer) service that is used to provide a search interface over company videos on your company's website.
+You need to be able to search for videos based on who is present in the video.
+What should you do?
+A. Create a person model and associate the model to the videos.
+B. Create person objects and provide face images for each object.
+C. Invite the entire staff of the company to Video Indexer.
+D. Edit the faces in the videos.
+E. Upload names to a language model.
+
+Correct Answer:
+A
+
+Video Indexer supports multiple Person models per account. Once a model is created, you can use it by providing the model ID of a specific Person model when uploading/indexing or reindexing a video. Training a new face for a video updates the specific custom model that the video was associated with.
+Note: Video Indexer supports face detection and celebrity recognition for video content. The celebrity recognition feature covers about one million faces based on commonly requested data source such as IMDB, Wikipedia, and top LinkedIn influencers. Faces that aren't recognized by the celebrity recognition feature are detected but left unnamed. Once you label a face with a name, the face and name get added to your account's Person model. Video Indexer will then recognize this face in your future videos and past videos.
+
+Reference:
+https://docs.microsoft.com/en-us/azure/media-services/video-indexer/customize-person-model-with-api
+"""
+
+question_2_11 = """
+# QUESTION 
+You use the Custom Vision service to build a classier.
+After training is complete, you need to evaluate the classier.
+Which two metrics are available for review? Each correct answer presents a complete solution.
+NOTE: Each correct selection is worth one point.
+A. recall
+B. F-score
+C. weighted accuracy
+D. precision
+E. area under the curve (AUC)
+
+Correct Answer:
+AD
+
+Custom Vision provides three metrics regarding the performance of your model: precision, recall, and AP.
+
+Reference:
+https://www.tallan.com/blog/2020/05/19/azure-custom-vision/
+"""
+
+question_2_12 = """
+# DRAG DROP
+You are developing a call to the Face API. The call must nd similar faces from an existing list named employeefaces. The employeefaces list contains 60,000 images.
+How should you complete the body of the HTTP request? To answer, drag the appropriate values to the correct targets. Each value may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content.
+NOTE: Each correct selection is worth one point.
+
+Select and Place:
+Values
+"faceListId"
+"LargeFaceListId"
+"matchFace"
+"matchPerson"
+
+Answer Area
+{
+"faceId": "18c51a87-3a69-47a8-aedc-a547745f708a1",
+______: "employeefaces"
+"maxNumOfCandidatesReturned": 1,
+"mode": ______
+}
+
+# Correct Answer
+"LargeFaceListId", "matchFace"
+
+Box 1: LargeFaceListID -
+LargeFaceList: Add a face to a specified large face list, up to 1,000,000 faces.
+Note: Given query face's faceId, to search the similar-looking faces from a faceId array, a face list or a large face list. A "faceListId" is
+created by FaceList - Create containing persistedFaceIds that will not expire. And a "largeFaceListId" is created by LargeFaceList - Create
+containing persistedFaceIds that will also not expire.
+Incorrect Answers:
+Not "faceListId": Add a face to a specified face list, up to 1,000 faces.
+Box 2: matchFace -
+Find similar has two working modes, "matchPerson" and "matchFace". "matchPerson" is the default mode that it tries to nd faces of the
+same person as possible by using internal same-person thresholds. It is useful to nd a known person's other photos. Note that an empty
+list will be returned if no faces pass the internal thresholds. "matchFace" mode ignores same-person thresholds and returns ranked similar
+faces anyway, even the similarity is low. It can be used in the cases like searching celebrity-looking faces.
+
+Reference:
+https://docs.microsoft.com/en-us/rest/api/faceapi/face/findsimilar
 """

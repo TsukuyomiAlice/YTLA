@@ -15697,7 +15697,7 @@ datas = [
     ["get off/start on the wrong foot", "IDIOM", "C2", "phrase", ""],
 ]
 
-from features.language.dao import daoModuleAssessmentCefr
+from features.languageEnglish.dao import daoModuleAssessmentCefr
 daoModuleAssessmentCefr.create_table()
 for data in datas:
     daoModuleAssessmentCefr.insert_data(data)

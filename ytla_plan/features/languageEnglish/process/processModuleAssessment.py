@@ -84,7 +84,7 @@ import random
 from core.modules.dao import daoModulePersistence, daoModules
 from core.frame.func.loggerConfig import process_log
 from core.frame.instance.instanceProcessToRoutes import Response
-from features.language.dao import daoModuleAssessmentCefr
+from features.languageEnglish.dao import daoModuleAssessmentCefr
 
 assessment_sheet = {
     "record_id": 0,
@@ -409,7 +409,7 @@ def collect_vocabulary(plan_id, vocabulary_module_id, sheet):
 
     # Calling processModuleVocabulary
     if vocabulary:
-        from features.language.process import processModuleVocabulary
+        from features.languageEnglish.process import processModuleVocabulary
         processModuleVocabulary.create_new_vocabulary_book(plan_id, vocabulary_module_id, 'Ann', vocabulary)
 
 

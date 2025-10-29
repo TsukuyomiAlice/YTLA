@@ -1,4 +1,4 @@
-from features.language.process import processModuleVocabulary
+from features.languageEnglish.process import processModuleVocabulary
 
 # processModuleVocabulary.create_new_vocabulary_book(2, 42, 'Ann', ['a', 'bag'])
 
