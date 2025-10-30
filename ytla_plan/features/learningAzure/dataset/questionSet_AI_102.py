@@ -2073,3 +2073,783 @@ faces anyway, even the similarity is low. It can be used in the cases like searc
 Reference:
 https://docs.microsoft.com/en-us/rest/api/faceapi/face/findsimilar
 """
+
+question_2_13 = """
+# DRAG DROP
+You are developing a photo application that will nd photos of a person based on a sample image by using the Face API.
+You need to create a POST request to nd the photos.
+How should you complete the request? To answer, drag the appropriate values to the correct targets. Each value may be used once, more than once, or not at all.
+You may need to drag the split bar between panes or scroll to view content.
+NOTE: Each correct selection is worth one point.
+
+Select and Place:
+Values
+detect
+findsimilars
+group
+identify
+matchFace
+matchPerson
+verify
+
+Answer Area
+POST {Endpoint}/face/v1.0/______
+Request Body
+{
+  "faceId": "c5c24a82-6845-4031-9d5d-989df9175426",
+  "largeFaceListId": "sample_list",
+  "maxNumOfCandidatesReturned": 10,
+  "mode": "______"
+}
+
+# Correct Answer
+detect, matchPerson
+
+Box 1: detect
+Face - Detect With Url: Detect human faces in an image, return face rectangles, and optionally with faceIds, landmarks, and attributes.
+POST {Endpoint}/face/v1.0/detect
+Box 2: matchPerson
+Find similar has two working modes, "matchPerson" and "matchFace". "matchPerson" is the default mode that it tries to nd faces of the same person as possible by using internal same-person thresholds. It is useful to nd a known person's other photos. Note that an empty list will be returned if no faces pass the internal thresholds. "matchFace" mode ignores same-person thresholds and returns ranked similar faces anyway, even the similarity is low. It can be used in the cases like searching celebrity-looking faces.
+
+# Reference:
+https://docs.microsoft.com/en-us/rest/api/faceapi/face/detectwithurl 
+https://docs.microsoft.com/en-us/rest/api/faceapi/face/ndsimilar
+"""
+
+question_2_14 = """
+# HOTSPOT
+You develop a test method to verify the results retrieved from a call to the Computer Vision API. The call is used to analyze the existence of company logos in images. The call returns a collection of brands named brands.
+You have the following code segment.
+
+for brand in image_analysis.brands:
+    if brand_confidence >= 0.75:
+         print(f"\nLogo of {brand_name} between {brand.rectangle_x}, {brand.rectangle_y} and {brand.rectangle_w}, {brand.rectangle_h}")
+
+For each of the following statements, select Yes if the statement is true. Otherwise, select No.
+NOTE: Each correct selection is worth one point.
+
+Hot Area:
+Statements
+The code will return the name of each detected brand with a confidence equal to or higher than 75 persent.
+The code will return coordinates for the top-left corner of the rectangle that contains the brand logo of the displayed brands.
+The code will return coordinates for the bottom-right corner of the rectangle that contains the brand logo of the displayed brands.
+
+# Correct Answer
+Yes, Yes, No
+
+Box 1: Yes
+Box 2: Yes
+Coordinates of a rectangle in the API refer to the top left corner.
+Box 3: No
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/concept-brand-detection
+"""
+
+question_2_15 = """
+# HOTSPOT
+You develop an application that uses the Face API.
+You need to add multiple images to a person group.
+How should you complete the code? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Hot Area:
+Parallel.For(0, PersonCount, async i =>
+{
+    Guid personId = persons[i].PersonId;
+    string personImageDir = $"/path/to/person/{i}/images";
+    foreach (string image in Directory.GetFiles(personImageDir, "*.jpg"))
+    {
+        using (______(File / Stream / Uri / Url) t = File.OpenRead(imagePath))
+        {
+            await faceClient.PersonGroupPerson.______(AddFaceFromStreamAsync / AddFaceFromUrlAsync / CreateAsync / GetAsync)(personGroupId, personId, t);
+        }
+    }
+});
+
+# Correct Answer
+Stream, AddFaceFromUrlAsync
+
+Box 1: Stream -
+The File.OpenRead(String) method opens an existing le for reading.
+Example: Open the stream and read it back.
+using (FileStream fs = File.OpenRead(path))
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/how-to-add-faces
+"""
+
+question_2_16 = """
+# QUESTION
+Your company uses an Azure Cognitive Services solution to detect faces in uploaded images. The method to detect the faces uses the following code.
+
+static async Task DetectFaces(string imageFilePath)
+{
+  HttpClient client = new HttpClient();
+  DefaultRequestHeaders.add("Ocp-Apim-Subscription-Key", subscriptionKey);
+  string requestParameter = "detectionModel=detection_01&returnFace=true&returnFaceLandmarks=false";
+  string uri = endpoint + "/face/v1.0/detect?" + requestParameters;
+  HttpResponseMessage response;
+  byte[] byteData = GetImagesAsByteArray(imageFilePath);
+  using (ByteArrayContent content = new ByteArrayContent(byteData))
+  {
+    Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
+    response = await PostAsync(uri, content);
+    string contentString = await Content.ReadAsStringAsync();
+    ProcessDetection(contentString);
+  }
+}
+
+You discover that the solution frequently fails to detect faces in blurred images and in images that contain sideways faces.
+You need to increase the likelihood that the solution can detect faces in blurred images and images that contain sideways faces.
+What should you do?
+A. Use a different version of the Face API.
+B. Use the Computer Vision service instead of the Face service.
+C. Use the Identify method instead of the Detect method.
+D. Change the detection model.
+
+# Correct Answer:
+D
+
+Evaluate different models.
+The best way to compare the performances of the detection models is to use them on a sample dataset. We recommend calling the Face Detect API on a variety of images, especially images of many faces or of faces that are difficult to see, using each detection model. Pay attention to the number of faces that each model returns.
+The different face detection models are optimized for different tasks. See the following table for an overview of the differences
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-mode
+"""
+
+question_2_17 = """
+# QUESTION
+You have the following Python function for creating Azure Cognitive Services resources programmatically. 
+def create_resource(resource_name, kind, account_tier, location) : parameters = CognitiveServicesAccount(sku=Sku(name=account_tier), kind=kind, location=location, properties={}) result = client.accounts.create(resource_group_name, resource_name, parameters)
+You need to call the function to create a free Azure resource in the West US Azure region. The resource will be used to generate captions of images automatically.
+Which code should you use?
+A. create_resource("res1", "ComputerVision", "F0", "westus")
+B. create_resource("res1", "CustomVision.Prediction", "F0", "westus")
+C. create_resource("res1", "ComputerVision", "S0", "westus")
+D. create_resource("res1", "CustomVision.Prediction", "S0", "westus")
+
+Correct Answer:
+B
+
+F0 is the free tier.
+Custom Vision Service Upload images to train and customize a computer vision model for your specific use case. Once the model is trained, you can use the API to tag images using the model and evaluate the results to improve your classier.
+Incorrect:
+Not C, not D: S0 is the standard tier, which isn't free.
+Not A, not C: The Computer Vision service provides developers with access to advanced algorithms for processing images and returning information.
+Computer Vision Returns information about visual content found in an image:
+Use tagging, descriptions, and domain-specific models to identify content and label it with confidence.
+Apply adult/racy settings to enable automated restriction of adult content.
+Identify image types and color schemes in pictures.
+
+Reference:
+https://docs.microsoft.com/en-us/python/api/overview/azure/cognitive-services?view=azure-python
+"""
+
+question_2_18 = """
+# QUESTION
+You are developing a method that uses the Computer Vision client library. The method will perform optical character recognition (OCR) in images. The method has the following code.
+During testing, you discover that the call to the GetReadResultAsync method occurs before the read operation is complete.
+You need to prevent the GetReadResultAsync method from proceeding until the read operation is complete.
+Which two actions should you perform? Each correct answer presents part of the solution.
+NOTE: Each correct selection is worth one point.
+A. Remove the operation_id parameter.
+B. Add code to verify the read_results.status value.
+C. Add code to verify the status of the read_operation_location value.
+D. Wrap the call to get_read_result within a loop that contains a delay.
+
+Correct Answer:
+BD
+"""
+
+question_2_19 = """
+# HOTSPOT
+You are building an app that will enable users to upload images. The solution must meet the following requirements:
+* Automatically suggest alt text for the images.
+* Detect inappropriate images and block them.
+* Minimize development effort.
+You need to recommend a computer vision endpoint for each requirement.
+What should you recommend? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Hot Area:
+Generate alt text:
+https://westus.api.cognitive.microsoft.com/contentmoderator/moderate/v1.0/ProcessImage/Evaluate
+https://westus.api.cognitive.microsoft.com/customvision/v3.1/prediction/projectId/classify/iterations/publishedName/image
+https://westus.api.cognitive.microsoft.com/vision/v3.2/analyze/?visualFeatures=Adult,Descnption
+
+Detect inappropriate content:
+https://westus.api.cognitive.microsoft.com/contentmoderator/moderate/v1.0/ProcessImage/Evaluate
+https://westus.api.cognitive.microsoft.com/customvision/v3.1/prediction/projectId/classify/iterations/publishedName/image
+https://westus.api.cognitive.microsoft.com/vision/v3.2/analyze/?visualFeatures=Adult,Descnption
+https://westus.api.cognitive.microsoft.com/vision/v3.2/describe?maxCandidates=1
+
+# Correct Answer:
+https://westus.api.cognitive.microsoft.com/customvision/v3.1/prediction/projectId/classify/iterations/publishedName/image
+https://westus.api.cognitive.microsoft.com/vision/v3.2/analyze/?visualFeatures=Adult,Descnption
+
+Box 1: https://westus.api.cognitive.microsoft.com/customvision/v3.1/prediction/projectid/classify/iterations/publishName/image
+Box 2: https://westus.api.cognitive.microsoft.com/vision/v3.2/analyze/?visualFeatures=Adult,Description
+Computer Vision can detect adult material in images so that developers can restrict the display of these images in their software. Content flags are applied with a score between zero and one so developers can interpret the results according to their own preferences.
+You can detect adult content with the Analyze Image API. When you add the value of Adult to the visualFeatures query parameter
+Incorrect:
+Use the Image Moderation API in Azure Content Moderator to scan image content. The moderation job scans your content for profanity, and compares it against custom and shared blocklists.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/concept-detecting-adult-content https://docs.microsoft.com/en-us/azure/cognitive-services/content-moderator/try-image-api 
+https://docs.microsoft.com/en-us/legal/cognitive-services/custom-vision/custom-vision-cvs-transparency-note
+"""
+
+question_2_20 = """
+# QUESTION
+You need to build a solution that will use optical character recognition (OCR) to scan sensitive documents by using the Computer Vision API.
+The solution must NOT be deployed to the public cloud.
+What should you do?
+A. Build an on-premises web app to query the Computer Vision endpoint.
+B. Host the Computer Vision endpoint in a container on an on-premises server.
+C. Host an exported Open Neural Network Exchange (ONNX) model on an on-premises server.
+D. Build an Azure web app to query the Computer Vision endpoint.
+
+# Correct Answer:
+B
+
+One option to manage your Computer Vision containers on-premises is to use Kubernetes and Helm.
+Three primary parameters for all Cognitive Services containers are required. The Microsoft Software License Terms must be present with a value of accept. An Endpoint URI and API key are also needed.
+Incorrect:
+Not D: This Computer Vision endpoint would be available for the public, unless it is secured.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/deploy-computer-vision-on-premises
+"""
+
+question_2_21 = """
+# QUESTION
+You have an Azure Cognitive Search solution and a collection of handwritten letters stored as JPEG les.
+You plan to index the collection. The solution must ensure that queries can be performed on the contents of the letters.
+You need to create an indexer that has a skillset.
+Which skill should you include?
+A. image analysis
+B. optical character recognition (OCR)
+C. key phrase extraction
+D. document extraction
+
+# Correct Answer:
+B
+"""
+
+question_2_22 = """
+# HOTSPOT
+
+You have a library that contains thousands of images.
+You need to tag the images as photographs, drawings, or clipart.
+Which service endpoint and response property should you use? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area:
+
+Service endpoint: ______ (Computer Vision analyze images / Computer Vision object detection / Custom Vision image classification / Custom Vision object detection)
+Property: ______ (categories / description / imageType / metadata / objects)
+
+# Correct Answer:
+Computer Vision analyze images, imageType
+"""
+
+question_2_23 = """
+# QUESTION
+You have an app that captures live video of exam candidates.
+You need to use the Face service to validate that the subjects of the videos are real people.
+What should you do?
+A. Call the face detection API and retrieve the face rectangle by using the FaceRectangle attribute.
+B. Call the face detection API repeatedly and check for changes to the FaceAttributes.HeadPose attribute.
+C. Call the face detection API and use the FaceLandmarks attribute to calculate the distance between pupils.
+D. Call the face detection API repeatedly and check for changes to the FaceAttributes.Accessories attribute.
+
+# Correct Answer:
+A
+"""
+
+question_2_24 = """
+# HOTSPOT
+
+You make an API request and receive the results shown in the following exhibits.
+
+HTTP request
+POST https://facetesting.cognitiveservices.azure.com/face/v1.0/detect?returnFaceId=true&returnFaceLandmarks=false&returnFaceAttributes=qualityforrecognition&recognitionModel=recognition_04&returnRecognitionModel=false&detectionModel=detection_03&faceIdTimeToLive=86400 HTTP/1.1
+Hots: facetesting.cognitiveservices.azure.com
+Content-Type: application/json
+Ocp-Apim-Subscription-key: *******************************
+
+{
+    "url": "https://news.microsoft.com/wp-content-uploads/prod/sites/68/2021/11/EDU19_HigherEdStudentsOnCampus_002-1536*1024.jpg"
+}
+
+Response status
+200 OK
+Response content
+
+  x-envoy-upstream-service-time: 1292
+  apim-request-id: 8a3aa72f-5bad-45d0-b8a4-584312258f06
+  Strict-Transport-Security: max-age=35136000; includeSubDomains; preload
+  x-content-type-options: nosniff
+  CSP-Billing-Usage: CognitiveServices.Face.Transaction=1
+  Date: Sat, 04 Dec 2021 11:15:33 GMT
+  Content-Length: 655
+  Content-Type: application/json; charset=utf-8
+  
+  [{
+    "faceId": "d14d131c-76ba-43e9-9e3d-dcf646e5022",
+    "faceRectangle": {
+      "top": 201,
+      "left": 797,
+      "width": 121,
+      "height": 160,
+    }，
+    “faceAttributes”: {
+      "qualityForRecognition": "high"
+    }
+  }, {
+    "faceId": "a3a0f2ff-b015-464c-b87c-0dd09d0698da",
+    "faceRectangle": {
+      "top": 249,
+      "left": 1167,
+      "width": 103,
+      "height": 159,
+    }，
+    “faceAttributes”: {
+      "qualityForRecognition": "medium"
+    }
+  }, {
+    "faceId": "45481ce8-dcc4-4564-a21c-3c15cd9c4fa",
+    "faceRectangle": {
+      "top": 191,
+      "left": 497,
+      "width": 85,
+      "height": 178,
+    }，
+    “faceAttributes”: {
+      "qualityForRecognition": "low"
+    }
+  }, {
+    "faceId": "eac17649-effd-42c9-9093-4dd60fd4cfc7",
+    "faceRectangle": {
+      "top": 754,
+      "left": 118,
+      "width": 30,
+      "height": 44,
+    }，
+    “faceAttributes”: {
+      "qualityForRecognition": "low"
+    }
+  }]
+  
+Use the drop-down menus to select the answer choice that completes each statement based on the information presented in the graphic.
+NOTE: Each correct selection is worth one point
+
+Answer Area
+
+The API [answer choice] faces. (detects / finds similar /recognizes/ verifies)
+A face that can be used in person enrollment is at position [answer choice] within the photo (118, 754 / 497, 191 / 797, 201 / 1167, 249)
+
+# Correct Answer:
+detects, (797, 201)
+"""
+
+question_2_25 = """
+# QUESTION
+You have an Azure subscription that contains an AI enrichment pipeline in Azure Cognitive Search and an Azure Storage account that has 10 GB of scanned documents and images.
+You need to index the documents and images in the storage account. The solution must minimize how long it takes to build the index.
+What should you do?
+A. From the Azure portal, configure parallel indexing.
+B. From the Azure portal, configure scheduled indexing.
+C. configure field mappings by using the REST API.
+D. Create a text-based indexer by using the REST API.
+
+# Correct Answer:
+A
+"""
+
+question_2_26 = """
+# DRAG DROP
+
+You need to analyze video content to identify any mentions of specific company names.
+Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.
+
+Actions
+Add the specific company names to the exclude list.
+Add the specific company names to the include list.
+From Content model customization, select Language.
+Sign in to the Custom Vision website.
+Sign in to the Azure Video Analyzer for Media website.
+From Content model customization, select Brands.
+
+# Correct Answer
+Sign in to the Azure Video Analyzer for Media website.
+From Content model customization, select Brands.
+Add the specific company names to the include list.
+"""
+
+question_2_27 = """
+# QUESTION
+
+You have a mobile app that manages printed forms.
+You need the app to send images of the forms directly to Forms Recognizer to extract relevant information. For compliance reasons, the image les must not be stored in the cloud.
+In which format should you send the images to the Form Recognizer API endpoint?
+A. raw image binary
+B. form URL encoded
+C. JSON
+
+# Correct Answer:
+A
+"""
+
+question_2_28 = """
+# QUESTION
+
+You plan to build an app that will generate a list of tags for uploaded images. The app must meet the following requirements:
+• Generate tags in a user's preferred language.
+• Support English, French, and Spanish.
+• Minimize development effort.
+You need to build a function that will generate the tags for the app.
+
+Which Azure service endpoint should you use?
+A. Content Moderator Image Moderation
+B. Custom Vision image classification
+C. Computer Vision Image Analysis
+D. Custom Translator
+
+# Correct Answer:
+B
+"""
+
+question_2_29 = """
+# HOTSPOT
+
+You develop a test method to verify the results retrieved from a call to the Computer Vision API. The call is used to analyze the existence of company logos in images. The call returns a collection of brands named brands.
+You have the following code segment.
+
+foreach (var brand in brands)
+{
+    if (brand.Confidence >= .75)
+        Console.WriteLine($"Logo of {brand_name} between {brand.rectangle.X}, {brand.rectangle.Y} and {brand.rectangle.W}, {brand.rectangle.H}")
+}
+
+For each of the following statements, select Yes if the statement is true. Otherwise, select No.
+NOTE: Each correct selection is worth one point
+
+Answer Area
+Statements
+The code will display the name of each detected brand with a confidence equal to or higher than 75 percent.
+The code will display coordinates for the top-left corner of the rectangle that contains the brand logo of the displayed brands.
+The code will display coordinates for the bottom-right corner of the rectangle that contains the brand logo of the displayed brands.
+
+# Correct Answer
+Yes, Yes, No
+"""
+
+question_2_30 = """
+# DRAG DROP
+
+You have a factory that produces cardboard packaging for food products. The factory has intermittent internet connectivity.
+The packages are required to include four samples of each product.
+You need to build a Custom Vision model that will identify defects in packaging and provide the location of the defects to an operator. The model must ensure that each package contains the four products.
+Which project type and domain should you use? To answer, drag the appropriate options to the correct targets. Each option may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content.
+NOTE: Each correct selection is worth one point
+
+Options
+Food
+General
+General(compact)
+Image classification
+Logo
+Object detection
+
+Answer Area
+Project type: ______
+Domain: ______
+
+# Correct Answer:
+Object detection, General(compact)
+"""
+
+question_2_31 = """
+# HOTSPOT
+
+You are building a model to detect objects in images.
+The performance of the model based on training data is shown in the following exhibit.
+
+Iteration 1
+Finished training on 18/02/2022, 17:08:38 using General domain
+Iteration id: eedf9f1a-1a9f-4d98-bf2c-ffc28bd8cae1
+Precision 100.0%  Recall 25.0% mAP 77.2%
+
+Use the drop-down menus to select the answer choice that completes each statement based on the information presented in the graphic.
+NOTE: Each correct selection is worth one point
+
+Answer Area
+The Percentage of false positive is [answer choice]. (0 / 25 / 30 / 50 /100)
+The value for the number of true positives divided by the total number of true positives and false negatives is [answer choice]. (0 / 25 / 30 / 50 /100)
+
+# Correct Answer:
+0, 25
+"""
+
+question_2_32 = """
+# QUESTION
+You are building an app that will include one million scanned magazine articles. Each article will be stored as an image le.
+You need to configure the app to extract text from the images. The solution must minimize development effort.
+What should you include in the solution?
+A. Computer Vision Image Analysis
+B. the Read API in Computer Vision
+C. Form Recognizer
+D. Azure Cognitive Service for Language
+
+# Correct Answer:
+A
+"""
+
+question_2_33 = """
+# QUESTION
+You have a 20-GB video le named File1.avi that is stored on a local drive.
+You need to index File1.avi by using the Azure Video Indexer website.
+What should you do rst?
+A. Upload File1.avi to an Azure Storage queue.
+B. Upload File1.avi to the Azure Video Indexer website.
+C. Upload File1.avi to Microsoft OneDrive.
+D. Upload File1.avi to the www.youtube.com webpage.
+
+Correct Answer:
+B
+"""
+
+question_2_34 = """
+# HOTSPOT
+You are building an app that will share user images.
+You need to configure the app to meet the following requirements:
+• Uploaded images must be scanned and any text must be extracted from the images.
+• Extracted text must be analyzed for the presence of profane language.
+• The solution must minimize development effort.
+What should you use for each requirement? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point
+
+Answer Area
+Text extraction: (Azure AI Language / Azure AI Computer Vision / Content Moderator / Azure AI Custom Vision / Azure AI Document Intelligence)
+Profane language detection: (Azure AI Language / Azure AI Computer Vision / Content Moderator / Azure AI Custom Vision / Azure AI Document Intelligence)
+
+# Correct Answer:
+Azure AI Document Intelligence, Content Moderator
+"""
+
+question_2_35 = """
+# QUESTION
+
+You are building an app that will share user images.
+You need to configure the app to perform the following actions when a user uploads an image:
+• Categorize the image as either a photograph or a drawing.
+• Generate a caption for the image.
+The solution must minimize development effort.
+Which two services should you include in the solution? Each correct answer presents part of the solution.
+NOTE: Each correct selection is worth one point.
+
+A. object detection in Azure AI Computer Vision
+B. content tags in Azure AI Computer Vision
+C. image descriptions in Azure AI Computer Vision
+D. image type detection in Azure AI Computer Vision
+E. image classification in Azure AI Custom Vision
+
+# Correct Answer:
+CE
+"""
+
+question_2_36 = """
+# QUESTION
+
+You are building an app that will use the Azure AI Video Indexer service.
+You plan to train a language model to recognize industry-specic terms.
+You need to upload a le that contains the industry-specic terms.
+Which le format should you use?
+A. XML
+B. TXT
+C. XLS
+D. PDF
+
+# Correct Answer:
+B
+"""
+
+question_2_37 = """
+# DRAG DROP
+
+You have an app that uses Azure AI and a custom trained classier to identify products in images.
+You need to add new products to the classier. The solution must meet the following requirements:
+• Minimize how long it takes to add the products.
+• Minimize development effort.
+Which five actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.
+
+Actions 
+Label the sample images.
+From Vision Studio, open the project.
+Publish the model.
+From the Custom Vision portal, open the project.
+Retrain the model.
+Upload sample images of the new product.
+From the Azure Machine Learning studio, open the workspace.
+
+# Correct Answer:
+From Vision Studio, open the project.
+Upload sample images of the new product.
+Label the sample images.
+Retrain the model.
+Publish the model.
+"""
+
+question_2_38 = """
+# HOTSPOT
+
+You are developing an application that will use the Azure AI Vision client library. The application has the following code.
+
+def analyze_image(local_image):
+  with open(local_image, "rb") as image_stream:
+  image_analysis = client.analyze_image_in_stream(
+    image=image_stream,
+    visual_features=[
+      VisualFeatureTypes.tags,
+      VisualFeatureTypes.description
+    ]
+  )
+  for caption in image_analysis.description.captions:
+    print(f"\n{caption.text} with confidence {caption.confidence}")
+  for tag in image_analysis.tags:
+    print(f"\n{tag.name} with confidence {tag.confidence}")  
+
+For each of the following statements, select Yes if the statement is true. Otherwise, select No.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+Statements
+The code will perform face recognition.
+The code will list tags and their associated confidence.
+The code will read an image file from the local file system.
+
+# Correct Answer
+No, Yes, Yes
+"""
+
+question_2_39 = """
+# QUESTION
+You are developing a method that uses the Azure AI Vision client library. The method will perform optical character recognition (OCR) in images. The method has the following code.
+
+def read_file_url(computervision_client, url_file):
+    read_response = computervision_client.read(url_file, raw=True)
+    read_operation_location = read_response.headers["Operation-Location"]
+    operation_id = read_operation_location_split("/")[-1]
+    read_result = computervision_client.get_read_result(operation_id)
+    
+    for page in read_result.analyze_result.read_results:
+        for line in page.lines:
+            print(line.text)
+
+During testing, you discover that the call to the get_read_result method occurs before the read operation is complete.
+You need to prevent the get_read_result method from proceeding until the read operation is complete.
+Which two actions should you perform? Each correct answer presents part of the solution.
+NOTE: Each correct selection is worth one point.
+A. Remove the operation_id parameter.
+B. Add code to verify the read_results.status value.
+C. Add code to verify the status of the read_operation_location value.
+D. Wrap the call to get_read_result within a loop that contains a delay.
+
+Correct Answer:
+BD
+"""
+
+question_2_40 = """
+# HOTSPOT
+You are developing an app that will use the Azure AI Vision API to analyze an image.
+You need configure the request that will be used by the app to identify whether an image is clipart or a line drawing.
+How should you complete the request? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+______ (GET / PATCH / POST)
+"https://*.cognitiveservices.azure.com/vision/v3.2/analyze?visualFeatures=______(description / imageType / objects / tags)&details={string}&language=en-US"
+
+# Correct Answer
+POST, imageType
+"""
+
+question_2_41 = """
+# HOTSPOT
+
+You have an Azure subscription that contains an Azure AI Video Indexer account.
+You need to add a custom brand and logo to the indexer and configure an exclusion for the custom brand.
+How should you complete the REST API call? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+{
+  "referenceUrl": "https://www.contoso.com/Contoso",
+  "id": 97974,
+  "name": "Contoso",
+  "accountId": "ContosoAccountId",
+  "lastModifierUserName": "SampleUserName",
+  "created": "2023-04-25T14:59:52.7433333",
+  "lastModified": "2023-04-25T14:59:52.7433333",
+  ______("enabled" / "state" / "tags"/ "useBuiltin"): ______(["Excluded"] / ["included"] / false / true)
+}
+
+# Correct Answer
+"enabled", false
+"""
+
+question_2_42 = """
+# QUESTION
+
+You have a local folder that contains the les shown in the following table.
+___________________________________________
+| Name  | Format | Length(mins) | Size(MB) |
+| File1 | WMV    |          34  |     400  |
+| File2 | AVI    |          90  |    1200  |
+| File3 | MOV    |         300  |     980  |
+| File4 | MP4    |          80  |    1800  |
+--------------------------------------------
+
+You need to analyze the les by using Azure AI Video Indexer.
+Which files can you upload to the Video Indexer website?
+A. File1 and File3 only
+B. File1, File2, File3 and File4
+C. File1, File2, and File3 only
+D. File1 and File2 only
+E. File1, File2, and File4 only
+
+# Correct Answer:
+B
+"""
+
+question_3_1 = """
+# SCENARIO
+
+Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
+After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
+You build a language model by using a Language Understanding service. The language model is used to search for information on a contact list by using an intent named FindContact.
+A conversational expert provides you with the following list of phrases to use for training.
+✑ Find contacts in London.
+✑ Who do I know in Seattle?
+✑ Search for contacts in Ukraine.
+You need to implement the phrase list in Language Understanding.
+
+Solution: You create a new pattern in the FindContact intent.
+Does this meet the goal?
+A. Yes
+B. No
+
+# Correct Answer:
+B
+
+Instead use a new intent for location.
+Note: An intent represents a task or action the user wants to perform. It is a purpose or goal expressed in a user's utterance.
+Dene a set of intents that corresponds to actions users want to take in your application.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-intent
+"""
+
