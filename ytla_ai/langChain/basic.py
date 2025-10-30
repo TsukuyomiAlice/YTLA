@@ -5,12 +5,8 @@
 from langchain_openai import ChatOpenAI
 from ytla_ai.deepseek import api_key
 
-llm = ChatOpenAI(
-    model="deepseek-chat",
-    api_key=api_key.DEEPSEEK_API_KEY_1,
-    base_url="https://api.deepseek.com",
-    temperature=0.0,
-)
+llm_1 = ChatOpenAI(model="deepseek-chat", api_key=api_key.DEEPSEEK_API_KEY_1, base_url="https://api.deepseek.com", temperature=0.0)
+llm_2 = ChatOpenAI(model="deepseek-chat", api_key=api_key.DEEPSEEK_API_KEY_2, base_url="https://api.deepseek.com", temperature=0.0)
 
 # llm model end ===========================================================
 
@@ -75,13 +71,15 @@ message_with_multiple_tool_calls = AIMessage(
         },
     ],
 )
+
 tool_node.invoke({"messages": [message_with_multiple_tool_calls]})
+model_with_tools = llm_1.bind_tools(tools=tools)
 
 # tools end ==================================================
 
-model_with_tools = llm.bind_tools(tools=tools)
 
-# langraph start =============================================
+
+# langGraph start =============================================
 """
 Reference
 https://www.studywithgpt.com/zh-cn/tutorial/cf6hwi
@@ -91,7 +89,7 @@ from langgraph.graph import StateGraph, MessagesState, START, END
 
 def default_answer(state: MessagesState):
     messages = state["messages"]
-    response = llm.invoke(messages)
+    response = llm_1.invoke(messages)
     return {"messages": [response]}
 
 def should_continue(state: MessagesState):
@@ -117,6 +115,7 @@ workflow.add_edge(START, "agent")
 workflow.add_conditional_edges("agent", should_continue, ["tools", "default"])
 workflow.add_edge("tools", END)
 workflow.add_edge("default", END)
+
 """
 如果使用default，那么改为使用两个END点
 不使用default的场合代码如下
@@ -126,7 +125,7 @@ workflow.add_edge("tools", "agent")
 
 app = workflow.compile()
 print(app.get_graph().draw_mermaid())
-# langraph end =============================================
+# langGraph end =============================================
 
 
 # chat display start  =============================================
