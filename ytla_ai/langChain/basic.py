@@ -3,10 +3,11 @@
 # llm model start ==================================================
 
 from langchain_openai import ChatOpenAI
+from ytla_ai.deepseek import api_key
 
 llm = ChatOpenAI(
     model="deepseek-chat",
-    api_key="sk-0b2579258b1e45a5a8a3f65dbaeb3a6e",
+    api_key=api_key.DEEPSEEK_API_KEY_1,
     base_url="https://api.deepseek.com",
     temperature=0.0,
 )
