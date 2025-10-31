@@ -2853,3 +2853,153 @@ Dene a set of intents that corresponds to actions users want to take in your app
 https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-intent
 """
 
+question_3_2 = """
+# SCENARIO
+
+Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
+After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
+You develop an application to identify species of flowers by training a Custom Vision model.
+You receive images of new flower species.
+You need to add the new images to the classier.
+Solution: You add the new images, and then use the Smart Labeler tool.
+Does this meet the goal?
+A. Yes
+B. No
+
+# Correct Answer:
+B
+
+The model need to be extended and retrained.
+Note: Smart Labeler to generate suggested tags for images. This lets you label a large number of images more quickly when training a Custom Vision model.
+"""
+
+question_3_3 = """
+# SCENARIO
+
+Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
+After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
+You develop an application to identify species of flowers by training a Custom Vision model.
+You receive images of new flowers species.
+You need to add the new images to the classier.
+
+Solution: You add the new images and labels to the existing model. You retrain the model, and then publish the model.
+Does this meet the goal?
+A. Yes
+B. No
+
+# Correct Answer:
+A
+
+The model needs to be extended and retrained.
+"""
+
+question_3_4 = """
+# SCENARIO
+
+Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
+After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
+You develop an application to identify species of flowers by training a Custom Vision model.
+You receive images of new flowers species.
+You need to add the new images to the classier.
+
+Solution: You create a new model, and then upload the new images and labels.
+Does this meet the goal?
+A. Yes
+B. No
+
+# Correct Answer:
+B
+
+The model needs to be extended and retrained.
+"""
+
+question_3_5 = """
+# HOTSPOT
+
+You are developing a service that records lectures given in English (United Kingdom).
+You have a method named AppendToTranscriptFile that takes translated text and a language identifier.
+You need to develop code that will provide transcripts of the lectures to attendees in their respective language. The supported languages are English, French, Spanish, and German.
+How should you complete the code? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Hot Area:
+static async Task TranslateSpeechAsync()
+{
+    var config = SpeechTranslationConfig.FromSubscription("69ccad5cc-0ab3-4704-bdff-afbf4aa07d85", "uksouth");
+    var lang = new List<String> ______ ({"en-GB"} / {"fr", "de", "es"} / {"French", "Spanish", "German"} / {languages})
+    config.SpeechRecognitionLanguage = "en-GB";
+    config.ForEach(config.AddTargetLanguage);
+    using var audioConfig = AudioConfig.FromDefaultMicrophoneInput();
+    using var recognizer = new ______(IntentRecognizer / SpeakerRecognizer / SpeechSynthesizer / TranslationRecognizer) (config, audioConfig);
+    var result = await recognizer.RecognizeOnceAsync();
+    if (result.reason == ResultReason.TranslatedSpeech)
+}
+
+# Correct Answer:
+{"fr", "de", "es"}, TranslationRecognizer
+
+Box 1: {"fr", "de", "es"}
+A common task of speech translation is to specify target translation languages, at least one is required but multiples are supported. The
+following code snippet sets both French and German as translation language targets. static async Task TranslateSpeechAsync()
+{
+var translationCong =
+SpeechTranslationCong.FromSubscription(SPEECH__SUBSCRIPTION__KEY, SPEECH__SERVICE__REGION);
+translationCong.SpeechRecognitionLanguage = "it-IT";
+// Translate to languages. See, https://aka.ms/speech/sttt-languages translationCong.AddTargetLanguage("fr");
+translationCong.AddTargetLanguage("de");
+}
+
+Box 2: TranslationRecognizer -
+After you've created a SpeechTranslationCong, the next step is to initialize a TranslationRecognizer.
+Example code:
+static async Task TranslateSpeechAsync()
+{
+var translationCong =
+SpeechTranslationCong.FromSubscription(SPEECH__SUBSCRIPTION__KEY, SPEECH__SERVICE__REGION); var fromLanguage = "en-US"; 
+var toLanguages = new List<string> { "it", "fr", "de" }; translationCong.SpeechRecognitionLanguage = fromLanguage;
+toLanguages.ForEach(translationCong.AddTargetLanguage); using var recognizer = new TranslationRecognizer(translationCong);
+}
+"""
+
+question_3_6 = """
+# DRAG DROP
+
+You train a Custom Vision model used in a mobile app.
+You receive 1,000 new images that do not have any associated data.
+You need to use the images to retrain the model. The solution must minimize how long it takes to retrain the model.
+Which three actions should you perform in the Custom Vision portal? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.
+
+Select and Place:
+Upload the images by category.
+Get suggest tags.
+Upload all the images.
+Group the images locally into category folders.
+Review the suggestions and confirm the tags.
+Tag the images manually.
+
+# Correct Answer:
+Group the images locally into category folders.
+Upload the images by category.
+Tag the images manually.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-build-a-classier
+"""
+
+question_3_7 = """
+# QUESTION
+
+You are building a Conversational Language Understanding model for an e-commerce chatbot. Users can speak or type their billing address when prompted by the chatbot.
+You need to construct an entity to capture billing addresses.
+Which entity type should you use?
+A. machine learned
+B. Regex
+C. list
+D. Pattern.any
+
+# Correct Answer:
+B
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-entity-types
+"""

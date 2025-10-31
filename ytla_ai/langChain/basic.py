@@ -107,6 +107,8 @@ def call_model(state: MessagesState):
 workflow = StateGraph(MessagesState)
 
 # 定义两个节点，以便循环调用
+# 这句话是从样例代码那边抄来的，但其实不太对。按照图的描述，其实并不是循环调用的含义，而是START - agent - should_continue？ tools: END 的逻辑
+
 workflow.add_node("agent", call_model)
 workflow.add_node("tools", tool_node)
 workflow.add_node("default", default_answer)
