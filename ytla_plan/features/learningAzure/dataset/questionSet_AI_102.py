@@ -3003,3 +3003,662 @@ B
 # Reference:
 https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-entity-types
 """
+
+question_3_8 = """
+# QUESTION
+
+You are building an Azure WebJob that will create knowledge bases from an array of URLs.
+You instantiate a QnAMakerClient object that has the relevant API keys and assign the object to a variable named client.
+You need to develop a method to create the knowledge bases.
+Which two actions should you include in the method? Each correct answer presents part of the solution.
+NOTE: Each correct selection is worth one point.
+A. Create a list of FileDTO objects that represents data from the WebJob.
+B. Call the client.Knowledgebase.CreateAsync method.
+C. Create a list of QnADTO objects that represents data from the WebJob.
+D. Create a CreateKbDTO object.
+
+# Correct Answer:
+AC
+
+# Reference:
+https://docs.microsoft.com/en-us/rest/api/cognitiveservices-qnamaker/qnamaker4.0/knowledgebase/create
+"""
+
+question_3_9 = """
+# HOTSPOT
+You are developing an application that includes language translation.
+The application will translate text retrieved by using a function named getTextToBeTranslated. The text can be in one of many languages. The content of the text must remain within the Americas Azure geography.
+You need to develop code to translate the text to a single language.
+How should you complete the code? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Hot Area:
+var endpoint = ______ ;
+               ("https://api.cognitive.microsofttranslator.com/translate"
+                "https://api.cognitive.microsofttranslator.com/transliterate"
+                "https://api-apc.cognitive.microsofttranslator.com/detect"
+                "https://api-nam.cognitive.microsofttranslator.com/detect"
+                "https://api-nam.cognitive.microsofttranslator.com/translate" 
+                )
+var apikey = "FF956C68883B21B38691ABD200A4C606";
+var text = getTextToBeTranslated;
+var body = '[{"Text":"' + text + '"}]';
+var client = new HttpClient();
+client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", apikey);
+______
+(var uri = endpoint + "?from=en";
+ var uri = endpoint + "?suggestedFrom=en";
+ var uri = endpoint + "?to=en";
+)
+HttpResponseMessage response;
+var content = new StringContent(body, Encoding.UTF8, "application/json");
+var response = await client.PutAsync(uri, content);
+
+# Correct Answer:
+"https://api-nam.cognitive.microsofttranslator.com/translate", var uri = endpoint + "?to=en";
+"""
+
+question_3_10 = """
+# QUESTION
+
+You are building a conversational language understanding model.
+You need to enable active learning.
+What should you do?
+A. Add show-all-intents=true to the prediction endpoint query.
+B. Enable speech priming.
+C. Add log=true to the prediction endpoint query.
+D. Enable sentiment analysis.
+
+# Correct Answer:
+C
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-how-to-review-endpoint-utterances#log-user-queries-to-enable-active-learning
+"""
+
+question_3_11 = """
+# HOTSPOT
+You run the following command.
+For each of the following statements, select Yes if the statement is true. Otherwise, select No.
+NOTE: Each correct selection is worth one point.
+
+Hot Area:
+Statements
+Going to http://localhost:5000/status will query the Azure endpoint to verify whether the API key used to start the container is valid.
+The container logging provider will write log data.
+Going to http://localhost:5000/swagger will provide the details to access the documentation for the available endpoints.
+
+# Correct Answer:
+Yes, No, Yes
+
+Box 1: Yes -
+http://localhost:5000/status : Also requested with GET, this veries if the api-key used to start the container is valid without causing an endpoint query.
+Box 2: No -
+The command saves container and LUIS logs to output mount at C:\output, located on container host
+Box 3: Yes -
+http://localhost:5000/swagger : The container provides a full set of documentation for the endpoints and a Try it out feature. With this feature, you can enter your settings into a web-based HTML form and make the query without having to write any code. After the query returns, an example CURL command is provided to demonstrate the HTTP headers and body format that's required.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-container-howto
+"""
+
+question_3_12 = """
+# QUESTION
+
+You are building a Language Understanding model for an e-commerce platform.
+You need to construct an entity to capture billing addresses.
+Which entity type should you use for the billing address?
+A. machine learned
+B. Regex
+C. geographyV2
+D. Pattern.any
+E. list
+
+# Correct Answer:
+A
+
+Incorrect Answers:
+B:A regular expression entity extracts an entity based on a regular expression pattern you provide. It ignores case and ignores cultural variant. Regular expression is best for structured text or a predened sequence of alphanumeric values that are expected in a certain format. For example:
+Entity    Regular expression    Example
+Flight Number   flight [A-Z]{2} [0-9]{4}   flight AS 1234
+C: The prebuilt geographyV2 entity detects places. Because this entity is already trained, you do not need to add example utterances containing GeographyV2 to the application intents. GeographyV2 entity is supported in English culture.
+The geographical locations have subtypes:
+Subtype    Purpose
+poi     Point of interest
+city    name of city
+country Region    name of country or region
+continent    name of continent
+state    name of state or province
+D: Pattern.any is a variable-length placeholder used only in a pattern's template utterance to mark where the entity begins and ends.
+E: A list entity represents a xed, closed set of related words along with their synonyms. You can use list entities to recognize multiple synonyms or variations and extract a normalized output for them. Use the recommend option to see suggestions for new words based on the current list.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-entity-types
+"""
+
+question_3_13 = """
+# QUESTION
+
+You need to upload speech samples to a Speech Studio project for use in training.
+How should you upload the samples?
+A. Combine the speech samples into a single audio le in the .wma format and upload the le.
+B. Upload a .zip le that contains a collection of audio les in the .wav format and a corresponding text transcript le.
+C. Upload individual audio les in the FLAC format and manually upload a corresponding transcript in Microsoft Word format.
+D. Upload individual audio les in the .wma format.
+
+# Correct Answer:
+B
+
+To upload your data, navigate to the Speech Studio . From the portal, click Upload data to launch the wizard and create your rst dataset.
+You'll be asked to select a speech data type for your dataset, before allowing you to upload your data.
+The default audio streaming format is WAV
+Use this table to ensure that your audio les are formatted correctly for use with Custom Speech:
+Property    Value
+File format    RIFF(WAV)
+Sample rate    8000 Hz or 16000 Hz
+Channels    1(mono)
+Maximum length per audio    2 hours
+Sample format    PCM, 16-bit
+Archive format    .zip
+Maximum archive size    2 GB
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/how-to-custom-speech-test-and-train
+"""
+
+question_3_14 = """
+# QUESTION
+
+You are developing a method for an application that uses the Translator API.
+The method will receive the content of a webpage, and then translate the content into Greek (el). The result will also contain a transliteration that uses the Roman alphabet.
+You need to create the URI for the call to the Translator API.
+You have the following URI.
+https://api.cognitive.microsofttranslator.com/translate?api-version=3.0
+Which three additional query parameters should you include in the URI? Each correct answer presents part of the solution.
+NOTE: Each correct selection is worth one point.
+A. toScript=Cyrl
+B. from=el
+C. textType=html
+D. to=el
+E. textType=plain
+F. toScript=Latn
+
+# Correct Answer:
+CDF
+C: textType is an optional parameter. It denes whether the text being translated is plain text or HTML text (used for web pages).
+D: to is a required parameter. It species the language of the output text. The target language must be one of the supported languages included in the translation scope.
+F: toScript is an optional parameter. It species the script of the translated text.
+We use Latin (Roman alphabet) script.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-translate
+"""
+
+question_3_15 = """
+# QUESTION
+
+You have a chatbot that was built by using the Microsoft Bot Framework.
+You need to debug the chatbot endpoint remotely.
+Which two tools should you install on a local computer? Each correct answer presents part of the solution.
+NOTE: Each correct selection is worth one point.
+A. Fiddler
+B. Bot Framework Composer
+C. Bot Framework Emulator
+D. Bot Framework CLI
+E. ngrok
+F. nginx
+
+# Correct Answer:
+CE
+
+Bot Framework Emulator is a desktop application that allows bot developers to test and debug bots, either locally or remotely. ngrok is a cross-platform application that "allows you to expose a web server running on your local machine to the internet." Essentially, what we'll be doing is using ngrok to forward messages from external channels on the web directly to our local machine to allow debugging, as opposed to the standard messaging endpoint congured in the Azure portal.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/bot-service/bot-service-debug-emulator
+"""
+
+question_3_16 = """
+# DRAG DROP
+
+You are building a retail chatbot that will use a QnA Maker service.
+You upload an internal support document to train the model. The document contains the following question: "What is your warranty period?"
+Users report that the chatbot returns the default QnA Maker answer when they ask the following question: "How long is the warranty coverage?"
+The chatbot returns the correct answer when the users ask the following question: 'What is your warranty period?"
+Both questions should return the same answer.
+You need to increase the accuracy of the chatbot responses.
+Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.
+Select and Place:
+
+Actions
+Add a new question and answer (QnA) pair.
+Retrain the model.
+Add additional questions to the document.
+Republish the model.
+Add alternative phrasing to the question and answer (QnA) pair.
+
+# Correct Answer:
+Add alternative phrasing to the question and answer (QnA) pair.
+Retrain the model.
+Republish the model.
+
+Step 1: Add alternative phrasing to the question and answer (QnA) pair.
+Add alternate questions to an existing QnA pair to improve the likelihood of a match to a user query.
+Step 2: Retrain the model.
+Periodically select Save and train after making edits to avoid losing changes.
+Step 3: Republish the model -
+Note: A knowledge base consists of question and answer (QnA) pairs. Each pair has one answer and a pair contains all the information associated with that answer.
+
+Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/how-to/edit-knowledge-base
+"""
+
+question_3_17 = """
+# Scenario
+
+Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
+After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
+You build a language model by using a Language Understanding service. The language model is used to search for information on a contact list by using an intent named FindContact.
+A conversational expert provides you with the following list of phrases to use for training.
+✑ Find contacts in London.
+✑ Who do I know in Seattle?
+✑ Search for contacts in Ukraine.
+You need to implement the phrase list in Language Understanding.
+
+Solution: You create a new intent for location.
+Does this meet the goal?
+A. Yes
+B. No
+
+# Correct Answer:
+A
+
+An intent represents a task or action the user wants to perform. It is a purpose or goal expressed in a user's utterance. Define a set of intents that corresponds to actions users want to take in your application.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-intent
+"""
+
+question_3_18 = """
+# Scenario
+
+Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
+After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
+You build a language model by using a Language Understanding service. The language model is used to search for information on a contact list by using an intent named FindContact.
+A conversational expert provides you with the following list of phrases to use for training.
+✑ Find contacts in London.
+✑ Who do I know in Seattle?
+✑ Search for contacts in Ukraine.
+You need to implement the phrase list in Language Understanding.
+
+Solution: You create a new entity for the domain.
+Does this meet the goal?
+A. Yes
+B. No
+
+# Correct Answer:
+B
+Instead use a new intent for location.
+Note: An intent represents a task or action the user wants to perform. It is a purpose or goal expressed in a user's utterance.
+Dene a set of intents that corresponds to actions users want to take in your application.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-intent
+"""
+
+question_3_19 = """
+# QUESTION
+
+You are training a Language Understanding model for a user support system.
+You create the rst intent named GetContactDetails and add 200 examples.
+You need to decrease the likelihood of a false positive.
+What should you do?
+A. Enable active learning.
+B. Add a machine learned entity.
+C. Add additional examples to the GetContactDetails intent.
+D. Add examples to the None intent.
+
+# Correct Answer:
+D
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/language-service/conversational-language-understanding/concepts/none-intent#adding-examples-to-the-none-intent
+"""
+
+question_3_20 = """
+# DRAG DROP
+You are building a Language Understanding model for purchasing tickets.
+You have the following utterance for an intent named PurchaseAndSendTickets.
+Purchase [2 audit business] tickets to [Paris] [next Monday] and send tickets to [email@domain.com]
+You need to select the entity types. The solution must use built-in entity types to minimize training data whenever possible.
+Which entity type should you use for each label? To answer, drag the appropriate entity types to the correct labels. Each entity type may be used once, more than once, or not at all.
+You may need to drag the split bar between panes or scroll to view content.
+
+Select and Place:
+Entity Types
+Email
+List
+Regex
+GeographyV2
+Machine learned
+
+Answer Area
+Paris:______
+email@domain.com:______
+2 audit business:______
+
+# Correct Answer:
+GeographyV2， Email， Machine learned
+
+Box 1: GeographyV2 -
+The prebuilt geographyV2 entity detects places. Because this entity is already trained, you do not need to add example utterances containing GeographyV2 to the application intents.
+Box 2: Email -
+Email prebuilt entity for a LUIS app: Email extraction includes the entire email address from an utterance. Because this entity is already trained, you do not need to add example utterances containing email to the application intents.
+Box 3: Machine learned -
+The machine-learning entity is the preferred entity for building LUIS applications.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-reference-prebuilt-geographyv2 
+https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-reference-prebuilt-email 
+https://docs.microsoft.com/en-us/azure/cognitive-services/luis/reference-entity-machine-learned-entity
+"""
+
+question_3_21 = """
+# QUESTION
+
+You have the following C# method.
+
+static void create_resource(string resource_name, string kind, string account_tier, string location)
+{
+    CognitiveServicesAccount parameters = 
+        new CognitiveServicesAccount(null, null, kind, location, resource_name, new CognitiveServicesAccountProperties(), new Sku(account_tier));
+    var result = cog_sve_client.Accounts.Create(resource_group_name, account_tier, parameters);
+}
+
+You need to deploy an Azure resource to the East US Azure region. The resource will be used to perform sentiment analysis.
+How should you call the method?
+A. create_resource("res1", "ContentModerator", "S0", "eastus")
+B. create_resource("res1", "TextAnalytics", "S0", "eastus")
+C. create_resource("res1", "ContentModerator", "Standard", "East US")
+D. create_resource("res1", "TextAnalytics", "Standard", "East US")
+
+# Correct Answer:
+B
+
+To perform sentiment analysis, we specify TextAnalytics, not ContentModerator.
+Possible SKU names include: 'F0','F1','S0','S1','S2','S3','S4','S5','S6','S7','S8'
+Possible location names include: westus, eastus
+
+# Reference:
+https://docs.microsoft.com/en-us/powershell/module/az.cognitiveservices/new-azcognitiveservicesaccoun
+"""
+
+question_3_22 = """
+# QUESTION
+
+You build a Conversational Language Understanding model by using the Language Services portal.
+You export the model as a JSON file as shown in the following sample.
+{
+  "text": "average amount of rain by month at chicago last year",
+  "intent": "Weather.CheckWeatherValue",
+  "entities": [
+    {
+      "entity": "Weather.weatherRange",
+      "startPos": 0,
+      "endPos": 6,
+      "children": []
+    },
+    {
+      "entity": "Weather.weatherCondition",
+      "startPos": 16,
+      "endPos": 21,
+      "children": []
+    },
+    {
+      "entity": "Weather.Historic",
+      "startPos": 23,
+      "endPos": 30,
+      "children": []
+    },
+  ]
+}
+
+To what does the Weather.Historic entity correspond in the utterance?
+A. by month
+B. chicago
+C. rain
+D. location
+
+# Correct Answer:
+A
+"""
+
+question_3_23 = """
+# QUESTION
+
+You are examining the Text Analytics output of an application.
+The text analyzed is: `Our tour guide took us up the Space Needle during our trip to Seattle last week.`
+The response contains the data shown in the following table.
+
+Text    Category    ConfidenceScore
+Tour guide    PersonType    0.45
+Space Needle    Location    0.38
+Trip     Event    0.78
+Seattle    Location    0.78
+last week    Time    0.80
+
+Which Text Analytics API is used to analyze the text?
+A. Entity Linking
+B. Named Entity Recognition
+C. Sentiment Analysis
+D. Key Phrase Extraction
+
+# Correct Answer:
+B
+
+Named Entity Recognition (NER) is one of the features offered by Azure Cognitive Service for Language, a collection of machine learning and AI algorithms in the cloud for developing intelligent applications that involve written language. The NER feature can identify and categorize entities in unstructured text. For example: people, places, organizations, and quantities.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/language-service/named-entity-recognition/overview
+"""
+
+question_3_24 = """
+# SIMULATION
+
+You need to configure and publish bot12345678 to support task management. The intent must be named TaskReminder. The LUDown for the intent is in the C:
+\Resources\LU folder.
+To complete this task, use the Microsoft Bot Framework Composer.
+
+# Correct Answer:
+See explanation below.
+Step 1: Open Microsoft Bot Framework Composer
+Step 2: Select the bot bot12345678
+Step 3: Select Import existing resources. Read the instructions on the right side of the screen and select Next.
+Step 4: Browse to the C:\Resources\LU folder and select the available .lu file
+Step 5: In the pop-up window Importing existing resources, modify the JSON le content based on your resources information: Name the intent TaskReminder
+Step 6: Select Publish from the Composer menu. In the Publish your bots pane, select the bot to publish (bot12345678), then select a publish profile from the Publish target drop-down list.
+
+# Reference:
+https://docs.microsoft.com/en-us/composer/how-to-publish-bot
+"""
+
+question_3_25 = """
+# QUESTION
+
+You need to configure bot12345678 support the French (FR-FR) language.
+Export the bot to C:\Resources\Bot\Bot1.zip.
+To complete this task, use the Microsoft Bot Framework Composer.
+
+# Correct Answer:
+See explanation below.
+Step 1: Open Microsoft Bot Framework Composer
+Step 2: Select the bot bot12345678
+Step 3: Select Configure.
+Step 4: Select the Azure Language Understanding tab
+Step 5: Select the Set up Language Understanding button. The Set up Language Understanding window will appear, shown below:
+Step 6: Select Use existing resources and then select Next at the bottom of the window.
+Step 7: Now select the Azure directory, Azure subscription, and Language Understanding resource name (French).
+Step 8: Select Next on the bottom. Your Key and Region will appear on the next on the next window, shown below
+Step 9. Select Done.
+
+# Reference:
+https://docs.microsoft.com/en-us/composer/concept-language-understanding https://docs.microsoft.com/en-us/composer/how-to-add-luis
+"""
+
+question_3_26 = """
+# SIMULATION
+
+You need to configure and publish bot12345678 to answer questions by using the frequently asked questions (FAQ) located at 
+https://docs.microsoft.com/en-us/azure/bot-service/bot-service-resources-bot-framework-faq. 
+The solution must use bot%@lab.LabInstance.Id-qna-qna%.
+To complete this task, use the Microsoft Bot Framework Composer.
+
+# Correct Answer:
+See explanation below.
+Step 1: Open Microsoft Bot Framework Composer
+Step 2: Select the bot bot12345678
+Step 3: Open the configure page in Composer. Then select the Development resources, and scroll down to Azure QnA Maker.
+Step 4: To access the Connect to QnA Knowledgebase action, you need to select + under the node you want to add the QnA knowledge base and then select Connect to QnAKnowledgeBase from the Access external resources action menu.
+Step 5: Review the QnA Maker settings panel after selecting the QnA Maker dialog.
+Use:
+Instance: bot%@lab.LabInstance.Id-qna-qna%
+
+# Reference:
+https://docs.microsoft.com/en-us/composer/how-to-create-qna-kb https://docs.microsoft.com/en-us/composer/how-to-add-qna-to-bot
+"""
+
+question_3_27 = """
+You need to measure the public perception of your brand on social media by using natural language processing.
+Which Azure service should you use?
+A. Language service
+B. Content Moderator
+C. Computer Vision
+D. Form Recognizer
+
+# Correct Answer:
+A
+
+Azure Cognitive Service for Language is a cloud-based service that provides Natural Language Processing (NLP) features for understanding and analyzing text.
+Use this service to help build intelligent applications using the web-based Language Studio, REST APIs, and client libraries.
+Note: Natural language processing (NLP) has many uses: sentiment analysis, topic detection, language detection, key phrase extraction, and document categorization.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/language-service/overview
+"""
+
+question_3_28 = """
+# HOTSPOT
+
+You are developing an application that includes language translation.
+The application will translate text retrieved by using a function named get_text_to_be_translated. The text can be in one of many languages.
+The content of the text must remain within the Americas Azure geography.
+You need to develop code to translate the text to a single language.
+How should you complete the code? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Hot Area:
+
+api_key = "FF956C68B83B21B38691ABD200A4C606",
+text = get_text_to_be_translated()
+headers = {
+    'Content-Type': 'application/json',
+    'Ocp-Apim-Subscription-Key': api_key
+    }
+body = {
+    'Text': text
+    }
+conn = httplib.HTTPSConnection______
+                              ("api.cognitive.microsofttranslator.com")
+                              ("api-apc.cognitive.microsofttranslator.com")
+                              ("api-nam.cognitive.microsofttranslator.com")
+conn.request("POST", ______, str(body), headers)
+                     ("/translate?from=en"
+                      "/translate?suggestedFrom=en"
+                      "/translate?to=en"
+                      "/detect?to=en"
+                      "/detect?from=en"
+                     )
+response = conn.getresponse()
+response_data = response.read()
+
+# Correct Answer:
+("api-nam.cognitive.microsofttranslator.com"), "/translate?to=en"
+
+Box 1: ("api-nam.cognitive.microsofttranslator.com")
+Geography USA: api-nam.cognitive.microsofttranslator.com
+Datacenters: East US, South Central US, West Central US, and West US 2
+Box 2: "/translate?to=en"
+Must specify the language which it is being translated to. The 'to' parameter is required
+
+Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-reference
+https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-translate
+"""
+
+question_3_29 = """
+# QUESTION
+
+You have the following data sources:
+✑ Finance: On-premises Microsoft SQL Server database
+✑ Sales: Azure Cosmos DB using the Core (SQL) API
+✑ Logs: Azure Table storage
+✑ HR: Azure SQL database
+You need to ensure that you can search all the data by using the Azure Cognitive Search REST API.
+What should you do?
+A. Migrate the data in HR to Azure Blob storage.
+B. Migrate the data in HR to the on-premises SQL server.
+C. Export the data in Finance to Azure Data Lake Storage.
+D. Ingest the data in Logs into Azure Sentinel.
+
+# Correct Answer:
+C
+
+In Azure Cognitive Search, a data source is used with indexers, providing the connection information for ad hoc or scheduled data refresh of a target index, pulling data from supported Azure data sources.
+Note: Supported data sources -
+Indexers crawl data stores on Azure and outside of Azure.
+Amazon Redshift (in preview)
+Azure Blob Storage -
+Azure Cosmos DB -
+Azure Data Lake Storage Gen2 -
+Azure MySQL (in preview)
+Azure SQL Database -
+Azure Table Storage -
+Elasticsearch (in preview)
+PostgreSQL (in preview)
+Salesforce Objects (in preview)
+Salesforce Reports (in preview)
+Smartsheet (in preview)
+Snowflake (in preview)
+Azure SQL Managed Instance -
+SQL Server on Azure Virtual Machines
+Azure Files (in preview)
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/search/search-indexer-overview#supported-data-sources
+"""
+
+question_3_30 = """
+# SIMULATION
+
+Use the following login credentials as needed:
+To enter your username, place your cursor in the Sign in box and click on the username below.
+To enter your password, place your cursor in the Enter password box and click on the password below.
+Azure Username: admin@abc.com -
+Azure Password: XXXXXXXXXXXX -
+The following information is for technical support purposes only:
+Lab Instance: 12345678 -
+Task -
+You need to create and publish a Language Understanding (classic) model named 1u12345678. The model will contain an intent of Travel that has an utterance of Boat.
+To complete this task, sign in to the Language Understanding portal at https://www.luis-ai/.
+
+# Correct Answer:
+See explanation below.
+Create your LUIS model -
+1. You should navigate to your LUIS.ai management portal and create a new application. In the portal create a model.
+Model name: 1u12345678 -
+2. Dene one intent as Travel and add an example utterances of Boat.
+3. Publish the model
+In order to use your model, you have to publish it. This is as easy as hitting the Publish tab, selecting between the production or staging environments, and hitting Publish. As you can see from this page, you can also choose to enable sentiment analysis, speech priming to improve speech recognition, or the spell checker.
+For now, you can leave those unchecked.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/health-bot/language_model_howto https://www.codemag.com/article/1809021/Natural-Language-Understanding-with-LUIS
+"""

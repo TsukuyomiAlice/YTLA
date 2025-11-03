@@ -75,6 +75,32 @@ message_with_multiple_tool_calls = AIMessage(
 tool_node.invoke({"messages": [message_with_multiple_tool_calls]})
 model_with_tools = llm_1.bind_tools(tools=tools)
 
+# ====================
+@tool
+def compare(a: int, b: int) -> int:
+    """比较两个数的大小"""
+    if a > b:
+        return f"{a}大于{b}"
+    elif a < b:
+        return f"{a}小于{b}"
+    else:
+        return f"{a}等于{b}"
+
+tools_2 = [compare]
+tool_2_node = ToolNode(tools_2)
+message_with_multiple_tool_2_calls = AIMessage(
+    content="",
+    tool_calls=[
+        {
+            "name": "compare",
+            "args": {"a": 1, "b": 2},
+            "id": "tool_call_id_5",
+            "type": "tool_call",
+        },
+    ],
+)
+tool_2_node.invoke({"messages": [message_with_multiple_tool_calls]})
+model_with_tools_2 = llm_2.bind_tools(tools=tools)
 # tools end ==================================================
 
 
@@ -99,9 +125,24 @@ def should_continue(state: MessagesState):
         return "tools"
     return "default" # 原先是直接END了
 
+def should_compare(state: MessagesState):
+    messages = state["messages"]
+    last_message = messages[-1]
+    if last_message.tool_calls:
+        return "tools_2"
+    return "default" # 原先是直接END了
+
+def has_next(state: MessagesState):
+    pass
+
 def call_model(state: MessagesState):
     messages = state["messages"]
     response = model_with_tools.invoke(messages)
+    return {"messages": [response]}
+
+def call_model_2(state: MessagesState):
+    messages = state["messages"]
+    response = model_with_tools_2.invoke(messages)
     return {"messages": [response]}
 
 workflow = StateGraph(MessagesState)
@@ -111,11 +152,24 @@ workflow = StateGraph(MessagesState)
 
 workflow.add_node("agent", call_model)
 workflow.add_node("tools", tool_node)
+
+workflow.add_node("next", has_next)
+
+workflow.add_node("agent_2", call_model_2, defer=True)
+workflow.add_node("tools_2", tool_2_node)
+
 workflow.add_node("default", default_answer)
 
 workflow.add_edge(START, "agent")
 workflow.add_conditional_edges("agent", should_continue, ["tools", "default"])
-workflow.add_edge("tools", END)
+workflow.add_edge("tools", "agent")
+
+workflow.add_edge("agent", "next")
+workflow.add_edge("next", "agent_2")
+
+workflow.add_conditional_edges("agent_2", should_compare, ["tools_2", "default"])
+workflow.add_edge("tools_2", "agent_2")
+
 workflow.add_edge("default", END)
 
 """
