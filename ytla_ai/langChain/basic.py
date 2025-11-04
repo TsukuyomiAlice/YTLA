@@ -5,13 +5,17 @@
 from langchain_openai import ChatOpenAI
 from ytla_ai.deepseek import api_key
 
-llm_1 = ChatOpenAI(model="deepseek-chat", api_key=api_key.DEEPSEEK_API_KEY_1, base_url="https://api.deepseek.com", temperature=0.0)
-llm_2 = ChatOpenAI(model="deepseek-chat", api_key=api_key.DEEPSEEK_API_KEY_2, base_url="https://api.deepseek.com", temperature=0.0)
+llm_d1 = ChatOpenAI(model="deepseek-chat", api_key=api_key.DEEPSEEK_API_KEY_1, base_url="https://api.deepseek.com", temperature=0.0)
+llm_d2 = ChatOpenAI(model="deepseek-chat", api_key=api_key.DEEPSEEK_API_KEY_2, base_url="https://api.deepseek.com", temperature=0.0)
+llm_g1 = ChatOpenAI(model="glm-4.5-flash",api_key=api_key.GLM_API_KEY_1,base_url="https://open.bigmodel.cn/api/paas/v4", temperature=0.0)
+llm_g2 = ChatOpenAI(model="glm-4.5-flash",api_key=api_key.GLM_API_KEY_2,base_url="https://open.bigmodel.cn/api/paas/v4", temperature=0.0)
 
+llm_1 = llm_g1
+llm_2 = llm_g2
 # llm model end ===========================================================
 
 # tools start ==================================================
-from langchain_core.messages import AIMessage
+from langchain_core.messages import AIMessage, SystemMessage
 from langchain_core.tools import tool
 from langgraph.prebuilt import ToolNode
 
@@ -75,6 +79,7 @@ message_with_multiple_tool_calls = AIMessage(
 tool_node.invoke({"messages": [message_with_multiple_tool_calls]})
 model_with_tools = llm_1.bind_tools(tools=tools)
 
+
 # ====================
 @tool
 def compare(a: int, b: int) -> int:
@@ -100,7 +105,8 @@ message_with_multiple_tool_2_calls = AIMessage(
     ],
 )
 tool_2_node.invoke({"messages": [message_with_multiple_tool_calls]})
-model_with_tools_2 = llm_2.bind_tools(tools=tools)
+model_with_tools_2 = llm_2.bind_tools(tools=tools_2)
+
 # tools end ==================================================
 
 
@@ -113,71 +119,76 @@ ReAct代理模式
 """
 from langgraph.graph import StateGraph, MessagesState, START, END
 
-def default_answer(state: MessagesState):
-    messages = state["messages"]
-    response = llm_1.invoke(messages)
-    return {"messages": [response]}
-
 def should_continue(state: MessagesState):
     messages = state["messages"]
     last_message = messages[-1]
     if last_message.tool_calls:
         return "tools"
-    return "default" # 原先是直接END了
+    return "agent_2"
 
-def should_compare(state: MessagesState):
+def could_compare(state: MessagesState):
     messages = state["messages"]
     last_message = messages[-1]
     if last_message.tool_calls:
         return "tools_2"
-    return "default" # 原先是直接END了
+    return END # 原先是直接END了
 
-def has_next(state: MessagesState):
-    pass
 
 def call_model(state: MessagesState):
+    print("HINT : 现在调用了call_model_1")
+
+    system_prompt_1 = """
+    你是一个数学计算助手。你可以使用加减乘除四则运算工具
+    你会接收到用户的问题。你只负责接收用户的多项式四则运算问题，或者是数值/多项式的计算结果的比较问题
+    其中，你需要使用四则运算工具，计算用户提供的多项式四则运算
+    你不负责进行数值比较，数值比较交给其它助手处理。
+    最后你仅需返回所有的多项式四则运算的结果。
+    \n"""
+
     messages = state["messages"]
-    response = model_with_tools.invoke(messages)
+    messages_with_system = [SystemMessage(content=system_prompt_1)] + messages
+    response = model_with_tools.invoke(messages_with_system)
     return {"messages": [response]}
 
 def call_model_2(state: MessagesState):
+    print("HINT : 现在调用了call_model_2")
+    system_prompt_2_a = """
+    你是一个数值或计算式的比较助手。你可以使用数值比较工具。
+    你会负责处理用户的多项式四则运算问题，或者是数值/多项式的计算结果的比较问题
+    其中，你需要使用数值比较工具，对数值或者多项式的计算结果进行比较
+    你会接收到关于计算的结果。
+    最后的关于多项式四则运算的计算结果如下所示。
+    \n"""
+
+    system_prompt_2_b = """
+    \n
+    返回结果时，带上原表达式和计算结果
+    """
+
     messages = state["messages"]
-    response = model_with_tools_2.invoke(messages)
+    messages_with_system = [SystemMessage(content=system_prompt_2_a+messages[-1].content+system_prompt_2_b)] + messages
+    response = model_with_tools_2.invoke(messages_with_system)
     return {"messages": [response]}
 
 workflow = StateGraph(MessagesState)
 
-# 定义两个节点，以便循环调用
-# 这句话是从样例代码那边抄来的，但其实不太对。按照图的描述，其实并不是循环调用的含义，而是START - agent - should_continue？ tools: END 的逻辑
 
 workflow.add_node("agent", call_model)
 workflow.add_node("tools", tool_node)
 
-workflow.add_node("next", has_next)
-
-workflow.add_node("agent_2", call_model_2, defer=True)
+workflow.add_node("agent_2", call_model_2, defer=True) # defer=True 表示在调用agent_2时，不立即执行，而是等待条件满足后再执行
 workflow.add_node("tools_2", tool_2_node)
 
-workflow.add_node("default", default_answer)
-
 workflow.add_edge(START, "agent")
-workflow.add_conditional_edges("agent", should_continue, ["tools", "default"])
+workflow.add_conditional_edges("agent", should_continue, ["tools", "agent_2"])
 workflow.add_edge("tools", "agent")
 
-workflow.add_edge("agent", "next")
-workflow.add_edge("next", "agent_2")
 
-workflow.add_conditional_edges("agent_2", should_compare, ["tools_2", "default"])
+workflow.add_conditional_edges("agent_2", could_compare, ["tools_2", END])
 workflow.add_edge("tools_2", "agent_2")
 
-workflow.add_edge("default", END)
+workflow.add_edge("agent_2", END)
 
-"""
-如果使用default，那么改为使用两个END点
-不使用default的场合代码如下
-workflow.add_conditional_edges("agent", should_continue, ["tools", END])
-workflow.add_edge("tools", "agent")
-"""
 
 app = workflow.compile()
 print(app.get_graph().draw_mermaid())
@@ -186,7 +197,7 @@ print(app.get_graph().draw_mermaid())
 
 # chat display start  =============================================
 def chat(msg):
-    for chunk in app.stream({"messages": [(msg)]}, stream_mode="values"):
+    for chunk in app.stream({"messages": [(msg)]}, stream_mode="values", config={"recursion_limit": 100}):
         chunk["messages"][-1].pretty_print()
 
 # chat display end  =============================================
@@ -205,9 +216,5 @@ while True:
         chat(user_input)
 
     except Exception as e:
-        # 捕获异常并提供默认输入
-        print(f"发生错误: {e}，尝试默认问题...")
-        user_input = "What do you know about LangGraph?"
-        print("User: " + user_input)
-        chat(user_input)
+        print(f"发生错误: {e}")
         break
