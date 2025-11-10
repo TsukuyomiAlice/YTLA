@@ -5,13 +5,14 @@
 from langchain_openai import ChatOpenAI
 from ytla_ai.deepseek import api_key
 
+# 设置llm
 llm_d1 = ChatOpenAI(model="deepseek-chat", api_key=api_key.DEEPSEEK_API_KEY_1, base_url="https://api.deepseek.com", temperature=0.0)
 llm_d2 = ChatOpenAI(model="deepseek-chat", api_key=api_key.DEEPSEEK_API_KEY_2, base_url="https://api.deepseek.com", temperature=0.0)
 llm_g1 = ChatOpenAI(model="glm-4.5-flash",api_key=api_key.GLM_API_KEY_1,base_url="https://open.bigmodel.cn/api/paas/v4", temperature=0.0)
 llm_g2 = ChatOpenAI(model="glm-4.5-flash",api_key=api_key.GLM_API_KEY_2,base_url="https://open.bigmodel.cn/api/paas/v4", temperature=0.0)
 
-llm_1 = llm_g1
-llm_2 = llm_g2
+llm_1 = llm_d1
+llm_2 = llm_d2
 # llm model end ===========================================================
 
 # tools start ==================================================

@@ -3660,5 +3660,369 @@ In order to use your model, you have to publish it. This is as easy as hitting t
 For now, you can leave those unchecked.
 
 # Reference:
-https://docs.microsoft.com/en-us/azure/health-bot/language_model_howto https://www.codemag.com/article/1809021/Natural-Language-Understanding-with-LUIS
+https://docs.microsoft.com/en-us/azure/health-bot/language_model_howto
+https://www.codemag.com/article/1809021/Natural-Language-Understanding-with-LUIS
 """
+
+question_3_31 = """
+# SIMULATION
+
+Use the following login credentials as needed:
+To enter your username, place your cursor in the Sign in box and click on the username below.
+To enter your password, place your cursor in the Enter password box and click on the password below.
+Azure Username: admin@abc.com -
+Azure Password: XXXXXXXXXXXX -
+The following information is for technical support purposes only:
+Lab Instance: 12345678 -
+Task -
+You need to create a version of the 1u12345678 Language Understanding (classic) model. The new version must have a version name of 1.0
+and must be active.
+To complete this task, sign in to the Language Understanding portal at https://www.luis.ai/.
+
+# Correct Answer:
+See explanation below.
+Step 1: Clone a version -
+1. Select the version you want to clone (1u12345678) then select Clone from the toolbar.
+2. In the Clone version dialog box, type a name for the new version. Type 1.0
+Step 2: Set active version -
+Select a version from the list, then select Activate from the toolbar.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-how-to-manage-versions
+"""
+
+question_3_32 = """
+# QUESTION
+
+You have a Language service resource that performs the following:
+• Sentiment analysis
+• Named Entity Recognition (NER)
+• Personally Identifiable Information (PII) identification
+You need to prevent the resource from persisting input data once the data is analyzed.
+
+Which query parameter in the Language service API should you congure?
+A. model-version
+B. piiCategories
+C. showStats
+D. loggingOptOut
+
+# Correct Answer:
+D
+"""
+
+question_3_33 = """
+# QUESTION
+
+You have an Azure Cognitive Services model named Model1 that identifies the intent of text input.
+You develop an app in C# named App1.
+You need to configure App1 to use Model1.
+
+Which package should you add to App1?
+A. Universal.Microsoft.CognitiveServices.Speech
+B. SpeechServicesToolkit
+C. Azure.AI.Language.Conversations
+D. Xamarin.Cognitive.Speech
+
+# Correct Answer:
+A
+"""
+
+question_3_34 = """
+# HOTSPOT
+
+You are building content for a video training solution.
+You need to create narration to accompany the video content. The solution must use Custom Neural Voice.
+What should you use to create a custom neural voice, and which service should you use to generate the narration? To answer, select the appropriate options in the answer area.
+NOTE: Each correct answer is worth one point.
+
+Answer Area
+Custom neural voice: ______ (Microsoft Bot Framework Composer / The Azure portal / The Language Understanding portal / The Speech Studio portal)
+Narration: ______ (Language Understanding / Speaker Recognition / Speech-to-text / Text-to-speech)
+
+# Correct Answer
+The Speech Studio portal, Text-to-speech
+"""
+
+question_3_35 = """
+# HOTSPOT
+
+You are building a call handling system that will receive calls from French-speaking and German-speaking callers. The system must perform the following tasks:
+• Capture inbound voice messages as text.
+• Replay messages in English on demand.
+Which Azure Cognitive Services services should you use? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+To capture messages: ______ (Speaker Recognition / Speech-to-text / Text-to-speech / Translator)
+To replay messages: ______ (Speech-to-text only / Speech-to-text and Language / Speaker Recognition and Language / Text-to-speech and Language / Text-to-speech and Translator)
+
+# Correct Answer:
+Speech-to-text, Text-to-speech and Translator
+"""
+
+question_3_36 = """
+# QUESTION
+
+You are building a social media extension that will convert text to speech. The solution must meet the following requirements:
+• Support messages of up to 400 characters.
+• Provide users with multiple voice options.
+• Minimize costs.
+You create an Azure Cognitive Services resource.
+
+Which Speech API endpoint provides users with the available voice options?
+A. https://uksouth.api.cognitive.microsoft.com/speechtotext/v3.0/models/base
+B. https://uksouth.customvoice.api.speech.microsoft.com/api/texttospeech/v3.0/longaudiosynthesis/voices
+C. https://uksouth.tts.speech.microsoft.com/cognitiveservices/voices/list
+D. https://uksouth.voice.speech.microsoft.com/cognitiveservices/v1?deploymentId={deploymentId}
+
+# Correct Answer:
+D
+"""
+
+question_3_37 = """
+# QUESTION
+
+You develop a custom question answering project in Azure Cognitive Service for Language. The project will be used by a chatbot.
+You need to configure the project to engage in multi-turn conversations.
+What should you do?
+A. Add follow-up prompts.
+B. Enable active learning.
+C. Add alternate questions.
+D. Enable chit-chat.
+
+# Correct Answer:
+A
+"""
+
+question_3_38 = """
+# HOTSPOT
+
+You are building a solution that students will use to nd references for essays.
+You use the following code to start building the solution.
+
+using Azure;
+using System;
+using Azure.AI.TextAnalytics;
+
+private static readonly AzureKeyCredential credentials = new AzureKeyCredential("<key>");
+private static readonly Uri endpoint = new Uri("<endpoint>");
+
+static void EntityLinker(TextAnalyticsClient client)
+{
+    var response = client.RecognizeLinkedEntities(
+        "Our tour guide took us up the Space Needle during our trip to Seattle lask week.");
+}
+
+For each of the following statements, select Yes is the statement is true. Otherwise, select No.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+Statements
+The Code will detect the language of documents.
+The url attribute returned for each linked entity will be a Bing search link.
+The matches attribute returned for each linked entity will provide the location in a document where the entity is referenced.
+
+# Correct Answer
+No, Yes, Yes
+"""
+
+question_3_39 = """
+# QUESTION
+
+You train a Conversational Language Understanding model to understand the natural language input of users.
+You need to evaluate the accuracy of the model before deploying it.
+What are two methods you can use? Each correct answer presents a complete solution.
+NOTE: Each correct selection is worth one point.
+A. From the language authoring REST endpoint, retrieve the model evaluation summary.
+B. From Language Studio, enable Active Learning, and then validate the utterances logged for review.
+C. From Language Studio, select Model performance.
+D. From the Azure portal, enable log collection in Log Analytics, and then analyze the logs.
+
+# Correct Answer:
+AC
+"""
+
+question_3_40 = """
+# DRAG DROP
+
+You develop an app in C# named App1 that performs speech-to-speech translation.
+You need to configure App1 to translate English to German.
+How should you complete the SpeechTranslationCong object? To answer, drag the appropriate values to the correct targets. Each value may
+be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content.
+NOTE: Each correct selection is worth one point.
+
+Values
+addTargetLanguage
+speechSynthesisLanguage
+speechRecognitionLanguage
+voiceName
+
+Answer Area
+var translationConfig = SpeechTranslationConfig.FromSubscription(SPEECH__SUBSCRIPTION__KEY, SPEECH__SERVICE__REGION);
+     translationConfig.______ = "en-US";
+     translationConfig.______ = ("de");
+     
+# Correct Answer
+speechRecognitionLanguage, speechSynthesisLanguage
+"""
+
+question_4_41 = """
+# QUESTION
+
+You have an Azure subscription that contains an Azure Cognitive Service for Language resource.
+You need to identify the URL of the REST interface for the Language service.
+Which blade should you use in the Azure portal?
+A. Identity
+B. Keys and Endpoint
+C. Networking
+D. Properties
+
+# Correct Answer:
+B
+"""
+
+question_4_42 = """
+# DRAG DROP
+
+You are building a transcription service for technical podcasts.
+Testing reveals that the service fails to transcribe technical terms accurately.
+You need to improve the accuracy of the service.
+Which ve actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.
+
+Actions
+Deploy the model.
+Create a Custom Speech project.
+Upload training datasets.
+Create a speech-to-text model.
+Create a Speaker Recognition model.
+Train the model.
+Create a Conversational Language Understanding model.
+
+# Correct Answer:
+Create a Custom Speech project.
+Create a speech-to-text model.
+Upload training datasets.
+Train the model.
+Deploy the model.
+"""
+
+question_3_43 = """
+You are building a retail kiosk system that will use a custom neural voice.
+You acquire audio samples and consent from the voice talent.
+You need to create a voice talent profile.
+What should you upload to the profile?
+A. a .zip file that contains 10-second .wav files and the associated transcripts as .txt files
+B. a five-minute .ac audio file and the associated transcript as a .txt file
+C. a .wav or .mp3 file of the voice talent consenting to the creation of a synthetic version of their voice
+D. a five-minute .wav or .mp3 file of the voice talent describing the kiosk system
+
+Correct Answer:
+C
+"""
+
+question_4_44 = """
+# DRAG DROP
+
+You have a Language Understanding solution that runs in a Docker container.
+You download the Language Understanding container image from the Microsoft Container Registry (MCR).
+You need to deploy the container image to a host computer.
+Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.
+
+Actions
+From the host computer, move the package file to the Docker input directory.
+From the Language Understanding portal, export the solution as a package file.
+From the host computer, build the container and specify the output directory.
+From the host computer, run the container and specify the input directory.
+From the language Understanding portal, retrain the model.
+
+# Correct Answer:
+From the Language Understanding portal, export the solution as a package file.
+From the host computer, move the package file to the Docker input directory.
+From the host computer, run the container and specify the input directory.
+"""
+
+question_4_45 = """
+# HOTSPOT
+
+You are building a text-to-speech app that will use a custom neural voice.
+You need to create an SSML le for the app. The solution must ensure that the voice prole meets the following requirements:
+• Expresses a calm tone
+• Imitates the voice of a young adult female
+How should you complete the code? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+```
+  <mstts:express-as ______(role / style / styledegree / type / voice) ="YoungAdultFemale" ______(role / style / styledegree / type / voice)="gentle">
+  How can I assist you?
+  </mstts:express-as>
+```
+
+# Correct Answer:
+role, style
+"""
+
+question_4_46 = """
+# HOTSPOT
+
+You have a collection of press releases stored as PDF les.
+You need to extract text from the files and perform sentiment analysis.
+Which service should you use for each task? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+Extract text: ______ (Azure Cognitive Search / Computer Vision / Form Recognizer)
+Perform sentiment analysis: ______ (Azure Cognitive Search / Computer Vision / Form Recognizer / Language)
+
+# Correct Answer:
+Form Recognizer, Language
+"""
+
+question_4_47 = """
+# QUESTION
+You have a text-based chatbot.
+You need to enable content moderation by using the Text Moderation API of Content Moderator.
+Which two service responses should you use? Each correct answer presents part of the solution.
+NOTE: Each correct selection is worth one point.
+A. personal data
+B. the adult classification score
+C. text classification
+D. optical character recognition (OCR)
+E. the racy classification score
+
+# Correct Answer:
+AC
+"""
+
+question_4_48 = """
+# HOTSPOT
+
+You are developing a text processing solution.
+You have the function shown below.
+
+static void GetKeyWords(TextAnalyticsClient textAnalyticsClient, string text)
+{
+    var response = textAnalyticsClient.RecognizeEntities (text);
+    Console.WriteLine("Key words:");
+    
+    foreach (CategorizedEntity entity in response.Value)
+    {
+        Console.WriteLine($"\t{entity.Text}");
+    }
+}
+
+For the second argument, you call the function and specify the following string.
+Our tour of Paris included a visit to the Eiffel Tower
+For each of the following statements, select Yes if the statement is true. Otherwise, select No.
+
+Answer Area
+Statements
+The output will include the following words: our and included.
+The output will include the following words: Paris, Eiffel, and Tower.
+The function will output all the key phrases from the input string to the console.
+
+# Correct Answer:
+No, Yes, Yes
+"""
+
+# till page 376
