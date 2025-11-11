@@ -3866,7 +3866,7 @@ var translationConfig = SpeechTranslationConfig.FromSubscription(SPEECH__SUBSCRI
 speechRecognitionLanguage, speechSynthesisLanguage
 """
 
-question_4_41 = """
+question_3_41 = """
 # QUESTION
 
 You have an Azure subscription that contains an Azure Cognitive Service for Language resource.
@@ -3881,7 +3881,7 @@ D. Properties
 B
 """
 
-question_4_42 = """
+question_3_42 = """
 # DRAG DROP
 
 You are building a transcription service for technical podcasts.
@@ -3920,7 +3920,7 @@ Correct Answer:
 C
 """
 
-question_4_44 = """
+question_3_44 = """
 # DRAG DROP
 
 You have a Language Understanding solution that runs in a Docker container.
@@ -3941,7 +3941,7 @@ From the host computer, move the package file to the Docker input directory.
 From the host computer, run the container and specify the input directory.
 """
 
-question_4_45 = """
+question_3_45 = """
 # HOTSPOT
 
 You are building a text-to-speech app that will use a custom neural voice.
@@ -3962,7 +3962,7 @@ Answer Area
 role, style
 """
 
-question_4_46 = """
+question_3_46 = """
 # HOTSPOT
 
 You have a collection of press releases stored as PDF les.
@@ -3978,7 +3978,7 @@ Perform sentiment analysis: ______ (Azure Cognitive Search / Computer Vision / F
 Form Recognizer, Language
 """
 
-question_4_47 = """
+question_3_47 = """
 # QUESTION
 You have a text-based chatbot.
 You need to enable content moderation by using the Text Moderation API of Content Moderator.
@@ -3994,7 +3994,7 @@ E. the racy classification score
 AC
 """
 
-question_4_48 = """
+question_3_48 = """
 # HOTSPOT
 
 You are developing a text processing solution.
@@ -4025,4 +4025,1263 @@ The function will output all the key phrases from the input string to the consol
 No, Yes, Yes
 """
 
-# till page 376
+question_3_49 = """
+# HOTSPOT
+
+You are building an Azure web app named App1 that will translate text from English to Spanish.
+You need to use the Text Translation REST API to perform the translation. The solution must ensure that you have data sovereignty in the United States.
+How should you complete the URI? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+
+https://______/______?api-verision=3.0&to=es
+(api.cognitive.microsofttranslator.com / api-nam.cognitive.microsofttranslator.com / api-nam.cognitiveservices.azure.com / eastus.api.cognitive.microsoft.com)
+(detext / languages / text-to-speech / translate)
+
+# Correct Answer:
+api-nam.cognitive.microsofttranslator.com, translate
+"""
+
+question_3_50 = """
+# DRAG DROP
+
+You have a Docker host named Host1 that contains a container base image.
+You have an Azure subscription that contains a custom speech-to-text model named model1.
+You need to run model1 on Host1.
+Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.
+
+Actions
+Retrain the model.
+Request approval to run the container.
+Export model1 to host1.
+Run the container.
+Configure disk logging.
+
+# Correct Answer:
+Request approval to run the container.
+Retrain the model.
+Run the container.
+"""
+
+question_3_51 = """
+# SCENARIO
+
+Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
+After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
+
+You build a language model by using a Conversational Language Understanding. The language model is used to search for information on a contact list by using an intent named FindContact.
+A conversational expert provides you with the following list of phrases to use for training.
+• Find contacts in London.
+• Who do I know in Seattle?
+• Search for contacts in Ukraine.
+You need to implement the phrase list in Conversational Language Understanding.
+
+Solution: You create a new utterance for each phrase in the FindContact intent.
+Does this meet the goal?
+A. Yes
+B. No
+
+# Correct Answer:
+B
+"""
+
+question_3_52 = """
+# DRAG DROP
+
+You have a question answering project in Azure Cognitive Service for Language.
+You need to move the project to a Language service instance in a different Azure region.
+Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.
+
+Actions
+From the new Language service instance, train and publish the project.
+From the new Language service instance, import the project file.
+From the new Language service instance, enable custom text classification.
+From the original Language service instance, export the existing project.
+From the new Language service instance, regenerate the keys.
+From the original Language service instance, tran and publish the model.
+
+# Correct Answer:
+From the original Language service instance, export the existing project.
+From the new Language service instance, import the project file.
+From the new Language service instance, train and publish the project.
+"""
+
+question_3_53 = """
+# DRAG DROP
+-
+You are building a customer support chatbot.
+You need to configure the bot to identify the following:
+• Code names for internal product development
+• Messages that include credit card numbers
+The solution must minimize development effort.
+Which Azure Cognitive Service for Language feature should you use for each requirement? To answer, drag the appropriate features to the correct requirements. Each feature may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content.
+NOTE: Each correct selection is worth one point.
+
+Features
+Custom named entity recognition (NER)
+Key phrase extraction
+Language detection
+Named Entity Recognition (NER)
+Personally Identifiable information (PII) detection
+Sentiment analysis
+
+Answer Area
+Identify code names for internal product development: ______
+Identify messages that include credit card numbers: ______
+
+# Correct Answer:
+Custom named entity recognition (NER), Personally Identifiable information (PII) detection
+"""
+
+question_3_54 = """
+# HOTSPOT
+
+You are building an app by using the Speech SDK. The app will translate speech from French to German by using natural language processing.
+You need to dene the source language and the output language.
+How should you complete the code? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+var speechTranslationConfig = 
+SpeechTranslationConfig.FromSubscription(speechKey, speechRegion);
+speechTranslationConfig.______(AddTargetLanguage / SpeechRecognitionLanguage / SpeechSynthesisLanguage / TargetLanguages / VoiceName)="fr"
+speech_translation_config.______(AddTargetLanguage / SpeechRecognitionLanguage / SpeechSynthesisLanguage / TargetLanguages / VoiceName)="fr"
+
+# Correct Answer:
+SpeechRecognitionLanguage, AddTargetLanguage
+"""
+
+question_3_55 = """
+# DRAG DROP
+
+You have a collection of Microsoft Word documents and PowerPoint presentations in German.
+You need to create a solution to translate the files to French. The solution must meet the following requirements:
+• Preserve the original formatting of the files.
+• Support the use of a custom glossary.
+You create a blob container for German files and a blob container for French files. You upload the original files to the container for German files.
+Which three actions should you perform in sequence to complete the solution? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.
+
+Actions
+Perform an asynchronous translation by using the list of files to be translated.
+Perform an asynchronous translation by using the document translation specification.
+Generate a list of files to be translated.
+Upload a glossary file to the container for German files.
+Upload a glossary file to the container for French files.
+Define a document translation specification that has French target.
+
+# Correct Answer:
+Upload a glossary file to the container for German files.
+Define a document translation specification that has French target.
+Perform an asynchronous translation by using the document translation specification.
+"""
+
+question_3_56 = """
+# QUESTION
+
+You have the following C# function.
+
+static void MyFunction(TextAnalyticsClient textAnalyticsClient, string text)
+{
+    var response = textAnalyticsClient.ExtractKeyPhrases(text);
+    Console.WriteLine("Key phrases:");
+    
+    foreach (string keyphrase in response.Value)
+    {
+        Console.WriteLine($"{keyphrase}");
+    }
+}
+
+You call the function by using the following code.
+
+MyFunction(textAnalyticsClient, "the quick brown fox jumps over the lazy dog");
+
+Which output will you receive?
+A. The quick
+The lazy
+B. the quick brown fox jumps over the lazy dog
+C. jumps over the
+D. quick brown fox
+lazy dog
+
+# Correct Answer:
+D
+"""
+
+question_3_57 = """
+# QUESTION
+
+You have the following Python method.
+
+def create_resource (resource_name, kind, account_tier, location):
+    parameters = CognitiveServiceAccount(sku=Sku(name=account_tier), kind=kind, location=location, properties={})
+    result = cogSveClient.accounts.create(resource_group_name, resource_name, parameters)
+
+You need to deploy an Azure resource to the East US Azure region. The resource will be used to perform sentiment analysis.
+How should you call the method?
+A. create_resource("res1", "TextAnalytics", "Standard", "East US")
+B. create_resource("res1", "ContentModerator", "S0", "eastus")
+C. create_resource("res1", "ContentModerator", "Standard", "East US")
+D. create_resource("res1", "TextAnalytics", "S0", "eastus")
+
+# Correct Answer:
+D
+"""
+
+question_3_58 = """
+# DRAG DROP
+
+You develop a Python app named App1 that performs speech-to-speech translation.
+You need to configure App1 to translate English to German.
+How should you complete the SpeechTranslationCong object? To answer, drag the appropriate values to the correct targets. Each value may be used once, more than once or not at all. You may need to drag the split bar between panes or scroll to view content.
+NOTE: Each correct selection is worth one point.
+
+Values
+add_target_language
+speech_synthesis_language
+speech_recognition_language
+voice_name
+
+Answer Area
+def translate_speech_to_text():
+    translation_config = speechsdk.translation.SpeechTranslationConfig(subscription=speech_key, region=service_region)
+    translation_config.______ = "en-US"
+    translation_config.______ = "de"
+    
+# Correct Answer:
+speech_recognition_language, add_target_language
+"""
+
+question_3_59 = """
+# HOTSPOT
+
+You are developing a streaming Speech to Text solution that will use the Speech SDK and MP3 encoding.
+You need to develop a method to convert speech to text for streaming MP3 data.
+How should you complete the code? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+
+audio_format = speechsdk.audio.______(compressed_stream_format=speechsdk.AudioStreamContainerFormat.MP3)
+                               (AudioConfig.SetProperty / AudioStreamFormat / GetWaveFormatPCM / PullAudioinputStream)
+stream = speechsdk.audio.PullAudioInputStream(stream_format=audio_format, pull_stream_callback=callback)
+speech_config = speechsdk.SpeechConfig("18c51a87-3a69-47a8-aedc-a54745f708a1", "westus")
+audio_config = speechsdk.audio.AudioConfig(stream=stream)
+recognizer = speechsdk.______(speech_config=speech_config, audio_config=audio_config)
+                       (KeywordRecognizer / SpeakerRecognizer / SpeechRecognizer / SpeechSynthesizer)
+result = recognizer.recognize_once()
+text = result.text
+
+Correct Answer:
+AudioStreamFormat, SpeechRecognizer
+"""
+
+question_3_60 = """
+# HOTSPOT
+
+You are building a chatbot.
+You need to use the Content Moderator API to identify aggressive and sexually explicit language.
+Which three settings should you configure? To answer, select the appropriate settings in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+
+Content Moderator - Moderate
+Text - Screen
+The operation detects profanity in more than 100 languages and match against custom and shared blacklists.
+Host
+  Name
+  Resource Name
+Query parameters
+  autocorrect
+  PII
+  listId
+  classify
+  language
+Headers
+  Content-Type
+  Ocp-Apim-Subscription-Key
+  
+# Correct Answer:
+autocorrect, classify, Ocp-Apim-Subscription-Key
+"""
+
+question_3_61 = """
+# QUESTION
+
+You are developing an app that will use the Decision and Language APIs.
+You need to provision resources for the app. The solution must ensure that each service is accessed by using a single endpoint and credential.
+Which type of resource should you create?
+A. Language
+B. Speech
+C. Azure Cognitive Services
+D. Content Moderator
+
+# Correct Answer:
+C
+"""
+
+question_3_62 = """
+# QUESTION
+
+You are building a chatbot.
+You need to ensure that the bot will recognize the names of your company’s products and codenames. The solution must minimize development effort.
+Which Azure Cognitive Service for Language service should you include in the solution?
+A. custom text classification
+B. entity linking
+C. custom Named Entity Recognition (NER)
+D. key phrase extraction
+
+# Correct Answer:
+C
+"""
+
+question_3_63 = """
+# QUESTION
+
+You have an Azure subscription that contains an Azure App Service app named App1.
+You provision a multi-service Azure Cognitive Services resource named CSAccount1.
+You need to configure App1 to access CSAccount1. The solution must minimize administrative effort.
+What should you use to configure App1?
+A. a system-assigned managed identity and an X.509 certificate
+B. the endpoint URI and an OAuth token
+C. the endpoint URI and a shared access signature (SAS) token
+D. the endpoint URI and subscription key
+
+# Correct Answer:
+D
+"""
+
+question_3_64 = """
+# QUESTION
+
+You have an Azure subscription that contains a multi-service Azure Cognitive Services Translator resource named Translator1.
+You are building an app that will translate text and documents by using Translator1.
+You need to create the REST API request for the app.
+Which headers should you include in the request?
+A. the access control request, the content type, and the content length
+B. the subscription key and the client trace ID
+C. the resource ID and the content language
+D. the subscription key, the subscription region, and the content type
+
+# Correct Answer:
+D
+"""
+
+question_3_65 = """
+# QUESTION
+
+You have a file share that contains 5,000 images of scanned invoices.
+You need to analyze the images. The solution must extract the following data:
+• Invoice items
+• Sales amounts
+• Customer details
+What should you use?
+A. Custom Vision
+B. Azure AI Computer Vision
+C. Azure AI Immersive Reader
+D. Azure AI Document Intelligence
+
+# Correct Answer:
+D
+"""
+
+question_3_66 = """
+# HOTSPOT
+
+You are developing a text processing solution.
+You have the function shown below.
+
+def get_key_words(textAnalyticClient, text):
+    response = textAnalyticClient.recognize_entities(documents = [text])[0]
+    print("Key Words:")
+    for entity in response.entities:
+        print("\t\t", entity.text)
+
+For the second argument, you call the function and specify the following string.
+Our tour of Paris included a visit to the Eiffel Tower
+For each of the following statements, select Yes if the statement is true. Otherwise, select No.
+
+Answer Area
+Statements
+The output will include the following words: our and included.
+The output will include the following words: Paris, Eiffel, and Tower.
+The function will output all the key phrases from the input string to the console.
+
+# Correct Answer:
+No, Yes, Yes
+"""
+
+question_3_67 = """
+# HOTSPOT
+
+You are developing a text processing solution.
+You develop the following method.
+
+def get_key_phrases(text_analytics_client, text):
+    response = text_analytics_client.extract_key_phrases(text, language="en")
+    print('Key phrases:')
+    for keyphrase in response.key_phrases:
+        print(f'\t{keyphrase}')
+
+You call the method by using the following code.
+
+get_key_phrases(text_analytics_client, "the cat sat on the mat")
+
+For each of the following statements, select Yes if the statement is true. Otherwise, select No.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+Statements
+The call will output key phrases from the input string to the console.
+The output will contain the following words: the, cat, sat, on and mat.
+The output will contain the confidence level for key phrases.
+
+# Correct Answer:
+Yes, No, No
+"""
+
+question_3_68 = """
+# HOTSPOT
+
+You are developing a service that records lectures given in English (United Kingdom).
+You have a method named append_to_transcript_le that takes translated text and a language identifier.
+You need to develop code that will provide transcripts of the lectures to attendees in their respective language. The supported languages are English, French, Spanish, and German.
+How should you complete the code? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point
+
+Answer Area
+
+speech_key = os.environ['SPEECH__SUBSCRIPTION__KEY']
+service region = os.environ['SPEECH_SERVICE_REGION']
+def translate_speech():
+    translation_config = speechsdk.translation.SpeechTranslationConfig(subscription=speech_key, region=service_region)
+    translation_config.speech_recognition_language = "en-GB"
+    languages = ______ ((['en-GB']) / (['fr', 'de', 'es']) / (['French', 'Spanish', 'German']) / (['languages']))
+    for language in languages: translation_config.add_target_language(language)
+    audio_config = speechsdk.audio.AudioConfig(use_default_microphone=True)
+    recognizer = speechsdk.translation.______(IntentRecognizer( / SpeakerRecognizer( / SpeechSynthesizer( / TranslationRecognizer( ) translation_config=translation_config, audio_config=audio_config)
+    result = recognizer.recognize_once()
+    if result.reason == speechsdk.ResultReason.TranslatedSpeech:
+        append_to_transcript_file(result.text, "en")
+        for language in result.translations:
+            append_to_transcript_file(result.translations[language], language)
+            
+# Correct Answer:
+(['fr', 'de', 'es']), TranslationRecognizer(
+"""
+
+question_3_69 = """
+# QUESTION
+
+You are developing an app that will use the text-to-speech capability of the Azure AI Speech service. The app will be used in motor vehicles.
+You need to optimize the quality of the synthesized voice output.
+Which Speech Synthesis Markup Language (SSML) attribute should you congure?
+A. the style attribute of the mstts:express-as element
+B. the effect attribute of the voice element
+C. the pitch attribute of the prosody element
+D. the level attribute of the emphasis element
+
+# Correct Answer:
+B
+"""
+
+question_3_70 = """
+# QUESTION
+
+You are designing a content management system.
+You need to ensure that the reading experience is optimized for users who have reduced comprehension and learning differences, such as dyslexia. The solution must minimize development effort.
+Which Azure service should you include in the solution?
+A. Azure AI Immersive Reader
+B. Azure AI Translator
+C. Azure AI Document Intelligence
+D. Azure AI Language
+
+# Correct Answer:
+A
+"""
+
+question_3_71 = """
+# HOTSPOT
+
+You are building an app that will answer customer calls about the status of an order. The app will query a database for the order details and provide the customers with a spoken response.
+You need to identify which Azure AI service APIs to use. The solution must minimize development effort.
+Which object should you use for each requirement? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+Convert customer calls into text queries: ______ (SpeechRecognizer / SpeechSynthesizer / TranslationRecognizer / VoiceProfileClient)
+Provide customers with the order details: ______ (SpeechRecognizer / SpeechSynthesizer / TranslationRecognizer / VoiceProfileClient)
+
+# Correct Answer:
+TranslationRecognizer, SpeechSynthesizer
+"""
+
+question_3_72 = """
+# QUESTION
+
+You have an Azure AI service model named Model1 that identifies the intent of text input.
+You develop a Python app named App1.
+You need to configure App1 to use Model1.
+Which package should you add to App1?
+A. azure-cognitiveservices-language-textanalytics
+B. azure-ai-language-conversations
+C. azure-mgmt-cognitiveservices
+D. azure-cognitiveservices-speech
+
+# Correct Answer:
+D
+"""
+
+question_3_73 = """
+# HOTSPOT
+
+You are building an app that will automatically translate speech from English to French, German, and Spanish by using Azure AI service.
+You need to dene the output languages and configure the Azure AI Speech service.
+How should you complete the code? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+
+speech_key, service_region = os.environ['SPEECH__SERVICE__KEY'], os.environ['SPEECH_SERVICE_REGION']
+languages = ______ (['en-GB'] / ['en', 'fr', 'de', 'es'] / ['fr', 'de', 'es'] / ["French", "Spanish", "German"])
+def translate_speech_to_text():
+  translation_config = speechsdk.translation.SpeechTranslationConfig(subscription=speech_key, region=service_region)
+  for lang in languages:
+    translation_config.add_target_language(lang)
+      for lang in languages:
+        translation_config.add_language(lang)
+    recognizer = speechsdk.translation.______ (intentRecognizer / SpeakerRecognizer / SpeechSynthesizer / TranslationRecognizer) (translation_config=translation_config)
+    
+# Correct Answer:
+['fr', 'de', 'es'], TranslationRecognizer
+"""
+
+question_3_74 = """
+# DRAG DROP
+
+You plan to implement an Azure AI Search resource that will use custom skill based on sentiment analysis.
+You need to create a custom model and configure Azure AI Search use the model.
+Which ve actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.
+
+Actions
+Create an endpoint for the model.
+Rerun the indexer to enrich the index.
+Create an Azure Machine Learning workspace.
+Create and train the model in the Azure Machine Learning studio.
+Provision an Azure AI Services resource and obtain the endpoint.
+Connect the custom skill the endpoint.
+
+# Correct Answer:
+Create an Azure Machine Learning workspace.
+Provision an Azure AI Services resource and obtain the endpoint.
+Connect the custom skill the endpoint.
+Create and train the model in the Azure Machine Learning studio.
+Rerun the indexer to enrich the index.
+"""
+
+question_3_75 = """
+# HOTSPOT
+
+You have a collection of press releases stored as PDF les.
+You need to extract text from the les and perform sentiment analysis.
+Which service should you use for each task? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+Extract text:______ (Azure AI Search / Azure AI Vision / Azure AI Document Intelligence)
+Perform sentiment analysis:______ (Azure Cognitive Search / Azure AI Computer Vision / Azure AI Document Intelligence / Azure AI Language)
+
+# Correct Answer:
+Azure AI Document Intelligence, Azure AI Language
+"""
+
+question_3_76 = """
+# QUESTION
+
+You are building an internet-based training solution. The solution requires that a user's camera and microphone remain enabled.
+You need to monitor a video stream of the user and verify that the user is alone and is not collaborating with another user. The solution must minimize development effort.
+What should you include in the solution?
+A. speech-to-text in the Azure AI Speech service
+B. object detection in Azure AI Custom Vision
+C. Spatial Analysis in Azure AI Vision
+D. object detection in Azure AI Custom Vision
+
+# Correct Answer:
+A
+"""
+
+question_3_77 = """
+# QUESTION
+
+You are developing an app that will use the Speech and Language APIs.
+You need to provision resources for the app. The solution must ensure that each service is accessed by using a single endpoint and credential.
+Which type of resource should you create?
+A. Azure AI Language
+B. Azure AI Speech
+C. Azure AI Services
+D. Azure AI Content Safety
+
+# Correct Answer:
+C
+"""
+
+question_3_78 = """
+# HOTSPOT
+
+You are building an app that will automatically translate speech from English to French, German, and Spanish by using Azure AI service.
+You need to dene the output languages and configure the Azure AI Speech service.
+How should you complete the code? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+
+static async Task TranslateSpeechAsync()
+{
+  var config = SpeechTranslationConfig.FromSubscription(SPEECH__SUBSCRIPTION__KEY, SPEECH__SERVICE__REGION);
+  var languages = new List<string>______; (["en-GB"] / ["en", "fr", "de", "es"] / ["fr", "de", "es"] / ["French", "German", "Spanish"])
+  languages.ForEach(config.AddTargetLanguage);
+  usingvar recognizer = new ______; (IntentRecognizer / SpeakerRecognizer / SpeechSynthesizer / TranslationRecognizer)
+}
+
+# Correct Answer:
+["fr", "de", "es"], TranslationRecognizer
+"""
+
+question_3_79 = """
+# QUESTION
+
+You are developing a text processing solution.
+You have the following function.
+
+static void GetKeyWords(TextAnalyticsClient textAnalyticsClient, string text)
+{
+    var response = textAnalyticsClient.RecognizeEntities(text);
+    Console.WriteLine("Key words:");
+    
+    foreach (CategorizedEntity entity in response.Value)
+    {
+        Console.WriteLine($"\t{entity.Text}");
+    }
+}
+
+You call the function and use the following string as the second argument.
+
+Our tour of London included a visit to Buckingham Palace
+
+What will the function return?
+A. London and Buckingham Palace only
+B. Tour and visit only
+C. London and Tour only
+D. Our tour of London included visit to Buckingham Palace
+
+# Correct Answer:
+A
+"""
+
+question_3_80 = """
+# QUESTION
+
+You have the following Python function.
+
+def my_function(textAnalyticsClient, text):
+    response = textAnalyticsClient.extract_key_phrases(documents = [text])[0]
+    print("Key Phrases:")
+    for phrase in response.key_phrases:
+        print(phrase)
+
+You call the function by using the following code.
+
+my_function(text_analytics_client, "the quick brown fox jumps over the lazy dog")
+
+Following 'Key phrases', what output will you receive?
+A. The quick
+The lazy
+B. jumps over the
+C. quick brown fox
+lazy dog
+D. the quick brown fox jumps over the lazy dog
+
+# Correct Answer:
+C
+"""
+
+question_3_81 = """
+# QUESTION
+
+You have an Azure subscription.
+You need to deploy an Azure AI Search resource that will recognize geographic locations.
+Which built-in skill should you include in the skillset for the resource?
+A. AzureOpenAIEmbeddingSkill
+B. DocumentExtractionSkill
+C. EntityRecognitionSkill
+D. EntityLinkingSkill
+
+# Correct Answer:
+C
+"""
+
+question_4_1 = """
+HOTSPOT
+
+You are developing a text processing solution.
+You develop the following method.
+
+static void GetKeyPhrases(TextAnalyticsClient textAnalyticsClient, string text)
+{
+    var response = textAnalyticsClient.ExtractKeyPhrases(text);
+    Console.WriteLine("Key phrases:");
+    
+    foreach (string keyphrase in response.Value)
+    {
+        Console.WriteLine($"\t{keyphrase}");
+    }
+}
+
+You call the method by using the following code.
+GetKeyPhrases(textAnalyticsClient, "the cat sat on the mat");
+For each of the following statements, select Yes if the statement is true. Otherwise, select No.
+NOTE: Each correct selection is worth one point.
+
+Hot Area:
+Statements
+The call will output key phrases from the input string to the console.
+The output will contain the following words: the cat, sat, on and mat.
+The output will contain the confidence level for key phrases.
+
+Correct Answer:
+Yes, No, No
+
+Box 1: Yes -
+The Key Phrase Extraction API evaluates unstructured text, and for each JSON document, returns a list of key phrases.
+Box 2: No -
+'the' is not a key phrase.
+This capability is useful if you need to quickly identify the main points in a collection of documents. For example, given input text "The food was delicious and there were wonderful staff", the service returns the main talking points: "food" and "wonderful staff".
+Box 3: No -
+Key phrase extraction does not have confidence levels.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-keyword-extraction
+"""
+
+question_4_2 = """
+# QUESTION
+
+You deploy a web app that is used as a management portal for indexing in Azure Cognitive Search. The app is configured to use the primary admin key.
+During a security review, you discover unauthorized changes to the search index. You suspect that the primary access key is compromised.
+You need to prevent unauthorized access to the index management endpoint. The solution must minimize downtime.
+What should you do next?
+A. Regenerate the primary admin key, change the app to use the secondary admin key, and then regenerate the secondary admin key.
+B. Change the app to use a query key, and then regenerate the primary admin key and the secondary admin key.
+C. Regenerate the secondary admin key, change the app to use the secondary admin key, and then regenerate the primary key.
+D. Add a new query key, change the app to use the new query key, and then delete all the unused query keys.
+
+# Correct Answer:
+A
+
+Regenerate admin keys.
+Two admin keys are created for each service so that you can rotate a primary key, using the secondary key for business continuity.
+1. In the Settings >Keys page, copy the secondary key.
+2. For all applications, update the API key settings to use the secondary key.
+3. Regenerate the primary key.
+4. Update all applications to use the new primary key.
+Note: Two admin api-keys, referred to as primary and secondary keys in the portal, are automatically generated when the service is created and can be individually regenerated on demand. Having two keys allows you to roll over one key while using the second key for continued access to the service.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/search/search-security-api-keys#regenerate-admin-keys
+"""
+
+question_4_3 = """
+# QUESTION
+
+You have an existing Azure Cognitive Search service.
+You have an Azure Blob storage account that contains millions of scanned documents stored as images and PDFs.
+You need to make the scanned documents available to search as quickly as possible.
+What should you do?
+A. Split the data into multiple blob containers. Create a Cognitive Search service for each container. Within each indexer definition, schedule the same runtime execution pattern.
+B. Split the data into multiple blob containers. Create an indexer for each container. Increase the search units. Within each indexer definition, schedule a sequential execution pattern.
+C. Create a Cognitive Search service for each type of document.
+D. Split the data into multiple virtual folders. Create an indexer for each folder. Increase the search units. Within each indexer definition, schedule the same runtime execution pattern.
+
+# Correct Answer:
+D
+
+Incorrect Answers:
+A: Need more search units to process the data in parallel.
+B: Run them in parallel, not sequentially.
+C: Need a blob indexer.
+Note: A blob indexer is used for ingesting content from Azure Blob storage into a Cognitive Search index.
+Index large datasets
+Indexing blobs can be a time-consuming process. In cases where you have millions of blobs to index, you can speed up indexing by partitioning your data and using multiple indexers to process the data in parallel. Here's how you can set this up:
+✑ Partition your data into multiple blob containers or virtual folders
+✑ Set up several data sources, one per container or folder.
+✑ Create a corresponding indexer for each data source. All of the indexers should point to the same target search index.
+✑ One search unit in your service can run one indexer at any given time. Creating multiple indexers as described above is only useful if they actually run in parallel.
+
+Reference:
+https://docs.microsoft.com/en-us/azure/search/search-howto-indexing-azure-blob-storage
+"""
+
+question_4_4 = """
+# QUESTION
+
+You need to implement a table projection to generate a physical expression of an Azure Cognitive Search index.
+Which three properties should you specify in the skillset definition JSON configuration table node? Each correct answer presents part of the solution.
+NOTE: Each correct selection is worth one point.
+A. tableName
+B. generatedKeyName
+C. dataSource
+D. dataSourceConnection
+E. source
+
+# Correct Answer:
+ABE
+
+Defining a table projection.
+Each table requires three properties:
+✑ tableName: The name of the table in Azure Storage.
+✑ generatedKeyName: The column name for the key that uniquely identifies this row.
+✑ source: The node from the enrichment tree you are sourcing your enrichments from. This node is usually the output of a shaper, but could be the output of any of the skills.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/search/knowledge-store-projection-overview
+"""
+
+question_4_5 = """
+# HOTSPOT
+You are creating an enrichment pipeline that will use Azure Cognitive Search. The knowledge store contains unstructured JSON data and scanned PDF documents that contain text.
+Which projection type should you use for each data type? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+Hot Area:
+JSON data: ______ (File projection / Object projection / Table projection)
+Scanned data: ______ (File projection / Object projection / Table projection)
+
+# Correct Answer:
+Object projection, File projection
+
+Box 1: Object projection -
+Object projections are JSON representations of the enrichment tree that can be sourced from any node.
+Box 2: File projection -
+File projections are similar to object projections and only act on the normalized_images collection.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/search/knowledge-store-projection-overview
+"""
+
+question_4_6 = """
+HOTSPOT -
+You are building an Azure Cognitive Search custom skill.
+You have the following custom skill schema definition.
+
+{
+  "@odata.type": "#Microsoft.Skills.Custom.WebApiSkill",
+  "description": "My custom skill description",
+  "uri": "https//contoso-webskill.azurewebsites.net/api/process",
+  "context": "/document/organizations/*",
+  "inputs": [
+    {
+      "name": "companyName",
+      "source": "/document/organizations/*"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "companyDescription",
+    }
+  ]
+}
+
+For each of the following statements, select Yes if the statement is true. Otherwise, select No.
+NOTE: Each correct selection is worth one point.
+Hot Area:
+
+Statements
+CompanyDescription is available for indexing.
+The definition calls a web API as part of the enrichment process.
+The enrichment step is called only for the first organization under "/document/organizations".
+
+# Correct Answer:
+Yes, Yes, No
+
+Box 1: Yes -
+Once you have defined a skillset, you must map the output fields of any skill that directly contributes values to a given eld in your search index.
+Box 2: Yes -
+The definition is a custom skill that calls a web API as part of the enrichment process.
+Box 3: No -
+For each organization identified by entity recognition, this skill calls a web API to nd the description of that organization.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/search/cognitive-search-output-field-mapping
+"""
+
+question_4_7 = """
+# QUESTION
+
+You have the following data sources:
+✑ Finance: On-premises Microsoft SQL Server database
+✑ Sales: Azure Cosmos DB using the Core (SQL) API
+✑ Logs: Azure Table storage
+HR: Azure SQL database -
+You need to ensure that you can search all the data by using the Azure Cognitive Search REST API.
+What should you do?
+A. Configure multiple read replicas for the data in Sales.
+B. Mirror Finance to an Azure SQL database.
+C. Ingest the data in Logs into Azure Data Explorer.
+D. Ingest the data in Logs into Azure Sentinel.
+
+# Correct Answer:
+B
+
+On-premises Microsoft SQL Server database cannot be used as an index data source.
+Note: Indexer in Azure Cognitive Search: : Automate aspects of an indexing operation by configuring a data source and an indexer that you can schedule or run on demand. This feature is supported for a limited number of data source types on Azure.
+Indexers crawl data stores on Azure.
+✑ Azure Blob Storage
+✑ Azure Data Lake Storage Gen2 (in preview)
+✑ Azure Table Storage
+✑ Azure Cosmos DB
+✑ Azure SQL Database
+✑ SQL Managed Instance
+✑ SQL Server on Azure Virtual Machines
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/search/search-indexer-overview#supported-data-sources
+"""
+
+question_4_8 = """
+# QUESTION
+
+You are developing a solution to generate a word cloud based on the reviews of a company's products.
+Which Text Analytics REST API endpoint should you use?
+A. keyPhrases
+B. sentiment
+C. languages
+D. entities/recognition/general
+
+# Correct Answer:
+A
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/overview
+"""
+
+question_4_9 = """
+# DRAG DROP
+You have a web app that uses Azure Cognitive Search.
+When reviewing billing for the app, you discover much higher than expected charges. You suspect that the query key is compromised.
+You need to prevent unauthorized access to the search endpoint and ensure that users only have read only access to the documents collection. The solution must minimize app downtime.
+Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.
+
+Select and Place:
+Actions
+Add a new query key.
+Regenerate the secondary admin key.
+Change the app to use the secondary admin key.
+Change the app to use the new key.
+Regenerate the primary admin key.
+Delete the compromised key.
+
+# Correct Answer:
+Add a new query key.
+Change the app to use the new key.
+Delete the compromised key.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/search/search-security-api-keys
+"""
+
+question_4_10 = """
+# QUESTION
+
+You are developing an application that will use Azure Cognitive Search for internal documents.
+You need to implement document-level filtering for Azure Cognitive Search.
+Which three actions should you include in the solution? Each correct answer presents part of the solution.
+NOTE: Each correct selection is worth one point.
+A. Send Azure AD access tokens with the search request.
+B. Retrieve all the groups.
+C. Retrieve the group memberships of the user.
+D. Add allowed groups to each index entry.
+E. Create one index per group.
+F. Supply the groups as a filter for the search requests.
+
+# Correct Answer:
+CDF
+
+Your documents must include a eld specifying which groups have access. This information becomes the filter criteria against which documents are selected or rejected from the result set returned to the issuer.
+D: A query request targets the documents collection of a single index on a search service.
+CF: In order to trim documents based on group_ids access, you should issue a search query with a group_ids/any(g:search.in(g, 'group_id1,
+group_id2,...')) filter, where 'group_id1, group_id2,...' are the groups to which the search request issuer belongs.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/search/search-security-trimming-for-azure-search
+"""
+
+question_4_11 = """
+# QUESTION
+
+You have an Azure Cognitive Search solution and an enrichment pipeline that performs Sentiment Analysis on social media posts.
+You need to dene a knowledge store that will include the social media posts and the Sentiment Analysis results.
+Which two fields should you include in the definition? Each correct answer presents part of the solution.
+NOTE: Each correct selection is worth one point.
+A. storageContainer
+B. storageConnectionString
+C. files
+D. tables
+E. objects
+
+# Correct Answer:
+BE
+Knowledge store definition -
+A knowledge store is defined inside a skillset definition and it has two components:
+A connection string to Azure Storage Projections that determine whether the knowledge store consists of tables, objects or files.
+The projections element is an array. You can create multiple sets of table-object-file combinations within one knowledge store.
+"knowledgeStore": {
+"storageConnectionString":"<YOUR-AZURE-STORAGE-ACCOUNT-CONNECTION-STRING>",
+"projections":[
+{
+"tables":[ ],
+"objects":[ ],
+"files":[ ]
+}
+}
+The type of projection you specify in this structure determines the type of storage used by knowledge store.
+Objects - project JSON document into Blob storage. The physical representation of an object is a hierarchical JSON structure that represents an enriched document.
+Tables - project enriched content into Table Storage. Dene a table projection when you need tabular reporting structures for inputs to analytical tools or export as data frames to other data stores. You can specify multiple tables within the same projection group to get a subset or cross section of enriched documents. Within the same projection group, table relationships are preserved so that you can work with all of them.
+Projected content is not aggregated or normalized. The following screenshot shows a table, sorted by key phrase, with the parent document indicated in the adjacent column. In contrast with data ingestion during indexing, there is no linguistic analysis or aggregation of content.
+Plural forms and differences in casing are considered unique instances.
+Incorrect:
+Not C: files - project image les into Blob storage. A file is an image extracted from a document, transferred intact to Blob storage.
+Although it is named "files", it shows up in Blob Storage, not file storage.
+"""
+
+question_4_12 = """
+# SIMULATION -
+Use the following login credentials as needed:
+To enter your username, place your cursor in the Sign in box and click on the username below.
+To enter your password, place your cursor in the Enter password box and click on the password below.
+Azure Username: admin@abc.com -
+Azure Password: XXXXXXXXXXXX -
+The following information is for technical support purposes only:
+Lab Instance: 12345678
+
+Task -
+You need to create an Azure resource named solution12345678 that will index a sample database named realestate-us-sample. The solution must ensure that users can search the index in English for people, organizations, and locations.
+To complete this task, sign in to the Azure portal.
+
+# Correct Answer:
+See explanation below.
+Step 1 - Start the Import data wizard and create a data source
+1. Sign in to the Azure portal with your Azure account.
+2. Find your search service and on the Overview page, click Import data on the command bar to create and populate a search index.
+3. In the wizard, click Connect to your data, and select the sample database named realestate-us-sample
+Step 2 - Skip the "Enrich content" page
+The wizard supports the creation of an AI enrichment pipeline for incorporating the Cognitive Services AI algorithms into indexing.
+We'll skip this step for now, and move directly on to Customize target index.
+Step 3 - Configure index -
+The solution must ensure that users can search the index in English for people, organizations, and locations.
+Configure Searchable for the fields people, organizations, and locations.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/search/search-get-started-portal
+"""
+
+question_4_13 = """
+# HOTSPOT
+
+You create a knowledge store for Azure Cognitive Search by using the following JSON.
+
+"knowledgeStore": {
+    ”storageConnectionString“: "DefaultEndpointsProtocol=https;AccountName=<Acct Name>;AccountKey=<Acct Key>;",
+    "projections": [
+        {
+            "tables": [
+                {
+                    "tableName": "unrelatedDocument",
+                    "generatedKeyName": "Documentid",
+                    "source": "/document/pbiShape"
+                },
+                {
+                    "tableName": "unrelatedKeyPhrases",
+                    "generatedKeyName": "KeyPhraseid",
+                    "source": "/document/pbiShape/keyPhrases"
+                }
+            ],
+            "objects": [
+            
+            ],
+            "files": []
+        },
+        {
+            "tables": [],
+            "objects": [
+                {
+                    "storageContainer": "unrelatedocrtext,
+                    "source": null,
+                    "sourceContext": "/document/normalized_images/*/text",
+                    "inputs": [
+                        {
+                            "name": "ocrText",
+                            "source": "/document/normalized_images/*/text"
+                        }
+                    ]
+                },
+                {
+                    "storageContainer": "unrelatedocrlayout",
+                    "source": null,
+                    "sourceContext": "/document/normalized_images/*/layoutText",
+                    "inputs": [
+                        {
+                            "name": "ocrLayoutText",
+                            "source": "/document/normalized_images/*/layoutText"
+                        }
+                    ]
+                }
+            ],
+            "files": []
+        }    
+    ]
+}
+
+Use the drop-down menus to select the answer choice that completes each statement based on the information presented in the graphic.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+There will be ______. (no projection groups / one projection groups / two projection groups / four projection groups)
+Normalized images will ______. (not be projected / be projected to Azure Blob storage / be projected to Azure File storage / be saved to an Azure Table storage)
+
+# Correct Answer:
+two projection groups, be projected to Azure Blob storage
+"""
+
+question_4_14 = """
+# QUESTION
+
+You plan create an index for an Azure Cognitive Search service by using the Azure portal. The Cognitive Search service will connect to an Azure SQL database.
+The Azure SQL database contains a table named UserMessages. Each row in UserMessages has a eld named MessageCopy that contains the text of social media messages sent by a user.
+Users will perform full text searches against the MessageCopy eld, and the values of the eld will be shown to the users.
+You need to configure the properties of the index for the MessageCopy eld to support the solution.
+Which attributes should you enable for the eld?
+A. Sortable and Retrievable
+B. Filterable and Retrievable
+C. Searchable and Facetable
+D. Searchable and Retrievable
+
+# Correct Answer:
+D
+"""
+
+question_4_15 = """
+# QUESTION
+
+You have the following data sources:
+• Finance: On-premises Microsoft SQL Server database
+• Sales: Azure Cosmos DB using the Core (SQL) API
+• Logs: Azure Table storage
+• HR: Azure SQL database
+You need to ensure that you can search all the data by using the Azure Cognitive Search REST API.
+
+What should you do?
+A. Export the data in Finance to Azure Data Lake Storage.
+B. Configure multiple read replicas for the data in Sales.
+C. Ingest the data in Logs into Azure Data Explorer.
+D. Migrate the data in HR to Azure Blob storage.
+
+# Correct Answer:
+A
+"""
+
+question_4_16 = """
+# HOTSPOT
+
+You plan to provision Azure Cognitive Services resources by using the following method.
+You need to create a Standard tier resource that will convert scanned receipts into text.
+
+static void provision_resource(CognitiveServicesManagementClient client, string name, string kind, string tier, string location)
+{
+  CognitiveServicesAccount parameters = 
+    new CognitiveServicesAccount(null, null, kind, location, name, new CognitiveServicesAccountProperties(), new Sku(tier));
+  result = client.Accounts.Create(resource_group_name, tier, parameters);
+}
+
+How should you call the method? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+
+provision_resource("res1", ______ ______
+                           (ComputerVision / CustomVision.Prediction / CustomVision.Training / FormRecognizer)
+                           ("eastus", "S1") / "useast", "S1") / "S0", "eastus") / "S0", "useast"))
+                           
+# Correct Answer:
+FormRecognizer, "S0", "eastus")
+
+The current name for Form Recognizer (as of May 2024) is Document Intelligence.
+https://azure.microsoft.com/en-us/pricing/details/ai-document-intelligence/
+"""
+
+question_4_17 = """
+# HOTSPOT
+
+You have an app named App1 that uses Azure AI Document Intelligence to analyze medical records and provide pharmaceutical dosage recommendations for patients.
+You send a request to App1 and receive the following response.
+
+{
+  "status": "succeeded",
+  "createdDateTime": "2023-09-14T21:01:02Z",
+  "lastUpdateDateTime": "2023-09-14T21:01:03Z",
+  "analyzeResult": {
+    "apiVersion": "2023-07-31",
+    "modelId": "prebuilt-healthInsuranceCard.us",
+    "stringIndexType": "utf16CodeUnit",
+    "content": "Blood Pressure 118/72",
+    "pages": [
+      {
+        ...
+        "words": [
+          {
+            "content": "Blood",
+            "polygon": [ ... ],
+            "confidence": 0.766,
+            "span": [ ... ]
+          },
+          {
+            "content": "Pressure",
+            "polygon": [ ... ],
+            "confidence": 0.716,
+            "span": [ ... ]
+          },
+          {
+            "content": "118/72",
+            "polygon": [ ... ],
+            "confidence": 0.761,
+            "span": [ ... ]
+          }
+        ],
+        ...
+      "documents": [
+        {
+          "docType": "healthInsuranceCard.us",
+          "boundingRegions": [ ... ]
+        }
+      ],
+      "fields": {},
+      "confidence": 1,
+      "spans": [ ... ]
+      }
+    ]
+  }
+}
+
+For each of the following statements, select Yes if the statement is true. Otherwise, select No
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+Statements
+The chosen model is suitable for the intended use case.
+The text content was recognized with greater than 70 percent confidence.
+The form elements were recognized with greater than 70 percent confidence.
+
+# Correct Answer:
+No, Yes, Yes
+"""
+
+# p474
