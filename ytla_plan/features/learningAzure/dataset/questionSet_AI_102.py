@@ -5284,4 +5284,287 @@ The form elements were recognized with greater than 70 percent confidence.
 No, Yes, Yes
 """
 
-# p474
+question_4_18 = """
+# HOTSPOT
+
+You have an Azure subscription that contains an Azure AI Document Intelligence resource named DI1.
+You build an app named App1 that analyzes PDF les for handwritten content by using DI1.
+You need to ensure that App1 will recognize the handwritten content.
+How should you complete the code? To answer, select the appropriate options in the answer area.
+
+Answer Area
+
+Uri fileUri = new Uri("<fileUri>");
+AnalyzeDocumentOperation operation = await client.AnalyzeDocumentFromUriAsync(WaitUtil.Completed, ______("prebuilt-document", / "prebuilt-contract", / "prebuilt-read",) fileUri);
+AnalyzeResult result = operation.Value;
+foreach (DocumentStyle style in result.Styles)
+{
+  bool isHandwritten = style.IsHandwritten.HasValue && style.IsHandwritten == true;
+  if (isHandwritten && style.Confidence > ______(0.1 / 0.75 / 1.0))
+    {
+      Console.WriteLine($"Handwritten content found:");
+      foreach (DocumentSpan span in style.Spans)
+      
+# Correct Answer:
+"prebuilt-document", , 0.75
+"""
+
+question_4_19 = """
+# QUESTION
+
+You have an app named App1 that uses a custom Azure AI Document Intelligence model to recognize contract documents.
+You need to ensure that the model supports an additional contract format. The solution must minimize development effort.
+What should you do?
+A. Lower the confidence score threshold of App1.
+B. Create a new training set and add the additional contract format to the new training set. Create and train a new custom model.
+C. Add the additional contract format to the existing training set. Retrain the model.
+D. Lower the accuracy threshold of App1.
+
+# Correct Answer:
+C
+"""
+
+question_4_20 = """
+# HOTSPOT
+
+You have an Azure subscription.
+You need to deploy an Azure AI Document Intelligence resource.
+How should you complete the Azure Resource Manager (ARM) template? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point
+
+Answer Area
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "______ (Microsoft.CognitiveSearch / Microsoft.CognitiveServices / Microsoft.MachineLearning / Microsoft.MachineLearningServices) /accounts",
+      "apiVersion": "2023-05-01",
+      "name": "DocumentIntelligenceDemo",
+      "location": "westeurope",
+      "sku": {
+        "name": "F0"
+      },
+      "kind": ______ ("AiBuilder", / "CognitiveSearch", / "FormRecognizer", / "OpenAI")
+    }
+  ]
+}
+
+# Correct Answer:
+Microsoft.CognitiveServices, "FormRecognizer",
+"""
+
+question_4_21 = """
+# QUESTION
+
+You are building an app named App1 that will use Azure AI Document Intelligence to extract the following data from scanned documents:
+• Shipping address
+• Billing address
+• Customer ID
+• Amount due
+• Due date
+• Total tax
+• Subtotal
+You need to identify which model to use for App1. The solution must minimize development effort.
+Which model should you use?
+A. custom extraction model
+B. contract
+C. invoice
+D. general document
+
+# Correct Answer:
+C
+"""
+
+question_4_22 = """
+# QUESTION
+
+You have the following data sources:
+• Finance: On-premises Microsoft SQL Server database
+• Sales: Azure Cosmos DB using the Core (SQL) API
+• Logs: Azure Table storage
+• HR: Azure SQL database
+You need to ensure that you can search all the data by using the Azure AI Search REST API.
+What should you do?
+A. Migrate the data in HR to Azure Blob storage.
+B. Migrate the data in HR to the on-premises SQL server.
+C. Export the data in Finance to Azure Data Lake Storage.
+D. Migrate the data in Sales to the MongoDB API.
+
+# Correct Answer:
+C
+"""
+
+question_4_23 = """
+# QUESTION
+
+You are building an app that will process scanned expense claims and extract and label the following data:
+• Merchant information
+• Time of transaction
+• Date of transaction
+• Taxes paid
+• Total cost
+You need to recommend an Azure AI Document Intelligence model for the app. The solution must minimize development effort.
+What should you use?
+A. the prebuilt Read model
+B. a custom template model
+C. a custom neural model
+D. the prebuilt receipt model
+
+# Correct Answer:
+D
+"""
+
+question_4_24 = """
+# HOTSPOT
+
+You are building a language learning solution.
+You need to recommend which Azure services can be used to perform the following tasks:
+• Analyze lesson plans submitted by teachers and extract key fields, such as lesson times and required texts.
+• Analyze learning content and provide students with pictures that represent commonly used words or phrases in the text.
+The solution must minimize development effort.
+Which Azure service should you recommend for each task? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+Analyze lesson plans: ______ (Azure Cognitive Search / Azure AI Custom Vision / Azure AI Document Intelligence / Immersive Reader)
+Analyze learning content: ______ (Azure Cognitive Search / Azure AI Custom Vision / Azure AI Document Intelligence / Immersive Reader)
+
+# Correct Answer
+Azure AI Document Intelligence, Immersive Reader
+"""
+
+question_4_25 = """
+# HOTSPOT
+
+You have an Azure subscription.
+You plan to build a solution that will analyze scanned documents and export relevant fields to a database.
+You need to recommend which Azure AI service to deploy for the following types of documents:
+• Internal expenditure request authorization forms
+• Supplier invoices
+The solution must minimize development effort.
+What should you recommend for each document type? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+Internal expenditure request authorization forms: ______ (An Azure AI Document Intelligence custom model / An Azure AI Document Intelligence pre-built model / Azure AI Custom Vision / Azure AI Immersive Reader / Azure AI Vision)
+Supplier invoices: ______ (An Azure AI Document Intelligence custom model / An Azure AI Document Intelligence pre-built model / Azure AI Custom Vision / Azure AI Immersive Reader / Azure AI Vision)
+
+# Correct Answer:
+An Azure AI Document Intelligence custom model,  An Azure AI Document Intelligence pre-built model
+"""
+
+question_4_26 = """
+# QUESTION
+
+You have an Azure AI Search resource named Search1.
+You have an app named App1 that uses Search1 to index content.
+You need to add a custom skill to App1 to ensure that the app can recognize and retrieve properties from invoices by using Search1.
+What should you include in the solution?
+A. Azure AI Immersive Reader
+B. Azure OpenAI
+C. Azure AI Document Intelligence
+D. Azure AI Custom Vision
+
+# Correct Answer:
+C
+"""
+
+question_4_27 = """
+# HOTSPOT
+
+You have an Azure subscription.
+You plan to build a solution that will analyze scanned documents and export relevant fields to a database.
+You need to recommend an Azure AI Document Intelligence model for the following types of documents:
+• Expenditure request authorization forms
+• Structured and unstructured survey forms
+• Structured employment application forms
+The solution must minimize development effort and costs.
+Which type of model should you recommend for each document type? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area:
+Expenditure request authorization forms: ______ (Custom neural / Custom template / Prebuilt contract / Prebuilt invoice / Prebuilt layout)
+Structured employment application forms: ______ (Custom neural / Custom template / Prebuilt contract / Prebuilt invoice / Prebuilt layout)
+Structured and unstructured survey forms:  ______ (Custom neural / Custom template / Prebuilt contract / Prebuilt invoice / Prebuilt layout)
+
+# Correct Answer:
+Custom template, Prebuilt contract, Custom neural
+"""
+
+question_4_28 = """
+# QUESTION
+
+You have an Azure subscription that contains an Azure AI Document Intelligence resource named AIdoc1 in the S0 tier.
+You have the les shown in the following table.
+
+Name Format Password-locked Size(MB)
+File1 JPG N/A 400
+File2 PDF No  250
+File3 PNG N/A 600
+File4 XLSX No 900
+File5 PDF Yes 160
+
+You need to train a custom extraction model by using AIdoc1.
+Which les can you upload to Document Intelligence Studio?
+A. File1, File2, and File4 only
+B. File2, and File5 only
+C. File2, File4, and File5 only
+D. File1, File2, File3, File4, and File5
+E. File1 and File2 only
+
+# Correct Answer:
+E
+"""
+
+question_4_29 = """
+# QUESTION
+
+You have an Azure subscription that contains an Azure AI Document Intelligence resource named DI1. DI1 uses the Standard S0 pricing tier.
+You have the les shown in the following table.
+
+Name Size Description
+File1.pdf 800MB Contains scanned images
+File2.jpg 1KB An image that has 25 x 25 pixels
+File3.tiff 5MB An image that has 5000 x 5000 pixels
+
+Which files can you analyze by using DI1?
+A. File1.pdf only
+B. File2.jpg only
+C. File3.tiff only
+D. File2.jpg and File3.tiff only
+E. File1.pdf, File2.jpg, and File3.tiff
+Correct Answer:
+B
+"""
+
+question_4_30 = """
+HOTSPOT
+
+You have an Azure subscription that contains an Azure AI Document Intelligence resource named DI1.
+You build an app named App1 that analyzes PDF les for handwritten content by using DI1.
+You need to ensure that App1 will recognize the handwritten content.
+How should you complete the code? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+document_analysis_client = DocumentAnalysisClient(
+  endpoint=endpoint, credential=AzureKeyCredential(key)
+)
+with open(<filePath>, "rb") as f:
+  poller = document_analysis_client.begin_analyze_document(
+    ______ ("prebuilt-document", / "prebuilt-contract", / "prebuilt-read") document=f
+  )
+result = poller.result()
+for style in result.styles:
+  if style.ishandwritten and style.confidence > ______ (0.1 / 0.75 / 1.0)
+    print("Document contains handwritten content: ")
+    print(",".join([result.content[span.offset:span.offset + span.length] for span in style.spans]))
+    
+# Correct Answer:
+"prebuilt-document", , 0.75
+"""
+
+# 489
