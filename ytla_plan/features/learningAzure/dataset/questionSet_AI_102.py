@@ -6702,4 +6702,409 @@ F. Remove the setSpeak configuration.
 ABE
 """
 
-# 586
+question_5_45 = """
+# DRAG DROP
+
+You are building a bot.
+You need to test the bot in the Bot Framework Emulator. The solution must ensure that you can debug the bot interactively.
+Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and rrange them in the correct order.
+
+Actions
+Run the bot app on a local host.
+Use the input prompt object to send a trace activity.
+Deploy the bot to Azure.
+In the code for the bot, create a new trace activity.
+In the code for the bot, send a trace activity.
+
+# Correct Answer:
+In the code for the bot, create a new trace activity.
+In the code for the bot, send a trace activity.
+Run the bot app on a local host.
+"""
+
+question_5_46 = """
+#HOTSPOT
+
+You have a bot that was built by using the Microsoft Bot Framework composer as shown in the following exhibit.
+
+See: question_5_46.png
+
+Use the drop-down menus to select the answer choice that completes each statement based on the information presented in the graphic.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+if a user asks "what is the weather like in New York", the bot will ______
+(change to a different dialog / identify New York as a city entity / identify New York as a state entity / respond with the weather in Seattle)
+The GetWeather dialog uses a ______ trigger.
+(Custom events / Dialog events / Language Understanding intent recognized / QnA intent recognized)
+
+# Correct Answer:
+identify New York as a city entity, Language Understanding intent recognized
+"""
+
+question_5_47 = """
+# QUESTION
+
+You are building a flight booking bot by using the Microsoft Bot Framework SDK.
+The bot will ask users for the departure date. The bot must repeat the question until a valid date is given, or the users cancel the transaction.
+Which type of dialog should you use?
+A. prompt
+B. adaptive
+C. waterfall
+D. action
+
+# Correct Answer:
+A
+"""
+
+question_5_48 = """
+# HOTSPOT
+
+You have a chatbot.
+You need to test the bot by using the Bot Framework Emulator. The solution must ensure that you are prompted for credentials when you sign in to the bot.
+Which three settings should you configure? To answer, select the appropriate settings in the answer area.
+NOTE: Each correct selection is worth one point.
+
+See: question_5_48.png
+
+# Correct Answer:
+Enter the local path to ngrok.
+Enable Run ngrok when the Emulator starts up.
+Enable Use version 1.0 authentication tokens.
+"""
+
+question_5_49 = """
+# HOTSPOT
+You are building a chatbot by using the Microsoft Bot Framework SDK.
+You use an object named UserProle to store user prole information and an object named ConversationData to store information related to a conversation.
+You create the following state accessors to store both objects in state.
+
+self.user_profile_accessor = self.user_state.create_property("UserProfile")
+self.conversation_data_accessor = self.conversation_state.create_property("ConversationData")
+
+The state storage mechanism is set to Memory Storage.
+For each of the following statements, select Yes if the statement is true. Otherwise select No.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+Statements
+The code will create and maintain the UserProfile object in the underlying storage layer.
+The code will create and maintain the ConversationData object in the underlying storage layer.
+The UserProfile and ConversationData objects will persist when the Bot Framework runtime terminates.
+
+# Correct Answer:
+Yes, Yes, No
+"""
+
+question_5_50 = """
+# QUESTION
+
+You build a bot.
+You create an Azure Bot resource.
+You need to deploy the bot to Azure.
+What else should you create?
+A. only an app registration in Microsoft Azure Active Directory (Azure AD), part of Microsoft Entra, an Azure App Service instance, and anmApp Service plan
+B. only an app registration in Microsoft Azure Active Directory (Azure AD), part of Microsoft Entra, an Azure Kubernetes Service (AKS) instance, and a container image
+C. only an Azure App Service instance, and an App Service plan
+D. only an Azure Machine Learning workspace and an app registration in Microsoft Azure Active Directory (Azure AD), part of Microsoft Entra
+
+# Correct Answer:
+A
+"""
+
+question_5_51 = """
+# QUESTION
+
+You are building a chatbot by using the Microsoft Bot Framework SDK. The bot will be used to accept food orders from customers and allow the customers to customize each food item.
+You need to configure the bot to ask the user for additional input based on the type of item ordered. The solution must minimize development effort.
+Which two types of dialogs should you use? Each correct answer presents part of the solution.
+NOTE: Each correct selection is worth one point.
+A. adaptive
+B. action
+C. waterfall
+D. prompt
+E. input
+
+# Correct Answer:
+CD
+"""
+
+question_5_52 = """
+# SCENARIO
+
+Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
+After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
+
+You are building a chatbot that will use question answering in Azure Cognitive Service for Language.
+You have a PDF named Doc1.pdf that contains a product catalogue and a price list.
+You upload Doc1.pdf and train the model.
+During testing, users report that the chatbot responds correctly to the following question: What is the price of ?
+The chatbot fails to respond to the following question: How much does cost?
+You need to ensure that the chatbot responds correctly to both questions.
+
+Solution: From Language Studio, you create an entity for cost, and then retrain and republish the model.
+Does this meet the goal?
+A. Yes
+B. No
+
+# Correct Answer:
+B
+"""
+
+question_6_1 = """
+# DRAG DROP
+
+You have a monitoring solution that uses the Azure AI Anomaly Detector service.
+You provision a server named Server1 that has intermittent internet access.
+You need to deploy the Azure AI Anomaly Detector to Server1.
+Which four actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.
+
+Actions
+Query the prediction endpoint on Server1.
+From Server1, run the docker push command.
+Install the Docker Engine on Server1.
+Query the prediction endpoint of the Azure AI Anomaly Detector in Azure.
+From Server1, run the docker run command.
+From Server1, run the docker pull command.
+
+# Correct Answer:
+Install the Docker Engine on Server1.
+From Server1, run the docker pull command.
+From Server1, run the docker run command.
+Query the prediction endpoint on Server1.
+"""
+
+question_7_1 = """
+# QUESTION
+
+You have an Azure subscription. The subscription contains an Azure OpenAI resource that hosts a GPT-4 model named Model1 and an app named App1. App1 uses Model1.
+You need to ensure that App1 will NOT return answers that include hate speech.
+What should you configure for Model1?
+A. the Frequency penalty parameter
+B. abuse monitoring
+C. a content filter
+D. the Temperature parameter
+
+# Correct Answer:
+C
+"""
+
+question_7_2 = """
+# QUESTION
+
+You have an Azure subscription. The subscription contains an Azure OpenAI resource that hosts a GPT-3.5 Turbo model named Model1.
+You configure Model1 to use the following system message: “You are an AI assistant that helps people solve mathematical puzzles. Explain
+your answers as if the request is by a 4-year-old.”
+Which type of prompt engineering technique is this an example of?
+A. few-shot learning
+B. affordance
+C. chain of thought
+D. priming
+
+# Correct Answer:
+A
+"""
+
+question_7_3 = """
+# HOTSPOT
+
+You build a chatbot by using Azure OpenAI Studio.
+You need to ensure that the responses are more deterministic and less creative.
+Which two parameters should you configure? To answer, select the appropriate parameters in the answer area.
+NOTE: Each correct answer is worth one point.
+
+See: question_7_3.png
+
+# Correct Answer:
+Temperature, Top P
+"""
+
+question_7_4 = """
+# QUESTION
+
+You are building a chatbot for a travel agent. The chatbot will use the Azure OpenAI GPT 3.5 model and will be used to make travel reservations.
+You need to maximize the accuracy of the responses from the chatbot.
+What should you do?
+A. Configure the model to include data from the travel agent's database.
+B. Set the Top P parameter for the model to 0.
+C. Set the Temperature parameter for the model to 0.
+D. Modify the system message used by the model to specify that the answers must be accurate.
+
+# Correct Answer:
+A
+"""
+
+question_7_5 = """
+# QUESTION
+
+You build a chatbot that uses the Azure OpenAI GPT 3.5 model.
+You need to improve the quality of the responses from the chatbot. The solution must minimize development effort.
+What are two ways to achieve the goal? Each correct answer presents a complete solution.
+NOTE: Each correct answer is worth one point.
+A. Fine-tune the model.
+B. Provide grounding content.
+C. Add sample request/response pairs.
+D. Retrain the language model by using your own data.
+E. Train a custom large language model (LLM).
+
+# Correct Answer:
+AD
+"""
+
+question_7_6 = """
+# HOTSPOT
+
+You have an Azure subscription that contains an Azure OpenAI resource named AI1.
+You build a chatbot that will use AI1 to provide generative answers to specific questions.
+You need to ensure that the responses are more creative and less deterministic.
+How should you complete the code? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+new ChatCompletionsOptions()
+  {
+    Messages = 
+    {
+      new ChatMessage(______(ChatRole.Assistant / ChatRole.Function / ChatRole.System / ChatRole.User), @"")
+    },
+    ______ (ChatRole.User / PresencePenalty / Temperature / TokenSelectionBiasses) = (float)1.0,
+    MaxTokens = 800,
+  };
+  
+# Correct Answer:
+ChatRole.User, Temperature
+"""
+
+question_7_7 = """
+# DRAG DROP
+
+You have an Azure subscription that contains an Azure OpenAI resource named AI1.
+You plan to build an app named App1 that will write press releases by using AI1.
+You need to deploy an Azure OpenAI model for App1. The solution must minimize development effort.
+Which three actions should you perform in sequence in Azure OpenAI Studio? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.
+
+Actions
+Create a deployment that uses the text-embedding-ada-002 model.
+Apply the Marketing Writing Assistant system message template.
+Apply the Default system message template.
+Create a deployment that uses the GPT-35 Turbo model.
+Deploy the solution to a new web app.
+
+# Correct Answer
+Create a deployment that uses the GPT-35 Turbo model.
+Apply the Marketing Writing Assistant system message template.
+Deploy the solution to a new web app.
+"""
+
+question_7_8 = """
+# HOTSPOT
+
+You have an Azure subscription that contains an Azure OpenAI resource named AI1.
+You build a chatbot that will use AI1 to provide generative answers to specific questions.
+You need to ensure that the responses are more creative and less deterministic.
+How should you complete the code? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+response = openai.ChatCompletion.create(
+  engine="dgw-aoai-gpt35",
+  messages = [{"role":______ ("assistant" / "function" / "system" / "user"), "content":""}],
+  ______(Frequency_penalty / Presence_penalty / temperature / token_selection_biasses) = 1,
+  max_tokens=800,
+  stop=None
+)
+
+# Correct Answer:
+"system", temperature
+""
+"""
+
+question_7_9 = """
+# HOTSPOT
+
+You have an Azure subscription that contains an Azure OpenAI resource.
+You congure a model that has the following settings:
+• Temperature: 1
+• Top probabilities: 0.5
+• Max response tokens: 100
+You ask the model a question and receive the following response.
+
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The founders of Microsoft are Bill Gates and Paul Allen. They co-founded the company in 1975.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1679014554,
+  "id": "chatcmpl-6usfn2yyjktmESe3G4jaQR6bDSc01",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 86,
+    "prompt_tokens": 37,
+    "total_tokens": 123
+  }
+}
+
+For each of the following statements, select Yes if the statement is true. Otherwise, select No.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+Statements
+The subscription will be charged 86 tokens for the execution of the session.
+The text completion was truncated because the Max response tokens value was exceeded.
+The prompt_tokens value will be included in the calculation of the Max response tokens value.
+
+# Correct Answer:
+No, No, No
+"""
+
+question_7_10 = """
+# HOTSPOT
+
+You have an Azure subscription that contains an Azure OpenAI resource named AI1.
+You plan to develop a console app that will answer user questions.
+You need to call AI1 and output the results to the console.
+How should you complete the code? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+openai.api_key = key
+openai.api_base = endpoint
+response = ______ (openai.CHatCompletion.create / openai.Embedding.create / openai.Image.create)
+  (
+    engine=deployment_name,
+    prompt="What is Microsoft Azure?"
+  )
+print ______((response.choices[0].text) / (response.Id) / (response.text))
+
+# Correct Answer:
+openai.CHatCompletion.create, (response.choices[0].text
+"""
+
+question_7_11 = """
+# HOTSPOT
+
+You have an Azure subscription that contains an Azure OpenAI resource named AI1.
+You plan to develop a console app that will answer user questions.
+You need to call AI1 and output the results to the console.
+How should you complete the code? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+OpenAIClient client = 
+  new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key)));
+Response<Completions> response = 
+  client.______ (GetCompletions / GetEmbeddings / GetImageGenerations) (deploymentName, "What is Microsoft Azure?");
+Console.WriteLine ______ ((response.Value.Choices[0].Text); / (response.Value.Id); / (response.Value.PromptFilterResults);)  
+
+# Correct Answer:
+GetCompletions, (response.Value.Choices[0].Text);
+"""
+
+# 623
