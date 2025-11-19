@@ -7346,6 +7346,91 @@ question_7_23 = """
 
 You are building an app that will provide users with definitions of common AI terms.
 You create the following Python code.
+
+```
+openai.api_key = key
+openai.api_base = endpoint
+response = openai.ChatCompletion.create(
+    engine=deployment_name
+    messages=[
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": "What is an LLM?"}
+    ]
+)
+
+print(response['choices'][0]['message']['content'])
+```
+
 For each of the following statements, select Yes if the statement is true. Otherwise, select No.
 NOTE: Each correct selection is worth one point.
+
+Answer Area
+Statements
+The response will contain an explanation of large language models (LLMs) that has a high degree of certainty.
+Changing "What is an LLM?" to "What is an LLM in the context of AI models?" will produce the intended response.
+Changing "You are a helpful assistant." to "You must answer only within the context of AI language models." will produce the intended response.
+
+# Correct Answer:
+No, Yes, Yes
+"""
+
+question_8_1 = """
+# QUESTION
+
+You have an Azure subscription that contains an Azure OpenAI resource named AI1.
+You build a chatbot that uses AI1 to provide generative answers to specic questions.
+You need to ensure that the chatbot checks all input and output for objectionable content.
+Which type of resource should you create rst?
+A. Microsoft Defender Threat Intelligence (Defender TI)
+B. Azure AI Content Safety
+C. Log Analytics
+D. Azure Machine Leaning
+
+# Correct Answer:
+B
+"""
+
+question_8_2 = """
+# QUESTION
+
+You have an Azure subscription that contains an Azure AI Content Safety resource named CS1.
+You create a test image that contains a circle.
+You submit the test image to CS1 by using the curl command and the following command-line parameters.
+
+--data-raw '{
+  "image": {
+    “content”: "<base_64_string>"
+  },
+  "categories": [
+    "Violence"
+  ],
+  "outputType": "EightSeverityLevels"
+}
+
+What should you expect as the output?
+A. 0
+B. 0.0
+C. 7
+D. 100
+
+# Correct Answer:
+C
+"""
+
+question_8_3 = """
+# QUESTION
+
+You have an Azure subscription.
+You are building a social media app that will enable users to share images.
+You need to ensure that inappropriate content uploaded by the users is blocked. The solution must minimize development effort.
+What are two tools that you can use? Each correct answer presents a complete solution.
+NOTE: Each correct selection is worth one point.
+A. Azure AI Document Intelligence
+B. Microsoft Defender for Cloud Apps
+C. Azure AI Content Safety Most Voted
+D. Azure AI Vision
+E. Azure AI Custom Vision
+
+# Correct Answer:
+CE
 """
