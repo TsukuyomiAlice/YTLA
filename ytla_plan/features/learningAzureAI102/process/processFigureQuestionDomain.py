@@ -2,8 +2,8 @@
 
 from ytla_ai.client import contentHandler
 
-from ytla_plan.features.learningAzure.dataset import questionSet_AI_102
-from ytla_plan.features.learningAzure.prompt import promptAnalyzeFieldAI102
+from ytla_plan.features.learningAzureAI102.dataset import questionSet_AI_102
+from ytla_plan.features.learningAzureAI102.prompt import promptAnalyzeFieldAI102
 
 def analyze():
     system_prompt = promptAnalyzeFieldAI102.prompt

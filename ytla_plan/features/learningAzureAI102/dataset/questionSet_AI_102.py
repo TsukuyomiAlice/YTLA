@@ -7107,4 +7107,245 @@ Console.WriteLine ______ ((response.Value.Choices[0].Text); / (response.Value.Id
 GetCompletions, (response.Value.Choices[0].Text);
 """
 
-# 623
+question_7_12 = """
+# HOTSPOT
+
+You have an Azure subscription.
+You need to create a new resource that will generate fictional stories in response to user prompts. The solution must ensure that the resource uses a customer-managed key to protect data.
+How should you complete the script? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+az cognitiveservices account create -n myresource -g myResourceGroup --kind ______ (AIServices / LanguageAuthoring / OpenAI) --sku S -l WestEurope
+______(--api-properties / --assign-identity / --encryption) '{
+  "keySource": "Microsoft.keyVault",
+  "keyVaultProperties": {
+    "keyName": "keyName",
+    "keyVersion": "secretVersion",
+    "keyVaultUri": "https://issue23056kv.vault.azure.net/"
+  }
+}'
+
+# Correct Answer
+OpenAI, --encryption
+"""
+
+question_7_13 = """
+# HOTSPOT
+
+You have a chatbot that uses Azure OpenAI to generate responses.
+You need to upload company data by using Chat playground. The solution must ensure that the chatbot uses the data to answer user questions.
+How should you complete the code? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+var options = new ______ (ChatCompletionsOptions() / CompletionsOptions() / StreamingChatCompletions())
+{
+  Messages = 
+  {
+    new ChatMessage(ChatRole.User,"What are the differences between Azure Machine Learning and Azure AI services?"),
+  },
+  AzureExtensionsOptions = new AzureChatExtensionsOptions()
+  {
+    Extensions = 
+    {
+      new ______ (AzureChatExtensionConfiguration / AzureChatExtensionOptions / AzureCognitiveSearchChatExtensionConfiguration)
+      {
+        SearchEndpoint = new Uri(searchEndpoint),
+        SearchKey = new AzureKeyCredential(searchKey),
+        IndexName = searchIndex,
+...      
+};
+
+# Correct Answer:
+ChatCompletionsOptions(), AzureCognitiveSearchChatExtensionConfiguration
+"""
+
+question_7_14 = """
+# HOTSPOT
+
+You have an Azure subscription that is linked to a Microsoft Entra tenant. The subscription ID is x1xx11x1-x111-xxxx-xxxx-x1111xxx11x1 and
+the tenant ID is 1y1y1yyy-1y1y-y1y1-yy11-y1y1y11111y1.
+The subscription contains an Azure OpenAI resource named OpenAI1 that has a primary API key of 1111a111a11a111aaa11a1a1a11a11aa.
+OpenAI1 has a deployment named embeddings1 that uses the text-embedding-ada-002 model.
+You need to query OpenAI1 and retrieve embeddings for text input.
+How should you complete the code? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+Uri endpoint = new Uri("https://openai1.openai.azure.com");
+AzureKeyCredential credentials = new AzureKeyCredential("______"); 
+                                                         ( x1xx11x1-x111-xxxx-xxxx-x1111xxx11x1
+                                                           1111a111a11a111aaa11a1a1a11a11aa，
+                                                           1y1y1yyy-1y1y-y1y1-yy11-y1y1y11111y1
+                                                         )
+OpenAiClient openAIClient = new (endpoint, credentials);
+EmbeddingsOptions embeddingOptions = new EmbeddingsOptions(input_text_string);
+var returnValue = openAIClient.GetEmbeddings("______(embeddings1 / OpenAI1 / text-embedding-ada-002)", embeddingOptions);
+foreach（float item in returnValue.Value.Data[0].Embedding）
+{
+  Console.WriteLine(item);
+}
+
+# Correct Answer:
+1111a111a11a111aaa11a1a1a11a11aa, embeddings1
+"""
+
+question_7_15 = """
+# HOTSPOT
+
+In Azure OpenAI Studio, you are prototyping a chatbot by using Chat playground.
+You need to configure the chatbot to meet the following requirements:
+• Reduce the repetition of words in conversations.
+• Reduce the randomness of each response.
+Which two parameters should you modify? To answer, select the appropriate parameters in the answer area.
+NOTE: Each correct answer is worth one point.
+
+See: question_7_15.png
+
+# Correct Answer:
+Temperature, Frequency penalty
+"""
+
+question_7_16 = """
+# QUESTION 
+
+You have an Azure subscription.
+You need to build an app that will compare documents for semantic similarity. The solution must meet the following requirements:
+• Return numeric vectors that represent the tokens of each document.
+• Minimize development effort.
+Which Azure OpenAI model should you use?
+A. GPT-3.5
+B. GPT-4
+C. embeddings
+D. DALL-E
+
+# Correct Answer:
+C
+"""
+
+question_7_17 = """
+# QUESTION 
+
+You have an Azure OpenAI model.
+You have 500 prompt-completion pairs that will be used as training data to ne-tune the model.
+You need to prepare the training data.
+Which format should you use for the training data le?
+A. CSV
+B. XML
+C. JSONL
+D. TSV
+
+# Correct Answer:
+C
+"""
+
+question_7_18 = """
+# QUESTION
+
+You have a custom Azure OpenAI model.
+You have the les shown in the following table.
+_______________________
+| Name       | Size   |
+| File1.tsv  | 80 MB  |
+| File2.xml  | 25 MB  |
+| File3.pdf  | 50 MB  |
+| File4.xlsx | 200 MB |
+-----------------------
+You need to prepare training data for the model by using the OpenAI CLI data preparation tool.
+Which les can you upload to the tool?
+A. File1.tsv only Most Voted
+B. File2.xml only
+C. File3.pdf only
+D. File4.xlsx only
+E. File1.tsv and File4.xslx only
+F. File1.tsv, File2.xml and File4.xslx only
+G. File1.tsv, File2.xml, File3.pdf and File4.xslx
+
+# Correct Answer:
+A
+"""
+
+question_7_19 = """
+# QUESTION
+
+You have an Azure subscription that contains an Azure OpenAI resource named OpenAI1 and a user named User1.
+You need to ensure that User1 can upload datasets to OpenAI1 and finetune the existing models. The solution must follow the principle of least privilege.
+Which role should you assign to User1?
+A. Cognitive Services OpenAI Contributor
+B. Cognitive Services Contributor
+C. Cognitive Services OpenAI User
+D. Contributor
+
+# Correct Answer:
+A
+"""
+
+question_7_20 = """
+# QUESTION
+
+You have an Azure subscription and 10,000 ASCII les.
+You need to identify les that contain specic phrases. The solution must use cosine similarity.
+Which Azure OpenAI model should you use?
+A. text-embedding-ada-002
+B. GPT-4
+C. GPT-35 Turbo
+D. GPT-4-32k
+
+# Correct Answer:
+A
+"""
+
+question_7_21 = """
+# QUESTION
+
+You have an Azure subscription that contains an Azure OpenAI resource named AI1 and a user named User1.
+You need to ensure that User1 can perform the following actions in Azure OpenAI Studio:
+• Identify resource endpoints.
+• View models that are available for deployment.
+• Generate text and images by using the deployed models.
+The solution must follow the principle of least privilege.
+Which role should you assign to User1?
+A. Cognitive Services OpenAI User
+B. Cognitive Services Contributor
+C. Contributor
+D. Cognitive Services OpenAI Contributor
+
+# Correct Answer:
+A
+"""
+
+question_7_22 = """
+# HOTSPOT
+
+You have a chatbot that uses Azure OpenAI to generate responses.
+You need to upload company data by using Chat playground. The solution must ensure that the chatbot uses the data to answer user questions.
+How should you complete the code? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+Completion = openai.______ (ChatCompletion / Completion / Embedding).create(
+  messages=[{"role": "user", "content": "What are the differences between Azure Machine Learning and Azure AI services?"}],
+  deployment_id=os.environ.get("AOAIDeploymentId"),
+  dataSources=[
+  {
+    "type": ______ ("AzureCognitiveSearch" / "AzureDocumentIntelligence" / "Blobstorage")
+    "parameters": {
+      "endpoint": os.environ.get("SearchEndpoint"),
+      "key": os.environ.get("SearchKey"),
+      "indexName": os.environ.get("SearchIndex"),
+  ...
+)
+
+# Correct Answer:
+ChatCompletion, AzureCognitiveSearch
+"""
+
+question_7_23 = """
+# HOTSPOT
+
+You are building an app that will provide users with definitions of common AI terms.
+You create the following Python code.
+For each of the following statements, select Yes if the statement is true. Otherwise, select No.
+NOTE: Each correct selection is worth one point.
+"""

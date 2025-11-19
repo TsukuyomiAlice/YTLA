@@ -1,6 +1,6 @@
 # encode = utf-8
 
-from ytla_plan.features.learningAzure.script import scriptText
+from ytla_plan.features.learningAzureAI102.script import scriptText
 
 def changer():
     # 简单的句子分割，使用常见的中文和英文句子分隔符
