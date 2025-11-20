@@ -2830,6 +2830,7 @@ question_3_1 = """
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
 After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
+
 You build a language model by using a Language Understanding service. The language model is used to search for information on a contact list by using an intent named FindContact.
 A conversational expert provides you with the following list of phrases to use for training.
 ✑ Find contacts in London.
@@ -2858,6 +2859,7 @@ question_3_2 = """
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
 After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
+
 You develop an application to identify species of flowers by training a Custom Vision model.
 You receive images of new flower species.
 You need to add the new images to the classier.
@@ -2878,6 +2880,7 @@ question_3_3 = """
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
 After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
+
 You develop an application to identify species of flowers by training a Custom Vision model.
 You receive images of new flowers species.
 You need to add the new images to the classier.
@@ -2898,6 +2901,7 @@ question_3_4 = """
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
 After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
+
 You develop an application to identify species of flowers by training a Custom Vision model.
 You receive images of new flowers species.
 You need to add the new images to the classier.
@@ -3256,6 +3260,7 @@ question_3_17 = """
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
 After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
+
 You build a language model by using a Language Understanding service. The language model is used to search for information on a contact list by using an intent named FindContact.
 A conversational expert provides you with the following list of phrases to use for training.
 ✑ Find contacts in London.
@@ -3282,6 +3287,7 @@ question_3_18 = """
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
 After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
+
 You build a language model by using a Language Understanding service. The language model is used to search for information on a contact list by using an intent named FindContact.
 A conversational expert provides you with the following list of phrases to use for training.
 ✑ Find contacts in London.
@@ -7433,4 +7439,266 @@ E. Azure AI Custom Vision
 
 # Correct Answer:
 CE
+"""
+
+question_8_4 = """
+# HOTSPOT
+
+You have an Azure subscription that contains an Azure AI Content Safety resource named CS1.
+You need to call CS1 to identify whether a user request contains hateful language.
+How should you complete the command? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+curl --location --request POST ' 'https://cs1.cognitiveservices.azure.com/______(completions/ / contentsafety/ / healthinsights/ / language/)______(completions / embeddings / textanalyze / text/blocklists)?api-version=2023-10-01' \
+--header 'Ocp-Apim-Subscription-key: <your_subscription_key>' \
+--header 'Content-Type': application/json' \
+--data-raw '{
+  "text": "What is the weather forecast for Seattle",
+  "categories": ["Hate"]
+    "blocklistNames": [
+      "string"
+    ],
+    "haltOnBlocklistHit": true,
+    "outputType": "FourSeverityLevels"
+}'
+
+# Correct Answer:
+contentsafety/, textanalyze
+"""
+
+question_8_5 = """
+# SCENARIO
+
+Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
+After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
+
+You have an Azure subscription that contains an Azure OpenAI resource named AI1 and an Azure AI Content Safety resource named CS1.
+You build a chatbot that uses AI1 to provide generative answers to specific questions and CS1 to check input and output for objectionable content.
+You need to optimize the content filter configurations by running tests on sample questions.
+
+Solution: From Content Safety Studio, you use the Protected material detection feature to run the tests.
+Does this meet the requirement?
+A. Yes
+B. No
+
+# Correct Answer:
+B
+"""
+
+question_8_6 = """
+# SCENARIO
+
+Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
+After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
+
+You have an Azure subscription that contains an Azure OpenAI resource named AI1 and an Azure AI Content Safety resource named CS1.
+You build a chatbot that uses AI1 to provide generative answers to specific questions and CS1 to check input and output for objectionable content.
+You need to optimize the content filter configurations by running tests on sample questions.
+
+Solution: From Content Safety Studio, you use the Moderate text content feature to run the tests.
+Does this meet the requirement?
+A. Yes
+B. No
+
+# Correct Answer:
+A
+"""
+
+question_8_7 = """
+# SCENARIO
+
+Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
+After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
+
+You have an Azure subscription that contains an Azure OpenAI resource named AI1 and an Azure AI Content Safety resource named CS1.
+You build a chatbot that uses AI1 to provide generative answers to specific questions and CS1 to check input and output for objectionable content.
+You need to optimize the content filter configurations by running tests on sample questions.
+
+Solution: From Content Safety Studio, you use the Monitor online activity feature to run the tests.
+Does this meet the requirement?
+A. Yes
+B. No
+
+# Correct Answer:
+B
+"""
+
+question_8_8 = """
+# SCENARIO
+
+Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
+After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
+
+You have an Azure subscription that contains an Azure OpenAI resource named AI1 and an Azure AI Content Safety resource named CS1.
+You build a chatbot that uses AI1 to provide generative answers to specific questions and CS1 to check input and output for objectionable content.
+You need to optimize the content filter configurations by running tests on sample questions.
+
+Solution: From Content Safety Studio, you use the Safety metaprompt feature to run the tests.
+Does this meet the requirement?
+A. Yes
+B. No
+
+# Correct Answer:
+B
+"""
+
+question_8_9 = """
+# HOTSPOT
+
+You have an Azure subscription that contains an Azure AI Content Safety resource.
+You are building a social media app that will enable users to share images.
+You need to configure the app to moderate inappropriate content uploaded by the users.
+How should you complete the code? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+public static void Analyze(AnalyzeImageOptions request)
+{
+  var endpoint = Environment.GetEnvironmentVariable("ENDPOINT");
+  var key = Environment.GetEnvironmentVariable("KEY");
+  var client = new ______(AnalyzeTextOptions / BlocklistClient / ContentSafetyClient / TextCategoriesAnalysis) (new Uri(endpoint), new AzureKeyCredential(key));
+  return ______(AnalyzeImage(request) / client.AnalyzeImage(request) / client.AnalyzeText(request) / request.AnalyzeImage(client)) (request)
+}
+
+# Correct Answer:
+ContentSafetyClient, client.AnalyzeImage(request)
+"""
+
+question_8_10 = """
+# QUESTION
+
+You have an Azure subscription that contains an Azure AI Content Safety resource named CS1.
+You plan to build an app that will analyze user-generated documents and identify obscure offensive terms.
+You need to create a dictionary that will contain the offensive terms. The solution must minimize development effort.
+What should you use?
+A. a text classier
+B. language detection
+C. text moderation
+D. a blocklist
+
+# Correct Answer:
+D
+"""
+
+question_8_11 = """
+# HOTSPOT
+
+You have an Azure subscription that contains an Azure AI Content Safety resource named CS1.
+You need to use the SDK to call CS1 to identify requests that contain harmful content.
+How should you complete the code? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Answer Area
+
+var client = new ______ (AnalyzeTextOptions / BlocklistClient / ContentSafetyClient / TextCategoriesAnalysis) (new Uri(endpoint), new AzureKeyCredential(key));
+var request = new ______ (AddorUpdateTextBlocklistItemsOptions / AnalyzeTextOptions / TextBlockListMatch / TextCategoriesAnalysis) ("What is the weather forecast for Seattle");
+Response<AnalyzeTextResult> response;
+response = client.AnalyzeText(request);
+
+# Correct Answer:
+ContentSafetyClient, ContentSafetyClient
+"""
+
+question_8_12 = """
+# QUESTION
+
+You have an Azure subscription that contains an Azure OpenAI resource named AI1.
+You build a chatbot that uses AI1 to provide generative answers to specific questions.
+You need to ensure that questions intended to circumvent built-in safety features are blocked.
+Which Azure AI Content Safety feature should you implement?
+A. Monitor online activity
+B. Jailbreak risk detection
+C. Moderate text content
+D. Protected material text detection
+
+# Correct Answer:
+B
+"""
+
+question_9_1 = """
+Introductory Info
+Case study -
+This is a case study. Case studies are not timed separately. You can use as much exam time as you would like to complete each case.
+However, there may be additional case studies and sections on this exam. You must manage your time to ensure that you are able to
+complete all questions included on this exam in the time provided.
+To answer the questions included in a case study, you will need to reference information that is provided in the case study. Case studies might
+contain exhibits and other resources that provide more information about the scenario that is described in the case study. Each question is
+independent of the other questions in this case study.
+At the end of this case study, a review screen will appear. This screen allows you to review your answers and to make changes before you
+move to the next section of the exam. After you begin a new section, you cannot return to this section.
+To start the case study -
+To display the rst question in this case study, click the Next button. Use the buttons in the left pane to explore the content of the case study
+before you answer the questions. Clicking these buttons displays information such as business requirements, existing environment, and
+problem statements. If the case study has an All Information tab, note that the information displayed is identical to the information displayed
+on the subsequent tabs. When you are ready to answer a question, click the Question button to return to the question.
+
+Overview -
+A company named Wide World Importers is developing an e-commerce platform.
+You are working with a solutions architect to design and implement the features of the e-commerce platform. The platform will use
+microservices and a serverless environment built on Azure.
+Wide World Importers has a customer base that includes English, Spanish, and Portuguese speakers.
+Existing Environment -
+Applications -
+Wide World Importers has an App Service plan that contains the web apps shown in the following table.
+Azure Resources -
+You have the following resources:
+An Azure Active Directory (Azure AD) tenant
+- The tenant supports internal authentication.
+- All employees belong to a group named AllUsers.
+- Senior managers belong to a group named LeadershipTeam.
+An Azure Functions resource
+- A function app posts to Azure Event Grid when stock levels of a product change between OK, Low Stock, and Out of Stock. The function app
+uses the
+Azure Cosmos DB change feed.
+An Azure Cosmos DB account
+- The account uses the Core (SQL) API.
+- The account stores data for the Product Management app and the Inventory Tracking app.
+An Azure Storage account
+- The account contains blob containers for assets related to products.
+- The assets include images, videos, and PDFs.
+An Azure Cognitive Services resource named wwics
+An Azure Video Analyzer for Media (previously Video Indexer) resource named wwivi
+Requirements -
+Business Goals -
+Wide World Importers wants to leverage AI technologies to differentiate itself from its competitors.
+Planned Changes -
+Wide World Importers plans to start the following projects:
+A product creation project: Help employees create accessible and multilingual product entries, while expediting product entry creation.
+A smart e-commerce project: Implement an Azure Cognitive Search solution to display products for customers to browse.
+A shopping on-the-go project: Build a chatbot that can be integrated into smart speakers to support customers.
+Business Requirements -
+Wide World Importers identies the following business requirements for all the projects:
+Provide a multilingual customer experience that supports English, Spanish, and Portuguese.
+Whenever possible, scale based on transaction volumes to ensure consistent performance.
+Minimize costs.
+Governance and Security Requirements
+Wide World Importers identies the following governance and security requirements:
+Data storage and processing must occur in datacenters located in the United States.
+Azure Cognitive Services must be inaccessible directly from the internet.
+Accessibility Requirements -
+Wide World Importers identies the following accessibility requirements:
+All images must have relevant alt text.
+All videos must have transcripts that are associated to the video and included in product descriptions.
+Product descriptions, transcripts, and alt text must be available in English, Spanish, and Portuguese.
+Product Creation Requirements -
+Wide World Importers identies the following requirements for improving the Product Management app:
+Minimize how long it takes for employees to create products and add assets.
+Remove the need for manual translations.
+Smart E-Commerce Requirements -
+Wide World Importers identies the following requirements for the smart e-commerce project:
+Ensure that the Cognitive Search solution meets a Service Level Agreement (SLA) of 99.9% availability for searches and index writes.
+Provide users with the ability to search insight gained from the images, manuals, and videos associated with the products.
+Support autocompletion and suggestion based on all product name variants.
+Store all raw insight data that was generated, so the data can be processed later.
+Update the stock level eld in the product index immediately upon changes.
+Update the product index hourly.
+Shopping On-the-Go Requirements -
+Wide World Importers identies the following requirements for the shopping on-the-go chatbot:
+Answer common questions.
+Support interactions in English, Spanish, and Portuguese.
+Replace an existing FAQ process so that all Q&A is managed from a central location.
+Provide all employees with the ability to edit Q&As. Only senior managers must be able to publish updates.
+Support purchases by providing information about relevant products to customers. Product displays must include images and warnings when
+stock levels are low or out of stock.
 """
