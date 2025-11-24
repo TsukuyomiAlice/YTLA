@@ -18,7 +18,7 @@ Phrases
 SavePhraseListAsync
 UpdatePhraseListAsync
 
-# Answer Area
+Answer Area
 var phraselistId = await client.Features.______
 (appId, versionId, new ______
 {
@@ -29,7 +29,7 @@ var phraselistId = await client.Features.______
 
 });
 
-# Correct Answer
+# Correct Answer:
 AddPhraseListAsync, PhraselistCreateObject
 
 Box 1: AddPhraseListAsync -
@@ -72,7 +72,7 @@ Select v1.0 of app1.
 Export the model by using the Export for containers (GZIP) option.
 Select v1.2 of app1.
 
-# Correct Answer
+# Correct Answer:
 Export the model by using the Export for containers (GZIP) option.
 Select v1.1 of app1.
 Run a container that has version set as an environment variable.
@@ -166,7 +166,7 @@ ______(PATCH / POST / PUT) https://management.azure.com/subscriptions/xxxxxxxx-x
   }
 }
 
-# Correct Answer
+# Correct Answer:
 PUT, CognitiveServices
 
 Box 1: PUT -
@@ -205,7 +205,7 @@ BD
 AI systems should treat all people fairly.
 AI systems should perform reliably and safely.
 
-Reference:
+# Reference:
 https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/responsible-ai
 """
 
@@ -277,7 +277,7 @@ Box 1: mcr.microsoft.com/azure-cognitive-services/textanalytics/sentiment
 To run the Sentiment Analysis v3 container, execute the following docker run command. docker run --rm -it -p 5000:5000 --memory 8g --cpus 1 \ mcr.microsoft.com/azure-cognitive-services/textanalytics/sentiment \ Eula=accept \ Billing={ENDPOINT_URI} \ ApiKey={API_KEY} is the endpoint for accessing the Text Analytics API. https://<your-custom-subdomain>.cognitiveservices.azure.com
 Box 2: https://contoso.cognitiveservices.azure.com {ENDPOINT_URI} is the endpoint for accessing the Text Analytics API: https://<your-custom-subdomain>.cognitiveservices. The endpoint for accessing the Text Analytics API.azure.com -
 
-Reference:
+# Reference:
 https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-install-containers?tabs=sentiment
 """
 
@@ -329,14 +329,14 @@ Accounts - Regenerate Key regenerates the specified account key for the specifie
 Syntax:
 POST https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}/regenerateKey?api-version=2017-04-18
 
-Reference:
+# Reference:
 https://docs.microsoft.com/en-us/rest/api/cognitiveservices/accountmanagement/accounts/regeneratekey
 """
 
 question_1_11 = """
 # QUESTION 
 You build a custom Form Recognizer model.
-You receive sample les to use for training the model as shown in the following table.
+You receive sample files to use for training the model as shown in the following table.
 _________________________
 | Name  | Type | Size   |
 | File1 | PDF  | 20 MB  |
@@ -347,7 +347,7 @@ _________________________
 | File6 | JPG  | 40 MB  |
 -------------------------
 
-Which three les can you use to train the model? Each correct answer presents a complete solution.
+Which three files can you use to train the model? Each correct answer presents a complete solution.
 NOTE: Each correct selection is worth one point.
 A. File1
 B. File2
@@ -401,7 +401,7 @@ D. reliability and safety
 # Correct Answer:
 D
 
-Reference:
+# Reference:
 https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/responsible-ai
 """
 
@@ -622,7 +622,7 @@ Speaker Recognition which accurately verifies and identifies speakers by their u
 Box 2: Translator -
 Translator is a cloud-based neural machine translation service that is part of the Azure Cognitive Services family of REST APIs. Translator can be used with any operating system and powers many Microsoft products and services used by thousands of businesses worldwide to perform language translation and other language-related operations.
 
-Reference:
+# Reference:
 https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-language-detection
 https://docs.microsoft.com/en-us/azure/cognitive-services/translator/translator-overview
 """
@@ -817,13 +817,13 @@ You need to analyze the extracted information by using Microsoft Power BI. The s
 What should you add to the indexer?
 A. a projection group
 B. a table projection
-C. a le projection
+C. a file projection
 D. an object projection
 
 # Correct Answer:
 D
 
-Projections are the physical tables, objects, and les in a knowledge store that accept content from a Cognitive Search AI enrichment pipeline. If you're creating a knowledge store, defining and shaping projections is most of the work.
+Projections are the physical tables, objects, and files in a knowledge store that accept content from a Cognitive Search AI enrichment pipeline. If you're creating a knowledge store, defining and shaping projections is most of the work.
 Objects is used when you need the full JSON representation of your data and enrichments in one JSON document. As with table projections, only valid JSON objects can be projected as objects, and shaping can help you do that.
 Note: Form Recognizer analyzes your forms and documents, extracts text and data, maps eld relationships as key-value pairs, and returns a structured JSON output. You quickly get accurate results that are tailored to your specific content without excessive manual intervention or extensive data science expertise.
 Incorrect:
@@ -948,7 +948,7 @@ Step 2: Navigate to the Form Recognizer Sample Tool (at https://fott-2-1.azurewe
 Step 3: On the sample tool home page select Use prebuilt model to get data.
 Step 4: Select the Form Type you would like to analyze from the dropdown window.
 Step 5: In the Source: URL eld, paste the selected URL and select the Fetch button.
-Step 6: In the Choose le for analysis use the le in the C:\Resources\Invoices folder and select the Fetch button.
+Step 6: In the Choose file for analysis use the file in the C:\Resources\Invoices folder and select the Fetch button.
 Step 7: Select Run analysis. The Form Recognizer Sample Labeling tool will call the Analyze Prebuilt API and analyze the document.
 Step 8: View the results - see the key-value pairs extracted, line items, highlighted text extracted and tables detected
 Step 9: Save the results as C:\Resources\Invoices\Results.json.
@@ -1095,7 +1095,7 @@ The following information is for technical support purposes only:
 Lab Instance: 12345678
 
 Task
-You need to get insights from a video le located in the C:\Resources\Video\Media.mp4 folder.
+You need to get insights from a video file located in the C:\Resources\Video\Media.mp4 folder.
 Save the insights to the C:\Resources\Video\Insights.json folder.
 To complete this task, sign in to the Azure Video Analyzer for Media at https://www.videoindexer.ai/ by using admin@abc.com
 
@@ -1213,7 +1213,7 @@ Manually rotate subscription keys
 5. (Update your application code to reference the new primary key and deploy.)
 6. Regenerate the secondary key in the same manner.
 
-Reference:
+# Reference:
 https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/azure-maps/how-to-manage-authentication.md
 """
 
@@ -1299,8 +1299,8 @@ C
 
 question_1_50 = """
 # QUESTION
-You are developing a monitoring system that will analyze engine sensor data, such as rotation speed, angle, temperature, and pressure. The
-system must generate an alert in response to atypical values.
+You are developing a monitoring system that will analyze engine sensor data, such as rotation speed, angle, temperature, and pressure. 
+The system must generate an alert in response to atypical values.
 What should you include in the solution?
 A. Application Insights in Azure Monitor
 B. metric alerts in Azure Monitor
@@ -1609,11 +1609,11 @@ D
 
 question_1_67 = """
 # QUESTION
-You have a Microsoft OneDrive folder that contains a 20-GB video le named File1.avi.
+You have a Microsoft OneDrive folder that contains a 20-GB video file named File1.avi.
 You need to index File1.avi by using the Azure Video Indexer website.
 What should you do?
 A. Upload File1.avi to the www.youtube.com webpage, and then copy the URL of the video to the Azure AI Video Indexer website.
-B. Download File1.avi to a local computer, and then upload the le to the Azure AI Video Indexer website.
+B. Download File1.avi to a local computer, and then upload the file to the Azure AI Video Indexer website.
 C. From OneDrive, create a download link, and then copy the link to the Azure AI Video Indexer website.
 D. From OneDrive, create a sharing link for File1.avi, and then copy the link to the Azure AI Video Indexer website.
 
@@ -1788,7 +1788,7 @@ results = await client.GetReadResultAsync(Guid.Parse(operationId));
 }
 while ((results.Status == OperationStatusCodes.Running || results.Status == OperationStatusCodes.NotStarted));
 
-Reference:
+# Reference:
 https://github.com/Azure-Samples/cognitive-services-quickstart-code/blob/master/dotnet/ComputerVision/ComputerVisionQuickstart.cs
 """
 
@@ -1838,7 +1838,7 @@ https://www.videoindexer.ai/embed/insights/<accountId>/<videoId>/?widgets=______
 Player Widget
 https://www.videoindexer.ai/embed/player/<accountId>/<videoId>/?showcaptions=______captions=______
 
-# Correct Answer
+# Correct Answer:
 people,keywords, search, true, en-US
 
 # Reference:
@@ -1858,7 +1858,7 @@ Retrain the model.
 Test the model.
 Export the model.
 
-# Correct Answer
+# Correct Answer:
 Change the model domain.
 Retrain the model.
 Test the model.
@@ -1945,7 +1945,7 @@ Initialize the training dataset.
 Train the object detection model.
 Create a Project.
 
-# Correct Answer
+# Correct Answer:
 Create a Project.
 Upload and tag images.
 Train the classifier model.
@@ -1974,7 +1974,7 @@ Project Types: ______ (Classification / Object Detection)
 Classification Types: ______ (Multiclass (Single tag per image) / Multilabel (Multiple tags per image))
 Domains: ______ (Audit / Food / General / General(compact) / Landmarks / Landmarks(compact) / Retail / Retail(compact))
 
-# Correct Answer
+# Correct Answer:
 Classification / Multiclass (Single tag per image) / General
 
 Box 1: Classification
@@ -1987,7 +1987,7 @@ A multilabel Classification project is similar, but each image can have multiple
 Box 3: General -
 General: Optimized for a broad range of image Classification tasks. If none of the other specific domains are appropriate, or if you're unsure of which domain to choose, select one of the General domains.
 
-Reference:
+# Reference:
 https://cran.r-project.org/web/packages/AzureVision/vignettes/customvision.html
 """
 
@@ -2002,13 +2002,13 @@ C. Invite the entire staff of the company to Video Indexer.
 D. Edit the faces in the videos.
 E. Upload names to a language model.
 
-Correct Answer:
+# Correct Answer:
 A
 
 Video Indexer supports multiple Person models per account. Once a model is created, you can use it by providing the model ID of a specific Person model when uploading/indexing or reindexing a video. Training a new face for a video updates the specific custom model that the video was associated with.
 Note: Video Indexer supports face detection and celebrity recognition for video content. The celebrity recognition feature covers about one million faces based on commonly requested data source such as IMDB, Wikipedia, and top LinkedIn influencers. Faces that aren't recognized by the celebrity recognition feature are detected but left unnamed. Once you label a face with a name, the face and name get added to your account's Person model. Video Indexer will then recognize this face in your future videos and past videos.
 
-Reference:
+# Reference:
 https://docs.microsoft.com/en-us/azure/media-services/video-indexer/customize-person-model-with-api
 """
 
@@ -2024,12 +2024,12 @@ C. weighted accuracy
 D. precision
 E. area under the curve (AUC)
 
-Correct Answer:
+# Correct Answer:
 AD
 
 Custom Vision provides three metrics regarding the performance of your model: precision, recall, and AP.
 
-Reference:
+# Reference:
 https://www.tallan.com/blog/2020/05/19/azure-custom-vision/
 """
 
@@ -2054,7 +2054,7 @@ ______: "employeefaces"
 "mode": ______
 }
 
-# Correct Answer
+# Correct Answer:
 "LargeFaceListId", "matchFace"
 
 Box 1: LargeFaceListID -
@@ -2070,7 +2070,7 @@ same person as possible by using internal same-person thresholds. It is useful t
 list will be returned if no faces pass the internal thresholds. "matchFace" mode ignores same-person thresholds and returns ranked similar
 faces anyway, even the similarity is low. It can be used in the cases like searching celebrity-looking faces.
 
-Reference:
+# Reference:
 https://docs.microsoft.com/en-us/rest/api/faceapi/face/findsimilar
 """
 
@@ -2102,7 +2102,7 @@ Request Body
   "mode": "______"
 }
 
-# Correct Answer
+# Correct Answer:
 detect, matchPerson
 
 Box 1: detect
@@ -2134,7 +2134,7 @@ The code will return the name of each detected brand with a confidence equal to 
 The code will return coordinates for the top-left corner of the rectangle that contains the brand logo of the displayed brands.
 The code will return coordinates for the bottom-right corner of the rectangle that contains the brand logo of the displayed brands.
 
-# Correct Answer
+# Correct Answer:
 Yes, Yes, No
 
 Box 1: Yes
@@ -2167,11 +2167,11 @@ Parallel.For(0, PersonCount, async i =>
     }
 });
 
-# Correct Answer
+# Correct Answer:
 Stream, AddFaceFromUrlAsync
 
 Box 1: Stream -
-The File.OpenRead(String) method opens an existing le for reading.
+The File.OpenRead(String) method opens an existing file for reading.
 Example: Open the stream and read it back.
 using (FileStream fs = File.OpenRead(path))
 
@@ -2230,7 +2230,7 @@ B. create_resource("res1", "CustomVision.Prediction", "F0", "westus")
 C. create_resource("res1", "ComputerVision", "S0", "westus")
 D. create_resource("res1", "CustomVision.Prediction", "S0", "westus")
 
-Correct Answer:
+# Correct Answer:
 B
 
 F0 is the free tier.
@@ -2243,7 +2243,7 @@ Use tagging, descriptions, and domain-specific models to identify content and la
 Apply adult/racy settings to enable automated restriction of adult content.
 Identify image types and color schemes in pictures.
 
-Reference:
+# Reference:
 https://docs.microsoft.com/en-us/python/api/overview/azure/cognitive-services?view=azure-python
 """
 
@@ -2259,7 +2259,7 @@ B. Add code to verify the read_results.status value.
 C. Add code to verify the status of the read_operation_location value.
 D. Wrap the call to get_read_result within a loop that contains a delay.
 
-Correct Answer:
+# Correct Answer:
 BD
 """
 
@@ -2483,7 +2483,7 @@ Sign in to the Custom Vision website.
 Sign in to the Azure Video Analyzer for Media website.
 From Content model customization, select Brands.
 
-# Correct Answer
+# Correct Answer:
 Sign in to the Azure Video Analyzer for Media website.
 From Content model customization, select Brands.
 Add the specific company names to the include list.
@@ -2493,7 +2493,7 @@ question_2_27 = """
 # QUESTION
 
 You have a mobile app that manages printed forms.
-You need the app to send images of the forms directly to Forms Recognizer to extract relevant information. For compliance reasons, the image les must not be stored in the cloud.
+You need the app to send images of the forms directly to Forms Recognizer to extract relevant information. For compliance reasons, the image files must not be stored in the cloud.
 In which format should you send the images to the Form Recognizer API endpoint?
 A. raw image binary
 B. form URL encoded
@@ -2543,7 +2543,7 @@ The code will display the name of each detected brand with a confidence equal to
 The code will display coordinates for the top-left corner of the rectangle that contains the brand logo of the displayed brands.
 The code will display coordinates for the bottom-right corner of the rectangle that contains the brand logo of the displayed brands.
 
-# Correct Answer
+# Correct Answer:
 Yes, Yes, No
 """
 
@@ -2610,7 +2610,7 @@ A
 
 question_2_33 = """
 # QUESTION
-You have a 20-GB video le named File1.avi that is stored on a local drive.
+You have a 20-GB video file named File1.avi that is stored on a local drive.
 You need to index File1.avi by using the Azure Video Indexer website.
 What should you do rst?
 A. Upload File1.avi to an Azure Storage queue.
@@ -2618,7 +2618,7 @@ B. Upload File1.avi to the Azure Video Indexer website.
 C. Upload File1.avi to Microsoft OneDrive.
 D. Upload File1.avi to the www.youtube.com webpage.
 
-Correct Answer:
+# Correct Answer:
 B
 """
 
@@ -2666,8 +2666,8 @@ question_2_36 = """
 
 You are building an app that will use the Azure AI Video Indexer service.
 You plan to train a language model to recognize industry-specic terms.
-You need to upload a le that contains the industry-specic terms.
-Which le format should you use?
+You need to upload a file that contains the industry-specic terms.
+Which file format should you use?
 A. XML
 B. TXT
 C. XLS
@@ -2731,7 +2731,7 @@ The code will perform face recognition.
 The code will list tags and their associated confidence.
 The code will read an image file from the local file system.
 
-# Correct Answer
+# Correct Answer:
 No, Yes, Yes
 """
 
@@ -2758,7 +2758,7 @@ B. Add code to verify the read_results.status value.
 C. Add code to verify the status of the read_operation_location value.
 D. Wrap the call to get_read_result within a loop that contains a delay.
 
-Correct Answer:
+# Correct Answer:
 BD
 """
 
@@ -2773,7 +2773,7 @@ Answer Area
 ______ (GET / PATCH / POST)
 "https://*.cognitiveservices.azure.com/vision/v3.2/analyze?visualFeatures=______(description / imageType / objects / tags)&details={string}&language=en-US"
 
-# Correct Answer
+# Correct Answer:
 POST, imageType
 """
 
@@ -2797,14 +2797,14 @@ Answer Area
   ______("enabled" / "state" / "tags"/ "useBuiltin"): ______(["Excluded"] / ["included"] / false / true)
 }
 
-# Correct Answer
+# Correct Answer:
 "enabled", false
 """
 
 question_2_42 = """
 # QUESTION
 
-You have a local folder that contains the les shown in the following table.
+You have a local folder that contains the files shown in the following table.
 ___________________________________________
 | Name  | Format | Length(mins) | Size(MB) |
 | File1 | WMV    |          34  |     400  |
@@ -2813,7 +2813,7 @@ ___________________________________________
 | File4 | MP4    |          80  |    1800  |
 --------------------------------------------
 
-You need to analyze the les by using Azure AI Video Indexer.
+You need to analyze the files by using Azure AI Video Indexer.
 Which files can you upload to the Video Indexer website?
 A. File1 and File3 only
 B. File1, File2, File3 and File4
@@ -3145,10 +3145,10 @@ question_3_13 = """
 
 You need to upload speech samples to a Speech Studio project for use in training.
 How should you upload the samples?
-A. Combine the speech samples into a single audio le in the .wma format and upload the le.
-B. Upload a .zip le that contains a collection of audio les in the .wav format and a corresponding text transcript le.
-C. Upload individual audio les in the FLAC format and manually upload a corresponding transcript in Microsoft Word format.
-D. Upload individual audio les in the .wma format.
+A. Combine the speech samples into a single audio file in the .wma format and upload the le.
+B. Upload a .zip file that contains a collection of audio files in the .wav format and a corresponding text transcript le.
+C. Upload individual audio files in the FLAC format and manually upload a corresponding transcript in Microsoft Word format.
+D. Upload individual audio files in the .wma format.
 
 # Correct Answer:
 B
@@ -3156,7 +3156,7 @@ B
 To upload your data, navigate to the Speech Studio . From the portal, click Upload data to launch the wizard and create your rst dataset.
 You'll be asked to select a speech data type for your dataset, before allowing you to upload your data.
 The default audio streaming format is WAV
-Use this table to ensure that your audio les are formatted correctly for use with Custom Speech:
+Use this table to ensure that your audio files are formatted correctly for use with Custom Speech:
 Property    Value
 File format    RIFF(WAV)
 Sample rate    8000 Hz or 16000 Hz
@@ -3251,7 +3251,7 @@ Periodically select Save and train after making edits to avoid losing changes.
 Step 3: Republish the model -
 Note: A knowledge base consists of question and answer (QnA) pairs. Each pair has one answer and a pair contains all the information associated with that answer.
 
-Reference:
+# Reference:
 https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/how-to/edit-knowledge-base
 """
 
@@ -3479,7 +3479,7 @@ Step 1: Open Microsoft Bot Framework Composer
 Step 2: Select the bot bot12345678
 Step 3: Select Import existing resources. Read the instructions on the right side of the screen and select Next.
 Step 4: Browse to the C:\Resources\LU folder and select the available .lu file
-Step 5: In the pop-up window Importing existing resources, modify the JSON le content based on your resources information: Name the intent TaskReminder
+Step 5: In the pop-up window Importing existing resources, modify the JSON file content based on your resources information: Name the intent TaskReminder
 Step 6: Select Publish from the Composer menu. In the Publish your bots pane, select the bot to publish (bot12345678), then select a publish profile from the Publish target drop-down list.
 
 # Reference:
@@ -3594,7 +3594,7 @@ Datacenters: East US, South Central US, West Central US, and West US 2
 Box 2: "/translate?to=en"
 Must specify the language which it is being translated to. The 'to' parameter is required
 
-Reference:
+# Reference:
 https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-reference
 https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-translate
 """
@@ -3745,7 +3745,7 @@ Answer Area
 Custom neural voice: ______ (Microsoft Bot Framework Composer / The Azure portal / The Language Understanding portal / The Speech Studio portal)
 Narration: ______ (Language Understanding / Speaker Recognition / Speech-to-text / Text-to-speech)
 
-# Correct Answer
+# Correct Answer:
 The Speech Studio portal, Text-to-speech
 """
 
@@ -3828,7 +3828,7 @@ The Code will detect the language of documents.
 The url attribute returned for each linked entity will be a Bing search link.
 The matches attribute returned for each linked entity will provide the location in a document where the entity is referenced.
 
-# Correct Answer
+# Correct Answer:
 No, Yes, Yes
 """
 
@@ -3868,7 +3868,7 @@ var translationConfig = SpeechTranslationConfig.FromSubscription(SPEECH__SUBSCRI
      translationConfig.______ = "en-US";
      translationConfig.______ = ("de");
      
-# Correct Answer
+# Correct Answer:
 speechRecognitionLanguage, speechSynthesisLanguage
 """
 
@@ -3922,7 +3922,7 @@ B. a five-minute .ac audio file and the associated transcript as a .txt file
 C. a .wav or .mp3 file of the voice talent consenting to the creation of a synthetic version of their voice
 D. a five-minute .wav or .mp3 file of the voice talent describing the kiosk system
 
-Correct Answer:
+# Correct Answer:
 C
 """
 
@@ -3951,7 +3951,7 @@ question_3_45 = """
 # HOTSPOT
 
 You are building a text-to-speech app that will use a custom neural voice.
-You need to create an SSML le for the app. The solution must ensure that the voice prole meets the following requirements:
+You need to create an SSML file for the app. The solution must ensure that the voice prole meets the following requirements:
 • Expresses a calm tone
 • Imitates the voice of a young adult female
 How should you complete the code? To answer, select the appropriate options in the answer area.
@@ -4278,7 +4278,7 @@ recognizer = speechsdk.______(speech_config=speech_config, audio_config=audio_co
 result = recognizer.recognize_once()
 text = result.text
 
-Correct Answer:
+# Correct Answer:
 AudioStreamFormat, SpeechRecognizer
 """
 
@@ -4590,7 +4590,7 @@ question_3_75 = """
 # HOTSPOT
 
 You have a collection of press releases stored as PDF les.
-You need to extract text from the les and perform sentiment analysis.
+You need to extract text from the files and perform sentiment analysis.
 Which service should you use for each task? To answer, select the appropriate options in the answer area.
 NOTE: Each correct selection is worth one point.
 
@@ -4755,7 +4755,7 @@ The call will output key phrases from the input string to the console.
 The output will contain the following words: the cat, sat, on and mat.
 The output will contain the confidence level for key phrases.
 
-Correct Answer:
+# Correct Answer:
 Yes, No, No
 
 Box 1: Yes -
@@ -4824,7 +4824,7 @@ Indexing blobs can be a time-consuming process. In cases where you have millions
 ✑ Create a corresponding indexer for each data source. All of the indexers should point to the same target search index.
 ✑ One search unit in your service can run one indexer at any given time. Creating multiple indexers as described above is only useful if they actually run in parallel.
 
-Reference:
+# Reference:
 https://docs.microsoft.com/en-us/azure/search/search-howto-indexing-azure-blob-storage
 """
 
@@ -5055,7 +5055,7 @@ Tables - project enriched content into Table Storage. Dene a table projection wh
 Projected content is not aggregated or normalized. The following screenshot shows a table, sorted by key phrase, with the parent document indicated in the adjacent column. In contrast with data ingestion during indexing, there is no linguistic analysis or aggregation of content.
 Plural forms and differences in casing are considered unique instances.
 Incorrect:
-Not C: files - project image les into Blob storage. A file is an image extracted from a document, transferred intact to Blob storage.
+Not C: files - project image files into Blob storage. A file is an image extracted from a document, transferred intact to Blob storage.
 Although it is named "files", it shows up in Blob Storage, not file storage.
 """
 
@@ -5294,7 +5294,7 @@ question_4_18 = """
 # HOTSPOT
 
 You have an Azure subscription that contains an Azure AI Document Intelligence resource named DI1.
-You build an app named App1 that analyzes PDF les for handwritten content by using DI1.
+You build an app named App1 that analyzes PDF files for handwritten content by using DI1.
 You need to ensure that App1 will recognize the handwritten content.
 How should you complete the code? To answer, select the appropriate options in the answer area.
 
@@ -5438,7 +5438,7 @@ Answer Area
 Analyze lesson plans: ______ (Azure Cognitive Search / Azure AI Custom Vision / Azure AI Document Intelligence / Immersive Reader)
 Analyze learning content: ______ (Azure Cognitive Search / Azure AI Custom Vision / Azure AI Document Intelligence / Immersive Reader)
 
-# Correct Answer
+# Correct Answer:
 Azure AI Document Intelligence, Immersive Reader
 """
 
@@ -5504,7 +5504,7 @@ question_4_28 = """
 # QUESTION
 
 You have an Azure subscription that contains an Azure AI Document Intelligence resource named AIdoc1 in the S0 tier.
-You have the les shown in the following table.
+You have the files shown in the following table.
 
 Name Format Password-locked Size(MB)
 File1 JPG N/A 400
@@ -5514,7 +5514,7 @@ File4 XLSX No 900
 File5 PDF Yes 160
 
 You need to train a custom extraction model by using AIdoc1.
-Which les can you upload to Document Intelligence Studio?
+Which files can you upload to Document Intelligence Studio?
 A. File1, File2, and File4 only
 B. File2, and File5 only
 C. File2, File4, and File5 only
@@ -5529,7 +5529,7 @@ question_4_29 = """
 # QUESTION
 
 You have an Azure subscription that contains an Azure AI Document Intelligence resource named DI1. DI1 uses the Standard S0 pricing tier.
-You have the les shown in the following table.
+You have the files shown in the following table.
 
 Name Size Description
 File1.pdf 800MB Contains scanned images
@@ -5551,7 +5551,7 @@ question_4_30 = """
 HOTSPOT
 
 You have an Azure subscription that contains an Azure AI Document Intelligence resource named DI1.
-You build an app named App1 that analyzes PDF les for handwritten content by using DI1.
+You build an app named App1 that analyzes PDF files for handwritten content by using DI1.
 You need to ensure that App1 will recognize the handwritten content.
 How should you complete the code? To answer, select the appropriate options in the answer area.
 NOTE: Each correct selection is worth one point.
@@ -5602,7 +5602,7 @@ question_4_32 = """
 You have an Azure subscription that contains an Azure AI Document Intelligence resource named DI1 and a storage account named sa1. The
 sa1 account contains a blob container named blob1 and an Azure Files share named share1.
 You plan to build a custom model named Model1 in DI1.
-You create sample forms and JSON les for Model1.
+You create sample forms and JSON files for Model1.
 You need to train Model1 and retrieve the ID of the model.
 Which four actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.
 NOTE: More than one order of answer choices is correct. You will receive credit for any of the correct orders you select.
@@ -5876,7 +5876,7 @@ https://docs.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.activityhandle
 
 question_5_9 = """
 # HOTSPOT
-You are reviewing the design of a chatbot. The chatbot includes a language generation le that contains the following fragment.
+You are reviewing the design of a chatbot. The chatbot includes a language generation file that contains the following fragment.
 # Greet(user)
 - ${Greeting()}, ${user.name}
 For each of the following statements, select Yes if the statement is true. Otherwise, select No.
@@ -6194,7 +6194,7 @@ You need to create a QnA Maker service named QNA12345678 in the East US Azure re
 that uses the questions and answers available at https://support.microsoft.com/en-us/help/12435/windows-10-upgrade-faq.
 To complete this task, sign in to the Azure portal and the QnA Maker portal.
 
-Correct Answer:
+# Correct Answer:
 See explanation below.
 Step 1: Sign in to the Azure portal create and a QnA Maker resource.
 Step 2: Select Create after you read the terms and conditions:
@@ -6996,7 +6996,7 @@ Apply the Default system message template.
 Create a deployment that uses the GPT-35 Turbo model.
 Deploy the solution to a new web app.
 
-# Correct Answer
+# Correct Answer:
 Create a deployment that uses the GPT-35 Turbo model.
 Apply the Marketing Writing Assistant system message template.
 Deploy the solution to a new web app.
@@ -7132,7 +7132,7 @@ ______(--api-properties / --assign-identity / --encryption) '{
   }
 }'
 
-# Correct Answer
+# Correct Answer:
 OpenAI, --encryption
 """
 
@@ -7250,7 +7250,7 @@ question_7_18 = """
 # QUESTION
 
 You have a custom Azure OpenAI model.
-You have the les shown in the following table.
+You have the files shown in the following table.
 _______________________
 | Name       | Size   |
 | File1.tsv  | 80 MB  |
@@ -7259,7 +7259,7 @@ _______________________
 | File4.xlsx | 200 MB |
 -----------------------
 You need to prepare training data for the model by using the OpenAI CLI data preparation tool.
-Which les can you upload to the tool?
+Which files can you upload to the tool?
 A. File1.tsv only Most Voted
 B. File2.xml only
 C. File3.pdf only
@@ -7291,7 +7291,7 @@ question_7_20 = """
 # QUESTION
 
 You have an Azure subscription and 10,000 ASCII les.
-You need to identify les that contain specic phrases. The solution must use cosine similarity.
+You need to identify files that contain specic phrases. The solution must use cosine similarity.
 Which Azure OpenAI model should you use?
 A. text-embedding-ada-002
 B. GPT-4
