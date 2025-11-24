@@ -25,6 +25,24 @@ def analyze_similarity(question: str):
     print(caller)
 
 
+def judge_answer_for_single_question(question: str):
+    # 准备输出内容
+    separator = '=' * 50
+
+    # 控制台输出
+    print(separator)
+    print(question)
+
+    # 获取AI回复
+    system_prompt = promptAnswerCheck.prompt
+    message_list = contentHandler.add_system_message([], system_prompt)
+    message_list = contentHandler.chat(message_list, question, temperature=0.0)
+    caller = message_list[2].get('content')
+
+    # 输出AI回复到控制台
+    print(caller)
+
+
 def judge_answer(output_file=None):
     # 如果指定了输出文件，打开文件进行写入
     file = None
@@ -83,3 +101,4 @@ def process_figure_question_domain():
 
 
 judge_answer('D:\\answers_output.txt')
+# judge_answer_for_single_question(questionSet_AI_102.question_1_25)

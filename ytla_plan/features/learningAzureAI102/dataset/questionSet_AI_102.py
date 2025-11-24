@@ -1,6 +1,6 @@
 # encode = utf-8
 
-question_1_1 = """
+question_1_01 = """
 # DRAG DROP
 You have 100 chatbots that each has its own Language Understanding model.
 Frequently, you must add the same phrases to each model.
@@ -47,7 +47,7 @@ Box 2: PhraselistCreateObject -
 https://docs.microsoft.com/en-us/azure/cognitive-services/luis/client-libraries-rest-api
 """
 
-question_1_2 = """
+question_1_02 = """
 # DRAG DROP
 You plan to use a Language Understanding application named app1 that is deployed to a container.
 App1 was developed by using a Language Understanding authoring resource named lu1.
@@ -97,7 +97,7 @@ Run the container, with the required input mount and billing settings.
 https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-container-howto
 """
 
-question_1_3 = """
+question_1_03 = """
 # QUESTION
 You need to build a chatbot that meets the following requirements:
 ✑ Supports chit-chat, knowledge base, and multilingual models
@@ -122,7 +122,7 @@ A, B, D: Dispatch uses sample utterances for each of your bot's different tasks 
 https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/ https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/overview/overview
 """
 
-question_1_4 = """
+question_1_04 = """
 # QUESTION
 Your company wants to reduce how long it takes for employees to log receipts in expense reports. All the receipts are in English.
 You need to extract top-level information from the receipts, such as the vendor and the transaction total. The solution must minimize development effort.
@@ -142,7 +142,7 @@ Form Recognizer is composed of custom document processing models, prebuilt model
 https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer
 """
 
-question_1_5 = """
+question_1_05 = """
 # HOTSPOT
 You need to create a new resource that will be used to perform sentiment analysis and optical character recognition (OCR). The solution must meet the following requirements:
 ✑ Use a single key and endpoint to access multiple services.
@@ -187,7 +187,7 @@ https://docs.microsoft.com/en-us/rest/api/deviceupdate/resourcemanager/accounts/
 https://www.analyticsvidhya.com/blog/2020/12/microsoft-azure-cognitive-services-api-for-ai-development
 """
 
-question_1_6 = """
+question_1_06 = """
 # QUESTION
 You are developing a new sales system that will process the video and text from a public-facing website.
 You plan to monitor the sales system to ensure that it provides equitable results regardless of the user's location or background.
@@ -209,7 +209,7 @@ AI systems should perform reliably and safely.
 https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/responsible-ai
 """
 
-question_1_7 = """
+question_1_07 = """
 # DRAG DROP
 You plan to use containerized versions of the Anomaly Detector API on local devices for testing and in on-premises datacenters.
 You need to ensure that the containerized deployments meet the following requirements:
@@ -243,7 +243,7 @@ Use the docker run command to run the containers.
 https://docs.microsoft.com/en-us/azure/container-registry/container-registry-intro
 """
 
-question_1_8 = """
+question_1_08 = """
 # HOTSPOT
 You plan to deploy a containerized version of an Azure Cognitive Services service that will be used for text analysis.
 You configure https://contoso.cognitiveservices.azure.com as the endpoint URI for the service, and you pull the latest version of the Text Analytics Sentiment Analysis container.
@@ -281,7 +281,7 @@ Box 2: https://contoso.cognitiveservices.azure.com {ENDPOINT_URI} is the endpoin
 https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-install-containers?tabs=sentiment
 """
 
-question_1_9 = """
+question_1_09 = """
 # QUESTION
 You have the following C# method for creating Azure Cognitive Services resources programmatically.
 static void create_resource (CognitiveServicesManagementClient client, string resource_name, string kind, string account_tier, string location)
@@ -664,7 +664,7 @@ C. an Azure Machine Learning Designer pipeline
 D. a new Cognitive Services resource that uses the S0 pricing tier
 
 # Correct Answer:
-A
+D
 
 The Computer Vision API uses text recognition APIs to extract and recognize text information from images. Read uses the latest recognition models, and is optimized for large, text-heavy documents and noisy images.
 
@@ -1686,7 +1686,7 @@ Model type: ______ (Custom neural / Custom template / Identity document (ID))
 An Azure Storage account, Custom neural
 """
 
-question_2_1 = """
+question_2_01 = """
 # HOTSPOT
 
 You are developing an application that will use the Computer Vision client library. The application has the following cod
@@ -1741,7 +1741,7 @@ Images will be read from a stream.
 https://docs.microsoft.com/en-us/java/api/com.microsoft.azure.cognitiveservices.vision.computervision.computervision.analyzeimageinstreamasync
 """
 
-question_2_2 = """
+question_2_02 = """
 # QUESTION
 
 You are developing a method that uses the Computer Vision client library. The method will perform optical character recognition (OCR) in images. The method has the following code.
@@ -1792,7 +1792,7 @@ while ((results.Status == OperationStatusCodes.Running || results.Status == Oper
 https://github.com/Azure-Samples/cognitive-services-quickstart-code/blob/master/dotnet/ComputerVision/ComputerVisionQuickstart.cs
 """
 
-question_2_3 = """
+question_2_03 = """
 # HOTSPOT
 You have a Computer Vision resource named contoso1 that is hosted in the West US Azure region.
 You need to use contoso1 to make a different size of a product photo by using the smart cropping feature.
@@ -1812,7 +1812,7 @@ https://westus.dev.cognitive.microsoft.com/docs/services/computer-vision-v3-2/op
 https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/concept-generating-thumbnails#examples
 """
 
-question_2_4 = """
+question_2_04 = """
 # DRAG DROP
 You are developing a webpage that will use the Azure Video Analyzer for Media (previously Video Indexer) service to display videos of internal company meetings.
 You embed the Player widget and the Cognitive Insights widget into the page.
@@ -1845,7 +1845,7 @@ people,keywords, search, true, en-US
 https://docs.microsoft.com/en-us/azure/azure-video-analyzer/video-analyzer-for-media-docs/video-indexer-embed-widgets
 """
 
-question_2_5 = """
+question_2_05 = """
 # DRAG DROP
 You train a Custom Vision model to identify a company's products by using the Retail domain.
 You plan to deploy the model as part of an app for Android phones.
@@ -1868,7 +1868,7 @@ Export the model.
 https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/export-your-model
 """
 
-question_2_6 = """
+question_2_06 = """
 # HOTSPOT
 You are developing an application to recognize employees' faces by using the Face Recognition API. Images of the faces will be accessible from a URI endpoint.
 The application has the following code.
@@ -1902,7 +1902,7 @@ Yes, No, Yes
 https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/use-persondirectory
 """
 
-question_2_7 = """
+question_2_07 = """
 # DRAG DROP
 
 You have a Custom Vision resource named acvdev in a development environment.
@@ -1930,7 +1930,7 @@ Use the ImportProject endpoint on acvprod.
 https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/copy-move-projects
 """
 
-question_2_8 = """
+question_2_08 = """
 # DRAG DROP
 
 You are developing an application that will recognize faults in components produced on a factory production line. The components are specific to your business.
@@ -1961,7 +1961,7 @@ Train the classier
 https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-build-a-classier
 """
 
-question_2_9 = """
+question_2_09 = """
 # HOTSPOT
 You are building a model that will be used in an iOS app.
 You have images of cats and dogs. Each image contains either a cat or a dog.
@@ -2825,7 +2825,7 @@ E. File1, File2, and File4 only
 B
 """
 
-question_3_1 = """
+question_3_01 = """
 # SCENARIO
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
@@ -2854,7 +2854,7 @@ Dene a set of intents that corresponds to actions users want to take in your app
 https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-intent
 """
 
-question_3_2 = """
+question_3_02 = """
 # SCENARIO
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
@@ -2875,7 +2875,7 @@ The model need to be extended and retrained.
 Note: Smart Labeler to generate suggested tags for images. This lets you label a large number of images more quickly when training a Custom Vision model.
 """
 
-question_3_3 = """
+question_3_03 = """
 # SCENARIO
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
@@ -2896,7 +2896,7 @@ A
 The model needs to be extended and retrained.
 """
 
-question_3_4 = """
+question_3_04 = """
 # SCENARIO
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
@@ -2917,7 +2917,7 @@ B
 The model needs to be extended and retrained.
 """
 
-question_3_5 = """
+question_3_05 = """
 # HOTSPOT
 
 You are developing a service that records lectures given in English (United Kingdom).
@@ -2965,7 +2965,7 @@ toLanguages.ForEach(translationCong.AddTargetLanguage); using var recognizer = n
 }
 """
 
-question_3_6 = """
+question_3_06 = """
 # DRAG DROP
 
 You train a Custom Vision model used in a mobile app.
@@ -2990,7 +2990,7 @@ Tag the images manually.
 https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-build-a-classier
 """
 
-question_3_7 = """
+question_3_07 = """
 # QUESTION
 
 You are building a Conversational Language Understanding model for an e-commerce chatbot. Users can speak or type their billing address when prompted by the chatbot.
@@ -3008,7 +3008,7 @@ B
 https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-entity-types
 """
 
-question_3_8 = """
+question_3_08 = """
 # QUESTION
 
 You are building an Azure WebJob that will create knowledge bases from an array of URLs.
@@ -3028,7 +3028,7 @@ AC
 https://docs.microsoft.com/en-us/rest/api/cognitiveservices-qnamaker/qnamaker4.0/knowledgebase/create
 """
 
-question_3_9 = """
+question_3_09 = """
 # HOTSPOT
 You are developing an application that includes language translation.
 The application will translate text retrieved by using a function named getTextToBeTranslated. The text can be in one of many languages. The content of the text must remain within the Americas Azure geography.
@@ -4727,7 +4727,7 @@ D. EntityLinkingSkill
 C
 """
 
-question_4_1 = """
+question_4_01 = """
 HOTSPOT
 
 You are developing a text processing solution.
@@ -4770,7 +4770,7 @@ Key phrase extraction does not have confidence levels.
 https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-keyword-extraction
 """
 
-question_4_2 = """
+question_4_02 = """
 # QUESTION
 
 You deploy a web app that is used as a management portal for indexing in Azure Cognitive Search. The app is configured to use the primary admin key.
@@ -4797,7 +4797,7 @@ Note: Two admin api-keys, referred to as primary and secondary keys in the porta
 https://docs.microsoft.com/en-us/azure/search/search-security-api-keys#regenerate-admin-keys
 """
 
-question_4_3 = """
+question_4_03 = """
 # QUESTION
 
 You have an existing Azure Cognitive Search service.
@@ -4828,7 +4828,7 @@ Indexing blobs can be a time-consuming process. In cases where you have millions
 https://docs.microsoft.com/en-us/azure/search/search-howto-indexing-azure-blob-storage
 """
 
-question_4_4 = """
+question_4_04 = """
 # QUESTION
 
 You need to implement a table projection to generate a physical expression of an Azure Cognitive Search index.
@@ -4853,7 +4853,7 @@ Each table requires three properties:
 https://docs.microsoft.com/en-us/azure/search/knowledge-store-projection-overview
 """
 
-question_4_5 = """
+question_4_05 = """
 # HOTSPOT
 You are creating an enrichment pipeline that will use Azure Cognitive Search. The knowledge store contains unstructured JSON data and scanned PDF documents that contain text.
 Which projection type should you use for each data type? To answer, select the appropriate options in the answer area.
@@ -4874,7 +4874,7 @@ File projections are similar to object projections and only act on the normalize
 https://docs.microsoft.com/en-us/azure/search/knowledge-store-projection-overview
 """
 
-question_4_6 = """
+question_4_06 = """
 HOTSPOT -
 You are building an Azure Cognitive Search custom skill.
 You have the following custom skill schema definition.
@@ -4920,7 +4920,7 @@ For each organization identified by entity recognition, this skill calls a web A
 https://docs.microsoft.com/en-us/azure/search/cognitive-search-output-field-mapping
 """
 
-question_4_7 = """
+question_4_07 = """
 # QUESTION
 
 You have the following data sources:
@@ -4953,7 +4953,7 @@ Indexers crawl data stores on Azure.
 https://docs.microsoft.com/en-us/azure/search/search-indexer-overview#supported-data-sources
 """
 
-question_4_8 = """
+question_4_08 = """
 # QUESTION
 
 You are developing a solution to generate a word cloud based on the reviews of a company's products.
@@ -4970,7 +4970,7 @@ A
 https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/overview
 """
 
-question_4_9 = """
+question_4_09 = """
 # DRAG DROP
 You have a web app that uses Azure Cognitive Search.
 When reviewing billing for the app, you discover much higher than expected charges. You suspect that the query key is compromised.
@@ -5639,7 +5639,7 @@ D. Implement the contract model.
 A
 """
 
-question_5_1 = """
+question_5_01 = """
 # QUESTION
 
 You build a bot by using the Microsoft Bot Framework SDK and the Azure Bot Service.
@@ -5660,7 +5660,7 @@ CE
 https://github.com/MicrosoftDocs/bot-docs/blob/live/articles/bot-service-quickstart-registration.md
 """
 
-question_5_2 = """
+question_5_02 = """
 # HOTSPOT
 You are building a chatbot by using the Microsoft Bot Framework Composer.
 You have the dialog design shown in the following exhibit.
@@ -5690,7 +5690,7 @@ https://docs.microsoft.com/en-us/composer/concept-language-generation
 https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/coalescefunction
 """
 
-question_5_3 = """
+question_5_03 = """
 # QUESTION
 
 You are building a multilingual chatbot.
@@ -5715,7 +5715,7 @@ https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos
 https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-language-detection
 """
 
-question_5_4 = """
+question_5_04 = """
 # DRAG DROP
 You plan to build a chatbot to support task tracking.
 You create a Language Understanding service named lu1.
@@ -5751,7 +5751,7 @@ In order to receive a LUIS prediction in a chat bot or other client application,
 https://docs.microsoft.com/en-us/azure/cognitive-services/luis/tutorial-intents-only
 """
 
-question_5_5 = """
+question_5_05 = """
 # QUESTION 
 You are building a bot on a local computer by using the Microsoft Bot Framework. The bot will use an existing Language Understanding model.
 You need to translate the Language Understanding model locally by using the Bot Framework CLI.
@@ -5775,7 +5775,7 @@ List of .lu files under a specific path.
 https://github.com/microsoft/botframework-cli/blob/main/packages/luis/docs/translate-command.md
 """
 
-question_5_6 = """
+question_5_06 = """
 # DRAG DROP
 
 You are using a Language Understanding service to handle natural language input from the users of a web-base d customer agent.
@@ -5815,7 +5815,7 @@ https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-how-to-revie
 https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-prebuilt-model
 """
 
-question_5_7 = """
+question_5_07 = """
 # QUESTION
 
 You build a conversational bot named bot1.
@@ -5841,7 +5841,7 @@ Obtain values to connect your bot to the knowledge base
 https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-qna
 """
 
-question_5_8 = """
+question_5_08 = """
 # HOTSPOT
 You are building a chatbot for a Microsoft Teams channel by using the Microsoft Bot Framework SDK. The chatbot will use the following code.
 
@@ -5874,7 +5874,7 @@ Box 3: No -
 https://docs.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.activityhandler.onmembersaddedasync?view=botbuilder-dotnet-stable
 """
 
-question_5_9 = """
+question_5_09 = """
 # HOTSPOT
 You are reviewing the design of a chatbot. The chatbot includes a language generation file that contains the following fragment.
 # Greet(user)
@@ -6857,7 +6857,7 @@ B. No
 B
 """
 
-question_6_1 = """
+question_6_01 = """
 # DRAG DROP
 
 You have a monitoring solution that uses the Azure AI Anomaly Detector service.
@@ -6880,7 +6880,7 @@ From Server1, run the docker run command.
 Query the prediction endpoint on Server1.
 """
 
-question_7_1 = """
+question_7_01 = """
 # QUESTION
 
 You have an Azure subscription. The subscription contains an Azure OpenAI resource that hosts a GPT-4 model named Model1 and an app named App1. App1 uses Model1.
@@ -6895,7 +6895,7 @@ D. the Temperature parameter
 C
 """
 
-question_7_2 = """
+question_7_02 = """
 # QUESTION
 
 You have an Azure subscription. The subscription contains an Azure OpenAI resource that hosts a GPT-3.5 Turbo model named Model1.
@@ -6911,7 +6911,7 @@ D. priming
 A
 """
 
-question_7_3 = """
+question_7_03 = """
 # HOTSPOT
 
 You build a chatbot by using Azure OpenAI Studio.
@@ -6925,7 +6925,7 @@ See: question_7_3.png
 Temperature, Top P
 """
 
-question_7_4 = """
+question_7_04 = """
 # QUESTION
 
 You are building a chatbot for a travel agent. The chatbot will use the Azure OpenAI GPT 3.5 model and will be used to make travel reservations.
@@ -6940,7 +6940,7 @@ D. Modify the system message used by the model to specify that the answers must 
 A
 """
 
-question_7_5 = """
+question_7_05 = """
 # QUESTION
 
 You build a chatbot that uses the Azure OpenAI GPT 3.5 model.
@@ -6957,7 +6957,7 @@ E. Train a custom large language model (LLM).
 AD
 """
 
-question_7_6 = """
+question_7_06 = """
 # HOTSPOT
 
 You have an Azure subscription that contains an Azure OpenAI resource named AI1.
@@ -6981,7 +6981,7 @@ new ChatCompletionsOptions()
 ChatRole.User, Temperature
 """
 
-question_7_7 = """
+question_7_07 = """
 # DRAG DROP
 
 You have an Azure subscription that contains an Azure OpenAI resource named AI1.
@@ -7002,7 +7002,7 @@ Apply the Marketing Writing Assistant system message template.
 Deploy the solution to a new web app.
 """
 
-question_7_8 = """
+question_7_08 = """
 # HOTSPOT
 
 You have an Azure subscription that contains an Azure OpenAI resource named AI1.
@@ -7025,7 +7025,7 @@ response = openai.ChatCompletion.create(
 ""
 """
 
-question_7_9 = """
+question_7_09 = """
 # HOTSPOT
 
 You have an Azure subscription that contains an Azure OpenAI resource.
@@ -7380,7 +7380,7 @@ Changing "You are a helpful assistant." to "You must answer only within the cont
 No, Yes, Yes
 """
 
-question_8_1 = """
+question_8_01 = """
 # QUESTION
 
 You have an Azure subscription that contains an Azure OpenAI resource named AI1.
@@ -7396,7 +7396,7 @@ D. Azure Machine Leaning
 B
 """
 
-question_8_2 = """
+question_8_02 = """
 # QUESTION
 
 You have an Azure subscription that contains an Azure AI Content Safety resource named CS1.
@@ -7423,7 +7423,7 @@ D. 100
 C
 """
 
-question_8_3 = """
+question_8_03 = """
 # QUESTION
 
 You have an Azure subscription.
@@ -7441,7 +7441,7 @@ E. Azure AI Custom Vision
 CE
 """
 
-question_8_4 = """
+question_8_04 = """
 # HOTSPOT
 
 You have an Azure subscription that contains an Azure AI Content Safety resource named CS1.
@@ -7467,7 +7467,7 @@ curl --location --request POST ' 'https://cs1.cognitiveservices.azure.com/______
 contentsafety/, textanalyze
 """
 
-question_8_5 = """
+question_8_05 = """
 # SCENARIO
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
@@ -7486,7 +7486,7 @@ B. No
 B
 """
 
-question_8_6 = """
+question_8_06 = """
 # SCENARIO
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
@@ -7505,7 +7505,7 @@ B. No
 A
 """
 
-question_8_7 = """
+question_8_07 = """
 # SCENARIO
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
@@ -7524,7 +7524,7 @@ B. No
 B
 """
 
-question_8_8 = """
+question_8_08 = """
 # SCENARIO
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
@@ -7543,7 +7543,7 @@ B. No
 B
 """
 
-question_8_9 = """
+question_8_09 = """
 # HOTSPOT
 
 You have an Azure subscription that contains an Azure AI Content Safety resource.
@@ -7616,7 +7616,7 @@ D. Protected material text detection
 B
 """
 
-question_9_1 = """
+question_9_01 = """
 Introductory Info
 Case study -
 This is a case study. Case studies are not timed separately. You can use as much exam time as you would like to complete each case.
