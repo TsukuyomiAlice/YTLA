@@ -1,12 +1,11 @@
 # encode = utf-8
 
-from ytla_plan.features.learningAzureAI102.script import scriptText
-
-def clipper(rules: dict, starter, ender: str = '') -> list[dict]:
+def clipper(original_text: str, rules: dict, starter, ender: str = '') -> list[dict]:
     """
     从scriptText.original_text中读取原文，按starter和ender分段，并根据rules进行内容分类
 
     Args:
+        original_text: 原始文本字符串
         rules: 字典，key为分类标识，value为对应的行开头文本
         starter: 段落开始标识，以该行开头的内容为新段落的开始
         ender: 段落结束标识，以该行开头的内容为段落的结束
@@ -19,7 +18,7 @@ def clipper(rules: dict, starter, ender: str = '') -> list[dict]:
     current_rule_key = None  # 记录当前正在收集的规则key
 
     # 读取原始文本并按行分割
-    lines = scriptText.original_text.lstrip().split('\n')
+    lines = original_text.lstrip().split('\n')
 
     for line in lines:
         # 跳过完全空的行

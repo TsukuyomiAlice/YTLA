@@ -1,6 +1,6 @@
 # encode = utf-8
 
-from ytla_plan.features.learningAzureAI102.script import scriptTextParaClipper
+from ytla_plan.features.learningAzureAI102.script import scriptTextParaClipper, scriptText
 
 
 def analyzer() -> [list[dict], list[str]]:
@@ -12,6 +12,7 @@ def analyzer() -> [list[dict], list[str]]:
     """
     # 获取原始记录
     records = scriptTextParaClipper.clipper(
+        scriptText.original_text,
         {'question': '问题 ', 'answer': '你的答案', 'correct_answer': '正确答案'},
         '问题 '
     )
