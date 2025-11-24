@@ -1,7 +1,7 @@
 # encode = utf-8
 
 question_1_1 = """
-# DRAG DROP -
+# DRAG DROP
 You have 100 chatbots that each has its own Language Understanding model.
 Frequently, you must add the same phrases to each model.
 You need to programmatically update the Language Understanding models to include the new phrases.
@@ -48,7 +48,7 @@ https://docs.microsoft.com/en-us/azure/cognitive-services/luis/client-libraries-
 """
 
 question_1_2 = """
-# DRAG DROP -
+# DRAG DROP
 You plan to use a Language Understanding application named app1 that is deployed to a container.
 App1 was developed by using a Language Understanding authoring resource named lu1.
 App1 has the versions shown in the following table.
@@ -143,7 +143,7 @@ https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer
 """
 
 question_1_5 = """
-# HOTSPOT -
+# HOTSPOT
 You need to create a new resource that will be used to perform sentiment analysis and optical character recognition (OCR). The solution must meet the following requirements:
 ✑ Use a single key and endpoint to access multiple services.
 ✑ Consolidate billing for future services that you might use.
@@ -210,7 +210,7 @@ https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/respons
 """
 
 question_1_7 = """
-# DRAG DROP -
+# DRAG DROP
 You plan to use containerized versions of the Anomaly Detector API on local devices for testing and in on-premises datacenters.
 You need to ensure that the containerized deployments meet the following requirements:
 ✑ Prevent billing and API information from being stored in the command-line histories of the devices that run the container.
@@ -244,7 +244,7 @@ https://docs.microsoft.com/en-us/azure/container-registry/container-registry-int
 """
 
 question_1_8 = """
-# HOTSPOT -
+# HOTSPOT
 You plan to deploy a containerized version of an Azure Cognitive Services service that will be used for text analysis.
 You configure https://contoso.cognitiveservices.azure.com as the endpoint URI for the service, and you pull the latest version of the Text Analytics Sentiment Analysis container.
 You need to run the container on an Azure virtual machine by using Docker.
@@ -489,7 +489,7 @@ A
 """
 
 question_1_18 = """
-# HOTSPOT -
+# HOTSPOT
 You are developing a streaming Speech to Text solution that will use the Speech SDK and MP3 encoding.
 You need to develop a method to convert speech to text for streaming MP3 data.
 How should you complete the code? To answer, select the appropriate options in the answer area.
@@ -515,7 +515,7 @@ https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/how-to-
 """
 
 question_1_19 = """
-# HOTSPOT -
+# HOTSPOT
 You are developing an internet-based training solution for remote learners.
 Your company identifies that during the training, some learners leave their desk for long periods or become distracted.
 You need to use a video and audio feed from each learner's computer to detect whether the learner is present and paying attention. The solution must minimize development effort and identify each learner. 
@@ -595,7 +595,7 @@ https://docs.microsoft.com/en-us/azure/search/search-performance-analysis
 """
 
 question_1_23 = """
-# DRAG DROP -
+# DRAG DROP
 You need to develop an automated call handling system that can respond to callers in their own language. The system will support only French and English.
 Which Azure Cognitive Services service should you use to meet each requirement? To answer, drag the appropriate services to the correct requirements. Each service may be used once, more than once, or not at all. You may need to drag the split bat between panes or scroll to view content.
 NOTE: Each correct selection is worth one point.
@@ -776,7 +776,7 @@ https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/direct-
 """
 
 question_1_30 = """
-# HOTSPOT -
+# HOTSPOT
 You are building an app that will process incoming email and direct messages to either French or English language support teams.
 Which Azure Cognitive Services API should you use? To answer, select the appropriate options in the answer area.
 NOTE: Each correct selection is worth one point.
