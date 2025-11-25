@@ -1,6 +1,6 @@
 # encode = utf-8
 
-question_1_01 = """
+question_01_01 = """
 # DRAG DROP
 You have 100 chatbots that each has its own Language Understanding model.
 Frequently, you must add the same phrases to each model.
@@ -47,7 +47,7 @@ Box 2: PhraselistCreateObject -
 https://docs.microsoft.com/en-us/azure/cognitive-services/luis/client-libraries-rest-api
 """
 
-question_1_02 = """
+question_01_02 = """
 # DRAG DROP
 You plan to use a Language Understanding application named app1 that is deployed to a container.
 App1 was developed by using a Language Understanding authoring resource named lu1.
@@ -90,14 +90,14 @@ The versioned app's package is available from the Versions list page.
 8. The package is downloaded from the browser.
 Step 2: Select v1.1 of app1.
 A trained or published app packaged as a mounted input to the container with its associated App ID.
-Step 3: Run a contain and mount the model le.
+Step 3: Run a contain and mount the model file.
 Run the container, with the required input mount and billing settings.
 
 # Reference:
 https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-container-howto
 """
 
-question_1_03 = """
+question_01_03 = """
 # QUESTION
 You need to build a chatbot that meets the following requirements:
 ✑ Supports chit-chat, knowledge base, and multilingual models
@@ -113,7 +113,7 @@ D. Text Analytics, Translator, and Dispatch
 C
 
 Language Understanding: An AI service that allows users to interact with your applications, bots, and IoT devices by using natural language.
-QnA Maker is a cloud-based Natural Language Processing (NLP) service that allows you to create a natural conversational layer over your data. It is used to nd the most appropriate answer for any input from your custom knowledge base (KB) of information.
+QnA Maker is a cloud-based Natural Language Processing (NLP) service that allows you to create a natural conversational layer over your data. It is used to find the most appropriate answer for any input from your custom knowledge base (KB) of information.
 Text Analytics: Mine insights in unstructured text using natural language processing (NLP) no machine learning expertise required. Gain a deeper understanding of customer opinions with sentiment analysis. The Language Detection feature of the Azure Text Analytics REST API evaluates text input
 Incorrect Answers:
 A, B, D: Dispatch uses sample utterances for each of your bot's different tasks (LUIS, QnA Maker, or custom), and builds a model that can be used to properly route your user's request to the right task, even across multiple bots.
@@ -122,7 +122,7 @@ A, B, D: Dispatch uses sample utterances for each of your bot's different tasks 
 https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/ https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/overview/overview
 """
 
-question_1_04 = """
+question_01_04 = """
 # QUESTION
 Your company wants to reduce how long it takes for employees to log receipts in expense reports. All the receipts are in English.
 You need to extract top-level information from the receipts, such as the vendor and the transaction total. The solution must minimize development effort.
@@ -142,7 +142,7 @@ Form Recognizer is composed of custom document processing models, prebuilt model
 https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer
 """
 
-question_1_05 = """
+question_01_05 = """
 # HOTSPOT
 You need to create a new resource that will be used to perform sentiment analysis and optical character recognition (OCR). The solution must meet the following requirements:
 ✑ Use a single key and endpoint to access multiple services.
@@ -187,7 +187,7 @@ https://docs.microsoft.com/en-us/rest/api/deviceupdate/resourcemanager/accounts/
 https://www.analyticsvidhya.com/blog/2020/12/microsoft-azure-cognitive-services-api-for-ai-development
 """
 
-question_1_06 = """
+question_01_06 = """
 # QUESTION
 You are developing a new sales system that will process the video and text from a public-facing website.
 You plan to monitor the sales system to ensure that it provides equitable results regardless of the user's location or background.
@@ -209,7 +209,7 @@ AI systems should perform reliably and safely.
 https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/responsible-ai
 """
 
-question_1_07 = """
+question_01_07 = """
 # DRAG DROP
 You plan to use containerized versions of the Anomaly Detector API on local devices for testing and in on-premises datacenters.
 You need to ensure that the containerized deployments meet the following requirements:
@@ -243,7 +243,7 @@ Use the docker run command to run the containers.
 https://docs.microsoft.com/en-us/azure/container-registry/container-registry-intro
 """
 
-question_1_08 = """
+question_01_08 = """
 # HOTSPOT
 You plan to deploy a containerized version of an Azure Cognitive Services service that will be used for text analysis.
 You configure https://contoso.cognitiveservices.azure.com as the endpoint URI for the service, and you pull the latest version of the Text Analytics Sentiment Analysis container.
@@ -281,7 +281,7 @@ Box 2: https://contoso.cognitiveservices.azure.com {ENDPOINT_URI} is the endpoin
 https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-install-containers?tabs=sentiment
 """
 
-question_1_09 = """
+question_01_09 = """
 # QUESTION
 You have the following C# method for creating Azure Cognitive Services resources programmatically.
 static void create_resource (CognitiveServicesManagementClient client, string resource_name, string kind, string account_tier, string location)
@@ -311,7 +311,7 @@ https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-api
 https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/limits-and-quotas
 """
 
-question_1_10 = """
+question_01_10 = """
 # QUESTION 
 You successfully run the following HTTP request.
 POST https://management.azure.com/subscriptions/18c51a87-3a69-47a8-aedc-a54745f708a1/resourceGroups/RG1/providers/Microsoft.CognitiveServices/accounts/contoso1/regenerateKey?api-version=2017-04-18
@@ -333,7 +333,7 @@ POST https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/
 https://docs.microsoft.com/en-us/rest/api/cognitiveservices/accountmanagement/accounts/regeneratekey
 """
 
-question_1_11 = """
+question_01_11 = """
 # QUESTION 
 You build a custom Form Recognizer model.
 You receive sample files to use for training the model as shown in the following table.
@@ -368,7 +368,7 @@ File size must be less than 50 MB.
 https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer/overview
 """
 
-question_1_12 = """
+question_01_12 = """
 # QUESTION 
 A customer uses Azure Cognitive Search.
 The customer plans to enable a server-side encryption and use customer-managed keys (CMK) stored in Azure.
@@ -382,13 +382,13 @@ E. Query times will decrease.
 F. Azure Key Vault is required.
 
 # Correct Answer:
-ABE
+ABF
 
 # Reference:
 https://docs.microsoft.com/en-us/azure/search/search-security-overview
 """
 
-question_1_13 = """
+question_01_13 = """
 # QUESTION 
 You are developing a new sales system that will process the video and text from a public-facing website.
 You plan to notify users that their data has been processed by the sales system.
@@ -405,7 +405,7 @@ D
 https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/responsible-ai
 """
 
-question_1_14 = """
+question_01_14 = """
 # SCENARIO
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
 After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
@@ -428,7 +428,7 @@ Private Link service can be accessed from approved private endpoints in any publ
 https://docs.microsoft.com/en-us/azure/private-link/private-link-overview
 """
 
-question_1_15 = """
+question_01_15 = """
 # SCENARIO
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
 After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
@@ -450,7 +450,7 @@ Instead deploy service1 and a private (not public) endpoint to a new virtual net
 https://docs.microsoft.com/en-us/azure/private-link/private-link-overview
 """
 
-question_1_16 = """
+question_01_16 = """
 # SCENARIO
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
 After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
@@ -472,7 +472,7 @@ Instead deploy service1 and a private (not public) endpoint to a new virtual net
 https://docs.microsoft.com/en-us/azure/private-link/private-link-overview
 """
 
-question_1_17 = """
+question_01_17 = """
 # QUESTION
 You plan to perform predictive maintenance.
 You collect IoT sensor data from 100 industrial machines for a year. Each machine has 50 different sensors that generate data at one-minute
@@ -488,7 +488,7 @@ D. Custom Vision
 A
 """
 
-question_1_18 = """
+question_01_18 = """
 # HOTSPOT
 You are developing a streaming Speech to Text solution that will use the Speech SDK and MP3 encoding.
 You need to develop a method to convert speech to text for streaming MP3 data.
@@ -514,7 +514,7 @@ AudioStreamFormat.getCompressedFormat, SpeechRecognizer
 https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/how-to-use-codec-compressed-audio-input-streams?tabs=debian&pivots=programming- language-csharp
 """
 
-question_1_19 = """
+question_01_19 = """
 # HOTSPOT
 You are developing an internet-based training solution for remote learners.
 Your company identifies that during the training, some learners leave their desk for long periods or become distracted.
@@ -534,7 +534,7 @@ Face, Face, Speech
 https://docs.microsoft.com/en-us/azure/cognitive-services/what-are-cognitive-services
 """
 
-question_1_20 = """
+question_01_20 = """
 # QUESTION
 You plan to provision a QnA Maker service in a new resource group named RG1.
 In RG1, you create an App Service plan named AP1.
@@ -553,7 +553,7 @@ DE
 https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/how-to/set-up-qnamaker-service-azure?tabs=v1#delete-azure-resources
 """
 
-question_1_21 = """
+question_01_21 = """
 # QUESTION
 You are building a language model by using a Language Understanding (classic) service.
 You create a new Language Understanding (classic) resource.
@@ -570,7 +570,7 @@ B
 https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-how-to-collaborate
 """
 
-question_1_22 = """
+question_01_22 = """
 # SCENARIO
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
 After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
@@ -594,7 +594,7 @@ A simple x to most throttling issues is to throw more resources at the search se
 https://docs.microsoft.com/en-us/azure/search/search-performance-analysis
 """
 
-question_1_23 = """
+question_01_23 = """
 # DRAG DROP
 You need to develop an automated call handling system that can respond to callers in their own language. The system will support only French and English.
 Which Azure Cognitive Services service should you use to meet each requirement? To answer, drag the appropriate services to the correct requirements. Each service may be used once, more than once, or not at all. You may need to drag the split bat between panes or scroll to view content.
@@ -627,7 +627,7 @@ https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos
 https://docs.microsoft.com/en-us/azure/cognitive-services/translator/translator-overview
 """
 
-question_1_24 = """
+question_01_24 = """
 # QUESTION
 You have receipts that are accessible from a URL.
 You need to extract data from the receipts by using Form Recognizer and the SDK. The solution must use a prebuilt model.
@@ -652,7 +652,7 @@ Uri(receiptUrl)).WaitForCompletionAsync();
 https://docs.microsoft.com/en-us/azure/applied-ai-services/form-recognizer/quickstarts/client-library
 """
 
-question_1_25 = """
+question_01_25 = """
 # QUESTION
 You have a collection of 50,000 scanned documents that contain text.
 You plan to make the text available through Azure Cognitive Search.
@@ -672,7 +672,7 @@ The Computer Vision API uses text recognition APIs to extract and recognize text
 https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/cognitive-search-with-skillsets
 """
 
-question_1_26 = """
+question_01_26 = """
 # SCENARIO
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
 After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
@@ -697,7 +697,7 @@ Note: A simple x to most throttling issues is to throw more resources at the sea
 https://docs.microsoft.com/en-us/azure/search/search-performance-analysis
 """
 
-question_1_27 = """
+question_01_27 = """
 # SCENARIO
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
 After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
@@ -723,7 +723,7 @@ Note: A simple x to most throttling issues is to throw more resources at the sea
 https://docs.microsoft.com/en-us/azure/search/search-performance-analysis
 """
 
-question_1_28 = """
+question_01_28 = """
 # SCENARIO
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
 After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
@@ -751,7 +751,7 @@ The service could be an Azure service such as:
 https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-overview
 """
 
-question_1_29 = """
+question_01_29 = """
 # QUESTION
 You have a Language Understanding resource named lu1.
 You build and deploy an Azure bot named bot1 that uses lu1.
@@ -775,7 +775,7 @@ Not B: The Active learning suggestions feature allows you to improve the quality
 https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/direct-line-speech
 """
 
-question_1_30 = """
+question_01_30 = """
 # HOTSPOT
 You are building an app that will process incoming email and direct messages to either French or English language support teams.
 Which Azure Cognitive Services API should you use? To answer, select the appropriate options in the answer area.
@@ -810,7 +810,7 @@ https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v
 https://westcentralus.dev.cognitive.microsoft.com/docs/services/TextAnalytics-v3-1/operations/EntitiesRecognitionGenera
 """
 
-question_1_31 = """
+question_01_31 = """
 # QUESTION
 You have an Azure Cognitive Search instance that indexes purchase orders by using Form Recognizer.
 You need to analyze the extracted information by using Microsoft Power BI. The solution must minimize development effort.
@@ -828,13 +828,13 @@ Objects is used when you need the full JSON representation of your data and enri
 Note: Form Recognizer analyzes your forms and documents, extracts text and data, maps eld relationships as key-value pairs, and returns a structured JSON output. You quickly get accurate results that are tailored to your specific content without excessive manual intervention or extensive data science expertise.
 Incorrect:
 Not Tables: Tables is used for data that's best represented as rows and columns, or whenever you need granular representations of your data (for example, as data frames). Table projections allow you to dene a schematized shape, using a Shaper skill or use inline shaping to specify columns and rows.
-Not File: File is used when you need to save normalized, binary image les.
+Not File: File is used when you need to save normalized, binary image files.
 
 # Reference:
 https://docs.microsoft.com/en-us/azure/search/knowledge-store-projection-overview
 """
 
-question_1_32 = """
+question_01_32 = """
 # SCENARIO
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
 After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
@@ -860,7 +860,7 @@ reason why throttling is occurring at all.
 https://docs.microsoft.com/en-us/azure/search/search-performance-analysis
 """
 
-question_1_33 = """
+question_01_33 = """
 # SIMULATION
 You need to create a Text Analytics service named Text12345678, and then enable logging for Text12345678. The solution must ensure that any changes to Text12345678 will be stored in a Log Analytics workspace.
 To complete this task, sign in to the Azure portal.
@@ -885,7 +885,7 @@ It can take up to two hours before logging data is available to query and analyz
 https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account https://docs.microsoft.com/en-us/azure/cognitive-services/diagnostic-logging
 """
 
-question_1_34 = """
+question_01_34 = """
 # SIMULATION
 You need to create a search service named search12345678 that will index a sample Azure Cosmos DB database named hotels-sample. The solution must ensure that only English language fields are retrievable.
 To complete this task, sign in to the Azure portal.
@@ -911,7 +911,7 @@ Step 10: Continue and finish the wizard.
 https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account https://docs.microsoft.com/en-us/azure/search/search-get-started-portal
 """
 
-question_1_35 = """
+question_01_35 = """
 # SIMULATION
 You plan to create a solution to generate captions for images that will be read from Azure Blob Storage.
 You need to create a service in Azure Cognitive Services for the solution. The service must be named captions12345678 and must use the Free pricing tier.
@@ -933,7 +933,7 @@ In Connect to your data, choose Azure Blob Storage. Choose an existing connectio
 https://docs.microsoft.com/en-us/azure/search/search-create-service-portal https://docs.microsoft.com/en-us/azure/search/cognitive-search-quickstart-ocr
 """
 
-question_1_36 = """
+question_01_36 = """
 # SIMULATION
 You need to create a Form Recognizer resource named fr12345678.
 Use the Form Recognizer sample labeling tool at https://fott-2-1.azurewebsites.net/ to analyze the invoice located in the
@@ -957,7 +957,7 @@ Step 9: Save the results as C:\Resources\Invoices\Results.json.
 https://docs.microsoft.com/en-us/azure/applied-ai-services/form-recognizer/quickstarts/try-sample-label-tool
 """
 
-question_1_37 = """
+question_01_37 = """
 # QUESTION
 You have a factory that produces food products.
 You need to build a monitoring solution for staff compliance with personal protective equipment (PPE) requirements. The solution must meet the following requirements:
@@ -982,7 +982,7 @@ Features include face detection that perceives facial features and attributes su
 https://azure.microsoft.com/en-us/services/cognitive-services/face/
 """
 
-question_1_38 = """
+question_01_38 = """
 # QUESTION
 You have an Azure Cognitive Search solution and a collection of blog posts that include a category eld.
 You need to index the posts. The solution must meet the following requirements:
@@ -1008,7 +1008,7 @@ Fields have data types and attributes. The check boxes across the top are index 
 https://docs.microsoft.com/en-us/azure/search/search-get-started-portal
 """
 
-question_1_39 = """
+question_01_39 = """
 # SIMULATION
 Use the following login credentials as needed:
 To enter your username, place your cursor in the Sign in box and click on the username below.
@@ -1035,7 +1035,7 @@ Region: choose the Azure region for your cognitive service. Choose: East US Azur
 Name: choose a name for your cognitive service. Enter: AAA12345678
 Pricing Tier: Select: Free pricing tier
 Step 4: Review and create the resource, and wait for deployment to complete. Then go to the deployed resource.
-Note: The Computer Vision Image Analysis service can extract a wide variety of visual features from your images. For example, it can determine whether an image contains adult content, nd specific brands or objects, or find human faces.
+Note: The Computer Vision Image Analysis service can extract a wide variety of visual features from your images. For example, it can determine whether an image contains adult content, find specific brands or objects, or find human faces.
 
 Tag visual features
 Identify and tag visual features in an image, from a set of thousands of recognizable objects, living things, scenery, and actions. When the tags are ambiguous or not common knowledge, the API response provides hints to clarify the context of the tag. Tagging isn't limited to the main subject, such as a person in the foreground, but also includes the setting (indoor or outdoor), furniture, tools, plants, animals, accessories, gadgets, and so on.
@@ -1046,7 +1046,7 @@ https://docs.microsoft.com/en-us/learn/modules/analyze-images-computer-vision/3-
 https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/overview-image-analysis
 """
 
-question_1_40 = """
+question_01_40 = """
 # SIMULATION
 Use the following login credentials as needed:
 To enter your username, place your cursor in the Sign in box and click on the username below.
@@ -1073,7 +1073,7 @@ Region: choose the Azure region for your cognitive service. Choose: East US Azur
 Name: choose a name for your cognitive service. Enter: AAA12345678
 Pricing Tier: Select: Free pricing tier
 Step 4: Review and create the resource, and wait for deployment to complete. Then go to the deployed resource.
-Note: The Computer Vision Image Analysis service can extract a wide variety of visual features from your images. For example, it can determine whether an image contains adult content, find specific brands or objects, or nd human faces.
+Note: The Computer Vision Image Analysis service can extract a wide variety of visual features from your images. For example, it can determine whether an image contains adult content, find specific brands or objects, or find human faces.
 
 Tag visual features
 Identify and tag visual features in an image, from a set of thousands of recognizable objects, living things, scenery, and actions. When the tags are ambiguous or not common knowledge, the API response provides hints to clarify the context of the tag. Tagging isn't limited to the main subject, such as a person in the foreground, but also includes the setting (indoor or outdoor), furniture, tools, plants, animals, accessories, gadgets, and so on.
@@ -1084,7 +1084,7 @@ https://docs.microsoft.com/en-us/learn/modules/analyze-images-computer-vision/3-
 https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/overview-image-analysis
 """
 
-question_1_41 = """
+question_01_41 = """
 # SIMULATION
 Use the following login credentials as needed:
 To enter your username, place your cursor in the Sign in box and click on the username below.
@@ -1117,7 +1117,7 @@ Step 3: Save the insights to the C:\Resources\Video\Insights.json folder.
 https://docs.microsoft.com/en-us/azure/azure-video-indexer/use-editor-create-project
 """
 
-question_1_42 = """
+question_01_42 = """
 # SIMULATION
 Use the following login credentials as needed:
 To enter your username, place your cursor in the Sign in box and click on the username below.
@@ -1155,7 +1155,7 @@ Open the configuration file, C:\Resources\Caption\Params.json. and update the co
 https://microsoftlearning.github.io/AI-102-AIEngineer/Instructions/15-computer-vision.html
 """
 
-question_1_43 = """
+question_01_43 = """
 # SIMULATION
 Use the following login credentials as needed:
 To enter your username, place your cursor in the Sign in box and click on the username below.
@@ -1189,7 +1189,7 @@ Integrate with private DNS zone: Select Yes.
 https://docs.microsoft.com/en-us/azure/private-link/tutorial-private-endpoint-webapp-portal
 """
 
-question_1_44 = """
+question_01_44 = """
 # SIMULATION
 Use the following login credentials as needed:
 To enter your username, place your cursor in the Sign in box and click on the username below.
@@ -1217,7 +1217,7 @@ Manually rotate subscription keys
 https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/azure-maps/how-to-manage-authentication.md
 """
 
-question_1_45 = """
+question_01_45 = """
 # QUESTION
 You have an Azure IoT hub that receives sensor data from machinery.
 You need to build an app that will perform the following actions:
@@ -1236,7 +1236,7 @@ D. Anomaly Detector
 D
 """
 
-question_1_46 = """
+question_01_46 = """
 # QUESTION
 You have an app that analyzes images by using the Computer Vision API.
 You need to configure the app to provide an output for users who are vision impaired. The solution must provide the output in complete sentences.
@@ -1250,7 +1250,7 @@ D. describeImageInStreamAsync
 D
 """
 
-question_1_47 = """
+question_01_47 = """
 # DRAG DROP
 You have a Custom Vision service project that performs object detection. The project uses the General domain for classification and contains a trained model.
 You need to export the model for use on a network that is disconnected from the internet.
@@ -1269,7 +1269,7 @@ Retrain the model.
 Export the model.
 """
 
-question_1_48 = """
+question_01_48 = """
 # QUESTION
 You are building an AI solution that will use Sentiment Analysis results from surveys to calculate bonuses for customer service staff.
 You need to ensure that the solution meets the Microsoft responsible AI principles.
@@ -1283,7 +1283,7 @@ D. Publish the raw survey data to a central location and provide the staff with 
 A
 """
 
-question_1_49 = """
+question_01_49 = """
 # QUESTION
 You have an Azure subscription that contains a Language service resource named ta1 and a virtual network named vnet1.
 You need to ensure that only resources in vnet1 can access ta1.
@@ -1297,7 +1297,7 @@ D. a Language service container for ta1
 C
 """
 
-question_1_50 = """
+question_01_50 = """
 # QUESTION
 You are developing a monitoring system that will analyze engine sensor data, such as rotation speed, angle, temperature, and pressure. 
 The system must generate an alert in response to atypical values.
@@ -1311,7 +1311,7 @@ D. Univariate Anomaly Detection
 C
 """
 
-question_1_51 = """
+question_01_51 = """
 # QUESTION
 You have an app named App1 that uses an Azure Cognitive Services model to identify anomalies in a time series data stream.
 You need to run App1 in a location that has limited connectivity. The solution must minimize costs.
@@ -1325,7 +1325,7 @@ D. the Docker Engine
 C
 """
 
-question_1_52 = """
+question_01_52 = """
 # HOTSPOT
 You have an Azure Cognitive Search resource named Search1 that is used by multiple apps.
 You need to secure Search1. The solution must meet the following requirements:
@@ -1342,7 +1342,7 @@ To limit access to queries: ______ (/ Create a private endpoint. / Use Azure rol
 Create a private endpoint., Use key authorization.
 """
 
-question_1_53 = """
+question_01_53 = """
 # QUESTION
 You are building a solution that will detect anomalies in sensor data from the previous 24 hours.
 You need to ensure that the solution scans the entire dataset, at the same time, for anomalies.
@@ -1355,7 +1355,7 @@ C. change points
 A
 """
 
-question_1_54 = """
+question_01_54 = """
 # DRAG DROP
 
 You are building an app that will scan confidential documents and use the Language service to analyze the contents.
@@ -1378,7 +1378,7 @@ Provision an on-premises Kubernetes cluster that is isolated from the internet.
 Run the container and specify an API key and the Endpoint URL of the Cognitive Services resource.
 """
 
-question_1_55 = """
+question_01_55 = """
 # HOTSPOT
 
 You have an Azure subscription that has the following configurations:
@@ -1405,7 +1405,7 @@ https://management.azure.com/______/resourceGroups/OCRProject/providers/______/a
 subscriptions/8d3591aa-96b8-4737-ad09-00f9b1ed35ad, Microsoft.CognitiveServices
 """
 
-question_1_56 = """
+question_01_56 = """
 # QUESTION
 You have an Azure subscription that contains an Anomaly Detector resource.
 You deploy a Docker host server named Server1 to the on-premises network.
@@ -1420,7 +1420,7 @@ D. Mounts
 B
 """
 
-question_1_57 = """
+question_01_57 = """
 # QUESTION
 You are building an app that will use the Speech service.
 You need to ensure that the app can authenticate to the service by using a Microsoft Azure Active Directory (Azure AD), part of Microsoft Entra, token.
@@ -1436,7 +1436,7 @@ E. Create a Conditional Access policy.
 CE
 """
 
-question_1_58 = """
+question_01_58 = """
 # HOTSPOT
 
 You plan to deploy an Azure OpenAI resource by using an Azure Resource Manager (ARM) template.
@@ -1465,7 +1465,7 @@ Answer Area
 "capacity", 100
 """
 
-question_1_59 = """
+question_01_59 = """
 # DRAG DROP
 
 You have an app that manages feedback.
@@ -1486,7 +1486,7 @@ Provision the Language service resource in Azure.
 Run the container and query the prediction endpoint.
 """
 
-question_1_60 = """
+question_01_60 = """
 # HOTSPOT
 
 You have an Azure OpenAI resource named AI1 that hosts three deployments of the GPT 3.5 model. Each deployment is optimized for a unique workload.
@@ -1503,7 +1503,7 @@ Connect to the deployment by using: ______ (An API key / A deployment endpoint /
 A bearer token, A deployment endpoint
 """
 
-question_1_61 = """
+question_01_61 = """
 # QUESTION
 You build a bot by using the Microsoft Bot Framework SDK.
 You start the bot on a local computer.
@@ -1518,7 +1518,7 @@ D. Run Windows Terminal.
 A
 """
 
-question_1_62 = """
+question_01_62 = """
 # QUESTION
 You have an Azure OpenAI model named AI1.
 You are building a web app named App1 by using the Azure OpenAI SDK.
@@ -1533,7 +1533,7 @@ D. the endpoint, key, and model type
 C
 """
 
-question_1_63 = """
+question_01_63 = """
 # QUESTION
 You are building a solution in Azure that will use Azure Cognitive Service for Language to process sensitive customer data.
 You need to ensure that only specific Azure processes can access the Language service. The solution must minimize administrative effort.
@@ -1547,7 +1547,7 @@ D. virtual network rules
 D
 """
 
-question_1_64 = """
+question_01_64 = """
 # QUESTION
 You plan to perform predictive maintenance.
 You collect IoT sensor data from 100 industrial machines for a year. Each machine has 50 different sensors that generate data at one-minute intervals. In total, you have 5,000 time series datasets.
@@ -1562,7 +1562,7 @@ D. Azure AI Anomaly Detector
 D
 """
 
-question_1_65 = """
+question_01_65 = """
 # HOTSPOT
 
 You plan to deploy a containerized version of an Azure Cognitive Services service that will be used for sentiment analysis.
@@ -1594,7 +1594,7 @@ apiKey=xxxxxxxxxxxxxxxxxx
 mcr.microsoft.com/azure-cognitive-services/textanalytics/sentiment, https://contoso.cognitiveservices.azure.com
 """
 
-question_1_66 = """
+question_01_66 = """
 # QUESTION
 You are developing a system that will monitor temperature data from a data stream. The system must generate an alert in response to a typical values. The solution must minimize development effort.
 What should you include in the solution?
@@ -1607,7 +1607,7 @@ D. Univariate Anomaly Detection
 D
 """
 
-question_1_67 = """
+question_01_67 = """
 # QUESTION
 You have a Microsoft OneDrive folder that contains a 20-GB video file named File1.avi.
 You need to index File1.avi by using the Azure Video Indexer website.
@@ -1621,7 +1621,7 @@ D. From OneDrive, create a sharing link for File1.avi, and then copy the link to
 C
 """
 
-question_1_68 = """
+question_01_68 = """
 # QUESTION
 You have an Azure subscription that contains an Azure AI Service resource named CSAccount1 and a virtual network named VNet1.
 CSAaccount1 is connected to VNet1.
@@ -1640,7 +1640,7 @@ E. In CSAccount1, modify the virtual network settings.
 AD
 """
 
-question_1_69 = """
+question_01_69 = """
 # QUESTION
 You are building an internet-based training solution. The solution requires that a user's camera and microphone remain enabled.
 You need to monitor a video stream of the user and detect when the user asks an instructor a question. The solution must minimize development effort.
@@ -1654,7 +1654,7 @@ D. object detection in Azure AI Custom Vision
 A
 """
 
-question_1_70 = """
+question_01_70 = """
 # QUESTION
 You have an Azure DevOps pipeline named Pipeline1 that is used to deploy an app. Pipeline1 includes a step that will create an Azure AI
 services account.
@@ -1669,7 +1669,7 @@ D. az account list
 C
 """
 
-question_1_71 = """
+question_01_71 = """
 # HOTSPOT
 You have 1,000 scanned images of hand-written survey responses. The surveys do NOT have a consistent layout.
 You have an Azure subscription that contains an Azure AI Document Intelligence resource named AIdoc1.
@@ -1686,7 +1686,7 @@ Model type: ______ (Custom neural / Custom template / Identity document (ID))
 An Azure Storage account, Custom neural
 """
 
-question_2_01 = """
+question_02_01 = """
 # HOTSPOT
 
 You are developing an application that will use the Computer Vision client library. The application has the following cod
@@ -1741,7 +1741,7 @@ Images will be read from a stream.
 https://docs.microsoft.com/en-us/java/api/com.microsoft.azure.cognitiveservices.vision.computervision.computervision.analyzeimageinstreamasync
 """
 
-question_2_02 = """
+question_02_02 = """
 # QUESTION
 
 You are developing a method that uses the Computer Vision client library. The method will perform optical character recognition (OCR) in images. The method has the following code.
@@ -1792,7 +1792,7 @@ while ((results.Status == OperationStatusCodes.Running || results.Status == Oper
 https://github.com/Azure-Samples/cognitive-services-quickstart-code/blob/master/dotnet/ComputerVision/ComputerVisionQuickstart.cs
 """
 
-question_2_03 = """
+question_02_03 = """
 # HOTSPOT
 You have a Computer Vision resource named contoso1 that is hosted in the West US Azure region.
 You need to use contoso1 to make a different size of a product photo by using the smart cropping feature.
@@ -1812,7 +1812,7 @@ https://westus.dev.cognitive.microsoft.com/docs/services/computer-vision-v3-2/op
 https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/concept-generating-thumbnails#examples
 """
 
-question_2_04 = """
+question_02_04 = """
 # DRAG DROP
 You are developing a webpage that will use the Azure Video Analyzer for Media (previously Video Indexer) service to display videos of internal company meetings.
 You embed the Player widget and the Cognitive Insights widget into the page.
@@ -1845,7 +1845,7 @@ people,keywords, search, true, en-US
 https://docs.microsoft.com/en-us/azure/azure-video-analyzer/video-analyzer-for-media-docs/video-indexer-embed-widgets
 """
 
-question_2_05 = """
+question_02_05 = """
 # DRAG DROP
 You train a Custom Vision model to identify a company's products by using the Retail domain.
 You plan to deploy the model as part of an app for Android phones.
@@ -1868,7 +1868,7 @@ Export the model.
 https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/export-your-model
 """
 
-question_2_06 = """
+question_02_06 = """
 # HOTSPOT
 You are developing an application to recognize employees' faces by using the Face Recognition API. Images of the faces will be accessible from a URI endpoint.
 The application has the following code.
@@ -1902,7 +1902,7 @@ Yes, No, Yes
 https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/use-persondirectory
 """
 
-question_2_07 = """
+question_02_07 = """
 # DRAG DROP
 
 You have a Custom Vision resource named acvdev in a development environment.
@@ -1930,7 +1930,7 @@ Use the ImportProject endpoint on acvprod.
 https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/copy-move-projects
 """
 
-question_2_08 = """
+question_02_08 = """
 # DRAG DROP
 
 You are developing an application that will recognize faults in components produced on a factory production line. The components are specific to your business.
@@ -1961,7 +1961,7 @@ Train the classier
 https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-build-a-classier
 """
 
-question_2_09 = """
+question_02_09 = """
 # HOTSPOT
 You are building a model that will be used in an iOS app.
 You have images of cats and dogs. Each image contains either a cat or a dog.
@@ -1991,7 +1991,7 @@ General: Optimized for a broad range of image Classification tasks. If none of t
 https://cran.r-project.org/web/packages/AzureVision/vignettes/customvision.html
 """
 
-question_2_10 = """
+question_02_10 = """
 # QUESTION
 You have an Azure Video Analyzer for Media (previously Video Indexer) service that is used to provide a search interface over company videos on your company's website.
 You need to be able to search for videos based on who is present in the video.
@@ -2012,7 +2012,7 @@ Note: Video Indexer supports face detection and celebrity recognition for video 
 https://docs.microsoft.com/en-us/azure/media-services/video-indexer/customize-person-model-with-api
 """
 
-question_2_11 = """
+question_02_11 = """
 # QUESTION 
 You use the Custom Vision service to build a classier.
 After training is complete, you need to evaluate the classier.
@@ -2033,9 +2033,9 @@ Custom Vision provides three metrics regarding the performance of your model: pr
 https://www.tallan.com/blog/2020/05/19/azure-custom-vision/
 """
 
-question_2_12 = """
+question_02_12 = """
 # DRAG DROP
-You are developing a call to the Face API. The call must nd similar faces from an existing list named employeefaces. The employeefaces list contains 60,000 images.
+You are developing a call to the Face API. The call must find similar faces from an existing list named employeefaces. The employeefaces list contains 60,000 images.
 How should you complete the body of the HTTP request? To answer, drag the appropriate values to the correct targets. Each value may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content.
 NOTE: Each correct selection is worth one point.
 
@@ -2065,8 +2065,8 @@ containing persistedFaceIds that will also not expire.
 Incorrect Answers:
 Not "faceListId": Add a face to a specified face list, up to 1,000 faces.
 Box 2: matchFace -
-Find similar has two working modes, "matchPerson" and "matchFace". "matchPerson" is the default mode that it tries to nd faces of the
-same person as possible by using internal same-person thresholds. It is useful to nd a known person's other photos. Note that an empty
+Find similar has two working modes, "matchPerson" and "matchFace". "matchPerson" is the default mode that it tries to find faces of the
+same person as possible by using internal same-person thresholds. It is useful to find a known person's other photos. Note that an empty
 list will be returned if no faces pass the internal thresholds. "matchFace" mode ignores same-person thresholds and returns ranked similar
 faces anyway, even the similarity is low. It can be used in the cases like searching celebrity-looking faces.
 
@@ -2074,10 +2074,10 @@ faces anyway, even the similarity is low. It can be used in the cases like searc
 https://docs.microsoft.com/en-us/rest/api/faceapi/face/findsimilar
 """
 
-question_2_13 = """
+question_02_13 = """
 # DRAG DROP
-You are developing a photo application that will nd photos of a person based on a sample image by using the Face API.
-You need to create a POST request to nd the photos.
+You are developing a photo application that will find photos of a person based on a sample image by using the Face API.
+You need to create a POST request to find the photos.
 How should you complete the request? To answer, drag the appropriate values to the correct targets. Each value may be used once, more than once, or not at all.
 You may need to drag the split bar between panes or scroll to view content.
 NOTE: Each correct selection is worth one point.
@@ -2109,14 +2109,14 @@ Box 1: detect
 Face - Detect With Url: Detect human faces in an image, return face rectangles, and optionally with faceIds, landmarks, and attributes.
 POST {Endpoint}/face/v1.0/detect
 Box 2: matchPerson
-Find similar has two working modes, "matchPerson" and "matchFace". "matchPerson" is the default mode that it tries to nd faces of the same person as possible by using internal same-person thresholds. It is useful to nd a known person's other photos. Note that an empty list will be returned if no faces pass the internal thresholds. "matchFace" mode ignores same-person thresholds and returns ranked similar faces anyway, even the similarity is low. It can be used in the cases like searching celebrity-looking faces.
+Find similar has two working modes, "matchPerson" and "matchFace". "matchPerson" is the default mode that it tries to find faces of the same person as possible by using internal same-person thresholds. It is useful to find a known person's other photos. Note that an empty list will be returned if no faces pass the internal thresholds. "matchFace" mode ignores same-person thresholds and returns ranked similar faces anyway, even the similarity is low. It can be used in the cases like searching celebrity-looking faces.
 
 # Reference:
 https://docs.microsoft.com/en-us/rest/api/faceapi/face/detectwithurl 
 https://docs.microsoft.com/en-us/rest/api/faceapi/face/ndsimilar
 """
 
-question_2_14 = """
+question_02_14 = """
 # HOTSPOT
 You develop a test method to verify the results retrieved from a call to the Computer Vision API. The call is used to analyze the existence of company logos in images. The call returns a collection of brands named brands.
 You have the following code segment.
@@ -2146,7 +2146,7 @@ Box 3: No
 https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/concept-brand-detection
 """
 
-question_2_15 = """
+question_02_15 = """
 # HOTSPOT
 You develop an application that uses the Face API.
 You need to add multiple images to a person group.
@@ -2179,7 +2179,7 @@ using (FileStream fs = File.OpenRead(path))
 https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/how-to-add-faces
 """
 
-question_2_16 = """
+question_02_16 = """
 # QUESTION
 Your company uses an Azure Cognitive Services solution to detect faces in uploaded images. The method to detect the faces uses the following code.
 
@@ -2219,7 +2219,7 @@ The different face detection models are optimized for different tasks. See the f
 https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-mode
 """
 
-question_2_17 = """
+question_02_17 = """
 # QUESTION
 You have the following Python function for creating Azure Cognitive Services resources programmatically. 
 def create_resource(resource_name, kind, account_tier, location) : parameters = CognitiveServicesAccount(sku=Sku(name=account_tier), kind=kind, location=location, properties={}) result = client.accounts.create(resource_group_name, resource_name, parameters)
@@ -2247,7 +2247,7 @@ Identify image types and color schemes in pictures.
 https://docs.microsoft.com/en-us/python/api/overview/azure/cognitive-services?view=azure-python
 """
 
-question_2_18 = """
+question_02_18 = """
 # QUESTION
 You are developing a method that uses the Computer Vision client library. The method will perform optical character recognition (OCR) in images. The method has the following code.
 During testing, you discover that the call to the GetReadResultAsync method occurs before the read operation is complete.
@@ -2263,7 +2263,7 @@ D. Wrap the call to get_read_result within a loop that contains a delay.
 BD
 """
 
-question_2_19 = """
+question_02_19 = """
 # HOTSPOT
 You are building an app that will enable users to upload images. The solution must meet the following requirements:
 * Automatically suggest alt text for the images.
@@ -2301,7 +2301,7 @@ https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/concep
 https://docs.microsoft.com/en-us/legal/cognitive-services/custom-vision/custom-vision-cvs-transparency-note
 """
 
-question_2_20 = """
+question_02_20 = """
 # QUESTION
 You need to build a solution that will use optical character recognition (OCR) to scan sensitive documents by using the Computer Vision API.
 The solution must NOT be deployed to the public cloud.
@@ -2323,9 +2323,9 @@ Not D: This Computer Vision endpoint would be available for the public, unless i
 https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/deploy-computer-vision-on-premises
 """
 
-question_2_21 = """
+question_02_21 = """
 # QUESTION
-You have an Azure Cognitive Search solution and a collection of handwritten letters stored as JPEG les.
+You have an Azure Cognitive Search solution and a collection of handwritten letters stored as JPEG files.
 You plan to index the collection. The solution must ensure that queries can be performed on the contents of the letters.
 You need to create an indexer that has a skillset.
 Which skill should you include?
@@ -2338,7 +2338,7 @@ D. document extraction
 B
 """
 
-question_2_22 = """
+question_02_22 = """
 # HOTSPOT
 
 You have a library that contains thousands of images.
@@ -2355,7 +2355,7 @@ Property: ______ (categories / description / imageType / metadata / objects)
 Computer Vision analyze images, imageType
 """
 
-question_2_23 = """
+question_02_23 = """
 # QUESTION
 You have an app that captures live video of exam candidates.
 You need to use the Face service to validate that the subjects of the videos are real people.
@@ -2369,7 +2369,7 @@ D. Call the face detection API repeatedly and check for changes to the FaceAttri
 A
 """
 
-question_2_24 = """
+question_02_24 = """
 # HOTSPOT
 
 You make an API request and receive the results shown in the following exhibits.
@@ -2455,7 +2455,7 @@ A face that can be used in person enrollment is at position [answer choice] with
 detects, (797, 201)
 """
 
-question_2_25 = """
+question_02_25 = """
 # QUESTION
 You have an Azure subscription that contains an AI enrichment pipeline in Azure Cognitive Search and an Azure Storage account that has 10 GB of scanned documents and images.
 You need to index the documents and images in the storage account. The solution must minimize how long it takes to build the index.
@@ -2469,7 +2469,7 @@ D. Create a text-based indexer by using the REST API.
 A
 """
 
-question_2_26 = """
+question_02_26 = """
 # DRAG DROP
 
 You need to analyze video content to identify any mentions of specific company names.
@@ -2489,7 +2489,7 @@ From Content model customization, select Brands.
 Add the specific company names to the include list.
 """
 
-question_2_27 = """
+question_02_27 = """
 # QUESTION
 
 You have a mobile app that manages printed forms.
@@ -2503,7 +2503,7 @@ C. JSON
 A
 """
 
-question_2_28 = """
+question_02_28 = """
 # QUESTION
 
 You plan to build an app that will generate a list of tags for uploaded images. The app must meet the following requirements:
@@ -2522,7 +2522,7 @@ D. Custom Translator
 B
 """
 
-question_2_29 = """
+question_02_29 = """
 # HOTSPOT
 
 You develop a test method to verify the results retrieved from a call to the Computer Vision API. The call is used to analyze the existence of company logos in images. The call returns a collection of brands named brands.
@@ -2547,7 +2547,7 @@ The code will display coordinates for the bottom-right corner of the rectangle t
 Yes, Yes, No
 """
 
-question_2_30 = """
+question_02_30 = """
 # DRAG DROP
 
 You have a factory that produces cardboard packaging for food products. The factory has intermittent internet connectivity.
@@ -2572,7 +2572,7 @@ Domain: ______
 Object detection, General(compact)
 """
 
-question_2_31 = """
+question_02_31 = """
 # HOTSPOT
 
 You are building a model to detect objects in images.
@@ -2594,9 +2594,9 @@ The value for the number of true positives divided by the total number of true p
 0, 25
 """
 
-question_2_32 = """
+question_02_32 = """
 # QUESTION
-You are building an app that will include one million scanned magazine articles. Each article will be stored as an image le.
+You are building an app that will include one million scanned magazine articles. Each article will be stored as an image file.
 You need to configure the app to extract text from the images. The solution must minimize development effort.
 What should you include in the solution?
 A. Computer Vision Image Analysis
@@ -2608,7 +2608,7 @@ D. Azure Cognitive Service for Language
 A
 """
 
-question_2_33 = """
+question_02_33 = """
 # QUESTION
 You have a 20-GB video file named File1.avi that is stored on a local drive.
 You need to index File1.avi by using the Azure Video Indexer website.
@@ -2622,7 +2622,7 @@ D. Upload File1.avi to the www.youtube.com webpage.
 B
 """
 
-question_2_34 = """
+question_02_34 = """
 # HOTSPOT
 You are building an app that will share user images.
 You need to configure the app to meet the following requirements:
@@ -2637,10 +2637,10 @@ Text extraction: (Azure AI Language / Azure AI Computer Vision / Content Moderat
 Profane language detection: (Azure AI Language / Azure AI Computer Vision / Content Moderator / Azure AI Custom Vision / Azure AI Document Intelligence)
 
 # Correct Answer:
-Azure AI Document Intelligence, Content Moderator
+Azure AI Computer Vision, Content Moderator
 """
 
-question_2_35 = """
+question_02_35 = """
 # QUESTION
 
 You are building an app that will share user images.
@@ -2661,7 +2661,7 @@ E. image classification in Azure AI Custom Vision
 CE
 """
 
-question_2_36 = """
+question_02_36 = """
 # QUESTION
 
 You are building an app that will use the Azure AI Video Indexer service.
@@ -2677,7 +2677,7 @@ D. PDF
 B
 """
 
-question_2_37 = """
+question_02_37 = """
 # DRAG DROP
 
 You have an app that uses Azure AI and a custom trained classier to identify products in images.
@@ -2703,7 +2703,7 @@ Retrain the model.
 Publish the model.
 """
 
-question_2_38 = """
+question_02_38 = """
 # HOTSPOT
 
 You are developing an application that will use the Azure AI Vision client library. The application has the following code.
@@ -2735,7 +2735,7 @@ The code will read an image file from the local file system.
 No, Yes, Yes
 """
 
-question_2_39 = """
+question_02_39 = """
 # QUESTION
 You are developing a method that uses the Azure AI Vision client library. The method will perform optical character recognition (OCR) in images. The method has the following code.
 
@@ -2762,7 +2762,7 @@ D. Wrap the call to get_read_result within a loop that contains a delay.
 BD
 """
 
-question_2_40 = """
+question_02_40 = """
 # HOTSPOT
 You are developing an app that will use the Azure AI Vision API to analyze an image.
 You need configure the request that will be used by the app to identify whether an image is clipart or a line drawing.
@@ -2777,7 +2777,7 @@ ______ (GET / PATCH / POST)
 POST, imageType
 """
 
-question_2_41 = """
+question_02_41 = """
 # HOTSPOT
 
 You have an Azure subscription that contains an Azure AI Video Indexer account.
@@ -2801,7 +2801,7 @@ Answer Area
 "enabled", false
 """
 
-question_2_42 = """
+question_02_42 = """
 # QUESTION
 
 You have a local folder that contains the files shown in the following table.
@@ -2825,7 +2825,7 @@ E. File1, File2, and File4 only
 B
 """
 
-question_3_01 = """
+question_03_01 = """
 # SCENARIO
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
@@ -2854,7 +2854,7 @@ Dene a set of intents that corresponds to actions users want to take in your app
 https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-intent
 """
 
-question_3_02 = """
+question_03_02 = """
 # SCENARIO
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
@@ -2875,7 +2875,7 @@ The model need to be extended and retrained.
 Note: Smart Labeler to generate suggested tags for images. This lets you label a large number of images more quickly when training a Custom Vision model.
 """
 
-question_3_03 = """
+question_03_03 = """
 # SCENARIO
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
@@ -2896,7 +2896,7 @@ A
 The model needs to be extended and retrained.
 """
 
-question_3_04 = """
+question_03_04 = """
 # SCENARIO
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
@@ -2917,7 +2917,7 @@ B
 The model needs to be extended and retrained.
 """
 
-question_3_05 = """
+question_03_05 = """
 # HOTSPOT
 
 You are developing a service that records lectures given in English (United Kingdom).
@@ -2965,7 +2965,7 @@ toLanguages.ForEach(translationCong.AddTargetLanguage); using var recognizer = n
 }
 """
 
-question_3_06 = """
+question_03_06 = """
 # DRAG DROP
 
 You train a Custom Vision model used in a mobile app.
@@ -2990,7 +2990,7 @@ Tag the images manually.
 https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-build-a-classier
 """
 
-question_3_07 = """
+question_03_07 = """
 # QUESTION
 
 You are building a Conversational Language Understanding model for an e-commerce chatbot. Users can speak or type their billing address when prompted by the chatbot.
@@ -3008,7 +3008,7 @@ B
 https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-entity-types
 """
 
-question_3_08 = """
+question_03_08 = """
 # QUESTION
 
 You are building an Azure WebJob that will create knowledge bases from an array of URLs.
@@ -3022,13 +3022,13 @@ C. Create a list of QnADTO objects that represents data from the WebJob.
 D. Create a CreateKbDTO object.
 
 # Correct Answer:
-AC
+BD
 
 # Reference:
 https://docs.microsoft.com/en-us/rest/api/cognitiveservices-qnamaker/qnamaker4.0/knowledgebase/create
 """
 
-question_3_09 = """
+question_03_09 = """
 # HOTSPOT
 You are developing an application that includes language translation.
 The application will translate text retrieved by using a function named getTextToBeTranslated. The text can be in one of many languages. The content of the text must remain within the Americas Azure geography.
@@ -3062,7 +3062,7 @@ var response = await client.PutAsync(uri, content);
 "https://api-nam.cognitive.microsofttranslator.com/translate", var uri = endpoint + "?to=en";
 """
 
-question_3_10 = """
+question_03_10 = """
 # QUESTION
 
 You are building a conversational language understanding model.
@@ -3080,7 +3080,7 @@ C
 https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-how-to-review-endpoint-utterances#log-user-queries-to-enable-active-learning
 """
 
-question_3_11 = """
+question_03_11 = """
 # HOTSPOT
 You run the following command.
 For each of the following statements, select Yes if the statement is true. Otherwise, select No.
@@ -3106,7 +3106,7 @@ http://localhost:5000/swagger : The container provides a full set of documentati
 https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-container-howto
 """
 
-question_3_12 = """
+question_03_12 = """
 # QUESTION
 
 You are building a Language Understanding model for an e-commerce platform.
@@ -3140,13 +3140,13 @@ E: A list entity represents a xed, closed set of related words along with their 
 https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-entity-types
 """
 
-question_3_13 = """
+question_03_13 = """
 # QUESTION
 
 You need to upload speech samples to a Speech Studio project for use in training.
 How should you upload the samples?
-A. Combine the speech samples into a single audio file in the .wma format and upload the le.
-B. Upload a .zip file that contains a collection of audio files in the .wav format and a corresponding text transcript le.
+A. Combine the speech samples into a single audio file in the .wma format and upload the file.
+B. Upload a .zip file that contains a collection of audio files in the .wav format and a corresponding text transcript file.
 C. Upload individual audio files in the FLAC format and manually upload a corresponding transcript in Microsoft Word format.
 D. Upload individual audio files in the .wma format.
 
@@ -3169,7 +3169,7 @@ Maximum archive size    2 GB
 https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/how-to-custom-speech-test-and-train
 """
 
-question_3_14 = """
+question_03_14 = """
 # QUESTION
 
 You are developing a method for an application that uses the Translator API.
@@ -3197,7 +3197,7 @@ We use Latin (Roman alphabet) script.
 https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-translate
 """
 
-question_3_15 = """
+question_03_15 = """
 # QUESTION
 
 You have a chatbot that was built by using the Microsoft Bot Framework.
@@ -3214,13 +3214,13 @@ F. nginx
 # Correct Answer:
 CE
 
-Bot Framework Emulator is a desktop application that allows bot developers to test and debug bots, either locally or remotely. ngrok is a cross-platform application that "allows you to expose a web server running on your local machine to the internet." Essentially, what we'll be doing is using ngrok to forward messages from external channels on the web directly to our local machine to allow debugging, as opposed to the standard messaging endpoint congured in the Azure portal.
+Bot Framework Emulator is a desktop application that allows bot developers to test and debug bots, either locally or remotely. ngrok is a cross-platform application that "allows you to expose a web server running on your local machine to the internet." Essentially, what we'll be doing is using ngrok to forward messages from external channels on the web directly to our local machine to allow debugging, as opposed to the standard messaging endpoint configured in the Azure portal.
 
 # Reference:
 https://docs.microsoft.com/en-us/azure/bot-service/bot-service-debug-emulator
 """
 
-question_3_16 = """
+question_03_16 = """
 # DRAG DROP
 
 You are building a retail chatbot that will use a QnA Maker service.
@@ -3255,7 +3255,7 @@ Note: A knowledge base consists of question and answer (QnA) pairs. Each pair ha
 https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/how-to/edit-knowledge-base
 """
 
-question_3_17 = """
+question_03_17 = """
 # Scenario
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
@@ -3282,7 +3282,7 @@ An intent represents a task or action the user wants to perform. It is a purpose
 https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-intent
 """
 
-question_3_18 = """
+question_03_18 = """
 # Scenario
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
@@ -3310,7 +3310,7 @@ Dene a set of intents that corresponds to actions users want to take in your app
 https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-intent
 """
 
-question_3_19 = """
+question_03_19 = """
 # QUESTION
 
 You are training a Language Understanding model for a user support system.
@@ -3329,7 +3329,7 @@ D
 https://docs.microsoft.com/en-us/azure/cognitive-services/language-service/conversational-language-understanding/concepts/none-intent#adding-examples-to-the-none-intent
 """
 
-question_3_20 = """
+question_03_20 = """
 # DRAG DROP
 You are building a Language Understanding model for purchasing tickets.
 You have the following utterance for an intent named PurchaseAndSendTickets.
@@ -3367,7 +3367,7 @@ https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-reference-pr
 https://docs.microsoft.com/en-us/azure/cognitive-services/luis/reference-entity-machine-learned-entity
 """
 
-question_3_21 = """
+question_03_21 = """
 # QUESTION
 
 You have the following C# method.
@@ -3397,7 +3397,7 @@ Possible location names include: westus, eastus
 https://docs.microsoft.com/en-us/powershell/module/az.cognitiveservices/new-azcognitiveservicesaccoun
 """
 
-question_3_22 = """
+question_03_22 = """
 # QUESTION
 
 You build a Conversational Language Understanding model by using the Language Services portal.
@@ -3437,7 +3437,7 @@ D. location
 A
 """
 
-question_3_23 = """
+question_03_23 = """
 # QUESTION
 
 You are examining the Text Analytics output of an application.
@@ -3466,7 +3466,7 @@ Named Entity Recognition (NER) is one of the features offered by Azure Cognitive
 https://docs.microsoft.com/en-us/azure/cognitive-services/language-service/named-entity-recognition/overview
 """
 
-question_3_24 = """
+question_03_24 = """
 # SIMULATION
 
 You need to configure and publish bot12345678 to support task management. The intent must be named TaskReminder. The LUDown for the intent is in the C:
@@ -3486,7 +3486,7 @@ Step 6: Select Publish from the Composer menu. In the Publish your bots pane, se
 https://docs.microsoft.com/en-us/composer/how-to-publish-bot
 """
 
-question_3_25 = """
+question_03_25 = """
 # QUESTION
 
 You need to configure bot12345678 support the French (FR-FR) language.
@@ -3509,7 +3509,7 @@ Step 9. Select Done.
 https://docs.microsoft.com/en-us/composer/concept-language-understanding https://docs.microsoft.com/en-us/composer/how-to-add-luis
 """
 
-question_3_26 = """
+question_03_26 = """
 # SIMULATION
 
 You need to configure and publish bot12345678 to answer questions by using the frequently asked questions (FAQ) located at 
@@ -3531,7 +3531,7 @@ Instance: bot%@lab.LabInstance.Id-qna-qna%
 https://docs.microsoft.com/en-us/composer/how-to-create-qna-kb https://docs.microsoft.com/en-us/composer/how-to-add-qna-to-bot
 """
 
-question_3_27 = """
+question_03_27 = """
 You need to measure the public perception of your brand on social media by using natural language processing.
 Which Azure service should you use?
 A. Language service
@@ -3550,7 +3550,7 @@ Note: Natural language processing (NLP) has many uses: sentiment analysis, topic
 https://docs.microsoft.com/en-us/azure/cognitive-services/language-service/overview
 """
 
-question_3_28 = """
+question_03_28 = """
 # HOTSPOT
 
 You are developing an application that includes language translation.
@@ -3599,7 +3599,7 @@ https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v
 https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-translate
 """
 
-question_3_29 = """
+question_03_29 = """
 # QUESTION
 
 You have the following data sources:
@@ -3641,7 +3641,7 @@ Azure Files (in preview)
 https://docs.microsoft.com/en-us/azure/search/search-indexer-overview#supported-data-sources
 """
 
-question_3_30 = """
+question_03_30 = """
 # SIMULATION
 
 Use the following login credentials as needed:
@@ -3670,7 +3670,7 @@ https://docs.microsoft.com/en-us/azure/health-bot/language_model_howto
 https://www.codemag.com/article/1809021/Natural-Language-Understanding-with-LUIS
 """
 
-question_3_31 = """
+question_03_31 = """
 # SIMULATION
 
 Use the following login credentials as needed:
@@ -3697,7 +3697,7 @@ Select a version from the list, then select Activate from the toolbar.
 https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-how-to-manage-versions
 """
 
-question_3_32 = """
+question_03_32 = """
 # QUESTION
 
 You have a Language service resource that performs the following:
@@ -3706,7 +3706,7 @@ You have a Language service resource that performs the following:
 • Personally Identifiable Information (PII) identification
 You need to prevent the resource from persisting input data once the data is analyzed.
 
-Which query parameter in the Language service API should you congure?
+Which query parameter in the Language service API should you configure?
 A. model-version
 B. piiCategories
 C. showStats
@@ -3716,7 +3716,7 @@ D. loggingOptOut
 D
 """
 
-question_3_33 = """
+question_03_33 = """
 # QUESTION
 
 You have an Azure Cognitive Services model named Model1 that identifies the intent of text input.
@@ -3733,7 +3733,7 @@ D. Xamarin.Cognitive.Speech
 A
 """
 
-question_3_34 = """
+question_03_34 = """
 # HOTSPOT
 
 You are building content for a video training solution.
@@ -3749,7 +3749,7 @@ Narration: ______ (Language Understanding / Speaker Recognition / Speech-to-text
 The Speech Studio portal, Text-to-speech
 """
 
-question_3_35 = """
+question_03_35 = """
 # HOTSPOT
 
 You are building a call handling system that will receive calls from French-speaking and German-speaking callers. The system must perform the following tasks:
@@ -3766,7 +3766,7 @@ To replay messages: ______ (Speech-to-text only / Speech-to-text and Language / 
 Speech-to-text, Text-to-speech and Translator
 """
 
-question_3_36 = """
+question_03_36 = """
 # QUESTION
 
 You are building a social media extension that will convert text to speech. The solution must meet the following requirements:
@@ -3785,7 +3785,7 @@ D. https://uksouth.voice.speech.microsoft.com/cognitiveservices/v1?deploymentId=
 D
 """
 
-question_3_37 = """
+question_03_37 = """
 # QUESTION
 
 You develop a custom question answering project in Azure Cognitive Service for Language. The project will be used by a chatbot.
@@ -3800,10 +3800,10 @@ D. Enable chit-chat.
 A
 """
 
-question_3_38 = """
+question_03_38 = """
 # HOTSPOT
 
-You are building a solution that students will use to nd references for essays.
+You are building a solution that students will use to find references for essays.
 You use the following code to start building the solution.
 
 using Azure;
@@ -3832,7 +3832,7 @@ The matches attribute returned for each linked entity will provide the location 
 No, Yes, Yes
 """
 
-question_3_39 = """
+question_03_39 = """
 # QUESTION
 
 You train a Conversational Language Understanding model to understand the natural language input of users.
@@ -3848,7 +3848,7 @@ D. From the Azure portal, enable log collection in Log Analytics, and then analy
 AC
 """
 
-question_3_40 = """
+question_03_40 = """
 # DRAG DROP
 
 You develop an app in C# named App1 that performs speech-to-speech translation.
@@ -3872,7 +3872,7 @@ var translationConfig = SpeechTranslationConfig.FromSubscription(SPEECH__SUBSCRI
 speechRecognitionLanguage, speechSynthesisLanguage
 """
 
-question_3_41 = """
+question_03_41 = """
 # QUESTION
 
 You have an Azure subscription that contains an Azure Cognitive Service for Language resource.
@@ -3887,7 +3887,7 @@ D. Properties
 B
 """
 
-question_3_42 = """
+question_03_42 = """
 # DRAG DROP
 
 You are building a transcription service for technical podcasts.
@@ -3912,7 +3912,7 @@ Train the model.
 Deploy the model.
 """
 
-question_3_43 = """
+question_03_43 = """
 You are building a retail kiosk system that will use a custom neural voice.
 You acquire audio samples and consent from the voice talent.
 You need to create a voice talent profile.
@@ -3926,7 +3926,7 @@ D. a five-minute .wav or .mp3 file of the voice talent describing the kiosk syst
 C
 """
 
-question_3_44 = """
+question_03_44 = """
 # DRAG DROP
 
 You have a Language Understanding solution that runs in a Docker container.
@@ -3947,7 +3947,7 @@ From the host computer, move the package file to the Docker input directory.
 From the host computer, run the container and specify the input directory.
 """
 
-question_3_45 = """
+question_03_45 = """
 # HOTSPOT
 
 You are building a text-to-speech app that will use a custom neural voice.
@@ -3968,10 +3968,10 @@ Answer Area
 role, style
 """
 
-question_3_46 = """
+question_03_46 = """
 # HOTSPOT
 
-You have a collection of press releases stored as PDF les.
+You have a collection of press releases stored as PDF files.
 You need to extract text from the files and perform sentiment analysis.
 Which service should you use for each task? To answer, select the appropriate options in the answer area.
 NOTE: Each correct selection is worth one point.
@@ -3984,7 +3984,7 @@ Perform sentiment analysis: ______ (Azure Cognitive Search / Computer Vision / F
 Form Recognizer, Language
 """
 
-question_3_47 = """
+question_03_47 = """
 # QUESTION
 You have a text-based chatbot.
 You need to enable content moderation by using the Text Moderation API of Content Moderator.
@@ -4000,7 +4000,7 @@ E. the racy classification score
 AC
 """
 
-question_3_48 = """
+question_03_48 = """
 # HOTSPOT
 
 You are developing a text processing solution.
@@ -4031,7 +4031,7 @@ The function will output all the key phrases from the input string to the consol
 No, Yes, Yes
 """
 
-question_3_49 = """
+question_03_49 = """
 # HOTSPOT
 
 You are building an Azure web app named App1 that will translate text from English to Spanish.
@@ -4049,7 +4049,7 @@ https://______/______?api-verision=3.0&to=es
 api-nam.cognitive.microsofttranslator.com, translate
 """
 
-question_3_50 = """
+question_03_50 = """
 # DRAG DROP
 
 You have a Docker host named Host1 that contains a container base image.
@@ -4070,7 +4070,7 @@ Retrain the model.
 Run the container.
 """
 
-question_3_51 = """
+question_03_51 = """
 # SCENARIO
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
@@ -4092,7 +4092,7 @@ B. No
 B
 """
 
-question_3_52 = """
+question_03_52 = """
 # DRAG DROP
 
 You have a question answering project in Azure Cognitive Service for Language.
@@ -4113,7 +4113,7 @@ From the new Language service instance, import the project file.
 From the new Language service instance, train and publish the project.
 """
 
-question_3_53 = """
+question_03_53 = """
 # DRAG DROP
 -
 You are building a customer support chatbot.
@@ -4140,7 +4140,7 @@ Identify messages that include credit card numbers: ______
 Custom named entity recognition (NER), Personally Identifiable information (PII) detection
 """
 
-question_3_54 = """
+question_03_54 = """
 # HOTSPOT
 
 You are building an app by using the Speech SDK. The app will translate speech from French to German by using natural language processing.
@@ -4158,7 +4158,7 @@ speech_translation_config.______(AddTargetLanguage / SpeechRecognitionLanguage /
 SpeechRecognitionLanguage, AddTargetLanguage
 """
 
-question_3_55 = """
+question_03_55 = """
 # DRAG DROP
 
 You have a collection of Microsoft Word documents and PowerPoint presentations in German.
@@ -4182,7 +4182,7 @@ Define a document translation specification that has French target.
 Perform an asynchronous translation by using the document translation specification.
 """
 
-question_3_56 = """
+question_03_56 = """
 # QUESTION
 
 You have the following C# function.
@@ -4214,7 +4214,7 @@ lazy dog
 D
 """
 
-question_3_57 = """
+question_03_57 = """
 # QUESTION
 
 You have the following Python method.
@@ -4234,7 +4234,7 @@ D. create_resource("res1", "TextAnalytics", "S0", "eastus")
 D
 """
 
-question_3_58 = """
+question_03_58 = """
 # DRAG DROP
 
 You develop a Python app named App1 that performs speech-to-speech translation.
@@ -4258,7 +4258,7 @@ def translate_speech_to_text():
 speech_recognition_language, add_target_language
 """
 
-question_3_59 = """
+question_03_59 = """
 # HOTSPOT
 
 You are developing a streaming Speech to Text solution that will use the Speech SDK and MP3 encoding.
@@ -4282,7 +4282,7 @@ text = result.text
 AudioStreamFormat, SpeechRecognizer
 """
 
-question_3_60 = """
+question_03_60 = """
 # HOTSPOT
 
 You are building a chatbot.
@@ -4312,7 +4312,7 @@ Headers
 autocorrect, classify, Ocp-Apim-Subscription-Key
 """
 
-question_3_61 = """
+question_03_61 = """
 # QUESTION
 
 You are developing an app that will use the Decision and Language APIs.
@@ -4327,7 +4327,7 @@ D. Content Moderator
 C
 """
 
-question_3_62 = """
+question_03_62 = """
 # QUESTION
 
 You are building a chatbot.
@@ -4342,7 +4342,7 @@ D. key phrase extraction
 C
 """
 
-question_3_63 = """
+question_03_63 = """
 # QUESTION
 
 You have an Azure subscription that contains an Azure App Service app named App1.
@@ -4358,7 +4358,7 @@ D. the endpoint URI and subscription key
 D
 """
 
-question_3_64 = """
+question_03_64 = """
 # QUESTION
 
 You have an Azure subscription that contains a multi-service Azure Cognitive Services Translator resource named Translator1.
@@ -4374,7 +4374,7 @@ D. the subscription key, the subscription region, and the content type
 D
 """
 
-question_3_65 = """
+question_03_65 = """
 # QUESTION
 
 You have a file share that contains 5,000 images of scanned invoices.
@@ -4392,7 +4392,7 @@ D. Azure AI Document Intelligence
 D
 """
 
-question_3_66 = """
+question_03_66 = """
 # HOTSPOT
 
 You are developing a text processing solution.
@@ -4418,7 +4418,7 @@ The function will output all the key phrases from the input string to the consol
 No, Yes, Yes
 """
 
-question_3_67 = """
+question_03_67 = """
 # HOTSPOT
 
 You are developing a text processing solution.
@@ -4447,7 +4447,7 @@ The output will contain the confidence level for key phrases.
 Yes, No, No
 """
 
-question_3_68 = """
+question_03_68 = """
 # HOTSPOT
 
 You are developing a service that records lectures given in English (United Kingdom).
@@ -4477,7 +4477,7 @@ def translate_speech():
 (['fr', 'de', 'es']), TranslationRecognizer(
 """
 
-question_3_69 = """
+question_03_69 = """
 # QUESTION
 
 You are developing an app that will use the text-to-speech capability of the Azure AI Speech service. The app will be used in motor vehicles.
@@ -4492,7 +4492,7 @@ D. the level attribute of the emphasis element
 B
 """
 
-question_3_70 = """
+question_03_70 = """
 # QUESTION
 
 You are designing a content management system.
@@ -4507,7 +4507,7 @@ D. Azure AI Language
 A
 """
 
-question_3_71 = """
+question_03_71 = """
 # HOTSPOT
 
 You are building an app that will answer customer calls about the status of an order. The app will query a database for the order details and provide the customers with a spoken response.
@@ -4523,7 +4523,7 @@ Provide customers with the order details: ______ (SpeechRecognizer / SpeechSynth
 TranslationRecognizer, SpeechSynthesizer
 """
 
-question_3_72 = """
+question_03_72 = """
 # QUESTION
 
 You have an Azure AI service model named Model1 that identifies the intent of text input.
@@ -4539,7 +4539,7 @@ D. azure-cognitiveservices-speech
 D
 """
 
-question_3_73 = """
+question_03_73 = """
 # HOTSPOT
 
 You are building an app that will automatically translate speech from English to French, German, and Spanish by using Azure AI service.
@@ -4563,12 +4563,12 @@ def translate_speech_to_text():
 ['fr', 'de', 'es'], TranslationRecognizer
 """
 
-question_3_74 = """
+question_03_74 = """
 # DRAG DROP
 
 You plan to implement an Azure AI Search resource that will use custom skill based on sentiment analysis.
 You need to create a custom model and configure Azure AI Search use the model.
-Which ve actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.
+Which five actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.
 
 Actions
 Create an endpoint for the model.
@@ -4580,16 +4580,16 @@ Connect the custom skill the endpoint.
 
 # Correct Answer:
 Create an Azure Machine Learning workspace.
-Provision an Azure AI Services resource and obtain the endpoint.
-Connect the custom skill the endpoint.
 Create and train the model in the Azure Machine Learning studio.
+Create an endpoint for the model.
+Connect the custom skill the endpoint.
 Rerun the indexer to enrich the index.
 """
 
-question_3_75 = """
+question_03_75 = """
 # HOTSPOT
 
-You have a collection of press releases stored as PDF les.
+You have a collection of press releases stored as PDF files.
 You need to extract text from the files and perform sentiment analysis.
 Which service should you use for each task? To answer, select the appropriate options in the answer area.
 NOTE: Each correct selection is worth one point.
@@ -4602,7 +4602,7 @@ Perform sentiment analysis:______ (Azure Cognitive Search / Azure AI Computer Vi
 Azure AI Document Intelligence, Azure AI Language
 """
 
-question_3_76 = """
+question_03_76 = """
 # QUESTION
 
 You are building an internet-based training solution. The solution requires that a user's camera and microphone remain enabled.
@@ -4617,7 +4617,7 @@ D. object detection in Azure AI Custom Vision
 A
 """
 
-question_3_77 = """
+question_03_77 = """
 # QUESTION
 
 You are developing an app that will use the Speech and Language APIs.
@@ -4632,7 +4632,7 @@ D. Azure AI Content Safety
 C
 """
 
-question_3_78 = """
+question_03_78 = """
 # HOTSPOT
 
 You are building an app that will automatically translate speech from English to French, German, and Spanish by using Azure AI service.
@@ -4654,7 +4654,7 @@ static async Task TranslateSpeechAsync()
 ["fr", "de", "es"], TranslationRecognizer
 """
 
-question_3_79 = """
+question_03_79 = """
 # QUESTION
 
 You are developing a text processing solution.
@@ -4685,7 +4685,7 @@ D. Our tour of London included visit to Buckingham Palace
 A
 """
 
-question_3_80 = """
+question_03_80 = """
 # QUESTION
 
 You have the following Python function.
@@ -4712,7 +4712,7 @@ D. the quick brown fox jumps over the lazy dog
 C
 """
 
-question_3_81 = """
+question_03_81 = """
 # QUESTION
 
 You have an Azure subscription.
@@ -4727,7 +4727,7 @@ D. EntityLinkingSkill
 C
 """
 
-question_4_01 = """
+question_04_01 = """
 HOTSPOT
 
 You are developing a text processing solution.
@@ -4770,7 +4770,7 @@ Key phrase extraction does not have confidence levels.
 https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-keyword-extraction
 """
 
-question_4_02 = """
+question_04_02 = """
 # QUESTION
 
 You deploy a web app that is used as a management portal for indexing in Azure Cognitive Search. The app is configured to use the primary admin key.
@@ -4797,7 +4797,7 @@ Note: Two admin api-keys, referred to as primary and secondary keys in the porta
 https://docs.microsoft.com/en-us/azure/search/search-security-api-keys#regenerate-admin-keys
 """
 
-question_4_03 = """
+question_04_03 = """
 # QUESTION
 
 You have an existing Azure Cognitive Search service.
@@ -4828,7 +4828,7 @@ Indexing blobs can be a time-consuming process. In cases where you have millions
 https://docs.microsoft.com/en-us/azure/search/search-howto-indexing-azure-blob-storage
 """
 
-question_4_04 = """
+question_04_04 = """
 # QUESTION
 
 You need to implement a table projection to generate a physical expression of an Azure Cognitive Search index.
@@ -4853,7 +4853,7 @@ Each table requires three properties:
 https://docs.microsoft.com/en-us/azure/search/knowledge-store-projection-overview
 """
 
-question_4_05 = """
+question_04_05 = """
 # HOTSPOT
 You are creating an enrichment pipeline that will use Azure Cognitive Search. The knowledge store contains unstructured JSON data and scanned PDF documents that contain text.
 Which projection type should you use for each data type? To answer, select the appropriate options in the answer area.
@@ -4874,7 +4874,7 @@ File projections are similar to object projections and only act on the normalize
 https://docs.microsoft.com/en-us/azure/search/knowledge-store-projection-overview
 """
 
-question_4_06 = """
+question_04_06 = """
 HOTSPOT -
 You are building an Azure Cognitive Search custom skill.
 You have the following custom skill schema definition.
@@ -4914,13 +4914,13 @@ Once you have defined a skillset, you must map the output fields of any skill th
 Box 2: Yes -
 The definition is a custom skill that calls a web API as part of the enrichment process.
 Box 3: No -
-For each organization identified by entity recognition, this skill calls a web API to nd the description of that organization.
+For each organization identified by entity recognition, this skill calls a web API to find the description of that organization.
 
 # Reference:
 https://docs.microsoft.com/en-us/azure/search/cognitive-search-output-field-mapping
 """
 
-question_4_07 = """
+question_04_07 = """
 # QUESTION
 
 You have the following data sources:
@@ -4953,7 +4953,7 @@ Indexers crawl data stores on Azure.
 https://docs.microsoft.com/en-us/azure/search/search-indexer-overview#supported-data-sources
 """
 
-question_4_08 = """
+question_04_08 = """
 # QUESTION
 
 You are developing a solution to generate a word cloud based on the reviews of a company's products.
@@ -4970,7 +4970,7 @@ A
 https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/overview
 """
 
-question_4_09 = """
+question_04_09 = """
 # DRAG DROP
 You have a web app that uses Azure Cognitive Search.
 When reviewing billing for the app, you discover much higher than expected charges. You suspect that the query key is compromised.
@@ -4995,7 +4995,7 @@ Delete the compromised key.
 https://docs.microsoft.com/en-us/azure/search/search-security-api-keys
 """
 
-question_4_10 = """
+question_04_10 = """
 # QUESTION
 
 You are developing an application that will use Azure Cognitive Search for internal documents.
@@ -5021,7 +5021,7 @@ group_id2,...')) filter, where 'group_id1, group_id2,...' are the groups to whic
 https://docs.microsoft.com/en-us/azure/search/search-security-trimming-for-azure-search
 """
 
-question_4_11 = """
+question_04_11 = """
 # QUESTION
 
 You have an Azure Cognitive Search solution and an enrichment pipeline that performs Sentiment Analysis on social media posts.
@@ -5059,7 +5059,7 @@ Not C: files - project image files into Blob storage. A file is an image extract
 Although it is named "files", it shows up in Blob Storage, not file storage.
 """
 
-question_4_12 = """
+question_04_12 = """
 # SIMULATION -
 Use the following login credentials as needed:
 To enter your username, place your cursor in the Sign in box and click on the username below.
@@ -5090,7 +5090,7 @@ Configure Searchable for the fields people, organizations, and locations.
 https://docs.microsoft.com/en-us/azure/search/search-get-started-portal
 """
 
-question_4_13 = """
+question_04_13 = """
 # HOTSPOT
 
 You create a knowledge store for Azure Cognitive Search by using the following JSON.
@@ -5158,7 +5158,7 @@ Normalized images will ______. (not be projected / be projected to Azure Blob st
 two projection groups, be projected to Azure Blob storage
 """
 
-question_4_14 = """
+question_04_14 = """
 # QUESTION
 
 You plan create an index for an Azure Cognitive Search service by using the Azure portal. The Cognitive Search service will connect to an Azure SQL database.
@@ -5175,7 +5175,7 @@ D. Searchable and Retrievable
 D
 """
 
-question_4_15 = """
+question_04_15 = """
 # QUESTION
 
 You have the following data sources:
@@ -5195,7 +5195,7 @@ D. Migrate the data in HR to Azure Blob storage.
 A
 """
 
-question_4_16 = """
+question_04_16 = """
 # HOTSPOT
 
 You plan to provision Azure Cognitive Services resources by using the following method.
@@ -5224,7 +5224,7 @@ The current name for Form Recognizer (as of May 2024) is Document Intelligence.
 https://azure.microsoft.com/en-us/pricing/details/ai-document-intelligence/
 """
 
-question_4_17 = """
+question_04_17 = """
 # HOTSPOT
 
 You have an app named App1 that uses Azure AI Document Intelligence to analyze medical records and provide pharmaceutical dosage recommendations for patients.
@@ -5290,7 +5290,7 @@ The form elements were recognized with greater than 70 percent confidence.
 No, Yes, Yes
 """
 
-question_4_18 = """
+question_04_18 = """
 # HOTSPOT
 
 You have an Azure subscription that contains an Azure AI Document Intelligence resource named DI1.
@@ -5315,7 +5315,7 @@ foreach (DocumentStyle style in result.Styles)
 "prebuilt-document", , 0.75
 """
 
-question_4_19 = """
+question_04_19 = """
 # QUESTION
 
 You have an app named App1 that uses a custom Azure AI Document Intelligence model to recognize contract documents.
@@ -5330,7 +5330,7 @@ D. Lower the accuracy threshold of App1.
 C
 """
 
-question_4_20 = """
+question_04_20 = """
 # HOTSPOT
 
 You have an Azure subscription.
@@ -5362,7 +5362,7 @@ Answer Area
 Microsoft.CognitiveServices, "FormRecognizer",
 """
 
-question_4_21 = """
+question_04_21 = """
 # QUESTION
 
 You are building an app named App1 that will use Azure AI Document Intelligence to extract the following data from scanned documents:
@@ -5384,7 +5384,7 @@ D. general document
 C
 """
 
-question_4_22 = """
+question_04_22 = """
 # QUESTION
 
 You have the following data sources:
@@ -5403,7 +5403,7 @@ D. Migrate the data in Sales to the MongoDB API.
 C
 """
 
-question_4_23 = """
+question_04_23 = """
 # QUESTION
 
 You are building an app that will process scanned expense claims and extract and label the following data:
@@ -5423,7 +5423,7 @@ D. the prebuilt receipt model
 D
 """
 
-question_4_24 = """
+question_04_24 = """
 # HOTSPOT
 
 You are building a language learning solution.
@@ -5442,7 +5442,7 @@ Analyze learning content: ______ (Azure Cognitive Search / Azure AI Custom Visio
 Azure AI Document Intelligence, Immersive Reader
 """
 
-question_4_25 = """
+question_04_25 = """
 # HOTSPOT
 
 You have an Azure subscription.
@@ -5462,7 +5462,7 @@ Supplier invoices: ______ (An Azure AI Document Intelligence custom model / An A
 An Azure AI Document Intelligence custom model,  An Azure AI Document Intelligence pre-built model
 """
 
-question_4_26 = """
+question_04_26 = """
 # QUESTION
 
 You have an Azure AI Search resource named Search1.
@@ -5478,7 +5478,7 @@ D. Azure AI Custom Vision
 C
 """
 
-question_4_27 = """
+question_04_27 = """
 # HOTSPOT
 
 You have an Azure subscription.
@@ -5500,7 +5500,7 @@ Structured and unstructured survey forms:  ______ (Custom neural / Custom templa
 Custom template, Prebuilt contract, Custom neural
 """
 
-question_4_28 = """
+question_04_28 = """
 # QUESTION
 
 You have an Azure subscription that contains an Azure AI Document Intelligence resource named AIdoc1 in the S0 tier.
@@ -5525,7 +5525,7 @@ E. File1 and File2 only
 E
 """
 
-question_4_29 = """
+question_04_29 = """
 # QUESTION
 
 You have an Azure subscription that contains an Azure AI Document Intelligence resource named DI1. DI1 uses the Standard S0 pricing tier.
@@ -5547,7 +5547,7 @@ E. File1.pdf, File2.jpg, and File3.tiff
 B
 """
 
-question_4_30 = """
+question_04_30 = """
 HOTSPOT
 
 You have an Azure subscription that contains an Azure AI Document Intelligence resource named DI1.
@@ -5574,7 +5574,7 @@ for style in result.styles:
 "prebuilt-document", , 0.75
 """
 
-question_4_31 = """
+question_04_31 = """
 # DRAG DROP
 
 You have an Azure subscription that contains a storage account named sa1 and an Azure AI Document Intelligence resource named DI1.
@@ -5596,7 +5596,7 @@ Apply labels to the sample documents.
 Train and test the model.
 """
 
-question_4_32 = """
+question_04_32 = """
 # DRAG DROP
 
 You have an Azure subscription that contains an Azure AI Document Intelligence resource named DI1 and a storage account named sa1. The
@@ -5623,7 +5623,7 @@ Call the Build model REST API function.
 Call the Get model REST API function.
 """
 
-question_4_33 = """
+question_04_33 = """
 # QUESTION
 
 You have an Azure subscription that contains an Azure AI Document Intelligence resource named AIdoc1.
@@ -5639,7 +5639,7 @@ D. Implement the contract model.
 A
 """
 
-question_5_01 = """
+question_05_01 = """
 # QUESTION
 
 You build a bot by using the Microsoft Bot Framework SDK and the Azure Bot Service.
@@ -5660,12 +5660,12 @@ CE
 https://github.com/MicrosoftDocs/bot-docs/blob/live/articles/bot-service-quickstart-registration.md
 """
 
-question_5_02 = """
+question_05_02 = """
 # HOTSPOT
 You are building a chatbot by using the Microsoft Bot Framework Composer.
 You have the dialog design shown in the following exhibit.
 
-See: question_5_2.png
+See: question_05_2.png
 
 For each of the following statements, select Yes if the statement is true. Otherwise, select No.
 NOTE: Each correct selection is worth one point.
@@ -5690,7 +5690,7 @@ https://docs.microsoft.com/en-us/composer/concept-language-generation
 https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/coalescefunction
 """
 
-question_5_03 = """
+question_05_03 = """
 # QUESTION
 
 You are building a multilingual chatbot.
@@ -5715,7 +5715,7 @@ https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos
 https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-language-detection
 """
 
-question_5_04 = """
+question_05_04 = """
 # DRAG DROP
 You plan to build a chatbot to support task tracking.
 You create a Language Understanding service named lu1.
@@ -5751,13 +5751,13 @@ In order to receive a LUIS prediction in a chat bot or other client application,
 https://docs.microsoft.com/en-us/azure/cognitive-services/luis/tutorial-intents-only
 """
 
-question_5_05 = """
+question_05_05 = """
 # QUESTION 
 You are building a bot on a local computer by using the Microsoft Bot Framework. The bot will use an existing Language Understanding model.
 You need to translate the Language Understanding model locally by using the Bot Framework CLI.
 What should you do first?
 A. From the Language Understanding portal, clone the model.
-B. Export the model as an .lu le.
+B. Export the model as an .lu file.
 C. Create a new Speech service.
 D. Create a new Language Understanding service.
 
@@ -5775,7 +5775,7 @@ List of .lu files under a specific path.
 https://github.com/microsoft/botframework-cli/blob/main/packages/luis/docs/translate-command.md
 """
 
-question_5_06 = """
+question_05_06 = """
 # DRAG DROP
 
 You are using a Language Understanding service to handle natural language input from the users of a web-base d customer agent.
@@ -5815,12 +5815,12 @@ https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-how-to-revie
 https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-prebuilt-model
 """
 
-question_5_07 = """
+question_05_07 = """
 # QUESTION
 
 You build a conversational bot named bot1.
 You need to configure the bot to use a QnA Maker application.
-From the Azure Portal, where can you nd the information required by bot1 to connect to the QnA Maker application?
+From the Azure Portal, where can you find the information required by bot1 to connect to the QnA Maker application?
 A. Access control (IAM)
 B. Properties
 C. Keys and Endpoint
@@ -5832,7 +5832,7 @@ C
 Obtain values to connect your bot to the knowledge base
 1. In the QnA Maker site, select your knowledge base.
 2. With your knowledge base open, select the SETTINGS tab. Record the value shown for service name. This value is useful for finding your knowledge base of interest when using the QnA Maker portal interface. It's not used to connect your bot app to this knowledge base.
-3. Scroll down to nd Deployment details and record the following values from the Postman sample HTTP request:
+3. Scroll down to find Deployment details and record the following values from the Postman sample HTTP request:
 4. POST /knowledgebases/<knowledge-base-id>/generateAnswer
 5. Host: <your-host-url>
 6. Authorization: EndpointKey <your-endpoint-key>
@@ -5841,7 +5841,7 @@ Obtain values to connect your bot to the knowledge base
 https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-qna
 """
 
-question_5_08 = """
+question_05_08 = """
 # HOTSPOT
 You are building a chatbot for a Microsoft Teams channel by using the Microsoft Bot Framework SDK. The chatbot will use the following code.
 
@@ -5874,7 +5874,7 @@ Box 3: No -
 https://docs.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.activityhandler.onmembersaddedasync?view=botbuilder-dotnet-stable
 """
 
-question_5_09 = """
+question_05_09 = """
 # HOTSPOT
 You are reviewing the design of a chatbot. The chatbot includes a language generation file that contains the following fragment.
 # Greet(user)
@@ -5904,7 +5904,7 @@ Box 3: Yes -
 https://docs.microsoft.com/en-us/composer/how-to-ask-for-user-input
 """
 
-question_5_10 = """
+question_05_10 = """
 # HOTSPOT
 You are building a chatbot by using the Microsoft Bot Framework SDK.
 You use an object named UserProle to store user prole information and an object named ConversationData to store information related to a conversation.
@@ -5933,11 +5933,11 @@ Before you exit the turn handler, you use the state management objects' SaveChan
 https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-v4-state
 """
 
-question_5_11 = """
+question_05_11 = """
 # HOTSPOT
 You are building a chatbot that will provide information to users as shown in the following exhibit.
 
-see: question_5_11.png
+see: question_05_11.png
 
 Use the drop-down menus to select the answer choice that completes each statement based on the information presented in the graphic.
 NOTE: Each correct selection is worth one point.
@@ -5960,7 +5960,7 @@ Box 2: an image -
 https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-reference
 """
 
-question_5_12 = """
+question_05_12 = """
 # HOTSPOT
 You are building a bot and that will use Language Understanding.
 You have a LUDown file that contains the following content.
@@ -6006,7 +6006,7 @@ an intent, an utterance
 https://github.com/solliancenet/tech-immersion-data-ai/blob/master/ai-exp1/README.md
 """
 
-question_5_13 = """
+question_05_13 = """
 # HOTSPOT
 You are designing a conversation ow to be used in a chatbot.
 You need to test the conversation ow by using the Microsoft Bot Framework Emulator.
@@ -6038,12 +6038,12 @@ Typing, carousel, Adaptivecard
 https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp
 """
 
-question_5_14 = """
+question_05_14 = """
 # QUESTION
 
 You are building a chatbot by using the Microsoft Bot Framework Composer as shown in the exhibit. (Click the Exhibit tab.)
 
-see: question_5_11.png
+see: question_05_11.png
 
 The chatbot contains a dialog named GetUserDetails. GetUserDetails contains a TextInput control that prompts users for their name.
 The user input will be stored in a property named name.
@@ -6068,7 +6068,7 @@ C: The turn scope associates properties with the current turn. Properties in the
 https://docs.microsoft.com/en-us/composer/concept-memory?tabs=v2x
 """
 
-question_5_15 = """
+question_05_15 = """
 # DRAG DROP
 You have a chatbot that uses a QnA Maker application.
 You enable active learning for the knowledge base used by the QnA Maker application.
@@ -6106,7 +6106,7 @@ When 5 or more similar queries are clustered, every 30 minutes, QnA Maker sugges
 https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/how-to/improve-knowledge-base
 """
 
-question_5_16 = """
+question_05_16 = """
 # QUESTION
 
 You need to enable speech capabilities for a chatbot.
@@ -6130,7 +6130,7 @@ You'll need to make a small configuration change so that your bot can communicat
 https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/tutorial-voice-enable-your-bot-speech-sdk
 """
 
-question_5_17 = """
+question_05_17 = """
 # QUESTION
 You use the Microsoft Bot Framework Composer to build a chatbot that enables users to purchase items.
 You need to ensure that the users can cancel in-progress transactions. The solution must minimize development effort.
@@ -6166,7 +6166,7 @@ return null;
 https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-handle-user-interrupt
 """
 
-question_5_18 = """
+question_05_18 = """
 # SIMULATION
 You need to create and publish a bot that will use Language Understanding and QnA Maker. The bot must be named bot12345678. You must publish the bot by using the User1-12345678@abc.com account.
 NOTE: Complete this task rst. It may take several minutes to complete the required deployment steps. While this is taking place, you can complete tasks 2-6 in this lab during the deployment.
@@ -6188,7 +6188,7 @@ The bot will be created.
 https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/quickstarts/create-publish-knowledge-base
 """
 
-question_5_19 = """
+question_05_19 = """
 # SIMULATION
 You need to create a QnA Maker service named QNA12345678 in the East US Azure region. QNA12345678 must contain a knowledge base
 that uses the questions and answers available at https://support.microsoft.com/en-us/help/12435/windows-10-upgrade-faq.
@@ -6222,7 +6222,7 @@ https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/how-to/set-up
 https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/quickstarts/create-publish-knowledge-base
 """
 
-question_5_20 = """
+question_05_20 = """
 # SIMULATION
 You need to add a question pair to the published knowledge base used by a QnA Maker service named QNA12345678. The question must be:
 `What will be the next version of Windows?`
@@ -6241,7 +6241,7 @@ Step 4: Select Save and train to see predictions including the new QnA pair.
 https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/how-to/edit-knowledge-base
 """
 
-question_5_21 = """
+question_05_21 = """
 # SIMULATION
 Use the following login credentials as needed:
 To enter your username, place your cursor in the Sign in box and click on the username below.
@@ -6276,7 +6276,7 @@ Create the Azure Bot resource, which will allow you to register your bot with th
 https://docs.microsoft.com/en-us/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&tabs=userassigned
 """
 
-question_5_22 = """
+question_05_22 = """
 # QUESTION
 
 You are designing a conversational interface for an app that will be used to make vacation requests. The interface must gather the following data:
@@ -6294,7 +6294,7 @@ D. component
 C
 """
 
-question_5_23 = """
+question_05_23 = """
 # DRAG DROP
 
 You build a bot by using the Microsoft Bot Framework SDK.
@@ -6315,7 +6315,7 @@ Open the Bot Framework Emulator.
 Connect to the bot endpoint.
 """
 
-question_5_24 = """
+question_05_24 = """
 # QUESTION
 
 You create a bot by using the Microsoft Bot Framework SDK.
@@ -6330,7 +6330,7 @@ D. a skill
 B
 """
 
-question_5_25 = """
+question_05_25 = """
 # HOTSPOT
 
 You build a bot named app1 by using the Microsoft Bot Framework.
@@ -6346,7 +6346,7 @@ az ______(bot / functionapp / vm / webapp) deployment source ______ (config / co
 webapp, config-zip
 """
 
-question_5_26 = """
+question_05_26 = """
 # SCENARIO
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
@@ -6365,7 +6365,7 @@ B. No
 B
 """
 
-question_5_27 = """
+question_05_27 = """
 # SCENARIO
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
@@ -6384,7 +6384,7 @@ B. No
 B
 """
 
-question_5_28 = """
+question_05_28 = """
 # SCENARIO
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
@@ -6403,7 +6403,7 @@ B. No
 A
 """
 
-question_5_29 = """
+question_05_29 = """
 # QUESTION
 
 You create ve bots by using Microsoft Bot Framework Composer.
@@ -6414,14 +6414,14 @@ A. Create a composer extension.
 B. Change the Recognizer/Dispatch type.
 C. Create an Orchestrator model.
 D. Enable WebSockets.
-E. Create a custom recognizer JSON le.
+E. Create a custom recognizer JSON file.
 F. Install the Orchestrator package.
 
 # Correct Answer:
 BCF
 """
 
-question_5_30 = """
+question_05_30 = """
 # SCENARIO
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
@@ -6443,7 +6443,7 @@ B. No
 A
 """
 
-question_5_31 = """
+question_05_31 = """
 # SCENARIO
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
@@ -6465,7 +6465,7 @@ B. No
 B
 """
 
-question_5_32 = """
+question_05_32 = """
 # SCENARIO
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
@@ -6487,11 +6487,11 @@ B. No
 B
 """
 
-question_5_33 = """
+question_05_33 = """
 # QUESTION
 
 You have a Conversational Language Understanding model.
-You export the model as a JSON le. The following is a sample of the file.
+You export the model as a JSON file. The following is a sample of the file.
 
 {
   "text": "average amount of rain by month in Chicago last year",
@@ -6528,7 +6528,7 @@ D. average
 B
 """
 
-question_5_34 = """
+question_05_34 = """
 # QUESTION
 
 You are building a chatbot by using Microsoft Bot Framework Composer.
@@ -6545,7 +6545,7 @@ E. a dialog
 DE
 """
 
-question_5_35 = """
+question_05_35 = """
 # QUESTION
 
 You are building a chatbot.
@@ -6560,7 +6560,7 @@ D. adaptive
 C
 """
 
-question_5_36 = """
+question_05_36 = """
 # QUESTION
 
 You have a chatbot that was built by using Microsoft Bot Framework and deployed to Azure.
@@ -6574,7 +6574,7 @@ C. Direct Line Speech
 C
 """
 
-question_5_37 = """
+question_05_37 = """
 # QUESTION
 
 You are building a bot by using Microsoft Bot Framework.
@@ -6589,7 +6589,7 @@ D. Deploy the bot to Azure and register the bot with a Microsoft Teams channel.
 B
 """
 
-question_5_38 = """
+question_05_38 = """
 # SCENARIO
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
@@ -6608,7 +6608,7 @@ B. No
 B
 """
 
-question_5_39 = """
+question_05_39 = """
 # HOTSPOT
 
 You are building a chatbot.
@@ -6624,7 +6624,7 @@ Category: ______ (1 / 2 / 3)
 Classification, 1
 """
 
-question_5_40 = """
+question_05_40 = """
 # QUESTION
 
 You are building a chatbot for a travel agent. The bot will ask users for a destination and must repeat the question until a valid input is received, or the user closes the conversation.
@@ -6638,7 +6638,7 @@ D. QnA Maker
 A
 """
 
-question_5_41 = """
+question_05_41 = """
 # QUESTION
 
 You are building a chatbot.
@@ -6653,7 +6653,7 @@ D. ComponentDialog
 A
 """
 
-question_5_42 = """
+question_05_42 = """
 # HOTSPOT
 
 You have a chatbot.
@@ -6674,7 +6674,7 @@ if now_seconds != last_access and (now_seconds - last_access >= self.expire_afte
 send_activity(, clear_state
 """
 
-question_5_43 = """
+question_05_43 = """
 # QUESTION
 
 You develop a Conversational Language Understanding model by using Language Studio.
@@ -6690,7 +6690,7 @@ D. Add examples to the custom intents.
 C
 """
 
-question_5_44 = """
+question_05_44 = """
 # QUESTION
 
 You have a Speech resource and a bot that was built by using the Microsoft Bot Framework Composer.
@@ -6708,12 +6708,12 @@ F. Remove the setSpeak configuration.
 ABE
 """
 
-question_5_45 = """
+question_05_45 = """
 # DRAG DROP
 
 You are building a bot.
 You need to test the bot in the Bot Framework Emulator. The solution must ensure that you can debug the bot interactively.
-Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and rrange them in the correct order.
+Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and range them in the correct order.
 
 Actions
 Run the bot app on a local host.
@@ -6728,12 +6728,12 @@ In the code for the bot, send a trace activity.
 Run the bot app on a local host.
 """
 
-question_5_46 = """
+question_05_46 = """
 #HOTSPOT
 
 You have a bot that was built by using the Microsoft Bot Framework composer as shown in the following exhibit.
 
-See: question_5_46.png
+See: question_05_46.png
 
 Use the drop-down menus to select the answer choice that completes each statement based on the information presented in the graphic.
 NOTE: Each correct selection is worth one point.
@@ -6748,7 +6748,7 @@ The GetWeather dialog uses a ______ trigger.
 identify New York as a city entity, Language Understanding intent recognized
 """
 
-question_5_47 = """
+question_05_47 = """
 # QUESTION
 
 You are building a flight booking bot by using the Microsoft Bot Framework SDK.
@@ -6763,7 +6763,7 @@ D. action
 A
 """
 
-question_5_48 = """
+question_05_48 = """
 # HOTSPOT
 
 You have a chatbot.
@@ -6771,7 +6771,7 @@ You need to test the bot by using the Bot Framework Emulator. The solution must 
 Which three settings should you configure? To answer, select the appropriate settings in the answer area.
 NOTE: Each correct selection is worth one point.
 
-See: question_5_48.png
+See: question_05_48.png
 
 # Correct Answer:
 Enter the local path to ngrok.
@@ -6779,7 +6779,7 @@ Enable Run ngrok when the Emulator starts up.
 Enable Use version 1.0 authentication tokens.
 """
 
-question_5_49 = """
+question_05_49 = """
 # HOTSPOT
 You are building a chatbot by using the Microsoft Bot Framework SDK.
 You use an object named UserProle to store user prole information and an object named ConversationData to store information related to a conversation.
@@ -6802,7 +6802,7 @@ The UserProfile and ConversationData objects will persist when the Bot Framework
 Yes, Yes, No
 """
 
-question_5_50 = """
+question_05_50 = """
 # QUESTION
 
 You build a bot.
@@ -6818,7 +6818,7 @@ D. only an Azure Machine Learning workspace and an app registration in Microsoft
 A
 """
 
-question_5_51 = """
+question_05_51 = """
 # QUESTION
 
 You are building a chatbot by using the Microsoft Bot Framework SDK. The bot will be used to accept food orders from customers and allow the customers to customize each food item.
@@ -6835,7 +6835,7 @@ E. input
 CD
 """
 
-question_5_52 = """
+question_05_52 = """
 # SCENARIO
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
@@ -6857,7 +6857,7 @@ B. No
 B
 """
 
-question_6_01 = """
+question_06_01 = """
 # DRAG DROP
 
 You have a monitoring solution that uses the Azure AI Anomaly Detector service.
@@ -6880,7 +6880,7 @@ From Server1, run the docker run command.
 Query the prediction endpoint on Server1.
 """
 
-question_7_01 = """
+question_07_01 = """
 # QUESTION
 
 You have an Azure subscription. The subscription contains an Azure OpenAI resource that hosts a GPT-4 model named Model1 and an app named App1. App1 uses Model1.
@@ -6895,7 +6895,7 @@ D. the Temperature parameter
 C
 """
 
-question_7_02 = """
+question_07_02 = """
 # QUESTION
 
 You have an Azure subscription. The subscription contains an Azure OpenAI resource that hosts a GPT-3.5 Turbo model named Model1.
@@ -6911,7 +6911,7 @@ D. priming
 A
 """
 
-question_7_03 = """
+question_07_03 = """
 # HOTSPOT
 
 You build a chatbot by using Azure OpenAI Studio.
@@ -6919,13 +6919,13 @@ You need to ensure that the responses are more deterministic and less creative.
 Which two parameters should you configure? To answer, select the appropriate parameters in the answer area.
 NOTE: Each correct answer is worth one point.
 
-See: question_7_3.png
+See: question_07_3.png
 
 # Correct Answer:
 Temperature, Top P
 """
 
-question_7_04 = """
+question_07_04 = """
 # QUESTION
 
 You are building a chatbot for a travel agent. The chatbot will use the Azure OpenAI GPT 3.5 model and will be used to make travel reservations.
@@ -6940,7 +6940,7 @@ D. Modify the system message used by the model to specify that the answers must 
 A
 """
 
-question_7_05 = """
+question_07_05 = """
 # QUESTION
 
 You build a chatbot that uses the Azure OpenAI GPT 3.5 model.
@@ -6957,7 +6957,7 @@ E. Train a custom large language model (LLM).
 AD
 """
 
-question_7_06 = """
+question_07_06 = """
 # HOTSPOT
 
 You have an Azure subscription that contains an Azure OpenAI resource named AI1.
@@ -6981,7 +6981,7 @@ new ChatCompletionsOptions()
 ChatRole.User, Temperature
 """
 
-question_7_07 = """
+question_07_07 = """
 # DRAG DROP
 
 You have an Azure subscription that contains an Azure OpenAI resource named AI1.
@@ -7002,7 +7002,7 @@ Apply the Marketing Writing Assistant system message template.
 Deploy the solution to a new web app.
 """
 
-question_7_08 = """
+question_07_08 = """
 # HOTSPOT
 
 You have an Azure subscription that contains an Azure OpenAI resource named AI1.
@@ -7025,7 +7025,7 @@ response = openai.ChatCompletion.create(
 ""
 """
 
-question_7_09 = """
+question_07_09 = """
 # HOTSPOT
 
 You have an Azure subscription that contains an Azure OpenAI resource.
@@ -7070,7 +7070,7 @@ The prompt_tokens value will be included in the calculation of the Max response 
 No, No, No
 """
 
-question_7_10 = """
+question_07_10 = """
 # HOTSPOT
 
 You have an Azure subscription that contains an Azure OpenAI resource named AI1.
@@ -7093,7 +7093,7 @@ print ______((response.choices[0].text) / (response.Id) / (response.text))
 openai.CHatCompletion.create, (response.choices[0].text
 """
 
-question_7_11 = """
+question_07_11 = """
 # HOTSPOT
 
 You have an Azure subscription that contains an Azure OpenAI resource named AI1.
@@ -7113,7 +7113,7 @@ Console.WriteLine ______ ((response.Value.Choices[0].Text); / (response.Value.Id
 GetCompletions, (response.Value.Choices[0].Text);
 """
 
-question_7_12 = """
+question_07_12 = """
 # HOTSPOT
 
 You have an Azure subscription.
@@ -7136,7 +7136,7 @@ ______(--api-properties / --assign-identity / --encryption) '{
 OpenAI, --encryption
 """
 
-question_7_13 = """
+question_07_13 = """
 # HOTSPOT
 
 You have a chatbot that uses Azure OpenAI to generate responses.
@@ -7167,7 +7167,7 @@ var options = new ______ (ChatCompletionsOptions() / CompletionsOptions() / Stre
 ChatCompletionsOptions(), AzureCognitiveSearchChatExtensionConfiguration
 """
 
-question_7_14 = """
+question_07_14 = """
 # HOTSPOT
 
 You have an Azure subscription that is linked to a Microsoft Entra tenant. The subscription ID is x1xx11x1-x111-xxxx-xxxx-x1111xxx11x1 and
@@ -7197,7 +7197,7 @@ foreach（float item in returnValue.Value.Data[0].Embedding）
 1111a111a11a111aaa11a1a1a11a11aa, embeddings1
 """
 
-question_7_15 = """
+question_07_15 = """
 # HOTSPOT
 
 In Azure OpenAI Studio, you are prototyping a chatbot by using Chat playground.
@@ -7207,13 +7207,13 @@ You need to configure the chatbot to meet the following requirements:
 Which two parameters should you modify? To answer, select the appropriate parameters in the answer area.
 NOTE: Each correct answer is worth one point.
 
-See: question_7_15.png
+See: question_07_15.png
 
 # Correct Answer:
 Temperature, Frequency penalty
 """
 
-question_7_16 = """
+question_07_16 = """
 # QUESTION 
 
 You have an Azure subscription.
@@ -7230,7 +7230,7 @@ D. DALL-E
 C
 """
 
-question_7_17 = """
+question_07_17 = """
 # QUESTION 
 
 You have an Azure OpenAI model.
@@ -7246,7 +7246,7 @@ D. TSV
 C
 """
 
-question_7_18 = """
+question_07_18 = """
 # QUESTION
 
 You have a custom Azure OpenAI model.
@@ -7272,7 +7272,7 @@ G. File1.tsv, File2.xml, File3.pdf and File4.xslx
 A
 """
 
-question_7_19 = """
+question_07_19 = """
 # QUESTION
 
 You have an Azure subscription that contains an Azure OpenAI resource named OpenAI1 and a user named User1.
@@ -7287,10 +7287,10 @@ D. Contributor
 A
 """
 
-question_7_20 = """
+question_07_20 = """
 # QUESTION
 
-You have an Azure subscription and 10,000 ASCII les.
+You have an Azure subscription and 10,000 ASCII files.
 You need to identify files that contain specic phrases. The solution must use cosine similarity.
 Which Azure OpenAI model should you use?
 A. text-embedding-ada-002
@@ -7302,7 +7302,7 @@ D. GPT-4-32k
 A
 """
 
-question_7_21 = """
+question_07_21 = """
 # QUESTION
 
 You have an Azure subscription that contains an Azure OpenAI resource named AI1 and a user named User1.
@@ -7321,7 +7321,7 @@ D. Cognitive Services OpenAI Contributor
 A
 """
 
-question_7_22 = """
+question_07_22 = """
 # HOTSPOT
 
 You have a chatbot that uses Azure OpenAI to generate responses.
@@ -7347,7 +7347,7 @@ Completion = openai.______ (ChatCompletion / Completion / Embedding).create(
 ChatCompletion, AzureCognitiveSearch
 """
 
-question_7_23 = """
+question_07_23 = """
 # HOTSPOT
 
 You are building an app that will provide users with definitions of common AI terms.
@@ -7380,11 +7380,11 @@ Changing "You are a helpful assistant." to "You must answer only within the cont
 No, Yes, Yes
 """
 
-question_8_01 = """
+question_08_01 = """
 # QUESTION
 
 You have an Azure subscription that contains an Azure OpenAI resource named AI1.
-You build a chatbot that uses AI1 to provide generative answers to specic questions.
+You build a chatbot that uses AI1 to provide generative answers to specific questions.
 You need to ensure that the chatbot checks all input and output for objectionable content.
 Which type of resource should you create rst?
 A. Microsoft Defender Threat Intelligence (Defender TI)
@@ -7396,7 +7396,7 @@ D. Azure Machine Leaning
 B
 """
 
-question_8_02 = """
+question_08_02 = """
 # QUESTION
 
 You have an Azure subscription that contains an Azure AI Content Safety resource named CS1.
@@ -7423,7 +7423,7 @@ D. 100
 C
 """
 
-question_8_03 = """
+question_08_03 = """
 # QUESTION
 
 You have an Azure subscription.
@@ -7441,7 +7441,7 @@ E. Azure AI Custom Vision
 CE
 """
 
-question_8_04 = """
+question_08_04 = """
 # HOTSPOT
 
 You have an Azure subscription that contains an Azure AI Content Safety resource named CS1.
@@ -7467,7 +7467,7 @@ curl --location --request POST ' 'https://cs1.cognitiveservices.azure.com/______
 contentsafety/, textanalyze
 """
 
-question_8_05 = """
+question_08_05 = """
 # SCENARIO
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
@@ -7486,7 +7486,7 @@ B. No
 B
 """
 
-question_8_06 = """
+question_08_06 = """
 # SCENARIO
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
@@ -7505,7 +7505,7 @@ B. No
 A
 """
 
-question_8_07 = """
+question_08_07 = """
 # SCENARIO
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
@@ -7524,7 +7524,7 @@ B. No
 B
 """
 
-question_8_08 = """
+question_08_08 = """
 # SCENARIO
 
 Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
@@ -7543,7 +7543,7 @@ B. No
 B
 """
 
-question_8_09 = """
+question_08_09 = """
 # HOTSPOT
 
 You have an Azure subscription that contains an Azure AI Content Safety resource.
@@ -7565,7 +7565,7 @@ public static void Analyze(AnalyzeImageOptions request)
 ContentSafetyClient, client.AnalyzeImage(request)
 """
 
-question_8_10 = """
+question_08_10 = """
 # QUESTION
 
 You have an Azure subscription that contains an Azure AI Content Safety resource named CS1.
@@ -7581,7 +7581,7 @@ D. a blocklist
 D
 """
 
-question_8_11 = """
+question_08_11 = """
 # HOTSPOT
 
 You have an Azure subscription that contains an Azure AI Content Safety resource named CS1.
@@ -7600,7 +7600,7 @@ response = client.AnalyzeText(request);
 ContentSafetyClient, ContentSafetyClient
 """
 
-question_8_12 = """
+question_08_12 = """
 # QUESTION
 
 You have an Azure subscription that contains an Azure OpenAI resource named AI1.
@@ -7616,8 +7616,9 @@ D. Protected material text detection
 B
 """
 
-question_9_01 = """
-Introductory Info
+question_09_01 = """
+# Introductory Info
+
 Case study -
 This is a case study. Case studies are not timed separately. You can use as much exam time as you would like to complete each case.
 However, there may be additional case studies and sections on this exam. You must manage your time to ensure that you are able to
@@ -7627,6 +7628,7 @@ contain exhibits and other resources that provide more information about the sce
 independent of the other questions in this case study.
 At the end of this case study, a review screen will appear. This screen allows you to review your answers and to make changes before you
 move to the next section of the exam. After you begin a new section, you cannot return to this section.
+
 To start the case study -
 To display the rst question in this case study, click the Next button. Use the buttons in the left pane to explore the content of the case study
 before you answer the questions. Clicking these buttons displays information such as business requirements, existing environment, and
@@ -7639,8 +7641,13 @@ You are working with a solutions architect to design and implement the features 
 microservices and a serverless environment built on Azure.
 Wide World Importers has a customer base that includes English, Spanish, and Portuguese speakers.
 Existing Environment -
+
 Applications -
 Wide World Importers has an App Service plan that contains the web apps shown in the following table.
+Name    Description
+Product Management    An app used by employees to create and manage products. The app and the expected inputs from the employees are in English.
+Inventory Tracking    An app used by employees to manage inventory when dispatching orders, receiving refunds, and receiving consignments from suppliers.
+
 Azure Resources -
 You have the following resources:
 An Azure Active Directory (Azure AD) tenant
@@ -7649,8 +7656,7 @@ An Azure Active Directory (Azure AD) tenant
 - Senior managers belong to a group named LeadershipTeam.
 An Azure Functions resource
 - A function app posts to Azure Event Grid when stock levels of a product change between OK, Low Stock, and Out of Stock. The function app
-uses the
-Azure Cosmos DB change feed.
+uses the Azure Cosmos DB change feed.
 An Azure Cosmos DB account
 - The account uses the Core (SQL) API.
 - The account stores data for the Product Management app and the Inventory Tracking app.
@@ -7658,47 +7664,2590 @@ An Azure Storage account
 - The account contains blob containers for assets related to products.
 - The assets include images, videos, and PDFs.
 An Azure Cognitive Services resource named wwics
-An Azure Video Analyzer for Media (previously Video Indexer) resource named wwivi
+An Azure Video Analyzer for Media (previously Video Indexer) resource named wwics.
+
 Requirements -
+
 Business Goals -
 Wide World Importers wants to leverage AI technologies to differentiate itself from its competitors.
+
 Planned Changes -
 Wide World Importers plans to start the following projects:
 A product creation project: Help employees create accessible and multilingual product entries, while expediting product entry creation.
 A smart e-commerce project: Implement an Azure Cognitive Search solution to display products for customers to browse.
 A shopping on-the-go project: Build a chatbot that can be integrated into smart speakers to support customers.
+
 Business Requirements -
-Wide World Importers identies the following business requirements for all the projects:
+Wide World Importers identifies the following business requirements for all the projects:
 Provide a multilingual customer experience that supports English, Spanish, and Portuguese.
 Whenever possible, scale based on transaction volumes to ensure consistent performance.
 Minimize costs.
 Governance and Security Requirements
-Wide World Importers identies the following governance and security requirements:
+Wide World Importers identifies the following governance and security requirements:
 Data storage and processing must occur in datacenters located in the United States.
 Azure Cognitive Services must be inaccessible directly from the internet.
+
 Accessibility Requirements -
-Wide World Importers identies the following accessibility requirements:
+Wide World Importers identifies the following accessibility requirements:
 All images must have relevant alt text.
 All videos must have transcripts that are associated to the video and included in product descriptions.
 Product descriptions, transcripts, and alt text must be available in English, Spanish, and Portuguese.
+
 Product Creation Requirements -
-Wide World Importers identies the following requirements for improving the Product Management app:
+Wide World Importers identifies the following requirements for improving the Product Management app:
 Minimize how long it takes for employees to create products and add assets.
 Remove the need for manual translations.
+
 Smart E-Commerce Requirements -
-Wide World Importers identies the following requirements for the smart e-commerce project:
+Wide World Importers identifies the following requirements for the smart e-commerce project:
 Ensure that the Cognitive Search solution meets a Service Level Agreement (SLA) of 99.9% availability for searches and index writes.
 Provide users with the ability to search insight gained from the images, manuals, and videos associated with the products.
 Support autocompletion and suggestion based on all product name variants.
 Store all raw insight data that was generated, so the data can be processed later.
 Update the stock level eld in the product index immediately upon changes.
 Update the product index hourly.
+
 Shopping On-the-Go Requirements -
-Wide World Importers identies the following requirements for the shopping on-the-go chatbot:
+Wide World Importers identifies the following requirements for the shopping on-the-go chatbot:
 Answer common questions.
 Support interactions in English, Spanish, and Portuguese.
 Replace an existing FAQ process so that all Q&A is managed from a central location.
 Provide all employees with the ability to edit Q&As. Only senior managers must be able to publish updates.
 Support purchases by providing information about relevant products to customers. Product displays must include images and warnings when
 stock levels are low or out of stock.
+
+Product JSON Sample
+You have the following JSON sample for a product.
+
+{
+    "sku": "b1",
+    "name": {
+        "en": "Bicycle",
+        "es": "Bicicleta",
+        "pt": "Bicicleta"
+    },
+    "stocklevel": "Out of Stock",
+    "description": {
+        "en": "Bicycle",
+        "es": "Bicicleta",
+        "pt": "Bicicleta"
+    },
+    "image": {
+        "uri" : "https://upload.wordlwideimporters.org/bicycle.jog",
+        "alttext": {
+            "en": "Bicycle",
+            "es": "Bicicleta",
+            "pt": "Bicicleta"
+        }
+    },
+    "createUtc": "2020-02-14T06:08:391",
+    "language": "en"
+}
+
+Question
+DRAG DROP -
+You are developing the smart e-commerce project.
+You need to design the skillset to include the contents of PDFs in searches.
+How should you complete the skillset design diagram? To answer, drag the appropriate services to the correct stages. Each service may be
+used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content.
+NOTE: Each correct selection is worth one point.
+Select and Place:
+
+Services
+Azure Blob storage
+Custom Vision API
+Azure Files
+Conversational Language Understanding API
+Translator API
+Computer Vision API
+Azure Cosmos DB
+
+Answer Area
+Source     Cracking    Preparation  Destination
+______  ->  ______  ->  ______  ->  ______
+
+# Correct Answer:
+Azure Blob storage, Computer Vision API, Translator API, Azure Files
+
+Box 1: Azure Blob storage -
+At the start of the pipeline, you have unstructured text or non-text content (such as images, scanned documents, or JPEG files). Data must
+exist in an Azure data storage service that can be accessed by an indexer.
+Box 2: Computer Vision API -
+Scenario: Provide users with the ability to search insight gained from the images, manuals, and videos associated with the products.
+The Computer Vision Read API is Azure's latest OCR technology (learn what's new) that extracts printed text (in several languages),
+handwritten text (English only), digits, and currency symbols from images and multi-page PDF documents.
+Box 3: Translator API -
+Scenario: Product descriptions, transcripts, and alt text must be available in English, Spanish, and Portuguese.
+Box 4: Azure Files -
+Scenario: Store all raw insight data that was generated, so the data can be processed later.
+Incorrect Answers:
+The custom vision API from Microsoft Azure learns to recognize specific content in imagery and becomes smarter with training and time.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/search/cognitive-search-concept-intro 
+https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/overview-ocr
+"""
+
+question_10_01 = """
+# Introductory Info
+
+Case study -
+This is a case study. Case studies are not timed separately. You can use as much exam time as you would like to complete each case.
+However, there may be additional case studies and sections on this exam. You must manage your time to ensure that you are able to
+complete all questions included on this exam in the time provided.
+To answer the questions included in a case study, you will need to reference information that is provided in the case study. Case studies might
+contain exhibits and other resources that provide more information about the scenario that is described in the case study. Each question is
+independent of the other questions in this case study.
+At the end of this case study, a review screen will appear. This screen allows you to review your answers and to make changes before you
+move to the next section of the exam. After you begin a new section, you cannot return to this section.
+
+To start the case study -
+To display the rst question in this case study, click the Next button. Use the buttons in the left pane to explore the content of the case study
+before you answer the questions. Clicking these buttons displays information such as business requirements, existing environment, and
+problem statements. If the case study has an All Information tab, note that the information displayed is identical to the information displayed
+on the subsequent tabs. When you are ready to answer a question, click the Question button to return to the question.
+
+Overview -
+
+General Overview -
+Contoso, Ltd. is an international accounting company that has oces in France, Portugal, and the United Kingdom.
+Contoso has a professional services department that contains the roles shown in the following table.
+
+Name    Position    Office
+Accountant    Manager    United Kingdom, France, Portugal
+Accountant    Consultant    United Kingdom, France, Portugal
+Customer Service    Manager    United Kingdom
+Customer Service    Consultant    United Kingdom
+Bookkeeoper    Manager    United Kingdom, France, Portugal
+Bookkeeoper    Consultant    United Kingdom, France, Portugal
+
+Existing environment -
+
+Infrastructure -
+Contoso has the following subscriptions:
+Azure
+Microsoft 365
+Microsoft Dynamics 365
+Azure Active (Azure AD) Directory
+Contoso has Azure Active Directory groups for securing role-based access. The company uses the following group naming conventions:
+[Country]-[Level]-[Role]
+[Level]-[Role]
+
+Intellectual Property -
+Contoso has the intellectual property shown in the following table.
+
+Content    Format    Language    Content store    Domain
+Weekly webinars    video    English    Azure Blob storage    Vid.contoso.com
+Blogs    Text    English, French, Portuguese    WordPress    Pt-blog.contoso.com BLog.contoso.com Fr-blog.contoso.com
+Wikis    Text    English, French, Portuguese    Azure Cosmos DB    Internal.contoso.com.wiki
+Monthly conference recordings    Video    English    SharePoint Online    Contoso.sharepoint.com
+Frequently asked questions (FAQs)    Text    English    SharePoint Online    Contoso.sharepoint.com
+
+Text-based content is provided only in one language and is not translated.
+
+Requirements -
+
+Planned Projects -
+Contoso plans to develop the following:
+A document processing workflow to extract information automatically from PDFs and images of nancial documents
+A customer-support chatbot that will answer questions by using FAQs
+A searchable knowledgebase of all the intellectual property
+
+Technical Requirements -
+Contoso identifies the following technical requirements:
+All content must be approved before being published.
+All planned projects must support English, French, and Portuguese.
+All content must be secured by using role-based access control (RBAC).
+RBAC role assignments must use the principle of least privilege.
+RBAC roles must be assigned only to Azure Active Directory groups.
+AI solution responses must have a confidence score that is equal to or greater than 70 percent.
+When the response confidence score of an AI response is lower than 70 percent, the response must be improved by human input.
+Chatbot Requirements -
+Contoso identifies the following requirements for the chatbot:
+Provide customers with answers to the FAQs.
+Ensure that the customers can chat to a customer service agent.
+Ensure that the members of a group named Management-Accountants can approve the FAQs.
+Ensure that the members of a group named Consultant-Accountants can create and amend the FAQs.
+Ensure that the members of a group named the Agent-CustomerServices can browse the FAQs.
+Ensure that access to the customer service agents is managed by using Omnichannel for Customer Service.
+When the response confidence score is low, ensure that the chatbot can provide other response options to the customers.
+Document Processing Requirements
+Contoso identifies the following requirements for document processing:
+The document processing solution must be able to process standardized financial documents that have the following characteristics:
+- Contain fewer than 20 pages.
+- Be formatted as PDF or JPEG files.
+- Have a distinct standard for each oce.
+The document processing solution must be able to extract tables and text from the financial documents.
+The document processing solution must be able to extract information from receipt images.
+Members of a group named Management-Bookkeeper must dene how to extract tables from the financial documents.
+Members of a group named Consultant-Bookkeeper must be able to process the financial documents.
+Knowledgebase Requirements -
+Contoso identifies the following requirements for the knowledgebase:
+Supports searches for equivalent terms
+Can transcribe jargon with high accuracy
+Can search content in different formats, including video
+Provides relevant links to external resources for further research
+
+Question
+
+HOTSPOT -
+You build a QnA Maker resource to meet the chatbot requirements.
+Which RBAC role should you assign to each group? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Hot Area:
+Management-Accountants ______ (Owner / Contributor / Cognitive Services User / Cognitive Services QnA Maker Read / Cognitive Services QnA Maker Editor)
+Consultant-Accountants ______ (Owner / Contributor / Cognitive Services User / Cognitive Services QnA Maker Read / Cognitive Services QnA Maker Editor)
+Agent-CustomerServices ______ (Owner / Contributor / Cognitive Services User / Cognitive Services QnA Maker Read / Cognitive Services QnA Maker Editor)
+
+# Correct Answer:
+Cognitive Services User, Cognitive Services QnA Maker Editor, Cognitive Services QnA Maker Read
+
+Box 1: Cognitive Service User -
+Ensure that the members of a group named Management-Accountants can approve the FAQs.
+Approve=publish.
+Cognitive Service User (read/write/publish): API permissions: All access to Cognitive Services resource except for ability to:
+1. Add new members to roles.
+2. Create new resources.
+Box 2: Cognitive Services QnA Maker Editor
+Ensure that the members of a group named Consultant-Accountants can create and amend the FAQs.
+QnA Maker Editor: API permissions:
+1. Create KB API
+2. Update KB API
+3. Replace KB API
+4. Replace Alterations
+5. "Train API" [in new service model v5]
+Box 3: Cognitive Services QnA Maker Read
+Ensure that the members of a group named the Agent-CustomerServices can browse the FAQs.
+QnA Maker Read: API Permissions:
+1. Download KB API
+2. List KBs for user API
+3. Get Knowledge base details
+4. Download Alterations
+Generate Answer -
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/concepts/role-based-access-control
+"""
+
+question_11_01 = """
+# Introductory Info
+
+Case study -
+This is a case study. Case studies are not timed separately. You can use as much exam time as you would like to complete each case.
+However, there may be additional case studies and sections on this exam. You must manage your time to ensure that you are able to
+complete all questions included on this exam in the time provided.
+To answer the questions included in a case study, you will need to reference information that is provided in the case study. Case studies might
+contain exhibits and other resources that provide more information about the scenario that is described in the case study. Each question is
+independent of the other questions in this case study.
+At the end of this case study, a review screen will appear. This screen allows you to review your answers and to make changes before you
+move to the next section of the exam. After you begin a new section, you cannot return to this section.
+
+To start the case study -
+To display the rst question in this case study, click the Next button. Use the buttons in the left pane to explore the content of the case study
+before you answer the questions. Clicking these buttons displays information such as business requirements, existing environment, and
+problem statements. If the case study has an All Information tab, note that the information displayed is identical to the information displayed
+on the subsequent tabs. When you are ready to answer a question, click the Question button to return to the question.
+
+Overview -
+A company named Wide World Importers is developing an e-commerce platform.
+You are working with a solutions architect to design and implement the features of the e-commerce platform. The platform will use
+microservices and a serverless environment built on Azure.
+Wide World Importers has a customer base that includes English, Spanish, and Portuguese speakers.
+Existing Environment -
+
+Applications -
+Wide World Importers has an App Service plan that contains the web apps shown in the following table.
+Name    Description
+Product Management    An app used by employees to create and manage products. The app and the expected inputs from the employees are in English.
+Inventory Tracking    An app used by employees to manage inventory when dispatching orders, receiving refunds, and receiving consignments from suppliers.
+
+Azure Resources -
+You have the following resources:
+An Azure Active Directory (Azure AD) tenant
+- The tenant supports internal authentication.
+- All employees belong to a group named AllUsers.
+- Senior managers belong to a group named LeadershipTeam.
+An Azure Functions resource
+- A function app posts to Azure Event Grid when stock levels of a product change between OK, Low Stock, and Out of Stock. The function app
+uses the Azure Cosmos DB change feed.
+An Azure Cosmos DB account
+- The account uses the Core (SQL) API.
+- The account stores data for the Product Management app and the Inventory Tracking app.
+An Azure Storage account
+- The account contains blob containers for assets related to products.
+- The assets include images, videos, and PDFs.
+An Azure Cognitive Services resource named wwics
+An Azure Video Analyzer for Media (previously Video Indexer) resource named wwics.
+
+Requirements -
+
+Business Goals -
+Wide World Importers wants to leverage AI technologies to differentiate itself from its competitors.
+
+Planned Changes -
+Wide World Importers plans to start the following projects:
+A product creation project: Help employees create accessible and multilingual product entries, while expediting product entry creation.
+A smart e-commerce project: Implement an Azure Cognitive Search solution to display products for customers to browse.
+A shopping on-the-go project: Build a chatbot that can be integrated into smart speakers to support customers.
+
+Business Requirements -
+Wide World Importers identifies the following business requirements for all the projects:
+Provide a multilingual customer experience that supports English, Spanish, and Portuguese.
+Whenever possible, scale based on transaction volumes to ensure consistent performance.
+Minimize costs.
+Governance and Security Requirements
+Wide World Importers identifies the following governance and security requirements:
+Data storage and processing must occur in datacenters located in the United States.
+Azure Cognitive Services must be inaccessible directly from the internet.
+
+Accessibility Requirements -
+Wide World Importers identifies the following accessibility requirements:
+All images must have relevant alt text.
+All videos must have transcripts that are associated to the video and included in product descriptions.
+Product descriptions, transcripts, and alt text must be available in English, Spanish, and Portuguese.
+
+Product Creation Requirements -
+Wide World Importers identifies the following requirements for improving the Product Management app:
+Minimize how long it takes for employees to create products and add assets.
+Remove the need for manual translations.
+
+Smart E-Commerce Requirements -
+Wide World Importers identifies the following requirements for the smart e-commerce project:
+Ensure that the Cognitive Search solution meets a Service Level Agreement (SLA) of 99.9% availability for searches and index writes.
+Provide users with the ability to search insight gained from the images, manuals, and videos associated with the products.
+Support autocompletion and suggestion based on all product name variants.
+Store all raw insight data that was generated, so the data can be processed later.
+Update the stock level eld in the product index immediately upon changes.
+Update the product index hourly.
+
+Shopping On-the-Go Requirements -
+Wide World Importers identifies the following requirements for the shopping on-the-go chatbot:
+Answer common questions.
+Support interactions in English, Spanish, and Portuguese.
+Replace an existing FAQ process so that all Q&A is managed from a central location.
+Provide all employees with the ability to edit Q&As. Only senior managers must be able to publish updates.
+Support purchases by providing information about relevant products to customers. Product displays must include images and warnings when
+stock levels are low or out of stock.
+
+Product JSON Sample
+You have the following JSON sample for a product.
+
+{
+    "sku": "b1",
+    "name": {
+        "en": "Bicycle",
+        "es": "Bicicleta",
+        "pt": "Bicicleta"
+    },
+    "stocklevel": "Out of Stock",
+    "description": {
+        "en": "Bicycle",
+        "es": "Bicicleta",
+        "pt": "Bicicleta"
+    },
+    "image": {
+        "uri" : "https://upload.wordlwideimporters.org/bicycle.jog",
+        "alttext": {
+            "en": "Bicycle",
+            "es": "Bicicleta",
+            "pt": "Bicicleta"
+        }
+    },
+    "createUtc": "2020-02-14T06:08:391",
+    "language": "en"
+}
+
+Question
+DRAG DROP -
+
+You are planning the product creation project.
+You need to recommend a process for analyzing videos.
+Which four actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.
+Select and Place:
+
+Actions
+Index the video by using the Azure Video Analyzer for Media (previously Video Indexer) API.
+Upload the video to blob storage.
+Analyze the video by using the Computer Vision API.
+Extract the transcript from from Microsoft Stream.
+Send the transcript to the Language Understanding API as an utterance.
+Extract the transcript from the Azure Video Analyzer for Media (previously Video Indexer) API.
+Translate the transcript by using the Translator API.
+Upload the video to file storage.
+
+# Correct Answer:
+Upload the video to file storage.
+Index the video by using the Azure Video Analyzer for Media (previously Video Indexer) API.
+Extract the transcript from the Azure Video Analyzer for Media (previously Video Indexer) API.
+Translate the transcript by using the Translator API.
+
+Scenario: All videos must have transcripts that are associated to the video and included in product descriptions.
+Product descriptions, transcripts, and alt text must be available in English, Spanish, and Portuguese.
+Step 1: Upload the video to blob storage
+Given a video or audio le, the le is rst dropped into a Blob Storage. T
+Step 2: Index the video by using the Video Indexer API.
+When a video is indexed, Video Indexer produces the JSON content that contains details of the specied video insights. The insights
+include: transcripts, OCRs, faces, topics, blocks, etc.
+Step 3: Extract the transcript from the Video Indexer API.
+Step 4: Translate the transcript by using the Translator API.
+
+# Reference:
+https://azure.microsoft.com/en-us/blog/get-video-insights-in-even-more-languages/ 
+https://docs.microsoft.com/en-us/azure/media-services/video-indexer/video-indexer-output-json-v2
+"""
+
+question_11_02 = """
+# Introductory Info
+
+Case study -
+This is a case study. Case studies are not timed separately. You can use as much exam time as you would like to complete each case.
+However, there may be additional case studies and sections on this exam. You must manage your time to ensure that you are able to
+complete all questions included on this exam in the time provided.
+To answer the questions included in a case study, you will need to reference information that is provided in the case study. Case studies might
+contain exhibits and other resources that provide more information about the scenario that is described in the case study. Each question is
+independent of the other questions in this case study.
+At the end of this case study, a review screen will appear. This screen allows you to review your answers and to make changes before you
+move to the next section of the exam. After you begin a new section, you cannot return to this section.
+
+To start the case study -
+To display the rst question in this case study, click the Next button. Use the buttons in the left pane to explore the content of the case study
+before you answer the questions. Clicking these buttons displays information such as business requirements, existing environment, and
+problem statements. If the case study has an All Information tab, note that the information displayed is identical to the information displayed
+on the subsequent tabs. When you are ready to answer a question, click the Question button to return to the question.
+
+Overview -
+A company named Wide World Importers is developing an e-commerce platform.
+You are working with a solutions architect to design and implement the features of the e-commerce platform. The platform will use
+microservices and a serverless environment built on Azure.
+Wide World Importers has a customer base that includes English, Spanish, and Portuguese speakers.
+Existing Environment -
+
+Applications -
+Wide World Importers has an App Service plan that contains the web apps shown in the following table.
+Name    Description
+Product Management    An app used by employees to create and manage products. The app and the expected inputs from the employees are in English.
+Inventory Tracking    An app used by employees to manage inventory when dispatching orders, receiving refunds, and receiving consignments from suppliers.
+
+Azure Resources -
+You have the following resources:
+An Azure Active Directory (Azure AD) tenant
+- The tenant supports internal authentication.
+- All employees belong to a group named AllUsers.
+- Senior managers belong to a group named LeadershipTeam.
+An Azure Functions resource
+- A function app posts to Azure Event Grid when stock levels of a product change between OK, Low Stock, and Out of Stock. The function app
+uses the Azure Cosmos DB change feed.
+An Azure Cosmos DB account
+- The account uses the Core (SQL) API.
+- The account stores data for the Product Management app and the Inventory Tracking app.
+An Azure Storage account
+- The account contains blob containers for assets related to products.
+- The assets include images, videos, and PDFs.
+An Azure Cognitive Services resource named wwics
+An Azure Video Analyzer for Media (previously Video Indexer) resource named wwics.
+
+Requirements -
+
+Business Goals -
+Wide World Importers wants to leverage AI technologies to differentiate itself from its competitors.
+
+Planned Changes -
+Wide World Importers plans to start the following projects:
+A product creation project: Help employees create accessible and multilingual product entries, while expediting product entry creation.
+A smart e-commerce project: Implement an Azure Cognitive Search solution to display products for customers to browse.
+A shopping on-the-go project: Build a chatbot that can be integrated into smart speakers to support customers.
+
+Business Requirements -
+Wide World Importers identifies the following business requirements for all the projects:
+Provide a multilingual customer experience that supports English, Spanish, and Portuguese.
+Whenever possible, scale based on transaction volumes to ensure consistent performance.
+Minimize costs.
+Governance and Security Requirements
+Wide World Importers identifies the following governance and security requirements:
+Data storage and processing must occur in datacenters located in the United States.
+Azure Cognitive Services must be inaccessible directly from the internet.
+
+Accessibility Requirements -
+Wide World Importers identifies the following accessibility requirements:
+All images must have relevant alt text.
+All videos must have transcripts that are associated to the video and included in product descriptions.
+Product descriptions, transcripts, and alt text must be available in English, Spanish, and Portuguese.
+
+Product Creation Requirements -
+Wide World Importers identifies the following requirements for improving the Product Management app:
+Minimize how long it takes for employees to create products and add assets.
+Remove the need for manual translations.
+
+Smart E-Commerce Requirements -
+Wide World Importers identifies the following requirements for the smart e-commerce project:
+Ensure that the Cognitive Search solution meets a Service Level Agreement (SLA) of 99.9% availability for searches and index writes.
+Provide users with the ability to search insight gained from the images, manuals, and videos associated with the products.
+Support autocompletion and suggestion based on all product name variants.
+Store all raw insight data that was generated, so the data can be processed later.
+Update the stock level eld in the product index immediately upon changes.
+Update the product index hourly.
+
+Shopping On-the-Go Requirements -
+Wide World Importers identifies the following requirements for the shopping on-the-go chatbot:
+Answer common questions.
+Support interactions in English, Spanish, and Portuguese.
+Replace an existing FAQ process so that all Q&A is managed from a central location.
+Provide all employees with the ability to edit Q&As. Only senior managers must be able to publish updates.
+Support purchases by providing information about relevant products to customers. Product displays must include images and warnings when
+stock levels are low or out of stock.
+
+Product JSON Sample
+You have the following JSON sample for a product.
+
+{
+    "sku": "b1",
+    "name": {
+        "en": "Bicycle",
+        "es": "Bicicleta",
+        "pt": "Bicicleta"
+    },
+    "stocklevel": "Out of Stock",
+    "description": {
+        "en": "Bicycle",
+        "es": "Bicicleta",
+        "pt": "Bicicleta"
+    },
+    "image": {
+        "uri" : "https://upload.wordlwideimporters.org/bicycle.jog",
+        "alttext": {
+            "en": "Bicycle",
+            "es": "Bicicleta",
+            "pt": "Bicicleta"
+        }
+    },
+    "createUtc": "2020-02-14T06:08:391",
+    "language": "en"
+}
+
+Question
+HOTSPOT -
+You need to develop code to upload images for the product creation project. The solution must meet the accessibility requirements.
+How should you complete the code? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+Hot Area:
+
+public static async Task<string> SuggestAltText(ComputerVisionClient client, ______ (Dictionary / stream / string) image
+{
+    List<VisualFeatureTypes?> features = new List<VisualFeatureTypes?>()
+    {
+        ______ (VisualFeatureTypes.Description / VisualFeatureTypes.ImageType / VisualFeatureTypes.Objects / VisualFeatureTypes.Tags)
+    };
+    ImageAnalysis results = await client.AnalyzeImageAsync(image, features);
+    ______ (var c = results.Brands.DetectedBrands[0]
+            var c = results.Description.Captions[0]
+            var c = results.Metadata[0]
+            var c = results.Objects[0])
+    if(c.Confidence>0.5) return(c.Text)
+}
+
+# Correct Answer:
+string, VisualFeatureTypes.Description, var c = results.Description.Captions[0]
+
+# Reference:
+https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/blob/master/documentation-samples/quickstarts/ComputerVision/Program.cs
+"""
+
+question_12_01 = """
+# Introductory Info
+
+Case study -
+This is a case study. Case studies are not timed separately. You can use as much exam time as you would like to complete each case.
+However, there may be additional case studies and sections on this exam. You must manage your time to ensure that you are able to
+complete all questions included on this exam in the time provided.
+To answer the questions included in a case study, you will need to reference information that is provided in the case study. Case studies might
+contain exhibits and other resources that provide more information about the scenario that is described in the case study. Each question is
+independent of the other questions in this case study.
+At the end of this case study, a review screen will appear. This screen allows you to review your answers and to make changes before you
+move to the next section of the exam. After you begin a new section, you cannot return to this section.
+
+To start the case study -
+To display the rst question in this case study, click the Next button. Use the buttons in the left pane to explore the content of the case study
+before you answer the questions. Clicking these buttons displays information such as business requirements, existing environment, and
+problem statements. If the case study has an All Information tab, note that the information displayed is identical to the information displayed
+on the subsequent tabs. When you are ready to answer a question, click the Question button to return to the question.
+
+Overview -
+
+General Overview -
+Contoso, Ltd. is an international accounting company that has oces in France, Portugal, and the United Kingdom.
+Contoso has a professional services department that contains the roles shown in the following table.
+
+Name    Position    Office
+Accountant    Manager    United Kingdom, France, Portugal
+Accountant    Consultant    United Kingdom, France, Portugal
+Customer Service    Manager    United Kingdom
+Customer Service    Consultant    United Kingdom
+Bookkeeoper    Manager    United Kingdom, France, Portugal
+Bookkeeoper    Consultant    United Kingdom, France, Portugal
+
+Existing environment -
+
+Infrastructure -
+Contoso has the following subscriptions:
+Azure
+Microsoft 365
+Microsoft Dynamics 365
+Azure Active (Azure AD) Directory
+Contoso has Azure Active Directory groups for securing role-based access. The company uses the following group naming conventions:
+[Country]-[Level]-[Role]
+[Level]-[Role]
+
+Intellectual Property -
+Contoso has the intellectual property shown in the following table.
+
+Content    Format    Language    Content store    Domain
+Weekly webinars    video    English    Azure Blob storage    Vid.contoso.com
+Blogs    Text    English, French, Portuguese    WordPress    Pt-blog.contoso.com BLog.contoso.com Fr-blog.contoso.com
+Wikis    Text    English, French, Portuguese    Azure Cosmos DB    Internal.contoso.com.wiki
+Monthly conference recordings    Video    English    SharePoint Online    Contoso.sharepoint.com
+Frequently asked questions (FAQs)    Text    English    SharePoint Online    Contoso.sharepoint.com
+
+Text-based content is provided only in one language and is not translated.
+
+Requirements -
+
+Planned Projects -
+Contoso plans to develop the following:
+A document processing workflow to extract information automatically from PDFs and images of nancial documents
+A customer-support chatbot that will answer questions by using FAQs
+A searchable knowledgebase of all the intellectual property
+
+Technical Requirements -
+Contoso identifies the following technical requirements:
+All content must be approved before being published.
+All planned projects must support English, French, and Portuguese.
+All content must be secured by using role-based access control (RBAC).
+RBAC role assignments must use the principle of least privilege.
+RBAC roles must be assigned only to Azure Active Directory groups.
+AI solution responses must have a confidence score that is equal to or greater than 70 percent.
+When the response confidence score of an AI response is lower than 70 percent, the response must be improved by human input.
+Chatbot Requirements -
+Contoso identifies the following requirements for the chatbot:
+Provide customers with answers to the FAQs.
+Ensure that the customers can chat to a customer service agent.
+Ensure that the members of a group named Management-Accountants can approve the FAQs.
+Ensure that the members of a group named Consultant-Accountants can create and amend the FAQs.
+Ensure that the members of a group named the Agent-CustomerServices can browse the FAQs.
+Ensure that access to the customer service agents is managed by using Omnichannel for Customer Service.
+When the response confidence score is low, ensure that the chatbot can provide other response options to the customers.
+Document Processing Requirements
+Contoso identifies the following requirements for document processing:
+The document processing solution must be able to process standardized financial documents that have the following characteristics:
+- Contain fewer than 20 pages.
+- Be formatted as PDF or JPEG files.
+- Have a distinct standard for each oce.
+The document processing solution must be able to extract tables and text from the financial documents.
+The document processing solution must be able to extract information from receipt images.
+Members of a group named Management-Bookkeeper must dene how to extract tables from the financial documents.
+Members of a group named Consultant-Bookkeeper must be able to process the financial documents.
+Knowledgebase Requirements -
+Contoso identifies the following requirements for the knowledgebase:
+Supports searches for equivalent terms
+Can transcribe jargon with high accuracy
+Can search content in different formats, including video
+Provides relevant links to external resources for further research
+
+Question
+DRAG DROP -
+You are developing a solution for the Management-Bookkeepers group to meet the document processing requirements. The solution must
+contain the following components:
+✑ A From Recognizer resource
+✑ An Azure web app that hosts the Form Recognizer sample labeling tool
+The Management-Bookkeepers group needs to create a custom table extractor by using the sample labeling tool.
+Which three actions should the Management-Bookkeepers group perform in sequence? To answer, move the appropriate cmdlets from the list
+of cmdlets to the answer area and arrange them in the correct order.
+Select and Place:
+
+Actions
+Train a custom model
+Label the sample documents
+Create a new project and load sample documents
+Create a composite model
+
+# Correct Answer:
+Create a new project and load sample documents
+Label the sample documents
+Train a custom model
+
+Step 1: Create a new project and load sample documents
+Create a new project. Projects store your congurations and settings.
+Step 2: Label the sample documents
+When you create or open a project, the main tag editor window opens.
+Step 3: Train a custom model.
+Finally, train a custom model.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/applied-ai-services/form-recognizer/label-too
+"""
+
+question_12_02 = """
+# Introductory Info
+
+Case study -
+This is a case study. Case studies are not timed separately. You can use as much exam time as you would like to complete each case.
+However, there may be additional case studies and sections on this exam. You must manage your time to ensure that you are able to
+complete all questions included on this exam in the time provided.
+To answer the questions included in a case study, you will need to reference information that is provided in the case study. Case studies might
+contain exhibits and other resources that provide more information about the scenario that is described in the case study. Each question is
+independent of the other questions in this case study.
+At the end of this case study, a review screen will appear. This screen allows you to review your answers and to make changes before you
+move to the next section of the exam. After you begin a new section, you cannot return to this section.
+
+To start the case study -
+To display the rst question in this case study, click the Next button. Use the buttons in the left pane to explore the content of the case study
+before you answer the questions. Clicking these buttons displays information such as business requirements, existing environment, and
+problem statements. If the case study has an All Information tab, note that the information displayed is identical to the information displayed
+on the subsequent tabs. When you are ready to answer a question, click the Question button to return to the question.
+
+Overview -
+
+General Overview -
+Contoso, Ltd. is an international accounting company that has oces in France, Portugal, and the United Kingdom.
+Contoso has a professional services department that contains the roles shown in the following table.
+
+Name    Position    Office
+Accountant    Manager    United Kingdom, France, Portugal
+Accountant    Consultant    United Kingdom, France, Portugal
+Customer Service    Manager    United Kingdom
+Customer Service    Consultant    United Kingdom
+Bookkeeoper    Manager    United Kingdom, France, Portugal
+Bookkeeoper    Consultant    United Kingdom, France, Portugal
+
+Existing environment -
+
+Infrastructure -
+Contoso has the following subscriptions:
+Azure
+Microsoft 365
+Microsoft Dynamics 365
+Azure Active (Azure AD) Directory
+Contoso has Azure Active Directory groups for securing role-based access. The company uses the following group naming conventions:
+[Country]-[Level]-[Role]
+[Level]-[Role]
+
+Intellectual Property -
+Contoso has the intellectual property shown in the following table.
+
+Content    Format    Language    Content store    Domain
+Weekly webinars    video    English    Azure Blob storage    Vid.contoso.com
+Blogs    Text    English, French, Portuguese    WordPress    Pt-blog.contoso.com BLog.contoso.com Fr-blog.contoso.com
+Wikis    Text    English, French, Portuguese    Azure Cosmos DB    Internal.contoso.com.wiki
+Monthly conference recordings    Video    English    SharePoint Online    Contoso.sharepoint.com
+Frequently asked questions (FAQs)    Text    English    SharePoint Online    Contoso.sharepoint.com
+
+Text-based content is provided only in one language and is not translated.
+
+Requirements -
+
+Planned Projects -
+Contoso plans to develop the following:
+A document processing workflow to extract information automatically from PDFs and images of nancial documents
+A customer-support chatbot that will answer questions by using FAQs
+A searchable knowledgebase of all the intellectual property
+
+Technical Requirements -
+Contoso identifies the following technical requirements:
+All content must be approved before being published.
+All planned projects must support English, French, and Portuguese.
+All content must be secured by using role-based access control (RBAC).
+RBAC role assignments must use the principle of least privilege.
+RBAC roles must be assigned only to Azure Active Directory groups.
+AI solution responses must have a confidence score that is equal to or greater than 70 percent.
+When the response confidence score of an AI response is lower than 70 percent, the response must be improved by human input.
+Chatbot Requirements -
+Contoso identifies the following requirements for the chatbot:
+Provide customers with answers to the FAQs.
+Ensure that the customers can chat to a customer service agent.
+Ensure that the members of a group named Management-Accountants can approve the FAQs.
+Ensure that the members of a group named Consultant-Accountants can create and amend the FAQs.
+Ensure that the members of a group named the Agent-CustomerServices can browse the FAQs.
+Ensure that access to the customer service agents is managed by using Omnichannel for Customer Service.
+When the response confidence score is low, ensure that the chatbot can provide other response options to the customers.
+Document Processing Requirements
+Contoso identifies the following requirements for document processing:
+The document processing solution must be able to process standardized financial documents that have the following characteristics:
+- Contain fewer than 20 pages.
+- Be formatted as PDF or JPEG files.
+- Have a distinct standard for each oce.
+The document processing solution must be able to extract tables and text from the financial documents.
+The document processing solution must be able to extract information from receipt images.
+Members of a group named Management-Bookkeeper must dene how to extract tables from the financial documents.
+Members of a group named Consultant-Bookkeeper must be able to process the financial documents.
+Knowledgebase Requirements -
+Contoso identifies the following requirements for the knowledgebase:
+Supports searches for equivalent terms
+Can transcribe jargon with high accuracy
+Can search content in different formats, including video
+Provides relevant links to external resources for further research
+
+Question
+You are developing the knowledgebase.
+You use Azure Video Analyzer for Media (previously Video indexer) to obtain transcripts of webinars.
+You need to ensure that the solution meets the knowledgebase requirements.
+What should you do?
+A. Create a custom language model
+B. Configure audio indexing for videos only
+C. Enable multi-language detection for videos
+D. Build a custom Person model for webinar presenters
+
+# Correct Answer:
+B
+
+Can search content in different formats, including video
+Audio and video insights (multi-channels). When indexing by one channel, partial result for those models will be available.
+Keywords extraction: Extracts keywords from speech and visual text.
+Named entities extraction: Extracts brands, locations, and people from speech and visual text via natural language processing (NLP).
+Topic inference: Makes inference of main topics from transcripts. The 2nd-level IPTC taxonomy is included.
+Artifacts: Extracts rich set of "next level of details" artifacts for each of the models.
+Sentiment analysis: Identifies positive, negative, and neutral sentiments from speech and visual text.
+Incorrect Answers:
+C: Webinars Videos are in English.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/azure-video-analyzer/video-analyzer-for-media-docs/video-indexer-overview
+"""
+
+question_13_01 = """
+# Introductory Info
+
+Case study -
+This is a case study. Case studies are not timed separately. You can use as much exam time as you would like to complete each case.
+However, there may be additional case studies and sections on this exam. You must manage your time to ensure that you are able to
+complete all questions included on this exam in the time provided.
+To answer the questions included in a case study, you will need to reference information that is provided in the case study. Case studies might
+contain exhibits and other resources that provide more information about the scenario that is described in the case study. Each question is
+independent of the other questions in this case study.
+At the end of this case study, a review screen will appear. This screen allows you to review your answers and to make changes before you
+move to the next section of the exam. After you begin a new section, you cannot return to this section.
+
+To start the case study -
+To display the rst question in this case study, click the Next button. Use the buttons in the left pane to explore the content of the case study
+before you answer the questions. Clicking these buttons displays information such as business requirements, existing environment, and
+problem statements. If the case study has an All Information tab, note that the information displayed is identical to the information displayed
+on the subsequent tabs. When you are ready to answer a question, click the Question button to return to the question.
+
+Overview -
+A company named Wide World Importers is developing an e-commerce platform.
+You are working with a solutions architect to design and implement the features of the e-commerce platform. The platform will use
+microservices and a serverless environment built on Azure.
+Wide World Importers has a customer base that includes English, Spanish, and Portuguese speakers.
+Existing Environment -
+
+Applications -
+Wide World Importers has an App Service plan that contains the web apps shown in the following table.
+Name    Description
+Product Management    An app used by employees to create and manage products. The app and the expected inputs from the employees are in English.
+Inventory Tracking    An app used by employees to manage inventory when dispatching orders, receiving refunds, and receiving consignments from suppliers.
+
+Azure Resources -
+You have the following resources:
+An Azure Active Directory (Azure AD) tenant
+- The tenant supports internal authentication.
+- All employees belong to a group named AllUsers.
+- Senior managers belong to a group named LeadershipTeam.
+An Azure Functions resource
+- A function app posts to Azure Event Grid when stock levels of a product change between OK, Low Stock, and Out of Stock. The function app
+uses the Azure Cosmos DB change feed.
+An Azure Cosmos DB account
+- The account uses the Core (SQL) API.
+- The account stores data for the Product Management app and the Inventory Tracking app.
+An Azure Storage account
+- The account contains blob containers for assets related to products.
+- The assets include images, videos, and PDFs.
+An Azure Cognitive Services resource named wwics
+An Azure Video Analyzer for Media (previously Video Indexer) resource named wwics.
+
+Requirements -
+
+Business Goals -
+Wide World Importers wants to leverage AI technologies to differentiate itself from its competitors.
+
+Planned Changes -
+Wide World Importers plans to start the following projects:
+A product creation project: Help employees create accessible and multilingual product entries, while expediting product entry creation.
+A smart e-commerce project: Implement an Azure Cognitive Search solution to display products for customers to browse.
+A shopping on-the-go project: Build a chatbot that can be integrated into smart speakers to support customers.
+
+Business Requirements -
+Wide World Importers identifies the following business requirements for all the projects:
+Provide a multilingual customer experience that supports English, Spanish, and Portuguese.
+Whenever possible, scale based on transaction volumes to ensure consistent performance.
+Minimize costs.
+Governance and Security Requirements
+Wide World Importers identifies the following governance and security requirements:
+Data storage and processing must occur in datacenters located in the United States.
+Azure Cognitive Services must be inaccessible directly from the internet.
+
+Accessibility Requirements -
+Wide World Importers identifies the following accessibility requirements:
+All images must have relevant alt text.
+All videos must have transcripts that are associated to the video and included in product descriptions.
+Product descriptions, transcripts, and alt text must be available in English, Spanish, and Portuguese.
+
+Product Creation Requirements -
+Wide World Importers identifies the following requirements for improving the Product Management app:
+Minimize how long it takes for employees to create products and add assets.
+Remove the need for manual translations.
+
+Smart E-Commerce Requirements -
+Wide World Importers identifies the following requirements for the smart e-commerce project:
+Ensure that the Cognitive Search solution meets a Service Level Agreement (SLA) of 99.9% availability for searches and index writes.
+Provide users with the ability to search insight gained from the images, manuals, and videos associated with the products.
+Support autocompletion and suggestion based on all product name variants.
+Store all raw insight data that was generated, so the data can be processed later.
+Update the stock level eld in the product index immediately upon changes.
+Update the product index hourly.
+
+Shopping On-the-Go Requirements -
+Wide World Importers identifies the following requirements for the shopping on-the-go chatbot:
+Answer common questions.
+Support interactions in English, Spanish, and Portuguese.
+Replace an existing FAQ process so that all Q&A is managed from a central location.
+Provide all employees with the ability to edit Q&As. Only senior managers must be able to publish updates.
+Support purchases by providing information about relevant products to customers. Product displays must include images and warnings when
+stock levels are low or out of stock.
+
+Product JSON Sample
+You have the following JSON sample for a product.
+
+{
+    "sku": "b1",
+    "name": {
+        "en": "Bicycle",
+        "es": "Bicicleta",
+        "pt": "Bicicleta"
+    },
+    "stocklevel": "Out of Stock",
+    "description": {
+        "en": "Bicycle",
+        "es": "Bicicleta",
+        "pt": "Bicicleta"
+    },
+    "image": {
+        "uri" : "https://upload.wordlwideimporters.org/bicycle.jog",
+        "alttext": {
+            "en": "Bicycle",
+            "es": "Bicicleta",
+            "pt": "Bicicleta"
+        }
+    },
+    "createUtc": "2020-02-14T06:08:391",
+    "language": "en"
+}
+
+Question
+HOTSPOT -
+You are planning the product creation project.
+You need to build the REST endpoint to create the multilingual product descriptions.
+How should you complete the URI? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+Hot Area:
+
+______ ______?api-version=3.0&to=es&to=pt
+(api.cognitive.microsofttranslator.com / api-nam.cognitive.microsofttranslator.com / westus.tts.speech.microsoft.com / wwics.cognitiveservices.azure.com/translator)
+(/detect / /languages / /text-to-speech / /translate)
+
+# Correct Answer:
+api.cognitive.microsofttranslator.com, /translate
+
+Box 1: api.cognitive.microsofttranslator.com
+Translator 3.0: Translate. Send a POST request to:
+https://api.cognitive.microsofttranslator.com/translate?api-version=3.0
+Box 2: /translate -
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-translate
+"""
+
+question_14_01 = """
+# Introductory Info
+
+Case study -
+This is a case study. Case studies are not timed separately. You can use as much exam time as you would like to complete each case.
+However, there may be additional case studies and sections on this exam. You must manage your time to ensure that you are able to
+complete all questions included on this exam in the time provided.
+To answer the questions included in a case study, you will need to reference information that is provided in the case study. Case studies might
+contain exhibits and other resources that provide more information about the scenario that is described in the case study. Each question is
+independent of the other questions in this case study.
+At the end of this case study, a review screen will appear. This screen allows you to review your answers and to make changes before you
+move to the next section of the exam. After you begin a new section, you cannot return to this section.
+
+To start the case study -
+To display the rst question in this case study, click the Next button. Use the buttons in the left pane to explore the content of the case study
+before you answer the questions. Clicking these buttons displays information such as business requirements, existing environment, and
+problem statements. If the case study has an All Information tab, note that the information displayed is identical to the information displayed
+on the subsequent tabs. When you are ready to answer a question, click the Question button to return to the question.
+
+Overview -
+
+General Overview -
+Contoso, Ltd. is an international accounting company that has oces in France, Portugal, and the United Kingdom.
+Contoso has a professional services department that contains the roles shown in the following table.
+
+Name    Position    Office
+Accountant    Manager    United Kingdom, France, Portugal
+Accountant    Consultant    United Kingdom, France, Portugal
+Customer Service    Manager    United Kingdom
+Customer Service    Consultant    United Kingdom
+Bookkeeoper    Manager    United Kingdom, France, Portugal
+Bookkeeoper    Consultant    United Kingdom, France, Portugal
+
+Existing environment -
+
+Infrastructure -
+Contoso has the following subscriptions:
+Azure
+Microsoft 365
+Microsoft Dynamics 365
+Azure Active (Azure AD) Directory
+Contoso has Azure Active Directory groups for securing role-based access. The company uses the following group naming conventions:
+[Country]-[Level]-[Role]
+[Level]-[Role]
+
+Intellectual Property -
+Contoso has the intellectual property shown in the following table.
+
+Content    Format    Language    Content store    Domain
+Weekly webinars    video    English    Azure Blob storage    Vid.contoso.com
+Blogs    Text    English, French, Portuguese    WordPress    Pt-blog.contoso.com BLog.contoso.com Fr-blog.contoso.com
+Wikis    Text    English, French, Portuguese    Azure Cosmos DB    Internal.contoso.com.wiki
+Monthly conference recordings    Video    English    SharePoint Online    Contoso.sharepoint.com
+Frequently asked questions (FAQs)    Text    English    SharePoint Online    Contoso.sharepoint.com
+
+Text-based content is provided only in one language and is not translated.
+
+Requirements -
+
+Planned Projects -
+Contoso plans to develop the following:
+A document processing workflow to extract information automatically from PDFs and images of nancial documents
+A customer-support chatbot that will answer questions by using FAQs
+A searchable knowledgebase of all the intellectual property
+
+Technical Requirements -
+Contoso identifies the following technical requirements:
+All content must be approved before being published.
+All planned projects must support English, French, and Portuguese.
+All content must be secured by using role-based access control (RBAC).
+RBAC role assignments must use the principle of least privilege.
+RBAC roles must be assigned only to Azure Active Directory groups.
+AI solution responses must have a confidence score that is equal to or greater than 70 percent.
+When the response confidence score of an AI response is lower than 70 percent, the response must be improved by human input.
+Chatbot Requirements -
+Contoso identifies the following requirements for the chatbot:
+Provide customers with answers to the FAQs.
+Ensure that the customers can chat to a customer service agent.
+Ensure that the members of a group named Management-Accountants can approve the FAQs.
+Ensure that the members of a group named Consultant-Accountants can create and amend the FAQs.
+Ensure that the members of a group named the Agent-CustomerServices can browse the FAQs.
+Ensure that access to the customer service agents is managed by using Omnichannel for Customer Service.
+When the response confidence score is low, ensure that the chatbot can provide other response options to the customers.
+Document Processing Requirements
+Contoso identifies the following requirements for document processing:
+The document processing solution must be able to process standardized financial documents that have the following characteristics:
+- Contain fewer than 20 pages.
+- Be formatted as PDF or JPEG files.
+- Have a distinct standard for each oce.
+The document processing solution must be able to extract tables and text from the financial documents.
+The document processing solution must be able to extract information from receipt images.
+Members of a group named Management-Bookkeeper must dene how to extract tables from the financial documents.
+Members of a group named Consultant-Bookkeeper must be able to process the financial documents.
+Knowledgebase Requirements -
+Contoso identifies the following requirements for the knowledgebase:
+Supports searches for equivalent terms
+Can transcribe jargon with high accuracy
+Can search content in different formats, including video
+Provides relevant links to external resources for further research
+
+Question
+You need to develop an extract solution for the receipt images. The solution must meet the document processing requirements and the
+technical requirements.
+You upload the receipt images to the Form Recognizer API for analysis, and the API returns the following JSON.
+
+"documentResults":[
+      {
+        "docType":"prebuilt:receipt",
+        "pageRange":[
+          1,
+          1 
+        ],
+        "fields":{
+          "ReceiptType":{
+            "type":"string",
+            "valueString":"Itemized",
+            "confidence":0.672
+          },
+          "MerchantName":{
+            "type":"string",
+            "valueString":"Tailwind",
+            "text":"Tailwind",
+            "boundingBox":[],
+            "page":1,
+            "confidence":0.913,
+            "elements":[
+              "#/readResults/0/lines/0/words/0"
+            ]
+          },
+      ...
+
+Which expression should you use to trigger a manual review of the extracted information by a member of the Consultant-Bookkeeper group?
+A. documentResults.docType == "prebuilt:receipt"
+B. documentResults.fields.*.confidence < 0.7
+C. documentResults.fields.ReceiptType.confidence > 0.7
+D. documentResults.fields.MerchantName.confidence < 0.7
+
+# Correct Answer:
+B
+Need to specify the eld name, and then use < 0.7 to handle trigger if confidence score is less than 70%.
+Scenario:
+✑ AI solution responses must have a confidence score that is equal to or greater than 70 percent.
+✑ When the response confidence score of an AI response is lower than 70 percent the response must be improved by human input.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/applied-ai-services/form-recognizer/api-v2-0/reference-sdk-api-v2-0
+"""
+
+question_15_01 = """
+# Introductory Info
+
+Case study -
+This is a case study. Case studies are not timed separately. You can use as much exam time as you would like to complete each case.
+However, there may be additional case studies and sections on this exam. You must manage your time to ensure that you are able to
+complete all questions included on this exam in the time provided.
+To answer the questions included in a case study, you will need to reference information that is provided in the case study. Case studies might
+contain exhibits and other resources that provide more information about the scenario that is described in the case study. Each question is
+independent of the other questions in this case study.
+At the end of this case study, a review screen will appear. This screen allows you to review your answers and to make changes before you
+move to the next section of the exam. After you begin a new section, you cannot return to this section.
+
+To start the case study -
+To display the rst question in this case study, click the Next button. Use the buttons in the left pane to explore the content of the case study
+before you answer the questions. Clicking these buttons displays information such as business requirements, existing environment, and
+problem statements. If the case study has an All Information tab, note that the information displayed is identical to the information displayed
+on the subsequent tabs. When you are ready to answer a question, click the Question button to return to the question.
+
+Overview -
+A company named Wide World Importers is developing an e-commerce platform.
+You are working with a solutions architect to design and implement the features of the e-commerce platform. The platform will use
+microservices and a serverless environment built on Azure.
+Wide World Importers has a customer base that includes English, Spanish, and Portuguese speakers.
+Existing Environment -
+
+Applications -
+Wide World Importers has an App Service plan that contains the web apps shown in the following table.
+Name    Description
+Product Management    An app used by employees to create and manage products. The app and the expected inputs from the employees are in English.
+Inventory Tracking    An app used by employees to manage inventory when dispatching orders, receiving refunds, and receiving consignments from suppliers.
+
+Azure Resources -
+You have the following resources:
+An Azure Active Directory (Azure AD) tenant
+- The tenant supports internal authentication.
+- All employees belong to a group named AllUsers.
+- Senior managers belong to a group named LeadershipTeam.
+An Azure Functions resource
+- A function app posts to Azure Event Grid when stock levels of a product change between OK, Low Stock, and Out of Stock. The function app
+uses the Azure Cosmos DB change feed.
+An Azure Cosmos DB account
+- The account uses the Core (SQL) API.
+- The account stores data for the Product Management app and the Inventory Tracking app.
+An Azure Storage account
+- The account contains blob containers for assets related to products.
+- The assets include images, videos, and PDFs.
+An Azure Cognitive Services resource named wwics
+An Azure Video Analyzer for Media (previously Video Indexer) resource named wwics.
+
+Requirements -
+
+Business Goals -
+Wide World Importers wants to leverage AI technologies to differentiate itself from its competitors.
+
+Planned Changes -
+Wide World Importers plans to start the following projects:
+A product creation project: Help employees create accessible and multilingual product entries, while expediting product entry creation.
+A smart e-commerce project: Implement an Azure Cognitive Search solution to display products for customers to browse.
+A shopping on-the-go project: Build a chatbot that can be integrated into smart speakers to support customers.
+
+Business Requirements -
+Wide World Importers identifies the following business requirements for all the projects:
+Provide a multilingual customer experience that supports English, Spanish, and Portuguese.
+Whenever possible, scale based on transaction volumes to ensure consistent performance.
+Minimize costs.
+Governance and Security Requirements
+Wide World Importers identifies the following governance and security requirements:
+Data storage and processing must occur in datacenters located in the United States.
+Azure Cognitive Services must be inaccessible directly from the internet.
+
+Accessibility Requirements -
+Wide World Importers identifies the following accessibility requirements:
+All images must have relevant alt text.
+All videos must have transcripts that are associated to the video and included in product descriptions.
+Product descriptions, transcripts, and alt text must be available in English, Spanish, and Portuguese.
+
+Product Creation Requirements -
+Wide World Importers identifies the following requirements for improving the Product Management app:
+Minimize how long it takes for employees to create products and add assets.
+Remove the need for manual translations.
+
+Smart E-Commerce Requirements -
+Wide World Importers identifies the following requirements for the smart e-commerce project:
+Ensure that the Cognitive Search solution meets a Service Level Agreement (SLA) of 99.9% availability for searches and index writes.
+Provide users with the ability to search insight gained from the images, manuals, and videos associated with the products.
+Support autocompletion and suggestion based on all product name variants.
+Store all raw insight data that was generated, so the data can be processed later.
+Update the stock level eld in the product index immediately upon changes.
+Update the product index hourly.
+
+Shopping On-the-Go Requirements -
+Wide World Importers identifies the following requirements for the shopping on-the-go chatbot:
+Answer common questions.
+Support interactions in English, Spanish, and Portuguese.
+Replace an existing FAQ process so that all Q&A is managed from a central location.
+Provide all employees with the ability to edit Q&As. Only senior managers must be able to publish updates.
+Support purchases by providing information about relevant products to customers. Product displays must include images and warnings when
+stock levels are low or out of stock.
+
+Product JSON Sample
+You have the following JSON sample for a product.
+
+{
+    "sku": "b1",
+    "name": {
+        "en": "Bicycle",
+        "es": "Bicicleta",
+        "pt": "Bicicleta"
+    },
+    "stocklevel": "Out of Stock",
+    "description": {
+        "en": "Bicycle",
+        "es": "Bicicleta",
+        "pt": "Bicicleta"
+    },
+    "image": {
+        "uri" : "https://upload.wordlwideimporters.org/bicycle.jog",
+        "alttext": {
+            "en": "Bicycle",
+            "es": "Bicicleta",
+            "pt": "Bicicleta"
+        }
+    },
+    "createUtc": "2020-02-14T06:08:391",
+    "language": "en"
+}
+
+Question
+You are developing the smart e-commerce project.
+You need to implement autocompletion as part of the Cognitive Search solution.
+Which three actions should you perform? Each correct answer presents part of the solution.
+NOTE: Each correct selection is worth one point.
+A. Make API queries to the autocomplete endpoint and include suggesterName in the body.
+B. Add a suggester that has the three product name fields as source fields.
+C. Make API queries to the search endpoint and include the product name fields in the searchFields query parameter.
+D. Add a suggester for each of the three product name fields.
+E. Set the searchAnalyzer property for the three product name variants.
+F. Set the analyzer property for the three product name variants.
+
+# Correct Answer:
+ABF
+
+Scenario: Support autocompletion and autosuggestion based on all product name variants.
+A: Call a suggester-enabled query, in the form of a Suggestion request or Autocomplete request, using an API. API usage is illustrated in the
+following call to the
+Autocomplete REST API.
+POST /indexes/myxboxgames/docs/autocomplete?search&api-version=2020-06-30
+{
+"search": "minecraf",
+"suggesterName": "sg"
+}
+B: In Azure Cognitive Search, typeahead or "search-as-you-type" is enabled through a suggester. A suggester provides a list of fields that
+undergo additional tokenization, generating prex sequences to support matches on partial terms. For example, a suggester that includes a
+City eld with a value for "Seattle" will have prex combinations of "sea", "seat", "seatt", and "seattl" to support typeahead.
+F. Use the default standard Lucene analyzer ("analyzer": null) or a language analyzer (for example, "analyzer": "en.Microsoft") on the eld.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/search/index-add-suggesters
+"""
+
+question_16_01 = """
+# Introductory Info
+
+Case study -
+This is a case study. Case studies are not timed separately. You can use as much exam time as you would like to complete each case.
+However, there may be additional case studies and sections on this exam. You must manage your time to ensure that you are able to
+complete all questions included on this exam in the time provided.
+To answer the questions included in a case study, you will need to reference information that is provided in the case study. Case studies might
+contain exhibits and other resources that provide more information about the scenario that is described in the case study. Each question is
+independent of the other questions in this case study.
+At the end of this case study, a review screen will appear. This screen allows you to review your answers and to make changes before you
+move to the next section of the exam. After you begin a new section, you cannot return to this section.
+
+To start the case study -
+To display the rst question in this case study, click the Next button. Use the buttons in the left pane to explore the content of the case study
+before you answer the questions. Clicking these buttons displays information such as business requirements, existing environment, and
+problem statements. If the case study has an All Information tab, note that the information displayed is identical to the information displayed
+on the subsequent tabs. When you are ready to answer a question, click the Question button to return to the question.
+
+Overview -
+
+General Overview -
+Contoso, Ltd. is an international accounting company that has oces in France, Portugal, and the United Kingdom.
+Contoso has a professional services department that contains the roles shown in the following table.
+
+Name    Position    Office
+Accountant    Manager    United Kingdom, France, Portugal
+Accountant    Consultant    United Kingdom, France, Portugal
+Customer Service    Manager    United Kingdom
+Customer Service    Consultant    United Kingdom
+Bookkeeoper    Manager    United Kingdom, France, Portugal
+Bookkeeoper    Consultant    United Kingdom, France, Portugal
+
+Existing environment -
+
+Infrastructure -
+Contoso has the following subscriptions:
+Azure
+Microsoft 365
+Microsoft Dynamics 365
+Azure Active (Azure AD) Directory
+Contoso has Azure Active Directory groups for securing role-based access. The company uses the following group naming conventions:
+[Country]-[Level]-[Role]
+[Level]-[Role]
+
+Intellectual Property -
+Contoso has the intellectual property shown in the following table.
+
+Content    Format    Language    Content store    Domain
+Weekly webinars    video    English    Azure Blob storage    Vid.contoso.com
+Blogs    Text    English, French, Portuguese    WordPress    Pt-blog.contoso.com BLog.contoso.com Fr-blog.contoso.com
+Wikis    Text    English, French, Portuguese    Azure Cosmos DB    Internal.contoso.com.wiki
+Monthly conference recordings    Video    English    SharePoint Online    Contoso.sharepoint.com
+Frequently asked questions (FAQs)    Text    English    SharePoint Online    Contoso.sharepoint.com
+
+Text-based content is provided only in one language and is not translated.
+
+Requirements -
+
+Planned Projects -
+Contoso plans to develop the following:
+A document processing workflow to extract information automatically from PDFs and images of nancial documents
+A customer-support chatbot that will answer questions by using FAQs
+A searchable knowledgebase of all the intellectual property
+
+Technical Requirements -
+Contoso identifies the following technical requirements:
+All content must be approved before being published.
+All planned projects must support English, French, and Portuguese.
+All content must be secured by using role-based access control (RBAC).
+RBAC role assignments must use the principle of least privilege.
+RBAC roles must be assigned only to Azure Active Directory groups.
+AI solution responses must have a confidence score that is equal to or greater than 70 percent.
+When the response confidence score of an AI response is lower than 70 percent, the response must be improved by human input.
+Chatbot Requirements -
+Contoso identifies the following requirements for the chatbot:
+Provide customers with answers to the FAQs.
+Ensure that the customers can chat to a customer service agent.
+Ensure that the members of a group named Management-Accountants can approve the FAQs.
+Ensure that the members of a group named Consultant-Accountants can create and amend the FAQs.
+Ensure that the members of a group named the Agent-CustomerServices can browse the FAQs.
+Ensure that access to the customer service agents is managed by using Omnichannel for Customer Service.
+When the response confidence score is low, ensure that the chatbot can provide other response options to the customers.
+Document Processing Requirements
+Contoso identifies the following requirements for document processing:
+The document processing solution must be able to process standardized financial documents that have the following characteristics:
+- Contain fewer than 20 pages.
+- Be formatted as PDF or JPEG files.
+- Have a distinct standard for each oce.
+The document processing solution must be able to extract tables and text from the financial documents.
+The document processing solution must be able to extract information from receipt images.
+Members of a group named Management-Bookkeeper must dene how to extract tables from the financial documents.
+Members of a group named Consultant-Bookkeeper must be able to process the financial documents.
+Knowledgebase Requirements -
+Contoso identifies the following requirements for the knowledgebase:
+Supports searches for equivalent terms
+Can transcribe jargon with high accuracy
+Can search content in different formats, including video
+Provides relevant links to external resources for further research
+
+Question
+You are developing the document processing workflow.
+You need to identify which API endpoints to use to extract text from the financial documents. The solution must meet the document
+processing requirements.
+Which two API endpoints should you identify? Each correct answer presents part of the solution.
+NOTE: Each correct selection is worth one point.
+A. /vision/v3.1/read/analyzeResults
+B. /formrecognizer/v2.0/custom/models/{modelId}/analyze
+C. /formrecognizer/v2.0/prebuilt/receipt/analyze
+D. /vision/v3.1/describe
+E. /vision/v3.1/read/analyze
+
+# Correct Answer:
+CE
+C: Analyze Receipt - Get Analyze Receipt Result.
+Query the status and retrieve the result of an Analyze Receipt operation.
+Request URL:
+https://{endpoint}/formrecognizer/v2.0-preview/prebuilt/receipt/analyzeResults/{resultId}
+E: POST {Endpoint}/vision/v3.1/read/analyze
+Use this interface to get the result of a Read operation, employing the state-of-the-art Optical Character Recognition (OCR) algorithms
+optimized for text-heavy documents.
+Scenario: Contoso plans to develop a document processing workow to extract information automatically from PDFs and images of
+financial documents
+✑ The document processing solution must be able to process standardized financial documents that have the following characteristics:
+- Contain fewer than 20 pages.
+- Be formatted as PDF or JPEG files.
+- Have a distinct standard for each oce.
+✑ *The document processing solution must be able to extract tables and text from the financial documents.
+The document processing solution must be able to extract information from receipt images.
+
+# Reference:
+https://westus2.dev.cognitive.microsoft.com/docs/services/form-recognizer-api-v2-preview/operations/GetAnalyzeReceiptResult
+https://docs.microsoft.com/en-us/rest/api/computervision/3.1/read/read
+"""
+
+question_16_02 = """
+# Introductory Info
+
+Case study -
+This is a case study. Case studies are not timed separately. You can use as much exam time as you would like to complete each case.
+However, there may be additional case studies and sections on this exam. You must manage your time to ensure that you are able to
+complete all questions included on this exam in the time provided.
+To answer the questions included in a case study, you will need to reference information that is provided in the case study. Case studies might
+contain exhibits and other resources that provide more information about the scenario that is described in the case study. Each question is
+independent of the other questions in this case study.
+At the end of this case study, a review screen will appear. This screen allows you to review your answers and to make changes before you
+move to the next section of the exam. After you begin a new section, you cannot return to this section.
+
+To start the case study -
+To display the rst question in this case study, click the Next button. Use the buttons in the left pane to explore the content of the case study
+before you answer the questions. Clicking these buttons displays information such as business requirements, existing environment, and
+problem statements. If the case study has an All Information tab, note that the information displayed is identical to the information displayed
+on the subsequent tabs. When you are ready to answer a question, click the Question button to return to the question.
+
+Overview -
+
+General Overview -
+Contoso, Ltd. is an international accounting company that has oces in France, Portugal, and the United Kingdom.
+Contoso has a professional services department that contains the roles shown in the following table.
+
+Name    Position    Office
+Accountant    Manager    United Kingdom, France, Portugal
+Accountant    Consultant    United Kingdom, France, Portugal
+Customer Service    Manager    United Kingdom
+Customer Service    Consultant    United Kingdom
+Bookkeeoper    Manager    United Kingdom, France, Portugal
+Bookkeeoper    Consultant    United Kingdom, France, Portugal
+
+Existing environment -
+
+Infrastructure -
+Contoso has the following subscriptions:
+Azure
+Microsoft 365
+Microsoft Dynamics 365
+Azure Active (Azure AD) Directory
+Contoso has Azure Active Directory groups for securing role-based access. The company uses the following group naming conventions:
+[Country]-[Level]-[Role]
+[Level]-[Role]
+
+Intellectual Property -
+Contoso has the intellectual property shown in the following table.
+
+Content    Format    Language    Content store    Domain
+Weekly webinars    video    English    Azure Blob storage    Vid.contoso.com
+Blogs    Text    English, French, Portuguese    WordPress    Pt-blog.contoso.com BLog.contoso.com Fr-blog.contoso.com
+Wikis    Text    English, French, Portuguese    Azure Cosmos DB    Internal.contoso.com.wiki
+Monthly conference recordings    Video    English    SharePoint Online    Contoso.sharepoint.com
+Frequently asked questions (FAQs)    Text    English    SharePoint Online    Contoso.sharepoint.com
+
+Text-based content is provided only in one language and is not translated.
+
+Requirements -
+
+Planned Projects -
+Contoso plans to develop the following:
+A document processing workflow to extract information automatically from PDFs and images of nancial documents
+A customer-support chatbot that will answer questions by using FAQs
+A searchable knowledgebase of all the intellectual property
+
+Technical Requirements -
+Contoso identifies the following technical requirements:
+All content must be approved before being published.
+All planned projects must support English, French, and Portuguese.
+All content must be secured by using role-based access control (RBAC).
+RBAC role assignments must use the principle of least privilege.
+RBAC roles must be assigned only to Azure Active Directory groups.
+AI solution responses must have a confidence score that is equal to or greater than 70 percent.
+When the response confidence score of an AI response is lower than 70 percent, the response must be improved by human input.
+Chatbot Requirements -
+Contoso identifies the following requirements for the chatbot:
+Provide customers with answers to the FAQs.
+Ensure that the customers can chat to a customer service agent.
+Ensure that the members of a group named Management-Accountants can approve the FAQs.
+Ensure that the members of a group named Consultant-Accountants can create and amend the FAQs.
+Ensure that the members of a group named the Agent-CustomerServices can browse the FAQs.
+Ensure that access to the customer service agents is managed by using Omnichannel for Customer Service.
+When the response confidence score is low, ensure that the chatbot can provide other response options to the customers.
+Document Processing Requirements
+Contoso identifies the following requirements for document processing:
+The document processing solution must be able to process standardized financial documents that have the following characteristics:
+- Contain fewer than 20 pages.
+- Be formatted as PDF or JPEG files.
+- Have a distinct standard for each oce.
+The document processing solution must be able to extract tables and text from the financial documents.
+The document processing solution must be able to extract information from receipt images.
+Members of a group named Management-Bookkeeper must dene how to extract tables from the financial documents.
+Members of a group named Consultant-Bookkeeper must be able to process the financial documents.
+Knowledgebase Requirements -
+Contoso identifies the following requirements for the knowledgebase:
+Supports searches for equivalent terms
+Can transcribe jargon with high accuracy
+Can search content in different formats, including video
+Provides relevant links to external resources for further research
+
+Question
+HOTSPOT -
+You are developing the knowledgebase by using Azure Cognitive Search.
+You need to build a skill that will be used by indexers.
+How should you complete the code? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+Hot Area:
+Answer Area
+{
+    "@odata.type": "#Microsoft.Skills.Text.EntityRecognitionSkill",
+    ______ ("categories": [],
+            "categories": ["Email", "Persons", "Organizations"],
+            "categories": ["Locations", "Persons", "Organizations"],)
+    "defaultLanguageCode": "en",
+    "includeTypelessEntities": true,
+    "minimumPrecision": 0.7,
+    "inputs": [
+        {
+            "name": "text",
+            "source": "/document/content"
+        }
+    ],
+    "outputs": [
+        {"name": "persons", "targetName": "people"},
+        {"name": "locations", "targetName": "locations"},
+        {"name": "organizations", "targetName": "organizations"},
+        ______ ({"name": "entities"}
+                {"name": "categories"}
+                {"name": "namedEntities"})
+    ]
+}
+
+# Correct Answer:
+"categories": ["Locations", "Persons", "Organizations"], {"name": "entities"}
+
+Box 1: "categories": ["Locations", "Persons", "Organizations"],
+Locations, Persons, Organizations are in the outputs.
+Scenario: Contoso plans to develop a searchable knowledgebase of all the intellectual property
+Note: The categories parameter is an array of categories that should be extracted. Possible category types: "Person", "Location",
+"Organization", "Quantity",
+"Datetime", "URL", "Email". If no category is provided, all types are returned.
+Box 2: {"name": " entities"}
+The include wikis, so should include entities in the outputs.
+Note: entities is an array of complex types that contains rich information about the entities extracted from text, with the following fields
+name (the actual entity name. This represents a "normalized" form) wikipediaId wikipediaLanguage wikipediaUrl (a link to Wikipedia page
+for the entity) etc.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/search/cognitive-search-skill-entity-recognition
+"""
+
+question_16_03 = """
+# Introductory Info
+
+Case study -
+This is a case study. Case studies are not timed separately. You can use as much exam time as you would like to complete each case.
+However, there may be additional case studies and sections on this exam. You must manage your time to ensure that you are able to
+complete all questions included on this exam in the time provided.
+To answer the questions included in a case study, you will need to reference information that is provided in the case study. Case studies might
+contain exhibits and other resources that provide more information about the scenario that is described in the case study. Each question is
+independent of the other questions in this case study.
+At the end of this case study, a review screen will appear. This screen allows you to review your answers and to make changes before you
+move to the next section of the exam. After you begin a new section, you cannot return to this section.
+
+To start the case study -
+To display the rst question in this case study, click the Next button. Use the buttons in the left pane to explore the content of the case study
+before you answer the questions. Clicking these buttons displays information such as business requirements, existing environment, and
+problem statements. If the case study has an All Information tab, note that the information displayed is identical to the information displayed
+on the subsequent tabs. When you are ready to answer a question, click the Question button to return to the question.
+
+Overview -
+
+General Overview -
+Contoso, Ltd. is an international accounting company that has oces in France, Portugal, and the United Kingdom.
+Contoso has a professional services department that contains the roles shown in the following table.
+
+Name    Position    Office
+Accountant    Manager    United Kingdom, France, Portugal
+Accountant    Consultant    United Kingdom, France, Portugal
+Customer Service    Manager    United Kingdom
+Customer Service    Consultant    United Kingdom
+Bookkeeoper    Manager    United Kingdom, France, Portugal
+Bookkeeoper    Consultant    United Kingdom, France, Portugal
+
+Existing environment -
+
+Infrastructure -
+Contoso has the following subscriptions:
+Azure
+Microsoft 365
+Microsoft Dynamics 365
+Azure Active (Azure AD) Directory
+Contoso has Azure Active Directory groups for securing role-based access. The company uses the following group naming conventions:
+[Country]-[Level]-[Role]
+[Level]-[Role]
+
+Intellectual Property -
+Contoso has the intellectual property shown in the following table.
+
+Content    Format    Language    Content store    Domain
+Weekly webinars    video    English    Azure Blob storage    Vid.contoso.com
+Blogs    Text    English, French, Portuguese    WordPress    Pt-blog.contoso.com BLog.contoso.com Fr-blog.contoso.com
+Wikis    Text    English, French, Portuguese    Azure Cosmos DB    Internal.contoso.com.wiki
+Monthly conference recordings    Video    English    SharePoint Online    Contoso.sharepoint.com
+Frequently asked questions (FAQs)    Text    English    SharePoint Online    Contoso.sharepoint.com
+
+Text-based content is provided only in one language and is not translated.
+
+Requirements -
+
+Planned Projects -
+Contoso plans to develop the following:
+A document processing workflow to extract information automatically from PDFs and images of nancial documents
+A customer-support chatbot that will answer questions by using FAQs
+A searchable knowledgebase of all the intellectual property
+
+Technical Requirements -
+Contoso identifies the following technical requirements:
+All content must be approved before being published.
+All planned projects must support English, French, and Portuguese.
+All content must be secured by using role-based access control (RBAC).
+RBAC role assignments must use the principle of least privilege.
+RBAC roles must be assigned only to Azure Active Directory groups.
+AI solution responses must have a confidence score that is equal to or greater than 70 percent.
+When the response confidence score of an AI response is lower than 70 percent, the response must be improved by human input.
+Chatbot Requirements -
+Contoso identifies the following requirements for the chatbot:
+Provide customers with answers to the FAQs.
+Ensure that the customers can chat to a customer service agent.
+Ensure that the members of a group named Management-Accountants can approve the FAQs.
+Ensure that the members of a group named Consultant-Accountants can create and amend the FAQs.
+Ensure that the members of a group named the Agent-CustomerServices can browse the FAQs.
+Ensure that access to the customer service agents is managed by using Omnichannel for Customer Service.
+When the response confidence score is low, ensure that the chatbot can provide other response options to the customers.
+Document Processing Requirements
+Contoso identifies the following requirements for document processing:
+The document processing solution must be able to process standardized financial documents that have the following characteristics:
+- Contain fewer than 20 pages.
+- Be formatted as PDF or JPEG files.
+- Have a distinct standard for each oce.
+The document processing solution must be able to extract tables and text from the financial documents.
+The document processing solution must be able to extract information from receipt images.
+Members of a group named Management-Bookkeeper must dene how to extract tables from the financial documents.
+Members of a group named Consultant-Bookkeeper must be able to process the financial documents.
+Knowledgebase Requirements -
+Contoso identifies the following requirements for the knowledgebase:
+Supports searches for equivalent terms
+Can transcribe jargon with high accuracy
+Can search content in different formats, including video
+Provides relevant links to external resources for further research
+
+Question
+You are developing the knowledgebase by using Azure Cognitive Search.
+You need to process wiki content to meet the technical requirements.
+What should you include in the solution?
+A. an indexer for Azure Blob storage attached to a skillset that contains the language detection skill and the text translation skill
+B. an indexer for Azure Blob storage attached to a skillset that contains the language detection skill
+C. an indexer for Azure Cosmos DB attached to a skillset that contains the document extraction skill and the text translation skill
+D. an indexer for Azure Cosmos DB attached to a skillset that contains the language detection skill and the text translation skill
+
+# Correct Answer:
+C
+The wiki contains text in English, French and Portuguese.
+Scenario: All planned projects must support English, French, and Portuguese.
+The Document Extraction skill extracts content from a le within the enrichment pipeline. This allows you to take advantage of the
+document extraction step that normally happens before the skillset execution with files that may be generated by other skills.
+Note: The Translator Text API will be used to determine the from language. The Language detection skill is not required.
+Incorrect Answers:
+Not A, not B: The wiki is stored in Azure Cosmos DB.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/search/cognitive-search-skill-document-extraction 
+https://docs.microsoft.com/en-us/azure/search/cognitive-search-skill-text-translation
+"""
+
+question_16_04 = """
+# Introductory Info
+
+Case study -
+This is a case study. Case studies are not timed separately. You can use as much exam time as you would like to complete each case.
+However, there may be additional case studies and sections on this exam. You must manage your time to ensure that you are able to
+complete all questions included on this exam in the time provided.
+To answer the questions included in a case study, you will need to reference information that is provided in the case study. Case studies might
+contain exhibits and other resources that provide more information about the scenario that is described in the case study. Each question is
+independent of the other questions in this case study.
+At the end of this case study, a review screen will appear. This screen allows you to review your answers and to make changes before you
+move to the next section of the exam. After you begin a new section, you cannot return to this section.
+
+To start the case study -
+To display the rst question in this case study, click the Next button. Use the buttons in the left pane to explore the content of the case study
+before you answer the questions. Clicking these buttons displays information such as business requirements, existing environment, and
+problem statements. If the case study has an All Information tab, note that the information displayed is identical to the information displayed
+on the subsequent tabs. When you are ready to answer a question, click the Question button to return to the question.
+
+Overview -
+
+General Overview -
+Contoso, Ltd. is an international accounting company that has oces in France, Portugal, and the United Kingdom.
+Contoso has a professional services department that contains the roles shown in the following table.
+
+Name    Position    Office
+Accountant    Manager    United Kingdom, France, Portugal
+Accountant    Consultant    United Kingdom, France, Portugal
+Customer Service    Manager    United Kingdom
+Customer Service    Consultant    United Kingdom
+Bookkeeoper    Manager    United Kingdom, France, Portugal
+Bookkeeoper    Consultant    United Kingdom, France, Portugal
+
+Existing environment -
+
+Infrastructure -
+Contoso has the following subscriptions:
+Azure
+Microsoft 365
+Microsoft Dynamics 365
+Azure Active (Azure AD) Directory
+Contoso has Azure Active Directory groups for securing role-based access. The company uses the following group naming conventions:
+[Country]-[Level]-[Role]
+[Level]-[Role]
+
+Intellectual Property -
+Contoso has the intellectual property shown in the following table.
+
+Content    Format    Language    Content store    Domain
+Weekly webinars    video    English    Azure Blob storage    Vid.contoso.com
+Blogs    Text    English, French, Portuguese    WordPress    Pt-blog.contoso.com BLog.contoso.com Fr-blog.contoso.com
+Wikis    Text    English, French, Portuguese    Azure Cosmos DB    Internal.contoso.com.wiki
+Monthly conference recordings    Video    English    SharePoint Online    Contoso.sharepoint.com
+Frequently asked questions (FAQs)    Text    English    SharePoint Online    Contoso.sharepoint.com
+
+Text-based content is provided only in one language and is not translated.
+
+Requirements -
+
+Planned Projects -
+Contoso plans to develop the following:
+A document processing workflow to extract information automatically from PDFs and images of nancial documents
+A customer-support chatbot that will answer questions by using FAQs
+A searchable knowledgebase of all the intellectual property
+
+Technical Requirements -
+Contoso identifies the following technical requirements:
+All content must be approved before being published.
+All planned projects must support English, French, and Portuguese.
+All content must be secured by using role-based access control (RBAC).
+RBAC role assignments must use the principle of least privilege.
+RBAC roles must be assigned only to Azure Active Directory groups.
+AI solution responses must have a confidence score that is equal to or greater than 70 percent.
+When the response confidence score of an AI response is lower than 70 percent, the response must be improved by human input.
+Chatbot Requirements -
+Contoso identifies the following requirements for the chatbot:
+Provide customers with answers to the FAQs.
+Ensure that the customers can chat to a customer service agent.
+Ensure that the members of a group named Management-Accountants can approve the FAQs.
+Ensure that the members of a group named Consultant-Accountants can create and amend the FAQs.
+Ensure that the members of a group named the Agent-CustomerServices can browse the FAQs.
+Ensure that access to the customer service agents is managed by using Omnichannel for Customer Service.
+When the response confidence score is low, ensure that the chatbot can provide other response options to the customers.
+Document Processing Requirements
+Contoso identifies the following requirements for document processing:
+The document processing solution must be able to process standardized financial documents that have the following characteristics:
+- Contain fewer than 20 pages.
+- Be formatted as PDF or JPEG files.
+- Have a distinct standard for each oce.
+The document processing solution must be able to extract tables and text from the financial documents.
+The document processing solution must be able to extract information from receipt images.
+Members of a group named Management-Bookkeeper must dene how to extract tables from the financial documents.
+Members of a group named Consultant-Bookkeeper must be able to process the financial documents.
+Knowledgebase Requirements -
+Contoso identifies the following requirements for the knowledgebase:
+Supports searches for equivalent terms
+Can transcribe jargon with high accuracy
+Can search content in different formats, including video
+Provides relevant links to external resources for further research
+
+Question
+You are developing the knowledgebase by using Azure Cognitive Search.
+You need to meet the knowledgebase requirements for searching equivalent terms.
+What should you include in the solution?
+A. synonym map
+B. a suggester
+C. a custom analyzer
+D. a built-in key phrase extraction skill
+
+# Correct Answer:
+A
+Within a search service, synonym maps are a global resource that associate equivalent terms, expanding the scope of a query without the
+user having to actually provide the term. For example, assuming "dog", "canine", and "puppy" are mapped synonyms, a query on "canine" will
+match on a document containing "dog".
+Create synonyms: A synonym map is an asset that can be created once and used by many indexes.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/search/search-synonyms
+"""
+
+question_17_01 = """
+# Introductory Info
+
+Case study -
+This is a case study. Case studies are not timed separately. You can use as much exam time as you would like to complete each case.
+However, there may be additional case studies and sections on this exam. You must manage your time to ensure that you are able to
+complete all questions included on this exam in the time provided.
+To answer the questions included in a case study, you will need to reference information that is provided in the case study. Case studies might
+contain exhibits and other resources that provide more information about the scenario that is described in the case study. Each question is
+independent of the other questions in this case study.
+At the end of this case study, a review screen will appear. This screen allows you to review your answers and to make changes before you
+move to the next section of the exam. After you begin a new section, you cannot return to this section.
+
+To start the case study -
+To display the rst question in this case study, click the Next button. Use the buttons in the left pane to explore the content of the case study
+before you answer the questions. Clicking these buttons displays information such as business requirements, existing environment, and
+problem statements. If the case study has an All Information tab, note that the information displayed is identical to the information displayed
+on the subsequent tabs. When you are ready to answer a question, click the Question button to return to the question.
+
+Overview -
+A company named Wide World Importers is developing an e-commerce platform.
+You are working with a solutions architect to design and implement the features of the e-commerce platform. The platform will use
+microservices and a serverless environment built on Azure.
+Wide World Importers has a customer base that includes English, Spanish, and Portuguese speakers.
+Existing Environment -
+
+Applications -
+Wide World Importers has an App Service plan that contains the web apps shown in the following table.
+Name    Description
+Product Management    An app used by employees to create and manage products. The app and the expected inputs from the employees are in English.
+Inventory Tracking    An app used by employees to manage inventory when dispatching orders, receiving refunds, and receiving consignments from suppliers.
+
+Azure Resources -
+You have the following resources:
+An Azure Active Directory (Azure AD) tenant
+- The tenant supports internal authentication.
+- All employees belong to a group named AllUsers.
+- Senior managers belong to a group named LeadershipTeam.
+An Azure Functions resource
+- A function app posts to Azure Event Grid when stock levels of a product change between OK, Low Stock, and Out of Stock. The function app
+uses the Azure Cosmos DB change feed.
+An Azure Cosmos DB account
+- The account uses the Core (SQL) API.
+- The account stores data for the Product Management app and the Inventory Tracking app.
+An Azure Storage account
+- The account contains blob containers for assets related to products.
+- The assets include images, videos, and PDFs.
+An Azure Cognitive Services resource named wwics
+An Azure Video Analyzer for Media (previously Video Indexer) resource named wwics.
+
+Requirements -
+
+Business Goals -
+Wide World Importers wants to leverage AI technologies to differentiate itself from its competitors.
+
+Planned Changes -
+Wide World Importers plans to start the following projects:
+A product creation project: Help employees create accessible and multilingual product entries, while expediting product entry creation.
+A smart e-commerce project: Implement an Azure Cognitive Search solution to display products for customers to browse.
+A shopping on-the-go project: Build a chatbot that can be integrated into smart speakers to support customers.
+
+Business Requirements -
+Wide World Importers identifies the following business requirements for all the projects:
+Provide a multilingual customer experience that supports English, Spanish, and Portuguese.
+Whenever possible, scale based on transaction volumes to ensure consistent performance.
+Minimize costs.
+Governance and Security Requirements
+Wide World Importers identifies the following governance and security requirements:
+Data storage and processing must occur in datacenters located in the United States.
+Azure Cognitive Services must be inaccessible directly from the internet.
+
+Accessibility Requirements -
+Wide World Importers identifies the following accessibility requirements:
+All images must have relevant alt text.
+All videos must have transcripts that are associated to the video and included in product descriptions.
+Product descriptions, transcripts, and alt text must be available in English, Spanish, and Portuguese.
+
+Product Creation Requirements -
+Wide World Importers identifies the following requirements for improving the Product Management app:
+Minimize how long it takes for employees to create products and add assets.
+Remove the need for manual translations.
+
+Smart E-Commerce Requirements -
+Wide World Importers identifies the following requirements for the smart e-commerce project:
+Ensure that the Cognitive Search solution meets a Service Level Agreement (SLA) of 99.9% availability for searches and index writes.
+Provide users with the ability to search insight gained from the images, manuals, and videos associated with the products.
+Support autocompletion and suggestion based on all product name variants.
+Store all raw insight data that was generated, so the data can be processed later.
+Update the stock level eld in the product index immediately upon changes.
+Update the product index hourly.
+
+Shopping On-the-Go Requirements -
+Wide World Importers identifies the following requirements for the shopping on-the-go chatbot:
+Answer common questions.
+Support interactions in English, Spanish, and Portuguese.
+Replace an existing FAQ process so that all Q&A is managed from a central location.
+Provide all employees with the ability to edit Q&As. Only senior managers must be able to publish updates.
+Support purchases by providing information about relevant products to customers. Product displays must include images and warnings when
+stock levels are low or out of stock.
+
+Product JSON Sample
+You have the following JSON sample for a product.
+
+{
+    "sku": "b1",
+    "name": {
+        "en": "Bicycle",
+        "es": "Bicicleta",
+        "pt": "Bicicleta"
+    },
+    "stocklevel": "Out of Stock",
+    "description": {
+        "en": "Bicycle",
+        "es": "Bicicleta",
+        "pt": "Bicicleta"
+    },
+    "image": {
+        "uri" : "https://upload.wordlwideimporters.org/bicycle.jog",
+        "alttext": {
+            "en": "Bicycle",
+            "es": "Bicicleta",
+            "pt": "Bicicleta"
+        }
+    },
+    "createUtc": "2020-02-14T06:08:391",
+    "language": "en"
+}
+
+Question
+HOTSPOT -
+You are developing the shopping on-the-go project.
+You need to build the Adaptive Card for the chatbot.
+How should you complete the code? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Hot Area:
+{
+    "$schema": "http://adaptivecards.io.schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "TextBlock",
+            "size": "Medium",
+            "weight": "Bolder",
+            "text": "${______}" (if(language == 'en', 'en', name) / name / name.en / name[language])
+        },
+        {
+            "type": "TextBlock",
+            ______ ("$when": "${stockLevel != 'OK'}" / "$when": "stockLevel == 'OK'" / "$when": "stockLevel.OK")
+            "text": "${stockLevel}",
+            "color": "Attention"
+        },
+        {
+            "type": "Image",
+            "url": "${image.uri}",
+            "size": "Medium",
+            "altText": "${______ (image.altText.en /image.altText.language / image.altText.["language"] / image.altText.[language])}"
+        }
+    ]
+}
+
+# Correct Answer:
+name[language], "$when": "${stockLevel != 'OK'}", image.altText.[language]
+
+Box 1: name [language]
+Chatbot must support interactions in English, Spanish, and Portuguese.
+Box 2: "$when:${stockLevel != 'OK'}"
+Product displays must include images and warnings when stock levels are low or out of stock.
+Box 3: image.altText[language]
+"""
+
+question_17_02 = """
+# Introductory Info
+
+Case study -
+This is a case study. Case studies are not timed separately. You can use as much exam time as you would like to complete each case.
+However, there may be additional case studies and sections on this exam. You must manage your time to ensure that you are able to
+complete all questions included on this exam in the time provided.
+To answer the questions included in a case study, you will need to reference information that is provided in the case study. Case studies might
+contain exhibits and other resources that provide more information about the scenario that is described in the case study. Each question is
+independent of the other questions in this case study.
+At the end of this case study, a review screen will appear. This screen allows you to review your answers and to make changes before you
+move to the next section of the exam. After you begin a new section, you cannot return to this section.
+
+To start the case study -
+To display the rst question in this case study, click the Next button. Use the buttons in the left pane to explore the content of the case study
+before you answer the questions. Clicking these buttons displays information such as business requirements, existing environment, and
+problem statements. If the case study has an All Information tab, note that the information displayed is identical to the information displayed
+on the subsequent tabs. When you are ready to answer a question, click the Question button to return to the question.
+
+Overview -
+A company named Wide World Importers is developing an e-commerce platform.
+You are working with a solutions architect to design and implement the features of the e-commerce platform. The platform will use
+microservices and a serverless environment built on Azure.
+Wide World Importers has a customer base that includes English, Spanish, and Portuguese speakers.
+Existing Environment -
+
+Applications -
+Wide World Importers has an App Service plan that contains the web apps shown in the following table.
+Name    Description
+Product Management    An app used by employees to create and manage products. The app and the expected inputs from the employees are in English.
+Inventory Tracking    An app used by employees to manage inventory when dispatching orders, receiving refunds, and receiving consignments from suppliers.
+
+Azure Resources -
+You have the following resources:
+An Azure Active Directory (Azure AD) tenant
+- The tenant supports internal authentication.
+- All employees belong to a group named AllUsers.
+- Senior managers belong to a group named LeadershipTeam.
+An Azure Functions resource
+- A function app posts to Azure Event Grid when stock levels of a product change between OK, Low Stock, and Out of Stock. The function app
+uses the Azure Cosmos DB change feed.
+An Azure Cosmos DB account
+- The account uses the Core (SQL) API.
+- The account stores data for the Product Management app and the Inventory Tracking app.
+An Azure Storage account
+- The account contains blob containers for assets related to products.
+- The assets include images, videos, and PDFs.
+An Azure Cognitive Services resource named wwics
+An Azure Video Analyzer for Media (previously Video Indexer) resource named wwics.
+
+Requirements -
+
+Business Goals -
+Wide World Importers wants to leverage AI technologies to differentiate itself from its competitors.
+
+Planned Changes -
+Wide World Importers plans to start the following projects:
+A product creation project: Help employees create accessible and multilingual product entries, while expediting product entry creation.
+A smart e-commerce project: Implement an Azure Cognitive Search solution to display products for customers to browse.
+A shopping on-the-go project: Build a chatbot that can be integrated into smart speakers to support customers.
+
+Business Requirements -
+Wide World Importers identifies the following business requirements for all the projects:
+Provide a multilingual customer experience that supports English, Spanish, and Portuguese.
+Whenever possible, scale based on transaction volumes to ensure consistent performance.
+Minimize costs.
+Governance and Security Requirements
+Wide World Importers identifies the following governance and security requirements:
+Data storage and processing must occur in datacenters located in the United States.
+Azure Cognitive Services must be inaccessible directly from the internet.
+
+Accessibility Requirements -
+Wide World Importers identifies the following accessibility requirements:
+All images must have relevant alt text.
+All videos must have transcripts that are associated to the video and included in product descriptions.
+Product descriptions, transcripts, and alt text must be available in English, Spanish, and Portuguese.
+
+Product Creation Requirements -
+Wide World Importers identifies the following requirements for improving the Product Management app:
+Minimize how long it takes for employees to create products and add assets.
+Remove the need for manual translations.
+
+Smart E-Commerce Requirements -
+Wide World Importers identifies the following requirements for the smart e-commerce project:
+Ensure that the Cognitive Search solution meets a Service Level Agreement (SLA) of 99.9% availability for searches and index writes.
+Provide users with the ability to search insight gained from the images, manuals, and videos associated with the products.
+Support autocompletion and suggestion based on all product name variants.
+Store all raw insight data that was generated, so the data can be processed later.
+Update the stock level eld in the product index immediately upon changes.
+Update the product index hourly.
+
+Shopping On-the-Go Requirements -
+Wide World Importers identifies the following requirements for the shopping on-the-go chatbot:
+Answer common questions.
+Support interactions in English, Spanish, and Portuguese.
+Replace an existing FAQ process so that all Q&A is managed from a central location.
+Provide all employees with the ability to edit Q&As. Only senior managers must be able to publish updates.
+Support purchases by providing information about relevant products to customers. Product displays must include images and warnings when
+stock levels are low or out of stock.
+
+Product JSON Sample
+You have the following JSON sample for a product.
+
+{
+    "sku": "b1",
+    "name": {
+        "en": "Bicycle",
+        "es": "Bicicleta",
+        "pt": "Bicicleta"
+    },
+    "stocklevel": "Out of Stock",
+    "description": {
+        "en": "Bicycle",
+        "es": "Bicicleta",
+        "pt": "Bicicleta"
+    },
+    "image": {
+        "uri" : "https://upload.wordlwideimporters.org/bicycle.jog",
+        "alttext": {
+            "en": "Bicycle",
+            "es": "Bicicleta",
+            "pt": "Bicicleta"
+        }
+    },
+    "createUtc": "2020-02-14T06:08:391",
+    "language": "en"
+}
+
+Question
+HOTSPOT -
+You are developing the shopping on-the-go project.
+You are configuring access to the QnA Maker (classic) resources.
+Which role should you assign to AllUsers and LeadershipTeam? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+Hot Area:
+AllUsers: ______ (Cognitive Service User / Contributor / Owner / QnA Maker Editor / QnA Maker Read)
+LeadershipTeam: ______ (Cognitive Service User / Contributor / Owner / QnA Maker Editor / QnA Maker Read)
+
+# Correct Answer:
+QnA Maker Editor, Contributor
+
+Box 1: QnA Maker Editor -
+Scenario: Provide all employees with the ability to edit Q&As.
+The QnA Maker Editor (read/write) has the following permissions:
+✑ Create KB API
+✑ Update KB API
+✑ Replace KB API
+✑ Replace Alterations
+✑ "Train API" [in new service model v5]
+Box 2: Contributor -
+Scenario: Only senior managers must be able to publish updates.
+Contributor permission: All except ability to add new members to roles
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/reference-role-based-access-control
+"""
+
+question_17_03 = """
+# Introductory Info
+
+Case study -
+This is a case study. Case studies are not timed separately. You can use as much exam time as you would like to complete each case.
+However, there may be additional case studies and sections on this exam. You must manage your time to ensure that you are able to
+complete all questions included on this exam in the time provided.
+To answer the questions included in a case study, you will need to reference information that is provided in the case study. Case studies might
+contain exhibits and other resources that provide more information about the scenario that is described in the case study. Each question is
+independent of the other questions in this case study.
+At the end of this case study, a review screen will appear. This screen allows you to review your answers and to make changes before you
+move to the next section of the exam. After you begin a new section, you cannot return to this section.
+
+To start the case study -
+To display the rst question in this case study, click the Next button. Use the buttons in the left pane to explore the content of the case study
+before you answer the questions. Clicking these buttons displays information such as business requirements, existing environment, and
+problem statements. If the case study has an All Information tab, note that the information displayed is identical to the information displayed
+on the subsequent tabs. When you are ready to answer a question, click the Question button to return to the question.
+
+Overview -
+A company named Wide World Importers is developing an e-commerce platform.
+You are working with a solutions architect to design and implement the features of the e-commerce platform. The platform will use
+microservices and a serverless environment built on Azure.
+Wide World Importers has a customer base that includes English, Spanish, and Portuguese speakers.
+Existing Environment -
+
+Applications -
+Wide World Importers has an App Service plan that contains the web apps shown in the following table.
+Name    Description
+Product Management    An app used by employees to create and manage products. The app and the expected inputs from the employees are in English.
+Inventory Tracking    An app used by employees to manage inventory when dispatching orders, receiving refunds, and receiving consignments from suppliers.
+
+Azure Resources -
+You have the following resources:
+An Azure Active Directory (Azure AD) tenant
+- The tenant supports internal authentication.
+- All employees belong to a group named AllUsers.
+- Senior managers belong to a group named LeadershipTeam.
+An Azure Functions resource
+- A function app posts to Azure Event Grid when stock levels of a product change between OK, Low Stock, and Out of Stock. The function app
+uses the Azure Cosmos DB change feed.
+An Azure Cosmos DB account
+- The account uses the Core (SQL) API.
+- The account stores data for the Product Management app and the Inventory Tracking app.
+An Azure Storage account
+- The account contains blob containers for assets related to products.
+- The assets include images, videos, and PDFs.
+An Azure Cognitive Services resource named wwics
+An Azure Video Analyzer for Media (previously Video Indexer) resource named wwics.
+
+Requirements -
+
+Business Goals -
+Wide World Importers wants to leverage AI technologies to differentiate itself from its competitors.
+
+Planned Changes -
+Wide World Importers plans to start the following projects:
+A product creation project: Help employees create accessible and multilingual product entries, while expediting product entry creation.
+A smart e-commerce project: Implement an Azure Cognitive Search solution to display products for customers to browse.
+A shopping on-the-go project: Build a chatbot that can be integrated into smart speakers to support customers.
+
+Business Requirements -
+Wide World Importers identifies the following business requirements for all the projects:
+Provide a multilingual customer experience that supports English, Spanish, and Portuguese.
+Whenever possible, scale based on transaction volumes to ensure consistent performance.
+Minimize costs.
+Governance and Security Requirements
+Wide World Importers identifies the following governance and security requirements:
+Data storage and processing must occur in datacenters located in the United States.
+Azure Cognitive Services must be inaccessible directly from the internet.
+
+Accessibility Requirements -
+Wide World Importers identifies the following accessibility requirements:
+All images must have relevant alt text.
+All videos must have transcripts that are associated to the video and included in product descriptions.
+Product descriptions, transcripts, and alt text must be available in English, Spanish, and Portuguese.
+
+Product Creation Requirements -
+Wide World Importers identifies the following requirements for improving the Product Management app:
+Minimize how long it takes for employees to create products and add assets.
+Remove the need for manual translations.
+
+Smart E-Commerce Requirements -
+Wide World Importers identifies the following requirements for the smart e-commerce project:
+Ensure that the Cognitive Search solution meets a Service Level Agreement (SLA) of 99.9% availability for searches and index writes.
+Provide users with the ability to search insight gained from the images, manuals, and videos associated with the products.
+Support autocompletion and suggestion based on all product name variants.
+Store all raw insight data that was generated, so the data can be processed later.
+Update the stock level eld in the product index immediately upon changes.
+Update the product index hourly.
+
+Shopping On-the-Go Requirements -
+Wide World Importers identifies the following requirements for the shopping on-the-go chatbot:
+Answer common questions.
+Support interactions in English, Spanish, and Portuguese.
+Replace an existing FAQ process so that all Q&A is managed from a central location.
+Provide all employees with the ability to edit Q&As. Only senior managers must be able to publish updates.
+Support purchases by providing information about relevant products to customers. Product displays must include images and warnings when
+stock levels are low or out of stock.
+
+Product JSON Sample
+You have the following JSON sample for a product.
+
+{
+    "sku": "b1",
+    "name": {
+        "en": "Bicycle",
+        "es": "Bicicleta",
+        "pt": "Bicicleta"
+    },
+    "stocklevel": "Out of Stock",
+    "description": {
+        "en": "Bicycle",
+        "es": "Bicicleta",
+        "pt": "Bicicleta"
+    },
+    "image": {
+        "uri" : "https://upload.wordlwideimporters.org/bicycle.jog",
+        "alttext": {
+            "en": "Bicycle",
+            "es": "Bicicleta",
+            "pt": "Bicicleta"
+        }
+    },
+    "createUtc": "2020-02-14T06:08:391",
+    "language": "en"
+}
+
+Question
+HOTSPOT -
+You are developing the shopping on-the-go project.
+You need to build the Adaptive Card for the chatbot.
+How should you complete the code? To answer, select the appropriate options in the answer area.
+NOTE: Each correct selection is worth one point.
+
+Hot Area:
+{
+    "version": "1.3",
+    "body": [
+        {
+            "type": "TextBlock",
+            "size": "Medium",
+            "weight": "Bolder",
+            "text": "${______}" (if(language == 'en', 'en', name) / name / name.en / name[language])
+        },
+        {
+            "type": "TextBlock",
+            ______ ("$when": "${stockLevel != 'OK'}" / "$when": "stockLevel == 'OK'" / "$when": "stockLevel.OK")
+            "text": "${stockLevel}",
+            "color": "Attention"
+        },
+        {
+            "type": "Image",
+            "url": "${image.uri}",
+            "size": "Medium",
+            "altText": "${______ (image.altText.en /image.altText.language / image.altText.["language"] / image.altText.[language])}"
+        }
+    ]
+}
+
+# Correct Answer:
+name[language], "$when": "${stockLevel != 'OK'}", image.altText.[language]
+
+Box 1: name [language]
+Chatbot must support interactions in English, Spanish, and Portuguese.
+Box 2: "$when:${stockLevel != 'OK'}"
+Product displays must include images and warnings when stock levels are low or out of stock.
+Box 3: image.altText[language]
+"""
+
+question_18_01 = """
+# Introductory Info
+
+Case study -
+This is a case study. Case studies are not timed separately. You can use as much exam time as you would like to complete each case.
+However, there may be additional case studies and sections on this exam. You must manage your time to ensure that you are able to
+complete all questions included on this exam in the time provided.
+To answer the questions included in a case study, you will need to reference information that is provided in the case study. Case studies might
+contain exhibits and other resources that provide more information about the scenario that is described in the case study. Each question is
+independent of the other questions in this case study.
+At the end of this case study, a review screen will appear. This screen allows you to review your answers and to make changes before you
+move to the next section of the exam. After you begin a new section, you cannot return to this section.
+
+To start the case study -
+To display the rst question in this case study, click the Next button. Use the buttons in the left pane to explore the content of the case study
+before you answer the questions. Clicking these buttons displays information such as business requirements, existing environment, and
+problem statements. If the case study has an All Information tab, note that the information displayed is identical to the information displayed
+on the subsequent tabs. When you are ready to answer a question, click the Question button to return to the question.
+
+Overview -
+
+General Overview -
+Contoso, Ltd. is an international accounting company that has oces in France, Portugal, and the United Kingdom.
+Contoso has a professional services department that contains the roles shown in the following table.
+
+Name    Position    Office
+Accountant    Manager    United Kingdom, France, Portugal
+Accountant    Consultant    United Kingdom, France, Portugal
+Customer Service    Manager    United Kingdom
+Customer Service    Consultant    United Kingdom
+Bookkeeoper    Manager    United Kingdom, France, Portugal
+Bookkeeoper    Consultant    United Kingdom, France, Portugal
+
+Existing environment -
+
+Infrastructure -
+Contoso has the following subscriptions:
+Azure
+Microsoft 365
+Microsoft Dynamics 365
+Azure Active (Azure AD) Directory
+Contoso has Azure Active Directory groups for securing role-based access. The company uses the following group naming conventions:
+[Country]-[Level]-[Role]
+[Level]-[Role]
+
+Intellectual Property -
+Contoso has the intellectual property shown in the following table.
+
+Content    Format    Language    Content store    Domain
+Weekly webinars    video    English    Azure Blob storage    Vid.contoso.com
+Blogs    Text    English, French, Portuguese    WordPress    Pt-blog.contoso.com BLog.contoso.com Fr-blog.contoso.com
+Wikis    Text    English, French, Portuguese    Azure Cosmos DB    Internal.contoso.com.wiki
+Monthly conference recordings    Video    English    SharePoint Online    Contoso.sharepoint.com
+Frequently asked questions (FAQs)    Text    English    SharePoint Online    Contoso.sharepoint.com
+
+Text-based content is provided only in one language and is not translated.
+
+Requirements -
+
+Planned Projects -
+Contoso plans to develop the following:
+A document processing workflow to extract information automatically from PDFs and images of nancial documents
+A customer-support chatbot that will answer questions by using FAQs
+A searchable knowledgebase of all the intellectual property
+
+Technical Requirements -
+Contoso identifies the following technical requirements:
+All content must be approved before being published.
+All planned projects must support English, French, and Portuguese.
+All content must be secured by using role-based access control (RBAC).
+RBAC role assignments must use the principle of least privilege.
+RBAC roles must be assigned only to Azure Active Directory groups.
+AI solution responses must have a confidence score that is equal to or greater than 70 percent.
+When the response confidence score of an AI response is lower than 70 percent, the response must be improved by human input.
+Chatbot Requirements -
+Contoso identifies the following requirements for the chatbot:
+Provide customers with answers to the FAQs.
+Ensure that the customers can chat to a customer service agent.
+Ensure that the members of a group named Management-Accountants can approve the FAQs.
+Ensure that the members of a group named Consultant-Accountants can create and amend the FAQs.
+Ensure that the members of a group named the Agent-CustomerServices can browse the FAQs.
+Ensure that access to the customer service agents is managed by using Omnichannel for Customer Service.
+When the response confidence score is low, ensure that the chatbot can provide other response options to the customers.
+Document Processing Requirements
+Contoso identifies the following requirements for document processing:
+The document processing solution must be able to process standardized financial documents that have the following characteristics:
+- Contain fewer than 20 pages.
+- Be formatted as PDF or JPEG files.
+- Have a distinct standard for each oce.
+The document processing solution must be able to extract tables and text from the financial documents.
+The document processing solution must be able to extract information from receipt images.
+Members of a group named Management-Bookkeeper must dene how to extract tables from the financial documents.
+Members of a group named Consultant-Bookkeeper must be able to process the financial documents.
+Knowledgebase Requirements -
+Contoso identifies the following requirements for the knowledgebase:
+Supports searches for equivalent terms
+Can transcribe jargon with high accuracy
+Can search content in different formats, including video
+Provides relevant links to external resources for further research
+
+Question
+You are developing the chatbot.
+You create the following components:
+✑ A QnA Maker resource
+✑ A chatbot by using the Azure Bot Framework SDK
+You need to integrate the components to meet the chatbot requirements.
+Which property should you use?
+A. QnAMakerOptions.StrictFilters
+B. QnADialogResponseOptions.CardNoMatchText
+C. QnAMakerOptions.RankerType
+D. QnAMakerOptions.ScoreThreshold
+
+# Correct Answer:
+D
+Scenario: When the response confidence score is low, ensure that the chatbot can provide other response options to the customers.
+When no good match is found by the ranker, the confidence score of 0.0 or "None" is returned and the default response is "No good match
+found in the KB". You can override this default response in the bot or application code calling the endpoint. Alternately, you can also set the
+override response in Azure and this changes the default for all knowledge bases deployed in a particular QnA Maker service.
+Choosing Ranker type: By default, QnA Maker searches through questions and answers. If you want to search through questions only, to
+generate an answer, use the RankerType=QuestionOnly in the POST body of the GenerateAnswer request.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/concepts/best-practices
+"""
+
+question_18_02 = """
+# Introductory Info
+
+Case study -
+This is a case study. Case studies are not timed separately. You can use as much exam time as you would like to complete each case.
+However, there may be additional case studies and sections on this exam. You must manage your time to ensure that you are able to
+complete all questions included on this exam in the time provided.
+To answer the questions included in a case study, you will need to reference information that is provided in the case study. Case studies might
+contain exhibits and other resources that provide more information about the scenario that is described in the case study. Each question is
+independent of the other questions in this case study.
+At the end of this case study, a review screen will appear. This screen allows you to review your answers and to make changes before you
+move to the next section of the exam. After you begin a new section, you cannot return to this section.
+
+To start the case study -
+To display the rst question in this case study, click the Next button. Use the buttons in the left pane to explore the content of the case study
+before you answer the questions. Clicking these buttons displays information such as business requirements, existing environment, and
+problem statements. If the case study has an All Information tab, note that the information displayed is identical to the information displayed
+on the subsequent tabs. When you are ready to answer a question, click the Question button to return to the question.
+
+Overview -
+
+General Overview -
+Contoso, Ltd. is an international accounting company that has oces in France, Portugal, and the United Kingdom.
+Contoso has a professional services department that contains the roles shown in the following table.
+
+Name    Position    Office
+Accountant    Manager    United Kingdom, France, Portugal
+Accountant    Consultant    United Kingdom, France, Portugal
+Customer Service    Manager    United Kingdom
+Customer Service    Consultant    United Kingdom
+Bookkeeoper    Manager    United Kingdom, France, Portugal
+Bookkeeoper    Consultant    United Kingdom, France, Portugal
+
+Existing environment -
+
+Infrastructure -
+Contoso has the following subscriptions:
+Azure
+Microsoft 365
+Microsoft Dynamics 365
+Azure Active (Azure AD) Directory
+Contoso has Azure Active Directory groups for securing role-based access. The company uses the following group naming conventions:
+[Country]-[Level]-[Role]
+[Level]-[Role]
+
+Intellectual Property -
+Contoso has the intellectual property shown in the following table.
+
+Content    Format    Language    Content store    Domain
+Weekly webinars    video    English    Azure Blob storage    Vid.contoso.com
+Blogs    Text    English, French, Portuguese    WordPress    Pt-blog.contoso.com BLog.contoso.com Fr-blog.contoso.com
+Wikis    Text    English, French, Portuguese    Azure Cosmos DB    Internal.contoso.com.wiki
+Monthly conference recordings    Video    English    SharePoint Online    Contoso.sharepoint.com
+Frequently asked questions (FAQs)    Text    English    SharePoint Online    Contoso.sharepoint.com
+
+Text-based content is provided only in one language and is not translated.
+
+Requirements -
+
+Planned Projects -
+Contoso plans to develop the following:
+A document processing workflow to extract information automatically from PDFs and images of nancial documents
+A customer-support chatbot that will answer questions by using FAQs
+A searchable knowledgebase of all the intellectual property
+
+Technical Requirements -
+Contoso identifies the following technical requirements:
+All content must be approved before being published.
+All planned projects must support English, French, and Portuguese.
+All content must be secured by using role-based access control (RBAC).
+RBAC role assignments must use the principle of least privilege.
+RBAC roles must be assigned only to Azure Active Directory groups.
+AI solution responses must have a confidence score that is equal to or greater than 70 percent.
+When the response confidence score of an AI response is lower than 70 percent, the response must be improved by human input.
+Chatbot Requirements -
+Contoso identifies the following requirements for the chatbot:
+Provide customers with answers to the FAQs.
+Ensure that the customers can chat to a customer service agent.
+Ensure that the members of a group named Management-Accountants can approve the FAQs.
+Ensure that the members of a group named Consultant-Accountants can create and amend the FAQs.
+Ensure that the members of a group named the Agent-CustomerServices can browse the FAQs.
+Ensure that access to the customer service agents is managed by using Omnichannel for Customer Service.
+When the response confidence score is low, ensure that the chatbot can provide other response options to the customers.
+Document Processing Requirements
+Contoso identifies the following requirements for document processing:
+The document processing solution must be able to process standardized financial documents that have the following characteristics:
+- Contain fewer than 20 pages.
+- Be formatted as PDF or JPEG files.
+- Have a distinct standard for each oce.
+The document processing solution must be able to extract tables and text from the financial documents.
+The document processing solution must be able to extract information from receipt images.
+Members of a group named Management-Bookkeeper must dene how to extract tables from the financial documents.
+Members of a group named Consultant-Bookkeeper must be able to process the financial documents.
+Knowledgebase Requirements -
+Contoso identifies the following requirements for the knowledgebase:
+Supports searches for equivalent terms
+Can transcribe jargon with high accuracy
+Can search content in different formats, including video
+Provides relevant links to external resources for further research
+
+Question
+You are developing the chatbot.
+You create the following components:
+✑ A QnA Maker resource
+✑ A chatbot by using the Azure Bot Framework SDK
+You need to add an additional component to meet the technical requirements and the chatbot requirements.
+What should you add?
+A. Microsoft Translator
+B. Language Understanding
+C. Orchestrator
+D. chatdown
+
+# Correct Answer:
+C
+Scenario: All planned projects must support English, French, and Portuguese.
+If a bot uses multiple LUIS models and QnA Maker knowledge bases (knowledge bases), you can use the Dispatch tool to determine which
+LUIS model or QnA
+Maker knowledge base best matches the user input. The dispatch tool does this by creating a single LUIS app to route user input to the
+correct model.
+
+# Reference:
+https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-tutorial-dispatch
 """

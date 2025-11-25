@@ -24,6 +24,7 @@ def question_picker():
 
                 if not q in merged_questions:
                     merged_questions[q] = {
+                        'question_id': attr_name,
                         'question': q,
                         'answer': a,
                         'reference': r,
@@ -56,6 +57,7 @@ def mock_exerciser():
             if current_question is None:  # 显示新问题
                 current_question = random.choice(questions)
                 print("\n" + "=" * 50)
+                print(current_question['question_id'])
                 print("问题:")
                 print(current_question['question'].strip())
                 print("\n按回车键查看答案...")

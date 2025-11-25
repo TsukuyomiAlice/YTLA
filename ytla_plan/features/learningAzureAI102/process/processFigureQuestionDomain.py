@@ -51,7 +51,7 @@ def judge_answer(output_file=None):
 
     try:
         for attr_name in dir(questionSet_AI_102):
-            if attr_name.startswith('question_'):
+            if attr_name.startswith('question_09') or attr_name.startswith('question_1'):
                 question = getattr(questionSet_AI_102, attr_name)
 
                 # 准备输出内容
@@ -100,5 +100,5 @@ def process_figure_question_domain():
             analyze_similarity(question)
 
 
-judge_answer('D:\\answers_output.txt')
-# judge_answer_for_single_question(questionSet_AI_102.question_1_25)
+# judge_answer('D:\\answers_output.txt')
+judge_answer_for_single_question(questionSet_AI_102.question_03_69)
