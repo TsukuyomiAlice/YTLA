@@ -10,9 +10,9 @@
 <script setup lang="ts">
 import { usePlanCardStore } from '@/features/planManage/stores/planCardStore.ts'
 const planStore = usePlanCardStore()
-import { useModuleProcessStore } from '@/core/modules/stores/moduleProcessStore.ts'
+import { useModuleProcessStore } from '@/core/modules/_type/stores/moduleProcessStore.ts'
 const moduleProcessStore = useModuleProcessStore()
-import { usePanelStore } from '@/core/frame/services/panelStore.ts'
+import { usePanelStore } from '@/core/frame/_type/services/panelStore.ts'
 const panelStore = usePanelStore()
 
 const handleAddPlan = async () => {

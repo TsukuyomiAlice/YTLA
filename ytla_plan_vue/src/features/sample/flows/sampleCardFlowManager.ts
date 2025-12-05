@@ -1,6 +1,6 @@
 import type { Component } from 'vue'
 import { defineAsyncComponent, markRaw } from 'vue'
-import type { CardEditorFlowManager } from '@/core/frame/types/flowManagerTypes.ts'
+import type { CardEditorFlowManager } from '@/core/frame/_type/types/flowManagerTypes.ts'
 import type { SampleCardSubType } from '@/features/sample/types/sampleCardTypes'
 
 export class SampleCardEditorFlowManager implements CardEditorFlowManager {

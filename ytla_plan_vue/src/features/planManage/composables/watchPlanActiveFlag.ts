@@ -1,6 +1,6 @@
 import { ref, onMounted, watch } from 'vue'
 import { usePlanCardStore } from '@/features/planManage/stores/planCardStore.ts'
-import { useModuleProcessStore } from '@/core/modules/stores/moduleProcessStore.ts'
+import { useModuleProcessStore } from '@/core/modules/_type/stores/moduleProcessStore.ts'
 
 // activeFlag change
 const planStore = usePlanCardStore()

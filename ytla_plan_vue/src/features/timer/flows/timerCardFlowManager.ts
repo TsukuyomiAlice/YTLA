@@ -1,7 +1,7 @@
 import type { Component } from 'vue'
 import { defineAsyncComponent, markRaw } from 'vue'
-import type { CardEditorFlowManager } from '@/core/frame/types/flowManagerTypes.ts'
-import type { TimerCardSubType } from '@/features/timer/types/timerCardTypes'
+import type { CardEditorFlowManager } from '@/core/frame/_type/types/flowManagerTypes.ts'
+import type { TimerCardSubType } from '@/features/timer/types/baseTimerCardType.ts'
 
 export class TimerCardEditorFlowManager implements CardEditorFlowManager {
   private flows = new Map<string, Component[]>()

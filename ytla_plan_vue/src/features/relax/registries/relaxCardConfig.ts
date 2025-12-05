@@ -1,8 +1,8 @@
 import type { Component } from 'vue'
-import type { CardRegistry } from '@/core/sideCards/registries/cardRegistry.ts'
+import type { CardRegistry } from '@/core/sideCards/_type/registries/cardRegistry.ts'
 import type { RelaxCardSubType, WordleCardData } from '@/features/relax/types/relaxCardTypes'
 import WordleCard from '@/features/relax/components/cards/wordle/WordleCard.vue'
-import SideCard from '@/core/sideCards/components/SideCard.vue'
+import SideCard from '@/core/sideCards/_type/components/SideCard.vue'
 
 /**
  * 计时器卡片注册表（基于通用cardRegistry实现）

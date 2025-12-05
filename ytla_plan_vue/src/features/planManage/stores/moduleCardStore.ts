@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
-import type { BaseModule } from '@/core/modules/types/moduleTypes.ts'
-import { ModuleService } from '@/core/modules/services/moduleService.ts'
+import type { BaseModule } from '@/core/modules/_type/types/moduleTypes.ts'
+import { ModuleService } from '@/core/modules/_type/services/moduleService.ts'
 
 // 依赖注入配置
 const API_BASE = import.meta.env.VITE_API_BASE

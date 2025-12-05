@@ -70,18 +70,18 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
-import SideCardEditorFlowNavigator from '@/core/sideCards/layouts/SideCardEditorFlowNavigator.vue'
-import { formatDateTime, formatDateTimeNoSecs, currentDateTime } from '@/core/frame/utils/timeUtils.ts'
-import type { AlarmCardData, TimerCardSubType } from '@/features/timer/types/timerCardTypes.ts'
+import SideCardEditorFlowNavigator from '@/core/sideCards/_type/layouts/SideCardEditorFlowNavigator.vue'
+import { formatDateTime, formatDateTimeNoSecs, currentDateTime } from '@/core/frame/_type/utils/timeUtils.ts'
+import type { AlarmCard } from '@/features/timer/types/alarmCardType.ts'
 
 const props = defineProps<{
   mode: 'create' | 'edit'
-  initialData?: AlarmCardData
-  cardSubType: TimerCardSubType
+  initialData?: AlarmCard
+  cardSubType: 'alarm'
 }>()
 
 const emit = defineEmits<{
-  (e: 'submit', payload: AlarmCardData | Omit<AlarmCardData, 'card_id'>): void
+  (e: 'submit', payload: AlarmCard | Omit<AlarmCard, 'card_id'>): void
   (e: 'cancel'): void
   (e: 'prev'): void
 }>()
@@ -119,10 +119,8 @@ const buildPayload = () => ({
 })
 
 const validateTime = () => {
-  if (!alarmTime.value) {
-    return false
-  }
-  return true
+  return alarmTime.value;
+
 }
 
 const canSubmit = computed(() => validateTime())
@@ -135,7 +133,7 @@ const handleSubmit = () => {
     ? { ...props.initialData, ...basePayload }
     : { ...basePayload, card_sub_type: props.cardSubType }
 
-  emit('submit', fullPayload as AlarmCardData)
+  emit('submit', fullPayload as AlarmCard)
 }
 
 const handleCancel = () => emit('cancel')

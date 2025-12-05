@@ -1,4 +1,4 @@
-import type { BaseCard, CardSubType, CardType } from '@/core/sideCards/types/cardTypes.ts'
+import type { BaseCard, CardSubType, CardType } from '@/core/sideCards/_type/types/baseCardType.ts'
 
 export type SampleCardType = 'sample';
 export type SampleCardSubType = 'sample1' | 'sample2' | 'sample3' ;

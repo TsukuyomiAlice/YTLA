@@ -10,7 +10,7 @@
 <script setup lang="ts">
 import { useModuleCardStore } from '@/features/planManage/stores/moduleCardStore.ts'
 import { usePlanCardStore } from '@/features/planManage/stores/planCardStore.ts'
-import { useModuleProcessStore } from '@/core/modules/stores/moduleProcessStore.ts'
+import { useModuleProcessStore } from '@/core/modules/_type/stores/moduleProcessStore.ts'
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 

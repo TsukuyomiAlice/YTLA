@@ -1,9 +1,8 @@
 import { ref, computed, nextTick, watch } from 'vue'
 import { useModuleCardStore } from '@/features/planManage/stores/moduleCardStore.ts'
-import { ModuleService } from '@/core/modules/services/moduleService.ts'
-import { parseTags, type BaseModule, type TagArray } from '@/core/modules/types/moduleTypes.ts'
-import { usePanelStore } from '@/core/frame/services/panelStore.ts'
-import { useModuleProcessStore } from '@/core/modules/stores/moduleProcessStore.ts'
+import { ModuleService } from '@/core/modules/_type/services/moduleService.ts'
+import { parseTags, type BaseModule } from '@/core/modules/_type/types/moduleTypes.ts'
+import { useModuleProcessStore } from '@/core/modules/_type/stores/moduleProcessStore.ts'
 
 export const useModuleCardEditor = (props: any, emit: any) => {
   const store = useModuleCardStore()
@@ -122,7 +121,7 @@ export const useModuleCardEditor = (props: any, emit: any) => {
   }
 
   // tags
-  const tagsArray = ref<TagArray>(parseTags(props.tags) || '')
+  const tagsArray = ref<string[]>(parseTags(props.tags) || '')
   const isAddingTag = ref(false)
   const newTag = ref('')
   const tagInput = ref<HTMLInputElement | null>(null)

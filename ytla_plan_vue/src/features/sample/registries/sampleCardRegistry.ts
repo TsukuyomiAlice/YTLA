@@ -1,5 +1,5 @@
 import type { Component } from 'vue'
-import type { CardRegistry } from '@/core/sideCards/registries/cardRegistry.ts'
+import type { CardRegistry } from '@/core/sideCards/_type/registries/cardRegistry.ts'
 import type {
   SampleCardSubType,
   Sample1CardData,
@@ -9,7 +9,7 @@ import type {
 import Sample1Card from '@/features/sample/components/cards/sample1/Sample1Card.vue'
 import Sample2Card from '@/features/sample/components/cards/sample2/Sample2Card.vue'
 import Sample3Card from '@/features/sample/components/cards/sample3/Sample3Card.vue'
-import SideCard from '@/core/sideCards/components/SideCard.vue'
+import SideCard from '@/core/sideCards/_type/components/SideCard.vue'
 
 /**
  * 计时器卡片注册表（基于通用cardRegistry实现）

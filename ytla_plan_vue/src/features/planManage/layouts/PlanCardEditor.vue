@@ -167,7 +167,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Plan, TagString } from '@/core/plans/types/planTypes.ts'
+import type { Plan, TagString } from '@/core/plans/_type/types/planTypes.ts'
 
 const props = withDefaults(defineProps<{
   mode: 'create' | 'edit'
@@ -220,7 +220,7 @@ const loadPlanData = async (planId: number) => {
 
 // 监听editingPlanId变化
 import { onMounted, watch } from 'vue'
-import { useModuleProcessStore } from '@/core/modules/stores/moduleProcessStore.ts'
+import { useModuleProcessStore } from '@/core/modules/_type/stores/moduleProcessStore.ts'
 
 const moduleProcessStore = useModuleProcessStore()
 onMounted(() => {

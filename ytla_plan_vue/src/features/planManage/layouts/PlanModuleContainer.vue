@@ -42,7 +42,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { getModuleCardRegistry } from '@/core/modules/registries/moduleCardRegistry.ts'
+import { getModuleCardRegistry } from '@/core/modules/_type/registries/moduleCardRegistry.ts'
 
 const getComponent = (module: any) => {
   const registry = getModuleCardRegistry()
@@ -74,7 +74,7 @@ const {
   editingGroup, handleNameBlur, cancelEditing, handleDeleteGroup
 } = useModuleGroup(props, emit)
 
-import { useModuleProcessStore } from '@/core/modules/stores/moduleProcessStore.ts'
+import { useModuleProcessStore } from '@/core/modules/_type/stores/moduleProcessStore.ts'
 
 const moduleProcessStore = useModuleProcessStore()
 import { useModuleCardStore } from '@/features/planManage/stores/moduleCardStore.ts'

@@ -22,10 +22,10 @@
 <script setup lang="ts">
 import { computed, nextTick, watch, ref, onMounted } from 'vue'
 import { usePlanContainer } from '@/features/planManage/composables/usePlanContainer.ts'
-import { useMasonryLayout } from '@/core/frame/composables/useMasonryLayout.ts'
-import { getPlanCardRegistry } from '@/core/plans/registries/planCardRegistry.ts'
+import { useMasonryLayout } from '@/core/frame/_type/composables/useMasonryLayout.ts'
+import { getPlanCardRegistry } from '@/core/plans/_type/registries/planCardRegistry.ts'
 import { usePlanCardStore } from '@/features/planManage/stores/planCardStore.ts'
-import { usePersistence } from '@/core/frame/composables/usePersistence.ts'
+import { usePersistence } from '@/core/frame/_type/composables/usePersistence.ts'
 
 const isMasonrySupported = ref(false)
 const userAgent = navigator.userAgent.toLowerCase()

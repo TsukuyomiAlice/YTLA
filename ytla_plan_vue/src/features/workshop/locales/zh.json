@@ -1,0 +1,13 @@
+{
+  "type_name": "工坊",
+  "type_description": "用于开发者创建或管理模组与卡片",
+
+  "thought_subtype_name": "想法",
+  "thought_subtype_description": "你的创意",
+
+  "connection_subtype_name": "连接",
+  "connection_subtype_description": "用于管理模组和卡片中的前后端连接",
+
+  "function_subtype_name": "功能",
+  "function_subtype_description": "用于管理模组和卡片中的后端功能"
+}

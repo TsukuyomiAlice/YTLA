@@ -104,10 +104,10 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, onMounted, onBeforeUnmount, inject } from 'vue'
-import { useSideCardEditor } from '@/core/sideCards/composables/useSideCardEditor.ts'
-import SideCard from '@/core/sideCards/components/SideCard.vue'
-import type { CountCardData } from '@/features/timer/types/timerCardTypes.ts'
+import { computed, ref, onMounted, onBeforeUnmount } from 'vue'
+import { useSideCardEditor } from '@/core/sideCards/_type/composables/useSideCardEditor.ts'
+import SideCard from '@/core/sideCards/_type/components/SideCard.vue'
+import type { CountCard } from '@/features/timer/types/CountCardType.ts'
 
 const props = defineProps({
   // 通用属性
@@ -150,7 +150,7 @@ const handleEdit = () => {
     count_single_length_unit: props.countSingleLengthUnit,
     start_time: props.startTime,
     end_time: props.endTime
-  } as CountCardData)
+  } as CountCard)
 }
 
 // 实时时间更新

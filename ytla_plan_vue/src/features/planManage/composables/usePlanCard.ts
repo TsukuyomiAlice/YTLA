@@ -1,6 +1,6 @@
 import { ref, computed, watch } from 'vue'
-import { parseTags, type TagArray } from '@/core/plans/types/planTypes.ts'
-import { usePersistence } from '@/core/frame/composables/usePersistence.ts'
+import { parseTags, type TagArray } from '@/core/plans/_type/types/planTypes.ts'
+import { usePersistence } from '@/core/frame/_type/composables/usePersistence.ts'
 
 const { getPersistence, setPersistence } = usePersistence()
 

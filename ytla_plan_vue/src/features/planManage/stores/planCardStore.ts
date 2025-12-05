@@ -1,8 +1,8 @@
 import { defineStore } from 'pinia'
-import type { Plan } from '@/core/plans/types/planTypes.ts'
-import { PlanService } from '@/core/plans/services/planService.ts'
-import { usePersistence } from '@/core/frame/composables/usePersistence.ts'
-import { usePanelStore } from '@/core/frame/services/panelStore.ts'
+import type { Plan } from '@/core/plans/_type/types/planTypes.ts'
+import { PlanService } from '@/core/plans/_type/services/planService.ts'
+import { usePersistence } from '@/core/frame/_type/composables/usePersistence.ts'
+import { usePanelStore } from '@/core/frame/_type/services/panelStore.ts'
 
 const { getPersistence, setPersistence } = usePersistence()
 

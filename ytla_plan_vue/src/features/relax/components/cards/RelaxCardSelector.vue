@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import SideCardEditorFlowSelector from '@/core/sideCards/layouts/SideCardEditorFlowSelector.vue'
+import SideCardEditorFlowSelector from '@/core/sideCards/_type/layouts/SideCardEditorFlowSelector.vue'
 
 defineOptions({ name: 'RelaxFlowSelector' })
 export interface RelaxFlowSelector {}

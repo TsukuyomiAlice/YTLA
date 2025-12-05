@@ -169,12 +169,12 @@
 </template>
 
 <script setup lang="ts">
-import type { BaseModule, TagString } from '@/core/modules/types/moduleTypes.ts'
+import type { BaseModule } from '@/core/modules/_type/types/moduleTypes.ts'
 
 const props = withDefaults(defineProps<{
   moduleId?: number
   name?: string
-  tags?: TagString
+  tags?: string
   description?: string
   message?: string
   activeFlag?: string
@@ -230,7 +230,7 @@ const loadModuleData = async (moduleId: number) => {
 
 // 监听editingModuleId变化
 import { onMounted, watch } from 'vue'
-import { useModuleProcessStore } from '@/core/modules/stores/moduleProcessStore.ts'
+import { useModuleProcessStore } from '@/core/modules/_type/stores/moduleProcessStore.ts'
 
 const moduleProcessStore = useModuleProcessStore()
 onMounted(() => {

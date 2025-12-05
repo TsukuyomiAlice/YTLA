@@ -15,9 +15,9 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
-import EditorFlowNavigator from '@/core/sideCards/layouts/SideCardEditorFlowNavigator.vue'
+import EditorFlowNavigator from '@/core/sideCards/_type/layouts/SideCardEditorFlowNavigator.vue'
 import type { Sample3CardData, SampleCardSubType } from '@/features/sample/types/sampleCardTypes.ts'
-import { useFormStore } from '@/core/sideCards/stores/cardEditorFormStore.ts'
+import { useFormStore } from '@/core/sideCards/_type/stores/cardEditorFormStore.ts'
 
 const props = defineProps<{
   mode: 'create' | 'edit'

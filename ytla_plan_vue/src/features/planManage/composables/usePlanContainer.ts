@@ -1,7 +1,7 @@
 import { ref, computed, onMounted } from 'vue'
-import type { Plan } from '@/core/plans/types/planTypes.ts'
+import type { Plan } from '@/core/plans/_type/types/planTypes.ts'
 import { usePlanCardStore } from '@/features/planManage/stores/planCardStore.ts'
-import { usePanelStore } from '@/core/frame/services/panelStore.ts'
+import { usePanelStore } from '@/core/frame/_type/services/panelStore.ts'
 
 export const usePlanContainer = () => {
   const plans = ref<Plan[]>([])

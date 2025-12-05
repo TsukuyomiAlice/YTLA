@@ -66,9 +66,9 @@
 
 <script setup lang="ts">
 import { computed, ref, onMounted, onBeforeUnmount, watch } from 'vue'
-import { useSideCardEditor } from '@/core/sideCards/composables/useSideCardEditor.ts'
-import SideCard from '@/core/sideCards/components/SideCard.vue'
-import type { AlarmCardData } from '@/features/timer/types/timerCardTypes.ts'
+import { useSideCardEditor } from '@/core/sideCards/_type/composables/useSideCardEditor.ts'
+import SideCard from '@/core/sideCards/_type/components/SideCard.vue'
+import type { AlarmCard } from '@/features/timer/types/alarmCardType.ts.ts'
 
 // 提示音
 const alarmSound = new Audio('/resource/feature/alarmCard/祖堅正慶 - 無限停止 ～機工城アレキサンダー：天動編～.mp3')
@@ -104,7 +104,7 @@ const handleEdit = () => {
     alarm_time: props.alarmTime,
     alarm_days: props.alarmDays,
     start_time: props.startTime
-  } as AlarmCardData)
+  } as AlarmCard)
 }
 
 // 实时时钟

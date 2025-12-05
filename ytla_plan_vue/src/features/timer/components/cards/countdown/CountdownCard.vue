@@ -92,9 +92,9 @@
 
 <script setup lang="ts">
 import { inject, computed, ref, onMounted, onBeforeUnmount } from 'vue'
-import { useSideCardEditor } from '@/core/sideCards/composables/useSideCardEditor.ts'
-import SideCard from '@/core/sideCards/components/SideCard.vue'
-import type { CountdownCardData } from '@/features/timer/types/timerCardTypes.ts'
+import { useSideCardEditor } from '@/core/sideCards/_type/composables/useSideCardEditor.ts'
+import SideCard from '@/core/sideCards/_type/components/SideCard.vue'
+import type { CountdownCardData } from '@/features/timer/types/baseTimerCardType.ts'
 
 //// Props 和 Emits 定义
 const props = defineProps({

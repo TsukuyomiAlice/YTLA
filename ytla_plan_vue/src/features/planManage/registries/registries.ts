@@ -1,7 +1,7 @@
-import { createCardEditorFlowRegistry } from '@/core/sideCards/flows/cardEditorFlowRegistry.ts'
-import { createCardRegistry } from '@/core/sideCards/registries/cardRegistry.ts'
-import { createModuleFlowRegistry } from '@/core/modules/flows/moduleFlowRegistry.ts'
-import { createModuleRegistry } from '@/core/modules/registries/moduleRegistry.ts'
+import { createCardEditorFlowRegistry } from '@/core/sideCards/_type/flows/cardEditorFlowRegistry.ts'
+import { createCardRegistry } from '@/core/sideCards/_type/registries/cardRegistry.ts'
+import { createModuleFlowRegistry } from '@/core/modules/_type/flows/moduleFlowRegistry.ts'
+import { createModuleRegistry } from '@/core/modules/_type/registries/moduleRegistry.ts'
 
 // cards
 

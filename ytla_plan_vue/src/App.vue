@@ -3,9 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import MainLayout from '@/core/frame/layouts/MainLayout.vue'
+import MainLayout from '@/core/frame/_type/layouts/MainLayout.vue'
 
-export interface App {
-
-}
+export type App = object
 </script>
