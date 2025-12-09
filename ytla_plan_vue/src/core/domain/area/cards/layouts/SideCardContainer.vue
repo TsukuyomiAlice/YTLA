@@ -26,6 +26,7 @@ import { useMasonryLayout } from '@/core/domain/area/frame/composables/useMasonr
 import { getCardRegistry } from '@/core/domain/area/cards/registries/cardRegistry.ts'
 import { useCardStore } from '@/core/domain/area/cards/stores/cardStore.ts'
 import { usePersistence } from '@/core/domain/area/frame/composables/usePersistence.ts'
+import type { BaseCard } from '@/core/domain/area/cards/types/baseCardType.ts'
 
 const isMasonrySupported = ref(false)
 const userAgent = navigator.userAgent.toLowerCase()
@@ -50,12 +51,12 @@ watch(activeCards, () => {
   })
 }, { deep: true })
 
-const getComponent = (card: any) => {
+const getComponent = (card: BaseCard) => {
   const registry = getCardRegistry(card.card_type)
   return registry?.components[card.card_sub_type]
 }
 
-const getCardProps = (card: any) => {
+const getCardProps = (card: BaseCard) => {
   const registry = getCardRegistry(card.card_type)
   return registry ? registry.getCardProps(card) : {}
 }
@@ -158,7 +159,7 @@ const orderedCards = computed(() => {
 onMounted(async () => {
   document.addEventListener('drop', handleDrop)
   await initializeOrder()
-  nextTick(updateLayout)
+  await nextTick(updateLayout)
 })
 
 </script>

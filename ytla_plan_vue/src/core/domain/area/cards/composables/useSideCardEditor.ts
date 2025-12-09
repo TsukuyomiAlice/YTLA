@@ -16,7 +16,7 @@ const editorState = ref({
 })
 
 export function useSideCardEditor(cardContainer?: {
-  cards: any[]
+  cards: BaseCard[]
 }) {
   const cardStore = useCardStore()
 
