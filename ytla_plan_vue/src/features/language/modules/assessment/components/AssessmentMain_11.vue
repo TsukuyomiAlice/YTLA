@@ -21,10 +21,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useLanguageAssessmentStore } from '@/features/language/modules/assessment/stores/languageAssessmentStore.ts'
-import { useModuleProcessStore } from '@/core/modules/_type/stores/moduleProcessStore.ts'
+import { useModuleProcessStore } from '@/core/domain/area/modules/stores/moduleProcessStore.ts'
 
-import AssessmentNextButton from '@/features/language/modules/assessment/components/ui/AssessmentNextButton.vue'
-import AssessmentRetakeButton from '@/features/language/modules/assessment/components/ui/AssessmentRetakeButton.vue'
+import AssessmentNextButton from '@/features/language/modules/assessment/ui/AssessmentNextButton.vue'
+import AssessmentRetakeButton from '@/features/language/modules/assessment/ui/AssessmentRetakeButton.vue'
 
 // 定义事件发射器
 const emit = defineEmits(['nextStep', 'jumpToStep'])

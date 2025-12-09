@@ -1,6 +1,6 @@
 import type { Component } from 'vue'
 import { defineAsyncComponent } from 'vue'
-import type { ModuleFlowManager } from '@/core/frame/_type/types/flowManagerTypes.ts'
+import type { ModuleFlowManager } from '@/core/domain/area/frame/types/flowManagerTypes.ts'
 
 export class MatrixModuleFlowManager implements ModuleFlowManager {
   private flows = new Map<string, Component[]>()
@@ -18,10 +18,10 @@ export class MatrixModuleFlowManager implements ModuleFlowManager {
 export const matrixModuleFlowManager = new MatrixModuleFlowManager()
 
 matrixModuleFlowManager.registerFlow('matrix-main-steps', [
-  defineAsyncComponent(() => import('@/features/mathematics/modules/matrix/MatrixMain_00.vue')),
+  defineAsyncComponent(() => import('@/features/mathematics/modules/matrix/components/MatrixMain_00.vue')),
 ])
 
 matrixModuleFlowManager.registerFlow('matrix-sub-steps', [
-  defineAsyncComponent(() => import('@/features/mathematics/modules/matrix/MatrixSub_00.vue')),
+  defineAsyncComponent(() => import('@/features/mathematics/modules/matrix/components/MatrixSub_00.vue')),
 ])
 

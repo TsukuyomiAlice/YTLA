@@ -1,4 +1,4 @@
 {
-  "relation_subtype_name": "关联",
-  "relation_subtype_description": "两者、多重的关系"
+  "subtype_name": "关联",
+  "subtype_description": "两者、多重的关系"
 }

@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import AssessmentFinishButton from '@/features/language/modules/assessment/components/ui/AssessmentFinishButton.vue'
+import AssessmentFinishButton from '@/features/language/modules/assessment/ui/AssessmentFinishButton.vue'
 import { useLanguageAssessmentStore } from '@/features/language/modules/assessment/stores/languageAssessmentStore.ts'
 const languageAssessmentStore = useLanguageAssessmentStore()
 // 定义事件发射器（保持原有逻辑）

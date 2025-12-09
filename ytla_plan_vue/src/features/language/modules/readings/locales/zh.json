@@ -1,4 +1,4 @@
 {
-  "readings_subtype_name": "阅读",
-  "readings_subtype_description": "带有辅助地阅读外语文章"
+  "subtype_name": "阅读",
+  "subtype_description": "带有辅助地阅读外语文章"
 }

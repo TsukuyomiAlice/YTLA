@@ -1,12 +1,5 @@
-import { createCardEditorFlowRegistry } from '@/core/sideCards/_type/flows/cardEditorFlowRegistry.ts'
-import { createCardRegistry } from '@/core/sideCards/_type/registries/cardRegistry.ts'
-import { createModuleFlowRegistry } from '@/core/modules/_type/flows/moduleFlowRegistry.ts'
-import { createModuleRegistry } from '@/core/modules/_type/registries/moduleRegistry.ts'
-
-// cards
-
-
-// modules
+import { createModuleFlowRegistry } from '@/core/domain/area/modules/flows/moduleFlowRegistry.ts'
+import { createModuleRegistry } from '@/core/domain/area/modules/registries/moduleRegistry.ts'
 
 import { ratingModuleFlowManager } from '@/features/language/modules/rating/flows/ratingFlowManager.ts'
 createModuleFlowRegistry('rating', ratingModuleFlowManager)

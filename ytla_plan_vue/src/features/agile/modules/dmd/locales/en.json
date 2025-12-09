@@ -1,4 +1,4 @@
 {
-  "dmd_subtype_name": "Domain Model Diagram",
-  "dmd_subtype_description": "Demonstrate the system architecture through UML class diagrams or flowcharts"
+  "subtype_name": "Domain Model Diagram",
+  "subtype_description": "Demonstrate the system architecture through UML class diagrams or flowcharts"
 }

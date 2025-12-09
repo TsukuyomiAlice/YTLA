@@ -1,4 +1,4 @@
 {
-  "learning_subtype_name": "学习",
-  "learning_subtype_description": "学一门新语言"
+  "subtype_name": "学习",
+  "subtype_description": "学一门新语言"
 }

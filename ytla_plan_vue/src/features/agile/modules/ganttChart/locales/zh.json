@@ -1,4 +1,4 @@
 {
-  "ganttChart_subtype_name": "甘特图",
-  "ganttChart_subtype_description": "管理和展示项目进度"
+  "subtype_name": "甘特图",
+  "subtype_description": "管理和展示项目进度"
 }

@@ -1,10 +1,13 @@
 {
-  "VocabularyMain_00_000": "Vocabulary Book",
-  "VocabularyMain_00_001": "New Vocabulary Book",
-  "VocabularyMain_00_002": "There's no vocabulary book yet",
-  "VocabularyAddButton_001": "Create New Vocabulary Book",
-  "VocabularyOpenButton_001": "Open",
+  "subtype_name": "Vocabulary",
+  "subtype_description": "Accumulate the foreign language vocabulary",
 
-  "VocabularyMain_01_001": "There's no words yet",
-  "VocabularyReturnButton_001": "Return"
+  "main_00_000": "Vocabulary Book",
+  "main_00_001": "New Vocabulary Book",
+  "main_00_002": "There's no vocabulary book yet",
+  "add_button_001": "Create New Vocabulary Book",
+  "open_button_001": "Open",
+
+  "main_01_001": "There's no words yet",
+  "return_button_001": "Return"
 }

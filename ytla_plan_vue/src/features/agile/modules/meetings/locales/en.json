@@ -1,4 +1,4 @@
 {
-  "meetings_subtype_name": "Meetings",
-  "meetings_subtype_description": "Includes all kinds of meetings in an agile project, e.g. planning, daily stand-up, retrospective, etc."
+  "subtype_name": "Meetings",
+  "subtype_description": "Includes all kinds of meetings in an agile project, e.g. planning, daily stand-up, retrospective, etc."
 }

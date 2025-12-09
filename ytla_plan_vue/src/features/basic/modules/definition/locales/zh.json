@@ -1,4 +1,4 @@
 {
-  "definition_subtype_name": "定义",
-  "definition_subtype_description": "在YTLA中的一个事物、一个事件或一个开始"
+  "subtype_name": "定义",
+  "subtype_description": "在YTLA中的一个事物、一个事件或一个开始"
 }

@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import AssessmentStartButton from '@/features/language/modules/assessment/components/ui/AssessmentStartButton.vue'
+import AssessmentStartButton from '@/features/language/modules/assessment/ui/AssessmentStartButton.vue'
 
 const emit = defineEmits(['nextStep', 'jumpToStep'])
 const handleStart = (index: number) => {

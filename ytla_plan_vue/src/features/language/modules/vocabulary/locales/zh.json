@@ -1,10 +1,13 @@
 {
-  "VocabularyMain_00_000": "单词本",
-  "VocabularyMain_00_001": "新的单词本",
-  "VocabularyMain_00_002": "还未创建单词本",
-  "VocabularyAddButton_001": "创建新的单词本",
-  "VocabularyOpenButton_001": "打开",
+  "subtype_name": "词汇",
+  "subtype_description": "积累",
 
-  "VocabularyMain_01_001": "没有单词",
-  "VocabularyReturnButton_001": "返回"
+  "main_00_000": "单词本",
+  "main_00_001": "新的单词本",
+  "main_00_002": "还未创建单词本",
+  "add_button_001": "创建新的单词本",
+  "open_button_001": "打开",
+
+  "main_01_001": "没有单词",
+  "return_button_001": "返回"
 }

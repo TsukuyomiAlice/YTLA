@@ -11,7 +11,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import ModuleFlowNavigator from '@/core/modules/_type/layouts/ModuleFlowNavigator.vue'
+import ModuleFlowNavigator from '@/core/domain/area/modules/layouts/ModuleFlowNavigator.vue'
 
 const flowNavigator = ref<InstanceType<typeof ModuleFlowNavigator>>()
 

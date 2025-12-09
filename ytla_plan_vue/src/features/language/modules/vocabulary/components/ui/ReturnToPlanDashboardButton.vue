@@ -8,8 +8,8 @@
 
 </template>
 <script setup lang="ts">
-import { usePanelStore } from '@/core/frame/_type/services/panelStore.ts'
-import { useModuleProcessStore } from '@/core/modules/_type/stores/moduleProcessStore.ts'
+import { usePanelStore } from '@/core/domain/area/frame/services/panelStore.ts'
+import { useModuleProcessStore } from '@/core/domain/area/modules/stores/moduleProcessStore.ts'
 
 const handleReturnToPlanDashboard = () => {
   const moduleProcessStore = useModuleProcessStore()

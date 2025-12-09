@@ -1,4 +1,4 @@
 {
-  "userStory_subtype_name": "用户故事",
-  "userStory_subtype_description": "一个简单的、从用户的角度描述的需求"
+  "subtype_name": "用户故事",
+  "subtype_description": "一个简单的、从用户的角度描述的需求"
 }

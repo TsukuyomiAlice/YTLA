@@ -1,4 +1,4 @@
 {
-  "bible_subtype_name": "Bible",
-  "bible_subtype_description": "Gather conceptions and standards in the project, such as SLA"
+  "subtype_name": "Bible",
+  "subtype_description": "Gather conceptions and standards in the project, such as SLA"
 }

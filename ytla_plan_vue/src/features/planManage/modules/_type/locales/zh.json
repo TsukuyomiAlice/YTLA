@@ -1,0 +1,14 @@
+{
+  "type_name": "计划管理",
+  "type_description": "YTLA的驱动组件",
+
+  "MoveToWelcomeButton_001": "前往介绍页",
+  "AddPlanButton_001": "新建计划",
+  "AddPlanModuleButton_001": "添加分组",
+  "AddPlanModuleButton_002": "新分组",
+  "AddModuleButton_001": "添加模组",
+  "ReturnToPlanDashboardButton_001": "返回计划仪表盘",
+  "ReturnToPlanButton_001": "返回计划",
+  "SwitchToModuleConceptButton_001": "按概念排列模组",
+  "SwitchToModuleTypeButton_001": "按类型排列模组"
+}

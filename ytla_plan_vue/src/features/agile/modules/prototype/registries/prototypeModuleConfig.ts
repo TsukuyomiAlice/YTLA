@@ -1,5 +1,5 @@
 import { defineAsyncComponent } from 'vue'
-import type { ModuleRegistry } from '@/core/modules/_type/registries/moduleRegistry.ts'
+import type { ModuleRegistry } from '@/core/domain/area/modules/registries/moduleRegistry.ts'
 import { prototypeModuleFlowManager } from '@/features/agile/modules/prototype/flows/prototypeFlowManager.ts'
 
 export const prototypeModuleConfig = <ModuleRegistry> {

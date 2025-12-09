@@ -1,4 +1,4 @@
 {
-  "backlog_subtype_name": "待办事项",
-  "backlog_subtype_description": "待办事项列表"
+  "subtype_name": "待办事项",
+  "subtype_description": "待办事项列表"
 }

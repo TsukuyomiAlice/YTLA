@@ -1,4 +1,4 @@
 {
-  "features_subtype_name": "特性",
-  "features_subtype_description": "对项目内工程的拆解"
+  "subtype_name": "特性",
+  "subtype_description": "对项目内工程的拆解"
 }

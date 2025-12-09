@@ -1,4 +1,4 @@
 {
-  "prototype_subtype_name": "Prototype",
-  "prototype_subtype_description": "The prototype in the industry or business service"
+  "subtype_name": "Prototype",
+  "subtype_description": "The prototype in the industry or business service"
 }

@@ -1,4 +1,4 @@
 {
-  "interaction_subtype_name": "交互",
-  "interaction_subtype_description": "采取的行动，或者事件的效果"
+  "subtype_name": "交互",
+  "subtype_description": "采取的行动，或者事件的效果"
 }

@@ -1,4 +1,4 @@
 {
-  "readings_subtype_name": "Readings",
-  "readings_subtype_description": "Read the foreign language articles with support"
+  "subtype_name": "Readings",
+  "subtype_description": "Read the foreign language articles with support"
 }

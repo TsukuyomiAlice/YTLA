@@ -1,5 +1,5 @@
 import { defineAsyncComponent } from 'vue'
-import type { ModuleRegistry } from '@/core/modules/_type/registries/moduleRegistry.ts'
+import type { ModuleRegistry } from '@/core/domain/area/modules/registries/moduleRegistry.ts'
 import { whiteboardModuleFlowManager } from '@/features/agile/modules/whiteboard/flows/whiteboardModuleFlowManager.ts'
 
 export const whiteboardModuleConfig = <ModuleRegistry> {

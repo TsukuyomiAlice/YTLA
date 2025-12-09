@@ -22,7 +22,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useLanguageVocabularyStore } from '@/features/language/modules/vocabulary/stores/languageVocabularyStore.ts'
-import { useModuleProcessStore } from '@/core/modules/_type/stores/moduleProcessStore.ts'
+import { useModuleProcessStore } from '@/core/domain/area/modules/stores/moduleProcessStore.ts'
 
 const vocabularyStore = useLanguageVocabularyStore()
 const moduleProcessStore = useModuleProcessStore()

@@ -1,7 +1,7 @@
-import { createCardEditorFlowRegistry } from '@/core/sideCards/_type/flows/cardEditorFlowRegistry.ts'
-import { createCardRegistry } from '@/core/sideCards/_type/registries/cardRegistry.ts'
-import { createModuleFlowRegistry } from '@/core/modules/_type/flows/moduleFlowRegistry.ts'
-import { createModuleRegistry } from '@/core/modules/_type/registries/moduleRegistry.ts'
+import { createCardEditorFlowRegistry } from '@/core/domain/area/cards/flows/cardEditorFlowRegistry.ts'
+import { createCardRegistry } from '@/core/domain/area/cards/registries/cardRegistry.ts'
+import { createModuleFlowRegistry } from '@/core/domain/area/modules/flows/moduleFlowRegistry.ts'
+import { createModuleRegistry } from '@/core/domain/area/modules/registries/moduleRegistry.ts'
 
 // cards
 
@@ -10,7 +10,7 @@ import { createModuleRegistry } from '@/core/modules/_type/registries/moduleRegi
 
 import { bibleModuleFlowManager } from '@/features/agile/modules/bible/flows/bibleModuleFlowManager.ts'
 createModuleFlowRegistry('bible', bibleModuleFlowManager)
-import { bibleModuleConfig } from '@/features/agile/modules/burndownChart/registries/bibleModuleConfig.ts'
+import { bibleModuleConfig } from '@/features/agile/modules/bible/registries/bibleModuleConfig.ts'
 createModuleRegistry('bible', bibleModuleConfig)
 
 import { meetingsModuleFlowManager } from '@/features/agile/modules/meetings/flows/meetingsFlowManager.ts'

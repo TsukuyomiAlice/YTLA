@@ -1,4 +1,4 @@
 {
-  "rating_subtype_name": "Rating",
-  "rating_subtype_description": "To know your abilities in the language"
+  "subtype_name": "Rating",
+  "subtype_description": "To know your abilities in the language"
 }

@@ -1,6 +1,6 @@
 import type { Component } from 'vue'
 import { defineAsyncComponent } from 'vue'
-import type { ModuleFlowManager } from '@/core/frame/_type/types/flowManagerTypes.ts'
+import type { ModuleFlowManager } from '@/core/domain/area/frame/types/flowManagerTypes.ts'
 
 export class PlumYiModuleFlowManager implements ModuleFlowManager {
   private flows = new Map<string, Component[]>()

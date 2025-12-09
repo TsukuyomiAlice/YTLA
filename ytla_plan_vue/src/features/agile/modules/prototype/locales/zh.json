@@ -1,4 +1,4 @@
 {
-  "prototype_subtype_name": "原型",
-  "prototype_subtype_description": "快速验证的工具"
+  "subtype_name": "原型",
+  "subtype_description": "快速验证的工具"
 }

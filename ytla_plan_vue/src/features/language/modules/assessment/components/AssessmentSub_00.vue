@@ -11,7 +11,7 @@
 
 <script setup lang="ts">
 
-import ReturnToPlanDashboardButton from '@/features/language/modules/assessment/components/ui/ReturnToPlanDashboardButton.vue'
+import ReturnToPlanDashboardButton from '@/features/language/modules/assessment/ui/ReturnToPlanDashboardButton.vue'
 </script>
 <style scoped lang="scss">
 

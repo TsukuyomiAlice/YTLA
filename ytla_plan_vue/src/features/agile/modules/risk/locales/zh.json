@@ -1,4 +1,4 @@
 {
-  "risk_subtype_name": "风险",
-  "risk_subtype_description": "风险，包括依赖项与风险之间的关系"
+  "subtype_name": "风险",
+  "subtype_description": "风险，包括依赖项与风险之间的关系"
 }

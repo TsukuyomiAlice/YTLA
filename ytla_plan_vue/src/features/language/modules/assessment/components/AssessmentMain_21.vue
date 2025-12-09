@@ -20,8 +20,8 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { useLanguageAssessmentStore } from '@/features/language/modules/assessment/stores/languageAssessmentStore.ts'
-import AssessmentRetakeButton from '@/features/language/modules/assessment/components/ui/AssessmentRetakeButton.vue'
-import { useModuleProcessStore } from '@/core/modules/_type/stores/moduleProcessStore.ts'
+import AssessmentRetakeButton from '@/features/language/modules/assessment/ui/AssessmentRetakeButton.vue'
+import { useModuleProcessStore } from '@/core/domain/area/modules/stores/moduleProcessStore.ts'
 
 // 定义事件发射器（保持原有逻辑）
 const emit = defineEmits(['nextStep', 'jumpToStep'])

@@ -2,18 +2,18 @@
   <div class="sphere-container" ref="container">
     <div class="angle-info" v-if="sphereStore">
       <div>
-        固定轴角度 <br>
-        Θ: {{ radString(sphereStore.theta) }} or {{ dmsString(sphereStore.theta) }}<br>
+        固定轴角度 <br />
+        Θ: {{ radString(sphereStore.theta) }} or {{ dmsString(sphereStore.theta) }}<br />
         φ: {{ radString(sphereStore.phi) }} or {{ dmsString(sphereStore.phi) }}
       </div>
       <div>
-        球面轴角度 <br>
-        Θ': {{ radString(sphereStore.thetaPrime) }} or {{ dmsString(sphereStore.thetaPrime) }}<br>
+        球面轴角度 <br />
+        Θ': {{ radString(sphereStore.thetaPrime) }} or {{ dmsString(sphereStore.thetaPrime) }}<br />
         φ': {{ radString(sphereStore.phiPrime) }} or {{ dmsString(sphereStore.phiPrime) }}
       </div>
       <div>
-        角度差 <br>
-        ΔΘ: {{ radString(sphereStore.deltaTheta) }} or {{ dmsString(sphereStore.deltaTheta) }}<br>
+        角度差 <br />
+        ΔΘ: {{ radString(sphereStore.deltaTheta) }} or {{ dmsString(sphereStore.deltaTheta) }}<br />
         Δφ: {{ radString(sphereStore.deltaPhi) }} or {{ dmsString(sphereStore.deltaPhi) }}
       </div>
     </div>
@@ -24,12 +24,14 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
 import * as THREE from 'three'
-import { useSphere } from '@/features/mathematics/composables/useSphere.ts'
-import { useStaticAxes } from '@/features/mathematics/composables/useStaticAxes.ts'
+import { useSphere } from '@/features/mathematics/modules/sphere/composables/useSphere.ts'
+import { useStaticAxes } from '@/features/mathematics/modules/sphere/composables/useStaticAxes.ts'
+
 const container = ref<HTMLElement | null>(null)
 const canvas = ref<HTMLCanvasElement | null>(null)
 
-import { useSphereStore } from '@/features/mathematics/stores/sphereStore.ts'
+import { useSphereStore } from '@/features/mathematics/modules/sphere/stores/sphereStore.ts'
+
 const sphereStore = useSphereStore()
 
 const radString = (rad: number) => `${rad.toFixed(4)} rad`
@@ -38,8 +40,8 @@ const dmsString = (rad: number) => {
   const degrees = Math.abs(deg)
   const d = Math.floor(degrees)
   const m = Math.floor((degrees - d) * 60)
-  const s = ((degrees - d - m/60) * 3600).toFixed(3)
-  return `${deg < 0 ? '-' : ''}${d}°${m.toString().padStart(2,'0')}'${s.padStart(6,'0')}"`
+  const s = ((degrees - d - m / 60) * 3600).toFixed(3)
+  return `${deg < 0 ? '-' : ''}${d}°${m.toString().padStart(2, '0')}'${s.padStart(6, '0')}"`
 }
 
 onMounted(() => {
@@ -62,8 +64,8 @@ onMounted(() => {
   // 初始化 Three.js 场景
   const scene = new THREE.Scene()
   const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000) // 初始比例设为1:1
-  camera.position.set(0, 0, 15)  // 保持Z轴观察方向
-  camera.lookAt(0, 0, 0)         // 明确指定观察原点
+  camera.position.set(0, 0, 15) // 保持Z轴观察方向
+  camera.lookAt(0, 0, 0) // 明确指定观察原点
 
   const renderer = new THREE.WebGLRenderer({
     canvas: canvas.value,
@@ -161,7 +163,8 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
-@use '@/features/mathematics/styles/sphere-container';
+@use '@/features/mathematics/modules/sphere/styles/sphere-container';
+
 .angle-info {
   position: absolute;
   top: 10px;
@@ -171,6 +174,7 @@ onMounted(() => {
   border-radius: 4px;
   z-index: 1;
   font-family: monospace;
+
   div {
     margin-bottom: 4px;
     line-height: 1.3;

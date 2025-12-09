@@ -1,19 +1,12 @@
-import { createCardEditorFlowRegistry } from '@/core/sideCards/_type/flows/cardEditorFlowRegistry.ts'
-import { createCardRegistry } from '@/core/sideCards/_type/registries/cardRegistry.ts'
-import { createModuleFlowRegistry } from '@/core/modules/_type/flows/moduleFlowRegistry.ts'
-import { createModuleRegistry } from '@/core/modules/_type/registries/moduleRegistry.ts'
+import { createModuleFlowRegistry } from '@/core/domain/area/modules/flows/moduleFlowRegistry.ts'
+import { createModuleRegistry } from '@/core/domain/area/modules/registries/moduleRegistry.ts'
 
-// cards
-
-
-// modules
-
-import { sphereModuleFlowManager } from '@/features/mathematics/flows/sphereFlowManager'
+import { sphereModuleFlowManager } from '@/features/mathematics/modules/sphere/flows/sphereFlowManager'
 createModuleFlowRegistry('sphere', sphereModuleFlowManager)
-import { sphereModuleConfig } from '@/features/mathematics/registries/sphereModuleConfig.ts'
+import { sphereModuleConfig } from '@/features/mathematics/modules/sphere/registries/sphereModuleConfig.ts'
 createModuleRegistry('sphere', sphereModuleConfig)
 
-import { matrixModuleFlowManager } from '@/features/mathematics/flows/matrixFlowManager'
+import { matrixModuleFlowManager } from '@/features/mathematics/modules/matrix/flows/matrixFlowManager'
 createModuleFlowRegistry('matrix', matrixModuleFlowManager)
-import { matrixModuleConfig } from '@/features/mathematics/registries/matrixModuleConfig'
+import { matrixModuleConfig } from '@/features/mathematics/modules/matrix/registries/matrixModuleConfig'
 createModuleRegistry('matrix', matrixModuleConfig)
