@@ -1,9 +1,10 @@
 import type { Component } from 'vue'
 import type { CardType } from '@/core/domain/area/cards/types/cardType.ts'
+import type { CardData } from '@/core/domain/area/cards/types/cardDataType.ts'
 
 export interface CardRegistry <T extends string = string> {
   components: Record<T, Component>
-  getCardProps: (card: any) => Record<string, any>
+  getCardProps: (card: CardData) => Record<string, unknown>
 }
 
 const cardRegistryStore = new Map<string, CardRegistry>()

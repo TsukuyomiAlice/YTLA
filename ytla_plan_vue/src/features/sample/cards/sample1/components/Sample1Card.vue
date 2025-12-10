@@ -37,7 +37,7 @@
 <script setup lang="ts">
 import { useSideCardEditor } from '@/core/domain/area/cards/composables/useSideCardEditor.ts'
 import SideCard from '@/core/domain/area/cards/components/SideCard.vue'
-import type { Sample1CardData } from '@/features/sample/cards/_type/types/sampleCardTypes.ts'
+import type { Sample1CardData } from '@/features/sample/cards/sample1/types/cardDataType.ts'
 
 const props = defineProps({
   cardId: Number,

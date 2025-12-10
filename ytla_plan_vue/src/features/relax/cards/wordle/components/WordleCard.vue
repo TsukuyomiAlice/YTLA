@@ -77,7 +77,7 @@
 <script setup lang="ts">
 import { useSideCardEditor } from '@/core/domain/area/cards/composables/useSideCardEditor.ts'
 import SideCard from '@/core/domain/area/cards/components/SideCard.vue'
-import type { BaseRelaxCard } from '@/features/relax/types/relaxCardTypes.ts'
+import type { WordleCardData } from '@/features/relax/cards/wordle/types/cardDataType.ts'
 
 const props = defineProps({
   cardId: Number,
@@ -93,7 +93,7 @@ const handleEdit = () => {
   showEdit({
     card_id: props.cardId,
     card_sub_type: 'wordle'
-  } as BaseRelaxCard)
+  } as WordleCardData)
 }
 
 import { ref, reactive, computed, onMounted } from 'vue'

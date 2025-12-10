@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import type { BaseCard } from '@/core/domain/area/cards/types/baseCardType.ts'
+import type { CardData } from '@/core/domain/area/cards/types/cardDataType.ts'
 import { CardService } from '@/core/domain/area/cards/services/cardService.ts'
 
 // 依赖注入配置
@@ -8,7 +8,7 @@ const cardService = new CardService(API_BASE)
 
 export const useCardStore = defineStore('card', {
   state: () => ({
-    cards: [] as BaseCard[],
+    cards: [] as CardData[],
     isLoading: false,
     error: null as string | null,
     cardFilter: '',
@@ -25,7 +25,7 @@ export const useCardStore = defineStore('card', {
       }
     },
 
-    async addCard(cardData: Omit<BaseCard, 'card_id'>) {
+    async addCard(cardData: Omit<CardData, 'card_id'>) {
       this.isLoading = true
       try {
         const newCard = await cardService.addCard(cardData)
@@ -38,7 +38,7 @@ export const useCardStore = defineStore('card', {
       }
     },
 
-    async updateCard(cardId: number, cardData: Omit<BaseCard, 'card_id'>) {
+    async updateCard(cardId: number, cardData: Omit<CardData, 'card_id'>) {
       this.isLoading = true
       try {
         const updatedCard = await cardService.updateCard(cardId, cardData)
@@ -192,13 +192,13 @@ export const useCardStore = defineStore('card', {
     }
   },
   getters: {
-    activeCards(state): BaseCard[] {
+    activeCards(state): CardData[] {
       return state.cards.filter(card =>
         card.delete_flag === '0' && card.active_flag === '1'
       )
     },
 
-    filteredCards(state): BaseCard[] {
+    filteredCards(state): CardData[] {
       const filter = state.cardFilter.toLowerCase()
       return this.activeCards.filter(card => {
         const tags = card.tags?.toLowerCase().split(',') || []

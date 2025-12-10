@@ -1,6 +1,6 @@
 import type { CardType, CardSubType } from './cardType.ts'
 
-export interface BaseCard<T = never> {
+export interface CardData<T = never> {
   card_id: number;
   name: string;
   tags: string;

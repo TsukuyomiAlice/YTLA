@@ -72,16 +72,16 @@
 import { ref, computed, onMounted } from 'vue'
 import SideCardEditorFlowNavigator from '@/core/domain/area/cards/layouts/SideCardEditorFlowNavigator.vue'
 import { formatDateTime, formatDateTimeNoSecs, currentDateTime } from '@/core/domain/area/frame/utils/timeUtils.ts'
-import type { AlarmCard } from '@/features/timer/cards/alarm/components/alarmCardType.ts'
+import type { AlarmCardData } from '@/features/timer/cards/alarm/types/cardDataType.ts'
 
 const props = defineProps<{
   mode: 'create' | 'edit'
-  initialData?: AlarmCard
+  initialData?: AlarmCardData
   cardSubType: 'alarm'
 }>()
 
 const emit = defineEmits<{
-  (e: 'submit', payload: AlarmCard | Omit<AlarmCard, 'card_id'>): void
+  (e: 'submit', payload: AlarmCardData | Omit<AlarmCardData, 'card_id'>): void
   (e: 'cancel'): void
   (e: 'prev'): void
 }>()
@@ -133,7 +133,7 @@ const handleSubmit = () => {
     ? { ...props.initialData, ...basePayload }
     : { ...basePayload, card_sub_type: props.cardSubType }
 
-  emit('submit', fullPayload as AlarmCard)
+  emit('submit', fullPayload as AlarmCardData)
 }
 
 const handleCancel = () => emit('cancel')

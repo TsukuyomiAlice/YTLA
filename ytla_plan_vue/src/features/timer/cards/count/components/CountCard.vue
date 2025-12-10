@@ -107,7 +107,7 @@
 import { computed, ref, onMounted, onBeforeUnmount } from 'vue'
 import { useSideCardEditor } from '@/core/domain/area/cards/composables/useSideCardEditor.ts'
 import SideCard from '@/core/domain/area/cards/components/SideCard.vue'
-import type { CountCard } from '@/features/timer/cards/count/types/CountCardType.ts'
+import type { CountCardData } from '@/features/timer/cards/count/types/cardDataType.ts'
 
 const props = defineProps({
   // 通用属性
@@ -150,7 +150,7 @@ const handleEdit = () => {
     count_single_length_unit: props.countSingleLengthUnit,
     start_time: props.startTime,
     end_time: props.endTime
-  } as CountCard)
+  } as CountCardData)
 }
 
 // 实时时间更新

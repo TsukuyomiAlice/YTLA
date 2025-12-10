@@ -1,16 +1,16 @@
-import type { BaseCard } from '@/core/domain/area/cards/types/baseCardType.ts';
+import type { CardData } from '@/core/domain/area/cards/types/cardDataType.ts';
 
 export class CardService {
   constructor(private readonly API_BASE: string) {}
 
-  async fetchCards(): Promise<BaseCard[]> {
+  async fetchCards(): Promise<CardData[]> {
     const response = await fetch(`${this.API_BASE}/get_cards`)
     if (!response.ok) throw new Error('Failed to get card')
     const data = await response.json()
     return data.success ? data.cards : []
   }
 
-  async addCard(cardData: Omit<BaseCard, 'card_id'>): Promise<BaseCard> {
+  async addCard(cardData: Omit<CardData, 'card_id'>): Promise<CardData> {
     const response = await fetch(`${this.API_BASE}/add_card`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -36,7 +36,7 @@ export class CardService {
     return response.ok
   }
 
-  async updateCardTitle(cardId: number, newTitle: string): Promise<BaseCard> {
+  async updateCardTitle(cardId: number, newTitle: string): Promise<CardData> {
     const response = await fetch(`${this.API_BASE}/update_card/${cardId}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -46,7 +46,7 @@ export class CardService {
     return response.json()
   }
 
-  async updateCardDescription(cardId: number, description: string): Promise<BaseCard> {
+  async updateCardDescription(cardId: number, description: string): Promise<CardData> {
     const response = await fetch(`${this.API_BASE}/update_card/${cardId}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -72,7 +72,7 @@ export class CardService {
     return response.json()
   }
 
-  async updateCardIcon(cardId: number, iconName: string): Promise<BaseCard> {
+  async updateCardIcon(cardId: number, iconName: string): Promise<CardData> {
     const response = await fetch(`${this.API_BASE}/update_card/${cardId}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -82,7 +82,7 @@ export class CardService {
     return response.json()
   }
 
-  async updateCardBackground(cardId: number, backgroundName: string): Promise<BaseCard> {
+  async updateCardBackground(cardId: number, backgroundName: string): Promise<CardData> {
     const response = await fetch(`${this.API_BASE}/update_card/${cardId}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -92,7 +92,7 @@ export class CardService {
     return response.json()
   }
 
-  async updateCardTags(cardId: number, tags: string): Promise<BaseCard> {
+  async updateCardTags(cardId: number, tags: string): Promise<CardData> {
     const response = await fetch(`${this.API_BASE}/update_card/${cardId}/tags`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -112,7 +112,7 @@ export class CardService {
     return response.ok
   }
 
-  async updateCard(cardId: number, cardData: Omit<BaseCard, 'card_id'>): Promise<BaseCard> {
+  async updateCard(cardId: number, cardData: Omit<CardData, 'card_id'>): Promise<CardData> {
     const response = await fetch(`${this.API_BASE}/update_card_detail/${cardId}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

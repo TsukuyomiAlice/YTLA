@@ -1,7 +1,7 @@
 import { ref, computed, nextTick, watch } from 'vue'
 import { useCardStore } from '@/core/domain/area/cards/stores/cardStore.ts'
 import { CardService } from '@/core/domain/area/cards/services/cardService.ts'
-import { parseTags } from '@/core/domain/area/cards/types/baseCardType.ts'
+import { parseTags } from '@/core/domain/area/cards/types/cardDataType.ts'
 import { usePersistence } from '@/core/domain/area/frame/composables/usePersistence.ts'
 
 const { getPersistence, setPersistence } = usePersistence()

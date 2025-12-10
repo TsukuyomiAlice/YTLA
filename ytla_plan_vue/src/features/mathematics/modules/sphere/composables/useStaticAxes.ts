@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import { useSphereStore } from '@/features/mathematics/stores/sphereStore.ts'
+import { useSphereStore } from '@/features/mathematics/modules/sphere/stores/sphereStore.ts'
 
 const sphereStore = useSphereStore()
 

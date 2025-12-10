@@ -74,19 +74,19 @@
 <script setup lang="ts">
 import { ref, reactive, computed, onMounted } from 'vue'
 import EditorFlowNavigator from '@/core/domain/area/cards/layouts/SideCardEditorFlowNavigator.vue'
-import type { CountCard } from '@/features/timer/cards/count/types/CountCardType.ts'
+import type { CountCardData } from '@/features/timer/cards/count/types/cardDataType.ts'
 import { formatDateTime, formatDateTimeNoSecs, currentDateTime } from '@/core/domain/area/frame/utils/timeUtils.ts'
 
 const props = defineProps<{
   mode: 'create' | 'edit'
-  initialData?: CountCard
+  initialData?: CountCardData
   cardSubType: 'count'
 }>()
 
 const emit = defineEmits<{
   (e: 'cancel'): void
   (e: 'prev'): void
-  (e: 'submit', payload: CountCard | Omit<CountCard, 'card_id'>): void
+  (e: 'submit', payload: CountCardData | Omit<CountCardData, 'card_id'>): void
 }>()
 
 // 计时模式选项
@@ -166,7 +166,7 @@ const handleSubmit = () => {
         background_path: ''
       }
 
-  emit('submit', fullPayload as CountCard)
+  emit('submit', fullPayload as CountCardData)
 }
 </script>
 

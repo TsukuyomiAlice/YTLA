@@ -1,6 +1,7 @@
 import type { Component } from 'vue'
 import type { CardRegistry } from '@/core/domain/area/cards/registries/cardRegistry.ts'
-import type { RelaxCardSubType, WordleCardData } from '@/features/relax/cards/_type/types/relaxCardTypes'
+import type { RelaxCardSubType  } from '@/features/relax/cards/_type/types/cardType.ts'
+import type { WordleCardData } from '@/features/relax/cards/wordle/types/cardDataType.ts'
 import WordleCard from '@/features/relax/cards/wordle/components/WordleCard.vue'
 import SideCard from '@/core/domain/area/cards/components/SideCard.vue'
 
@@ -40,9 +41,3 @@ export const relaxCardConfig = <CardRegistry> {
     }
   }
 }
-
-// 4. 类型导出（供外部使用）
-export type {
-  RelaxCardSubType,
-  WordleCardData,
-} from '@/features/relax/cards/_type/types/relaxCardTypes'

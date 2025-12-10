@@ -1,12 +1,5 @@
-import { createCardEditorFlowRegistry } from '@/core/domain/area/cards/flows/cardEditorFlowRegistry.ts'
-import { createCardRegistry } from '@/core/domain/area/cards/registries/cardRegistry.ts'
 import { createModuleFlowRegistry } from '@/core/domain/area/modules/flows/moduleFlowRegistry.ts'
 import { createModuleRegistry } from '@/core/domain/area/modules/registries/moduleRegistry.ts'
-
-// cards
-
-
-// modules
 
 import { bibleModuleFlowManager } from '@/features/agile/modules/bible/flows/bibleModuleFlowManager.ts'
 createModuleFlowRegistry('bible', bibleModuleFlowManager)

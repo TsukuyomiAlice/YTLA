@@ -68,7 +68,7 @@
 import { computed, ref, onMounted, onBeforeUnmount, watch } from 'vue'
 import { useSideCardEditor } from '@/core/domain/area/cards/composables/useSideCardEditor.ts'
 import SideCard from '@/core/domain/area/cards/components/SideCard.vue'
-import type { AlarmCard } from '@/features/timer/types/alarmCardType.ts.ts'
+import type { AlarmCardData } from '@/features/timer/cards/alarm/types/cardDataType.ts'
 
 // 提示音
 const alarmSound = new Audio('/resource/feature/alarmCard/祖堅正慶 - 無限停止 ～機工城アレキサンダー：天動編～.mp3')
@@ -104,7 +104,7 @@ const handleEdit = () => {
     alarm_time: props.alarmTime,
     alarm_days: props.alarmDays,
     start_time: props.startTime
-  } as AlarmCard)
+  } as AlarmCardData)
 }
 
 // 实时时钟
@@ -141,7 +141,8 @@ const formattedTime = computed(() => {
 
 const formattedDays = computed(() => {
   const daysMap = ['日', '一', '二', '三', '四', '五', '六']
-  return props.alarmDays
+  const alarmDays = props.alarmDays
+  return alarmDays
     .sort((a, b) => a - b)
     .map(d => `${daysMap[d]}`)
 })

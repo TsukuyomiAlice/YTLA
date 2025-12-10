@@ -1,10 +1,10 @@
 import { ref, computed, onMounted } from 'vue'
-import type { BaseCard } from '@/core/domain/area/cards/types/baseCardType.ts'
+import type { CardData } from '@/core/domain/area/cards/types/cardDataType.ts'
 import { useCardStore } from '@/core/domain/area/cards/stores/cardStore.ts'
 import { useSideCardEditor } from './useSideCardEditor.ts'
 
 export const useSideCardContainer = () => {
-  const cards = ref<BaseCard[]>([])
+  const cards = ref<CardData[]>([])
   const cardStore = useCardStore()
   const activeCards = computed(() => cardStore.activeCards)
 

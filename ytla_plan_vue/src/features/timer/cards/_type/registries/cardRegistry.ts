@@ -1,15 +1,14 @@
 import type { Component } from 'vue'
 import type { CardRegistry } from '@/core/domain/area/cards/registries/cardRegistry.ts'
-import type {
-  AlarmCardData,
-  CountCardData,
-  CountdownCardData
-} from '@/features/timer/cards/_type/types/baseTimerCardType.ts'
-import type { TimerCardSubType} from '@/features/timer/cards/_type/types/timerCardType.ts'
+import type { TimerCardSubType } from '@/features/timer/cards/_type/types/cardType.ts'
 import AlarmCard from '@/features/timer/cards/alarm/components/AlarmCard.vue'
 import CountCard from '@/features/timer/cards/count/components/CountCard.vue'
 import CountdownCard from '@/features/timer/cards/countdown/components/CountdownCard.vue'
 import SideCard from '@/core/domain/area/cards/components/SideCard.vue'
+import type { AlarmCardData } from '@/features/timer/cards/alarm/types/cardDataType.ts'
+import type { CountCardData } from '@/features/timer/cards/count/types/cardDataType.ts'
+import type { CountdownCardData } from '@/features/timer/cards/countdown/types/cardDataType.ts'
+import type { TimerCardData } from '@/features/timer/cards/_type/types/cardDataType.ts'
 
 /**
  * 计时器卡片注册表（基于通用cardRegistry实现）
@@ -25,7 +24,7 @@ export const timerCardConfig = <CardRegistry> {
   },
 
   // 2. 属性生成器（保持原有类型安全逻辑）
-  getCardProps: (card: any) => {
+  getCardProps: (card: TimerCardData) => {
     const baseProps = {
       cardId: card.card_id,
       name: card.name,
@@ -79,11 +78,3 @@ export const timerCardConfig = <CardRegistry> {
     }
   }
 }
-
-// 4. 类型导出（供外部使用）
-export type {
-  BaseTimerCard,
-  AlarmCardData,
-  CountCardData,
-  CountdownCardData
-} from '@/features/timer/cards/_type/types/baseTimerCardType.ts'

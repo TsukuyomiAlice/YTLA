@@ -6,6 +6,7 @@
 import SideCardEditorFlowSelector from '@/core/domain/area/cards/layouts/SideCardEditorFlowSelector.vue'
 
 defineOptions({ name: 'SampleFlowSelector' })
+
 export interface SampleFlowSelector {}
 
 const cardSubTypes = [

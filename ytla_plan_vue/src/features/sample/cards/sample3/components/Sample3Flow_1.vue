@@ -16,7 +16,8 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
 import SideCardEditorFlowNavigator from '@/core/domain/area/cards/layouts/SideCardEditorFlowNavigator.vue'
-import type { Sample3CardData, SampleCardSubType } from '@/features/sample/cards/_type/types/sampleCardTypes.ts'
+import type { SampleCardSubType } from '@/features/sample/cards/_type/types/cardType.ts'
+import type { Sample3CardData } from '@/features/sample/cards/sample3/types/cardDataType.ts'
 import { useFormStore } from '@/core/domain/area/cards/stores/cardEditorFormStore.ts'
 
 const props = defineProps<{
@@ -48,7 +49,7 @@ const initializeFormData = () => {
       }
     })
     formStore.isInitialized = true
-    if (isEditMode) {
+    if (isEditMode.value) {
       formStore.isEditing = true
     }
   }

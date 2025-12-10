@@ -12,9 +12,10 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
+import { computed, onMounted } from 'vue'
 import EditorFlowNavigator from '@/core/domain/area/cards/layouts/SideCardEditorFlowNavigator.vue'
-import type { WordleCardData, RelaxCardSubType } from '@/features/relax/types/relaxCardTypes.ts'
+import type { WordleCardData } from '@/features/relax/cards/wordle/types/cardDataType.ts'
+import type { RelaxCardSubType } from '@/features/relax/cards/_type/types/cardType.ts'
 
 const props = defineProps<{
   mode: 'create' | 'edit'

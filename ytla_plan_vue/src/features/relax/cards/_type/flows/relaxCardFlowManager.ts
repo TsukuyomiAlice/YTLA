@@ -1,7 +1,7 @@
 import type { Component } from 'vue'
 import { defineAsyncComponent, markRaw } from 'vue'
 import type { CardEditorFlowManager } from '@/core/domain/area/frame/types/flowManagerTypes.ts'
-import type { RelaxCardSubType } from '@/features/relax/cards/_type/types/relaxCardTypes.ts'
+import type { RelaxCardSubType } from '@/features/relax/cards/_type/types/cardType.ts'
 
 export class RelaxCardEditorFlowManager implements CardEditorFlowManager {
   private flows = new Map<string, Component[]>()

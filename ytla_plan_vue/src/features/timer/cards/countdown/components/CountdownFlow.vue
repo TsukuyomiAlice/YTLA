@@ -148,7 +148,9 @@
 import { ref, reactive, computed, onMounted } from 'vue'
 import EditorFlowNavigator from '@/core/domain/area/cards/layouts/SideCardEditorFlowNavigator.vue'
 import { formatDateTime, formatDateTimeNoSecs, currentDateTime } from '@/core/domain/area/frame/utils/timeUtils.ts'
-import type { CountdownCardData, TimerCardSubType } from '@/features/timer/cards/_type/types/baseTimerCardType.ts'
+import type { TimerCardSubType } from '@/features/timer/cards/_type/types/cardType.ts'
+import type { CountdownCardData } from '@/features/timer/cards/countdown/types/cardDataType.ts'
+
 
 const props = defineProps<{
   mode: 'create' | 'edit'

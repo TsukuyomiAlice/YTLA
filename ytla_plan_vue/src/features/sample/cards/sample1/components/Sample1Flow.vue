@@ -17,7 +17,8 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
 import EditorFlowNavigator from '@/core/domain/area/cards/layouts/SideCardEditorFlowNavigator.vue'
-import type { Sample1CardData, SampleCardSubType } from '@/features/sample/cards/_type/types/sampleCardTypes.ts'
+import type { Sample1CardData } from '@/features/sample/cards/sample1/types/cardDataType.ts'
+import type { SampleCardSubType } from '@/features/sample/cards/_type/types/cardType.ts'
 
 const props = defineProps<{
   mode: 'create' | 'edit'
@@ -61,10 +62,8 @@ const buildPayload = () => ({
 })
 
 const validateCanSubmit = () => {
-  if (!sampleData1.value) {
-    return false
-  }
-  return true
+  return sampleData1.value;
+
 }
 
 const canSubmit = computed(() => validateCanSubmit())

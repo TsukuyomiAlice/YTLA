@@ -2,13 +2,13 @@ import { ref, shallowRef } from 'vue'
 import type { Component } from 'vue'
 import { getCardEditorFlowManager, getDefaultCardEditorFlowManager } from '@/core/domain/area/cards/flows/cardEditorFlowRegistry.ts'
 import { useCardStore } from '@/core/domain/area/cards/stores/cardStore.ts'
-import type { BaseCard } from '@/core/domain/area/cards/types/baseCardType.ts'
+import type { CardData } from '@/core/domain/area/cards/types/cardDataType.ts'
 import type { CardSubType, CardType } from '@/core/domain/area/cards/types/cardType.ts'
 
 const editorState = ref({
   mode: null as 'create' | 'edit' | null,
   currentStep: shallowRef<Component | null>(null),
-  editCardData: null as BaseCard | null,
+  editCardData: null as CardData | null,
   currentCardType: null as CardType | null,
   currentCardSubType: null as CardSubType | null,
   visible: false,
@@ -16,7 +16,7 @@ const editorState = ref({
 })
 
 export function useSideCardEditor(cardContainer?: {
-  cards: BaseCard[]
+  cards: CardData[]
 }) {
   const cardStore = useCardStore()
 
@@ -54,7 +54,7 @@ export function useSideCardEditor(cardContainer?: {
     loadStepComponent(cardType)
   }
 
-  const showEdit = (card: BaseCard) => {
+  const showEdit = (card: CardData) => {
     resetEditor()
     editorState.value.mode = 'edit'
     editorState.value.editCardData = { ...card }
@@ -98,13 +98,13 @@ export function useSideCardEditor(cardContainer?: {
     handleStepChange('next')
   }
 
-  const handleSubmit = async (payload: BaseCard | Omit<BaseCard, 'card_id'>) => {
+  const handleSubmit = async (payload: CardData | Omit<CardData, 'card_id'>) => {
     try {
       if (editorState.value.mode === 'create') {
-        await cardStore.addCard(payload as Omit<BaseCard, 'card_id'>)
+        await cardStore.addCard(payload as Omit<CardData, 'card_id'>)
       } else {
         await cardStore.updateCard(
-          (payload as BaseCard).card_id,
+          (payload as CardData).card_id,
           payload
         )
       }
