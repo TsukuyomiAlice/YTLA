@@ -1,5 +1,5 @@
 import { defineAsyncComponent } from 'vue'
-import type { ModuleRegistry } from '@/core/domain/area/modules/registries/moduleRegistry.ts'
+import type { ModuleRegistry } from '@/core/classic/modules/moduleCard/registries/moduleRegistry.ts'
 import { backlogModuleFlowManager } from '@/features/agile/modules/backlog/flows/backlogFlowManager.ts'
 
 export const backlogModuleConfig = <ModuleRegistry> {

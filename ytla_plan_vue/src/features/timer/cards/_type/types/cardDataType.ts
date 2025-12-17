@@ -1,4 +1,4 @@
-import type { CardData } from '@/core/domain/area/cards/types/cardDataType.ts'
+import type { CardData } from '@/core/classic/cards/sideCard/types/cardDataType.ts'
 import type { TimerCardType, TimerCardSubType  } from '@/features/timer/cards/_type/types/cardType.ts'
 
 export interface TimerCardData extends CardData {

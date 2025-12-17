@@ -4,7 +4,7 @@
     :class="{ active: isActive }"
     @click="handleSwitchToModuleType"
   >
-    {{ $t(`planManage._type.SwitchToModuleTypeButton_001`) }}
+    {{ $t(`planManage.modules._type.SwitchToModuleTypeButton_001`) }}
   </button>
 
 </template>

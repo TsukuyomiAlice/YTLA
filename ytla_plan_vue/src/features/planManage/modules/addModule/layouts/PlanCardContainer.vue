@@ -21,11 +21,11 @@
 
 <script setup lang="ts">
 import { computed, nextTick, watch, ref, onMounted } from 'vue'
-import { usePlanContainer } from '@/core/domain/area/plans/composables/usePlanContainer.ts'
-import { useMasonryLayout } from '@/core/domain/area/frame/composables/useMasonryLayout.ts'
-import { getPlanCardRegistry } from '@/core/domain/area/plans/registries/planCardRegistry.ts'
-import { usePlanCardStore } from '@/core/domain/area/plans/stores/planCardStore.ts'
-import { usePersistence } from '@/core/domain/area/frame/composables/usePersistence.ts'
+import { usePlanContainer } from '@/core/classic/plans/planCard/composables/usePlanContainer.ts'
+import { useMasonryLayout } from '@/core/classic/frame/main/composables/useMasonryLayout.ts'
+import { getPlanCardRegistry } from '@/core/classic/plans/planCard/registries/planCardRegistry.ts'
+import { usePlanCardStore } from '@/core/classic/plans/planCard/stores/planCardStore.ts'
+import { usePersistence } from '@/core/classic/frame/main/composables/usePersistence.ts'
 
 const isMasonrySupported = ref(false)
 const userAgent = navigator.userAgent.toLowerCase()
@@ -162,5 +162,5 @@ onMounted(async () => {
 </script>
 
 <style lang="scss" scoped>
-@use '@/core/domain/area/plans/styles/plan-card-container';
+@use '@/core/classic/plans/planCard/styles/plan-card-container';
 </style>

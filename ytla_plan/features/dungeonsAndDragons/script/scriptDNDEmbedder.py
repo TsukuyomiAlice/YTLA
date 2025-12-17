@@ -3,10 +3,10 @@
 import os
 import time
 import hashlib
-from typing import List, Dict, Any, Optional, Tuple
+from typing import List, Dict, Optional, Tuple
 
 # 导入自定义模块
-from ytla_plan.core.frame.func import pdfProcessor, chromaDBConnector, loggerConfig
+from core.domain.area.frame.func import pdfProcessor, chromaDBConnector, loggerConfig
 
 
 class DNDEmbedder:

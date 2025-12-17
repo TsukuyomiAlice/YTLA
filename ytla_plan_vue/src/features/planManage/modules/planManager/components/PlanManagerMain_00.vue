@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1>{{ $t(`planManage.planManager.main_00_000`) }}</h1>
+    <h1>{{ $t(`planManage.modules.planManager.main_00_000`) }}</h1>
     <br>
-    <p>{{ $t(`planManage.planManager.main_00_001`) }}</p>
+    <p>{{ $t(`planManage.modules.planManager.main_00_001`) }}</p>
     <br>
   </div>
   <PlanCardContainer />

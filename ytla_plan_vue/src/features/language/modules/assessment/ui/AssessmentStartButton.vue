@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import { useModuleProcessStore} from '@/core/domain/area/modules/stores/moduleProcessStore.ts'
+import { useModuleProcessStore} from '@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts'
 const moduleProcessStore = useModuleProcessStore()
 const planId = moduleProcessStore.belongPlanId as number
 const moduleId = moduleProcessStore.moduleId as number

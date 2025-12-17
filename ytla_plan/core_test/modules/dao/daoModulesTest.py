@@ -1,6 +1,6 @@
 import unittest
-from core.modules.dao import daoModules
-from core.modules.dao.daoModules import Instance, add_module, update_module_detail, soft_delete_module
+from core.domain.area.modules import daoModules
+from core.domain.area.modules.dao.daoModules import Instance, add_module, update_module_detail, soft_delete_module
 
 
 class TestDaoModules(unittest.TestCase):
@@ -55,7 +55,7 @@ class TestDaoModules(unittest.TestCase):
 
     def test_3_activate_deactivate(self):
         """Test module activation/deactivation workflow"""
-        from core.modules.dao.daoModules import deactivate_module, activate_module, check_module_active_status
+        from core.domain.area.modules.dao.daoModules import deactivate_module, activate_module, check_module_active_status
 
         deactivate_module(self.module_id)
         self.assertEqual(check_module_active_status(self.module_id), '0')

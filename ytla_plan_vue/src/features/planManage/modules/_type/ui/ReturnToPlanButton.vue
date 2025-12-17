@@ -3,13 +3,13 @@
     class="plan-manage-btn"
     @click="handleReturnToPlan"
   >
-    {{ $t(`planManage._type.ReturnToPlanButton_001`) }}
+    {{ $t(`planManage.modules._type.ReturnToPlanButton_001`) }}
   </button>
 
 </template>
 <script setup lang="ts">
-import { useModuleProcessStore } from '@/core/domain/area/modules/stores/moduleProcessStore.ts'
-import { usePanelStore } from '@/core/domain/area/frame/services/panelStore.ts'
+import { useModuleProcessStore } from '@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts'
+import { usePanelStore } from '@/core/classic/frame/panel/stores/panelStore.ts'
 
 const handleReturnToPlan = () => {
   const moduleProcessStore = useModuleProcessStore()

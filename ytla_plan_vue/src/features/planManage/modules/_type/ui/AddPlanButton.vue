@@ -3,16 +3,16 @@
     class="plan-manage-btn"
     @click="handleAddPlan"
   >
-    + {{ $t(`planManage._type.AddPlanButton_001`) }}
+    + {{ $t(`planManage.modules._type.AddPlanButton_001`) }}
   </button>
 </template>
 
 <script setup lang="ts">
-import { usePlanCardStore } from '@/core/domain/area/plans/stores/planCardStore.ts'
+import { usePlanCardStore } from '@/core/classic/plans/planCard/stores/planCardStore.ts'
 const planStore = usePlanCardStore()
-import { useModuleProcessStore } from '@/core/domain/area/modules/stores/moduleProcessStore.ts'
+import { useModuleProcessStore } from '@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts'
 const moduleProcessStore = useModuleProcessStore()
-import { usePanelStore } from '@/core/domain/area/frame/services/panelStore.ts'
+import { usePanelStore } from '@/core/classic/frame/panel/stores/panelStore.ts'
 const panelStore = usePanelStore()
 
 const handleAddPlan = async () => {

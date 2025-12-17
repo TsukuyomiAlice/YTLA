@@ -2,8 +2,8 @@
 
 from flask import Flask, jsonify
 from flask_cors import CORS
-from core.frame.dao import daoInitiator
-from core.frame.routes.registration import register_all_blueprints
+from core.domain.area.frame.dao import daoInitiator
+from core.domain.area.frame.routes.registration import register_all_blueprints
 
 app = Flask(__name__)
 app.config.from_object('ytla_plan.config')

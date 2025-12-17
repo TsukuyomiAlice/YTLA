@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import SideCardEditorFlowSelector from '@/core/domain/area/cards/layouts/SideCardEditorFlowSelector.vue'
+import SideCardEditorFlowSelector from '@/core/classic/cards/sideCardEditor/layouts/SideCardEditorFlowSelector.vue'
 
 defineOptions({ name: 'TimerFlowSelector' })
 

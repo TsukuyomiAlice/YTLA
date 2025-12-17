@@ -143,20 +143,20 @@
             class="rect-button gray"
             @click="handleDeactivate"
           >
-            {{ $t('planManage.planDashboard.sub_00_100') }}
+            {{ $t('planManage.modules.planDashboard.sub_00_100') }}
           </button>
           <button
             v-if="activeFlag === '0'"
             class="rect-button green"
             @click="handleReactivate"
           >
-            {{ $t('planManage.planDashboard.sub_00_101') }}
+            {{ $t('planManage.modules.planDashboard.sub_00_101') }}
           </button>
           <button
             class="rect-button red"
             @click="handleClose"
           >
-            {{ $t('planManage.planDashboard.sub_00_102') }}
+            {{ $t('planManage.modules.planDashboard.sub_00_102') }}
           </button>
         </div>
 
@@ -166,7 +166,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Plan, TagString } from '@/core/domain/area/plans/types/planTypes.ts'
+import type { Plan, TagString } from '@/core/classic/plans/planCard/types/planTypes.ts'
 
 const props = withDefaults(defineProps<{
   mode: 'create' | 'edit'
@@ -196,7 +196,7 @@ const emit = defineEmits<{
 }>()
 
 // 加载plan数据
-import { usePlanCardStore } from '@/core/domain/area/plans/stores/planCardStore.ts'
+import { usePlanCardStore } from '@/core/classic/plans/planCard/stores/planCardStore.ts'
 
 const planStore = usePlanCardStore()
 const currentPlan = ref<Plan | null>(null)
@@ -219,7 +219,7 @@ const loadPlanData = async (planId: number) => {
 
 // 监听editingPlanId变化
 import { onMounted, watch } from 'vue'
-import { useModuleProcessStore } from '@/core/domain/area/modules/stores/moduleProcessStore.ts'
+import { useModuleProcessStore } from '@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts'
 
 const moduleProcessStore = useModuleProcessStore()
 onMounted(() => {
@@ -242,7 +242,7 @@ watch(
 )
 
 // 初始化编辑数据
-import { usePlanCardEditor } from '@/core/domain/area/plans/composables/usePlanCardEditor.ts'
+import { usePlanCardEditor } from '@/core/classic/plans/planCard/composables/usePlanCardEditor.ts'
 
 const {
   initializeEditData,
@@ -281,9 +281,9 @@ const {
 </script>
 
 <style lang="scss" scoped>
-@use '@/core/domain/area/plans/styles/plan-card-editor';
-@use '@/core/domain/area/cards/styles/card-component-button';
-@use '@/core/domain/area/cards/styles/card-component-icon';
-@use '@/core/domain/area/cards/styles/card-component-tags';
-@use '@/core/domain/area/cards/styles/card-component-text';
+@use '@/core/classic/plans/planCard/styles/plan-card-editor';
+@use '@/core/classic/cards/sideCard/styles/card-component-button';
+@use '@/core/classic/cards/sideCard/styles/card-component-icon';
+@use '@/core/classic/cards/sideCard/styles/card-component-tags';
+@use '@/core/classic/cards/sideCard/styles/card-component-text';
 </style>

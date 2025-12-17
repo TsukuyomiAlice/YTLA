@@ -1,4 +1,4 @@
-import type { CardData } from '@/core/domain/area/cards/types/cardDataType.ts'
+import type { CardData } from '@/core/classic/cards/sideCard/types/cardDataType.ts'
 import type { RelaxCardType, RelaxCardSubType } from '@/features/relax/cards/_type/types/cardType.ts'
 
 export interface RelaxCardData extends CardData {

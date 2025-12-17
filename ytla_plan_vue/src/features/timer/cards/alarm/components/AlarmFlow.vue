@@ -70,8 +70,8 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
-import SideCardEditorFlowNavigator from '@/core/domain/area/cards/layouts/SideCardEditorFlowNavigator.vue'
-import { formatDateTime, formatDateTimeNoSecs, currentDateTime } from '@/core/domain/area/frame/utils/timeUtils.ts'
+import SideCardEditorFlowNavigator from '@/core/classic/cards/sideCardEditor/layouts/SideCardEditorFlowNavigator.vue'
+import { formatDateTime, formatDateTimeNoSecs, currentDateTime } from '@/core/classic/frame/main/utils/timeUtils.ts'
 import type { AlarmCardData } from '@/features/timer/cards/alarm/types/cardDataType.ts'
 
 const props = defineProps<{

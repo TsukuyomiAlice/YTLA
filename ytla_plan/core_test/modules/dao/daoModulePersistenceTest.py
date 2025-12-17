@@ -1,6 +1,6 @@
 import unittest
 import json
-from core.modules.dao.daoModulePersistence import DBConnector, Instance, get_content, insert_content, update_content
+from core.domain.area.modules.dao.daoModulePersistence import DBConnector, Instance, get_content, insert_content, update_content
 
 
 class TestDaoModulePersistence(unittest.TestCase):
@@ -44,7 +44,7 @@ class TestDaoModulePersistence(unittest.TestCase):
 
     def test_3_get_last_content(self):
         """Test getting last content by user"""
-        from core.modules.dao.daoModulePersistence import get_last_content
+        from core.domain.area.modules.dao.daoModulePersistence import get_last_content
 
         # Should return our test data
         content = get_last_content(self.plan_id, self.module_id, self.test_user)
@@ -67,7 +67,7 @@ class TestDaoModulePersistence(unittest.TestCase):
 
     def test_5_delete_content(self):
         """Test soft deletion of content"""
-        from core.modules.dao.daoModulePersistence import delete_content
+        from core.domain.area.modules.dao.daoModulePersistence import delete_content
 
         # Perform soft delete
         delete_instance = Instance(self.record_id)

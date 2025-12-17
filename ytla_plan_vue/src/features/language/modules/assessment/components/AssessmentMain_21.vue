@@ -1,5 +1,5 @@
 <template>
-  <h1>{{ $t('language.AssessmentMain_21_000') }}</h1>
+  <h1>{{ $t('language.modules.AssessmentMain_21_000') }}</h1>
   <assessment-retake-button @jump-to-step="handleRetake"/>
   <br>
   <div v-if="currentQuestionIndex < 10" class="question-container">
@@ -21,7 +21,7 @@
 import { computed, ref } from 'vue'
 import { useLanguageAssessmentStore } from '@/features/language/modules/assessment/stores/languageAssessmentStore.ts'
 import AssessmentRetakeButton from '@/features/language/modules/assessment/ui/AssessmentRetakeButton.vue'
-import { useModuleProcessStore } from '@/core/domain/area/modules/stores/moduleProcessStore.ts'
+import { useModuleProcessStore } from '@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts'
 
 // 定义事件发射器（保持原有逻辑）
 const emit = defineEmits(['nextStep', 'jumpToStep'])

@@ -1,4 +1,4 @@
-from core.frame.process import processGlobalPersistence
+from core.domain.area.frame.process import processGlobalPersistence
 
 
 def get_global_persistence_test():

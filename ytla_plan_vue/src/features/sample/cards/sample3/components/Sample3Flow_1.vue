@@ -15,10 +15,10 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
-import SideCardEditorFlowNavigator from '@/core/domain/area/cards/layouts/SideCardEditorFlowNavigator.vue'
+import SideCardEditorFlowNavigator from '@/core/classic/cards/sideCardEditor/layouts/SideCardEditorFlowNavigator.vue'
 import type { SampleCardSubType } from '@/features/sample/cards/_type/types/cardType.ts'
 import type { Sample3CardData } from '@/features/sample/cards/sample3/types/cardDataType.ts'
-import { useFormStore } from '@/core/domain/area/cards/stores/cardEditorFormStore.ts'
+import { useFormStore } from '@/core/classic/cards/sideCardEditor/stores/cardEditorFormStore.ts'
 
 const props = defineProps<{
   mode: 'create' | 'edit'

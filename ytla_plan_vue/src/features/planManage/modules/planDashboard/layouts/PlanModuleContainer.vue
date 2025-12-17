@@ -42,7 +42,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { getModuleCardRegistry } from '@/core/domain/area/modules/registries/moduleCardRegistry.ts'
+import { getModuleCardRegistry } from '@/core/classic/modules/moduleCard/registries/moduleCardRegistry.ts'
 
 const getComponent = (module: any) => {
   const registry = getModuleCardRegistry()
@@ -67,17 +67,17 @@ const emit = defineEmits<{
   (e: 'deleteGroup', name: string): void
 }>()
 
-import { useModuleGroup } from '@/core/domain/area/modules/composables/useModuleGroup.ts'
+import { useModuleGroup } from '@/core/classic/modules/moduleCard/composables/useModuleGroup.ts'
 
 const {
   isEditing, tempName,
   editingGroup, handleNameBlur, cancelEditing, handleDeleteGroup
 } = useModuleGroup(props, emit)
 
-import { useModuleProcessStore } from '@/core/domain/area/modules/stores/moduleProcessStore.ts'
+import { useModuleProcessStore } from '@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts'
 
 const moduleProcessStore = useModuleProcessStore()
-import { useModuleCardStore } from '@/core/domain/area/modules/stores/moduleCardStore.ts'
+import { useModuleCardStore } from '@/core/classic/modules/moduleCard/stores/moduleCardStore.ts'
 
 const moduleStore = useModuleCardStore()
 const handleDrop = async (e: DragEvent) => {

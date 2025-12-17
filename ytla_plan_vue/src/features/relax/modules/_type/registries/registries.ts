@@ -1,2 +1,2 @@
-import { createModuleFlowRegistry } from '@/core/domain/area/modules/flows/moduleFlowRegistry.ts'
-import { createModuleRegistry } from '@/core/domain/area/modules/registries/moduleRegistry.ts'
+import { createModuleFlowRegistry } from '@/core/classic/modules/moduleCard/flows/moduleFlowRegistry.ts'
+import { createModuleRegistry } from '@/core/classic/modules/moduleCard/registries/moduleRegistry.ts'

@@ -1,25 +1,25 @@
 <template>
   <div class="sub-container">
     <div v-if="!selectedModule">
-      <h1>{{ $t(`planManage.addModule.sub_00_000`) }}</h1>
+      <h1>{{ $t(`planManage.modules.addModule.sub_00_000`) }}</h1>
     </div>
 
     <div v-else>
-      <h1>{{ $t('planManage.addModule.sub_00_100') }}&nbsp;{{ $t(`${selectedModule.moduleType}.${selectedModule.moduleSubType}.subtype_name`) }}</h1>
+      <h1>{{ $t('planManage.modules.addModule.sub_00_100') }}&nbsp;{{ $t(`${selectedModule.moduleType}.modules.${selectedModule.moduleSubType}.subtype_name`) }}</h1>
       <div class="form-container">
         <div class="input-group">
-          <input v-model="moduleName" :placeholder="$t('planManage.addModule.sub_00_002')"
+          <input v-model="moduleName" :placeholder="$t('planManage.modules.addModule.sub_00_002')"
                  class="form-input">
-          <textarea v-model="moduleDescription" :placeholder="$t('planManage.addModule.sub_00_003')"
+          <textarea v-model="moduleDescription" :placeholder="$t('planManage.modules.addModule.sub_00_003')"
                     class="form-textarea"></textarea>
         </div>
 
         <div class="action-column-bottom">
           <button class="rect-button gray" @click="handleCancel">
-            {{ $t('planManage.addModule.sub_00_101') }}
+            {{ $t('planManage.modules.addModule.sub_00_101') }}
           </button>
           <button class="rect-button green" @click="handleSubmit">
-            {{ $t('planManage.addModule.sub_00_100') }}
+            {{ $t('planManage.modules.addModule.sub_00_100') }}
           </button>
         </div>
       </div>
@@ -29,8 +29,8 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { useModuleCardStore } from '@/core/domain/area/modules/stores/moduleCardStore.ts'
-import { useModuleProcessStore } from '@/core/domain/area/modules/stores/moduleProcessStore.ts'
+import { useModuleCardStore } from '@/core/classic/modules/moduleCard/stores/moduleCardStore.ts'
+import { useModuleProcessStore } from '@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts'
 
 const moduleStore = useModuleCardStore()
 const processStore = useModuleProcessStore()
@@ -76,7 +76,7 @@ const resetForm = () => {
 </script>
 
 <style scoped lang="scss">
-@use '@/core/domain/area/cards/styles/card-component-button';
+@use '@/core/classic/cards/sideCard/styles/card-component-button';
 
 .form-container {
   padding: 1rem;

@@ -2,7 +2,7 @@
   <h1>{{ $t('language.AssessmentMain_12_000') }}</h1>
   <assessment-retake-button @jump-to-step="handleRetake"/>
   <br>
-  <p>{{ $t('language.AssessmentMain_11_001') }}</p>
+  <p>{{ $t('language.modules.AssessmentMain_11_001') }}</p>
 
   <div class="word-list">
     <div v-for="(word, index) in step1Wordlist" :key="index" class="word-item">
@@ -21,7 +21,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useLanguageAssessmentStore } from '@/features/language/modules/assessment/stores/languageAssessmentStore.ts'
-import { useModuleProcessStore } from '@/core/domain/area/modules/stores/moduleProcessStore.ts'
+import { useModuleProcessStore } from '@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts'
 
 import AssessmentNextButton from '@/features/language/modules/assessment/ui/AssessmentNextButton.vue'
 import AssessmentRetakeButton from '@/features/language/modules/assessment/ui/AssessmentRetakeButton.vue'

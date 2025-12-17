@@ -1,9 +1,9 @@
 # encode = utf-8
 
 import json
-from core.cards.dao import daoCards
-from core.frame.func.loggerConfig import process_log
-from core.cards.process.processCardHandler import CardHandler
+from core.domain.area.cards.dao import daoCards
+from core.domain.area.frame.func.loggerConfig import process_log
+from core.domain.area.cards.process.processCardHandler import CardHandler
 
 
 class SampleCardHandler(CardHandler):
@@ -26,7 +26,7 @@ class SampleCardHandler(CardHandler):
                 daoCards.add_card(card_type, card_sub_type, data)
 
             if mode == 'update':
-                from core.cards.dao.daoCards import Instance
+                from core.domain.area.cards import Instance
                 ins = Instance(data['name'], card_type, card_id=card_id)
                 ins.card_sub_type = card_sub_type
                 ins.tags = data['tags']

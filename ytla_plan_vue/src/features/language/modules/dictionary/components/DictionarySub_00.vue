@@ -1,8 +1,8 @@
 <template>
-  <h1>{{ $t('language.DictionarySub_00_000') }}</h1>
+  <h1>{{ $t('language.modules.dictionary.DictionarySub_00_000') }}</h1>
   <br>
-  <p>{{ $t('language.DictionarySub_00_001') }}</p>
-  <p>{{ $t('language.DictionarySub_00_002') }}</p>
+  <p>{{ $t('language.modules.dictionary.DictionarySub_00_001') }}</p>
+  <p>{{ $t('language.modules.dictionary.DictionarySub_00_002') }}</p>
   <return-to-plan-dashboard-button />
 </template>
 

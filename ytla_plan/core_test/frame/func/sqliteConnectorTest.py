@@ -2,8 +2,7 @@
 import os
 import unittest
 import sqlite3
-from core.frame.func.sqliteConnector import sqlite_cursor, database_root_specific
-from core.frame.func import loggerConfig
+from core.domain.area.frame.func import sqlite_cursor, database_root_specific, loggerConfig
 
 
 class TestSQLiteConnector(unittest.TestCase):

@@ -18,9 +18,9 @@
 
 <script setup lang="ts">
 import PlanCardEditor from '@/features/planManage/modules/planDashboard/layouts/PlanCardEditor.vue'
-import ModuleCardEditor from '@/core/domain/area/modules/layouts/ModuleCardEditor.vue'
+import ModuleCardEditor from '@/core/classic/modules/moduleCard/layouts/ModuleCardEditor.vue'
 
-import { useModuleProcessStore } from '@/core/domain/area/modules/stores/moduleProcessStore.ts'
+import { useModuleProcessStore } from '@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts'
 import { computed } from 'vue'
 
 const moduleProcessStore = useModuleProcessStore()

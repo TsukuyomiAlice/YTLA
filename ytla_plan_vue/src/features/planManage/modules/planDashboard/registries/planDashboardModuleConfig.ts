@@ -1,5 +1,5 @@
 import { defineAsyncComponent } from 'vue'
-import type { ModuleRegistry } from '@/core/domain/area/modules/registries/moduleRegistry.ts'
+import type { ModuleRegistry } from '@/core/classic/modules/moduleCard/registries/moduleRegistry.ts'
 import { planDashboardModuleFlowManager } from '@/features/planManage/modules/planDashboard/flows/planDashboardModuleFlowManager.ts'
 
 export const planDashboardModuleConfig = <ModuleRegistry> {

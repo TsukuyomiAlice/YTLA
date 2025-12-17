@@ -11,7 +11,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount  } from 'vue'
-import { usePanelStore } from '@/core/domain/area/frame/services/panelStore.ts'
+import { usePanelStore } from '@/core/classic/frame/panel/stores/panelStore.ts'
 
 const panelStore = usePanelStore()
 const inputData = ref('')

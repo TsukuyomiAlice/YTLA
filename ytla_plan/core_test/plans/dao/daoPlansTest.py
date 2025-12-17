@@ -1,6 +1,6 @@
 import unittest
-from core.plans.dao import daoPlans
-from core.plans.dao.daoPlans import Instance, add_plan, update_plan_detail, soft_delete_plan, get_last_new_plan_id
+from core.domain.area.plans.dao import daoPlans
+from core.domain.area.plans.dao.daoPlans import Instance, add_plan, update_plan_detail, soft_delete_plan, get_last_new_plan_id
 
 
 class TestDaoPlans(unittest.TestCase):
@@ -36,7 +36,7 @@ class TestDaoPlans(unittest.TestCase):
 
     def test_3_activate_deactivate(self):
         """Test plan activation/deactivation workflow"""
-        from core.plans.dao.daoPlans import deactivate_plan, activate_plan, check_plan_active_status
+        from core.domain.area.plans.dao.daoPlans import deactivate_plan, activate_plan, check_plan_active_status
 
         deactivate_plan(self.plan_id)
         self.assertEqual(check_plan_active_status(self.plan_id), '0')

@@ -3,14 +3,14 @@
     class="plan-manage-btn"
     @click="handleAddPlanModuleGroup"
   >
-    {{ $t(`planManage._type.AddPlanModuleButton_001`) }}
+    {{ $t(`planManage.modules._type.AddPlanModuleButton_001`) }}
   </button>
 
 </template>
 <script setup lang="ts">
-import { useModuleCardStore } from '@/core/domain/area/modules/stores/moduleCardStore.ts'
-import { usePlanCardStore } from '@/core/domain/area/plans/stores/planCardStore.ts'
-import { useModuleProcessStore } from '@/core/domain/area/modules/stores/moduleProcessStore.ts'
+import { useModuleCardStore } from '@/core/classic/modules/moduleCard/stores/moduleCardStore.ts'
+import { usePlanCardStore } from '@/core/classic/plans/planCard/stores/planCardStore.ts'
+import { useModuleProcessStore } from '@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts'
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 

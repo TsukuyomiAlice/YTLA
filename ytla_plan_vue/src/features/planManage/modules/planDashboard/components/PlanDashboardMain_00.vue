@@ -2,7 +2,7 @@
   <div v-if="activeFlag === '1'">
 
     <div class="top-section">
-      <h1>{{ plan?.name }} - {{ $t('planManage.planDashboard.main_00_000') }}</h1>
+      <h1>{{ plan?.name }} - {{ $t('planManage.modules.planDashboard.main_00_000') }}</h1>
       <ReturnToPlanButton />
       &nbsp;&nbsp;&nbsp;&nbsp;
       <AddPlanModuleGroupButton />
@@ -28,7 +28,7 @@
            @dragover.prevent
            @dragenter.prevent>
         <PlanModuleContainer
-          :group-name="$t('planManage.planDashboard.main_00_001')"
+          :group-name="$t('planManage.modules.planDashboard.main_00_001')"
           :modules="ungroupedModules"
         />
       </div>
@@ -37,7 +37,7 @@
   </div>
 
   <div v-if="activeFlag === '0'">
-    <h1>{{ $t('planManage.planDashboard.main_00_100') }}</h1>
+    <h1>{{ $t('planManage.modules.planDashboard.main_00_100') }}</h1>
   </div>
 </template>
 
@@ -46,17 +46,17 @@ import ReturnToPlanButton from '@/features/planManage/modules/_type/ui/ReturnToP
 import AddPlanModuleGroupButton
   from '@/features/planManage/modules/_type/ui/AddPlanModuleGroupButton.vue'
 import AddModuleButton from '@/features/planManage/modules/_type/ui/AddModuleButton.vue'
-import { usePlanActiveFlag } from '@/core/domain/area/plans/composables/watchPlanActiveFlag.ts'
+import { usePlanActiveFlag } from '@/core/classic/plans/planCard/composables/watchPlanActiveFlag.ts'
 
 const { activeFlag } = usePlanActiveFlag()
 
-import { useModuleProcessStore } from '@/core/domain/area/modules/stores/moduleProcessStore.ts'
+import { useModuleProcessStore } from '@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts'
 
 const moduleProcessStore = useModuleProcessStore()
 
 import PlanModuleContainer from '@/features/planManage/modules/planDashboard/layouts/PlanModuleContainer.vue'
 import { computed, onActivated, onMounted } from 'vue'
-import { useModuleCardStore } from '@/core/domain/area/modules/stores/moduleCardStore.ts'
+import { useModuleCardStore } from '@/core/classic/modules/moduleCard/stores/moduleCardStore.ts'
 
 const moduleStore = useModuleCardStore()
 
@@ -101,7 +101,7 @@ const loadModules = async () => {
 onActivated(loadModules)
 onMounted(loadModules)
 
-import { usePlanCardStore } from '@/core/domain/area/plans/stores/planCardStore.ts'
+import { usePlanCardStore } from '@/core/classic/plans/planCard/stores/planCardStore.ts'
 
 const planStore = usePlanCardStore()
 const plan = computed(() => {

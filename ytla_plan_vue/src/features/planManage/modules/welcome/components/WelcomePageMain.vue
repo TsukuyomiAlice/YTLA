@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import ModuleFlowNavigatorWithButtons from '@/core/domain/area/modules/layouts/ModuleFlowNavigatorWithButtons.vue'
+import ModuleFlowNavigatorWithButtons from '@/core/classic/modules/moduleCard/layouts/ModuleFlowNavigatorWithButtons.vue'
 </script>
 
 <style scoped lang="scss">
