@@ -10,7 +10,7 @@ import time
 from typing import Dict, Any, List
 
 # 导入自定义模块
-from core.domain.area.frame.func import chromaDBConnector, loggerConfig
+from core.classic.frame import chromaDBConnector, loggerConfig
 
 
 class DnDQueryTool:

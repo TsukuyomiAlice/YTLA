@@ -2,7 +2,7 @@
 import unittest
 from unittest.mock import patch
 
-from core.domain.area.frame.func import utilConfigs
+from core.classic.frame import utilConfigs
 
 
 class TestUtilConfigs(unittest.TestCase):

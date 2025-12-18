@@ -28,7 +28,7 @@ const existingGroups = computed(() => {
 const handleAddPlanModuleGroup = async () => {
   if (!moduleProcessStore.belongPlanId) return
 
-  const baseName = t('planManage.AddPlanModuleButton_002')
+  const baseName = t('planManage.modules._type.AddPlanModuleButton_002')
   let newGroupName = baseName
   let counter = 1
 

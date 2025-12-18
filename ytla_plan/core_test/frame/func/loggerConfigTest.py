@@ -3,7 +3,7 @@ import tempfile
 import shutil
 import logging
 import os
-from core.domain.area.frame.func import loggerConfig
+from core.classic.frame import loggerConfig
 
 
 class TestLoggerConfig(unittest.TestCase):

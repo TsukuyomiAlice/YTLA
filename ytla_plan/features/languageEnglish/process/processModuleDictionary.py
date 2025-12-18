@@ -1,5 +1,5 @@
-from core.domain.area.frame.func.loggerConfig import process_log
-from core.domain.area.frame.instance.instanceProcessToRoutes import Response
+from core.classic.frame.func.loggerConfig import process_log
+from core.classic.frame.instance.instanceProcessToRoutes import Response
 from features.languageEnglish.dao import daoModuleDictionaryEntries
 from bs4 import BeautifulSoup  # 新增HTML解析库
 
