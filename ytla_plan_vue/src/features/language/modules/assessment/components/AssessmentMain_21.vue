@@ -1,9 +1,9 @@
 <template>
-  <h1>{{ $t('language.modules.AssessmentMain_21_000') }}</h1>
+  <h1>{{ $t('language.modules.assessment.main_21_000') }}</h1>
   <assessment-retake-button @jump-to-step="handleRetake"/>
   <br>
   <div v-if="currentQuestionIndex < 10" class="question-container">
-    <h3>{{ $t('language.AssessmentMain_21_001') }}</h3>
+    <h3>{{ $t('languag.modules.assessment.main_21_001') }}</h3>
     <p>{{ currentQuestion }}</p>
     <div class="options">
       <button

@@ -1,4 +1,6 @@
 {
   "type_name": "Language",
-  "type_description": "Learn a new language, or just know how much you've mastered for a language."
+  "type_description": "Learn a new language, or just know how much you've mastered for a language.",
+
+  "return_button_001": "Return to plan dashboard"
 }

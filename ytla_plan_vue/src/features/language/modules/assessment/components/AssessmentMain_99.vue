@@ -1,6 +1,6 @@
 <template>
-  <h1>{{ $t('language.modules.AssessmentMain_99_000') }}</h1>
-  <h2>{{ $t('language.modules.AssessmentMain_99_001') }} {{ languageAssessmentStore.finalLevel }} </h2>
+  <h1>{{ $t('language.modules.assessment.main_99_000') }}</h1>
+  <h2>{{ $t('language.modules.assessment.main_99_001') }} {{ languageAssessmentStore.finalLevel }} </h2>
   <assessment-finish-button @jump-to-step="handleRetake"/>
 </template>
 

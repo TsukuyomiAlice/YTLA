@@ -1,4 +1,8 @@
 {
   "subtype_name": "字典",
-  "subtype_description": "检索词汇"
+  "subtype_description": "检索词汇",
+
+  "sub_00_000": "关于本字典",
+  "sub_00_001": "本词典来源于",
+  "sub_00_002": "牛津高阶英汉双解词典，第八版"
 }

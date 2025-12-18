@@ -1,4 +1,8 @@
 {
   "subtype_name": "Dictionary",
-  "subtype_description": "Search the word"
+  "subtype_description": "Search the word",
+
+  "sub_00_000": "About this dictionary",
+  "sub_00_001": "The dictionary comes from",
+  "sub_00_002": "Oxford Advanced Learner's English-Chinese Dictionary, 8th edition"
 }

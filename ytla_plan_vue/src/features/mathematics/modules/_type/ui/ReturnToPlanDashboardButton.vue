@@ -1,9 +1,9 @@
 <template>
   <button
-    class="language-manage-btn"
+    class="mathematics-manage-btn"
     @click="handleReturnToPlanDashboard"
   >
-    {{ $t(`language.ReturnToPlanDashboardButton_001`) }}
+    {{ $t(`mathematics.modules._type.ReturnToPlanDashboardButton_001`) }}
   </button>
 
 </template>
@@ -23,5 +23,5 @@ const handleReturnToPlanDashboard = () => {
 
 </script>
 <style scoped lang="scss">
-@use '@/features/language/modules/_type/styles/language-manage-button';
+@use '../../sphere/styles/mathematics-manage-button';
 </style>

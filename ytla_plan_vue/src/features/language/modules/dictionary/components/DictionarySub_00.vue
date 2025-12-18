@@ -1,15 +1,15 @@
 <template>
-  <h1>{{ $t('language.modules.dictionary.DictionarySub_00_000') }}</h1>
+  <h1>{{ $t('language.modules.dictionary.sub_00_000') }}</h1>
   <br>
-  <p>{{ $t('language.modules.dictionary.DictionarySub_00_001') }}</p>
-  <p>{{ $t('language.modules.dictionary.DictionarySub_00_002') }}</p>
+  <p>{{ $t('language.modules.dictionary.sub_00_001') }}</p>
+  <p>{{ $t('language.modules.dictionary.sub_00_002') }}</p>
   <return-to-plan-dashboard-button />
 </template>
 
 <script setup lang="ts">
 
 import ReturnToPlanDashboardButton
-  from '@/features/language/modules/dictionary/components/ui/ReturnToPlanDashboardButton.vue'
+  from '@/features/language/modules/_type/ui/ReturnToPlanDashboardButton.vue'
 </script>
 <style scoped lang="scss">
 

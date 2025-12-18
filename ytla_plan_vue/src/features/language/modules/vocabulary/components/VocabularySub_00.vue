@@ -4,8 +4,7 @@
 
 <script setup lang="ts">
 
-import ReturnToPlanDashboardButton
-  from '@/features/language/modules/vocabulary/components/ui/ReturnToPlanDashboardButton.vue'
+import ReturnToPlanDashboardButton from '@/features/language/modules/_type/ui/ReturnToPlanDashboardButton.vue'
 </script>
 <style scoped lang="scss">
 

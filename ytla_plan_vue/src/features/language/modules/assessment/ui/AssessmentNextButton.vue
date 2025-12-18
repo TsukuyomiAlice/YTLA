@@ -3,7 +3,7 @@
     class="language-manage-btn"
     @click="handleAssessmentNext"
   >
-    {{ $t(`language.AssessmentNextButton_001`) }}
+    {{ $t(`language.modules.assessment.next_button_001`) }}
   </button>
 
 </template>

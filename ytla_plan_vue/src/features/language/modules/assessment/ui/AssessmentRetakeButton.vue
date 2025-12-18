@@ -3,7 +3,7 @@
     class="language-manage-btn"
     @click="handleRetakeAssessment"
   >
-    {{ $t(`language.AssessmentRetakeButton_001`) }}
+    {{ $t(`language.modules.assessment.retake_button_001`) }}
   </button>
 
 </template>

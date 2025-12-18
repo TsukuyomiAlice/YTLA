@@ -2,7 +2,7 @@
   <div class="vocabulary-detail">
     <!-- 返回按钮 -->
     <button class="back-btn" @click="handleBack">
-      ← {{ $t('language.VocabularyReturnButton_001') }}
+      ← {{ $t('language.modules.vocabulary.return_button_001') }}
     </button>
 
     <!-- 单词列表 -->
@@ -14,7 +14,7 @@
 
     <!-- 空状态 -->
     <div v-else class="empty-state">
-      <p>{{ $t('language.VocabularyMain_01_001') }}</p>
+      <p>{{ $t('language.modules.vocabulary.main_01_001') }}</p>
     </div>
   </div>
 </template>

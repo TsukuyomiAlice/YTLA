@@ -5,7 +5,7 @@
 <script setup lang="ts">
 
 import ReturnToPlanDashboardButton
-  from '@/features/mathematics/modules/sphere/ui/ReturnToPlanDashboardButton.vue'
+  from '@/features/mathematics/modules/_type/ui/ReturnToPlanDashboardButton.vue'
 </script>
 <style scoped lang="scss">
 

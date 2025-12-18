@@ -1,10 +1,10 @@
 <template>
-  <h1>{{ $t('language.VocabularyMain_00_000') }}</h1>
+  <h1>{{ $t('language.modules.vocabulary.main_00_000') }}</h1>
   <div class="vocabulary-container">
     <!-- 创建区域 -->
     <div class="create-section">
       <button class="create-btn" @click="createNewBook">
-        + {{ $t('language.VocabularyAddButton_001') }}
+        + {{ $t('language.modules.vocabulary.add_button_001') }}
       </button>
     </div>
 
@@ -12,18 +12,18 @@
     <div v-if="vocabularyBooks.length" class="book-list">
       <div v-for="book in vocabularyBooks" :key="book.record_id" class="book-item">
         <div class="book-header">
-          <h3>{{ book.vocabulary_book_name || $t('language.VocabularyMain_00_001') }}</h3>
+          <h3>{{ book.vocabulary_book_name || $t('language.modules.vocabulary.main_00_001') }}</h3>
           <span class="word-count">{{ book.word_list.length }} words</span>
         </div>
         <div class="book-actions">
-          <button @click="openBook(book.record_id)">{{ $t('language.VocabularyOpenButton_001') }}</button>
+          <button @click="openBook(book.record_id)">{{ $t('language.modules.vocabulary.open_button_001') }}</button>
         </div>
       </div>
     </div>
 
     <!-- 空状态 -->
     <div v-else class="empty-state">
-      <p>{{ $t('language.VocabularyMain_00_002') }}</p>
+      <p>{{ $t('language.modules.vocabulary.main_00_002') }}</p>
     </div>
   </div>
 </template>

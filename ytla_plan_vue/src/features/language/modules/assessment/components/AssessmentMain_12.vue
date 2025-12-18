@@ -1,8 +1,8 @@
 <template>
-  <h1>{{ $t('language.AssessmentMain_12_000') }}</h1>
+  <h1>{{ $t('language.modules.assessment.main_12_000') }}</h1>
   <assessment-retake-button @jump-to-step="handleRetake"/>
   <br>
-  <p>{{ $t('language.modules.AssessmentMain_11_001') }}</p>
+  <p>{{ $t('language.modules.assessment.main_11_001') }}</p>
 
   <div class="word-list">
     <div v-for="(word, index) in step1Wordlist" :key="index" class="word-item">
