@@ -1,29 +1,47 @@
 import { ref, computed, nextTick, watch } from 'vue'
 import { useCardStore } from '@/core/classic/cards/sideCard/stores/cardStore.ts'
 import { CardService } from '@/core/classic/cards/sideCard/services/cardService.ts'
-import { parseTags } from '@/core/classic/cards/sideCard/types/cardDataType.ts'
-import { usePersistence } from '@/core/classic/frame/main/composables/usePersistence.ts'
 
+import { usePersistence } from '@/core/classic/frame/main/composables/usePersistence.ts'
 const { getPersistence, setPersistence } = usePersistence()
 
-export const useSideCard = (props: any, emit: any) => {
+import type { SideCardProps, SideCardEmits } from '@/core/classic/cards/sideCard/types/sideCardType.ts'
+
+import { parseTags } from '@/core/classic/cards/sideCard/types/cardDataType.ts'
+
+
+export const useSideCard = (props: SideCardProps, emit: SideCardEmits) => {
   const store = useCardStore()
   const API_BASE = import.meta.env.VITE_API_BASE
-  const cardService = new CardService(API_BASE)
+
+  // pin button
+  const { isPinned, togglePin } = useSideCardPinButton(props)
+  // icon upload button
+  const { iconUploadInput, triggerIconUpload, handleIconUpload } = useSideCardChangeIcon(props)
+  // background upload button
+  const { containerStyle, bgUploadInput, triggerBgUpload, handleBgUpload } = useSideCardChangeBackground(props)
+  // for upload
+  const { handleFileUpload } = useSideCardUpload(props)
+  // deactivate button
+  const { handleDeactivate } = useSideCardDeactivate(props, emit)
+  // close button
+  const { handleClose } = useSideCardClose(props, emit)
+
+
 
   // card_expand area
   const isExpanded = ref(
     props.cardId !== undefined
-      ? getPersistence('cards', 'expanded')[props.cardId as string] || false
+      ? getPersistence('cards', 'expanded')[props.cardId] || false
       : props.initialExpanded
   )
 
-  watch(isExpanded, (newVal) => {
+  watch(isExpanded, (newVal: boolean) => {
     if (props.cardId !== undefined) {
       setPersistence('cards', {
         expanded: {
           ...getPersistence('cards', 'expanded'),
-          [props.cardId as string]: isExpanded.value
+          [props.cardId.toString()]: isExpanded.value
         }
       })
     }
@@ -54,16 +72,12 @@ export const useSideCard = (props: any, emit: any) => {
   }
 
   // background
-  const containerStyle = computed(() => ({
-    backgroundImage: props.background ? `url(${API_BASE}/uploads/${props.background})` : '',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center'
-  }))
+
 
   // title
   const titleRef = ref<HTMLElement | null>(null)
   const isTitleEditable = ref(false)
-  const originalTitle = ref(props.title)
+  const originalTitle = ref(props.name || '')
 
   const handleTitleBlur = async (e: Event) => {
     const newTitle = (e.target as HTMLElement).innerText.trim()
@@ -81,7 +95,7 @@ export const useSideCard = (props: any, emit: any) => {
 
   // description
   const isDescriptionEditable = ref(false)
-  const originalDescription = ref(props.description)
+  const originalDescription = ref(props.description || '')
 
   const handleDescriptionBlur = async (e: Event) => {
     const newDescription = (e.target as HTMLElement).innerText.trim()
@@ -140,12 +154,12 @@ export const useSideCard = (props: any, emit: any) => {
   }
 
   // tags
-  const tagsArray = ref<string[]>(parseTags(props.tags))
+  const tagsArray = ref<string[]>(parseTags(props.tags || ''))
   const isAddingTag = ref(false)
   const newTag = ref('')
   const tagInput = ref<HTMLInputElement | null>(null)
 
-  watch(() => props.tags, (newVal) => {
+  watch(() => props.tags || '', (newVal) => {
     tagsArray.value = parseTags(newVal)
   })
 
@@ -204,47 +218,8 @@ export const useSideCard = (props: any, emit: any) => {
     newTag.value = ''
   }
 
-  // icon and background
-  const iconUploadInput = ref<HTMLInputElement | null>(null)
-  const bgUploadInput = ref<HTMLInputElement | null>(null)
 
-  const triggerIconUpload = () => {
-    iconUploadInput.value?.click()
-  }
 
-  const triggerBgUpload = () => {
-    bgUploadInput.value?.click()
-  }
-
-  const handleIconUpload = async (event: Event) => {
-    await handleFileUpload(event, 'icon')
-  }
-
-  const handleBgUpload = async (event: Event) => {
-    await handleFileUpload(event, 'background')
-  }
-
-  const handleFileUpload = async (event: Event, type: 'icon' | 'background') => {
-    const input = event.target as HTMLInputElement
-    const file = input.files?.[0]
-    if (!file || !props.cardId) return
-
-    try {
-      const uploadResult = await cardService.uploadFile(type, file)
-
-      if (type === 'icon') {
-        await store.updateCardIcon(props.cardId, uploadResult.filename)
-        fullIconPath.value.iconImage = `${API_BASE}/uploads/${uploadResult.filename}`
-      } else {
-        await store.updateCardBackground(props.cardId, uploadResult.filename)
-        containerStyle.value.backgroundImage = `url(${API_BASE}/uploads/${uploadResult.filename})`
-      }
-    } catch (error) {
-      console.error('上传失败:', error)
-    } finally {
-      input.value = ''
-    }
-  }
 
   const removeIcon = async () => {
     if (!props.cardId) return
@@ -257,28 +232,6 @@ export const useSideCard = (props: any, emit: any) => {
     }
   }
 
-  // buttons
-  const handleDeactivate = async () => {
-    if (props.cardId) {
-      try {
-        await store.deactivateCard(props.cardId)
-        emit('deactivate', props.cardId)
-      } catch (error) {
-
-      }
-    }
-  }
-
-  const handleClose = async () => {
-    if (props.cardId) {
-      try {
-        await store.deleteCard(props.cardId)
-        emit('close', props.cardId)
-      } catch (error) {
-
-      }
-    }
-  }
 
   const handleLeftAction = (action: string) => {
     emit('left-action', action)
@@ -286,20 +239,17 @@ export const useSideCard = (props: any, emit: any) => {
 
   // dragging
   const isDragging = ref(false)
-  const isPinned = ref(
-    props.cardId !== undefined
-      ? getPersistence('cards', 'pinned')[props.cardId as string] || false
-      : false
-  )
+
 
   // 拖动处理函数
   const handleDragStart = (e: DragEvent) => {
+    const cardId = props.cardId || 0
     if (isPinned.value) {
       e.preventDefault()
       return
     }
     isDragging.value = true
-    e.dataTransfer?.setData('text/plain', props.cardId?.toString() || '')
+    e.dataTransfer?.setData('text/plain', cardId.toString() || '')
     document.body.classList.add('dragging-active')
   }
 
@@ -309,15 +259,7 @@ export const useSideCard = (props: any, emit: any) => {
   }
 
   // 固定按钮点击处理
-  const togglePin = () => {
-    isPinned.value = !isPinned.value
-    setPersistence('cards', {
-      pinned: {
-        ...getPersistence('cards', 'pinned'),
-        [props.cardId as string]: isPinned.value
-      }
-    })
-  }
+
 
   return {
     isExpanded,
@@ -347,17 +289,149 @@ export const useSideCard = (props: any, emit: any) => {
     addNewTag,
     removeTag,
     cancelAddTag,
-    triggerIconUpload,
     triggerBgUpload,
-    iconUploadInput,
     bgUploadInput,
-    handleIconUpload,
     handleBgUpload,
     removeIcon,
     isDragging,
-    isPinned,
     handleDragStart,
     handleDragEnd,
-    togglePin
+    isPinned, togglePin,
+    iconUploadInput, triggerIconUpload, handleIconUpload,
+    handleFileUpload
   }
+}
+
+export const useSideCardPinButton = (props: SideCardProps) => {
+
+  const isPinned = ref(
+    props.cardId !== undefined
+      ? getPersistence('cards', 'pinned')[props.cardId.toString()] || false
+      : false
+  )
+
+  const togglePin = () => {
+    const cardId = props.cardId || 0
+    isPinned.value = !isPinned.value
+    setPersistence('cards', {
+      pinned: {
+        ...getPersistence('cards', 'pinned'),
+        [cardId.toString()]: isPinned.value
+      }
+    })
+  }
+
+  return { isPinned, togglePin }
+}
+
+export const useSideCardChangeIcon = (props: SideCardProps) => {
+  const API_BASE = import.meta.env.VITE_API_BASE
+  const fullIconPath = computed(() => ({
+    iconImage: props.icon ? `${API_BASE}/uploads/${props.icon}` : ''
+  }))
+
+  const iconUploadInput = ref<HTMLInputElement | null>(null)
+
+  const triggerIconUpload = () => {
+    iconUploadInput.value?.click()
+  }
+
+  const { handleFileUpload } = useSideCardUpload(props)
+  const handleIconUpload = async (event: Event) => {
+    await handleFileUpload(event, 'icon')
+  }
+
+  return { fullIconPath, iconUploadInput, triggerIconUpload, handleIconUpload }
+}
+
+export const useSideCardChangeBackground = (props: SideCardProps) => {
+
+  const API_BASE = import.meta.env.VITE_API_BASE
+  const containerStyle = computed(() => ({
+    backgroundImage: props.background ? `url(${API_BASE}/uploads/${props.background})` : '',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center'
+  }))
+
+  const bgUploadInput = ref<HTMLInputElement | null>(null)
+
+  const triggerBgUpload = () => {
+    bgUploadInput.value?.click()
+  }
+
+  const { handleFileUpload } = useSideCardUpload(props)
+  const handleBgUpload = async (event: Event) => {
+    await handleFileUpload(event, 'background')
+  }
+
+  return { containerStyle, bgUploadInput, triggerBgUpload, handleBgUpload }
+}
+
+export const useSideCardUpload = (props: SideCardProps) => {
+  const store = useCardStore()
+  const API_BASE = import.meta.env.VITE_API_BASE
+  const cardService = new CardService(API_BASE)
+
+  const fullIconPath = computed(() => ({
+    iconImage: props.icon ? `${API_BASE}/uploads/${props.icon}` : ''
+  }))
+  const containerStyle = ref({
+    backgroundImage: props.background ? `url(${API_BASE}/uploads/${props.background})` : ''
+  })
+
+  const handleFileUpload = async (event: Event, type: 'icon' | 'background') => {
+    const input = event.target as HTMLInputElement
+    const file = input.files?.[0]
+    if (!file || !props.cardId) return
+
+    try {
+      const uploadResult = await cardService.uploadFile(type, file)
+
+      if (type === 'icon') {
+        await store.updateCardIcon(props.cardId, uploadResult.filename)
+        fullIconPath.value.iconImage = `${API_BASE}/uploads/${uploadResult.filename}`
+      } else {
+        await store.updateCardBackground(props.cardId, uploadResult.filename)
+        containerStyle.value.backgroundImage = `url(${API_BASE}/uploads/${uploadResult.filename})`
+      }
+    } catch (error) {
+      console.error('上传失败:', error)
+    } finally {
+      input.value = ''
+    }
+  }
+
+  return { handleFileUpload }
+}
+
+export const useSideCardDeactivate = (props: SideCardProps, emit: SideCardEmits) => {
+  const store = useCardStore()
+  const handleDeactivate = async () => {
+    if (props.cardId) {
+      try {
+        await store.deactivateCard(props.cardId)
+        emit('deactivate', props.cardId)
+      } catch (error) {
+
+      }
+    }
+  }
+
+  return { handleDeactivate }
+}
+
+export const useSideCardClose = (props: SideCardProps, emit: SideCardEmits) => {
+  const store = useCardStore()
+  const handleClose = async () => {
+    if (props.cardId) {
+      try {
+        await store.deleteCard(props.cardId)
+        emit('close', props.cardId)
+      } catch (error) {
+
+      }
+    }
+  }
+
+  return { handleClose }
 }

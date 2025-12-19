@@ -18,116 +18,24 @@
     <div class="main-content">
       <!-- 左上角按钮区 -->
       <div class="action-column-top --top-left">
-        <button
-          class="action-button"
-          @click.stop="togglePin"
-          :aria-label="isPinned ? '取消固定' : '固定位置'"
-          :title="isPinned ? '取消固定' : '固定位置'"
-          :class="{ '--pinned': isPinned }"
-        >
-          <svg
-            class="pin-button"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            :class="{ '--pinned': isPinned }"
-          >
-            <path
-              d="M16 12V4h1c.55 0 1-.45 1-1s-.45-1-1-1H7c-.55 0-1 .45-1 1s.45 1 1 1h1v8l-2 2v2h5.2v6h1.6v-6H18v-2l-2-2z"
-            />
-          </svg>
-        </button>
-        <button
-          v-if="showIcon"
-          class="action-button"
-          @click.stop="triggerIconUpload"
-          aria-label="修改图标"
-          title="修改图标"
-        >
-          <svg viewBox="0 0 24 24" fill="currentColor" class="icon-upload">
-            <rect
-              x="3"
-              y="3"
-              width="18"
-              height="18"
-              rx="3"
-              ry="3"
-              stroke="currentColor"
-              stroke-width="2"
-              fill="none"
-            />
-            <circle cx="9" cy="10" r="1.5" fill="currentColor" />
-            <circle cx="15" cy="10" r="1.5" fill="currentColor" />
-            <path
-              d="M8 15a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1"
-              stroke="currentColor"
-              stroke-width="1.5"
-              fill="none"
-              stroke-linecap="round"
-            />
-          </svg>
-        </button>
-        <input
-          ref="iconUploadInput"
-          type="file"
-          accept="image/*"
-          hidden
-          @change="handleIconUpload"
-        />
-        <button
-          class="action-button"
-          @click.stop="triggerBgUpload"
-          aria-label="修改背景"
-          title="修改背景"
-        >
-          <svg viewBox="0 0 24 24" fill="currentColor" class="bg-upload">
-            <path
-              d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-4-4v-2h-2v2h-2v2h2v2h2v-2h2v-2h-2zM13 7v2h2v2h-2v2H9v-2H7v-2h2V7z"
-            />
-          </svg>
-        </button>
+        <button-pin :is-pinned="isPinned" :toggle-pin="togglePin" />
+
+        <button-change-icon :show-icon="showIcon" :trigger-icon-upload="triggerIconUpload" />
+        <input ref="iconUploadInput" type="file" accept="image/*" hidden @change="handleIconUpload"/>
+
+        <button-change-background :trigger-bg-upload="triggerBgUpload" />
         <input ref="bgUploadInput" type="file" accept="image/*" hidden @change="handleBgUpload" />
+
         <slot name="top-left-actions"></slot>
       </div>
 
       <!-- 右上角按钮区 -->
       <div class="action-column-top --top-right">
-        <button
-          v-if="showSettings"
-          class="action-button"
-          @click="$emit('edit', cardId as number)"
-          aria-label="设置"
-          title="设置"
-        >
-          <svg class="gear-icon" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.3-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.42-.48-.42h-3.84c-.24 0-.44.18-.47.42l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94 0 .31.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.3.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.04.24.24.42.48.42h3.84c.24 0 .44-.18.47-.42l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"
-            />
-          </svg>
-        </button>
-        <button
-          v-if="showDeactivate"
-          class="action-button"
-          @click="handleDeactivate"
-          aria-label="停用"
-          title="停用"
-        >
-          <svg class="deactivate-icon" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M18 11H6c-.55 0-1 .45-1 1s.45 1 1 1h12c.55 0 1-.45 1-1s-.45-1-1-1z" />
-          </svg>
-        </button>
-        <button
-          v-if="showClose"
-          class="action-button"
-          @click="handleClose"
-          aria-label="关闭卡片"
-          title="关闭卡片"
-        >
-          <svg class="trash-icon" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-            />
-          </svg>
-        </button>
+        <button-edit :show-settings="showSettings" :card-id="cardId" @edit="emit('edit', $event)" />
+
+        <button-deactivate :show-deactivate="showDeactivate" :handle-deactivate="handleDeactivate" />
+
+        <button-close :show-close="showClose" :handle-close="handleClose" />
         <slot name="top-actions"></slot>
       </div>
 
@@ -245,27 +153,11 @@
 </template>
 
 <script setup lang="ts">
+import type { SideCardProps, SideCardEmits } from '@/core/classic/cards/sideCard/types/sideCardType.ts'
 const props = withDefaults(
-  defineProps<{
-    cardType?: string
-    cardId?: number
-    icon?: string
-    background?: string
-    name?: string
-    tags?: string
-    description?: string
-
-    spanColumns?: number
-    initialExpanded?: boolean
-    showIcon?: boolean
-    showTitle?: boolean
-    showTags?: boolean
-    showSettings?: boolean
-    showDeactivate?: boolean
-    showClose?: boolean
-    order?: number
-  }>(),
+  defineProps<SideCardProps>(),
   {
+    cardId: 0,
     cardType: 'default',
     icon: '',
     background: '',
@@ -284,17 +176,15 @@ const props = withDefaults(
   },
 )
 
-const emit = defineEmits<{
-  (e: 'toggle-expanded', state: boolean): void
-  (e: 'settings'): void
-  (e: 'deactivate', id?: number): void
-  (e: 'close', id?: number): void
-  (e: 'left-action', action: string): void
-  (e: 'update:tags', tags: string): void
-  (e: 'edit', id: number): void
-}>()
+const emit = defineEmits<SideCardEmits>()
 
 import { useSideCard } from '@/core/classic/cards/sideCard/composables/useSideCard.ts'
+import ButtonPin from '@/core/classic/cards/sideCard/ui/ButtonPin.vue'
+import ButtonChangeIcon from '@/core/classic/cards/sideCard/ui/ButtonChangeIcon.vue'
+import ButtonChangeBackground from '@/core/classic/cards/sideCard/ui/ButtonChangeBackground.vue'
+import ButtonEdit from '@/core/classic/cards/sideCard/ui/ButtonEdit.vue'
+import ButtonDeactivate from '@/core/classic/cards/sideCard/ui/ButtonDeactivate.vue'
+import ButtonClose from '@/core/classic/cards/sideCard/ui/ButtonClose.vue'
 const {
   isExpanded,
   titleRef,
@@ -304,7 +194,6 @@ const {
   isAddingTag,
   newTag,
   tagInput,
-  fullIconPath,
   containerStyle,
   shouldShowAddButton,
   showAddButton,
@@ -320,17 +209,12 @@ const {
   addNewTag,
   removeTag,
   cancelAddTag,
-  triggerIconUpload,
-  iconUploadInput,
   bgUploadInput,
-  handleIconUpload,
   handleBgUpload,
   removeIcon,
   triggerBgUpload,
-  isPinned,
   handleDragStart,
-  handleDragEnd,
-  togglePin,
+  handleDragEnd, isPinned, togglePin, fullIconPath, iconUploadInput, triggerIconUpload, handleIconUpload
 } = useSideCard(props, emit)
 </script>
 
