@@ -14,11 +14,11 @@
 </template>
 
 <script setup lang="ts">
-const { triggerBgUpload } = defineProps<{
+defineProps<{
   triggerBgUpload: () => void
 }>()
 </script>
 
 <style scoped lang="scss">
-@import '@/core/classic/cards/sidecard/styles/card-component-button.scss';
+@use '@/core/classic/cards/sidecard/styles/card-component-button.scss';
 </style>

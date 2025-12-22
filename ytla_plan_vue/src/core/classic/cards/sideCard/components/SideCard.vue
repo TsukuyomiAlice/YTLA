@@ -1,19 +1,6 @@
 <template>
-  <div
-    class="card-container"
-    :draggable="!isPinned"
-    @dragstart="handleDragStart"
-    @dragend="handleDragEnd"
-    @dragover.prevent
-    @dragenter.prevent
-    :class="{
-      '--expanded': isExpanded,
-      '--span-2': spanColumns === 2,
-      '--span-3': spanColumns === 3,
-    }"
-    @click.stop
-    :style="containerStyle"
-  >
+
+  <ContainerSideCard :is-pinned= "isPinned" :is-expanded="isExpanded" :span-columns="spanColumns" :container-style="containerStyle" :handle-drag-start="handleDragStart" :handle-drag-end="handleDragEnd">
     <!-- 主显示区 -->
     <div class="main-content">
       <!-- 左上角按钮区 -->
@@ -21,7 +8,7 @@
         <button-pin :is-pinned="isPinned" :toggle-pin="togglePin" />
 
         <button-change-icon :show-icon="showIcon" :trigger-icon-upload="triggerIconUpload" />
-        <input ref="iconUploadInput" type="file" accept="image/*" hidden @change="handleIconUpload"/>
+        <input ref="iconUploadInput" type="file" accept="image/*" hidden @change="handleIconUpload" />
 
         <button-change-background :trigger-bg-upload="triggerBgUpload" />
         <input ref="bgUploadInput" type="file" accept="image/*" hidden @change="handleBgUpload" />
@@ -36,6 +23,7 @@
         <button-deactivate :show-deactivate="showDeactivate" :handle-deactivate="handleDeactivate" />
 
         <button-close :show-close="showClose" :handle-close="handleClose" />
+
         <slot name="top-actions"></slot>
       </div>
 
@@ -43,71 +31,38 @@
       <div class="content-wrapper">
         <!-- icon、标题、background -->
         <div class="header">
-          <div class="icon-container">
-            <img
-              v-if="fullIconPath && showIcon"
-              :src="fullIconPath.iconImage"
-              class="icon"
-              @error="handleIconError"
-              alt=""
-            />
-            <button
-              v-if="fullIconPath && showIcon"
-              class="icon-remove-btn"
-              @click.stop="removeIcon"
-            >
-              ×
-            </button>
-          </div>
-          <div class="title-wrapper">
-            <h3>
-              <div
-                v-if="showTitle"
-                :ref="
-                  function (el) {
-                    return (titleRef = el as HTMLElement | null)
-                  }
-                "
-                class="editable-title"
-                :contenteditable="isTitleEditable"
-                @click="startEditing('title')"
-                @blur="handleTitleBlur"
-                @keydown.enter="handleTitleBlur($event)"
-                @keydown.esc="cancelEdit('title')"
-                :data-placeholder="!name ? '...' : ''"
-              >
-                {{ name }}
-              </div>
-            </h3>
-          </div>
+          <container-icon
+            :full-icon-path="fullIconPath"
+            :show-icon="showIcon"
+            :handle-icon-error="handleIconError"
+            :remove-icon="removeIcon"
+          />
+
+          <BarTitle
+            :show-title="showTitle"
+            :name="name"
+            :title-ref="titleRef"
+            :is-title-editable="isTitleEditable"
+            :start-edit-title="startEditTitle"
+            :handle-title-blur="handleTitleBlur"
+            :cancel-edit-title="cancelEditTitle"
+          />
         </div>
 
         <!-- tag区域 -->
-        <div
-          class="tags-container"
-          v-if="(tagsArray.length > 0 || isAddingTag || shouldShowAddButton) && showTags"
-        >
-          <span class="tag" v-for="(tag, index) in tagsArray" :key="index">
-            {{ tag }}
-            <button class="tag-remove" @click.stop="removeTag(index)">×</button>
-          </span>
-
-          <button v-if="showAddButton" class="tag-add-button" @click.stop="startAddingTag">
-            +
-          </button>
-
-          <input
-            v-if="isAddingTag"
-            ref="tagInput"
-            v-model="newTag"
-            class="tag-input"
-            type="text"
-            placeholder="输入标签"
-            @keydown.enter="addNewTag"
-            @keydown.esc="cancelAddTag"
-            @blur="addNewTag"
-          />
-        </div>
+        <BarTags
+          :show-tags="showTags"
+          :tags-array="tagsArray"
+          :is-adding-tag="isAddingTag"
+          v-model:new-tag="newTag"
+          :tag-input="tagInput"
+          :should-show-add-button="shouldShowAddButton"
+          :show-add-button="showAddButton"
+          :start-adding-tag="startAddingTag"
+          :add-new-tag="addNewTag"
+          :remove-tag="removeTag"
+          :cancel-add-tag="cancelAddTag"
+        />
 
         <!-- 主内容 -->
         <slot name="card-content"></slot>
@@ -122,99 +77,88 @@
 
       <div class="action-column-central-right">
         <slot name="right-actions"></slot>
-        <button class="toggle-button" @click="toggleExpanded" :aria-expanded="isExpanded">
-          <span class="arrow" :class="{ '--up': isExpanded }">▼</span>
-        </button>
+        <button-expand :toggle-expanded="toggleExpanded" :is-expanded="isExpanded" />
       </div>
     </div>
 
     <!-- 副内容区 -->
     <transition name="slide-fade">
       <div v-show="isExpanded" class="secondary-content">
-        <div class="description-text">
-          <strong>
-            <div
-              class="editable-description"
-              :contenteditable="isDescriptionEditable"
-              @click="startEditing('description')"
-              @blur="handleDescriptionBlur"
-              @keydown.enter="handleDescriptionBlur($event)"
-              @keydown.esc="cancelEdit('description')"
-              :data-placeholder="!description ? '...' : ''"
-            >
-              {{ description }}
-            </div>
-          </strong>
-        </div>
+        <BarDescription
+          :description="description"
+          :description-ref="descriptionRef"
+          :is-description-editable="isDescriptionEditable"
+          :start-edit-description="startEditDescription"
+          :handle-description-blur="handleDescriptionBlur"
+          :cancel-edit-description="cancelEditDescription"
+        />
+
         <slot name="secondary-content"></slot>
       </div>
     </transition>
-  </div>
+
+  </ContainerSideCard>
 </template>
 
 <script setup lang="ts">
-import type { SideCardProps, SideCardEmits } from '@/core/classic/cards/sideCard/types/sideCardType.ts'
-const props = withDefaults(
-  defineProps<SideCardProps>(),
-  {
-    cardId: 0,
-    cardType: 'default',
-    icon: '',
-    background: '',
-    name: '默认标题',
-    tags: '',
-    description: '...',
+import type {
+  SideCardProps,
+  SideCardEmits,
+} from '@/core/classic/cards/sideCard/types/sideCardType.ts'
 
-    spanColumns: 1,
-    initialExpanded: false,
-    showIcon: true,
-    showTitle: true,
-    showTags: true,
-    showSettings: true,
-    showDeactivate: true,
-    showClose: true,
-  },
-)
+const props = withDefaults(defineProps<SideCardProps>(), {
+  cardId: 0,
+  cardType: 'default',
+  icon: '',
+  background: '',
+  name: '默认标题',
+  tags: '',
+  description: '...',
+
+  spanColumns: 1,
+  initialExpanded: false,
+  showIcon: true,
+  showTitle: true,
+  showTags: true,
+  showSettings: true,
+  showDeactivate: true,
+  showClose: true,
+})
 
 const emit = defineEmits<SideCardEmits>()
+import ContainerSideCard from '@/core/classic/cards/sideCard/layouts/ContainerSideCard.vue'
 
-import { useSideCard } from '@/core/classic/cards/sideCard/composables/useSideCard.ts'
 import ButtonPin from '@/core/classic/cards/sideCard/ui/ButtonPin.vue'
 import ButtonChangeIcon from '@/core/classic/cards/sideCard/ui/ButtonChangeIcon.vue'
 import ButtonChangeBackground from '@/core/classic/cards/sideCard/ui/ButtonChangeBackground.vue'
+
 import ButtonEdit from '@/core/classic/cards/sideCard/ui/ButtonEdit.vue'
 import ButtonDeactivate from '@/core/classic/cards/sideCard/ui/ButtonDeactivate.vue'
 import ButtonClose from '@/core/classic/cards/sideCard/ui/ButtonClose.vue'
+
+import ButtonExpand from '@/core/classic/cards/sideCard/ui/ButtonExpand.vue'
+
+import ContainerIcon from '@/core/classic/cards/sideCard/ui/ContainerIcon.vue'
+import BarTitle from '@/core/classic/cards/sideCard/ui/BarTitle.vue'
+import BarDescription from '@/core/classic/cards/sideCard/ui/BarDescription.vue'
+import BarTags from '@/core/classic/cards/sideCard/ui/BarTags.vue'
+
+import { useSideCard } from '@/core/classic/cards/sideCard/composables/useSideCard.ts'
+
 const {
-  isExpanded,
-  titleRef,
-  isTitleEditable,
-  isDescriptionEditable,
-  tagsArray,
-  isAddingTag,
-  newTag,
-  tagInput,
-  containerStyle,
-  shouldShowAddButton,
-  showAddButton,
-  handleIconError,
-  handleDeactivate,
-  handleClose,
-  toggleExpanded,
-  startEditing,
-  cancelEdit,
-  handleTitleBlur,
-  handleDescriptionBlur,
-  startAddingTag,
-  addNewTag,
-  removeTag,
-  cancelAddTag,
-  bgUploadInput,
-  handleBgUpload,
-  removeIcon,
-  triggerBgUpload,
-  handleDragStart,
-  handleDragEnd, isPinned, togglePin, fullIconPath, iconUploadInput, triggerIconUpload, handleIconUpload
+    handleDragStart, handleDragEnd,
+    isPinned, togglePin,
+    fullIconPath, iconUploadInput, triggerIconUpload, handleIconUpload,
+    containerStyle, bgUploadInput, triggerBgUpload, handleBgUpload,
+
+    handleDeactivate,
+    handleClose,
+    handleIconError, removeIcon,
+    titleRef, isTitleEditable, handleTitleBlur, startEditTitle, cancelEditTitle,
+    descriptionRef, isDescriptionEditable, handleDescriptionBlur, startEditDescription, cancelEditDescription,
+    isExpanded, toggleExpanded,
+    tagsArray, isAddingTag, newTag, tagInput, shouldShowAddButton, showAddButton, startAddingTag, addNewTag, removeTag, cancelAddTag,
+
 } = useSideCard(props, emit)
 </script>
 

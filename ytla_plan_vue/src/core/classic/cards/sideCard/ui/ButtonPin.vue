@@ -27,5 +27,5 @@ const { isPinned, togglePin } = defineProps<{
 </script>
 
 <style scoped lang="scss">
-@import '@/core/classic/cards/sidecard/styles/card-component-button.scss';
+@use '@/core/classic/cards/sidecard/styles/card-component-button.scss';
 </style>
