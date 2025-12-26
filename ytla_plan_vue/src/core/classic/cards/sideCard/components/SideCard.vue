@@ -4,7 +4,7 @@
     <!-- 主显示区 -->
     <div class="main-content">
       <!-- 左上角按钮区 -->
-      <div class="action-column-top --top-left">
+      <div class="action-column-top --left">
         <button-pin :is-pinned="isPinned" :toggle-pin="togglePin" />
 
         <button-change-icon :show-icon="showIcon" :trigger-icon-upload="triggerIconUpload" />
@@ -17,7 +17,7 @@
       </div>
 
       <!-- 右上角按钮区 -->
-      <div class="action-column-top --top-right">
+      <div class="action-column-top --right">
         <button-edit :show-settings="showSettings" :card-id="cardId" @edit="emit('edit', $event)" />
 
         <button-deactivate :show-deactivate="showDeactivate" :handle-deactivate="handleDeactivate" />
@@ -126,6 +126,7 @@ const props = withDefaults(defineProps<SideCardProps>(), {
 })
 
 const emit = defineEmits<SideCardEmits>()
+
 import ContainerSideCard from '@/core/classic/cards/sideCard/layouts/ContainerSideCard.vue'
 
 import ButtonPin from '@/core/classic/cards/sideCard/ui/ButtonPin.vue'

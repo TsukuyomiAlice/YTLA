@@ -12,7 +12,7 @@
     <!-- 主显示区 -->
     <div class="main-content">
       <!-- 左上角按钮区 -->
-      <div class="action-column-top --top-left">
+      <div class="action-column-top --left">
         <button
           class="action-button"
           @click.stop="togglePin"

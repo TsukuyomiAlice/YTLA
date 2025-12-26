@@ -60,7 +60,7 @@ const props = defineProps<{
 }>()
 
 const { t } = useI18n()
-const isUngrouped = computed(() => props.groupName === t('planManage.PlanDashBoardMain_00_001'))
+const isUngrouped = computed(() => props.groupName === t('planManage.modules.planDashboard.main_00_001'))
 
 const emit = defineEmits<{
   (e: 'update:groupName', name: string): void
