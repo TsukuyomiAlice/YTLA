@@ -116,7 +116,7 @@ export const useCardStore = defineStore('card', {
     async updateCardIcon(cardId: number, iconName: string) {
       this.isLoading = true
       try {
-        const updatedCard = await cardService.updateCardIcon(cardId, iconName)
+        await cardService.updateCardIcon(cardId, iconName)
         const index = this.cards.findIndex(c => c.card_id === cardId)
         if (index !== -1) {
           this.cards[index] = { ...this.cards[index], icon_path: iconName }
@@ -131,7 +131,7 @@ export const useCardStore = defineStore('card', {
     async updateCardBackground(cardId: number, backgroundName: string) {
       this.isLoading = true
       try {
-        const updatedCard = await cardService.updateCardBackground(cardId, backgroundName)
+        await cardService.updateCardBackground(cardId, backgroundName)
         const index = this.cards.findIndex(c => c.card_id === cardId)
         if (index !== -1) {
           this.cards[index] = { ...this.cards[index], background_path: backgroundName }
@@ -191,6 +191,7 @@ export const useCardStore = defineStore('card', {
       this.cardFilter = value
     }
   },
+
   getters: {
     activeCards(state): CardData[] {
       return state.cards.filter(card =>

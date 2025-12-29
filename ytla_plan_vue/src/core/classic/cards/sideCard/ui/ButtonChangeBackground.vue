@@ -20,5 +20,5 @@ defineProps<{
 </script>
 
 <style scoped lang="scss">
-@use '@/core/classic/cards/sidecard/styles/card-component-button.scss';
+@use '@/core/classic/cards/sideCard/styles/ui-button';
 </style>

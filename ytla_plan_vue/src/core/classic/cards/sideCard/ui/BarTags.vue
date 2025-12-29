@@ -56,5 +56,5 @@ const handleTagInput = (e: Event) => {
 </script>
 
 <style scoped lang="scss">
-@use '@/core/classic/cards/sidecard/styles/card-component-tags.scss';
+@use '../styles/ui-tags';
 </style>

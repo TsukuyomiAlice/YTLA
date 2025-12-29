@@ -27,5 +27,15 @@ const { isPinned, togglePin } = defineProps<{
 </script>
 
 <style scoped lang="scss">
-@use '@/core/classic/cards/sidecard/styles/card-component-button.scss';
+@use '@/core/classic/cards/sideCard/styles/ui-button';
+
+.pin-button {
+  transition: transform 0.3s ease;
+
+  &.--pinned {
+    color: #ff4444;
+    transform: rotate(-45deg);
+    filter: drop-shadow(0 0 2px rgba(0, 168, 255, 0.5));
+  }
+}
 </style>

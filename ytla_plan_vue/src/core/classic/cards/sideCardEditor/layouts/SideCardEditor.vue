@@ -20,10 +20,11 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { useSideCardEditor } from '@/core/classic/cards/sideCardEditor/composables/useSideCardEditor.ts'
+import type { CardData } from '@/core/classic/cards/sideCard/types/cardDataType.ts'
 
 const props = defineProps<{
   cardContainer: {
-    cards: any[]
+    cards: CardData[]
   }
 }>()
 

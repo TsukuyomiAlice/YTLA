@@ -1,16 +1,16 @@
 <template>
   <div
+    class="editable-description"
     :ref="
       function () {
         return descriptionRef
       }
     "
-    class="editable-description"
-    :contenteditable="isDescriptionEditable"
     @click="startEditDescription"
     @blur="handleDescriptionBlur"
     @keydown.enter="handleDescriptionBlur($event)"
     @keydown.esc="cancelEditDescription"
+    :contenteditable="isDescriptionEditable"
     :data-placeholder="!description ? '...' : ''"
   >
     {{ description }}
@@ -29,5 +29,5 @@ defineProps<{
 </script>
 
 <style scoped lang="scss">
-@use '@/core/classic/cards/sidecard/styles/card-component-text.scss';
+@use '@/core/classic/cards/sideCard/styles/ui-text';
 </style>

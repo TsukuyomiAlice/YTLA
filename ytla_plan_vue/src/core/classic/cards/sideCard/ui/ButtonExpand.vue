@@ -1,5 +1,5 @@
 <template>
-  <button class="toggle-button" @click="toggleExpanded" :aria-expanded="isExpanded">
+  <button class="toggle-expand-button" @click="toggleExpanded" :aria-expanded="isExpanded">
     <span class="arrow" :class="{ '--up': isExpanded }">▼</span>
   </button>
 </template>
@@ -12,5 +12,26 @@ const { toggleExpanded, isExpanded } = defineProps<{
 </script>
 
 <style scoped lang="scss">
-@use '@/core/classic/cards/sidecard/styles/card-component-button.scss';
+.toggle-expand-button {
+  background: none;
+  border: none;
+  padding: 0.1rem 0.2rem;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #42b983;
+  }
+
+  .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    margin-left: 0.1rem;
+
+    &.--up {
+      transform: rotate(180deg);
+    }
+  }
+}
 </style>

@@ -10,10 +10,6 @@
   gap: 0.5rem;
   grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
 
-  &:has(.card-container.--span-2:nth-last-child(odd)) {
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
-  }
-
   grid-template-rows: masonry;
   position: relative;
   flex-shrink: 1;

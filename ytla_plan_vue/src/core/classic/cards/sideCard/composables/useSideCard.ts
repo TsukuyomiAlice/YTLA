@@ -13,7 +13,6 @@ import { useBarTitle } from '@/core/classic/cards/sideCard/composables/useBarTit
 import { useBarDescription } from '@/core/classic/cards/sideCard/composables/useBarDescription.ts'
 import { useBarTags } from '@/core/classic/cards/sideCard/composables/useBarTags.ts'
 
-// 在 useSideCard 函数中
 export const useSideCard = (props: SideCardProps, emit: SideCardEmits) => {
 
   // side card container

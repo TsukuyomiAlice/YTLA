@@ -23,5 +23,5 @@ const {} = defineProps<{
 </script>
 
 <style scoped lang="scss">
-@use '@/core/classic/cards/sidecard/styles/card-component-icon.scss';
+@use '@/core/classic/cards/sideCard/styles/ui-icon';
 </style>

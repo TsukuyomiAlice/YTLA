@@ -1,5 +1,4 @@
 <template>
-
   <ContainerSideCard :is-pinned= "isPinned" :is-expanded="isExpanded" :span-columns="spanColumns" :container-style="containerStyle" :handle-drag-start="handleDragStart" :handle-drag-end="handleDragEnd">
     <!-- 主显示区 -->
     <div class="main-content">
@@ -31,38 +30,13 @@
       <div class="content-wrapper">
         <!-- icon、标题、background -->
         <div class="header">
-          <container-icon
-            :full-icon-path="fullIconPath"
-            :show-icon="showIcon"
-            :handle-icon-error="handleIconError"
-            :remove-icon="removeIcon"
-          />
+          <container-icon :full-icon-path="fullIconPath" :show-icon="showIcon" :handle-icon-error="handleIconError" :remove-icon="removeIcon" />
 
-          <BarTitle
-            :show-title="showTitle"
-            :name="name"
-            :title-ref="titleRef"
-            :is-title-editable="isTitleEditable"
-            :start-edit-title="startEditTitle"
-            :handle-title-blur="handleTitleBlur"
-            :cancel-edit-title="cancelEditTitle"
-          />
+          <BarTitle :show-title="showTitle" :name="name" :title-ref="titleRef" :is-title-editable="isTitleEditable" :start-edit-title="startEditTitle" :handle-title-blur="handleTitleBlur" :cancel-edit-title="cancelEditTitle" />
         </div>
 
         <!-- tag区域 -->
-        <BarTags
-          :show-tags="showTags"
-          :tags-array="tagsArray"
-          :is-adding-tag="isAddingTag"
-          v-model:new-tag="newTag"
-          :tag-input="tagInput"
-          :should-show-add-button="shouldShowAddButton"
-          :show-add-button="showAddButton"
-          :start-adding-tag="startAddingTag"
-          :add-new-tag="addNewTag"
-          :remove-tag="removeTag"
-          :cancel-add-tag="cancelAddTag"
-        />
+        <BarTags :show-tags="showTags" :tags-array="tagsArray" :is-adding-tag="isAddingTag" v-model:new-tag="newTag" :tag-input="tagInput" :should-show-add-button="shouldShowAddButton" :show-add-button="showAddButton" :start-adding-tag="startAddingTag" :add-new-tag="addNewTag" :remove-tag="removeTag" :cancel-add-tag="cancelAddTag" />
 
         <!-- 主内容 -->
         <slot name="card-content"></slot>
@@ -84,23 +58,31 @@
     <!-- 副内容区 -->
     <transition name="slide-fade">
       <div v-show="isExpanded" class="secondary-content">
-        <BarDescription
-          :description="description"
-          :description-ref="descriptionRef"
-          :is-description-editable="isDescriptionEditable"
-          :start-edit-description="startEditDescription"
-          :handle-description-blur="handleDescriptionBlur"
-          :cancel-edit-description="cancelEditDescription"
-        />
-
+        <BarDescription :description="description" :description-ref="descriptionRef" :is-description-editable="isDescriptionEditable" :start-edit-description="startEditDescription" :handle-description-blur="handleDescriptionBlur" :cancel-edit-description="cancelEditDescription" />
         <slot name="secondary-content"></slot>
       </div>
     </transition>
-
   </ContainerSideCard>
 </template>
 
 <script setup lang="ts">
+import ContainerSideCard from '@/core/classic/cards/sideCard/layouts/ContainerSideCard.vue'
+
+import ButtonPin from '@/core/classic/cards/sideCard/ui/ButtonPin.vue'
+import ButtonChangeIcon from '@/core/classic/cards/sideCard/ui/ButtonChangeIcon.vue'
+import ButtonChangeBackground from '@/core/classic/cards/sideCard/ui/ButtonChangeBackground.vue'
+
+import ButtonEdit from '@/core/classic/cards/sideCard/ui/ButtonEdit.vue'
+import ButtonDeactivate from '@/core/classic/cards/sideCard/ui/ButtonDeactivate.vue'
+import ButtonClose from '@/core/classic/cards/sideCard/ui/ButtonClose.vue'
+
+import ButtonExpand from '@/core/classic/cards/sideCard/ui/ButtonExpand.vue'
+
+import ContainerIcon from '@/core/classic/cards/sideCard/ui/ContainerIcon.vue'
+import BarTitle from '@/core/classic/cards/sideCard/ui/BarTitle.vue'
+import BarDescription from '@/core/classic/cards/sideCard/ui/BarDescription.vue'
+import BarTags from '@/core/classic/cards/sideCard/ui/BarTags.vue'
+
 import type {
   SideCardProps,
   SideCardEmits,
@@ -127,23 +109,6 @@ const props = withDefaults(defineProps<SideCardProps>(), {
 
 const emit = defineEmits<SideCardEmits>()
 
-import ContainerSideCard from '@/core/classic/cards/sideCard/layouts/ContainerSideCard.vue'
-
-import ButtonPin from '@/core/classic/cards/sideCard/ui/ButtonPin.vue'
-import ButtonChangeIcon from '@/core/classic/cards/sideCard/ui/ButtonChangeIcon.vue'
-import ButtonChangeBackground from '@/core/classic/cards/sideCard/ui/ButtonChangeBackground.vue'
-
-import ButtonEdit from '@/core/classic/cards/sideCard/ui/ButtonEdit.vue'
-import ButtonDeactivate from '@/core/classic/cards/sideCard/ui/ButtonDeactivate.vue'
-import ButtonClose from '@/core/classic/cards/sideCard/ui/ButtonClose.vue'
-
-import ButtonExpand from '@/core/classic/cards/sideCard/ui/ButtonExpand.vue'
-
-import ContainerIcon from '@/core/classic/cards/sideCard/ui/ContainerIcon.vue'
-import BarTitle from '@/core/classic/cards/sideCard/ui/BarTitle.vue'
-import BarDescription from '@/core/classic/cards/sideCard/ui/BarDescription.vue'
-import BarTags from '@/core/classic/cards/sideCard/ui/BarTags.vue'
-
 import { useSideCard } from '@/core/classic/cards/sideCard/composables/useSideCard.ts'
 
 const {
@@ -164,9 +129,7 @@ const {
 </script>
 
 <style lang="scss" scoped>
-@use '../styles/sidecard';
-@use '../styles/card-component-button';
-@use '../styles/card-component-icon';
-@use '../styles/card-component-tags';
-@use '../styles/card-component-text';
+@use '../styles/side-card';
+@use '../styles/transition-side-card';
+@use '../styles/component-column';
 </style>

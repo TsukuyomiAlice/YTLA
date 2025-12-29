@@ -72,10 +72,10 @@ const { fullIconPath, handleIconError, containerStyle } = useModuleCardEditor(pr
 
 <style lang="scss" scoped>
 @use '../styles/module-card';
-@use '../../../cards/sideCard/styles/card-component-button';
-@use '../../../cards/sideCard/styles/card-component-icon';
-@use '../../../cards/sideCard/styles/card-component-tags';
-@use '../../../cards/sideCard/styles/card-component-text';
+@use '../../../cards/sideCard/styles/ui-button';
+@use '../../../cards/sideCard/styles/ui-icon';
+@use '../../../cards/sideCard/styles/ui-tags';
+@use '../../../cards/sideCard/styles/ui-text';
 
 .icon {
   width: 2rem;

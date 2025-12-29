@@ -282,8 +282,8 @@ const {
 
 <style lang="scss" scoped>
 @use '@/core/classic/plans/planCard/styles/plan-card-editor';
-@use '@/core/classic/cards/sideCard/styles/card-component-button';
-@use '@/core/classic/cards/sideCard/styles/card-component-icon';
-@use '@/core/classic/cards/sideCard/styles/card-component-tags';
-@use '@/core/classic/cards/sideCard/styles/card-component-text';
+@use 'ui-button';
+@use 'ui-icon';
+@use 'ui-tags';
+@use '@/core/classic/cards/sideCard/styles/ui-text';
 </style>

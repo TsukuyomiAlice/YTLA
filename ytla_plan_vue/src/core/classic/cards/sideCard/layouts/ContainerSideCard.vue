@@ -31,6 +31,5 @@ defineProps<{
 </script>
 
 <style scoped lang="scss">
-@use '../styles/sidecard';
-@use '../styles/container-sidecard';
+@use '../styles/container-side-card';
 </style>

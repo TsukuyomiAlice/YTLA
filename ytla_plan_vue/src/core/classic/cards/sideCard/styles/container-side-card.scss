@@ -28,9 +28,8 @@
 
   &[draggable="true"] {
     cursor: grab;
-    transition:
-      transform 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28),
-      opacity 0.2s ease;
+    transition: transform 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28),
+    opacity 0.2s ease;
 
     &:active {
       cursor: grabbing;
@@ -50,3 +49,5 @@
     transition: transform 0.2s;
   }
 }
+
+

@@ -76,7 +76,7 @@ const resetForm = () => {
 </script>
 
 <style scoped lang="scss">
-@use '@/core/classic/cards/sideCard/styles/card-component-button';
+@use 'ui-button';
 
 .form-container {
   padding: 1rem;
