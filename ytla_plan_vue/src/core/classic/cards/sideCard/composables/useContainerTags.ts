@@ -3,7 +3,7 @@ import { useCardStore } from '@/core/classic/cards/sideCard/stores/cardStore.ts'
 import type { SideCardProps, SideCardEmits } from '@/core/classic/cards/sideCard/types/sideCardType.ts'
 import { parseTags } from '@/core/classic/cards/sideCard/types/cardDataType.ts'
 
-export const useBarTags = (props: SideCardProps, emit: SideCardEmits) => {
+export const useContainerTags = (props: SideCardProps, emit: SideCardEmits) => {
   const store = useCardStore()
 
   const tagsArray = ref<string[]>(parseTags(props.tags || ''))
@@ -77,11 +77,16 @@ export const useBarTags = (props: SideCardProps, emit: SideCardEmits) => {
     }
   }
 
+  const handleTagInput = (e: Event) => {
+    const target = e.target as HTMLInputElement
+    newTag.value = target.value
+  }
+
   const cancelAddTag = () => {
     isAddingTag.value = false
     newTag.value = ''
   }
 
   return {
-    tagsArray, isAddingTag, newTag, tagInput, shouldShowAddButton, showAddButton, startAddingTag, addNewTag, removeTag, cancelAddTag }
+    tagsArray, isAddingTag, newTag, tagInput, shouldShowAddButton, showAddButton, startAddingTag, addNewTag, removeTag, handleTagInput, cancelAddTag }
 }

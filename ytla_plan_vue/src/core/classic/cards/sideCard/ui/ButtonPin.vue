@@ -20,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-const { isPinned, togglePin } = defineProps<{
+defineProps<{
   isPinned: boolean
   togglePin: () => void
 }>()
@@ -28,14 +28,5 @@ const { isPinned, togglePin } = defineProps<{
 
 <style scoped lang="scss">
 @use '@/core/classic/cards/sideCard/styles/ui-button';
-
-.pin-button {
-  transition: transform 0.3s ease;
-
-  &.--pinned {
-    color: #ff4444;
-    transform: rotate(-45deg);
-    filter: drop-shadow(0 0 2px rgba(0, 168, 255, 0.5));
-  }
-}
+@use '@/core/classic/cards/sideCard/styles/ui-button-pin';
 </style>

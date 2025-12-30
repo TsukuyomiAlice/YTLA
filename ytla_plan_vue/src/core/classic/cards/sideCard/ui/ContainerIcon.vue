@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-const {} = defineProps<{
+defineProps<{
   fullIconPath: { iconImage: string } | null
   showIcon: boolean
   handleIconError: (e: Event) => void

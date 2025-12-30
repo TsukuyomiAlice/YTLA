@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-const { showDeactivate, handleDeactivate } = defineProps<{
+defineProps<{
   showDeactivate: boolean
   handleDeactivate: () => void
 }>()

@@ -17,7 +17,7 @@
 
       <!-- 右上角按钮区 -->
       <div class="action-column-top --right">
-        <button-edit :show-settings="showSettings" :card-id="cardId" @edit="emit('edit', $event)" />
+        <button-edit :show-settings="showSettings" :card-id="cardId" :handle-edit="handleEdit" />
 
         <button-deactivate :show-deactivate="showDeactivate" :handle-deactivate="handleDeactivate" />
 
@@ -36,8 +36,7 @@
         </div>
 
         <!-- tag区域 -->
-        <BarTags :show-tags="showTags" :tags-array="tagsArray" :is-adding-tag="isAddingTag" v-model:new-tag="newTag" :tag-input="tagInput" :should-show-add-button="shouldShowAddButton" :show-add-button="showAddButton" :start-adding-tag="startAddingTag" :add-new-tag="addNewTag" :remove-tag="removeTag" :cancel-add-tag="cancelAddTag" />
-
+        <ContainerTags :show-tags="showTags" :tags-array="tagsArray" :is-adding-tag="isAddingTag" :new-tag="newTag" :tag-input="tagInput" :should-show-add-button="shouldShowAddButton" :show-add-button="showAddButton" :start-adding-tag="startAddingTag" :add-new-tag="addNewTag" :remove-tag="removeTag" :cancel-add-tag="cancelAddTag" :handle-tag-input="handleTagInput" />
         <!-- 主内容 -->
         <slot name="card-content"></slot>
       </div>
@@ -81,7 +80,7 @@ import ButtonExpand from '@/core/classic/cards/sideCard/ui/ButtonExpand.vue'
 import ContainerIcon from '@/core/classic/cards/sideCard/ui/ContainerIcon.vue'
 import BarTitle from '@/core/classic/cards/sideCard/ui/BarTitle.vue'
 import BarDescription from '@/core/classic/cards/sideCard/ui/BarDescription.vue'
-import BarTags from '@/core/classic/cards/sideCard/ui/BarTags.vue'
+import ContainerTags from '@/core/classic/cards/sideCard/ui/ContainerTags.vue'
 
 import type {
   SideCardProps,
@@ -117,13 +116,14 @@ const {
     fullIconPath, iconUploadInput, triggerIconUpload, handleIconUpload,
     containerStyle, bgUploadInput, triggerBgUpload, handleBgUpload,
 
+    handleEdit,
     handleDeactivate,
     handleClose,
     handleIconError, removeIcon,
     titleRef, isTitleEditable, handleTitleBlur, startEditTitle, cancelEditTitle,
     descriptionRef, isDescriptionEditable, handleDescriptionBlur, startEditDescription, cancelEditDescription,
     isExpanded, toggleExpanded,
-    tagsArray, isAddingTag, newTag, tagInput, shouldShowAddButton, showAddButton, startAddingTag, addNewTag, removeTag, cancelAddTag,
+    tagsArray, isAddingTag, newTag, tagInput, shouldShowAddButton, showAddButton, startAddingTag, addNewTag, removeTag, handleTagInput, cancelAddTag,
 
 } = useSideCard(props, emit)
 </script>

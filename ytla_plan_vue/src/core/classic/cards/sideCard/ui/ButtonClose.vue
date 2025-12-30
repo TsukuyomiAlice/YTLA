@@ -13,12 +13,12 @@
 </template>
 
 <script setup lang="ts">
-const { showClose, handleClose } = defineProps<{
+defineProps<{
   showClose: boolean
   handleClose: () => void
 }>()
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 @use '@/core/classic/cards/sideCard/styles/ui-button';
 </style>

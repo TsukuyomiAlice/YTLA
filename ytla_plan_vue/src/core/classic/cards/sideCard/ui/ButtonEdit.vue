@@ -2,7 +2,7 @@
   <button
     v-if="showSettings"
     class="action-button"
-    @click="handleClick"
+    @click="handleEdit"
     aria-label="设置"
     title="设置"
   >
@@ -15,18 +15,10 @@
 </template>
 
 <script setup lang="ts">
-const { showSettings, cardId } = defineProps<{
+defineProps<{
   showSettings: boolean
-  cardId: number
+  handleEdit: () => void
 }>()
-
-const emit = defineEmits<{
-  (e: 'edit', id: number): void
-}>()
-
-const handleClick = () => {
-  emit('edit', cardId)
-}
 </script>
 
 <style scoped lang="scss">

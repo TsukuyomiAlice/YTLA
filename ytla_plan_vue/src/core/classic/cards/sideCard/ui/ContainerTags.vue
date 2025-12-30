@@ -41,18 +41,9 @@ defineProps<{
   startAddingTag: () => void
   addNewTag: () => void
   removeTag: (index: number) => void
+  handleTagInput: (e: Event) => void
   cancelAddTag: () => void
 }>()
-
-const emit = defineEmits<{
-  (e: 'update:newTag', value: string): void
-}>()
-
-// 处理标签输入变化
-const handleTagInput = (e: Event) => {
-  const target = e.target as HTMLInputElement
-  emit('update:newTag', target.value)
-}
 </script>
 
 <style scoped lang="scss">
