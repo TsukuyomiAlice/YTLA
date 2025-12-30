@@ -12,5 +12,5 @@ defineProps<{
 </script>
 
 <style scoped lang="scss">
-@use '../styles/ui-button-expand';
+@use '../styles/button-expand';
 </style>

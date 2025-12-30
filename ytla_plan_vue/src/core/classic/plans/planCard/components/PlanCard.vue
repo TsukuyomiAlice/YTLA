@@ -122,6 +122,6 @@ const {
 @use '../styles/plan-card';
 @use '../../../cards/sideCard/styles/ui-button';
 @use '../../../cards/sideCard/styles/ui-icon';
-@use '../../../cards/sideCard/styles/ui-tags';
+@use '../../../cards/sideCard/styles/container-tags';
 @use '../../../cards/sideCard/styles/ui-text';
 </style>

@@ -47,5 +47,5 @@ defineProps<{
 </script>
 
 <style scoped lang="scss">
-@use '../styles/ui-tags';
+@use '../styles/container-tags';
 </style>

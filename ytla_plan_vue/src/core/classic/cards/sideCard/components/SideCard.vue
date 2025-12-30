@@ -130,6 +130,6 @@ const {
 
 <style lang="scss" scoped>
 @use '../styles/side-card';
-@use '../styles/transition-side-card';
+@use '../styles/side-card-transition';
 @use '../styles/component-column';
 </style>
