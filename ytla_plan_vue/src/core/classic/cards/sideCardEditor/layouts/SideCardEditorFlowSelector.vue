@@ -28,7 +28,7 @@ const handleCancel = () => {
   emit('cancelEdit')
 }
 
-const props = defineProps<{
+defineProps<{
   cardSubTypes: Array<{
     value: string
     icon: string
