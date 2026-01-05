@@ -2,8 +2,8 @@
   <button
     class="action-button"
     @click.stop="togglePin"
-    :aria-label="isPinned ? '取消固定' : '固定位置'"
-    :title="isPinned ? '取消固定' : '固定位置'"
+    :aria-label="isPinned ? $t('classic.cards.sideCard.button_unpin') : $t('classic.cards.sideCard.button_pin')"
+    :title="isPinned ? $t('classic.cards.sideCard.button_unpin') : $t('classic.cards.sideCard.button_pin')"
     :class="{ '--pinned': isPinned }"
   >
     <svg

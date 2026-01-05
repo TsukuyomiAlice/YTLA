@@ -3,8 +3,8 @@
     v-if="showIcon"
     class="action-button"
     @click.stop="triggerIconUpload"
-    aria-label="修改图标"
-    title="修改图标"
+    :aria-label="$t('classic.cards.sideCard.button_change_icon')"
+    :title="$t('classic.cards.sideCard.button_change_icon')"
   >
     <svg viewBox="0 0 24 24" fill="currentColor" class="icon-upload">
       <rect x="3" y="3" width="18" height="18" rx="3" ry="3" stroke="currentColor" stroke-width="2" fill="none"

@@ -2,8 +2,8 @@
   <button
     class="action-button"
     @click.stop="triggerBgUpload"
-    aria-label="修改背景"
-    title="修改背景"
+    :aria-label="$t('classic.cards.sideCard.button_change_background')"
+    :title="$t('classic.cards.sideCard.button_change_background')"
   >
     <svg viewBox="0 0 24 24" fill="currentColor" class="bg-upload">
       <path

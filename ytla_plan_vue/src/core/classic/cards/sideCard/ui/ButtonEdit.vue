@@ -3,8 +3,8 @@
     v-if="showSettings"
     class="action-button"
     @click="handleEdit"
-    aria-label="设置"
-    title="设置"
+    :aria-label="$t('classic.cards.sideCard.button_edit')"
+    :title="$t('classic.cards.sideCard.button_edit')"
   >
     <svg class="gear-icon" viewBox="0 0 24 24" fill="currentColor">
       <path

@@ -1,6 +1,6 @@
 import { ref, shallowRef } from 'vue'
 import type { Component } from 'vue'
-import { getCardEditorFlowManager, getDefaultCardEditorFlowManager } from '@/core/classic/cards/sideCard/factories/cardEditorFlowRegistry.ts'
+import { getCardEditorFlowManager, getDefaultCardEditorFlowManager } from '@/core/classic/cards/sideCardEditor/factories/cardEditorFlowRegistry.ts'
 import { useCardStore } from '@/core/classic/cards/sideCard/stores/cardStore.ts'
 import type { CardData } from '@/core/classic/cards/sideCard/types/cardDataType.ts'
 import type { CardSubType, CardType } from '@/core/classic/cards/sideCard/types/cardType.ts'

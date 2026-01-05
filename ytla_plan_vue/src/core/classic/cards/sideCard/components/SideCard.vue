@@ -1,9 +1,9 @@
 <template>
-  <ContainerSideCard :is-pinned= "isPinned" :is-expanded="isExpanded" :span-columns="spanColumns" :container-style="containerStyle" :handle-drag-start="handleDragStart" :handle-drag-end="handleDragEnd">
+  <container-side-card :span-columns="spanColumns" :container-style="containerStyle" :is-pinned= "isPinned" :is-expanded="isExpanded" :handle-drag-start="handleDragStart" :handle-drag-end="handleDragEnd">
     <!-- 主显示区 -->
     <div class="main-content">
       <!-- 左上角按钮区 -->
-      <div class="action-column-top --left">
+      <div class="column-action-top --left">
         <button-pin :is-pinned="isPinned" :toggle-pin="togglePin" />
 
         <button-change-icon :show-icon="showIcon" :trigger-icon-upload="triggerIconUpload" />
@@ -16,7 +16,7 @@
       </div>
 
       <!-- 右上角按钮区 -->
-      <div class="action-column-top --right">
+      <div class="column-action-top --right">
         <button-edit :show-settings="showSettings" :card-id="cardId" :handle-edit="handleEdit" />
 
         <button-deactivate :show-deactivate="showDeactivate" :handle-deactivate="handleDeactivate" />
@@ -28,27 +28,26 @@
 
       <!-- 主内容区 -->
       <div class="content-wrapper">
-        <!-- icon、标题、background -->
         <div class="header">
           <container-icon :full-icon-path="fullIconPath" :show-icon="showIcon" :handle-icon-error="handleIconError" :remove-icon="removeIcon" />
 
-          <BarTitle :show-title="showTitle" :name="name" :title-ref="titleRef" :is-title-editable="isTitleEditable" :start-edit-title="startEditTitle" :handle-title-blur="handleTitleBlur" :cancel-edit-title="cancelEditTitle" />
+          <bar-title :show-title="showTitle" :name="name" :title-ref="titleRef" :is-title-editable="isTitleEditable" :start-edit-title="startEditTitle" :handle-title-blur="handleTitleBlur" :cancel-edit-title="cancelEditTitle" />
         </div>
 
         <!-- tag区域 -->
-        <ContainerTags :show-tags="showTags" :tags-array="tagsArray" :is-adding-tag="isAddingTag" :new-tag="newTag" :tag-input="tagInput" :should-show-add-button="shouldShowAddButton" :show-add-button="showAddButton" :start-adding-tag="startAddingTag" :add-new-tag="addNewTag" :remove-tag="removeTag" :cancel-add-tag="cancelAddTag" :handle-tag-input="handleTagInput" />
+        <container-tags :show-tags="showTags" :tags-array="tagsArray" :is-adding-tag="isAddingTag" :new-tag="newTag" :tag-input="tagInput" :should-show-add-button="shouldShowAddButton" :show-add-button="showAddButton" :start-adding-tag="startAddingTag" :add-new-tag="addNewTag" :remove-tag="removeTag" :cancel-add-tag="cancelAddTag" :handle-tag-input="handleTagInput" />
         <!-- 主内容 -->
         <slot name="card-content"></slot>
       </div>
     </div>
 
     <!-- 主按钮区 -->
-    <div class="action-column-central">
-      <div class="action-column-central-left">
+    <div class="column-action-central">
+      <div class="column-action-central-left">
         <slot name="left-actions-buttons"></slot>
       </div>
 
-      <div class="action-column-central-right">
+      <div class="column-action-central-right">
         <slot name="right-actions"></slot>
         <button-expand :toggle-expanded="toggleExpanded" :is-expanded="isExpanded" />
       </div>
@@ -57,11 +56,11 @@
     <!-- 副内容区 -->
     <transition name="slide-fade">
       <div v-show="isExpanded" class="secondary-content">
-        <BarDescription :description="description" :description-ref="descriptionRef" :is-description-editable="isDescriptionEditable" :start-edit-description="startEditDescription" :handle-description-blur="handleDescriptionBlur" :cancel-edit-description="cancelEditDescription" />
+        <bar-description :description="description" :description-ref="descriptionRef" :is-description-editable="isDescriptionEditable" :start-edit-description="startEditDescription" :handle-description-blur="handleDescriptionBlur" :cancel-edit-description="cancelEditDescription" />
         <slot name="secondary-content"></slot>
       </div>
     </transition>
-  </ContainerSideCard>
+  </container-side-card>
 </template>
 
 <script setup lang="ts">
@@ -131,5 +130,5 @@ const {
 <style lang="scss" scoped>
 @use '../styles/side-card';
 @use '../styles/side-card-transition';
-@use '../styles/component-column';
+@use '../styles/column-component';
 </style>
