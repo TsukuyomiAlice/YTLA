@@ -107,7 +107,7 @@
 import { computed, ref, onMounted, onBeforeUnmount } from 'vue'
 import { useSideCardEditor } from '@/core/classic/cards/sideCardEditor/composables/useSideCardEditor.ts'
 import SideCard from '@/core/classic/cards/sideCard/components/SideCard.vue'
-import type { CountCardData } from '@/features/timer/cards/count/types/cardDataType.ts'
+import type { CountCardData } from '@/features/timer/cards/count/definitions/cardDataType.ts'
 
 const props = defineProps({
   // 通用属性

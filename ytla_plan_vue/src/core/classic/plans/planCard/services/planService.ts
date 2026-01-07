@@ -1,4 +1,4 @@
-import type { Plan } from '@/core/classic/plans/planCard/types/planTypes.ts'
+import type { Plan } from '@/core/classic/plans/planCard/definitions/planTypes.ts'
 
 export class PlanService {
   constructor(private readonly API_BASE: string) {

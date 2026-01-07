@@ -1,5 +1,5 @@
 import { ref, watch } from 'vue'
-import type { SideCardEmits, SideCardProps } from '@/core/classic/cards/sideCard/types/sideCardType.ts'
+import type { SideCardEmits, SideCardProps } from '@/core/classic/cards/sideCard/definitions/sideCardType.ts'
 
 import { usePersistence } from '@/core/classic/frame/main/composables/usePersistence.ts'
 const { getPersistence, setPersistence } = usePersistence()

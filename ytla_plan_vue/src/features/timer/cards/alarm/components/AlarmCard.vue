@@ -68,7 +68,7 @@
 import { computed, ref, onMounted, onBeforeUnmount, watch } from 'vue'
 import { useSideCardEditor } from '@/core/classic/cards/sideCardEditor/composables/useSideCardEditor.ts'
 import SideCard from '@/core/classic/cards/sideCard/components/SideCard.vue'
-import type { AlarmCardData } from '@/features/timer/cards/alarm/types/cardDataType.ts'
+import type { AlarmCardData } from '@/features/timer/cards/alarm/definitions/cardDataType.ts'
 
 // 提示音
 const alarmSound = new Audio('/resource/feature/alarmCard/祖堅正慶 - 無限停止 ～機工城アレキサンダー：天動編～.mp3')

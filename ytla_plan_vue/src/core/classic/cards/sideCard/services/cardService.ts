@@ -1,4 +1,4 @@
-import type { CardData } from '@/core/classic/cards/sideCard/types/cardDataType.ts';
+import type { CardData } from '@/core/classic/cards/sideCard/definitions/cardDataType.ts';
 
 export class CardService {
   constructor(private readonly API_BASE: string) {}

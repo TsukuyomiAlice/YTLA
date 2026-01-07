@@ -1,9 +1,12 @@
-import { ref, shallowRef } from 'vue'
+import { ref, shallowRef, watch } from 'vue'
 import type { Component } from 'vue'
-import { getCardEditorFlowManager, getDefaultCardEditorFlowManager } from '@/core/classic/cards/sideCardEditor/factories/cardEditorFlowRegistry.ts'
+import {
+  getCardEditorFlowManager,
+  getDefaultCardEditorFlowManager,
+} from '@/core/classic/cards/sideCardEditor/factories/cardEditorFlowRegistry.ts'
 import { useCardStore } from '@/core/classic/cards/sideCard/stores/cardStore.ts'
-import type { CardData } from '@/core/classic/cards/sideCard/types/cardDataType.ts'
-import type { CardSubType, CardType } from '@/core/classic/cards/sideCard/types/cardType.ts'
+import type { CardData } from '@/core/classic/cards/sideCard/definitions/cardDataType.ts'
+import type { CardSubType, CardType } from '@/core/classic/cards/sideCard/definitions/cardType.ts'
 
 const editorState = ref({
   mode: null as 'create' | 'edit' | null,
@@ -12,13 +15,20 @@ const editorState = ref({
   currentCardType: null as CardType | null,
   currentCardSubType: null as CardSubType | null,
   visible: false,
-  currentStepIndex: 0
+  currentStepIndex: 0,
 })
 
-export function useSideCardEditor(cardContainer?: {
-  cards: CardData[]
-}) {
+export function useSideCardEditor(cardContainer?: { cards: CardData[] }) {
   const cardStore = useCardStore()
+
+  const componentKey = ref(0)
+
+  watch(
+    () => editorState.value.mode,
+    () => {
+      componentKey.value++
+    },
+  )
 
   const resetEditor = () => {
     editorState.value = {
@@ -28,7 +38,7 @@ export function useSideCardEditor(cardContainer?: {
       currentCardType: null,
       currentCardSubType: null,
       visible: false,
-      currentStepIndex: 0
+      currentStepIndex: 0,
     }
   }
 
@@ -65,7 +75,6 @@ export function useSideCardEditor(cardContainer?: {
   }
 
   const handleStepChange = (direction: 'next' | 'prev') => {
-
     if (!editorState.value.currentCardType || !editorState.value.currentCardSubType) return
 
     const manager = getCardEditorFlowManager(editorState.value.currentCardType)
@@ -73,7 +82,7 @@ export function useSideCardEditor(cardContainer?: {
 
     if (steps.length === 0) return
 
-    const currentIndex = steps.findIndex(step => step === editorState.value.currentStep)
+    const currentIndex = steps.findIndex((step) => step === editorState.value.currentStep)
     let newIndex = direction === 'next' ? currentIndex + 1 : currentIndex - 1
 
     if (newIndex === -1) {
@@ -103,10 +112,7 @@ export function useSideCardEditor(cardContainer?: {
       if (editorState.value.mode === 'create') {
         await cardStore.addCard(payload as Omit<CardData, 'card_id'>)
       } else {
-        await cardStore.updateCard(
-          (payload as CardData).card_id,
-          payload
-        )
+        await cardStore.updateCard((payload as CardData).card_id, payload)
       }
       if (cardContainer) {
         await cardStore.fetchCards()
@@ -114,7 +120,6 @@ export function useSideCardEditor(cardContainer?: {
       resetEditor()
       return true
     } catch (error) {
-
       return false
     }
   }
@@ -124,6 +129,7 @@ export function useSideCardEditor(cardContainer?: {
   }
 
   return {
+    componentKey,
     editorState,
     resetEditor,
     showCreation,
@@ -133,6 +139,6 @@ export function useSideCardEditor(cardContainer?: {
     handlePrev,
     handleNext,
     handleSubmit,
-    closeEditor
+    closeEditor,
   }
 }

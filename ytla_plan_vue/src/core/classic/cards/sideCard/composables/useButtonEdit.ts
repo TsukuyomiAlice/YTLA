@@ -1,4 +1,4 @@
-import type { SideCardEmits, SideCardProps } from '@/core/classic/cards/sideCard/types/sideCardType.ts'
+import type { SideCardEmits, SideCardProps } from '@/core/classic/cards/sideCard/definitions/sideCardType.ts'
 
 export const useButtonEdit = (props: SideCardProps, emit: SideCardEmits) => {
 

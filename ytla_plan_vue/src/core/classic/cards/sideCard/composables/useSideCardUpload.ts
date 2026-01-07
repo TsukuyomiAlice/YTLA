@@ -1,4 +1,4 @@
-import type { SideCardProps } from '@/core/classic/cards/sideCard/types/sideCardType.ts'
+import type { SideCardProps } from '@/core/classic/cards/sideCard/definitions/sideCardType.ts'
 import { useCardStore } from '@/core/classic/cards/sideCard/stores/cardStore.ts'
 import { CardService } from '@/core/classic/cards/sideCard/services/cardService.ts'
 import { computed, ref } from 'vue'

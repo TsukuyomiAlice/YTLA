@@ -1,5 +1,5 @@
 import { ref, computed, onMounted } from 'vue'
-import type { Plan } from '@/core/classic/plans/planCard/types/planTypes.ts'
+import type { Plan } from '@/core/classic/plans/planCard/definitions/planTypes.ts'
 import { usePlanCardStore } from '@/core/classic/plans/planCard/stores/planCardStore.ts'
 import { usePanelStore } from '@/core/classic/frame/panel/stores/panelStore.ts'
 

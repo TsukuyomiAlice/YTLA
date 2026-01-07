@@ -1,4 +1,4 @@
-import type { SideCardProps } from '@/core/classic/cards/sideCard/types/sideCardType.ts'
+import type { SideCardProps } from '@/core/classic/cards/sideCard/definitions/sideCardType.ts'
 import { useButtonPin } from '@/core/classic/cards/sideCard/composables/useButtonPin.ts'
 import { ref } from 'vue'
 

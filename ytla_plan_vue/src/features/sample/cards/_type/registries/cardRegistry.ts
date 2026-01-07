@@ -1,14 +1,14 @@
 import type { Component } from 'vue'
-import type { CardRegistry } from '@/core/classic/cards/sideCard/registries/cardRegistry.ts'
+import type { CardRegistry } from '@/core/classic/cards/sideCard/factories/cardRegistry.ts'
 import Sample1Card from '@/features/sample/cards/sample1/components/Sample1Card.vue'
 import Sample2Card from '@/features/sample/cards/sample2/components/Sample2Card.vue'
 import Sample3Card from '@/features/sample/cards/sample3/components/Sample3Card.vue'
 import SideCard from '@/core/classic/cards/sideCard/components/SideCard.vue'
-import type { SampleCardSubType } from '@/features/sample/cards/_type/types/cardType.ts'
-import type { SampleCardData } from '@/features/sample/cards/_type/types/cardDataType.ts'
-import type { Sample1CardData } from '@/features/sample/cards/sample1/types/cardDataType.ts'
-import type { Sample2CardData } from '@/features/sample/cards/sample2/types/cardDataType.ts'
-import type { Sample3CardData } from '@/features/sample/cards/sample3/types/cardDataType.ts'
+import type { SampleCardSubType } from '@/features/sample/cards/_type/definitions/cardType.ts'
+import type { SampleCardData } from '@/features/sample/cards/_type/definitions/cardDataType.ts'
+import type { Sample1CardData } from '@/features/sample/cards/sample1/definitions/cardDataType.ts'
+import type { Sample2CardData } from '@/features/sample/cards/sample2/definitions/cardDataType.ts'
+import type { Sample3CardData } from '@/features/sample/cards/sample3/definitions/cardDataType.ts'
 
 /**
  * 计时器卡片注册表（基于通用cardRegistry实现）

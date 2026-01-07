@@ -168,7 +168,7 @@
 </template>
 
 <script setup lang="ts">
-import type { BaseModule } from '@/core/classic/modules/moduleCard/types/moduleTypes.ts'
+import type { BaseModule } from '@/core/classic/modules/moduleCard/definitions/moduleTypes.ts'
 
 const props = withDefaults(defineProps<{
   moduleId?: number

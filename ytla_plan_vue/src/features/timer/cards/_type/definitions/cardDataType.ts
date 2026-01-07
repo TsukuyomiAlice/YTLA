@@ -1,5 +1,5 @@
-import type { CardData } from '@/core/classic/cards/sideCard/types/cardDataType.ts'
-import type { TimerCardType, TimerCardSubType  } from '@/features/timer/cards/_type/types/cardType.ts'
+import type { CardData } from '@/core/classic/cards/sideCard/definitions/cardDataType.ts'
+import type { TimerCardType, TimerCardSubType  } from '@/features/timer/cards/_type/definitions/cardType.ts'
 
 export interface TimerCardData extends CardData {
   card_id: number;

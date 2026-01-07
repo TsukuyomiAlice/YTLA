@@ -1,5 +1,5 @@
 import { computed, ref } from 'vue'
-import type { SideCardProps } from '@/core/classic/cards/sideCard/types/sideCardType.ts'
+import type { SideCardProps } from '@/core/classic/cards/sideCard/definitions/sideCardType.ts'
 import { useSideCardUpload } from '@/core/classic/cards/sideCard/composables/useSideCardUpload.ts'
 
 export const useButtonChangeIcon = (props: SideCardProps) => {

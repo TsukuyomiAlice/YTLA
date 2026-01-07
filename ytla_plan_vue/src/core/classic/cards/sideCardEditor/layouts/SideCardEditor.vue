@@ -18,9 +18,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue'
 import { useSideCardEditor } from '@/core/classic/cards/sideCardEditor/composables/useSideCardEditor.ts'
-import type { CardData } from '@/core/classic/cards/sideCard/types/cardDataType.ts'
+import type { CardData } from '@/core/classic/cards/sideCard/definitions/cardDataType.ts'
 
 const props = defineProps<{
   cardContainer: {
@@ -30,21 +29,14 @@ const props = defineProps<{
 
 const {
   editorState,
+  componentKey,
   handlePrev,
   handleNext,
   handleSubmit,
   closeEditor,
 } = useSideCardEditor(props.cardContainer)
-const componentKey = ref(0)
-
-watch(
-  () => editorState.value.mode,
-  () => {
-    componentKey.value++
-  }
-)
 </script>
 
 <style lang="scss" scoped>
-@use '../styles/card-editor';
+@use '../styles/side-card-editor';
 </style>

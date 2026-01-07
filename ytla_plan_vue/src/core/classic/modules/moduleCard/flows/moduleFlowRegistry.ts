@@ -1,5 +1,5 @@
-import type { ModuleFlowManager } from '@/core/classic/frame/main/types/flowManagerTypes.ts'
-import type { ModuleSubType } from '@/core/classic/modules/moduleCard/types/moduleTypes.ts'
+import type { ModuleFlowManager } from '@/core/classic/frame/main/definitions/flowManagerTypes.ts'
+import type { ModuleSubType } from '@/core/classic/modules/moduleCard/definitions/moduleTypes.ts'
 
 const flowModuleManagers = new Map<ModuleSubType, ModuleFlowManager>()
 

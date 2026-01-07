@@ -1,5 +1,5 @@
 import { ref, computed, onMounted } from 'vue'
-import type { CardData } from '@/core/classic/cards/sideCard/types/cardDataType.ts'
+import type { CardData } from '@/core/classic/cards/sideCard/definitions/cardDataType.ts'
 import { useCardStore } from '@/core/classic/cards/sideCard/stores/cardStore.ts'
 import { useSideCardEditor } from '../../sideCardEditor/composables/useSideCardEditor.ts'
 

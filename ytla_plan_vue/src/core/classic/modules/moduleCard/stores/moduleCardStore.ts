@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import type { BaseModule } from '@/core/classic/modules/moduleCard/types/moduleTypes.ts'
+import type { BaseModule } from '@/core/classic/modules/moduleCard/definitions/moduleTypes.ts'
 import { ModuleService } from '@/core/classic/modules/moduleCard/services/moduleService.ts'
 
 // 依赖注入配置

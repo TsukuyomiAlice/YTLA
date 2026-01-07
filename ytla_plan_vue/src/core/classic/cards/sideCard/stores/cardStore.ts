@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import type { CardData } from '@/core/classic/cards/sideCard/types/cardDataType.ts'
+import type { CardData } from '@/core/classic/cards/sideCard/definitions/cardDataType.ts'
 import { CardService } from '@/core/classic/cards/sideCard/services/cardService.ts'
 
 // 依赖注入配置

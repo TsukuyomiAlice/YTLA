@@ -11,7 +11,7 @@
         @click="handleCancel"
         :disabled="isSubmitting"
       >
-        {{ isEditing ? '取消' : '返回' }}
+        {{ isEditing ? $t('classic.cards.sideCardEditor.Cancel') : $t('classic.cards.sideCardEditor.Back') }}
       </button>
 
       <!-- 上一步按钮 -->
@@ -21,7 +21,7 @@
         @click="handlePrev"
         :disabled="isSubmitting"
       >
-        上一步
+        {{ $t('classic.cards.sideCardEditor.Prev') }}
       </button>
 
       <!-- 下一步按钮 -->
@@ -31,7 +31,7 @@
         @click="handleNext"
         :disabled="isSubmitting"
       >
-        下一步
+        {{ $t('classic.cards.sideCardEditor.Next') }}
       </button>
 
       <!-- 提交按钮（动态文字） -->
@@ -41,24 +41,19 @@
         @click="handleSubmit"
         :disabled="isSubmitting || submitDisabled"
       >
-        <span v-if="isSubmitting">处理中...</span>
-        <span v-else>{{ isEditing ? '保存' : '添加' }}</span>
+        <span v-if="isSubmitting">{{ $t('classic.cards.sideCardEditor.Processing') }}</span>
+        <span v-else>{{ isEditing ? $t('classic.cards.sideCardEditor.Save') : $t('classic.cards.sideCardEditor.Add') }}</span>
       </button>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import type {
+  SideEditorFlowNavigatorProps, SideEditorFlowNavigatorEmits
+} from '@/core/classic/cards/sideCardEditor/definitions/sideCardEditorNavigatorType.ts'
 
-const props = withDefaults(defineProps<{
-  isEditing?: boolean
-  showCancel?: boolean
-  showPrev?: boolean
-  showNext?: boolean
-  showSubmit?: boolean
-  submitDisabled?: boolean
-}>(), {
+const props = withDefaults(defineProps<SideEditorFlowNavigatorProps>(), {
   isEditing: false,
   showCancel: true,
   showPrev: false,
@@ -67,40 +62,12 @@ const props = withDefaults(defineProps<{
   submitDisabled: false
 })
 
-const emit = defineEmits<{
-  (e: 'cancelEdit'): void
-  (e: 'prev'): void
-  (e: 'next'): void
-  (e: 'submit'): void
-}>()
+const emit = defineEmits<SideEditorFlowNavigatorEmits>()
 
-const isSubmitting = ref(false)
-
-
-const handleCancel = () => {
-  if (!isSubmitting.value) emit('cancelEdit')
-}
-
-const handlePrev = () => {
-  if (!isSubmitting.value) emit('prev')
-}
-
-const handleNext = () => {
-  if (!isSubmitting.value) emit('next')
-}
-
-const handleSubmit = async () => {
-  if (isSubmitting.value || props.submitDisabled) return
-
-  isSubmitting.value = true
-  try {
-    emit('submit')
-  } finally {
-    isSubmitting.value = false
-  }
-}
+import { useSideCardEditorFlowNavigator } from '@/core/classic/cards/sideCardEditor/composables/useSideCardEditorFlowNavigator.ts'
+const { isSubmitting, handleCancel, handlePrev, handleNext, handleSubmit } = useSideCardEditorFlowNavigator(props, emit)
 </script>
 
 <style lang="scss" scoped>
-@use '../styles/card-editor-flow-navigator';
+@use '../styles/side-card-editor-flow-navigator';
 </style>

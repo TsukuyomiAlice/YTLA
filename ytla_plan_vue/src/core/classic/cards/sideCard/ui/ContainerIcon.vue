@@ -1,13 +1,12 @@
 <template>
-  <div class="icon-container">
+  <div v-if="fullIconPath.iconImage && showIcon" class="icon-container">
     <img
-      v-if="fullIconPath && showIcon"
-      :src="fullIconPath.iconImage"
       class="icon"
+      :src="fullIconPath.iconImage"
       @error="handleIconError"
       alt=""
     />
-    <button v-if="fullIconPath && showIcon" class="icon-remove-btn" @click.stop="removeIcon">
+    <button class="icon-remove-btn" @click.stop="removeIcon">
       ×
     </button>
   </div>
@@ -15,7 +14,7 @@
 
 <script setup lang="ts">
 defineProps<{
-  fullIconPath: { iconImage: string } | null
+  fullIconPath: { iconImage: string }
   showIcon: boolean
   handleIconError: (e: Event) => void
   removeIcon: () => void
@@ -23,5 +22,5 @@ defineProps<{
 </script>
 
 <style scoped lang="scss">
-@use '@/core/classic/cards/sideCard/styles/ui-icon';
+@use '../styles/ui-icon';
 </style>

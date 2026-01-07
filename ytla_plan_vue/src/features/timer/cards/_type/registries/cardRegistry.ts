@@ -1,14 +1,14 @@
 import type { Component } from 'vue'
-import type { CardRegistry } from '@/core/classic/cards/sideCard/registries/cardRegistry.ts'
-import type { TimerCardSubType } from '@/features/timer/cards/_type/types/cardType.ts'
+import type { CardRegistry } from '@/core/classic/cards/sideCard/factories/cardRegistry.ts'
+import type { TimerCardSubType } from '@/features/timer/cards/_type/definitions/cardType.ts'
 import AlarmCard from '@/features/timer/cards/alarm/components/AlarmCard.vue'
 import CountCard from '@/features/timer/cards/count/components/CountCard.vue'
 import CountdownCard from '@/features/timer/cards/countdown/components/CountdownCard.vue'
 import SideCard from '@/core/classic/cards/sideCard/components/SideCard.vue'
-import type { AlarmCardData } from '@/features/timer/cards/alarm/types/cardDataType.ts'
-import type { CountCardData } from '@/features/timer/cards/count/types/cardDataType.ts'
-import type { CountdownCardData } from '@/features/timer/cards/countdown/types/cardDataType.ts'
-import type { TimerCardData } from '@/features/timer/cards/_type/types/cardDataType.ts'
+import type { AlarmCardData } from '@/features/timer/cards/alarm/definitions/cardDataType.ts'
+import type { CountCardData } from '@/features/timer/cards/count/definitions/cardDataType.ts'
+import type { CountdownCardData } from '@/features/timer/cards/countdown/definitions/cardDataType.ts'
+import type { TimerCardData } from '@/features/timer/cards/_type/definitions/cardDataType.ts'
 
 /**
  * 计时器卡片注册表（基于通用cardRegistry实现）

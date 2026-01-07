@@ -1,6 +1,6 @@
 import type { Component } from 'vue'
 import { defineAsyncComponent, markRaw } from 'vue'
-import type { ModuleFlowManager } from '@/core/classic/frame/main/types/flowManagerTypes.ts'
+import type { ModuleFlowManager } from '@/core/classic/frame/main/definitions/flowManagerTypes.ts'
 
 export class SampleModuleFlowManager implements ModuleFlowManager {
   private flows = new Map<string, Component[]>()

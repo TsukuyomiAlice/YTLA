@@ -1,6 +1,6 @@
 import { ref, nextTick } from 'vue'
 import { useCardStore } from '@/core/classic/cards/sideCard/stores/cardStore.ts'
-import type { SideCardProps } from '@/core/classic/cards/sideCard/types/sideCardType.ts'
+import type { SideCardProps } from '@/core/classic/cards/sideCard/definitions/sideCardType.ts'
 
 export const useBarTitle = (props: SideCardProps) => {
   const store = useCardStore()

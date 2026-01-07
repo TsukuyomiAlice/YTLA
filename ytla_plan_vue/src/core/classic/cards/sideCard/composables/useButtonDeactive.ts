@@ -1,4 +1,4 @@
-import type { SideCardEmits, SideCardProps } from '@/core/classic/cards/sideCard/types/sideCardType.ts'
+import type { SideCardEmits, SideCardProps } from '@/core/classic/cards/sideCard/definitions/sideCardType.ts'
 import { useCardStore } from '@/core/classic/cards/sideCard/stores/cardStore.ts'
 
 export const useButtonDeactivate = (props: SideCardProps, emit: SideCardEmits) => {

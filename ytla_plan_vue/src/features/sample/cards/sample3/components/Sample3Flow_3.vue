@@ -15,8 +15,8 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import EditorFlowNavigator from '@/core/classic/cards/sideCardEditor/layouts/SideCardEditorFlowNavigator.vue'
-import type { Sample3CardData } from '@/features/sample/cards/sample3/types/cardDataType.ts'
-import type { SampleCardSubType } from '@/features/sample/cards/_type/types/cardType.ts'
+import type { Sample3CardData } from '@/features/sample/cards/sample3/definitions/cardDataType.ts'
+import type { SampleCardSubType } from '@/features/sample/cards/_type/definitions/cardType.ts'
 import { useFormStore } from '@/core/classic/cards/sideCardEditor/stores/cardEditorFormStore.ts'
 
 const props = defineProps<{

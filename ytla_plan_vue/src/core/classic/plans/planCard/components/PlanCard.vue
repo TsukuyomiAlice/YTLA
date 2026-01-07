@@ -71,7 +71,7 @@
 </template>
 
 <script setup lang="ts">
-import type { TagString } from '@/core/classic/plans/planCard/types/planTypes.ts'
+import type { TagString } from '@/core/classic/plans/planCard/definitions/planTypes.ts'
 const props = withDefaults(defineProps<{
   icon?: string
   background?: string

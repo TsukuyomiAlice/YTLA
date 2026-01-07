@@ -1,4 +1,4 @@
-import type { BaseModule } from '@/core/classic/modules/moduleCard/types/moduleTypes.ts';
+import type { BaseModule } from '@/core/classic/modules/moduleCard/definitions/moduleTypes.ts';
 
 export class ModuleService {
   constructor(private readonly API_BASE: string) {}

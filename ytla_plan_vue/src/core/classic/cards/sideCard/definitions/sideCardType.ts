@@ -28,7 +28,3 @@ export type SideCardEmits = {
   (e: 'edit', id: number): void
 }
 
-
-export type SideCardEmitFn = {
-  <K extends keyof SideCardEmits>(event: string, ...args: Parameters<SideCardEmits[K]>): void
-}

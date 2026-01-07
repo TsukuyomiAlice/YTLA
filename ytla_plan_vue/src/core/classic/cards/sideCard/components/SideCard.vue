@@ -84,7 +84,7 @@ import ContainerTags from '@/core/classic/cards/sideCard/ui/ContainerTags.vue'
 import type {
   SideCardProps,
   SideCardEmits,
-} from '@/core/classic/cards/sideCard/types/sideCardType.ts'
+} from '@/core/classic/cards/sideCard/definitions/sideCardType.ts'
 
 const props = withDefaults(defineProps<SideCardProps>(), {
   cardId: 0,

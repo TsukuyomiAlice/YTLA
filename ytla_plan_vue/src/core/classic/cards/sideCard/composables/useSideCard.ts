@@ -1,4 +1,4 @@
-import type { SideCardProps, SideCardEmits } from '@/core/classic/cards/sideCard/types/sideCardType.ts'
+import type { SideCardProps, SideCardEmits } from '@/core/classic/cards/sideCard/definitions/sideCardType.ts'
 
 import { useContainerSideCard } from '@/core/classic/cards/sideCard/composables/useContainerSideCard.ts'
 import { useButtonPin } from '@/core/classic/cards/sideCard/composables/useButtonPin.ts'

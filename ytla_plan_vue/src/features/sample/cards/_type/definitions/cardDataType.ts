@@ -1,4 +1,4 @@
-import type { CardData } from '@/core/classic/cards/sideCard/types/cardDataType.ts'
+import type { CardData } from '@/core/classic/cards/sideCard/definitions/cardDataType.ts'
 import type { SampleCardType, SampleCardSubType } from './cardType.ts'
 
 export interface SampleCardData extends CardData {

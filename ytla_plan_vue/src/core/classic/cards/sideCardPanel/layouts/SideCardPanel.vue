@@ -23,10 +23,10 @@
 import { computed, nextTick, watch, ref, onMounted } from 'vue'
 import { useSideCardPanel } from '@/core/classic/cards/sideCardPanel/composables/useSideCardPanel.ts'
 import { useMasonryLayout } from '@/core/classic/frame/main/composables/useMasonryLayout.ts'
-import { getCardRegistry } from '@/core/classic/cards/sideCard/registries/cardRegistry.ts'
+import { getCardRegistry } from '@/core/classic/cards/sideCard/factories/cardRegistry.ts'
 import { useCardStore } from '@/core/classic/cards/sideCard/stores/cardStore.ts'
 import { usePersistence } from '@/core/classic/frame/main/composables/usePersistence.ts'
-import type { CardData } from '@/core/classic/cards/sideCard/types/cardDataType.ts'
+import type { CardData } from '@/core/classic/cards/sideCard/definitions/cardDataType.ts'
 
 const isMasonrySupported = ref(false)
 const userAgent = navigator.userAgent.toLowerCase()

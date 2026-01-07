@@ -1,5 +1,5 @@
 import type { Component } from 'vue'
-import type { ModuleFlowManager } from '@/core/classic/frame/main/types/flowManagerTypes.ts'
+import type { ModuleFlowManager } from '@/core/classic/frame/main/definitions/flowManagerTypes.ts'
 
 export interface ModuleRegistry<T extends string = string> {
   moduleType: string

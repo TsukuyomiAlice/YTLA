@@ -1,7 +1,7 @@
 import { ref, computed, nextTick, watch } from 'vue'
 import { useModuleCardStore } from '@/core/classic/modules/moduleCard/stores/moduleCardStore.ts'
 import { ModuleService } from '@/core/classic/modules/moduleCard/services/moduleService.ts'
-import { parseTags, type BaseModule } from '@/core/classic/modules/moduleCard/types/moduleTypes.ts'
+import { parseTags, type BaseModule } from '@/core/classic/modules/moduleCard/definitions/moduleTypes.ts'
 import { useModuleProcessStore } from '@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts'
 
 export const useModuleCardEditor = (props: any, emit: any) => {

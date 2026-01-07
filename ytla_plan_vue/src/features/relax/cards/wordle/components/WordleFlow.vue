@@ -14,8 +14,8 @@
 <script setup lang="ts">
 import { computed, onMounted } from 'vue'
 import EditorFlowNavigator from '@/core/classic/cards/sideCardEditor/layouts/SideCardEditorFlowNavigator.vue'
-import type { WordleCardData } from '@/features/relax/cards/wordle/types/cardDataType.ts'
-import type { RelaxCardSubType } from '@/features/relax/cards/_type/types/cardType.ts'
+import type { WordleCardData } from '@/features/relax/cards/wordle/definitions/cardDataType.ts'
+import type { RelaxCardSubType } from '@/features/relax/cards/_type/definitions/cardType.ts'
 
 const props = defineProps<{
   mode: 'create' | 'edit'

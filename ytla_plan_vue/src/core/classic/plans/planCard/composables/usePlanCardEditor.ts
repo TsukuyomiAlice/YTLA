@@ -1,7 +1,7 @@
 import { ref, computed, nextTick, watch } from 'vue'
 import { usePlanCardStore } from '@/core/classic/plans/planCard/stores/planCardStore.ts'
 import { PlanService } from '@/core/classic/plans/planCard/services/planService.ts'
-import { parseTags, type Plan, type TagArray } from '@/core/classic/plans/planCard/types/planTypes.ts'
+import { parseTags, type Plan, type TagArray } from '@/core/classic/plans/planCard/definitions/planTypes.ts'
 import { usePanelStore } from '@/core/classic/frame/panel/stores/panelStore.ts'
 
 export const usePlanCardEditor = (props: any, emit: any) => {

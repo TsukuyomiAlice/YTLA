@@ -1,5 +1,5 @@
-import type { CardData } from '@/core/classic/cards/sideCard/types/cardDataType.ts'
-import type { RelaxCardType, RelaxCardSubType } from '@/features/relax/cards/_type/types/cardType.ts'
+import type { CardData } from '@/core/classic/cards/sideCard/definitions/cardDataType.ts'
+import type { RelaxCardType, RelaxCardSubType } from '@/features/relax/cards/_type/definitions/cardType.ts'
 
 export interface RelaxCardData extends CardData {
   card_id: number;

@@ -1,4 +1,4 @@
-import type { SideCardProps } from '@/core/classic/cards/sideCard/types/sideCardType.ts'
+import type { SideCardProps } from '@/core/classic/cards/sideCard/definitions/sideCardType.ts'
 import { useCardStore } from '@/core/classic/cards/sideCard/stores/cardStore.ts'
 import { useButtonChangeIcon } from '@/core/classic/cards/sideCard/composables/useButtonChangeIcon.ts'
 

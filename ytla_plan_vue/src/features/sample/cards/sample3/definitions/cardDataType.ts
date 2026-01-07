@@ -1,4 +1,4 @@
-import type { SampleCardData } from '@/features/sample/cards/_type/types/cardDataType.ts'
+import type { SampleCardData } from '@/features/sample/cards/_type/definitions/cardDataType.ts'
 
 export interface Sample3CardData extends SampleCardData {
   sample_data_1: string;

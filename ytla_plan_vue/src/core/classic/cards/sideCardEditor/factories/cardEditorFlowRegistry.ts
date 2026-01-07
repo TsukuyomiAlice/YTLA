@@ -1,5 +1,5 @@
-import type { CardEditorFlowManager } from '@/core/classic/frame/main/types/flowManagerTypes.ts'
-import type { CardType } from '@/core/classic/cards/sideCard/types/cardType.ts'
+import type { CardEditorFlowManager } from '@/core/classic/frame/main/definitions/flowManagerTypes.ts'
+import type { CardType } from '@/core/classic/cards/sideCard/definitions/cardType.ts'
 
 const flowCardEditorManagers = new Map<CardType, CardEditorFlowManager>()
 

@@ -77,7 +77,7 @@
 <script setup lang="ts">
 import { useSideCardEditor } from '@/core/classic/cards/sideCardEditor/composables/useSideCardEditor.ts'
 import SideCard from '@/core/classic/cards/sideCard/components/SideCard.vue'
-import type { WordleCardData } from '@/features/relax/cards/wordle/types/cardDataType.ts'
+import type { WordleCardData } from '@/features/relax/cards/wordle/definitions/cardDataType.ts'
 
 const props = defineProps({
   cardId: Number,

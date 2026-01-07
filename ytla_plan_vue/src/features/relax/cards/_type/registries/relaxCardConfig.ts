@@ -1,7 +1,7 @@
 import type { Component } from 'vue'
-import type { CardRegistry } from '@/core/classic/cards/sideCard/registries/cardRegistry.ts'
-import type { RelaxCardSubType  } from '@/features/relax/cards/_type/types/cardType.ts'
-import type { WordleCardData } from '@/features/relax/cards/wordle/types/cardDataType.ts'
+import type { CardRegistry } from '@/core/classic/cards/sideCard/factories/cardRegistry.ts'
+import type { RelaxCardSubType  } from '@/features/relax/cards/_type/definitions/cardType.ts'
+import type { WordleCardData } from '@/features/relax/cards/wordle/definitions/cardDataType.ts'
 import WordleCard from '@/features/relax/cards/wordle/components/WordleCard.vue'
 import SideCard from '@/core/classic/cards/sideCard/components/SideCard.vue'
 

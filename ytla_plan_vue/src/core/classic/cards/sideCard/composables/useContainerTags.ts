@@ -1,7 +1,7 @@
 import { ref, computed, nextTick, watch } from 'vue'
 import { useCardStore } from '@/core/classic/cards/sideCard/stores/cardStore.ts'
-import type { SideCardProps, SideCardEmits } from '@/core/classic/cards/sideCard/types/sideCardType.ts'
-import { parseTags } from '@/core/classic/cards/sideCard/types/cardDataType.ts'
+import type { SideCardProps, SideCardEmits } from '@/core/classic/cards/sideCard/definitions/sideCardType.ts'
+import { parseTags } from '@/core/classic/cards/sideCard/definitions/cardDataType.ts'
 
 export const useContainerTags = (props: SideCardProps, emit: SideCardEmits) => {
   const store = useCardStore()

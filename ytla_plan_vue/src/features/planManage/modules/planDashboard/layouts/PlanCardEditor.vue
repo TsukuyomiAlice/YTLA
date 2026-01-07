@@ -166,7 +166,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Plan, TagString } from '@/core/classic/plans/planCard/types/planTypes.ts'
+import type { Plan, TagString } from '@/core/classic/plans/planCard/definitions/planTypes.ts'
 
 const props = withDefaults(defineProps<{
   mode: 'create' | 'edit'
