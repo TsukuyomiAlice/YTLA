@@ -5,5 +5,6 @@
   "button_deactivate": "Deactivate",
   "button_edit": "Edit and Settings",
   "button_pin": "Pin",
-  "button_unpin": "Unpin"
+  "button_unpin": "Unpin",
+  "container_tag_new": "new tag"
 }

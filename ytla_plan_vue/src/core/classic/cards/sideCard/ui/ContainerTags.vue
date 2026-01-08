@@ -21,7 +21,7 @@
       @input="handleTagInput"
       class="tag-input"
       type="text"
-      placeholder="输入标签"
+      :placeholder="$t('classic.cards.sideCard.container_tag_new')"
       @keydown.enter="addNewTag"
       @keydown.esc="cancelAddTag"
       @blur="addNewTag"

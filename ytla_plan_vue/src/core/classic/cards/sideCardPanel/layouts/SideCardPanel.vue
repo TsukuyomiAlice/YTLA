@@ -43,11 +43,11 @@ const {
 } = useSideCardPanel()
 
 // layout
-const { updateLayout } = useMasonryLayout()
+const { debouncedUpdate } = useMasonryLayout()
 
 watch(activeCards, () => {
   nextTick(() => {
-    updateLayout()
+    debouncedUpdate()
   })
 }, { deep: true })
 
@@ -137,7 +137,7 @@ const handleDrop = (e: DragEvent) => {
         setPersistence('cards', { 'order': newGlobalOrder })
       }
 
-      nextTick(updateLayout)
+      nextTick(debouncedUpdate)
     }
   }
 }
@@ -145,7 +145,7 @@ const handleDrop = (e: DragEvent) => {
 watch(visibleCards, () => {
   if (isInitializing.value) return
   updateShownOrder()
-  nextTick(updateLayout)
+  nextTick(debouncedUpdate)
 }, { deep: true, immediate: true })
 
 const orderedCards = computed(() => {
@@ -159,7 +159,7 @@ const orderedCards = computed(() => {
 onMounted(async () => {
   document.addEventListener('drop', handleDrop)
   await initializeOrder()
-  await nextTick(updateLayout)
+  await nextTick(debouncedUpdate)
 })
 
 </script>

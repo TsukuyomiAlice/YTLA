@@ -1,15 +1,7 @@
 <template>
   <div class="controller-container">
-    <!-- 筛选区域 -->
-    <div class="filter-group">
-      <input
-        v-model="filterValue"
-        type="text"
-        placeholder="Filter by title or Card type"
-        @input="handleFilterInput"
-      >
-      <button @click="clearFilter">Clear</button>
-    </div>
+
+    <side-card-filter :filter-value="filterValue" :handle-filter-input="handleFilterInput" :clear-filter="clearFilter" />
 
     <!-- 按钮组 -->
     <div class="button-group">
@@ -24,10 +16,7 @@
         <span class="icon">🎲</span>
       </button>
 
-      <SideCardEditor
-        v-if="editorState.visible"
-        :card-container="{ cards }"
-      />
+      <side-card-editor v-if="editorState.visible" :card-container="{ cards }" />
 
     </div>
   </div>
@@ -35,6 +24,10 @@
 
 <script setup lang="ts">
 import { computed, ref } from 'vue'
+import SideCardFilter from '@/core/classic/cards/sideCardFilter/layouts/SideCardFilter.vue'
+import { useSideCardController } from '@/core/classic/cards/sideCardController/composables/useSideCardController.ts'
+const { filterValue, handleFilterInput, clearFilter } = useSideCardController()
+
 import { useCardStore } from '@/core/classic/cards/sideCard/stores/cardStore.ts'
 import { useSideCardEditor } from '@/core/classic/cards/sideCardEditor/composables/useSideCardEditor.ts'
 import SideCardEditor from '@/core/classic/cards/sideCardEditor/layouts/SideCardEditor.vue'
@@ -54,19 +47,8 @@ const toggleCreation = (cardType: string) => {
   }
 }
 
-const filterValue = ref('')
-
-const handleFilterInput = () => {
-  cardStore.updateFilter(filterValue.value)
-}
-
-const clearFilter = () => {
-  filterValue.value = ''
-  cardStore.updateFilter('')
-}
-
 </script>
 
 <style lang="scss" scoped>
-@use '../styles/card-controller-container';
+@use '../styles/side-card-controller';
 </style>

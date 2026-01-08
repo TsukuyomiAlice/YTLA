@@ -1,8 +1,8 @@
 import { onMounted, onUnmounted } from 'vue'
 
-const debounce = (fn: Function, delay: number) => {
+const debounce = (fn: (...args: unknown[]) => void, delay: number) => {
   let timeoutId: number
-  return (...args: any[]) => {
+  return (...args: unknown[]) => {
     clearTimeout(timeoutId)
     timeoutId = setTimeout(() => fn(...args), delay)
   }
@@ -32,5 +32,5 @@ export const useMasonryLayout = () => {
     window.removeEventListener('resize', debouncedUpdate)
   })
 
-  return { updateLayout: debouncedUpdate }
+  return { debouncedUpdate }
 }
