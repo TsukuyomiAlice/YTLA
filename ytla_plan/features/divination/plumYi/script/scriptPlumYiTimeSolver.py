@@ -1,7 +1,8 @@
 # encode = utf-8
 from ytla_plan.core.basic.func import timeFormat
-from ytla_plan.features.divination.dataset import hexagram_data
-from ytla_plan.features.divination.process import processModulePlumYi
+from features.divination.plumYi.dataset import hexagram_data
+from features.divination.plumYi.process import processModulePlumYi
+
 
 def time_solver(day: str):
     print(day)

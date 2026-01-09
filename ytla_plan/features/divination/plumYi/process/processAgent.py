@@ -1,7 +1,8 @@
 # encode = utf-8
 
 from ytla_ai.client import contentHandler
-from ytla_plan.features.divination.process import processModulePlumYi
+from features.divination.plumYi.process import processModulePlumYi
+
 
 def app_caller(caller: dict):
     request_app = caller['request_app']

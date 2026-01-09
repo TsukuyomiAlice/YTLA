@@ -2,8 +2,9 @@
 
 from ytla_ai.client import contentHandler
 from ytla_plan.core.basic.func import timeFormat
-from ytla_plan.features.divination.dataset import permanentCalendar, hexagram_data
-from ytla_plan.features.divination.prompt import promptPlumYi
+from features.divination.plumYi.dataset import permanentCalendar
+from features.divination.plumYi.dataset import hexagram_data
+from features.divination.plumYi.prompt import promptPlumYi
 
 
 def trigram_generator_by_datetime(input_date=None):
