@@ -5,7 +5,7 @@ import { useButtonPin } from '@/core/classic/cards/sideCard/composables/useButto
 import { useButtonChangeIcon } from '@/core/classic/cards/sideCard/composables/useButtonChangeIcon.ts'
 import { useButtonChangeBackground } from '@/core/classic/cards/sideCard/composables/useButtonChangeBackground.ts'
 import { useButtonEdit} from '@/core/classic/cards/sideCard/composables/useButtonEdit.ts'
-import { useButtonDeactivate } from '@/core/classic/cards/sideCard/composables/useButtonDeactive.ts'
+import { useButtonDeactivate } from '@/core/classic/cards/sideCard/composables/useButtonDeactivate.ts'
 import { useButtonClose } from '@/core/classic/cards/sideCard/composables/useButtonClose.ts'
 import { useSideCardUpload } from '@/core/classic/cards/sideCard/composables/useSideCardUpload.ts'
 import { useButtonExpand } from '@/core/classic/cards/sideCard/composables/useButtonExpaned.ts'

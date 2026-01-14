@@ -35,11 +35,10 @@ export const useContainerTags = (props: SideCardProps, emit: SideCardEmits) => {
     return !isAddingTag.value
   })
 
-  const startAddingTag = () => {
+  const startAddingTag = async () => {
     isAddingTag.value = true
-    nextTick(() => {
-      tagInput.value?.focus()
-    })
+    await nextTick()
+    tagInput.value?.focus()
   }
 
   const addNewTag = async () => {

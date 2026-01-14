@@ -1,6 +1,7 @@
 import type { SideCardProps } from '@/core/classic/cards/sideCard/definitions/sideCardType.ts'
-import { useButtonPin } from '@/core/classic/cards/sideCard/composables/useButtonPin.ts'
 import { ref } from 'vue'
+
+import { useButtonPin } from '@/core/classic/cards/sideCard/composables/useButtonPin.ts'
 
 export const useContainerSideCard = (props: SideCardProps) => {
 

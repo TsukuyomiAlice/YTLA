@@ -36,14 +36,13 @@ export const useBarDescription = (props: SideCardProps) => {
   }
 
   // 开始编辑description
-  const startEditDescription = () => {
+  const startEditDescription = async () => {
     isDescriptionEditable.value = true
-    nextTick(() => {
-      if (descriptionRef.value) {
-        descriptionRef.value.focus()
-        selectText(descriptionRef.value)
-      }
-    })
+    await nextTick()
+    if (descriptionRef.value) {
+      descriptionRef.value.focus()
+      selectText(descriptionRef.value)
+    }
   }
 
   // 取消编辑description

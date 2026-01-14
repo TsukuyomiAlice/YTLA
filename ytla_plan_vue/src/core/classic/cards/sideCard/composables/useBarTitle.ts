@@ -36,14 +36,13 @@ export const useBarTitle = (props: SideCardProps) => {
   }
 
   // 开始编辑title
-  const startEditTitle = () => {
+  const startEditTitle = async () => {
     isTitleEditable.value = true
-    nextTick(() => {
-      if (titleRef.value) {
-        titleRef.value.focus()
-        selectText(titleRef.value)
-      }
-    })
+    await nextTick()
+    if (titleRef.value) {
+      titleRef.value.focus()
+      selectText(titleRef.value)
+    }
   }
 
   // 取消编辑title

@@ -1,12 +1,13 @@
 import type { SideCardProps } from '@/core/classic/cards/sideCard/definitions/sideCardType.ts'
 import { useCardStore } from '@/core/classic/cards/sideCard/stores/cardStore.ts'
-import { CardService } from '@/core/classic/cards/sideCard/services/cardService.ts'
 import { computed, ref } from 'vue'
+
+import { CardService } from '@/core/classic/cards/sideCard/services/cardService.ts'
+const API_BASE = import.meta.env.VITE_API_BASE
+const cardService = new CardService(API_BASE)
 
 export const useSideCardUpload = (props: SideCardProps) => {
   const store = useCardStore()
-  const API_BASE = import.meta.env.VITE_API_BASE
-  const cardService = new CardService(API_BASE)
 
   const fullIconPath = computed(() => ({
     iconImage: props.icon ? `${API_BASE}/uploads/${props.icon}` : '',

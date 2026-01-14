@@ -6,7 +6,7 @@
       type="text"
       :placeholder="$t('classic.cards.sideCardFilter.hint')"
     />
-    <button @click="clearFilter">{{ $t('classic.cards.sideCardFilter.clear') }}</button>
+    <button class="button-clear" @click="clearFilter">{{ $t('classic.cards.sideCardFilter.clear') }}</button>
   </div>
 </template>
 

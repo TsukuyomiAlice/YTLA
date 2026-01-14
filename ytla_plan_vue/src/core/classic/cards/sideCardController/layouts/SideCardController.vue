@@ -42,7 +42,7 @@ const toggleCreation = (cardType: string) => {
     closeEditor()
     activeCardType.value = null
   } else {
-    showCreation(cardType as any)
+    showCreation(cardType as string)
     activeCardType.value = cardType
   }
 }
