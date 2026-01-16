@@ -1,0 +1,9 @@
+.pin-button {
+  transition: transform 0.3s ease;
+
+  &.--pinned {
+    color: #ff4444;
+    transform: rotate(-45deg);
+    filter: drop-shadow(0 0 2px rgba(0, 168, 255, 0.5));
+  }
+}

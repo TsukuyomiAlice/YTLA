@@ -1,0 +1,19 @@
+{
+  "subtype_name": "add Module",
+  "subtype_description": "Add a new module to your plan",
+
+  "main_00_000": "Add New Module",
+  "sub_00_000": "Select a module to add",
+  "sub_00_001": "Enter the name of the module",
+  "sub_00_002": "module name",
+  "sub_00_003": "module description",
+  "sub_00_100": "Add",
+  "sub_00_101": "Cancel",
+
+  "main_concept_time": "Time",
+  "main_concept_space": "Space",
+  "main_concept_definition": "Definition",
+  "main_concept_relation": "Relation",
+  "main_concept_interaction": "Interaction"
+
+}

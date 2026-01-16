@@ -1,0 +1,26 @@
+{
+  "subtype_name": "Welcome",
+  "subtype_description": "Welcome page and introduction.",
+
+  "main_00_000": "Hola！",
+  "main_00_001": "Here is YTLA, an (AI-evaluated enterprise-level) web application designed for better... slacking off???",
+  "main_00_002": "You can use it for various purposes",
+  "main_00_003": "Studying, reading books, creating photo albums or galleries, workflow collaboration, brainstorming ideas, even visually managing your digital resources and data",
+  "main_00_004": "......And of course (MUST HAVE!!!) slacking off, that's the most important!",
+  "main_00_005": "You can also explore its architecture and try to develop your own tool components",
+  "main_00_100": "Create New Plan",
+
+  "main_01_000": "Understanding YTLA",
+  "main_01_001": "YTLA offers two main content types: Templates and Cards",
+  "main_01_002": "Templates help you efficiently handle various tasks, while Cards provide diverse auxiliary functions",
+  "main_01_003": "Check the adjacent page for detailed features of Templates and Cards",
+  "main_01_004": "Create Plans (think of them as folders) to organize templates into different projects",
+  "main_01_005": "Use the left taskbar to quickly switch between your Plans",
+  "main_01_006": "Hover over the top-right corner — see the floating black bar? Click it to open the Card Panel",
+  "main_01_007": "Find the 'Add Card' button at the top of the Card Panel to quickly create new Cards",
+
+  "main_02_000": "Technique Stacks",
+  "main_02_001": "Frontend：VUE(pinia + vite + i18n), ts, scss",
+  "main_02_002": "Backend：Python flask",
+  "main_02_003": "Data storage using：SQLite"
+}

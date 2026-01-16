@@ -1,0 +1,18 @@
+{
+  "subtype_name": "添加模块",
+  "subtype_description": "添加一个新模块到你的计划",
+
+  "main_00_000": "添加新模组",
+  "sub_00_000": "选择一个想要添加的模组",
+  "sub_00_001": "输入模组的名称",
+  "sub_00_002": "名称",
+  "sub_00_003": "描述",
+  "sub_00_100": "添加",
+  "sub_00_101": "取消",
+
+  "main_concept_time": "时间",
+  "main_concept_space": "空间",
+  "main_concept_definition": "定义",
+  "main_concept_relation": "关联",
+  "main_concept_interaction": "交互"
+}

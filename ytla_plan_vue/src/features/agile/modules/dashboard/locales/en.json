@@ -1,0 +1,4 @@
+{
+  "subtype_name": "Dashboard",
+  "subtype_description": "Showing the status of code repositories, test platforms, build platforms, etc."
+}

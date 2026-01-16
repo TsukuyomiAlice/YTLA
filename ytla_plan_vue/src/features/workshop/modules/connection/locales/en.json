@@ -1,0 +1,4 @@
+{
+  "subtype_name": "Connection",
+  "subtype_description": "To manage connections in modules and cards for frontend and backend"
+}

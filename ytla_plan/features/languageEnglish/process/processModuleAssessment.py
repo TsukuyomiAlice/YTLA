@@ -81,9 +81,9 @@ https://englishprofile.org
 import json
 import random
 
-from core.modules.dao import daoModulePersistence, daoModules
-from core.frame.func.loggerConfig import process_log
-from core.frame.instance.instanceProcessToRoutes import Response
+from core.classic.modules.dao import daoModules, daoModulePersistence
+from core.classic.frame.func.loggerConfig import process_log
+from core.classic.frame.instance.instanceProcessToRoutes import Response
 from features.languageEnglish.dao import daoModuleAssessmentCefr
 
 assessment_sheet = {

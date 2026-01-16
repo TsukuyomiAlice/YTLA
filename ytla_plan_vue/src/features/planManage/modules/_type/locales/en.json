@@ -1,0 +1,14 @@
+{
+  "type_name": "Plan Manage",
+  "type_description": "The driver modules in YTLA",
+
+  "MoveToWelcomeButton_001": "Go To Introduction Page",
+  "AddPlanButton_001": "Create New Plan",
+  "AddPlanModuleButton_001": "Add New Module Group",
+  "AddPlanModuleButton_002": "New Module Group",
+  "AddModuleButton_001": "Add New Module",
+  "ReturnToPlanDashboardButton_001": "Return To Plan Dashboard",
+  "ReturnToPlanButton_001": "Return To Plan",
+  "SwitchToModuleConceptButton_001": "List modules by concept",
+  "SwitchToModuleTypeButton_001": "List modules by type"
+}

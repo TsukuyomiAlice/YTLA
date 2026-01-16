@@ -1,7 +1,0 @@
-{
-  "type_name": "Timer",
-  "type_description": "For time, time recognize, and time management",
-
-  "timer_subtype_name": "Timer",
-  "timer_subtype_description": "For record time"
-}

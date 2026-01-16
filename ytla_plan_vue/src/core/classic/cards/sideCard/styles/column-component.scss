@@ -1,0 +1,53 @@
+/* Top Action Column */
+.column-action-top {
+  position: absolute;
+  z-index: 2;
+
+  &.--left {
+    top: 0.2rem;
+    left: 0.2rem;
+    display: flex;
+    gap: 0.2rem;
+  }
+
+  &.--right {
+    top: 0.2rem;
+    right: 0.2rem;
+    display: flex;
+    gap: 0.2rem;
+  }
+}
+
+/* Central Action Column -- left-action-column right-action-column */
+.column-action-central {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid #eee;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  justify-content: space-between;
+}
+
+.column-action-central-left {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 0.4rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 60%;
+    width: 1px;
+    background: #e0e0e0;
+  }
+}
+
+.column-action-central-right {
+  display: flex;
+  align-items: center;
+}

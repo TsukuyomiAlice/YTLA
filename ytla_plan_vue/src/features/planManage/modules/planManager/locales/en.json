@@ -1,0 +1,10 @@
+{
+  "subtype_name": "PlanManager",
+  "subtype_description": "main page of plan manager",
+
+  "main_00_000": "Welcome back!",
+  "main_00_001": "Have you got a new idea? Or just want to check your plans?",
+  "sub_00_000": "Select a plan to see details",
+  "sub_00_001": "If you want to make a new plan, click",
+  "sub_00_002": "If you want to know more about YTLA, click"
+}

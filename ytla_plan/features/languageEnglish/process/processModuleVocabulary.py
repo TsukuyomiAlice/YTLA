@@ -1,9 +1,9 @@
 # encode = utf-8
 
 import json
-from core.modules.dao import daoModulePersistence
-from core.frame.func.loggerConfig import process_log
-from core.frame.instance.instanceProcessToRoutes import Response
+from core.classic.modules.dao import daoModulePersistence
+from core.classic.frame.func.loggerConfig import process_log
+from core.classic.frame.instance.instanceProcessToRoutes import Response
 
 vocabulary_book_sheet = {
     "record_id": 0,

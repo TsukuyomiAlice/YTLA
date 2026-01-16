@@ -1,0 +1,11 @@
+{
+  "subtype_name": "plan dashboard",
+  "subtype_description": "The dashboard of YTLA plan manage module",
+
+  "main_00_000": "Plan Dashboard",
+  "main_00_001": "Ungrouped Modules",
+  "main_00_100": "You must activate this plan first to view the dashboard",
+  "sub_00_100": "Deactivate",
+  "sub_00_101": "Reactivate",
+  "sub_00_102": "Delete"
+}

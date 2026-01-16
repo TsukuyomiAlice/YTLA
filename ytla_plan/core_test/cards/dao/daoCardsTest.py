@@ -1,6 +1,6 @@
 import unittest
-from core.cards.dao import daoCards
-from core.cards.dao.daoCards import Instance, add_card, update_card_detail, soft_delete_card
+from core.classic.cards.dao import daoCards
+from core.classic.cards import Instance, add_card, update_card_detail, soft_delete_card
 
 
 class TestDaoCards(unittest.TestCase):
@@ -53,7 +53,7 @@ class TestDaoCards(unittest.TestCase):
 
     def test_3_activate_deactivate(self):
         """Test card activation/deactivation workflow"""
-        from core.cards.dao.daoCards import deactivate_card, check_card_active_status
+        from core.classic.cards import deactivate_card, check_card_active_status
 
         deactivate_card(self.card_id)
         self.assertEqual(check_card_active_status(self.card_id), '0')

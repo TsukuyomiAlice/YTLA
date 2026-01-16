@@ -1,0 +1,117 @@
+.tags-container, .tags-container-big {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  align-items: center;
+  min-height: 24px;
+
+  .tag, .tag-big, .tag-slim {
+    background: rgba(66, 185, 131, 0.15);
+    color: #42b983;
+    border-radius: 0.75rem;
+    line-height: 1.4;
+    position: relative;
+    white-space: nowrap;
+  }
+
+  .tag {
+    padding: 0.1rem 1.25rem 0.1rem 0.3rem;
+    font-size: 0.75rem;
+  }
+
+  .tag-big {
+    padding: 0.1rem 1.75rem 0.1rem 0.3rem;
+    font-size: 1.5rem;
+  }
+
+  .tag-slim {
+    padding: 0.1rem 0.3rem 0.1rem 0.3rem;
+    font-size: 0.75rem;
+  }
+
+  .tag-remove {
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: 1rem;
+    border: none;
+    background: rgba(66, 185, 131, 0.3);
+    color: #42b983;
+    border-radius: 50%;
+    font-size: 0.6rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+
+    &:hover {
+      background: #42b983;
+      color: white;
+    }
+  }
+
+  .tag-add-button, .tag-add-button-big {
+    background: rgba(66, 185, 131, 0.15);
+    color: #42b983;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+
+    &:hover {
+      background: #42b983;
+      color: white;
+    }
+  }
+
+  .tag-add-button {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .tag-add-button-big {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .tag-input, .tag-input-big {
+    border: 1px solid #42b983;
+    border-radius: 1rem;
+    padding: 0 0.3rem;
+    outline: none;
+
+    &::placeholder {
+      color: #999;
+    }
+  }
+
+  .tag-input {
+    width: 6rem;
+    height: 1.25rem;
+    font-size: 0.75rem;
+  }
+
+  .tag-input-big {
+    width: 8rem;
+    height: 1.8rem;
+    font-size: 1.5rem;
+  }
+}
+
+.tag-container {
+  margin-bottom: 0.5rem;
+}
+
+.tags-container-big {
+  margin-bottom: 2rem;
+}

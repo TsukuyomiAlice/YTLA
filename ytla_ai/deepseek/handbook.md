@@ -20,7 +20,3 @@ https://api-docs.deepseek.com/zh-cn/guides
 
 发送一次请求，出现了预期回答就完事了！
 
-## 思考
-
-### 怎么去判断一个问题需要用怎样的temperature？
-### 存储对话的方法？db？file？
