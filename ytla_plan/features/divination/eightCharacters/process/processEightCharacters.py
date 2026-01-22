@@ -2,19 +2,19 @@
 from features.divination.eightCharacters.dataset import eight_character_data
 
 
-def check_input(text: str, luck_cycle: str="", fleet_year:str="") -> list:
-    text = text.strip()
-    if len(text) not in (6, 8):
+def check_input(eight_characters: str, luck_cycle: str="", fleet_year:str="") -> list:
+    eight_characters = eight_characters.strip()
+    if len(eight_characters) not in (6, 8):
         return []
-    hex_1 = text[0]
-    hex_2 = text[1]
-    hex_3 = text[2]
-    hex_4 = text[3]
-    hex_5 = text[4]
-    hex_6 = text[5]
-    if len(text) == 8:
-        hex_7 = text[6]
-        hex_8 = text[7]
+    hex_1 = eight_characters[0]
+    hex_2 = eight_characters[1]
+    hex_3 = eight_characters[2]
+    hex_4 = eight_characters[3]
+    hex_5 = eight_characters[4]
+    hex_6 = eight_characters[5]
+    if len(eight_characters) == 8:
+        hex_7 = eight_characters[6]
+        hex_8 = eight_characters[7]
     else:
         hex_7 = ""
         hex_8 = ""
@@ -107,8 +107,8 @@ def calculate_ratio_of_ten_gods(checked_input: list):
         print(f'流年计算后权重: {fleet_ratio_list}')
 
 
-def analyze_eight_characters(text: str, luck_cycle: str="", fleet_year: str=""):
-    checked_input = check_input(text, luck_cycle, fleet_year)
+def analyze_eight_characters(eight_characters: str, luck_cycle: str="", fleet_year: str=""):
+    checked_input = check_input(eight_characters, luck_cycle, fleet_year)
     print(checked_input)
     if checked_input:
         print(f"日元：{checked_input[4]}")
