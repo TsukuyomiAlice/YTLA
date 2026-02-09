@@ -21,9 +21,3 @@ relaxCardEditorFlowManager.initialStep = markRaw(defineAsyncComponent(() => impo
 relaxCardEditorFlowManager.registerFlow('wordle', [
   markRaw(defineAsyncComponent(() => import('@/features/relax/cards/wordle/components/WordleFlow.vue')))
 ])
-
-declare module '@/features/relax/cards/_type/flows/relaxCardFlowManager.ts' {
-  export interface RelaxCardEditorFlowManager {
-    getSteps(cardSubType: RelaxCardSubType): Component[]
-  }
-}

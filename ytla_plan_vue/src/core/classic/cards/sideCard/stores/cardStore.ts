@@ -6,7 +6,7 @@ import { CardService } from '@/core/classic/cards/sideCard/services/cardService.
 const API_BASE = import.meta.env.VITE_API_BASE
 const cardService = new CardService(API_BASE)
 
-export const useCardStore = defineStore('card', {
+export const useCardStore = defineStore('sideCard', {
   state: () => ({
     cards: [] as CardData[],
     isLoading: false,

@@ -1,83 +1,16 @@
 # YTLA (Your T&L Assistant)
 
-> **YTLA 是一个模块化 Web 应用平台框架**  
-> 用户可通过自由生成并组合 **模块（Modules）** 和 **卡片（Cards）** 快速构建个性化工作流。
+## Important information
 
----
+### This project is under great scale refactoring.
+#### It is normal that build problems will be occurred in some releases.
+#### Please Kindly Wait for the Refactoring to Finish.   
+  
+### The version control will also be changed after the refactoring.
+#### The formal version will be released soon.
+#### The first formal version will be named as classic-1.0  
 
-## ✨ 核心理念
-- **T&L 自定义**  
-  “T” 和 “L” 代表用户自定义的词汇（如 *Tech & Learning*, *Task & Logistics* 等），赋予平台灵活的应用场景。
-- **模块化架构**  
-  将功能拆分为可复用的 **模块**（完整应用）和 **卡片**（轻量小组件），支持按需组合。
-- **计划（Plan）驱动**  
-  用户可创建多个 **计划**，每个计划包含一组模块/卡片，实现不同场景的专属工作台。
+### Notice: The features in current project will be removed to other repositories.
+#### You will receive further instructions about how to get those features in the formal version.
 
----
-
-## 🧩 核心功能
-| 组件       | 说明                          |
-|------------|-------------------------------|
-| **模块**   | 独立应用单元，提供核心功能（如数据分析、任务管理） |
-| **卡片**   | 侧边栏小组件，提供快捷操作或信息展示        |
-| **计划**   | 用户自定义的工作流组合，集中管理模块与卡片    |
-| **编辑器** | 可视化调整模块/卡片布局                |
-
----
-
-## 🛠️ 技术栈
-| 层级       | 技术               |
-|------------|--------------------|
-| **后端**   | Python (Flask框架) |
-| **前端**   | Vue 3              |
-| **数据层** | 模块独立存储 + 跨模块通信 |
-
----
-
-## 🚀 快速开始
-```bash
-# 克隆项目
-git clone https://github.com/TsukuyomiAlice/YTLA
-
-# 后端依赖安装
-cd ytla_plan
-pip install -r requirements.txt
-
-# 前端依赖安装
-cd ../ytla_plan_vue
-npm install
-
-# 启动开发环境
-npm run dev & flask run
-```
----
-## 📌 当前进展
-
-- 已完成基础框架搭建
-
-- 实现模块/卡片容器系统
-
-- 支持模块间数据通信
-
-- 内置系统模块：
-
-- - 计划管理器（Plan Manager）
-
-- - 工作台（Plan Dashboard）
-
-- - 模块选择器（Module Selector）
-
-- - 国际化支持（vue-i18n）
-
-## 📍 下一步计划
-
-- 账户与权限管理系统
-
-- 多用户协作功能
-
-- 开发者脚手架工具
-
-- AI 能力集成
-
-- 社区文档完善
-
+## Thank you for your visit and please kindly leave your feedback.
