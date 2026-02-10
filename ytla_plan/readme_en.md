@@ -1,101 +1,123 @@
-# YTLA Backend Development Guide
+# ytla_plan
 
-## Project Introduction
+### YTLA Backend Project
 
-YTLA (Your T&L Assistant) is a modular web application platform framework that allows users to quickly build personalized workflows by freely generating and combining Modules and Cards.
+### Official
+
+version: 1.0
+
+Backend Language and Framework: Python-Flask  
+File Update Date: 2026-2-10
+
+## Open Code, Free Addition
+
+The project is completely open source, including all code in core is publicly available in source code form.  
+Therefore, you can customize it according to your needs.  
+Before doing so, please read this document to ensure you have a sufficient understanding of the project's framework.
 
 ## Core Concepts
 
-- **T&L Customization**
-  "T" and "L" represent user-defined terms (such as Tech & Learning, Task & Logistics, etc.), giving the platform flexible application scenarios.
-- **Modular Architecture**
-  Split functions into reusable Modules (complete applications) and Cards (lightweight widgets) that support on-demand combination.
-- **Plan-driven**
-  Users can create multiple Plans, each containing a set of Modules/Cards, to implement exclusive workbenches for different scenarios.
+As a complete, front-end and back-end separated project with Web OS vision, YTLA has two sets of concepts at the code
+level.
 
-## Technology Stack
+### Core and Feature
 
-| Layer | Technology |
-|-------|------------|
-| **Backend** | Python (Flask framework) |
-| **Data Layer** | Module-independent storage + cross-module communication |
+**Core** serves as the underlying code that drives the project's operation, similar to an operating system  
+**Feature** serves as functional modules that provide user applications, i.e., application software
+
+### Card, Module and Plan
+
+**Card** provides users with quick, simple functions  
+**Module** provides users with application-level services  
+**Plan** allows users to freely add Modules to create their own exclusive workbench
 
 ## Python-Flask Architecture Hierarchy
 
-| Layer | 0 | 1 | 2 | 3 | 4 |
-|-------|-----|-----|--------------|------------|------------|
-| | core | Core Version Name | Core Component-cards | _type Default Definition |  |
-| | | | | Refined Component | Component Package |
-| | | | Core Component-modules | _type Default Definition |  |
-| | | | | Refined Component | Component Package |
-| | | | Core Component-plans | _type Default Definition |  |
-| | | | | Refined Component | Component Package |
-| | | | Core Component-frame | _type Default Definition |  |
-| | | | | Refined Component | Component Package |
-| | | | Core Component-users | _type Default Definition |  |
-| | | | | Refined Component | Component Package |
-| | feature | Feature Name | cards | _type Default Definition |  |
-| | | | | Component | Component Package |
-| | | modules | _type Default Definition |  |  |
-| | | | | Component | Component Package |
+- project
+    - core
+        - Core Version Name
+            - cards - Core Component
+                - _type (Default Definition)
+                - Refined Component
+                    - Component Package
+            - modules - Core Component
+                - _type (Default Definition)
+                - Refined Component
+                    - Component Package
+            - plans - Core Component
+                - _type (Default Definition)
+                - Refined Component
+                    - Component Package
+            - frame - Core Component
+                - _type (Default Definition)
+                - Refined Component
+                    - Component Package
+            - users - Core Component
+                - _type (Default Definition)
+                - Refined Component
+                    - Component Package
+    - feature
+        - Feature Name
+            - cards
+                - _type (Default Definition)
+                - Component
+                    - Component Package
+            - modules
+                - _type (Default Definition)
+                - Component
+                    - Component Package
 
-## Backend Single Component Package Structure
+### Backend Single Component Package Structure
 
-| Package Name | File Function | File Type | Description |
-|-------------|---------------|-----------|-------------|
-| docs | Component Configuration Document | .yaml, .json, .py | For automatic generation |
-| instance | Instance | .py | Component data instance type |
-| process | Logic Processing Flow | .py | Component logic processing |
-| schedule | Regular Automatic Execution | .py | Regular automated operation |
-| script | Calling Script | .py | Assemble and call methods or functions within the package |
-| dataset | Dataset | .py, .json, etc. | Pre-made dataset |
-| api | External API Call | .py | Send API requests and process API reception results |
-| dao | DB Access | .py | python sqlite3 SQLAlchemy |
-| routes | API Routes | .py | python-flask Blueprint file |
-| const | Constants | .py | Specific constants |
-| ai_tools | AI Assistant Tools | .py | Specific function code snippets that need to be processed by gen AI |
-| caller | Cross-package Function Call Unified Method | .py | Cross-package call function |
-| func | Functional Functions | .py | General functions |
+The project is classified according to component functions, each component contains multiple packages, and each package
+is responsible for different functions.  
+If you initialize with scaffold(/features/scaffold/modules/backend_python), you will get all the following packages:
 
-## Development Rules
+### Documentation Management
 
-1. Backend
-   1. Whether it is a module or a card, it starts from the dao layer, then the process layer, and finally the route layer
-   2. For data that needs to be obtained from other projects, a function needs to be defined in the caller layer and then called in the route layer
-   3. The backend code has been revised and divided into two concepts: core and features
-      For each subdirectory within core and features, it contains the above directory structure
-      For core, this helps to distinguish the division and decoupling of core functions, and can correspond to front-end code
-      For features, this is aligned with front-end code
+| Package Name | File Function                    | File Type         | Description              |
+|--------------|----------------------------------|-------------------|--------------------------|
+| docs         | Component Configuration Document | .yaml, .json, .py | For automatic generation |
 
-## Quick Start
+### Data Instance
 
-```bash
-# Clone the project
-git clone https://github.com/TsukuyomiAlice/YTLA
+| Package Name | File Function | File Type | Description                  |
+|--------------|---------------|-----------|------------------------------|
+| instance     | Instance      | .py       | Component data instance type |
 
-# Install backend dependencies
-cd ytla_plan
-pip install -r requirements.txt
+### Data
 
-# Start development environment
-flask run
-```
+| Package Name | File Function | File Type        | Description               |
+|--------------|---------------|------------------|---------------------------|
+| dataset      | Dataset       | .py, .json, etc. | Pre-made dataset          |
+| dao          | DB Access     | .py              | python sqlite3 SQLAlchemy |
 
-## Current Progress
+### Logic Processing
 
-- Basic framework setup completed
-- Module/Card container system implemented
-- Cross-module data communication supported
-- Built-in system modules:
-  - Plan Manager
-  - Plan Dashboard
-  - Module Selector
-  - Internationalization support
+| Package Name | File Function               | File Type | Description                                               |
+|--------------|-----------------------------|-----------|-----------------------------------------------------------|
+| process      | Logic Processing Flow       | .py       | Component logic processing                                |
+| schedule     | Regular Automatic Execution | .py       | Regular automated operation                               |
+| script       | Calling Script              | .py       | Assemble and call methods or functions within the package |
 
-## Next Steps
+### Interoperability
 
-- Account and permission management system
-- Multi-user collaboration features
-- Developer scaffolding tools
-- AI capability integration
-- Community documentation improvement
+| Package Name | File Function                              | File Type | Description                                                         |
+|--------------|--------------------------------------------|-----------|---------------------------------------------------------------------|
+| const        | Constants                                  | .py       | Specific constants                                                  |
+| api          | External API Call                          | .py       | Send API requests and process API reception results                 |
+| ai_tools     | AI Assistant Tools                         | .py       | Specific function code snippets that need to be processed by gen AI |
+| caller       | Cross-package Function Call Unified Method | .py       | Cross-package call function                                         |
+| func         | Functional Functions                       | .py       | General functions                                                   |
+
+### Frontend Communication
+
+| Package Name | File Function | File Type | Description                 |
+|--------------|---------------|-----------|-----------------------------|
+| routes       | API Routes    | .py       | python-flask Blueprint file |
+
+### Configuration
+
+| Package Name | File Function            | File Type        | Description                      |
+|--------------|--------------------------|------------------|----------------------------------|
+| utils        | Configuration Parameters | .py, .json, etc. | Runtime configuration parameters |
