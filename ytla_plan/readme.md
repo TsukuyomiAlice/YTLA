@@ -1,101 +1,122 @@
-# YTLA 后端开发指南
+# ytla_plan
 
-## 项目简介
+### YTLA后端工程
 
-YTLA (Your T&L Assistant) 是一个模块化 Web 应用平台框架，用户可通过自由生成并组合模块（Modules）和卡片（Cards）快速构建个性化工作流。
+### Official
 
-## 核心理念
+version: 1.0
 
-- **T&L 自定义**
-  "T" 和 "L" 代表用户自定义的词汇（如 Tech & Learning, Task & Logistics 等），赋予平台灵活的应用场景。
-- **模块化架构**
-  将功能拆分为可复用的模块（完整应用）和卡片（轻量小组件），支持按需组合。
-- **计划（Plan）驱动**
-  用户可创建多个计划，每个计划包含一组模块/卡片，实现不同场景的专属工作台。
+后端语言及开发框架: Python-Flask  
+文件更新日期: 2026-2-10
 
-## 技术栈
+## 开放代码，自由添加
 
-| 层级 | 技术 |
-|------|------|
-| **后端** | Python (Flask框架) |
-| **数据层** | 模块独立存储 + 跨模块通信 |
+项目完全开源，包括core在内所有的代码都以源码形式公开.  
+因此，你可以根据自己的需要进行自定义的定制.  
+在此之前，请阅读本文档，以确保对项目的框架有足够的理解.
 
-## Python-Flask 架构层级
+## 核心概念
 
-| 层级 | 0 | 1 | 2 | 3 | 4 |
-|------|-----|-----|--------------|------------|------------|
-| | core | 核心版本名 | 核心组件-cards | _type 缺省定义 |  |
-| | | | | 细化组件 | 组件下package |
-| | | | 核心组件-modules | _type 缺省定义 |  |
-| | | | | 细化组件 | 组件下package |
-| | | | 核心组件-plans | _type 缺省定义 |  |
-| | | | | 细化组件 | 组件下package |
-| | | | 核心组件-frame | _type 缺省定义 |  |
-| | | | | 细化组件 | 组件下package |
-| | | | 核心组件-users | _type 缺省定义 |  |
-| | | | | 细化组件 | 组件下package |
-| | feature | 功能名 | cards | _type 缺省定义 |  |
-| | | | | 组件 | 组件下package |
-| | | modules | _type 缺省定义 |  |  |
-| | | | | 组件 | 组件下package |
+YTLA作为一个有着Web OS愿景的完整、前后端分离项目，在代码层面上有两组概念。
 
-## 后端的单个组件package结构
+### Core 和 Feature
 
-| package名 | 文件功能 | 文件类型 | 说明 |
-|----------|----------|----------|------|
-| docs | 组件设定文档 | .yaml, .json, .py | 用于自动生成 |
-| instance | 实例 | .py | 组件数据实例类型 |
-| process | 逻辑处理流程 | .py | 组件逻辑处理 |
-| schedule | 定期自动执行 | .py | 定期自动化运行 |
-| script | 调用脚本 | .py | 组装、调用包内方法或函数 |
-| dataset | 数据集 | .py, .json, etc. | 预制数据集 |
-| api | 对外api调用 | .py | 发送api请求，对api接收结果进行处理 |
-| dao | DB访问 | .py | python sqlite3 SQLAlchemy |
-| routes | api路由 | .py | python-flask Blueprint文件 |
-| const | 常变量 | .py | 特定常数 |
-| ai_tools | ai辅助工具 | .py | 需要交由gen ai进行处理的特定功能代码片段 |
-| caller | 跨包函数调用统一方法 | .py | 跨包调用功能 |
-| func | 功能性函数 | .py | 通用型函数 |
+**Core** 作为驱动项目运行的底层代码，类似操作系统  
+**Feature** 作为提供用户应用的功能模块，即应用软件
 
-## 开发规则
+### Card, Module 和 Plan
 
-1. 后端
-   1. 不论是module还是card，都是从dao层开始，然后是process层，最后是route层
-   2. 对于需要从其他工程获取数据的，需要在caller层定义一个函数，然后在route层调用
-   3. 现在已经进行了改版，后端的代码区分为core和features两个概念
-      对于core和features内部的每个子目录下，都包含有上述的目录结构
-      对于core而言，这样做有利于区分核心功能的分块与解耦，并且可以与前端代码对应
-      而对于features，这样做本身就和前端代码对齐
+**Card** 为用户提供快捷、简易的功能  
+**Module** 为用户提供应用层面服务  
+**Plan** 可以让用户自由添加Module，创造独属于自己的工作台
 
-## 快速开始
+## Python-Flask版本 架构层级
 
-```bash
-# 克隆项目
-git clone https://github.com/TsukuyomiAlice/YTLA
+- project
+    - core
+        - 核心版本名
+            - cards -核心组件
+                - _type (缺省定义)
+                - 细化组件
+                    - 组件下package
+            - modules -核心组件
+                - _type (缺省定义)
+                - 细化组件
+                    - 组件下package
+            - plans -核心组件
+                - _type (缺省定义)
+                - 细化组件
+                    - 组件下package
+            - frame -核心组件
+                - _type (缺省定义)
+                - 细化组件
+                    - 组件下package
+            - users -核心组件
+                - _type (缺省定义)
+                - 细化组件
+                    - 组件下package
+    - feature
+        - 功能名
+            - cards
+                - _type (缺省定义)
+                - 组件
+                    - 组件下package
+            - modules
+                - _type (缺省定义)
+                - 组件
+                    - 组件下package
 
-# 后端依赖安装
-cd ytla_plan
-pip install -r requirements.txt
+### 后端的单个组件package结构
 
-# 启动开发环境
-flask run
-```
+项目按照组件的功能进行分类，每个组件下包含多个package，每个package负责不同的功能。  
+如果使用scaffold(/features/scaffold/modules/backend_python)进行初始化，你会得到以下全部package:
 
-## 当前进展
+### 文档管理
 
-- 已完成基础框架搭建
-- 实现模块/卡片容器系统
-- 支持模块间数据通信
-- 内置系统模块：
-  - 计划管理器（Plan Manager）
-  - 工作台（Plan Dashboard）
-  - 模块选择器（Module Selector）
-  - 国际化支持
+| package名 | 文件功能   | 文件类型              | 说明     |
+|----------|--------|-------------------|--------|
+| docs     | 组件设定文档 | .yaml, .json, .py | 用于自动生成 |
 
-## 下一步计划
+### 数据实例
 
-- 账户与权限管理系统
-- 多用户协作功能
-- 开发者脚手架工具
-- AI 能力集成
-- 社区文档完善
+| package名 | 文件功能 | 文件类型 | 说明       |
+|----------|------|------|----------|
+| instance | 实例   | .py  | 组件数据实例类型 |
+
+### 数据
+
+| package名 | 文件功能 | 文件类型             | 说明                        |
+|----------|------|------------------|---------------------------|
+| dataset  | 数据集  | .py, .json, etc. | 预制数据集                     |
+| dao      | DB访问 | .py              | python sqlite3 SQLAlchemy |
+
+### 逻辑处理
+
+| package名 | 文件功能   | 文件类型 | 说明           |
+|----------|--------|------|--------------|
+| process  | 逻辑处理流程 | .py  | 组件逻辑处理       |
+| schedule | 定期自动执行 | .py  | 定期自动化运行      |
+| script   | 调用脚本   | .py  | 组装、调用包内方法或函数 |
+
+### 联动性
+
+| package名 | 文件功能       | 文件类型 | 说明                      |
+|----------|------------|------|-------------------------|
+| const    | 常变量        | .py  | 特定常数                    |
+| api      | 对外api调用    | .py  | 发送api请求，对api接收结果进行处理    |
+| ai_tools | ai辅助工具     | .py  | 需要交由gen ai进行处理的特定功能代码片段 |
+| caller   | 跨包函数调用统一方法 | .py  | 跨包调用功能                  |
+| func     | 功能性函数      | .py  | 通用型函数                   |
+
+### 前端通信
+
+| package名 | 文件功能  | 文件类型 | 说明                       |
+|----------|-------|------|--------------------------|
+| routes   | api路由 | .py  | python-flask Blueprint文件 |
+
+### 配置
+
+| package名 | 文件功能 | 文件类型             | 说明     |
+|----------|------|------------------|--------|
+| utils    | 配置参数 | .py, .json, etc. | 运行配置参数 |
+
