@@ -15,7 +15,7 @@ The project is completely open source, including all code in core is publicly av
 Therefore, you can customize it according to your needs.  
 Before doing so, please read this document to ensure you have a sufficient understanding of the project's framework.
 
-## Core Concepts
+## Concepts
 
 As a complete, front-end and back-end separated project with Web OS vision, YTLA has two sets of concepts at the code
 level.
