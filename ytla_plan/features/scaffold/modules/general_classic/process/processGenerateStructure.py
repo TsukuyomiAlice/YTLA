@@ -1,6 +1,6 @@
 # encode = utf-8
 
-from features.scaffold.modules.backend_python.process.processGenerateStructure import generate_python_structure
+from features.scaffold.modules.backend_python_flask.process.processGenerateStructure import generate_python_structure
 from features.scaffold.modules.frontend_vue3.process.processGenerateStructure import generate_vue3_structure
 
 

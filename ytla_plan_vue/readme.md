@@ -1,6 +1,12 @@
+<p>
+ 语言 
+ <a href="./docs/zh-CN/readme.md"> 简体中文 </a>
+ <a href="./docs/en-US/readme.md"> English </a>
+</p>
+
 # ytla_plan_vue
 
-### YTLA前端工程
+### YTLA前端框架
 
 ### Official
 
@@ -13,9 +19,9 @@ version: 1.0
 
 项目完全开源，包括core在内所有的代码都以源码形式公开.  
 因此，你可以根据自己的需要进行自定义的定制.  
-在此之前，请阅读本文档，以确保对项目的框架有足够的理解.
+在此之前，请阅读本文档，以确保对项目的框架有足够的了解.
 
-## 核心概念
+## 概念
 
 YTLA作为一个有着Web OS愿景的完整、前后端分离项目，在代码层面上有两组概念。
 
@@ -108,7 +114,7 @@ YTLA作为一个有着Web OS愿景的完整、前后端分离项目，在代码�
 
 #### 举例：Component文件的配置
 
-- ../componets/ComponentFile.vue
+- ../components/ComponentFile.vue
     - ../layouts/LayoutComponentFIle.vue
     - ../uis/UiFile.vue
     - ../composables/useComponentFile.ts

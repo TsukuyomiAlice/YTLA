@@ -1,3 +1,9 @@
+<p>
+ Language 
+ <a href="./docs/zh-CN/readme.md"> 简体中文 </a>
+ <a href="./docs/en-US/readme.md"> English </a>
+</p>
+
 # YTLA (Your T&L Assistant)
 
 ## Important information
