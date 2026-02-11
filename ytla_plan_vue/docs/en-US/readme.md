@@ -1,6 +1,12 @@
+<p>
+ Language 
+ <a href="../zh-CN/readme.md"> 简体中文 </a>
+ <a href="../en-US/readme.md"> English </a>
+</p>
+
 # ytla_plan_vue
 
-### YTLA Frontend Project
+### YTLA Frontend Framework
 
 ### Official
 

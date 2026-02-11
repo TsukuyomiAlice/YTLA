@@ -1,6 +1,12 @@
+<p>
+ Language 
+ <a href="../zh-CN/readme.md"> 简体中文 </a>
+ <a href="../en-US/readme.md"> English </a>
+</p>
+
 # ytla_plan
 
-### YTLA Backend Project
+### YTLA Backend Framework
 
 ### Official
 
@@ -56,6 +62,7 @@ level.
                 - _type (Default Definition)
                 - Refined Component
                     - Component Package
+    - docs (readme.md)
     - feature
         - Feature Name
             - cards
@@ -66,6 +73,12 @@ level.
                 - _type (Default Definition)
                 - Component
                     - Component Package
+    - app.py
+    - config.py
+    - LICENCE
+    - readme.md
+    - requirements.txt
+    - wsgi.py
 
 ### Backend Single Component Package Structure
 
