@@ -19,4 +19,5 @@ The first formal version will be named as classic-1.0
 ### Notice: The features in current project will be removed to other repositories.
 You will receive further instructions about how to get those features in the formal version.
 
+## Please click the links at the top of the MD file to read the new version of YTLA introduction.
 ## Thank you for your visit and please kindly leave your feedback.

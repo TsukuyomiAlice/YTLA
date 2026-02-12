@@ -45,7 +45,7 @@ version 1.0
 ## 框架目录
 
 - YTLA (本框架)
-    - docs (readme.me)
+    - docs (readme.md)
     - frontend
         - docs
         - core

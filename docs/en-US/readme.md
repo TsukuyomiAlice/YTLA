@@ -45,7 +45,7 @@ Specific architectural split definitions can ensure that the framework can have 
 ## Framework Directory
 
 - YTLA (this framework)
-    - docs (readme.me)
+    - docs (readme.md)
     - frontend
         - docs
         - core
