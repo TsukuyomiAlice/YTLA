@@ -12,8 +12,8 @@
 
 version: 1.0
 
-Frontend Language and Framework: Vue3  
-File Update Date: 2026-2-10
+Frontend Language and Framework: Vue3, typescript  
+File Update Date: 2026-2-12
 
 ## Open Code, Free Addition
 
@@ -28,8 +28,11 @@ level.
 
 ### Core and Feature
 
-**Core** serves as the underlying code that drives the project's operation, similar to an operating system  
+**Core** serves as the underlying code that drives the project's operation, similar to a driver  
 **Feature** serves as functional modules that provide user applications, i.e., application software
+
+- Among Features, there is a special type of application called "Key Application".  
+  This type of application can be understood as operating system software
 
 ### Card, Module and Plan
 

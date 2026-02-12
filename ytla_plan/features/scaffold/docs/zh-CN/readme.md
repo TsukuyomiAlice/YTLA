@@ -13,9 +13,9 @@
 version 1.0
 
 后端语言及开发框架: Python-Flask  
-前端语言及开发框架: Vue3  
+前端语言及开发框架: Vue3, typescript  
 适用YTLA core版本: **classic**  
-文件更新日期: 2026-2-11
+文件更新日期: 2026-2-12
 
 ## 这是一个YTLA标准框架应用
 
