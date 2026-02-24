@@ -1,18 +1,40 @@
 # encode = utf-8
 
 from pathlib import Path
-
+import os
+from ytla_plan.features.scaffold.modules.backend_python_flask.const import constGenerators
 
 def first_letter_upper(s):
+    """
+    Switch a word's first letter into uppercase.
+    :param s: The string to switch to.
+    :return: The string with uppercase.
+    """
     if s:
         return s[0].upper() + s[1:]
     return s
 
 
 def first_letter_lower(s):
+    """
+    Switch a word's first letter into lowercase.
+    :param s: The string to switch to.
+    :return: The string with lowercase.
+    """
     if s:
         return s[0].lower() + s[1:]
     return s
+
+
+def create_init_file(init_file_path: Path):
+    """
+    Generate a blank file. Not only for __init__.py
+    :param init_file_path: The path of the init file
+    :return: None
+    """
+    if not init_file_path.exists():
+        with open(init_file_path, 'w', encoding='utf-8') as f:
+            f.write('')
 
 
 def generate_python_structure(is_core: str = 'n', structure: str = 'cards',
@@ -28,10 +50,10 @@ def generate_python_structure(is_core: str = 'n', structure: str = 'cards',
 
     # Validate parameters
 
-    if is_core.lower() is not 'y' and structure not in ('cards', 'modules'):
+    if is_core.lower() != 'y' and structure not in ('cards', 'modules'):
         raise ValueError("structure parameter must be 'cards' or 'modules'")
 
-    if is_core.lower() is 'y' and structure not in ('cards', 'modules', 'plans', 'frame', 'users'):
+    if is_core.lower() == 'y' and structure not in ('cards', 'modules', 'plans', 'frame', 'users'):
         raise ValueError("structure parameter must be 'cards', 'modules', 'plans', 'frame' or 'users'")
 
     if not type_name:
@@ -56,53 +78,49 @@ def generate_python_structure(is_core: str = 'n', structure: str = 'cards',
     base_path = type_path / structure
     target_path = base_path / subtype
 
-    # Base directory structure
-    base_structure = [
-        "docs",
-        "instance",
-        "process",
-        "schedule",
-        "script",
-        "dataset",
-        "api",
-        "dao",
-        "routes",
-        "const",
-        "ai_tools",
-        "prompt",
-        "caller",
-        "func",
-        "utils"
-    ]
+    # Create main directories
+    type_path.mkdir(parents=True, exist_ok=True)
+    base_path.mkdir(parents=True, exist_ok=True)
+    target_path.mkdir(parents=True, exist_ok=True)
 
-    # Create directory structure
-    for dir_name in base_structure:
-        dir_path = target_path / dir_name
-        dir_path.mkdir(parents=True, exist_ok=True)
-
-        # Create __init__.py file
-        init_file = dir_path / "__init__.py"
-        if not init_file.exists():
-            with open(init_file, 'w', encoding='utf-8') as f:
-                f.write('')
-
+    # Create __init__.py files for main directories
     # Type path __init__.py
     init_file = type_path / "__init__.py"
-    if not init_file.exists():
-        with open(init_file, 'w', encoding='utf-8') as f:
-            f.write('')
+    create_init_file(init_file)
 
     # Structure path __init__.py
     init_file = base_path / "__init__.py"
-    if not init_file.exists():
-        with open(init_file, 'w', encoding='utf-8') as f:
-            f.write('')
+    create_init_file(init_file)
 
     # Subtype path __init__.py
     init_file = target_path / "__init__.py"
-    if not init_file.exists():
-        with open(init_file, 'w', encoding='utf-8') as f:
-            f.write('')
+    create_init_file(init_file)
+
+    # Import and call directory generators
+    # Add current directory to path to import modules
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    import sys
+    sys.path.insert(0, current_dir)
+
+    # Define generator configuration list
+    generators = constGenerators.generators
+
+    # Import and call generators one by one
+    for module_name, func_name in generators:
+        try:
+            # Dynamically import module
+            module = __import__(module_name)
+            generate_func = getattr(module, "generate")
+            # Call generator
+            generate_func(str(target_path))
+        except ImportError as e:
+            print(f"Error importing {module_name}: {e}")
+        except AttributeError as e:
+            print(f"Error getting generate function from {module_name}: {e}")
+        finally:
+            # Always clear module cache
+            if module_name in sys.modules:
+                del sys.modules[module_name]
 
     # components
     if subtype != '_type':
@@ -111,10 +129,10 @@ def generate_python_structure(is_core: str = 'n', structure: str = 'cards',
         component_name = first_letter_upper(type_name)
         subtype = first_letter_lower(type_name)
 
-    # routes directory
-    routes_file = target_path / "routes" / f"route{component_name}.py"
-    if not routes_file.exists():
-        with open(routes_file, 'w', encoding='utf-8') as f:
-            f.write('')
+    # Create route file
+    routes_dir = target_path / "routes"
+    if routes_dir.exists():
+        routes_file = routes_dir / f"route{component_name}.py"
+        create_init_file(routes_file)
 
     return str(target_path)

@@ -24,10 +24,10 @@ def process_generate_structure(is_core: str = 'n', structure: str = 'cards',
         if not type_name:
             raise ValueError("type parameter cannot be empty")
 
-        if is_core.lower() is not 'y' and structure not in ('cards', 'modules'):
+        if is_core.lower() != 'y' and structure not in ('cards', 'modules'):
             raise ValueError("structure parameter must be 'cards' or 'modules'")
 
-        if is_core.lower() is 'y' and structure not in ('cards', 'modules', 'plans', 'frame', 'users'):
+        if is_core.lower() == 'y' and structure not in ('cards', 'modules', 'plans', 'frame', 'users'):
             raise ValueError("structure parameter must be 'cards', 'modules', 'plans', 'frame' or 'users'")
 
         # Handle subtype
@@ -69,7 +69,7 @@ def main():
     Main function for testing
     """
     # Example usage
-    result = process_generate_structure('n', 'modules', 'divination', '', False)
+    result = process_generate_structure('n', 'modules', 'divination', 'plum_yi', False)
     print(result)
 
 
