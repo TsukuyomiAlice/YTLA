@@ -1,30 +1,19 @@
 # encode = utf-8
 
 import os
-from pathlib import Path
+from ytla_plan.features.scaffold.modules._type.script import scriptCreateFile as File
 
 
-def create_directory_if_not_exists(dir_path):
+def generate(target_path, type_name, sub_type_name):
     """
-    Create directory if it doesn't exist
-    :param dir_path: Directory path
-    :return: Whether creation was successful
-    """
-    if not os.path.exists(dir_path):
-        os.makedirs(dir_path, exist_ok=True)
-        return True
-    else:
-        return False
-
-
-def generate(target_path):
-    """
-    Generate avatar directory
+    Generate avatar directory and __init__.py file
     :param target_path: Target path
+    :param type_name: Type name
+    :param sub_type_name: Sub type name
     :return: None
     """
     # Create avatar directory
     avatar_dir = os.path.join(target_path, "avatar")
-    create_directory_if_not_exists(avatar_dir)
+    File.create_directory_if_not_exists(avatar_dir)
     
     print(f"Generated avatar directory structure at: {avatar_dir}")

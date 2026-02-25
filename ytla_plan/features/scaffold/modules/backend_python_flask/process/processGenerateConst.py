@@ -1,50 +1,23 @@
 # encode = utf-8
 
 import os
-from pathlib import Path
+from ytla_plan.features.scaffold.modules._type.script import scriptCreateFile as File
 
 
-def create_directory_if_not_exists(dir_path):
-    """
-    Create directory if it doesn't exist
-    :param dir_path: Directory path
-    :return: Whether creation was successful
-    """
-    if not os.path.exists(dir_path):
-        os.makedirs(dir_path, exist_ok=True)
-        return True
-    else:
-        return False
-
-
-def create_init_file(init_file_path):
-    """
-    Create __init__.py file if it doesn't exist
-    :param init_file_path: __init__.py file path
-    :return: Whether creation was successful
-    """
-    if not os.path.exists(init_file_path):
-        with open(init_file_path, 'w', encoding='utf-8') as f:
-            f.write('')
-        return True
-    else:
-        # Add TODO comment to inform user file already exists
-        print(f"TODO: File {init_file_path} already exists, skipping generation")
-        return False
-
-
-def generate(target_path):
+def generate(target_path, type_name, sub_type_name):
     """
     Generate const directory and __init__.py file
     :param target_path: Target path
+    :param type_name: Type name
+    :param sub_type_name: Sub type name
     :return: None
     """
     # Create const directory
     const_dir = os.path.join(target_path, "const")
-    create_directory_if_not_exists(const_dir)
-    
+    File.create_directory_if_not_exists(const_dir)
+
     # Create __init__.py file
     init_file = os.path.join(const_dir, "__init__.py")
-    create_init_file(init_file)
-    
+    File.create_init_file(init_file)
+
     print(f"Generated const directory structure at: {const_dir}")
