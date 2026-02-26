@@ -1,7 +1,8 @@
 # encode = utf-8
 
-from pathlib import Path
 import os
+from pathlib import Path
+from ytla_plan import config
 from ytla_plan.features.scaffold.modules.frontend_vue3.const import constGenerators
 
 
@@ -16,25 +17,20 @@ def generate_vue3_structure(is_core: str = 'n', structure: str = 'cards',
     :return: Generated directory path
     """
     # Validate parameters
+    if structure not in ['cards', 'modules']:
+        raise ValueError("structure parameter must be 'cards' or 'modules'")
+
     if not type_name:
         raise ValueError("type parameter cannot be empty")
 
-    if structure not in ['cards', 'modules']:
-        raise ValueError("structure parameter must be 'cards' or 'modules'")
+    # Determine prefix
+    prefix = 'core' if is_core.lower() == 'y' else 'features'
 
     # Handle subtype
     if not sub_type_name:
         sub_type_name = '_type'
 
-    # Determine prefix
-    prefix = 'core' if is_core.lower() == 'y' else 'features'
-
-    # Calculate frontend project path automatically
-    current_file = Path(__file__)
-    # Navigate up to \YTLA
-    ytla_root = current_file.parent.parent.parent.parent.parent.parent.parent
-    # todo: hard code for 'ytla_plan_vue'
-    frontend_project_path = ytla_root / 'ytla_plan_vue' / 'src'
+    frontend_project_path = Path(config.FRONTEND_FOLDER) / 'src'
 
     # Generate target path
     type_path = frontend_project_path / prefix / type_name

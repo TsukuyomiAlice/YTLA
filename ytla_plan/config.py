@@ -13,6 +13,8 @@
 
 # Project root folder
 PROJECT_FOLDER = 'D:\\YTLA'
+BACKEND_FOLDER = 'D:\\YTLA\\ytla_plan'
+FRONTEND_FOLDER = 'D:\\YTLA\\ytla_plan_vue'
 
 """
 " Upload configuration

@@ -2,6 +2,7 @@
 
 import os
 from pathlib import Path
+from ytla_plan import config
 from ytla_plan.features.scaffold.modules._type.script import scriptCreateFile as File
 from ytla_plan.features.scaffold.modules.backend_python_flask.const import constGenerators
 
@@ -35,12 +36,7 @@ def generate_python_structure(is_core: str = 'n', structure: str = 'cards',
     if not sub_type_name:
         sub_type_name = '_type'
 
-    # Calculate backend project path automatically
-    current_file = Path(__file__)
-    # Navigate up to \YTLA
-    ytla_root = current_file.parent.parent.parent.parent.parent.parent.parent
-    # todo: hard code for 'ytla_plan'
-    backend_project_path = ytla_root / 'ytla_plan'
+    backend_project_path = Path(config.BACKEND_FOLDER)
 
     # Generate target path
     type_path = backend_project_path / prefix / type_name
