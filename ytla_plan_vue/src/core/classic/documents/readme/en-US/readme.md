@@ -58,15 +58,14 @@ Responsible for user functionality.
 
 - classic
     - cards
-        - Various packages following the ytla_plan framework design
+        - Various packages following the ytla_plan_vue framework design
     - modules
-        - Various packages following the ytla_plan framework design
+        - Various packages following the ytla_plan_vue framework design
     - plans
-        - Various packages following the ytla_plan framework design
+        - Various packages following the ytla_plan_vue framework design
     - frame
-        - Various packages following the ytla_plan framework design
+        - Various packages following the ytla_plan_vue framework design
     - users
-        - Various packages following the ytla_plan framework design
+        - Various packages following the ytla_plan_vue framework design
     - docs (readme.md)
-    - __init__.py
     - readme.md

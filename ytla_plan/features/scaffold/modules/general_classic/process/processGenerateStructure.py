@@ -63,6 +63,3 @@ def process_generate_structure(is_core: str = 'n',
                 "frontend": frontend_result
             }
         }
-
-
-process_generate_structure('y', 'classic', 'frame', 'router', True)

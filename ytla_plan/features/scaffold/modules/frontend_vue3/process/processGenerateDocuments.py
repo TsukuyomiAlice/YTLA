@@ -4,6 +4,7 @@ import os
 from pathlib import Path
 from ytla_plan.features.scaffold.modules._type.script import scriptCreateFile as File
 from ytla_plan.features.scaffold.modules._type.const import langs
+from ytla_plan.features.scaffold.modules.frontend_vue3.const import constLangList
 
 
 def generate_documents(target_path):
@@ -14,7 +15,9 @@ def generate_documents(target_path):
     """
     # Create readme.md file
     readme_file = os.path.join(target_path, "readme.md")
-    File.create_init_file(readme_file)
+    if not os.path.exists(readme_file):
+        File.create_init_file(readme_file)
+        File.add_preset_content(readme_file, constLangList.base_readme_lang_list())
 
     # Create documents directory
     documents_dir = os.path.join(target_path, "documents")
@@ -25,13 +28,15 @@ def generate_documents(target_path):
     File.create_directory_if_not_exists(readme_dir)
 
     # Create language directories and readme.md files
-    for lang in langs.langs:
+    for lang in langs.langs.keys():
         lang_dir = os.path.join(readme_dir, lang)
         File.create_directory_if_not_exists(lang_dir)
 
         # Create readme.md file in each language directory
         lang_readme = os.path.join(lang_dir, "readme.md")
-        File.create_init_file(lang_readme)
+        if not os.path.exists(lang_readme):
+            File.create_init_file(lang_readme)
+            File.add_preset_content(lang_readme, constLangList.doc_readme_lang_list(langs.langs.get(lang).get('lan')))
 
     print(f"Generated docs directory structure at: {documents_dir}")
 
@@ -62,7 +67,7 @@ def generate(target_path, type_name, sub_type_name):
 def add_preset_content(file_path, content):
     """
     Add preset content to a file
-    :param file_path: File path
+    :param file_path: The file path
     :param content: Content to add
     :return: Whether content was added successfully
     """

@@ -30,3 +30,18 @@ def create_init_file(init_file_path):
         # Add TODO comment to inform user file already exists
         print(f"TODO: File {init_file_path} already exists, skipping generation")
         return False
+
+
+def add_preset_content(file_path, content):
+    """
+    Add preset content to a file
+    :param file_path: The file path
+    :param content: Content to add
+    :return: Whether content was added successfully
+    """
+    if os.path.exists(file_path):
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(content)
+        return True
+    else:
+        return False

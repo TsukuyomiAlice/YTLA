@@ -1,6 +1,6 @@
 # encode = utf-8
 
-langs = [
-    'en-US',
-    'zh-CN',
-]
+langs = {
+    'en-US': {'lan': 'language'},
+    'zh-CN': {'lan': '语言'},
+}

@@ -58,15 +58,14 @@ version 1.0
 
 - classic
     - cards
-        - 遵循ytla_plan框架设计的各个package
+        - 遵循ytla_plan_vue框架设计的各个package
     - modules
-        - 遵循ytla_plan框架设计的各个package
+        - 遵循ytla_plan_vue框架设计的各个package
     - plans
-        - 遵循ytla_plan框架设计的各个package
+        - 遵循ytla_plan_vue框架设计的各个package
     - frame
-        - 遵循ytla_plan框架设计的各个package
+        - 遵循ytla_plan_vue框架设计的各个package
     - users
-        - 遵循ytla_plan框架设计的各个package
+        - 遵循ytla_plan_vue框架设计的各个package
     - docs (readme.md)
-    - __init__.py
     - readme.md
