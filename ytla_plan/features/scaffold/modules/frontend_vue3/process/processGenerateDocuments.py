@@ -2,6 +2,7 @@
 
 import os
 from pathlib import Path
+from ytla_plan import config
 from ytla_plan.features.scaffold.modules._type.script import scriptCreateFile as File
 from ytla_plan.features.scaffold.modules._type.const import langs
 from ytla_plan.features.scaffold.modules.frontend_vue3.const import constLangList
@@ -17,7 +18,9 @@ def generate_documents(target_path):
     readme_file = os.path.join(target_path, "readme.md")
     if not os.path.exists(readme_file):
         File.create_init_file(readme_file)
-        File.add_preset_content(readme_file, constLangList.base_readme_lang_list())
+        lan = langs.langs.get(config.LANGUAGE).get('lan') if config.LANGUAGE in langs.langs.keys() \
+            else langs.langs.get('en-US').get('lan')
+        File.add_preset_content(readme_file, constLangList.base_readme_lang_list(lan))
 
     # Create documents directory
     documents_dir = os.path.join(target_path, "documents")
