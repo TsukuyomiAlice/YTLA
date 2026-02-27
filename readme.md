@@ -6,6 +6,10 @@
 
 # YTLA (Your T&L Assistant)
 
+## Updated 2026-2-27
+The author noticed that the repository is being monitored by an automated system (5-minute clones).  
+If you are the operator, please leave a note in Issues, thank you.
+
 ## Important information
 
 ### This project is under great scale refactoring.  
