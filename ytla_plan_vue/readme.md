@@ -1,7 +1,7 @@
 <p>
  语言 
- <a href="./docs/zh-CN/readme.md"> 简体中文 </a>
- <a href="./docs/en-US/readme.md"> English </a>
+ <a href="./documents/zh-CN/readme.md"> 简体中文 </a>
+ <a href="./documents/en-US/readme.md"> English </a>
 </p>
 
 # ytla_plan_vue

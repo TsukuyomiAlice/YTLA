@@ -1,7 +1,7 @@
 <p>
  语言 
- <a href="./docs/readme/zh-CN/readme.md"> 简体中文 </a>
- <a href="./docs/readme/en-US/readme.md"> English </a>
+ <a href="./documents/readme/zh-CN/readme.md"> 简体中文 </a>
+ <a href="./documents/readme/en-US/readme.md"> English </a>
 </p>
 
 # 经典
@@ -58,15 +58,14 @@ version 1.0
 
 - classic
     - cards
-        - 遵循ytla_plan框架设计的各个package
+        - 遵循ytla_plan_vue框架设计的各个package
     - modules
-        - 遵循ytla_plan框架设计的各个package
+        - 遵循ytla_plan_vue框架设计的各个package
     - plans
-        - 遵循ytla_plan框架设计的各个package
+        - 遵循ytla_plan_vue框架设计的各个package
     - frame
-        - 遵循ytla_plan框架设计的各个package
+        - 遵循ytla_plan_vue框架设计的各个package
     - users
-        - 遵循ytla_plan框架设计的各个package
+        - 遵循ytla_plan_vue框架设计的各个package
     - docs (readme.md)
-    - __init__.py
     - readme.md
