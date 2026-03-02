@@ -3,16 +3,14 @@
 # Define language-specific templates
 templates = {
     'zh-CN': {
-        'base_readme': f"""
-<p>
+        'base_readme': f"""<p>
  语言
  <a href="./docs/readme/zh-CN/readme.md"> 简体中文 </a>
  <a href="./docs/readme/en-US/readme.md"> English </a>
 </p>
 
 """,
-        'doc_readme': f"""
-<p>
+        'doc_readme': f"""<p>
  语言
  <a href="../zh-CN/readme.md"> 简体中文 </a>
  <a href="../en-US/readme.md"> English </a>
@@ -39,7 +37,7 @@ templates = {
             'usage_text': "(在此描述使用方法)"
         },
         'subtype_level': {
-            'general_title': "YTLA 功能公用",
+            'general_title': "YTLA 功能公用配置",
             'feature_title': "YTLA 特性",
             'author': "(你的作者名称)",
             'version': "version 1.0",
@@ -53,16 +51,14 @@ templates = {
         }
     },
     'en-US': {
-        'base_readme': f"""
-<p>
+        'base_readme': f"""<p>
  language
  <a href="./docs/readme/zh-CN/readme.md"> 简体中文 </a>
  <a href="./docs/readme/en-US/readme.md"> English </a>
 </p>
 
 """,
-        'doc_readme': f"""
-<p>
+        'doc_readme': f"""<p>
  language
  <a href="../zh-CN/readme.md"> 简体中文 </a>
  <a href="../en-US/readme.md"> English </a>
@@ -89,7 +85,7 @@ For customized YTLA project copies, please check the configuration and compatibi
             'usage_text': "(Describe how to use the Application here)"
         },
         'subtype_level': {
-            'general_title': "YTLA Application General",
+            'general_title': "YTLA Application General Profile",
             'feature_title': "YTLA Application Feature",
             'author': "(Your Author Name)",
             'version': "version 1.0",

@@ -8,12 +8,13 @@ from ytla_plan.features.scaffold.modules._type.const import constLangs
 from ytla_plan.features.scaffold.modules.frontend_vue3.script import scriptGetDocTemplates as DocTemplates
 
 
-def generate_documents(target_path, type_name, sub_type_name):
+def generate_documents(target_path, type_name, sub_type_name, general_feature: False):
     """
     Generate documents folders and readme.me files.
     :param target_path: the generate base path
     :param type_name: Type name
     :param sub_type_name: Sub type name
+    :param general_feature: General feature(_type folder)
     :return: None
     """
     # Create readme.md file
@@ -25,7 +26,12 @@ def generate_documents(target_path, type_name, sub_type_name):
         # Add base readme template
         File.add_preset_content(readme_file, DocTemplates.get_base_readme(current_lang))
 
-        content = DocTemplates.get_type_level_template(current_lang, type_name)
+        if sub_type_name == "_type" and not general_feature:
+            # Type level template
+            content = DocTemplates.get_type_level_template(current_lang, type_name)
+        else:
+            # Subtype level template
+            content = DocTemplates.get_subtype_level_template(current_lang, type_name, sub_type_name)
         # Append the template content
         with open(readme_file, 'a', encoding='utf-8') as f:
             f.write(content)
@@ -51,7 +57,7 @@ def generate_documents(target_path, type_name, sub_type_name):
             File.add_preset_content(lang_readme, DocTemplates.get_doc_readme(lang))
             
             # Add content based on level
-            if sub_type_name == "_type":
+            if sub_type_name == "_type" and not general_feature:
                 # Type level template
                 content = DocTemplates.get_type_level_template(lang, type_name)
             else:
@@ -75,29 +81,11 @@ def generate(target_path, type_name, sub_type_name):
     """
 
     # generate the detailed module docs
-    generate_documents(target_path, type_name, sub_type_name)
+    generate_documents(target_path, type_name, sub_type_name, general_feature=True)
 
     # generate the feature description files.
     if sub_type_name == "_type":
         # The feature layer
         # It doesn't affect the exist files.
         feature_path = Path(target_path).parent.parent
-        generate_documents(feature_path, type_name, sub_type_name)
-        # The structure layer
-        structure_path = Path(target_path).parent
-        generate_documents(structure_path, type_name, sub_type_name)
-
-
-def add_preset_content(file_path, content):
-    """
-    Add preset content to a file
-    :param file_path: The file path
-    :param content: Content to add
-    :return: Whether content was added successfully
-    """
-    if os.path.exists(file_path):
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(content)
-        return True
-    else:
-        return False
+        generate_documents(feature_path, type_name, sub_type_name, general_feature=False)
