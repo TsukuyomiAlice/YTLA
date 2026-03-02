@@ -1,4 +1,3 @@
-
 <p>
  language
  <a href="../zh-CN/readme.md"> 简体中文 </a>
@@ -8,7 +7,7 @@
 
 # scaffold
 
-### YTLA Application
+### YTLA Application General Profile
 
 ### (Your Author Name)
 
@@ -18,18 +17,12 @@ Backend Language and Framework: Python-Flask
 Applicable YTLA core version: **classic**  
 File Update Date: 2026-03-02
 
-## This is a YTLA Standard Framework Application
-
-This application is a dedicated application under the YTLA framework.  
-Please note the backend development languages and frameworks.  
-This application only guarantees normal loading and operation on the basis of meeting the YTLA ontology project.  
-For customized YTLA project copies, please check the configuration and compatibility.
-
 ## Concepts
 
 (Describe the feature you're going to make here)
 
-## Application Package Directory
+## Feature Package Directory
 
 (Describe the directory structure here)
+
 

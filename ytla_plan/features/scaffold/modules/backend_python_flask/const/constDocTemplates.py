@@ -37,8 +37,8 @@ templates = {
             'usage_text': "(在此描述使用方法)"
         },
         'subtype_level': {
-            'general_title': "YTLA 功能公用配置",
-            'feature_title': "YTLA 特性",
+            'general_title': "YTLA应用 公共配置",
+            'feature_title': "YTLA特性",
             'author': "(你的作者名称)",
             'version': "version 1.0",
             'tech_stack': """后端语言及开发框架: Python-Flask  
@@ -46,7 +46,7 @@ templates = {
 文件更新日期: {date_string}""",
             'concepts': "## 概念",
             'concepts_desc': "(在此描述你要开发的功能)",
-            'dir_structure': "## 应用包目录",
+            'dir_structure': "## 特性包目录",
             'dir_structure_text': "(在此描述目录结构)",
         }
     },
