@@ -4,23 +4,37 @@ import os
 from pathlib import Path
 from ytla_plan import config
 from ytla_plan.features.scaffold.modules._type.script import scriptCreateFile as File
-from ytla_plan.features.scaffold.modules._type.const import langs
-from ytla_plan.features.scaffold.modules.backend_python_flask.const import constLangList
+from ytla_plan.features.scaffold.modules._type.const import constLangs
+from ytla_plan.features.scaffold.modules.backend_python_flask.script import scriptGetDocTemplates as DocTemplates
 
 
-def generate_docs(target_path):
+def generate_docs(target_path, type_name, sub_type_name, general_feature: False):
     """
     Generate docs folders and readme.me files.
     :param target_path: the generate base path
+    :param type_name: Type name
+    :param sub_type_name: Sub type name
+    :param general_feature: General feature(_type folder)
     :return: None
     """
     # Create readme.md file
     readme_file = os.path.join(target_path, "readme.md")
     if not os.path.exists(readme_file):
         File.create_init_file(readme_file)
-        lan = langs.langs.get(config.LANGUAGE).get('lan') if config.LANGUAGE in langs.langs.keys() \
-            else langs.langs.get('en-US').get('lan')
-        File.add_preset_content(readme_file, constLangList.base_readme_lang_list(lan))
+        # Get language code, default to en-US if not found
+        current_lang = config.LANGUAGE if config.LANGUAGE in constLangs.langs.keys() else 'en-US'
+        # Add base readme template
+        File.add_preset_content(readme_file, DocTemplates.get_base_readme(current_lang))
+
+        if sub_type_name == "_type" and not general_feature:
+            # Type level template
+            content = DocTemplates.get_type_level_template(current_lang, type_name)
+        else:
+            # Subtype level template
+            content = DocTemplates.get_subtype_level_template(current_lang, type_name, sub_type_name)
+        # Append the template content
+        with open(readme_file, 'a', encoding='utf-8') as f:
+            f.write(content)
 
     # Create docs directory
     docs_dir = os.path.join(target_path, "docs")
@@ -31,7 +45,7 @@ def generate_docs(target_path):
     File.create_directory_if_not_exists(readme_dir)
 
     # Create language directories and readme.md files
-    for lang in langs.langs.keys():
+    for lang in constLangs.langs.keys():
         lang_dir = os.path.join(readme_dir, lang)
         File.create_directory_if_not_exists(lang_dir)
 
@@ -39,7 +53,20 @@ def generate_docs(target_path):
         lang_readme = os.path.join(lang_dir, "readme.md")
         if not os.path.exists(lang_readme):
             File.create_init_file(lang_readme)
-            File.add_preset_content(lang_readme, constLangList.doc_readme_lang_list(langs.langs.get(lang).get('lan')))
+            # Add doc readme template
+            File.add_preset_content(lang_readme, DocTemplates.get_doc_readme(lang))
+
+            # Add content based on level
+            if sub_type_name == "_type" and not general_feature:
+                # Type level template
+                content = DocTemplates.get_type_level_template(lang, type_name)
+            else:
+                # Subtype level template
+                content = DocTemplates.get_subtype_level_template(lang, type_name, sub_type_name)
+
+            # Append the template content
+            with open(lang_readme, 'a', encoding='utf-8') as f:
+                f.write(content)
 
     print(f"Generated docs directory structure at: {docs_dir}")
 
@@ -54,17 +81,11 @@ def generate(target_path, type_name, sub_type_name):
     """
 
     # generate the detailed module docs
-    generate_docs(target_path)
+    generate_docs(target_path, type_name, sub_type_name, general_feature=True)
 
     # generate the feature description files.
     if sub_type_name == "_type":
         # The feature layer
         # It doesn't affect the exist files.
         feature_path = Path(target_path).parent.parent
-        generate_docs(feature_path)
-        # The structure layer
-        structure_path = Path(target_path).parent
-        generate_docs(structure_path)
-
-
-
+        generate_docs(feature_path, type_name, sub_type_name, general_feature=False)
