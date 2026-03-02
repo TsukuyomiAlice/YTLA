@@ -9,7 +9,7 @@
 
 ### YTLA特性
 
-### (你的作者名称)
+### Official
 
 version 1.0
 
@@ -19,7 +19,11 @@ version 1.0
 
 ## 概念
 
-(在此描述你要开发的功能)
+本功能为开发者提供用于快速创建新的YTLA classic版本的应用.  
+用开发者将默认使用下述前后端框架开发应用
+
+前端: vUE3 + typescript  
+后端: Python-flask
 
 ## 特性包目录
 

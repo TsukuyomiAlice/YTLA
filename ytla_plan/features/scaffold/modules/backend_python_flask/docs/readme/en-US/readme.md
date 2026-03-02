@@ -14,7 +14,6 @@
 version 1.0
 
 Backend Language and Framework: Python-Flask  
-Applicable YTLA core version: **classic**  
 File Update Date: 2026-03-02
 
 ## Concepts
