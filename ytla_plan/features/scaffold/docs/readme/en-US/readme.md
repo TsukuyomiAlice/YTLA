@@ -13,9 +13,8 @@ Language
 version 1.0
 
 Backend Language and Framework: Python-Flask  
-Frontend Language and Framework: Vue3, typescript  
 Applicable YTLA core version: **classic**  
-File Update Date: 2026-2-12
+File Update Date: 2026-3-3
 
 ## This is a YTLA Standard Framework Application
 
@@ -51,7 +50,9 @@ Core version generation framework.
     - ytla_plan (backend)
         - features
             - scaffold
-                - docs (readme.md)
+                - docs 
+                    - design
+                    - readme
                 - modules
                     - _type
                     - backend_python_flask
@@ -64,7 +65,8 @@ Core version generation framework.
         - src
             - features
                 - scaffold
-                    - docs (readme.md)
+                    - docs  
+                      - readme
                     - modules
                         - _type
                 - readme.md
