@@ -4,7 +4,7 @@ from core.classic.users.dao import daoUser
 from core.classic.plans.dao import daoPlans
 from core.classic.modules.dao import daoModules
 from core.classic.frame.dao import daoGlobalPersistence
-from core.classic.cards.dao import daoCards
+from core.classic.cards.sideCard.dao import daoCards
 
 
 def clean_initiate():

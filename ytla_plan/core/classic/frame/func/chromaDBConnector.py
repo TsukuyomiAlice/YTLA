@@ -210,7 +210,7 @@ def chroma_query(
         n_results: int = 10,
         where: Optional[Dict[str, Any]] = None,
         where_document: Optional[Dict[str, Any]] = None,
-        include: List[str] = ["metadatas", "documents", "distances"]
+        include=None
 ) -> Dict[str, List]:
     """
     在 ChromaDB 集合中进行相似度查询
@@ -225,6 +225,8 @@ def chroma_query(
     :param include: 结果包含的内容，可选值：metadatas, documents, distances, embeddings
     :return: 查询结果字典
     """
+    if include is None:
+        include = ["metadatas", "documents", "distances"]
     try:
         connector = ChromaDBConnector(db_name)
         collection = connector.get_collection(collection_name)
@@ -252,7 +254,7 @@ def chroma_get(
         ids: Optional[List[str]] = None,
         where: Optional[Dict[str, Any]] = None,
         where_document: Optional[Dict[str, Any]] = None,
-        include: List[str] = ["metadatas", "documents"]
+        include=None
 ) -> Dict[str, List]:
     """
     从 ChromaDB 集合中获取数据
@@ -265,6 +267,8 @@ def chroma_get(
     :param include: 结果包含的内容
     :return: 查询结果字典
     """
+    if include is None:
+        include = ["metadatas", "documents"]
     try:
         connector = ChromaDBConnector(db_name)
         collection = connector.get_collection(collection_name)

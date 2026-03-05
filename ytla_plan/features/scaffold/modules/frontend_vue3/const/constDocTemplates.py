@@ -22,7 +22,7 @@ templates = {
             'author': "(你的作者名称)",
             'version': "version 1.0",
             'tech_stack': """前端语言及开发框架: Vue3, typescript  
-适用YTLA core版本: **classic**  
+适用YTLA core版本: **{core_version}**  
 文件更新日期: {date_string}""",
             'standard_app': "## 这是一个YTLA标准框架应用",
             'standard_app_desc': """本应用为YTLA框架下的专用应用.  
@@ -70,7 +70,7 @@ templates = {
             'author': "(Your Author Name)",
             'version': "version 1.0",
             'tech_stack': """Frontend Language and Framework: Vue3, typescript  
-Applicable YTLA core version: **classic**  
+Applicable YTLA core version: **{core_version}**  
 File Update Date: {date_string}""",
             'standard_app': "## This is a YTLA Standard Framework Application",
             'standard_app_desc': """This application is a dedicated application under the YTLA framework.  

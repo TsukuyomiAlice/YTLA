@@ -33,15 +33,16 @@ def get_doc_readme(language: str) -> str:
     return lang_template['doc_readme']
 
 
-def get_type_level_template(language: str, type_name: str) -> str:
+def get_type_level_template(language: str, type_name: str, core_version='classic') -> str:
     """
     Get type level document template
     :param language: Language code
     :param type_name: Application type name
+    :param core_version: Version of core application
     :return: Type level document template
     """
     date_string = time.strftime('%Y-%m-%d', time.localtime())
-    lang_template = get_language_template(language)
+    lang_template = get_language_template(language).format(core_version=core_version)
     type_template = lang_template['type_level']
 
     return f"""

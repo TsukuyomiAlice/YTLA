@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify, request
-from core.classic.frame.func.loggerConfig import router_log
-from core.classic.cards.process import processCards
-from core.classic.cards.dao import daoCards
+from ytla_plan.core.classic.frame.func.loggerConfig import router_log
+from ytla_plan.core.classic.cards.sideCard.process import processCards
+from ytla_plan.core.classic.cards.sideCard.dao import daoCards
 
 cards_bp = Blueprint('card', __name__)
 

@@ -70,7 +70,7 @@ templates = {
             'author': "(Your Author Name)",
             'version': "version 1.0",
             'tech_stack': """Backend Language and Framework: Python-Flask  
-Applicable YTLA core version: **classic**  
+Applicable YTLA core version: **{core_version}**  
 File Update Date: {date_string}""",
             'standard_app': "## This is a YTLA Standard Framework Application",
             'standard_app_desc': """This application is a dedicated application under the YTLA framework.  

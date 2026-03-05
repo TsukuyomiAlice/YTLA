@@ -4,9 +4,9 @@ import json
 
 from flask import jsonify
 
-from core.classic.cards.dao import daoCards
+from core.classic.cards.sideCard.dao import daoCards
 from core.classic.frame.func.loggerConfig import process_log
-from core.classic.cards.process.processCardHandlerFactory import CardHandlerFactory
+from core.classic.cards.sideCard.process.processCardHandlerFactory import CardHandlerFactory
 
 
 def get_cards(**kwargs):
