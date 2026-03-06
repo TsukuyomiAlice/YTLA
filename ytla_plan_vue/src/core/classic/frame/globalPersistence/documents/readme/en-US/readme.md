@@ -5,7 +5,7 @@
 </p>
 
 
-# classic - router
+# classic - globalPersistence
 
 ### YTLA Core Application Feature
 
@@ -13,7 +13,7 @@
 
 version 1.0
 
-Backend Language and Framework: Python-Flask  
+Frontend Language and Framework: Vue3, typescript  
 Applicable YTLA core version: **classic**  
 File Update Date: 2026-03-06
 
@@ -24,5 +24,4 @@ File Update Date: 2026-03-06
 ## Feature Package Directory
 
 (Describe the directory structure here)
-
 

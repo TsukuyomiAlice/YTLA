@@ -4,7 +4,7 @@ import json
 from flask import jsonify
 
 from core.classic.plans.dao import daoPlans
-from core.classic.frame.process import processGlobalPersistence
+from core.classic.frame.globalPersistence.process import processGlobalPersistence
 from core.classic.frame.func.loggerConfig import process_log
 
 

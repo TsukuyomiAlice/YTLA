@@ -33,22 +33,24 @@ def get_doc_readme(language: str) -> str:
     return lang_template['doc_readme']
 
 
-def get_type_level_template(language: str, type_name: str, core_version='classic') -> str:
+def get_type_level_template(language: str, type_name: str, core_version='classic', is_core=False) -> str:
     """
     Get type level document template
     :param language: Language code
     :param type_name: Application type name
     :param core_version: Version of core application
+    :param is_core: True if core application
     :return: Type level document template
     """
     date_string = time.strftime('%Y-%m-%d', time.localtime())
     lang_template = get_language_template(language).format(core_version=core_version)
     type_template = lang_template['type_level']
+    title = type_template['title'] if not is_core else type_template['title_core']
 
     return f"""
 # {type_name}
 
-### {type_template['title']}
+### {title}
 
 ### {type_template['author']}
 
@@ -71,12 +73,13 @@ def get_type_level_template(language: str, type_name: str, core_version='classic
 """
 
 
-def get_subtype_level_template(language: str, feature_name: str, subtype_name: str) -> str:
+def get_subtype_level_template(language: str, feature_name: str, subtype_name: str, is_core=False) -> str:
     """
     Get subtype level document template
     :param language: Language code
     :param feature_name: Feature name
     :param subtype_name: Subtype name
+    :param is_core: True if core application
     :return: Subtype level document template
     """
     date_string = time.strftime('%Y-%m-%d', time.localtime())
@@ -86,10 +89,10 @@ def get_subtype_level_template(language: str, feature_name: str, subtype_name: s
     # Determine subtype title
     first_line = f"{feature_name} - {subtype_name}"
     if subtype_name == '_type':
-        subtype_title = subtype_template['general_title']
+        subtype_title = subtype_template['general_title'] if not is_core else subtype_template['general_title_core']
         first_line = feature_name
     else:
-        subtype_title = subtype_template['feature_title']
+        subtype_title = subtype_template['feature_title'] if not is_core else subtype_template['feature_title_core']
 
     return f"""
 # {first_line}

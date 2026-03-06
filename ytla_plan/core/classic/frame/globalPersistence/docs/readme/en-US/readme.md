@@ -5,7 +5,7 @@
 </p>
 
 
-# classic - router
+# classic - globalPersistence
 
 ### YTLA Core Application Feature
 

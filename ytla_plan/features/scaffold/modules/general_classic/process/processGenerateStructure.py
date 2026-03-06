@@ -4,9 +4,9 @@ from features.scaffold.modules.backend_python_flask.process.processGenerateStruc
 from features.scaffold.modules.frontend_vue3.process.processGenerateStructure import generate_vue3_structure
 
 
-def process_generate_structure(is_core: str = 'n',
+def process_generate_structure(is_core: bool = False,
                                type_name: str = '', structure: str = 'cards', sub_type_name: str = '',
-                               only_backend: bool = False):
+                               gen_backend: bool = False, gen_frontend: bool = False):
     """
     Process structure generation for core_classic
     core_classic will use backend_python and frontend_vue3
@@ -14,7 +14,8 @@ def process_generate_structure(is_core: str = 'n',
     :param type_name: Type category / core version name
     :param structure: Structure type (cards / modules for feature, while cards, modules, plans, frame, users for core)
     :param sub_type_name: SubType category / core sub feature (can be empty, if empty, referred to '_type')
-    :param only_backend: If True, only the backend structure will be generated.
+    :param gen_backend: If True, the backend structure will be generated.
+    :param gen_frontend: If True, the frontend structure will be generated.
     :return: Dictionary with generation results
     """
     backend_result = None
@@ -25,10 +26,10 @@ def process_generate_structure(is_core: str = 'n',
         if not type_name:
             raise ValueError("type parameter cannot be empty")
 
-        if is_core.lower() != 'y' and structure not in ('cards', 'modules'):
+        if not is_core and structure not in ('cards', 'modules'):
             raise ValueError("structure parameter must be 'cards' or 'modules'")
 
-        if is_core.lower() == 'y' and structure not in ('cards', 'modules', 'plans', 'frame', 'users'):
+        if is_core and structure not in ('cards', 'modules', 'plans', 'frame', 'users'):
             raise ValueError("structure parameter must be 'cards', 'modules', 'plans', 'frame' or 'users'")
 
         # Handle subtype
@@ -36,11 +37,11 @@ def process_generate_structure(is_core: str = 'n',
             sub_type_name = '_type'
 
         # Generate backend structure
-        backend_result = generate_python_structure(is_core, structure, type_name, sub_type_name)
+        if gen_backend:
+            backend_result = generate_python_structure(is_core, structure, type_name, sub_type_name)
 
         # Generate frontend structure
-        # The basic scaffold of the frontend should be generated to provide the access point from the webpage
-        if not only_backend and sub_type_name != '_type':
+        if gen_frontend:
             frontend_result = generate_vue3_structure(is_core, structure, type_name, sub_type_name)
 
         # Return combined result

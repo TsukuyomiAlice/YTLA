@@ -19,6 +19,7 @@ templates = {
 """,
         'type_level': {
             'title': "YTLA应用",
+            'title_core': "YTLA核心应用",
             'author': "(你的作者名称)",
             'version': "version 1.0",
             'tech_stack': """后端语言及开发框架: Python-Flask  
@@ -39,6 +40,8 @@ templates = {
         'subtype_level': {
             'general_title': "YTLA应用 公共配置",
             'feature_title': "YTLA特性",
+            'general_title_core': "YTLA核心应用 公共配置",
+            'feature_title_core': "YTLA核心特性",
             'author': "(你的作者名称)",
             'version': "version 1.0",
             'tech_stack': """后端语言及开发框架: Python-Flask  
@@ -67,6 +70,7 @@ templates = {
 """,
         'type_level': {
             'title': "YTLA Application",
+            'title_core': "YTLA Core Application",
             'author': "(Your Author Name)",
             'version': "version 1.0",
             'tech_stack': """Backend Language and Framework: Python-Flask  
@@ -87,6 +91,8 @@ For customized YTLA project copies, please check the configuration and compatibi
         'subtype_level': {
             'general_title': "YTLA Application General Profile",
             'feature_title': "YTLA Application Feature",
+            'general_title_core': "YTLA Core Application General Profile",
+            'feature_title_core': "YTLA Core Application Feature",
             'author': "(Your Author Name)",
             'version': "version 1.0",
             'tech_stack': """Backend Language and Framework: Python-Flask  

@@ -4,11 +4,12 @@
  <a href="./docs/readme/en-US/readme.md"> English </a>
 </p>
 
-# classic - router
+
+# classic - globalPersistence
 
 ### YTLA核心特性
 
-### Official
+### (你的作者名称)
 
 version 1.0
 
@@ -18,16 +19,10 @@ version 1.0
 
 ## 概念
 
-用于在启动后端应用时，自动收集并添加flask blueprint配置文件.
+(在此描述你要开发的功能)
 
 ## 特性包目录
-- 上级目录
-  - router
-    - 其它目录
-    - docs
-    - process
-      - __init__.py
-      - processRouter.py 
-    - __init__.py
-    - readme.md
+
+(在此描述目录结构)
+
 
