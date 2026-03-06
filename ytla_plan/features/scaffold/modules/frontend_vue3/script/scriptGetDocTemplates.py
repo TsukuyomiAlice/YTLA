@@ -44,7 +44,7 @@ def get_type_level_template(language: str, type_name: str, core_version='classic
     :return: Type level document template
     """
     date_string = time.strftime('%Y-%m-%d', time.localtime())
-    lang_template = get_language_template(language).format(core_version=core_version)
+    lang_template = get_language_template(language)
     type_template = lang_template['type_level']
     title = type_template['title'] if not is_core else type_template['title_core']
 
@@ -57,7 +57,7 @@ def get_type_level_template(language: str, type_name: str, core_version='classic
 
 {type_template['version']}
 
-{type_template['tech_stack'].format(date_string=date_string)}
+{type_template['tech_stack'].format(date_string=date_string, core_version=core_version)}
 
 {type_template['standard_app']}
 

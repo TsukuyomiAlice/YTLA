@@ -23,7 +23,7 @@ templates = {
             'author': "(你的作者名称)",
             'version': "version 1.0",
             'tech_stack': """后端语言及开发框架: Python-Flask  
-适用YTLA core版本: **classic**  
+适用YTLA core版本: **{core_version}**  
 文件更新日期: {date_string}""",
             'standard_app': "## 这是一个YTLA标准框架应用",
             'standard_app_desc': """本应用为YTLA框架下的专用应用.  

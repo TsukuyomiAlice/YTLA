@@ -27,7 +27,7 @@ def generate_docs(target_path, type_name, sub_type_name, general_feature: False,
         # Add base readme template
         File.add_preset_content(readme_file, DocTemplates.get_base_readme(current_lang))
 
-        if sub_type_name == "_type" and not general_feature:
+        if sub_type_name == "_type" or general_feature:
             # Type level template
             content = DocTemplates.get_type_level_template(current_lang, type_name, is_core=is_core)
         else:
@@ -58,7 +58,7 @@ def generate_docs(target_path, type_name, sub_type_name, general_feature: False,
             File.add_preset_content(lang_readme, DocTemplates.get_doc_readme(lang))
 
             # Add content based on level
-            if sub_type_name == "_type" and not general_feature:
+            if sub_type_name == "_type" or general_feature:
                 # Type level template
                 content = DocTemplates.get_type_level_template(lang, type_name, is_core=is_core)
             else:
@@ -84,7 +84,7 @@ def generate(target_path, type_name, sub_type_name, is_core=False):
 
     # generate the detailed module docs
     try:
-        generate_docs(target_path, type_name, sub_type_name, general_feature=True, is_core=is_core)
+        generate_docs(target_path, type_name, sub_type_name, general_feature=False, is_core=is_core)
     except Exception as e:
         print(e)
 
@@ -93,4 +93,4 @@ def generate(target_path, type_name, sub_type_name, is_core=False):
         # The feature layer
         # It doesn't affect the exist files.
         feature_path = Path(target_path).parent.parent
-        generate_docs(feature_path, type_name, sub_type_name, general_feature=False, is_core=is_core)
+        generate_docs(feature_path, type_name, sub_type_name, general_feature=True, is_core=is_core)
