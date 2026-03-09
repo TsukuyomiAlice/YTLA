@@ -23,9 +23,3 @@ processGenerateStructure.process_generate_structure(False, 'scaffold', 'modules'
 processGenerateStructure.process_generate_structure(False, 'scaffold', 'modules', 'frontend_vue3', True, False)
 processGenerateStructure.process_generate_structure(False, 'scaffold', 'modules', 'general_classic', True, False)
 """
-
-processGenerateStructure.process_generate_structure(False,'timer', 'cards', '', True, False)
-
-from ytla_plan.features.scaffold.modules.backend_python_flask.process import processGenerateDocs
-
-# processGenerateDocs.generate('D:\\YTLA\\ytla_plan\\features\\finance\\modules', 'finance', 'NewsAnalyzer', False)
