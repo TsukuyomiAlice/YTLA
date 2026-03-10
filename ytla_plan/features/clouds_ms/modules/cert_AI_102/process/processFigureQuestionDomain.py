@@ -3,7 +3,7 @@
 from ytla_ai.client import contentHandler
 
 from features.clouds_ms.modules.cert_AI_102.dataset import questionSet_AI_102
-from features.clouds_ms.modules.cert_AI_102 import promptAnalyzeFieldAI102, promptFigureSimilarQuestion, promptAnswerCheck
+from features.clouds_ms.modules.cert_AI_102.prompts import promptAnalyzeFieldAI102, promptFigureSimilarQuestion, promptAnswerCheck
 from features.clouds_ms.modules.cert_AI_102.process import processExerciseAnalyze
 
 
@@ -102,4 +102,4 @@ def process_figure_question_domain():
 
 
 # judge_answer('D:\\answers_output.txt')
-judge_answer_for_single_question(questionSet_AI_102.question_03_69)
+# judge_answer_for_single_question(questionSet_AI_102.question_03_69)

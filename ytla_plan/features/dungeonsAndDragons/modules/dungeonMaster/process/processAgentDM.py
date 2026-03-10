@@ -31,4 +31,4 @@ def process_agent_dm_dungeon_maker(demand: str, temperature: float = 0.0):
 def process_agent_dm_story_teller(story_teller: str, temperature: float = 0.0):
     pass
 
-process_agent_dm_dungeon_maker('生成一个包含5个房间的地下城。')
+# process_agent_dm_dungeon_maker('生成一个包含5个房间的地下城。')

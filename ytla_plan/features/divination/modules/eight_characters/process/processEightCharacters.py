@@ -117,4 +117,4 @@ def analyze_eight_characters(eight_characters: str, luck_cycle: str="", fleet_ye
     else:
         print("输入错误")
 
-analyze_eight_characters("癸酉辛酉壬申己丑", luck_cycle="丁巳", fleet_year="丙午")
+# analyze_eight_characters("癸酉辛酉壬申己丑", luck_cycle="丁巳", fleet_year="丙午")

@@ -417,4 +417,5 @@ def launcher():
 
 # 运行主函数
 if __name__ == "__main__":
-    results_gbm, results_garch = launcher()
+    # results_gbm, results_garch = launcher()
+    pass

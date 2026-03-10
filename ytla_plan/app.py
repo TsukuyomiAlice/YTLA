@@ -4,12 +4,14 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 from core.classic.frame.initiate.dao import daoInitiator
 from core.classic.frame.router.process.processRouter import register_dynamic_blueprints
+from core.classic.cards.sideCard.process.processCardHandlerFactory import CardHandlerFactory
 
 app = Flask(__name__)
 app.config.from_object('ytla_plan.config')
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 register_dynamic_blueprints(app)
+CardHandlerFactory.load_and_register_handlers()
 
 
 @app.errorhandler(404)

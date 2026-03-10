@@ -73,4 +73,4 @@ def mock_exerciser():
 
 
 # 调用新的mock_exerciser方法
-mock_exerciser()
+# mock_exerciser()
