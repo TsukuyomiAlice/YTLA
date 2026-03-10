@@ -23,3 +23,5 @@ processGenerateStructure.process_generate_structure(False, 'scaffold', 'modules'
 processGenerateStructure.process_generate_structure(False, 'scaffold', 'modules', 'frontend_vue3', True, False)
 processGenerateStructure.process_generate_structure(False, 'scaffold', 'modules', 'general_classic', True, False)
 """
+
+processGenerateStructure.process_generate_structure(True, 'classic', 'users', '', True, False)
