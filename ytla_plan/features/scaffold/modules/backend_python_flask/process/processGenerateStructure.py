@@ -7,7 +7,7 @@ from ytla_plan.features.scaffold.modules._type.script import scriptCreateFile as
 from ytla_plan.features.scaffold.modules.backend_python_flask.const import constGenerators
 
 
-def generate_python_structure(is_core: str = 'n', structure: str = 'cards',
+def generate_python_structure(is_core: bool = False, structure: str = 'cards',
                               type_name: str = '', sub_type_name: str = ''):
     """
     Generate Python backend directory structure
@@ -20,17 +20,17 @@ def generate_python_structure(is_core: str = 'n', structure: str = 'cards',
 
     # Validate parameters
 
-    if is_core.lower() != 'y' and structure not in ('cards', 'modules'):
+    if not is_core and structure not in ('cards', 'modules'):
         raise ValueError("structure parameter must be 'cards' or 'modules'")
 
-    if is_core.lower() == 'y' and structure not in ('cards', 'modules', 'plans', 'frame', 'users'):
+    if not is_core and structure not in ('cards', 'modules', 'plans', 'frame', 'users'):
         raise ValueError("structure parameter must be 'cards', 'modules', 'plans', 'frame' or 'users'")
 
     if not type_name:
         raise ValueError("type parameter cannot be empty")
 
     # Determine prefix
-    prefix = 'core' if is_core.lower() == 'y' else 'features'
+    prefix = 'core' if is_core else 'features'
 
     # Handle subtype
     if not sub_type_name:
@@ -82,7 +82,7 @@ def generate_python_structure(is_core: str = 'n', structure: str = 'cards',
             module = __import__(module_name)
             generate_func = getattr(module, "generate")
             # Call generator
-            generate_func(str(target_path), type_name, sub_type_name)
+            generate_func(str(target_path), type_name, sub_type_name, is_core=is_core)
         except ImportError as e:
             print(f"Error importing {module_name}: {e}")
         except AttributeError as e:

@@ -13,9 +13,8 @@
 version 1.0
 
 后端语言及开发框架: Python-Flask  
-前端语言及开发框架: Vue3, typescript  
 适用YTLA core版本: **classic**  
-文件更新日期: 2026-2-12
+文件更新日期: 2026-3-3
 
 ## 这是一个YTLA标准框架应用
 
@@ -51,7 +50,9 @@ version 1.0
     - ytla_plan (backend)
         - features
             - scaffold
-                - docs (readme.md)
+                - docs 
+                    - design
+                    - readme
                 - modules
                     - _type
                     - backend_python_flask
@@ -64,7 +65,8 @@ version 1.0
         - src
             - features
                 - scaffold
-                    - docs (readme.md)
+                    - docs  
+                      - readme
                     - modules
                         - _type
                 - readme.md

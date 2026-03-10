@@ -1,4 +1,4 @@
-from features.languageEnglish.process import processModuleDictionary
+from features.linguisticEnglish.process import processModuleDictionary
 
 
 def test():

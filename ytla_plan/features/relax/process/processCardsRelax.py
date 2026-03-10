@@ -1,9 +1,9 @@
 # encode = utf-8
 
 import json
-from core.classic.cards.dao import daoCards
-from core.classic.frame.func.loggerConfig import process_log
-from core.classic.cards.process.processCardHandler import CardHandler
+from core.classic.cards.sideCard.dao import daoCards
+from core.classic.frame._type.func.loggerConfig import process_log
+from core.classic.cards.sideCard.process.processCardHandler import CardHandler
 
 
 class RelaxCardHandler(CardHandler):
@@ -27,7 +27,7 @@ class RelaxCardHandler(CardHandler):
                 daoCards.add_card(card_type, card_sub_type, data)
 
             if mode == 'update':
-                from core.classic.cards import Instance
+                from core.classic.cards.sideCard.dao.daoCards import Instance
                 ins = Instance(data['name'], card_type, card_id=card_id)
                 ins.card_sub_type = card_sub_type
                 ins.tags = data['tags']

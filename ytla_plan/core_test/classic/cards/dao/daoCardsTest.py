@@ -1,5 +1,5 @@
 import unittest
-from core.classic.cards.dao import daoCards
+from core.classic.cards.sideCard.dao import daoCards
 from core.classic.cards import Instance, add_card, update_card_detail, soft_delete_card
 
 

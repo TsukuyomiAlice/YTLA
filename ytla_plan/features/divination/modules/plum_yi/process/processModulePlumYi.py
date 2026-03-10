@@ -1,7 +1,7 @@
 # encode = utf-8
 
 from ytla_ai.client import contentHandler
-from ytla_plan.core.classic.frame.func import timeFormat
+from core.classic.frame._type.func import timeFormat
 from features.divination.modules.plum_yi.dataset import permanentCalendar, hexagram_data
 from features.divination.modules.plum_yi.prompt import promptPlumYi
 

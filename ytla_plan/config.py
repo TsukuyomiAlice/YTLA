@@ -18,6 +18,11 @@ PROJECT_FOLDER = 'D:\\YTLA'
 BACKEND_FOLDER = 'D:\\YTLA\\ytla_plan'
 FRONTEND_FOLDER = 'D:\\YTLA\\ytla_plan_vue'
 
+# project version control
+CORE_VERSION = 'classic'
+BACKEND_VERSION = 'python'
+FRONTEND_VERSION = 'vue3'
+
 """
 " Upload configuration
 " YOU CAN ADJUST THE VALUES BUT
