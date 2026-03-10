@@ -1,6 +1,6 @@
 # encode = utf-8
 
-from core.classic.frame.func.loggerConfig import process_log
+from core.classic.frame._type.func.loggerConfig import process_log
 from core.classic.cards.sideCard.process.processCardHandler import CardHandler
 
 class CardHandlerSample(CardHandler):

@@ -1,5 +1,5 @@
 import unittest
-from core.classic.plans.dao import daoPlans
+from core.classic.plans.plan.dao import daoPlans
 from core.classic.plans import Instance, add_plan, update_plan_detail, soft_delete_plan, get_last_new_plan_id
 
 

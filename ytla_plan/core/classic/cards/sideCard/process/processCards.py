@@ -5,7 +5,7 @@ import json
 from flask import jsonify
 
 from core.classic.cards.sideCard.dao import daoCards
-from core.classic.frame.func.loggerConfig import process_log
+from core.classic.frame._type.func.loggerConfig import process_log
 from core.classic.cards.sideCard.process.processCardHandlerFactory import CardHandlerFactory
 
 

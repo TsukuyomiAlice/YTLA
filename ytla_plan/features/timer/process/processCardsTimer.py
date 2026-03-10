@@ -3,7 +3,7 @@
 import datetime
 import json
 from core.classic.cards.sideCard.dao import daoCards
-from core.classic.frame.func.loggerConfig import process_log
+from core.classic.frame._type.func.loggerConfig import process_log
 from core.classic.cards.sideCard.process.processCardHandler import CardHandler
 
 

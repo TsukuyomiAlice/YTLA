@@ -2,7 +2,7 @@
 
 from flask import Flask, jsonify
 from flask_cors import CORS
-from core.classic.frame.dao import daoInitiator
+from core.classic.frame.initiate.dao import daoInitiator
 from core.classic.frame.router.process.processRouter import register_dynamic_blueprints
 
 app = Flask(__name__)

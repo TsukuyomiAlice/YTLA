@@ -1,6 +1,6 @@
 # coding=utf-8
 
-from core.classic.frame.func import sqliteConnector
+from core.classic.frame._type.func import sqliteConnector
 
 """
 （暂时）数据库路径指定在下方

@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, request
-from ytla_plan.core.classic.frame.func.loggerConfig import router_log
+from core.classic.frame._type.func.loggerConfig import router_log
 from ytla_plan.core.classic.cards.sideCard.process import processCards
 from ytla_plan.core.classic.cards.sideCard.dao import daoCards
 

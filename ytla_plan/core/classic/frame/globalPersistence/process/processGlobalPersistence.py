@@ -1,10 +1,10 @@
 # encode=utf-8
 import json
 
-from core.classic.plans.dao import daoPlans
+from core.classic.plans.plan.dao import daoPlans
 from core.classic.frame.globalPersistence.dao import daoGlobalPersistence
-from core.classic.frame.func.loggerConfig import process_log
-from core.classic.frame.instance.instanceProcessToRoutes import Response
+from core.classic.frame._type.func.loggerConfig import process_log
+from core.classic.frame.router.instance.instanceProcessToRoutes import Response
 
 """
 " global_persistence_keys

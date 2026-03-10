@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, request
-from core.classic.frame.func.loggerConfig import router_log
+from core.classic.frame._type.func.loggerConfig import router_log
 from features.linguisticEnglish.process import processModuleAssessment
 
 language_assessment_bp = Blueprint('language_assessment', __name__)

@@ -1,8 +1,8 @@
 # coding=utf-8
 import unittest
 import os
-from core.classic.users.dao import daoUser
-from core.classic.frame import utilConfigs
+from core.classic.users.account.dao import daoUser
+from core.classic.frame._type.func import utilConfigs
 
 
 class TestUserDAO(unittest.TestCase):
