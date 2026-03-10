@@ -4,7 +4,7 @@ from core.classic.modules.module.process import processModules
 from core.classic.plans.plan.process import processPlans
 from core.classic.plans.plan.dao import daoPlans
 
-plans_bp = Blueprint('planCards', __name__)
+plans_bp = Blueprint('plans', __name__)
 
 @plans_bp.route('/get_plans')
 @router_log
