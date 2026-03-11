@@ -1,0 +1,17 @@
+@use '../../../frame/main/styles/layout';
+@use '../../../frame/main/styles/layout-variables' as layout-variables;
+
+@media (max-width: 768px) {
+  .app-container {
+    --left-width: #{layout-variables.$layout-mobile-left-width};
+    --right-width: #{layout-variables.$layout-mobile-right-width};
+  }
+
+  .main-content {
+    margin-left: 3.5rem;
+
+    .app-container.swapped & {
+      margin-right: 3.5rem;
+    }
+  }
+}
