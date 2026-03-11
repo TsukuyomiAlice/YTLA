@@ -88,7 +88,7 @@ def register_dynamic_blueprints(app):
             for blueprint in blueprints:
                 app.register_blueprint(blueprint)
                 registered_blueprints.append(blueprint.name)
-                # print(f"Registered blueprint: {blueprint.name}")
+                print(f"Registered blueprint: {blueprint.name}")
         except Exception as e:
             print(f"Error registering blueprint from {route_file}: {str(e)}")
 
