@@ -106,3 +106,21 @@ class CardHandlerFactory:
         print(f"Total registered card handlers: {registered_count}")
 
     _handlers = {}
+    _sub_type_to_type_mapping = {}
+
+    @classmethod
+    def get_card_type_from_sub_type(cls, card_sub_type):
+        """
+        Get card_type from card_sub_type
+        :param card_sub_type: The card sub type
+        :return: The corresponding card type, or 'unknown' if not found
+        """
+        if not cls._handlers:
+            cls.load_and_register_handlers()
+        
+        if not cls._sub_type_to_type_mapping:
+            cls._sub_type_to_type_mapping = {}
+            for (card_type, sub_type), _ in cls._handlers.items():
+                cls._sub_type_to_type_mapping[sub_type] = card_type
+        
+        return cls._sub_type_to_type_mapping.get(card_sub_type, 'unknown')

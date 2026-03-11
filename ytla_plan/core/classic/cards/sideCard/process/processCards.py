@@ -144,13 +144,4 @@ def soft_update_card(card_id, action):
 
 
 def _infer_card_type(card_sub_type):
-    type_mapping = {
-        'alarm': 'timer',
-        'countdown': 'timer',
-        'count': 'timer',
-        'sample1': 'sample',
-        'sample2': 'sample',
-        'sample3': 'sample',
-        'wordle': 'relax'
-    }
-    return type_mapping.get(card_sub_type, 'unknown')
+    return CardHandlerFactory.get_card_type_from_sub_type(card_sub_type)
