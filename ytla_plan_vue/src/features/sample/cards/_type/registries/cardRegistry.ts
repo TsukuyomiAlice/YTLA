@@ -1,5 +1,5 @@
 import type { Component } from 'vue'
-import type { CardRegistry } from '@/core/classic/cards/sideCard/factories/cardRegistry.ts'
+import type { sideCardRegistry } from '@/core/classic/cards/sideCard/factories/cardRegistry.ts'
 import Sample1Card from '@/features/sample/cards/sample1/components/Sample1Card.vue'
 import Sample2Card from '@/features/sample/cards/sample2/components/Sample2Card.vue'
 import Sample3Card from '@/features/sample/cards/sample3/components/Sample3Card.vue'
@@ -14,7 +14,7 @@ import type { Sample3CardData } from '@/features/sample/cards/sample3/definition
  * 计时器卡片注册表（基于通用cardRegistry实现）
  * 注册到全局命名空间 'sample'
  */
-export const sampleCardConfig = <CardRegistry> {
+export const sampleCardConfig = <sideCardRegistry> {
   // 1. 组件映射
   components: {
     default: SideCard as Component,

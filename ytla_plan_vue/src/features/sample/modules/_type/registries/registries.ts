@@ -1,5 +1,5 @@
 import { createModuleFlowRegistry } from '@/core/classic/modules/moduleCard/flows/moduleFlowRegistry.ts'
-import { createModuleRegistry } from '@/core/classic/modules/moduleCard/registries/moduleRegistry.ts'// modules
+import { createModuleRegistry } from '@/core/classic/modules/moduleCard/factories/moduleRegistry.ts'// modules
 
 import { sampleModuleFlowManager } from '@/features/sample/modules/_type/flows/sampleModuleFlowManager.ts'
 createModuleFlowRegistry('sample', sampleModuleFlowManager)

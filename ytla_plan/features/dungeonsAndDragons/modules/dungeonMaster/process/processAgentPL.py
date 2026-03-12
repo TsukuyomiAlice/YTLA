@@ -133,4 +133,4 @@ def query(chat):
     guide_answer(keyword_chat, question_keywords, chat)
     print("=" * 55)
 
-query("默认的游戏版本中可以获得哪些法杖？")
+# query("默认的游戏版本中可以获得哪些法杖？")

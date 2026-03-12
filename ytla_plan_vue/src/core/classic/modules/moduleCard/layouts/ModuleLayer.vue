@@ -98,7 +98,7 @@ import { usePanelStore } from '@/core/classic/frame/panel/stores/panelStore.ts'
 const panelStore = usePanelStore()
 const { activeModuleSubType } = storeToRefs(panelStore)
 
-import { getModuleConfig } from '@/core/classic/modules/moduleCard/registries/moduleRegistry.ts'
+import { getModuleConfig } from '@/core/classic/modules/moduleCard/factories/moduleRegistry.ts'
 
 const activeModule = computed(() => {
   return getModuleConfig(activeModuleSubType.value)

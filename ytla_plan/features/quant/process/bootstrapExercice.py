@@ -1,5 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
+
+"""
 plt.rcParams['font.family'] = 'SimHei'  # 设置字体为黑体
 plt.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
 
@@ -29,3 +31,5 @@ plt.xlabel('平均月收入（元）')
 plt.ylabel('频次')
 plt.legend()
 plt.show()
+
+"""

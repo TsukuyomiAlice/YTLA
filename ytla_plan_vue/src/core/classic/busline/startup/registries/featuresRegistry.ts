@@ -1,21 +1,6 @@
-// basic
-import '@/features/basic/modules/_type/registries/registries.ts'
-// agile
-import '@/features/agile/modules/_type/registries/registries.ts'
-// mathematics
-import '@/features/mathematics/modules/_type/registries/registries.ts'
-// language
-import '@/features/language/modules/_type/registries/registries.ts'
-// relax
-import '@/features/relax/cards/_type/registries/registries.ts'
-import '@/features/relax/modules/_type/registries/registries.ts'
-// sample
-import '@/features/sample/cards/_type/registries/registries.ts'
-import '@/features/sample/modules/_type/registries/registries.ts'
-// timer
-import '@/features/timer/cards/_type/registries/registries.ts'
-import '@/features/timer/modules/_type/registries/registries.ts'
-// divination
-import '@/features/divination/modules/_type/registries/registries.ts'
-// workshop
-import '@/features/workshop/modules/_type/registries/registries.ts'
+import { loadCardRegistries } from '@/core/classic/cards/sideCard/factories/cardRegistryLoader'
+import { loadModuleRegistries } from '@/core/classic/modules/moduleCard/factories/moduleRegistryLoader'
+
+// 动态加载所有功能域的注册文件
+loadCardRegistries()
+loadModuleRegistries()

@@ -1,5 +1,5 @@
 import { usePanelStore } from '@/core/classic/frame/panel/stores/panelStore.ts'
-import { getModuleConfig } from '@/core/classic/modules/moduleCard/registries/moduleRegistry.ts'
+import { getModuleConfig } from '@/core/classic/modules/moduleCard/factories/moduleRegistry.ts'
 
 export function useModuleLoader() {
   const panelStore = usePanelStore()

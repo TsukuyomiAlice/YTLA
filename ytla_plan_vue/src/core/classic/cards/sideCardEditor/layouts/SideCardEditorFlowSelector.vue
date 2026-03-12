@@ -1,44 +1,30 @@
 <template>
   <div class="guide-container">
     <div class="button-grid">
-      <button class="cancel-btn" @click="handleCancel" title="返回">↩</button>
-      <button
+      <ButtonCancel @click="handleCancel" title="返回">↩</ButtonCancel>
+      <ButtonScale
         v-for="subType in cardSubTypes"
         :key="subType.value"
-        class="scale-button"
+        :icon="subType.icon"
+        :label="subType.label"
         @click="selectSubType(subType.value)"
-        :title="subType.label"
-      >
-        <span class="icon">{{ subType.icon }}</span>
-      </button>
+      />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-const emit = defineEmits(['next', 'cancelEdit'])
-import type { CardSubType } from '@/core/classic/cards/sideCard/definitions/cardType.ts'
+import ButtonCancel from '@/core/classic/cards/sideCardEditor/ui/ButtonCancel.vue'
+import ButtonScale from '@/core/classic/cards/sideCardEditor/ui/ButtonScale.vue'
+import type { SideCardEditorFlowSelectorProps, SideCardEditorFlowSelectorEmits } from '@/core/classic/cards/sideCardEditor/definitions/sideCardEditorType.ts'
+import { useSideCardEditorFlowSelector } from '@/core/classic/cards/sideCardEditor/composables/useSideCardEditorFlowSelector.ts'
 
+const props = defineProps<SideCardEditorFlowSelectorProps>()
+const emit = defineEmits<SideCardEditorFlowSelectorEmits>()
 
-const selectSubType = (subType: CardSubType) => {
-  emit('next', subType)
-}
-
-const handleCancel = () => {
-  emit('cancelEdit')
-}
-
-defineProps<{
-  cardSubTypes: Array<{
-    value: string
-    icon: string
-    label: string
-  }>
-}>()
-
-
+const { selectSubType, handleCancel } = useSideCardEditorFlowSelector(props, emit)
 </script>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 @use '../styles/side-card-editor-flow-selector';
 </style>

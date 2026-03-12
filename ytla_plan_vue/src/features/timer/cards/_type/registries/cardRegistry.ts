@@ -1,5 +1,5 @@
 import type { Component } from 'vue'
-import type { CardRegistry } from '@/core/classic/cards/sideCard/factories/cardRegistry.ts'
+import type { sideCardRegistry } from '@/core/classic/cards/sideCard/factories/cardRegistry.ts'
 import type { TimerCardSubType } from '@/features/timer/cards/_type/definitions/cardType.ts'
 import AlarmCard from '@/features/timer/cards/alarm/components/AlarmCard.vue'
 import CountCard from '@/features/timer/cards/count/components/CountCard.vue'
@@ -14,7 +14,7 @@ import type { TimerCardData } from '@/features/timer/cards/_type/definitions/car
  * 计时器卡片注册表（基于通用cardRegistry实现）
  * 注册到全局命名空间 'timer'
  */
-export const timerCardConfig = <CardRegistry> {
+export const timerCardConfig = <sideCardRegistry> {
   // 1. 组件映射
   components: {
     default: SideCard as Component,

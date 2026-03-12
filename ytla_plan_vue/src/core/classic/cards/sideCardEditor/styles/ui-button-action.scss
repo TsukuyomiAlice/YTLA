@@ -1,0 +1,48 @@
+.action-btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.3rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 500;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &.cancel {
+    background: #e74c3c;
+    color: white;
+
+    &:hover:not(:disabled) {
+      background: #c0392b;
+    }
+  }
+
+  &.prev,
+  &.next {
+    background: #3498db;
+    color: white;
+
+    &:hover:not(:disabled) {
+      background: #2980b9;
+    }
+  }
+
+  &.submit {
+    background: #42b983;
+    color: white;
+
+    &:hover:not(:disabled) {
+      background: #3aa876;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .action-btn {
+    flex: 1 1 45%;
+    margin-bottom: 0.5rem;
+  }
+}

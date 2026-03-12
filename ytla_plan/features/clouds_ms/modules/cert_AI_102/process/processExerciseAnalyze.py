@@ -77,4 +77,4 @@ def analyzer() -> [list[dict], list[str]]:
 
     return result, questions
 
-analyzer()
+# analyzer()

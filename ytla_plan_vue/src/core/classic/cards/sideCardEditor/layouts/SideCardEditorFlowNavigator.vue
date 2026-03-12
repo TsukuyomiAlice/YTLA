@@ -5,50 +5,51 @@
     </div>
     <div class="flow-actions">
       <!-- 取消/返回按钮 -->
-      <button
+      <ButtonAction
         v-if="showCancel"
-        class="action-btn cancel"
-        @click="handleCancel"
+        type="cancel"
         :disabled="isSubmitting"
+        @click="handleCancel"
       >
         {{ isEditing ? $t('classic.cards.sideCardEditor.Cancel') : $t('classic.cards.sideCardEditor.Back') }}
-      </button>
+      </ButtonAction>
 
       <!-- 上一步按钮 -->
-      <button
+      <ButtonAction
         v-if="showPrev"
-        class="action-btn prev"
-        @click="handlePrev"
+        type="prev"
         :disabled="isSubmitting"
+        @click="handlePrev"
       >
         {{ $t('classic.cards.sideCardEditor.Prev') }}
-      </button>
+      </ButtonAction>
 
       <!-- 下一步按钮 -->
-      <button
+      <ButtonAction
         v-if="showNext"
-        class="action-btn next"
-        @click="handleNext"
+        type="next"
         :disabled="isSubmitting"
+        @click="handleNext"
       >
         {{ $t('classic.cards.sideCardEditor.Next') }}
-      </button>
+      </ButtonAction>
 
       <!-- 提交按钮（动态文字） -->
-      <button
+      <ButtonAction
         v-if="showSubmit"
-        class="action-btn submit"
-        @click="handleSubmit"
+        type="submit"
         :disabled="isSubmitting || submitDisabled"
+        @click="handleSubmit"
       >
         <span v-if="isSubmitting">{{ $t('classic.cards.sideCardEditor.Processing') }}</span>
         <span v-else>{{ isEditing ? $t('classic.cards.sideCardEditor.Save') : $t('classic.cards.sideCardEditor.Add') }}</span>
-      </button>
+      </ButtonAction>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import ButtonAction from '@/core/classic/cards/sideCardEditor/ui/ButtonAction.vue'
 import type {
   SideEditorFlowNavigatorProps, SideEditorFlowNavigatorEmits
 } from '@/core/classic/cards/sideCardEditor/definitions/sideCardEditorNavigatorType.ts'
@@ -68,6 +69,6 @@ import { useSideCardEditorFlowNavigator } from '@/core/classic/cards/sideCardEdi
 const { isSubmitting, handleCancel, handlePrev, handleNext, handleSubmit } = useSideCardEditorFlowNavigator(props, emit)
 </script>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 @use '../styles/side-card-editor-flow-navigator';
 </style>

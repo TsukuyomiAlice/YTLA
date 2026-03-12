@@ -2,21 +2,21 @@ import type { Component } from 'vue'
 import type { CardType } from '@/core/classic/cards/sideCard/definitions/cardType.ts'
 import type { CardData } from '@/core/classic/cards/sideCard/definitions/cardDataType.ts'
 
-export interface CardRegistry <T extends string = string> {
+export interface sideCardRegistry <T extends string = string> {
   components: Record<T, Component>
   getCardProps: (card: CardData) => Record<string, unknown>
 }
 
-const cardRegistryStore = new Map<string, CardRegistry>()
+const sideCardRegistryStore = new Map<string, sideCardRegistry>()
 
 export const createCardRegistry = <T extends string>(
   namespace: string,
-  config: CardRegistry<T>
-): CardRegistry<T> => {
-  cardRegistryStore.set(namespace, config)
+  config: sideCardRegistry<T>
+): sideCardRegistry<T> => {
+  sideCardRegistryStore.set(namespace, config)
   return config
 }
 
-export const getCardRegistry = (namespace: CardType): CardRegistry | undefined => {
-  return cardRegistryStore.get(namespace)
+export const getCardRegistry = (namespace: CardType): sideCardRegistry | undefined => {
+  return sideCardRegistryStore.get(namespace)
 }

@@ -9,7 +9,7 @@
 
 ### YTLA特性
 
-### (你的作者名称)
+### Official
 
 version 1.0
 
@@ -19,10 +19,54 @@ version 1.0
 
 ## 概念
 
-(在此描述你要开发的功能)
+侧边栏卡片的核心组件.  
 
 ## 特性包目录
 
-(在此描述目录结构)
+```
+sideCard/
+├── __init__.py
+├── readme.md
+├── ai_tools/
+│   └── __init__.py
+├── api/
+│   └── __init__.py
+├── caller/
+│   └── __init__.py
+├── const/
+│   └── __init__.py
+├── dao/
+│   ├── __init__.py
+│   └── daoCards.py
+├── dataset/
+│   └── __init__.py
+├── docs/
+│   └── readme/
+│       ├── en-US/
+│       │   └── readme.md
+│       └── zh-CN/
+│           └── readme.md
+├── func/
+│   └── __init__.py
+├── instance/
+│   └── __init__.py
+├── process/
+│   ├── __init__.py
+│   ├── processCardHandler.py
+│   ├── processCardHandlerFactory.py
+│   ├── processCardHandlerSample.py
+│   └── processCards.py
+├── prompts/
+│   └── __init__.py
+├── routes/
+│   ├── __init__.py
+│   └── routeCards.py
+├── schedule/
+│   └── __init__.py
+├── script/
+│   └── __init__.py
+└── utils/
+    └── __init__.py
+```
 
 
