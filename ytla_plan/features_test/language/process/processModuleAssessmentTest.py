@@ -1,4 +1,4 @@
-from features.linguisticEnglish.process import processModuleAssessment
+from features.linguisticEnglish.modules.assessment.process import processModuleAssessment
 
 plan_id = 4
 module_id = 10

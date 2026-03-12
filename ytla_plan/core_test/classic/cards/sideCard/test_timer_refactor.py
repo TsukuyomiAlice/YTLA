@@ -1,13 +1,12 @@
 import sys
-import os
 
 print('Testing refactored timer card handlers...\n')
 
 try:
-    from features.timer.process.processCardHandlerAlarm import AlarmCardHandler
-    from features.timer.process.processCardHandlerCountdown import CountdownCardHandler
-    from features.timer.process.processCardHandlerCount import CountCardHandler
-    from features.timer.func.funcTimer import calculate_end_time
+    from features.timer.cards.alarm.process.processCardHandlerAlarm import AlarmCardHandler
+    from features.timer.cards.countdown.process.processCardHandlerCountdown import CountdownCardHandler
+    from features.timer.cards.count.process.processCardHandlerCount import CountCardHandler
+    from features.timer.cards._type.func.funcTimer import calculate_end_time
     print('✓ All imports successful')
 except Exception as e:
     print(f'✗ Import failed: {e}')
