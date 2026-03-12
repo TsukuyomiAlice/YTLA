@@ -1,7 +1,7 @@
 import { shallowReactive, watch } from 'vue'
 import { defineStore } from 'pinia'
 import { usePlanCardStore } from '@/core/classic/plans/planCard/stores/planCardStore.ts'
-import { getModuleConfig } from '@/core/classic/modules/moduleCard/registries/moduleRegistry.ts'
+import { getModuleConfig } from '@/core/classic/modules/moduleCard/factories/moduleRegistry.ts'
 
 import { type PanelContentState, usePersistence } from '@/core/classic/frame/main/composables/usePersistence.ts'
 import { useModuleCardStore } from '@/core/classic/modules/moduleCard/stores/moduleCardStore.ts'

@@ -51,7 +51,7 @@ const plan = computed(() => {
 })
 
 import { ref, computed } from 'vue'
-import { getRegisteredModules, getModuleConfig } from '@/core/classic/modules/moduleCard/registries/moduleRegistry.ts'
+import { getRegisteredModules, getModuleConfig } from '@/core/classic/modules/moduleCard/factories/moduleRegistry.ts'
 
 // 新增响应式状态和计算属性
 const currentView = ref<'type' | 'concept'>('type')

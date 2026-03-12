@@ -6,10 +6,10 @@ export interface ModuleCardRegistry {
   getModuleProps: (module: any) => Record<string, any>
 }
 
-const registryStore = new Map<string, ModuleCardRegistry>()
+const moduleCardRegistryStore = new Map<string, ModuleCardRegistry>()
 
 export const createModuleCardRegistry = (): void => {
-  registryStore.set('module', {
+  moduleCardRegistryStore.set('module', {
     components: { default: ModuleCard },
     getModuleProps: (module) => ({
       moduleId: module.module_id,
@@ -24,7 +24,7 @@ export const createModuleCardRegistry = (): void => {
 }
 
 export const getModuleCardRegistry = () => {
-  return registryStore.get('module')
+  return moduleCardRegistryStore.get('module')
 }
 
 // 自动注册

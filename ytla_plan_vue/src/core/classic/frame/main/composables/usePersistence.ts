@@ -1,5 +1,5 @@
 import { ref } from 'vue'
-import { getModuleConfig, type ModuleRegistry } from '@/core/classic/modules/moduleCard/registries/moduleRegistry.ts'
+import { getModuleConfig, type ModuleRegistry } from '@/core/classic/modules/moduleCard/factories/moduleRegistry.ts'
 
 //// PanelContentState
 export type PanelContentState = {

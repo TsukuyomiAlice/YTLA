@@ -6,10 +6,10 @@ export interface PlanCardRegistry {
   getPlanProps: (plan: any) => Record<string, any>
 }
 
-const planRegistryStore = new Map<string, PlanCardRegistry>()
+const planCardRegistryStore = new Map<string, PlanCardRegistry>()
 
 export const createPlanCardRegistry = (): void => {
-  planRegistryStore.set('plan', {
+  planCardRegistryStore.set('plan', {
     components: { default: PlanCard },
     getPlanProps: (plan) => ({
       planId: plan.plan_id,
@@ -23,7 +23,7 @@ export const createPlanCardRegistry = (): void => {
 }
 
 export const getPlanCardRegistry = () => {
-  return planRegistryStore.get('plan')
+  return planCardRegistryStore.get('plan')
 }
 
 // 自动注册

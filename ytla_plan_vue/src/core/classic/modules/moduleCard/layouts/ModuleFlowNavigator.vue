@@ -16,7 +16,7 @@ const props = withDefaults(defineProps<{
   frameType: 'main'
 })
 
-import { getModuleConfig } from '@/core/classic/modules/moduleCard/registries/moduleRegistry.ts'
+import { getModuleConfig } from '@/core/classic/modules/moduleCard/factories/moduleRegistry.ts'
 const moduleConfig = computed(() => getModuleConfig(props.moduleType))
 const stepConfig = computed(() => {
   return (moduleConfig.value?.flowManager?.getSteps(props.flowName) || []) as Component[]

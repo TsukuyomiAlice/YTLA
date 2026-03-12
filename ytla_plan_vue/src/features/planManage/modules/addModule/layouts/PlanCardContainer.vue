@@ -23,7 +23,7 @@
 import { computed, nextTick, watch, ref, onMounted } from 'vue'
 import { usePlanContainer } from '@/core/classic/plans/planCard/composables/usePlanContainer.ts'
 import { useMasonryLayout } from '@/core/classic/frame/main/composables/useMasonryLayout.ts'
-import { getPlanCardRegistry } from '@/core/classic/plans/planCard/registries/planCardRegistry.ts'
+import { getPlanCardRegistry } from '@/core/classic/plans/planCard/factories/planCardRegistry.ts'
 import { usePlanCardStore } from '@/core/classic/plans/planCard/stores/planCardStore.ts'
 import { usePersistence } from '@/core/classic/frame/main/composables/usePersistence.ts'
 

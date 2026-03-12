@@ -1,5 +1,5 @@
 import type { Component } from 'vue'
-import type { CardRegistry } from '@/core/classic/cards/sideCard/factories/cardRegistry.ts'
+import type { sideCardRegistry } from '@/core/classic/cards/sideCard/factories/cardRegistry.ts'
 import type { RelaxCardSubType  } from '@/features/relax/cards/_type/definitions/cardType.ts'
 import type { WordleCardData } from '@/features/relax/cards/wordle/definitions/cardDataType.ts'
 import WordleCard from '@/features/relax/cards/wordle/components/WordleCard.vue'
@@ -9,7 +9,7 @@ import SideCard from '@/core/classic/cards/sideCard/components/SideCard.vue'
  * 计时器卡片注册表（基于通用cardRegistry实现）
  * 注册到全局命名空间 'relax'
  */
-export const relaxCardConfig = <CardRegistry> {
+export const relaxCardConfig = <sideCardRegistry> {
   // 1. 组件映射
   components: {
     default: SideCard as Component,

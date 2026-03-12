@@ -42,7 +42,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { getModuleCardRegistry } from '@/core/classic/modules/moduleCard/registries/moduleCardRegistry.ts'
+import { getModuleCardRegistry } from '@/core/classic/modules/moduleCard/factories/moduleCardRegistry.ts'
 
 const getComponent = (module: any) => {
   const registry = getModuleCardRegistry()
