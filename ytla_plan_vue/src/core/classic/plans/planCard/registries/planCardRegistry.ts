@@ -26,3 +26,5 @@ export const getPlanCardRegistry = () => {
   return planRegistryStore.get('plan')
 }
 
+// 自动注册
+createPlanCardRegistry()

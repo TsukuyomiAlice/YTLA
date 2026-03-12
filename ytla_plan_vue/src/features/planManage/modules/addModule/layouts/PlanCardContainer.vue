@@ -41,11 +41,11 @@ const {
 } = usePlanContainer()
 
 // layout
-const { updateLayout } = useMasonryLayout()
+const { debouncedUpdate } = useMasonryLayout()
 
 watch(activePlans, () => {
   nextTick(() => {
-    updateLayout()
+    debouncedUpdate()
   })
 }, { deep: true })
 
@@ -134,7 +134,7 @@ const handleDrop = (e: DragEvent) => {
         setPersistence('planCards', { 'order': newGlobalOrder })
       }
 
-      nextTick(updateLayout)
+      nextTick(debouncedUpdate)
     }
   }
 }
@@ -142,7 +142,7 @@ const handleDrop = (e: DragEvent) => {
 watch(activePlans, () => {
   if (isInitializing.value) return
   updateShownOrder()
-  nextTick(updateLayout)
+  nextTick(debouncedUpdate)
 }, { deep: true, immediate: true })
 
 const orderedPlans = computed(() => {
@@ -156,7 +156,7 @@ const orderedPlans = computed(() => {
 onMounted(async () => {
   document.addEventListener('drop', handleDrop)
   await initializeOrder()
-  await nextTick(updateLayout)
+  await nextTick(debouncedUpdate)
 })
 
 </script>

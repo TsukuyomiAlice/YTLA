@@ -27,3 +27,5 @@ export const getModuleCardRegistry = () => {
   return registryStore.get('module')
 }
 
+// 自动注册
+createModuleCardRegistry()
