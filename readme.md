@@ -6,6 +6,9 @@
 
 # YTLA (Your T&L Assistant)
 
+## Updated 2026-3-18
+The refactor is coming up and the first formal version will be released soon.  
+
 ## Updated 2026-2-27
 The author noticed that the repository is being monitored by an automated system (5-minute clones).  
 If you are the operator, please leave a note in Issues, thank you.
