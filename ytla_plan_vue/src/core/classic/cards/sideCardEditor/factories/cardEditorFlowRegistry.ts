@@ -17,3 +17,11 @@ export function getCardEditorFlowManager(cardType: CardType): CardEditorFlowMana
 export function getDefaultCardEditorFlowManager(): CardEditorFlowManager {
   return <CardEditorFlowManager>flowCardEditorManagers.values().next().value
 }
+
+export const getAllCardEditorFlowManagers = (): Map<CardType, CardEditorFlowManager> => {
+  return flowCardEditorManagers
+}
+
+export const clearAllCardEditorFlowManagers = (): void => {
+  flowCardEditorManagers.clear()
+}

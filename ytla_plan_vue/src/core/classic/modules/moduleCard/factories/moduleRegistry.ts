@@ -29,3 +29,11 @@ export const getModuleConfig = (moduleSubType: string): ModuleRegistry | undefin
 export function getRegisteredModules(): string[] {
   return Array.from(moduleRegistryStore.keys());
 }
+
+export const getAllModuleRegistries = (): Map<string, ModuleRegistry> => {
+  return moduleRegistryStore
+}
+
+export const clearAllModuleRegistries = (): void => {
+  moduleRegistryStore.clear()
+}
