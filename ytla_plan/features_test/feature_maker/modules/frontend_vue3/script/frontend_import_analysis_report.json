@@ -1,19 +1,6 @@
 {
   "project_root": "D:\\YTLA\\ytla_plan_vue",
-  "core_calls_features": [
-    {
-      "importer": "src.core.classic.cards.sideCard.definitions.cardType",
-      "imported": "@/features/timer/cards/_type/definitions/cardType.ts"
-    },
-    {
-      "importer": "src.core.classic.cards.sideCard.definitions.cardType",
-      "imported": "@/features/sample/cards/_type/definitions/cardType.ts"
-    },
-    {
-      "importer": "src.core.classic.cards.sideCard.definitions.cardType",
-      "imported": "@/features/relax/cards/_type/definitions/cardType.ts"
-    }
-  ],
+  "core_calls_features": [],
   "features_calls_features": [
     {
       "importer": "src.features.agile.modules.bible.components.BibleMain_00",
@@ -66,6 +53,7 @@
                   "vue_imports": [],
                   "ts_imports": [
                     "@/core/classic/cards/sideCard/factories/cardRegistryLoader",
+                    "@/core/classic/cards/sideCardEditor/factories/cardEditorFlowRegistryLoader",
                     "@/core/classic/modules/moduleCard/factories/moduleRegistryLoader"
                   ],
                   "style_imports": []
@@ -260,11 +248,7 @@
                 },
                 "cardType.ts": {
                   "vue_imports": [],
-                  "ts_imports": [
-                    "@/features/timer/cards/_type/definitions/cardType.ts",
-                    "@/features/sample/cards/_type/definitions/cardType.ts",
-                    "@/features/relax/cards/_type/definitions/cardType.ts"
-                  ],
+                  "ts_imports": [],
                   "style_imports": []
                 },
                 "sideCardType.ts": {
@@ -285,7 +269,9 @@
                 },
                 "cardRegistryLoader.ts": {
                   "vue_imports": [],
-                  "ts_imports": [],
+                  "ts_imports": [
+                    "./cardRegistry.ts"
+                  ],
                   "style_imports": []
                 }
               },
@@ -508,6 +494,13 @@
                   "ts_imports": [
                     "@/core/classic/frame/main/definitions/flowManagerTypes.ts",
                     "@/core/classic/cards/sideCard/definitions/cardType.ts"
+                  ],
+                  "style_imports": []
+                },
+                "cardEditorFlowRegistryLoader.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "./cardEditorFlowRegistry.ts"
                   ],
                   "style_imports": []
                 }
@@ -977,7 +970,9 @@
                 },
                 "moduleRegistryLoader.ts": {
                   "vue_imports": [],
-                  "ts_imports": [],
+                  "ts_imports": [
+                    "./moduleRegistry.ts"
+                  ],
                   "style_imports": []
                 }
               },

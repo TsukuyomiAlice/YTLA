@@ -1,5 +1,5 @@
 <p>
- language
+  language
  <a href="../zh-CN/readme.md"> 简体中文 </a>
  <a href="../en-US/readme.md"> English </a>
 </p>
@@ -9,19 +9,86 @@
 
 ### YTLA Application Feature
 
-### (Your Author Name)
+### Official
 
 version 1.0
 
-Frontend Language and Framework: Vue3, typescript  
+Frontend Language and Framework: Vue3, typescript, Vite  
 Applicable YTLA core version: **classic**  
-File Update Date: 2026-03-05
+File Update Date: 2026-03-19
 
 ## Concepts
 
-(Describe the feature you're going to make here)
+SideCard is the core module for side card rendering and interaction, developed based on Vue3+TypeScript+Vite technology stack. This module supports dynamic registration, self-contained subtypes, and provides rich interactive features such as card expand/collapse, pin, edit, background change, etc.
 
 ## Feature Package Directory
 
-(Describe the directory structure here)
+- avatar/
+  - Avatar.vue
+- components/
+  - SideCard.vue
+- composables/
+  - useBarDescription.ts
+  - useBarTitle.ts
+  - useButtonChangeBackground.ts
+  - useButtonChangeIcon.ts
+  - useButtonClose.ts
+  - useButtonDeactivate.ts
+  - useButtonEdit.ts
+  - useButtonExpand.ts
+  - useButtonPin.ts
+  - useContainerIcon.ts
+  - useContainerSideCard.ts
+  - useContainerTags.ts
+  - useSideCard.ts
+  - useSideCardUpload.ts
+- definitions/
+  - cardDataType.ts
+  - cardType.ts
+  - sideCardType.ts
+- documents/
+  - readme/
+    - zh-CN/
+      - readme.md
+    - en-US/
+      - readme.md
+  - tech/
+    - tech.md
+- factories/
+  - cardRegistry.ts
+  - cardRegistryHelper.ts
+  - cardRegistryLoader.ts
+- layouts/
+  - ContainerSideCard.vue
+- locales/
+  - en.json
+  - zh.json
+- services/
+  - cardService.ts
+- stores/
+  - cardStore.ts
+- styles/
+  - button-expand.scss
+  - button-pin.scss
+  - column-component.scss
+  - container-side-card.scss
+  - container-tags.scss
+  - side-card-transition.scss
+  - side-card.scss
+  - ui-button.scss
+  - ui-icon.scss
+  - ui-text.scss
+- ui/
+  - BarDescription.vue
+  - BarTitle.vue
+  - ButtonChangeBackground.vue
+  - ButtonChangeIcon.vue
+  - ButtonClose.vue
+  - ButtonDeactivate.vue
+  - ButtonEdit.vue
+  - ButtonExpand.vue
+  - ButtonPin.vue
+  - ContainerIcon.vue
+  - ContainerTags.vue
+- readme.md
 

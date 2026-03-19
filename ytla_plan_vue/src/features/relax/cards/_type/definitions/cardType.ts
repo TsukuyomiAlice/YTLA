@@ -1,2 +1,8 @@
 export type RelaxCardType = 'relax';
-export type RelaxCardSubType = | 'wordle' | 'beeper' | 'crasher';
+
+/**
+ * @deprecated Use individual subtype definitions instead
+ * @see WordleCardSubType in '@/features/relax/cards/wordle/definitions/cardType.ts'
+ */
+export type RelaxCardSubType = 'wordle' | 'beeper' | 'crasher';
+
