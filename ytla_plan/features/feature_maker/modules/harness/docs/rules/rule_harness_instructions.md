@@ -2,18 +2,18 @@
 
 ## 0. 非常重要
 
-如果本文档内容与其它文档中存在冲突，以本文档要求为优先. 
+如果本文档内容与其它文档中存在冲突，以本文档要求为优先.
 
-**当你看到这份文档并且正处于/spec或/plan模式时，部分文件指令的执行方式必须遵循本文档的要求执行** 
+**当你看到这份文档并且正处于/spec或/plan模式时，部分文件指令的执行方式必须遵循本文档的要求执行**
 
 在2.2章节同样存在以下内容
 
 新生成的PRD文档和目录，需要放在下列指定位置：
 
-- **对有明确类别的指定生成内容的任务**（如指定生成/更新readme.md）： **目标模组（子模组）下的** docs(documents)/design/PRD\_yyyymmdd\_\[文件]\_\[任务描述]/目录下
-- **跨多个不同类别文件的任务(如同时涉及到process / script / ui ，而非单一概念的readme.md文档)**：在对应上位的 docs(documents)/design/PRD\_yyyymmdd\_\[任务描述]目录
+- **对有明确类别的指定生成内容的任务**（如指定生成/更新readme.md）： **目标模组（子模组）下的** docs(documents)/tasks/PRD\_yyyymmdd\_\[文件]\_\[任务描述]/目录下
+- **跨多个不同类别文件的任务(如同时涉及到process / script / ui ，而非单一概念的readme.md文档)**：在对应上位的 docs(documents)/tasks/PRD\_yyyymmdd\_\[任务描述]目录
 
-检索是否存在已有的PRD文档时，也需要在 **目标模组（子模组）下的** docs(documents)/design/区域内查找
+检索是否存在已有的PRD文档时，也需要在 **目标模组（子模组）下的** docs(documents)/tasks/区域内查找
 
 ## 1. 总述
 
@@ -41,23 +41,23 @@
 1. **目标模组位置** - 确认用户指定的目标模组目录路径
 2. **目标生成文件的位置** - 确认需要生成或更新的文档/文件位于哪个目录
 3. **任务类型** - 确定是明确类别文件任务还是跨多个不同类别文件任务
-4. **PRD 目录构建验证** - 在创建任何文件前，先检查并构建目标 docs/design 目录
+4. **PRD 目录构建验证** - 在创建任何文件前，先检查并构建目标 docs/tasks 目录
 5. **文档存放规则** - 根据任务类型确定 PRD 文档的存放位置
 
 ### 2.2 PRD 文档位置规定
 
 新生成的PRD文档和目录，需要放在下列指定位置：
 
-- **对有明确指定生成内容的任务**（如指定生成/更新readme.md）： **目标模组（子模组）下的** docs(documents)/design/PRD\_yyyymmdd\_\[文件]\_\[任务描述]/目录下
-- **跨多个文件的任务**：在对应上位的 docs(documents)/design/PRD\_yyyymmdd\_\[任务描述]目录
+- **对有明确指定生成内容的任务**（如指定生成/更新readme.md）： **目标模组（子模组）下的** docs(documents)/tasks/PRD\_yyyymmdd\_\[文件]\_\[任务描述]/目录下
+- **跨多个文件的任务**：在对应上位的 docs(documents)/tasks/PRD\_yyyymmdd\_\[任务描述]目录
 
-检索是否存在已有的PRD文档时，也需要在 **目标模组（子模组）下的** docs(documents)/design/区域内查找
+检索是否存在已有的PRD文档时，也需要在 **目标模组（子模组）下的** docs(documents)/tasks/区域内查找
 
 **示例**：
 
 - 目标模组：`\YTLA\ytla_plan\features\feature_maker\modules\documents`
 - 任务：维护 readme.md 文档
-- 正确的 PRD 目录：`\YTLA\ytla_plan\features\feature_maker\modules\documents\docs\design\PRD_20260320_readme_维护documents模块readme文档\`
+- 正确的 PRD 目录：`\YTLA\ytla_plan\features\feature_maker\modules\documents\docs\tasks\PRD_20260320_readme_维护documents模块readme文档\`
 
 **错误示例**：
 
@@ -250,7 +250,7 @@
 
 ### 7.1 规划阶段检查清单
 
-- [ ] PRD 目录创建在目标模组的 docs/design 下，而非其他位置
+- [ ] PRD 目录创建在目标模组的 docs/tasks 下，而非其他位置
 - [ ] PRD 目录命名符合规范：PRD\_yyyymmdd\_\[文件]\_\[任务描述]
 - [ ] spec.md 包含所有必填章节
 - [ ] 每个目标都有对应的验收标准
@@ -306,7 +306,7 @@
 ### 9.1 规划阶段陷阱
 
 ❌ **陷阱**：PRD 目录创建在错误的位置（如 .trae/specs/ 或项目根目录）\
-✅ **避免**：严格遵循 2.2 节的规定，必须创建在目标模组的 docs/design 下
+✅ **避免**：严格遵循 2.2 节的规定，必须创建在目标模组的 docs/tasks 下
 
 ❌ **陷阱**：规划过于详细，导致执行时发现不可行\
 ✅ **避免**：保持规划在合理的抽象层次，留出调整空间
