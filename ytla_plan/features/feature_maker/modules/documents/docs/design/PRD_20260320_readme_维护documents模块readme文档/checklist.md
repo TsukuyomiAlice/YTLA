@@ -1,0 +1,8 @@
+- [x] Checkpoint 1: 根目录 readme.md 文件结构与实际文件系统完全一致
+- [x] Checkpoint 2: zh-CN 版本 readme.md 文件结构与实际文件系统完全一致
+- [x] Checkpoint 3: en-US 版本 readme.md 文件结构与实际文件系统完全一致
+- [x] Checkpoint 4: 所有三个 readme 文档的内容一致，仅语言不同
+- [x] Checkpoint 5: 所有三个 readme 文档的文件更新日期为 2026-03-20
+- [x] Checkpoint 6: 所有三个 readme 文档的格式符合 YTLA 规范标准模板
+- [x] Checkpoint 7: 作者名保持为 "Official"
+- [x] Checkpoint 8: 文档链接正确有效

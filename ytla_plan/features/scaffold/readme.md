@@ -10,6 +10,10 @@
 
 ### Official
 
+### Developer tools
+本应用为开发环境下专用.  
+由于本应用可能会导致即时生成新的文件，因此建议在IDE开发模式下加载本应用下的功能.  
+
 version 1.0
 
 后端语言及开发框架: Python-Flask  

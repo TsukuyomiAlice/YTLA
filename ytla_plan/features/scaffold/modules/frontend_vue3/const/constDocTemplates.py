@@ -35,7 +35,11 @@ templates = {
             'dir_structure': "## 应用包目录",
             'dir_structure_text': "(在此描述目录结构)",
             'usage': "## 添加本应用",
-            'usage_text': "(在此描述使用方法)"
+            'usage_text': "(在此描述使用方法)",
+            'history': "## 变更记录",
+            'history_text': """### {date_string}
+新建
+            """
         },
         'subtype_level': {
             'general_title': "YTLA应用 公共配置",
@@ -51,6 +55,10 @@ templates = {
             'concepts_desc': "(在此描述你要开发的功能)",
             'dir_structure': "## 特性包目录",
             'dir_structure_text': "(在此描述目录结构)",
+            'history': "## 变更记录",
+            'history_text': """### {date_string}
+新建
+            """
         }
     },
     'en-US': {
@@ -86,7 +94,11 @@ For customized YTLA project copies, please check the configuration and compatibi
             'dir_structure': "## Application Package Directory",
             'dir_structure_text': "(Describe the directory structure here)",
             'usage': "## Add This Application",
-            'usage_text': "(Describe how to use the Application here)"
+            'usage_text': "(Describe how to use the Application here)",
+            'history': "## Change History",
+            'history_text': """### {date_string}
+New Creation.
+            """
         },
         'subtype_level': {
             'general_title': "YTLA Application General Profile",
@@ -102,6 +114,10 @@ File Update Date: {date_string}""",
             'concepts_desc': "(Describe the feature you're going to make here)",
             'dir_structure': "## Feature Package Directory",
             'dir_structure_text': "(Describe the directory structure here)",
+            'history': "## Change History",
+            'history_text': """### {date_string}
+New Creation.
+            """
         }
     }
 }

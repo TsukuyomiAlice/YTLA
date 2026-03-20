@@ -1,0 +1,4959 @@
+{
+  "project_root": "D:\\YTLA\\ytla_plan_vue",
+  "core_calls_features": [],
+  "features_calls_features": [
+    {
+      "importer": "src.features.agile.modules.bible.components.BibleMain_00",
+      "imported": "@/features/planManage/modules/_type/ui/ReturnToPlanDashboardButton.vue"
+    },
+    {
+      "importer": "src.features.agile.modules.kanban.components.KanbanMain_00",
+      "imported": "@/features/planManage/modules/_type/ui/ReturnToPlanDashboardButton.vue"
+    },
+    {
+      "importer": "src.features.agile.modules.whiteboard.components.WhiteboardMain_00",
+      "imported": "@/features/planManage/modules/_type/ui/ReturnToPlanDashboardButton.vue"
+    },
+    {
+      "importer": "src.features.basic.modules.definition.components.DefinitionSub_00",
+      "imported": "@/features/planManage/modules/_type/ui/ReturnToPlanDashboardButton.vue"
+    },
+    {
+      "importer": "src.features.sample.modules.sample.components.SampleStep1",
+      "imported": "@/features/planManage/modules/_type/ui/ReturnToPlanDashboardButton.vue"
+    },
+    {
+      "importer": "src.features.sample.modules.sample.components.SampleStep2",
+      "imported": "@/features/planManage/modules/_type/ui/ReturnToPlanDashboardButton.vue"
+    },
+    {
+      "importer": "src.features.sample.modules.sample.components.SampleStep3",
+      "imported": "@/features/planManage/modules/_type/ui/ReturnToPlanDashboardButton.vue"
+    },
+    {
+      "importer": "src.features.timer.modules.timer.components.TimerMain_00",
+      "imported": "@/features/planManage/modules/_type/ui/ReturnToPlanDashboardButton.vue"
+    }
+  ],
+  "all_files": {
+    "src": {
+      "core": {
+        "classic": {
+          "busline": {
+            "startup": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "featuresRegistry.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCard/factories/cardRegistryLoader",
+                    "@/core/classic/cards/sideCardEditor/factories/cardEditorFlowRegistryLoader",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistryLoader"
+                  ],
+                  "style_imports": []
+                },
+                "systemRegistry.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              }
+            }
+          },
+          "cards": {
+            "sideCard": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "SideCard.vue": {
+                  "vue_imports": [
+                    "@/core/classic/cards/sideCard/layouts/ContainerSideCard.vue",
+                    "@/core/classic/cards/sideCard/ui/ButtonPin.vue",
+                    "@/core/classic/cards/sideCard/ui/ButtonChangeIcon.vue",
+                    "@/core/classic/cards/sideCard/ui/ButtonChangeBackground.vue",
+                    "@/core/classic/cards/sideCard/ui/ButtonEdit.vue",
+                    "@/core/classic/cards/sideCard/ui/ButtonDeactivate.vue",
+                    "@/core/classic/cards/sideCard/ui/ButtonClose.vue",
+                    "@/core/classic/cards/sideCard/ui/ButtonExpand.vue",
+                    "@/core/classic/cards/sideCard/ui/ContainerIcon.vue",
+                    "@/core/classic/cards/sideCard/ui/BarTitle.vue",
+                    "@/core/classic/cards/sideCard/ui/BarDescription.vue",
+                    "@/core/classic/cards/sideCard/ui/ContainerTags.vue"
+                  ],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCard/composables/useSideCard.ts"
+                  ],
+                  "style_imports": [
+                    "../styles/side-card",
+                    "../styles/side-card-transition",
+                    "../styles/column-component"
+                  ]
+                }
+              },
+              "composables": {
+                "useBarDescription.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/cards/sideCard/stores/cardStore.ts",
+                    "@/core/classic/cards/sideCard/definitions/sideCardType.ts"
+                  ],
+                  "style_imports": []
+                },
+                "useBarTitle.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/cards/sideCard/stores/cardStore.ts",
+                    "@/core/classic/cards/sideCard/definitions/sideCardType.ts"
+                  ],
+                  "style_imports": []
+                },
+                "useButtonChangeBackground.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/cards/sideCard/definitions/sideCardType.ts",
+                    "@/core/classic/cards/sideCard/composables/useSideCardUpload.ts"
+                  ],
+                  "style_imports": []
+                },
+                "useButtonChangeIcon.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/cards/sideCard/definitions/sideCardType.ts",
+                    "@/core/classic/cards/sideCard/composables/useSideCardUpload.ts"
+                  ],
+                  "style_imports": []
+                },
+                "useButtonClose.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCard/definitions/sideCardType.ts",
+                    "@/core/classic/cards/sideCard/stores/cardStore.ts"
+                  ],
+                  "style_imports": []
+                },
+                "useButtonDeactivate.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCard/definitions/sideCardType.ts",
+                    "@/core/classic/cards/sideCard/stores/cardStore.ts"
+                  ],
+                  "style_imports": []
+                },
+                "useButtonEdit.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCard/definitions/sideCardType.ts"
+                  ],
+                  "style_imports": []
+                },
+                "useButtonExpand.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/cards/sideCard/definitions/sideCardType.ts",
+                    "@/core/classic/frame/main/composables/usePersistence.ts"
+                  ],
+                  "style_imports": []
+                },
+                "useButtonPin.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCard/definitions/sideCardType.ts",
+                    "@/core/classic/frame/main/composables/usePersistence.ts",
+                    "vue"
+                  ],
+                  "style_imports": []
+                },
+                "useContainerIcon.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCard/definitions/sideCardType.ts",
+                    "@/core/classic/cards/sideCard/stores/cardStore.ts",
+                    "@/core/classic/cards/sideCard/composables/useButtonChangeIcon.ts"
+                  ],
+                  "style_imports": []
+                },
+                "useContainerSideCard.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCard/definitions/sideCardType.ts",
+                    "vue",
+                    "@/core/classic/cards/sideCard/composables/useButtonPin.ts"
+                  ],
+                  "style_imports": []
+                },
+                "useContainerTags.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/cards/sideCard/stores/cardStore.ts",
+                    "@/core/classic/cards/sideCard/definitions/sideCardType.ts",
+                    "@/core/classic/cards/sideCard/definitions/cardDataType.ts"
+                  ],
+                  "style_imports": []
+                },
+                "useSideCard.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCard/definitions/sideCardType.ts",
+                    "@/core/classic/cards/sideCard/composables/useContainerSideCard.ts",
+                    "@/core/classic/cards/sideCard/composables/useButtonPin.ts",
+                    "@/core/classic/cards/sideCard/composables/useButtonChangeIcon.ts",
+                    "@/core/classic/cards/sideCard/composables/useButtonChangeBackground.ts",
+                    "@/core/classic/cards/sideCard/composables/useButtonEdit.ts",
+                    "@/core/classic/cards/sideCard/composables/useButtonDeactivate.ts",
+                    "@/core/classic/cards/sideCard/composables/useButtonClose.ts",
+                    "@/core/classic/cards/sideCard/composables/useSideCardUpload.ts",
+                    "@/core/classic/cards/sideCard/composables/useButtonExpand.ts",
+                    "@/core/classic/cards/sideCard/composables/useContainerIcon.ts",
+                    "@/core/classic/cards/sideCard/composables/useBarTitle.ts",
+                    "@/core/classic/cards/sideCard/composables/useBarDescription.ts",
+                    "@/core/classic/cards/sideCard/composables/useContainerTags.ts"
+                  ],
+                  "style_imports": []
+                },
+                "useSideCardUpload.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCard/definitions/sideCardType.ts",
+                    "@/core/classic/cards/sideCard/stores/cardStore.ts",
+                    "vue",
+                    "@/core/classic/cards/sideCard/services/cardService.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "definitions": {
+                "cardDataType.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "./cardType.ts"
+                  ],
+                  "style_imports": []
+                },
+                "cardType.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "sideCardType.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "factories": {
+                "cardRegistry.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/cards/sideCard/definitions/cardType.ts",
+                    "@/core/classic/cards/sideCard/definitions/cardDataType.ts"
+                  ],
+                  "style_imports": []
+                },
+                "cardRegistryLoader.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "./cardRegistry.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "layouts": {
+                "ContainerSideCard.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": [
+                    "../styles/container-side-card"
+                  ]
+                }
+              },
+              "services": {
+                "cardService.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCard/definitions/cardDataType.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "stores": {
+                "cardStore.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "pinia",
+                    "@/core/classic/cards/sideCard/definitions/cardDataType.ts",
+                    "@/core/classic/cards/sideCard/services/cardService.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "ui": {
+                "BarDescription.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": [
+                    "@/core/classic/cards/sideCard/styles/ui-text"
+                  ]
+                },
+                "BarTitle.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": [
+                    "@/core/classic/cards/sideCard/styles/side-card",
+                    "@/core/classic/cards/sideCard/styles/ui-text"
+                  ]
+                },
+                "ButtonChangeBackground.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": [
+                    "@/core/classic/cards/sideCard/styles/ui-button"
+                  ]
+                },
+                "ButtonChangeIcon.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": [
+                    "@/core/classic/cards/sideCard/styles/ui-button"
+                  ]
+                },
+                "ButtonClose.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": [
+                    "@/core/classic/cards/sideCard/styles/ui-button"
+                  ]
+                },
+                "ButtonDeactivate.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": [
+                    "@/core/classic/cards/sideCard/styles/ui-button"
+                  ]
+                },
+                "ButtonEdit.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": [
+                    "@/core/classic/cards/sideCard/styles/ui-button"
+                  ]
+                },
+                "ButtonExpand.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": [
+                    "../styles/button-expand"
+                  ]
+                },
+                "ButtonPin.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": [
+                    "../styles/ui-button",
+                    "../styles/button-pin"
+                  ]
+                },
+                "ContainerIcon.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": [
+                    "../styles/ui-icon"
+                  ]
+                },
+                "ContainerTags.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": [
+                    "../styles/container-tags"
+                  ]
+                }
+              }
+            },
+            "sideCardController": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "composables": {
+                "useSideCardController.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/cards/sideCardFilter/composables/useSideCardFilter.ts",
+                    "@/core/classic/cards/sideCard/stores/cardStore.ts",
+                    "@/core/classic/cards/sideCardEditor/composables/useSideCardEditor.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "definitions": {
+                "sideCardControllerType.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "layouts": {
+                "SideCardController.vue": {
+                  "vue_imports": [
+                    "@/core/classic/cards/sideCardFilter/layouts/SideCardFilter.vue",
+                    "@/core/classic/cards/sideCardController/ui/ButtonAdd.vue",
+                    "@/core/classic/cards/sideCardEditor/layouts/SideCardEditor.vue"
+                  ],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCardController/composables/useSideCardController.ts"
+                  ],
+                  "style_imports": [
+                    "../styles/side-card-controller"
+                  ]
+                }
+              },
+              "ui": {
+                "ButtonAdd.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": [
+                    "../styles/side-card-controller"
+                  ]
+                }
+              }
+            },
+            "sideCardEditor": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "composables": {
+                "useSideCardEditor.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/cards/sideCard/stores/cardStore.ts",
+                    "@/core/classic/cards/sideCard/definitions/cardDataType.ts",
+                    "@/core/classic/cards/sideCard/definitions/cardType.ts"
+                  ],
+                  "style_imports": []
+                },
+                "useSideCardEditorFlowNavigator.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue"
+                  ],
+                  "style_imports": []
+                },
+                "useSideCardEditorFlowSelector.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCardEditor/definitions/sideCardEditorType.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "definitions": {
+                "sideCardEditorNavigatorType.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "sideCardEditorType.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCard/definitions/cardDataType.ts",
+                    "@/core/classic/cards/sideCard/definitions/cardType.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "factories": {
+                "cardEditorFlowRegistry.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts",
+                    "@/core/classic/cards/sideCard/definitions/cardType.ts"
+                  ],
+                  "style_imports": []
+                },
+                "cardEditorFlowRegistryLoader.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "./cardEditorFlowRegistry.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "layouts": {
+                "SideCardEditor.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCardEditor/composables/useSideCardEditor.ts",
+                    "@/core/classic/cards/sideCard/definitions/cardDataType.ts"
+                  ],
+                  "style_imports": [
+                    "../styles/side-card-editor"
+                  ]
+                },
+                "SideCardEditorFlowNavigator.vue": {
+                  "vue_imports": [
+                    "@/core/classic/cards/sideCardEditor/ui/ButtonAction.vue"
+                  ],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCardEditor/composables/useSideCardEditorFlowNavigator.ts"
+                  ],
+                  "style_imports": [
+                    "../styles/side-card-editor-flow-navigator"
+                  ]
+                },
+                "SideCardEditorFlowSelector.vue": {
+                  "vue_imports": [
+                    "@/core/classic/cards/sideCardEditor/ui/ButtonCancel.vue",
+                    "@/core/classic/cards/sideCardEditor/ui/ButtonScale.vue"
+                  ],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCardEditor/definitions/sideCardEditorType.ts",
+                    "@/core/classic/cards/sideCardEditor/composables/useSideCardEditorFlowSelector.ts"
+                  ],
+                  "style_imports": [
+                    "../styles/side-card-editor-flow-selector"
+                  ]
+                }
+              },
+              "stores": {
+                "cardEditorFormStore.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "pinia"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "ui": {
+                "ButtonAction.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": [
+                    "../styles/ui-button-action"
+                  ]
+                },
+                "ButtonCancel.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "ButtonScale.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              }
+            },
+            "sideCardFilter": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "composables": {
+                "useSideCardFilter.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/cards/sideCard/stores/cardStore.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "definitions": {
+                "sideCardFilterType.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "layouts": {
+                "SideCardFilter.vue": {
+                  "vue_imports": [
+                    "@/core/classic/cards/sideCardFilter/ui/FilterInput.vue",
+                    "@/core/classic/cards/sideCardFilter/ui/ButtonClear.vue"
+                  ],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCardFilter/definitions/sideCardFilterType.ts"
+                  ],
+                  "style_imports": [
+                    "../styles/side-card-filter"
+                  ]
+                }
+              },
+              "ui": {
+                "ButtonClear.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCardFilter/definitions/sideCardFilterType.ts"
+                  ],
+                  "style_imports": [
+                    "../styles/side-card-filter"
+                  ]
+                },
+                "FilterInput.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCardFilter/definitions/sideCardFilterType.ts"
+                  ],
+                  "style_imports": [
+                    "../styles/side-card-filter"
+                  ]
+                }
+              }
+            },
+            "sideCardLayer": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "composables": {
+                "useSideCardLayer.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/cards/sideCard/stores/cardStore.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "definitions": {
+                "sideCardLayerType.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "layouts": {
+                "SideCardLayer.vue": {
+                  "vue_imports": [
+                    "@/core/classic/cards/sideCardController/layouts/SideCardController.vue",
+                    "@/core/classic/cards/sideCardPanel/layouts/SideCardPanel.vue",
+                    "@/core/classic/cards/sideCardEditor/layouts/SideCardEditor.vue"
+                  ],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCardLayer/composables/useSideCardLayer.ts"
+                  ],
+                  "style_imports": [
+                    "../styles/side-card-layer"
+                  ]
+                }
+              }
+            },
+            "sideCardPanel": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "composables": {
+                "useSideCardPanel.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/cards/sideCard/definitions/cardDataType.ts",
+                    "@/core/classic/cards/sideCard/stores/cardStore.ts",
+                    "../../sideCardEditor/composables/useSideCardEditor.ts"
+                  ],
+                  "style_imports": []
+                },
+                "useSideCardPanelLayout.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/frame/main/composables/useMasonryLayout.ts",
+                    "@/core/classic/cards/sideCard/stores/cardStore.ts",
+                    "@/core/classic/frame/main/composables/usePersistence.ts",
+                    "@/core/classic/cards/sideCard/definitions/cardDataType.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "definitions": {
+                "sideCardPanelType.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "layouts": {
+                "SideCardPanel.vue": {
+                  "vue_imports": [
+                    "@/core/classic/cards/sideCardPanel/ui/ContainerMasonryGrid.vue"
+                  ],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/cards/sideCardPanel/composables/useSideCardPanel.ts",
+                    "@/core/classic/cards/sideCardPanel/composables/useSideCardPanelLayout.ts",
+                    "@/core/classic/cards/sideCard/factories/cardRegistry.ts",
+                    "@/core/classic/cards/sideCard/definitions/cardDataType.ts"
+                  ],
+                  "style_imports": [
+                    "../styles/card-panel"
+                  ]
+                }
+              },
+              "ui": {
+                "ContainerMasonryGrid.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": [
+                    "../styles/card-panel"
+                  ]
+                }
+              }
+            }
+          },
+          "frame": {
+            "main": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "composables": {
+                "usei18n.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue-i18n"
+                  ],
+                  "style_imports": []
+                },
+                "useLayoutMode.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/frame/main/services/layoutStore.ts",
+                    "@/core/classic/frame/panel/stores/panelStore.ts",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts"
+                  ],
+                  "style_imports": []
+                },
+                "useMasonryLayout.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue"
+                  ],
+                  "style_imports": []
+                },
+                "usePersistence.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "definitions": {
+                "flowManagerTypes.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "layouts": {
+                "MainLayout.vue": {
+                  "vue_imports": [
+                    "@/core/classic/frame/panel/layouts/PanelLayer.vue",
+                    "@/core/classic/cards/sideCardLayer/layouts/SideCardLayer.vue",
+                    "@/core/classic/modules/moduleCard/layouts/ModuleLayer.vue"
+                  ],
+                  "ts_imports": [
+                    "@/core/classic/frame/main/composables/usePersistence.ts",
+                    "@/core/classic/frame/main/services/layoutStore.ts",
+                    "pinia",
+                    "vue",
+                    "@/core/classic/frame/main/composables/useLayoutMode.ts",
+                    "vue-i18n"
+                  ],
+                  "style_imports": [
+                    "../styles/layout",
+                    "../styles/layout-variables"
+                  ]
+                }
+              },
+              "services": {
+                "layoutStore.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "pinia",
+                    "@/core/classic/frame/main/composables/usePersistence.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "utils": {
+                "timeUtils.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              }
+            },
+            "panel": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "layouts": {
+                "PanelLayer.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "pinia",
+                    "@/core/classic/frame/panel/stores/panelStore.ts",
+                    "@/core/classic/plans/planCard/stores/planCardStore.ts",
+                    "@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts",
+                    "@/core/classic/modules/moduleCard/composables/useModuleLoader.ts",
+                    "vue",
+                    "@/core/classic/frame/main/composables/usePersistence.ts"
+                  ],
+                  "style_imports": [
+                    "../../main/styles/layout-variables"
+                  ]
+                }
+              },
+              "stores": {
+                "panelStore.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "pinia",
+                    "@/core/classic/plans/planCard/stores/planCardStore.ts",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/core/classic/frame/main/composables/usePersistence.ts",
+                    "@/core/classic/modules/moduleCard/stores/moduleCardStore.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            }
+          },
+          "modules": {
+            "moduleCard": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "ModuleCard.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/modules/moduleCard/composables/useModuleCard.ts",
+                    "@/core/classic/modules/moduleCard/composables/useModuleCardEditor.ts"
+                  ],
+                  "style_imports": [
+                    "../styles/module-card",
+                    "../../../cards/sideCard/styles/ui-button",
+                    "../../../cards/sideCard/styles/ui-icon",
+                    "../../../cards/sideCard/styles/container-tags",
+                    "../../../cards/sideCard/styles/ui-text"
+                  ]
+                }
+              },
+              "composables": {
+                "useModuleCard.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts",
+                    "@/core/classic/frame/panel/stores/panelStore.ts",
+                    "@/core/classic/modules/moduleCard/stores/moduleCardStore.ts"
+                  ],
+                  "style_imports": []
+                },
+                "useModuleCardEditor.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/stores/moduleCardStore.ts",
+                    "@/core/classic/modules/moduleCard/services/moduleService.ts",
+                    "@/core/classic/modules/moduleCard/definitions/moduleTypes.ts",
+                    "@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts"
+                  ],
+                  "style_imports": []
+                },
+                "useModuleGroup.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/stores/moduleCardStore.ts",
+                    "@/core/classic/plans/planCard/stores/planCardStore.ts",
+                    "@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts"
+                  ],
+                  "style_imports": []
+                },
+                "useModuleLoader.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/frame/panel/stores/panelStore.ts",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts"
+                  ],
+                  "style_imports": []
+                },
+                "useModuleStepManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/frame/panel/stores/panelStore.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "definitions": {
+                "moduleTypes.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "factories": {
+                "moduleCardRegistry.ts": {
+                  "vue_imports": [
+                    "@/core/classic/modules/moduleCard/components/ModuleCard.vue"
+                  ],
+                  "ts_imports": [
+                    "vue"
+                  ],
+                  "style_imports": []
+                },
+                "moduleRegistry.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                },
+                "moduleRegistryLoader.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "./moduleRegistry.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "moduleFlowRegistry.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts",
+                    "@/core/classic/modules/moduleCard/definitions/moduleTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "layouts": {
+                "ModuleCardEditor.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/modules/moduleCard/definitions/moduleTypes.ts",
+                    "vue",
+                    "@/core/classic/modules/moduleCard/stores/moduleCardStore.ts",
+                    "vue",
+                    "@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts",
+                    "@/core/classic/modules/moduleCard/composables/useModuleCardEditor.ts"
+                  ],
+                  "style_imports": [
+                    "../styles/module-card-editor",
+                    "../../../cards/sideCard/styles/ui-button",
+                    "../../../cards/sideCard/styles/ui-icon",
+                    "../../../cards/sideCard/styles/container-tags",
+                    "../../../cards/sideCard/styles/ui-text"
+                  ]
+                },
+                "ModuleFlowNavigator.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/composables/useModuleStepManager.ts",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/core/classic/modules/moduleCard/composables/useModuleStepManager.ts"
+                  ],
+                  "style_imports": []
+                },
+                "ModuleFlowNavigatorWithButtons.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/composables/useModuleStepManager.ts",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/core/classic/modules/moduleCard/composables/useModuleStepManager.ts"
+                  ],
+                  "style_imports": []
+                },
+                "ModuleLayer.vue": {
+                  "vue_imports": [
+                    "@/core/classic/modules/moduleCard/layouts/ModuleMainFrame.vue",
+                    "@/core/classic/modules/moduleCard/layouts/ModuleSubFrame.vue"
+                  ],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/frame/main/services/layoutStore.ts",
+                    "pinia",
+                    "@/core/classic/frame/panel/stores/panelStore.ts",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts"
+                  ],
+                  "style_imports": [
+                    "../../../frame/main/styles/main-content-layer"
+                  ]
+                },
+                "ModuleMainFrame.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "ModuleSubFrame.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "services": {
+                "moduleService.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/modules/moduleCard/definitions/moduleTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "stores": {
+                "moduleCardStore.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "pinia",
+                    "@/core/classic/modules/moduleCard/definitions/moduleTypes.ts",
+                    "@/core/classic/modules/moduleCard/services/moduleService.ts"
+                  ],
+                  "style_imports": []
+                },
+                "moduleProcessStore.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "pinia",
+                    "@/core/classic/modules/moduleCard/stores/moduleCardStore.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            }
+          },
+          "plans": {
+            "planCard": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "PlanCard.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/plans/planCard/definitions/planTypes.ts",
+                    "@/core/classic/frame/panel/stores/panelStore.ts",
+                    "@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts",
+                    "@/core/classic/plans/planCard/composables/usePlanCard.ts",
+                    "@/core/classic/plans/planCard/composables/usePlanCardEditor.ts"
+                  ],
+                  "style_imports": [
+                    "../styles/plan-card",
+                    "../../../cards/sideCard/styles/ui-button",
+                    "../../../cards/sideCard/styles/ui-icon",
+                    "../../../cards/sideCard/styles/container-tags",
+                    "../../../cards/sideCard/styles/ui-text"
+                  ]
+                }
+              },
+              "composables": {
+                "usePlanCard.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/plans/planCard/definitions/planTypes.ts",
+                    "@/core/classic/frame/main/composables/usePersistence.ts"
+                  ],
+                  "style_imports": []
+                },
+                "usePlanCardEditor.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/plans/planCard/stores/planCardStore.ts",
+                    "@/core/classic/plans/planCard/services/planService.ts",
+                    "@/core/classic/plans/planCard/definitions/planTypes.ts",
+                    "@/core/classic/frame/panel/stores/panelStore.ts"
+                  ],
+                  "style_imports": []
+                },
+                "usePlanContainer.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/plans/planCard/definitions/planTypes.ts",
+                    "@/core/classic/plans/planCard/stores/planCardStore.ts",
+                    "@/core/classic/frame/panel/stores/panelStore.ts"
+                  ],
+                  "style_imports": []
+                },
+                "watchPlanActiveFlag.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/plans/planCard/stores/planCardStore.ts",
+                    "@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "definitions": {
+                "planTypes.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "factories": {
+                "planCardRegistry.ts": {
+                  "vue_imports": [
+                    "@/core/classic/plans/planCard/components/PlanCard.vue"
+                  ],
+                  "ts_imports": [
+                    "vue"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "services": {
+                "planService.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/plans/planCard/definitions/planTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "stores": {
+                "planCardStore.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "pinia",
+                    "@/core/classic/plans/planCard/definitions/planTypes.ts",
+                    "@/core/classic/plans/planCard/services/planService.ts",
+                    "@/core/classic/frame/main/composables/usePersistence.ts",
+                    "@/core/classic/frame/panel/stores/panelStore.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            }
+          },
+          "users": {
+            "basic": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              }
+            }
+          }
+        }
+      },
+      "features": {
+        "agile": {
+          "cards": {
+            "_type": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "registries.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCardEditor/factories/cardEditorFlowRegistry.ts",
+                    "@/core/classic/cards/sideCard/factories/cardRegistry.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            }
+          },
+          "modules": {
+            "backlog": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "BacklogMain.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/backlog/components/BacklogMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "BacklogMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "BacklogSub.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/backlog/components/BacklogSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "BacklogSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "backlogFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "backlogModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/agile/modules/backlog/flows/backlogFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "bible": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "BibleMain.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/bible/components/BibleMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "BibleMain_00.vue": {
+                  "vue_imports": [
+                    "@/features/planManage/modules/_type/ui/ReturnToPlanDashboardButton.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "BibleSub.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/bible/components/BibleSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "BibleSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "bibleModuleFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "bibleModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/agile/modules/bible/flows/bibleModuleFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "burndownChart": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "BurndownChartMain.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/burndownChart/components/BurndownChartMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "BurndownChartMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "BurndownChartSub.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/burndownChart/components/BurndownChartSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "BurndownChartSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "burndownChartFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "burndownChartModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/agile/modules/burndownChart/flows/burndownChartFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "dashboard": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "DashboardMain.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/dashboard/components/DashboardMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "DashboardMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "DashboardSub.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/dashboard/components/DashboardSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "DashboardSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "dashboardFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "dashboardModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/agile/modules/dashboard/flows/dashboardFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "dmd": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "DmdMain.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/dmd/components/DmdMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "DmdMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "DmdSub.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/dmd/components/DmdSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "DmdSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "dmdFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "dmdModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/agile/modules/dmd/flows/dmdFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "features": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "FeaturesMain.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/features/components/FeaturesMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "FeaturesMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "FeaturesSub.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/features/components/FeaturesSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "FeaturesSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "featuresFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "featuresModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/agile/modules/features/flows/featuresFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "ganttChart": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "GanttChartMain.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/ganttChart/components/GanttChartMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "GanttChartMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "GanttChartSub.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/ganttChart/components/GanttChartSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "GanttChartSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "ganttChartFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "ganttChartModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/agile/modules/ganttChart/flows/ganttChartFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "kanban": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "KanbanMain.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/kanban/components/KanbanMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "KanbanMain_00.vue": {
+                  "vue_imports": [
+                    "@/features/planManage/modules/_type/ui/ReturnToPlanDashboardButton.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "KanbanSub.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/kanban/components/KanbanSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "KanbanSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "kanbanModuleFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "kanbanModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/agile/modules/kanban/flows/kanbanModuleFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "meetings": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "MeetingsMain.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/meetings/components/MeetingsMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "MeetingsMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "MeetingsSub.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/meetings/components/MeetingsSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "MeetingsSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "meetingsFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "meetingsModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/agile/modules/meetings/flows/meetingsFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "property": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "PropertyMain.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/property/components/PropertyMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "PropertyMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "PropertySub.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/property/components/PropertySub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "PropertySub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "propertyFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "propertyModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/agile/modules/property/flows/propertyFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "prototype": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "PrototypeMain.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/prototype/components/PrototypeMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "PrototypeMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "PrototypeSub.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/prototype/components/PrototypeSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "PrototypeSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "prototypeFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "prototypeModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/agile/modules/prototype/flows/prototypeFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "risk": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "RiskMain.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/risk/components/RiskMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "RiskMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "RiskSub.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/risk/components/RiskSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "RiskSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "riskFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "riskModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/agile/modules/risk/flows/riskFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "userStory": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "UserStoryMain.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/userStory/components/UserStoryMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "UserStoryMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "UserStorySub.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/userStory/components/UserStorySub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "UserStorySub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "userStoryFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "userStoryModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/agile/modules/userStory/flows/userStoryFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "vsm": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "VsmMain.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/vsm/components/VsmMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "VsmMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "VsmSub.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/vsm/components/VsmSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "VsmSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "vsmFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "vsmModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/agile/modules/vsm/flows/vsmFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "whiteboard": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "WhiteboardMain.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/whiteboard/components/WhiteboardMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "WhiteboardMain_00.vue": {
+                  "vue_imports": [
+                    "@/features/planManage/modules/_type/ui/ReturnToPlanDashboardButton.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "WhiteboardSub.vue": {
+                  "vue_imports": [
+                    "@/features/agile/modules/whiteboard/components/WhiteboardSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "WhiteboardSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "whiteboardModuleFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "whiteboardModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/agile/modules/whiteboard/flows/whiteboardModuleFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "_type": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "registries.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/modules/moduleCard/flows/moduleFlowRegistry.ts",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/agile/modules/bible/flows/bibleModuleFlowManager.ts",
+                    "@/features/agile/modules/bible/registries/bibleModuleConfig.ts",
+                    "@/features/agile/modules/meetings/flows/meetingsFlowManager.ts",
+                    "@/features/agile/modules/meetings/registries/meetingsModuleConfig.ts",
+                    "@/features/agile/modules/userStory/flows/userStoryFlowManager.ts",
+                    "@/features/agile/modules/userStory/registries/userStoryModuleConfig.ts",
+                    "@/features/agile/modules/whiteboard/flows/whiteboardModuleFlowManager.ts",
+                    "@/features/agile/modules/whiteboard/registries/whiteboardModuleConfig.ts",
+                    "@/features/agile/modules/features/flows/featuresFlowManager.ts",
+                    "@/features/agile/modules/features/registries/featuresModuleConfig.ts",
+                    "@/features/agile/modules/prototype/flows/prototypeFlowManager.ts",
+                    "@/features/agile/modules/prototype/registries/prototypeModuleConfig.ts",
+                    "@/features/agile/modules/vsm/flows/vsmFlowManager.ts",
+                    "@/features/agile/modules/vsm/registries/vsmModuleConfig.ts",
+                    "@/features/agile/modules/dmd/flows/dmdFlowManager.ts",
+                    "@/features/agile/modules/dmd/registries/dmdModuleConfig.ts",
+                    "@/features/agile/modules/risk/flows/riskFlowManager.ts",
+                    "@/features/agile/modules/risk/registries/riskModuleConfig.ts",
+                    "@/features/agile/modules/ganttChart/flows/ganttChartFlowManager.ts",
+                    "@/features/agile/modules/ganttChart/registries/ganttChartModuleConfig.ts",
+                    "@/features/agile/modules/backlog/flows/backlogFlowManager.ts",
+                    "@/features/agile/modules/backlog/registries/backlogModuleConfig.ts",
+                    "@/features/agile/modules/kanban/flows/kanbanModuleFlowManager.ts",
+                    "@/features/agile/modules/kanban/registries/kanbanModuleConfig.ts",
+                    "@/features/agile/modules/dashboard/flows/dashboardFlowManager.ts",
+                    "@/features/agile/modules/dashboard/registries/dashboardModuleConfig.ts",
+                    "@/features/agile/modules/burndownChart/flows/burndownChartFlowManager.ts",
+                    "@/features/agile/modules/burndownChart/registries/burndownChartModuleConfig.ts",
+                    "@/features/agile/modules/property/flows/propertyFlowManager.ts",
+                    "@/features/agile/modules/property/registries/propertyModuleConfig.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            }
+          }
+        },
+        "basic": {
+          "cards": {
+            "_type": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "registries.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCardEditor/factories/cardEditorFlowRegistry.ts",
+                    "@/core/classic/cards/sideCard/factories/cardRegistry.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            }
+          },
+          "modules": {
+            "definition": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "DefinitionMain.vue": {
+                  "vue_imports": [
+                    "@/features/basic/modules/definition/components/DefinitionMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "DefinitionMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "DefinitionSub.vue": {
+                  "vue_imports": [
+                    "@/features/basic/modules/definition/components/DefinitionSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "DefinitionSub_00.vue": {
+                  "vue_imports": [
+                    "@/features/planManage/modules/_type/ui/ReturnToPlanDashboardButton.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "definitionFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "definitionModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/basic/modules/definition/flows/definitionFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "interaction": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "InteractionMain.vue": {
+                  "vue_imports": [
+                    "@/features/basic/modules/interaction/components/InteractionMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "InteractionMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "InteractionSub.vue": {
+                  "vue_imports": [
+                    "@/features/basic/modules/interaction/components/InteractionSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "InteractionSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "interactionFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "interactionModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/basic/modules/interaction/flows/interactionFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "relation": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "RelationMain.vue": {
+                  "vue_imports": [
+                    "@/features/basic/modules/relation/components/RelationMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "RelationMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "RelationSub.vue": {
+                  "vue_imports": [
+                    "@/features/basic/modules/relation/components/RelationSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "RelationSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "relationFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "relationModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/basic/modules/relation/flows/relationFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "space": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "SpaceMain.vue": {
+                  "vue_imports": [
+                    "@/features/basic/modules/space/components/SpaceMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "SpaceMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "SpaceSub.vue": {
+                  "vue_imports": [
+                    "@/features/basic/modules/space/components/SpaceSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "SpaceSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "spaceFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "spaceModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/basic/modules/space/flows/spaceFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "time": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "TimeMain.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "TimeMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "TimeSub.vue": {
+                  "vue_imports": [
+                    "@/features/basic/modules/time/components/TimeSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "TimeSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "timeFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "timeModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/basic/modules/time/flows/timeFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "_type": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "registries.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/modules/moduleCard/flows/moduleFlowRegistry.ts",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/basic/modules/time/flows/timeFlowManager.ts",
+                    "@/features/basic/modules/time/registries/timeModuleConfig.ts",
+                    "@/features/basic/modules/space/flows/spaceFlowManager.ts",
+                    "@/features/basic/modules/space/registries/spaceModuleConfig.ts",
+                    "@/features/basic/modules/definition/flows/definitionFlowManager.ts",
+                    "@/features/basic/modules/definition/registries/definitionModuleConfig.ts",
+                    "@/features/basic/modules/relation/flows/relationFlowManager.ts",
+                    "@/features/basic/modules/relation/registries/relationModuleConfig.ts",
+                    "@/features/basic/modules/interaction/flows/interactionFlowManager.ts",
+                    "@/features/basic/modules/interaction/registries/interactionModuleConfig.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            }
+          }
+        },
+        "divination": {
+          "cards": {
+            "_type": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "registries.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCardEditor/factories/cardEditorFlowRegistry.ts",
+                    "@/core/classic/cards/sideCard/factories/cardRegistry.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            }
+          },
+          "modules": {
+            "eight_characters": {
+              "components": {
+                "Eight_characters.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "composables": {
+                "useEight_characters.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "definitions": {
+                "eight_charactersType.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              }
+            },
+            "plumYi": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "PlumYiMain.vue": {
+                  "vue_imports": [
+                    "@/features/divination/modules/plumYi/components/PlumYiMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "PlumYiMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "PlumYiSub.vue": {
+                  "vue_imports": [
+                    "@/features/divination/modules/plumYi/components/PlumYiSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "PlumYiSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "plumYiFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "plumYiModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/divination/modules/plumYi/flows/plumYiFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "xiao_liu_ren": {
+              "components": {
+                "Xiao_liu_ren.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "composables": {
+                "useXiao_liu_ren.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "definitions": {
+                "xiao_liu_renType.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              }
+            },
+            "_type": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "registries.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/modules/moduleCard/flows/moduleFlowRegistry.ts",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/divination/modules/plumYi/flows/plumYiFlowManager.ts",
+                    "@/features/divination/modules/plumYi/registries/plumYiModuleConfig.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            }
+          }
+        },
+        "language": {
+          "cards": {
+            "_type": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "registries.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCardEditor/factories/cardEditorFlowRegistry.ts",
+                    "@/core/classic/cards/sideCard/factories/cardRegistry.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            }
+          },
+          "modules": {
+            "assessment": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "AssessmentMain.vue": {
+                  "vue_imports": [
+                    "@/core/classic/modules/moduleCard/layouts/ModuleFlowNavigator.vue"
+                  ],
+                  "ts_imports": [
+                    "vue"
+                  ],
+                  "style_imports": []
+                },
+                "AssessmentMain_00.vue": {
+                  "vue_imports": [
+                    "@/features/language/modules/assessment/ui/AssessmentStartButton.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "AssessmentMain_11.vue": {
+                  "vue_imports": [
+                    "@/features/language/modules/assessment/ui/AssessmentNextButton.vue",
+                    "@/features/language/modules/assessment/ui/AssessmentRetakeButton.vue"
+                  ],
+                  "ts_imports": [
+                    "vue",
+                    "@/features/language/modules/assessment/stores/languageAssessmentStore.ts",
+                    "@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts"
+                  ],
+                  "style_imports": []
+                },
+                "AssessmentMain_12.vue": {
+                  "vue_imports": [
+                    "@/features/language/modules/assessment/ui/AssessmentNextButton.vue",
+                    "@/features/language/modules/assessment/ui/AssessmentRetakeButton.vue"
+                  ],
+                  "ts_imports": [
+                    "vue",
+                    "@/features/language/modules/assessment/stores/languageAssessmentStore.ts",
+                    "@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts"
+                  ],
+                  "style_imports": []
+                },
+                "AssessmentMain_21.vue": {
+                  "vue_imports": [
+                    "@/features/language/modules/assessment/ui/AssessmentRetakeButton.vue"
+                  ],
+                  "ts_imports": [
+                    "vue",
+                    "@/features/language/modules/assessment/stores/languageAssessmentStore.ts",
+                    "@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts"
+                  ],
+                  "style_imports": []
+                },
+                "AssessmentMain_99.vue": {
+                  "vue_imports": [
+                    "@/features/language/modules/assessment/ui/AssessmentFinishButton.vue"
+                  ],
+                  "ts_imports": [
+                    "@/features/language/modules/assessment/stores/languageAssessmentStore.ts"
+                  ],
+                  "style_imports": []
+                },
+                "AssessmentSub.vue": {
+                  "vue_imports": [
+                    "@/features/language/modules/assessment/components/AssessmentSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "AssessmentSub_00.vue": {
+                  "vue_imports": [
+                    "@/features/language/modules/_type/ui/ReturnToPlanDashboardButton.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "assessmentFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "assessmentModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/language/modules/assessment/flows/assessmentFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "services": {
+                "languageAssessmentService.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "stores": {
+                "languageAssessmentStore.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "pinia",
+                    "@/features/language/modules/assessment/services/languageAssessmentService.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "ui": {
+                "AssessmentFinishButton.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": [
+                    "@/features/language/modules/_type/styles/language-manage-button"
+                  ]
+                },
+                "AssessmentNextButton.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": [
+                    "@/features/language/modules/_type/styles/language-manage-button"
+                  ]
+                },
+                "AssessmentRetakeButton.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": [
+                    "@/features/language/modules/_type/styles/language-manage-button"
+                  ]
+                },
+                "AssessmentStartButton.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts",
+                    "@/features/language/modules/assessment/stores/languageAssessmentStore.ts"
+                  ],
+                  "style_imports": [
+                    "@/features/language/modules/_type/styles/language-manage-button"
+                  ]
+                }
+              }
+            },
+            "dictionary": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "DictionaryMain.vue": {
+                  "vue_imports": [
+                    "@/features/language/modules/dictionary/components/DictionaryMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "DictionaryMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/features/language/modules/dictionary/stores/languageDictionaryStore.ts",
+                    "vue"
+                  ],
+                  "style_imports": []
+                },
+                "DictionarySub.vue": {
+                  "vue_imports": [
+                    "@/features/language/modules/dictionary/components/DictionarySub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "DictionarySub_00.vue": {
+                  "vue_imports": [
+                    "@/features/language/modules/_type/ui/ReturnToPlanDashboardButton.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "dictionaryFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "dictionaryModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/language/modules/dictionary/flows/dictionaryFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "services": {
+                "languageDictionaryService.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "stores": {
+                "languageDictionaryStore.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "pinia",
+                    "@/features/language/modules/dictionary/services/languageDictionaryService.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "learning": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "LearningMain.vue": {
+                  "vue_imports": [
+                    "@/features/language/modules/learning/components/LearningMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "LearningMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "LearningSub.vue": {
+                  "vue_imports": [
+                    "@/features/language/modules/learning/components/LearningSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "LearningSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "learningFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "learningModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/language/modules/learning/flows/learningFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "rating": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "RatingMain.vue": {
+                  "vue_imports": [
+                    "@/features/language/modules/rating/components/RatingMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "RatingMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "RatingSub.vue": {
+                  "vue_imports": [
+                    "@/features/language/modules/rating/components/RatingSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "RatingSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "ratingFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "ratingModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/language/modules/rating/flows/ratingFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "readings": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "ReadingsMain.vue": {
+                  "vue_imports": [
+                    "@/features/language/modules/readings/components/ReadingsMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "ReadingsMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "ReadingsSub.vue": {
+                  "vue_imports": [
+                    "@/features/language/modules/readings/components/ReadingsSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "ReadingsSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "readingsFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "readingsModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/language/modules/readings/flows/readingsFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "vocabulary": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "VocabularyMain.vue": {
+                  "vue_imports": [
+                    "@/core/classic/modules/moduleCard/layouts/ModuleFlowNavigator.vue"
+                  ],
+                  "ts_imports": [
+                    "vue"
+                  ],
+                  "style_imports": []
+                },
+                "VocabularyMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/features/language/modules/vocabulary/stores/languageVocabularyStore.ts",
+                    "@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts"
+                  ],
+                  "style_imports": []
+                },
+                "VocabularyMain_01.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/features/language/modules/vocabulary/stores/languageVocabularyStore.ts",
+                    "@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts"
+                  ],
+                  "style_imports": []
+                },
+                "VocabularySub.vue": {
+                  "vue_imports": [
+                    "@/features/language/modules/vocabulary/components/VocabularySub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "VocabularySub_00.vue": {
+                  "vue_imports": [
+                    "@/features/language/modules/_type/ui/ReturnToPlanDashboardButton.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "vocabularyFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "vocabularyModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/language/modules/vocabulary/flows/vocabularyFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "services": {
+                "languageVocabularyService.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "stores": {
+                "languageVocabularyStore.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "pinia",
+                    "@/features/language/modules/vocabulary/services/languageVocabularyService.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "_type": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "registries.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/modules/moduleCard/flows/moduleFlowRegistry.ts",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/language/modules/rating/flows/ratingFlowManager.ts",
+                    "@/features/language/modules/rating/registries/ratingModuleConfig.ts",
+                    "@/features/language/modules/dictionary/flows/dictionaryFlowManager.ts",
+                    "@/features/language/modules/dictionary/registries/dictionaryModuleConfig.ts",
+                    "@/features/language/modules/assessment/flows/assessmentFlowManager.ts",
+                    "@/features/language/modules/assessment/registries/assessmentModuleConfig.ts",
+                    "@/features/language/modules/vocabulary/flows/vocabularyFlowManager.ts",
+                    "@/features/language/modules/vocabulary/registries/vocabularyModuleConfig.ts",
+                    "@/features/language/modules/readings/flows/readingsFlowManager.ts",
+                    "@/features/language/modules/readings/registries/readingsModuleConfig.ts",
+                    "@/features/language/modules/learning/flows/learningFlowManager.ts",
+                    "@/features/language/modules/learning/registries/learningModuleConfig.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "ui": {
+                "ReturnToPlanDashboardButton.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/frame/panel/stores/panelStore.ts",
+                    "@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts"
+                  ],
+                  "style_imports": [
+                    "@/features/language/modules/_type/styles/language-manage-button"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "mathematics": {
+          "cards": {
+            "_type": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "registries.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCardEditor/factories/cardEditorFlowRegistry.ts",
+                    "@/core/classic/cards/sideCard/factories/cardRegistry.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            }
+          },
+          "modules": {
+            "matrix": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "MatrixMain.vue": {
+                  "vue_imports": [
+                    "@/features/mathematics/modules/matrix/components/MatrixMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "MatrixMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "MatrixSub.vue": {
+                  "vue_imports": [
+                    "@/features/mathematics/modules/matrix/components/MatrixSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "MatrixSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "matrixFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "matrixModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/mathematics/modules/matrix/flows/matrixFlowManager"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "sphere": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "SphereMain.vue": {
+                  "vue_imports": [
+                    "@/core/classic/modules/moduleCard/layouts/ModuleFlowNavigator.vue"
+                  ],
+                  "ts_imports": [
+                    "vue"
+                  ],
+                  "style_imports": []
+                },
+                "SphereMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "three",
+                    "@/features/mathematics/modules/sphere/composables/useSphere.ts",
+                    "@/features/mathematics/modules/sphere/composables/useStaticAxes.ts",
+                    "@/features/mathematics/modules/sphere/stores/sphereStore.ts"
+                  ],
+                  "style_imports": [
+                    "@/features/mathematics/modules/sphere/styles/sphere-container"
+                  ]
+                },
+                "SphereSub.vue": {
+                  "vue_imports": [
+                    "@/features/mathematics/modules/sphere/components/SphereSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "SphereSub_00.vue": {
+                  "vue_imports": [
+                    "@/features/mathematics/modules/_type/ui/ReturnToPlanDashboardButton.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "composables": {
+                "useSphere.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "three",
+                    "@/features/mathematics/modules/sphere/stores/sphereStore.ts"
+                  ],
+                  "style_imports": []
+                },
+                "useStaticAxes.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "three",
+                    "@/features/mathematics/modules/sphere/stores/sphereStore.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "sphereFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "sphereModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/mathematics/modules/sphere/flows/sphereFlowManager"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "stores": {
+                "sphereStore.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "pinia"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "_type": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "registries.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/modules/moduleCard/flows/moduleFlowRegistry.ts",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/mathematics/modules/sphere/flows/sphereFlowManager",
+                    "@/features/mathematics/modules/sphere/registries/sphereModuleConfig.ts",
+                    "@/features/mathematics/modules/matrix/flows/matrixFlowManager",
+                    "@/features/mathematics/modules/matrix/registries/matrixModuleConfig"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "ui": {
+                "ReturnToPlanDashboardButton.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/frame/panel/stores/panelStore.ts",
+                    "@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts"
+                  ],
+                  "style_imports": [
+                    "../../sphere/styles/mathematics-manage-button"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "planManage": {
+          "cards": {
+            "_type": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "registries.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCardEditor/factories/cardEditorFlowRegistry.ts",
+                    "@/core/classic/cards/sideCard/factories/cardRegistry.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            }
+          },
+          "modules": {
+            "addModule": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "AddModuleMain.vue": {
+                  "vue_imports": [
+                    "@/features/planManage/modules/addModule/components/AddModuleMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "AddModuleMain_00.vue": {
+                  "vue_imports": [
+                    "@/features/planManage/modules/_type/ui/ReturnToPlanDashboardButton.vue",
+                    "@/features/planManage/modules/_type/ui/SwitchToModuleConceptButton.vue",
+                    "@/features/planManage/modules/_type/ui/SwitchToModuleTypeButton.vue"
+                  ],
+                  "ts_imports": [
+                    "@/core/classic/plans/planCard/stores/planCardStore.ts",
+                    "@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts",
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/core/classic/modules/moduleCard/stores/moduleCardStore.ts",
+                    "@/core/classic/frame/main/services/layoutStore.ts"
+                  ],
+                  "style_imports": []
+                },
+                "AddModuleSub.vue": {
+                  "vue_imports": [
+                    "@/features/planManage/modules/addModule/components/AddModuleSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "AddModuleSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/stores/moduleCardStore.ts",
+                    "@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "addModuleModuleFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "layouts": {
+                "PlanCardContainer.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/plans/planCard/composables/usePlanContainer.ts",
+                    "@/core/classic/frame/main/composables/useMasonryLayout.ts",
+                    "@/core/classic/plans/planCard/factories/planCardRegistry.ts",
+                    "@/core/classic/plans/planCard/stores/planCardStore.ts",
+                    "@/core/classic/frame/main/composables/usePersistence.ts"
+                  ],
+                  "style_imports": [
+                    "@/core/classic/plans/planCard/styles/plan-card-container"
+                  ]
+                }
+              },
+              "registries": {
+                "addModuleModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/planManage/modules/addModule/flows/addModuleModuleFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "planDashboard": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "PlanDashboardMain.vue": {
+                  "vue_imports": [
+                    "@/features/planManage/modules/planDashboard/components/PlanDashboardMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "PlanDashboardMain_00.vue": {
+                  "vue_imports": [
+                    "@/features/planManage/modules/_type/ui/ReturnToPlanButton.vue",
+                    "@/features/planManage/modules/_type/ui/AddPlanModuleGroupButton.vue",
+                    "@/features/planManage/modules/_type/ui/AddModuleButton.vue",
+                    "@/features/planManage/modules/planDashboard/layouts/PlanModuleContainer.vue"
+                  ],
+                  "ts_imports": [
+                    "@/core/classic/plans/planCard/composables/watchPlanActiveFlag.ts",
+                    "@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts",
+                    "vue",
+                    "@/core/classic/modules/moduleCard/stores/moduleCardStore.ts",
+                    "@/core/classic/plans/planCard/stores/planCardStore.ts"
+                  ],
+                  "style_imports": []
+                },
+                "PlanDashboardSub.vue": {
+                  "vue_imports": [
+                    "@/features/planManage/modules/planDashboard/components/PlanDashboardSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "PlanDashboardSub_00.vue": {
+                  "vue_imports": [
+                    "@/features/planManage/modules/planDashboard/layouts/PlanCardEditor.vue",
+                    "@/core/classic/modules/moduleCard/layouts/ModuleCardEditor.vue"
+                  ],
+                  "ts_imports": [
+                    "@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts",
+                    "vue"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "planDashboardModuleFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "layouts": {
+                "PlanCardEditor.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/plans/planCard/definitions/planTypes.ts",
+                    "vue",
+                    "@/core/classic/plans/planCard/stores/planCardStore.ts",
+                    "vue",
+                    "@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts",
+                    "@/core/classic/plans/planCard/composables/usePlanCardEditor.ts"
+                  ],
+                  "style_imports": [
+                    "@/core/classic/plans/planCard/styles/plan-card-editor",
+                    "../styles/ui-button",
+                    "../styles/ui-icon",
+                    "../styles/container-tags",
+                    "../styles/ui-text"
+                  ]
+                },
+                "PlanModuleContainer.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue-i18n",
+                    "@/core/classic/modules/moduleCard/factories/moduleCardRegistry.ts",
+                    "@/core/classic/modules/moduleCard/composables/useModuleGroup.ts",
+                    "@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts",
+                    "@/core/classic/modules/moduleCard/stores/moduleCardStore.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "planDashboardModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/planManage/modules/planDashboard/flows/planDashboardModuleFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "planManager": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "PlanManagerMain.vue": {
+                  "vue_imports": [
+                    "@/features/planManage/modules/planManager/components/PlanManagerMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "PlanManagerMain_00.vue": {
+                  "vue_imports": [
+                    "@/features/planManage/modules/addModule/layouts/PlanCardContainer.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "PlanManagerSub.vue": {
+                  "vue_imports": [
+                    "@/features/planManage/modules/planManager/components/PlanManagerSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "PlanManagerSub_00.vue": {
+                  "vue_imports": [
+                    "@/features/planManage/modules/_type/ui/MoveToWelcomeButton.vue",
+                    "@/features/planManage/modules/_type/ui/AddPlanButton.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "planManageModuleFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "planManageModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/planManage/modules/planManager/flows/planManageModuleFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "settings": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "SettingsMain.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "SettingsMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "SettingsSub.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "SettingsSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "settingsFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "settingsModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/planManage/modules/settings/flows/settingsFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "welcome": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "WelcomePageMain.vue": {
+                  "vue_imports": [
+                    "@/core/classic/modules/moduleCard/layouts/ModuleFlowNavigatorWithButtons.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "WelcomePageMain_00.vue": {
+                  "vue_imports": [
+                    "@/features/planManage/modules/_type/ui/AddPlanButton.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "WelcomePageMain_01.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "WelcomePageMain_02.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "WelcomePageSub.vue": {
+                  "vue_imports": [
+                    "@/core/classic/modules/moduleCard/layouts/ModuleFlowNavigatorWithButtons.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "WelcomePageSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "WelcomePageSub_01.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "welcomeModuleFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "welcomeModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/planManage/modules/welcome/flows/welcomeModuleFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "_type": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "registries.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/modules/moduleCard/flows/moduleFlowRegistry.ts",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/planManage/modules/welcome/flows/welcomeModuleFlowManager.ts",
+                    "@/features/planManage/modules/welcome/registries/welcomeModuleConfig.ts",
+                    "@/features/planManage/modules/planManager/flows/planManageModuleFlowManager.ts",
+                    "@/features/planManage/modules/planManager/registries/planManageModuleConfig.ts",
+                    "@/features/planManage/modules/planDashboard/flows/planDashboardModuleFlowManager.ts",
+                    "@/features/planManage/modules/planDashboard/registries/planDashboardModuleConfig.ts",
+                    "@/features/planManage/modules/addModule/flows/addModuleModuleFlowManager.ts",
+                    "@/features/planManage/modules/addModule/registries/addModuleModuleConfig.ts",
+                    "@/features/planManage/modules/settings/flows/settingsFlowManager.ts",
+                    "@/features/planManage/modules/settings/registries/settingsModuleConfig.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "ui": {
+                "AddModuleButton.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/frame/panel/stores/panelStore.ts",
+                    "@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts"
+                  ],
+                  "style_imports": [
+                    "@/features/planmanage/modules/_type/styles/plan-manage-button"
+                  ]
+                },
+                "AddPlanButton.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/plans/planCard/stores/planCardStore.ts",
+                    "@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts",
+                    "@/core/classic/frame/panel/stores/panelStore.ts"
+                  ],
+                  "style_imports": [
+                    "@/features/planmanage/modules/_type/styles/plan-manage-button"
+                  ]
+                },
+                "AddPlanModuleGroupButton.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/modules/moduleCard/stores/moduleCardStore.ts",
+                    "@/core/classic/plans/planCard/stores/planCardStore.ts",
+                    "@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts",
+                    "vue",
+                    "vue-i18n"
+                  ],
+                  "style_imports": [
+                    "@/features/planmanage/modules/_type/styles/plan-manage-button"
+                  ]
+                },
+                "MoveToWelcomeButton.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts",
+                    "@/core/classic/frame/panel/stores/panelStore.ts"
+                  ],
+                  "style_imports": [
+                    "@/features/planmanage/modules/_type/styles/plan-manage-button"
+                  ]
+                },
+                "ReturnToPlanButton.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts",
+                    "@/core/classic/frame/panel/stores/panelStore.ts"
+                  ],
+                  "style_imports": [
+                    "@/features/planmanage/modules/_type/styles/plan-manage-button"
+                  ]
+                },
+                "ReturnToPlanDashboardButton.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/frame/panel/stores/panelStore.ts",
+                    "@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts"
+                  ],
+                  "style_imports": [
+                    "@/features/planmanage/modules/_type/styles/plan-manage-button"
+                  ]
+                },
+                "SwitchToModuleConceptButton.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": [
+                    "@/features/planmanage/modules/_type/styles/plan-manage-button"
+                  ]
+                },
+                "SwitchToModuleTypeButton.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": [
+                    "@/features/planmanage/modules/_type/styles/plan-manage-button"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "relax": {
+          "cards": {
+            "wordle": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "WordleCard.vue": {
+                  "vue_imports": [
+                    "@/core/classic/cards/sideCard/components/SideCard.vue"
+                  ],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCardEditor/composables/useSideCardEditor.ts",
+                    "@/features/relax/cards/wordle/definitions/cardDataType.ts",
+                    "vue"
+                  ],
+                  "style_imports": []
+                },
+                "WordleFlow.vue": {
+                  "vue_imports": [
+                    "@/core/classic/cards/sideCardEditor/layouts/SideCardEditorFlowNavigator.vue"
+                  ],
+                  "ts_imports": [
+                    "vue",
+                    "@/features/relax/cards/wordle/definitions/cardDataType.ts",
+                    "@/features/relax/cards/_type/definitions/cardType.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "definitions": {
+                "cardDataType.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/features/relax/cards/_type/definitions/cardDataType.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "_type": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "RelaxCardSelector.vue": {
+                  "vue_imports": [
+                    "@/core/classic/cards/sideCardEditor/layouts/SideCardEditorFlowSelector.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "definitions": {
+                "cardDataType.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCard/definitions/cardDataType.ts",
+                    "@/features/relax/cards/_type/definitions/cardType.ts"
+                  ],
+                  "style_imports": []
+                },
+                "cardType.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "relaxCardFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts",
+                    "@/features/relax/cards/_type/definitions/cardType.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "registries.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCardEditor/factories/cardEditorFlowRegistry.ts",
+                    "@/core/classic/cards/sideCard/factories/cardRegistry.ts",
+                    "@/features/relax/cards/_type/flows/relaxCardFlowManager.ts",
+                    "@/features/relax/cards/_type/registries/relaxCardConfig.ts"
+                  ],
+                  "style_imports": []
+                },
+                "relaxCardConfig.ts": {
+                  "vue_imports": [
+                    "@/features/relax/cards/wordle/components/WordleCard.vue",
+                    "@/core/classic/cards/sideCard/components/SideCard.vue"
+                  ],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/cards/sideCard/factories/cardRegistry.ts",
+                    "@/features/relax/cards/_type/definitions/cardType.ts",
+                    "@/features/relax/cards/wordle/definitions/cardDataType.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            }
+          },
+          "modules": {
+            "_type": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "definitions": {
+                "cardDataType.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/features/relax/cards/_type/definitions/cardDataType.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "relaxModuleFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "registries.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/modules/moduleCard/flows/moduleFlowRegistry.ts",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            }
+          }
+        },
+        "sample": {
+          "cards": {
+            "sample1": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "Sample1Card.vue": {
+                  "vue_imports": [
+                    "@/core/classic/cards/sideCard/components/SideCard.vue"
+                  ],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCardEditor/composables/useSideCardEditor.ts",
+                    "@/features/sample/cards/sample1/definitions/cardDataType.ts"
+                  ],
+                  "style_imports": []
+                },
+                "Sample1Flow.vue": {
+                  "vue_imports": [
+                    "@/core/classic/cards/sideCardEditor/layouts/SideCardEditorFlowNavigator.vue"
+                  ],
+                  "ts_imports": [
+                    "vue",
+                    "@/features/sample/cards/sample1/definitions/cardDataType.ts",
+                    "@/features/sample/cards/_type/definitions/cardType.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "definitions": {
+                "cardDataType.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/features/sample/cards/_type/definitions/cardDataType.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "cardEditorFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/features/sample/cards/_type/flows/cardEditorFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "sample2": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "Sample2Card.vue": {
+                  "vue_imports": [
+                    "@/core/classic/cards/sideCard/components/SideCard.vue"
+                  ],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCardEditor/composables/useSideCardEditor.ts",
+                    "@/features/sample/cards/sample2/definitions/cardDataType.ts"
+                  ],
+                  "style_imports": []
+                },
+                "Sample2Flow.vue": {
+                  "vue_imports": [
+                    "@/core/classic/cards/sideCardEditor/layouts/SideCardEditorFlowNavigator.vue"
+                  ],
+                  "ts_imports": [
+                    "vue",
+                    "@/features/sample/cards/sample2/definitions/cardDataType.ts",
+                    "@/features/sample/cards/_type/definitions/cardType.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "definitions": {
+                "cardDataType.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/features/sample/cards/_type/definitions/cardDataType.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "cardEditorFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/features/sample/cards/_type/flows/cardEditorFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "sample3": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "Sample3Card.vue": {
+                  "vue_imports": [
+                    "@/core/classic/cards/sideCard/components/SideCard.vue"
+                  ],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCardEditor/composables/useSideCardEditor.ts",
+                    "@/features/sample/cards/sample3/definitions/cardDataType.ts"
+                  ],
+                  "style_imports": []
+                },
+                "Sample3Flow_1.vue": {
+                  "vue_imports": [
+                    "@/core/classic/cards/sideCardEditor/layouts/SideCardEditorFlowNavigator.vue"
+                  ],
+                  "ts_imports": [
+                    "vue",
+                    "@/features/sample/cards/_type/definitions/cardType.ts",
+                    "@/features/sample/cards/sample3/definitions/cardDataType.ts",
+                    "@/core/classic/cards/sideCardEditor/stores/cardEditorFormStore.ts"
+                  ],
+                  "style_imports": []
+                },
+                "Sample3Flow_2.vue": {
+                  "vue_imports": [
+                    "@/core/classic/cards/sideCardEditor/layouts/SideCardEditorFlowNavigator.vue"
+                  ],
+                  "ts_imports": [
+                    "vue",
+                    "@/features/sample/cards/_type/definitions/cardType.ts",
+                    "@/features/sample/cards/sample3/definitions/cardDataType.ts",
+                    "@/core/classic/cards/sideCardEditor/stores/cardEditorFormStore.ts"
+                  ],
+                  "style_imports": []
+                },
+                "Sample3Flow_3.vue": {
+                  "vue_imports": [
+                    "@/core/classic/cards/sideCardEditor/layouts/SideCardEditorFlowNavigator.vue"
+                  ],
+                  "ts_imports": [
+                    "vue",
+                    "@/features/sample/cards/sample3/definitions/cardDataType.ts",
+                    "@/features/sample/cards/_type/definitions/cardType.ts",
+                    "@/core/classic/cards/sideCardEditor/stores/cardEditorFormStore.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "definitions": {
+                "cardDataType.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/features/sample/cards/_type/definitions/cardDataType.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "cardEditorFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/features/sample/cards/_type/flows/cardEditorFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "_type": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "SampleCardSelector.vue": {
+                  "vue_imports": [
+                    "@/core/classic/cards/sideCardEditor/layouts/SideCardEditorFlowSelector.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "definitions": {
+                "cardDataType.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCard/definitions/cardDataType.ts",
+                    "./cardType.ts"
+                  ],
+                  "style_imports": []
+                },
+                "cardType.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "cardEditorFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts",
+                    "@/features/sample/cards/_type/definitions/cardType.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "cardRegistry.ts": {
+                  "vue_imports": [
+                    "@/features/sample/cards/sample1/components/Sample1Card.vue",
+                    "@/features/sample/cards/sample2/components/Sample2Card.vue",
+                    "@/features/sample/cards/sample3/components/Sample3Card.vue",
+                    "@/core/classic/cards/sideCard/components/SideCard.vue"
+                  ],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/cards/sideCard/factories/cardRegistry.ts",
+                    "@/features/sample/cards/_type/definitions/cardType.ts",
+                    "@/features/sample/cards/_type/definitions/cardDataType.ts",
+                    "@/features/sample/cards/sample1/definitions/cardDataType.ts",
+                    "@/features/sample/cards/sample2/definitions/cardDataType.ts",
+                    "@/features/sample/cards/sample3/definitions/cardDataType.ts"
+                  ],
+                  "style_imports": []
+                },
+                "registries.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCardEditor/factories/cardEditorFlowRegistry.ts",
+                    "@/core/classic/cards/sideCard/factories/cardRegistry.ts",
+                    "@/features/sample/cards/_type/flows/cardEditorFlowManager.ts",
+                    "@/features/sample/cards/_type/registries/cardRegistry.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            }
+          },
+          "modules": {
+            "sample": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "Sample.vue": {
+                  "vue_imports": [
+                    "@/core/classic/modules/moduleCard/layouts/ModuleFlowNavigatorWithButtons.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "SampleStep1.vue": {
+                  "vue_imports": [
+                    "@/features/planManage/modules/_type/ui/ReturnToPlanDashboardButton.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "SampleStep2.vue": {
+                  "vue_imports": [
+                    "@/features/planManage/modules/_type/ui/ReturnToPlanDashboardButton.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "SampleStep3.vue": {
+                  "vue_imports": [
+                    "@/features/planManage/modules/_type/ui/ReturnToPlanDashboardButton.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "SampleSub.vue": {
+                  "vue_imports": [
+                    "@/core/classic/modules/moduleCard/layouts/ModuleFlowNavigatorWithButtons.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "SampleSubStep1.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/frame/panel/stores/panelStore.ts"
+                  ],
+                  "style_imports": []
+                },
+                "SampleSubStep2.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/frame/panel/stores/panelStore.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "sampleModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/sample/modules/_type/flows/sampleModuleFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "_type": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "sampleModuleFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "registries.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/modules/moduleCard/flows/moduleFlowRegistry.ts",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/sample/modules/_type/flows/sampleModuleFlowManager.ts",
+                    "@/features/sample/modules/sample/registries/sampleModuleConfig.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            }
+          }
+        },
+        "timer": {
+          "cards": {
+            "alarm": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "AlarmCard.vue": {
+                  "vue_imports": [
+                    "@/core/classic/cards/sideCard/components/SideCard.vue"
+                  ],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/cards/sideCardEditor/composables/useSideCardEditor.ts",
+                    "@/features/timer/cards/alarm/definitions/cardDataType.ts"
+                  ],
+                  "style_imports": []
+                },
+                "AlarmFlow.vue": {
+                  "vue_imports": [
+                    "@/core/classic/cards/sideCardEditor/layouts/SideCardEditorFlowNavigator.vue"
+                  ],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/frame/main/utils/timeUtils.ts",
+                    "@/features/timer/cards/alarm/definitions/cardDataType.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "definitions": {
+                "cardDataType.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/features/timer/cards/_type/definitions/cardDataType.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "count": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "CountCard.vue": {
+                  "vue_imports": [
+                    "@/core/classic/cards/sideCard/components/SideCard.vue"
+                  ],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/cards/sideCardEditor/composables/useSideCardEditor.ts",
+                    "@/features/timer/cards/count/definitions/cardDataType.ts"
+                  ],
+                  "style_imports": []
+                },
+                "CountFlow.vue": {
+                  "vue_imports": [
+                    "@/core/classic/cards/sideCardEditor/layouts/SideCardEditorFlowNavigator.vue"
+                  ],
+                  "ts_imports": [
+                    "vue",
+                    "@/features/timer/cards/count/definitions/cardDataType.ts",
+                    "@/core/classic/frame/main/utils/timeUtils.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "definitions": {
+                "cardDataType.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/features/timer/cards/_type/definitions/cardDataType.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "countdown": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "CountdownCard.vue": {
+                  "vue_imports": [
+                    "@/core/classic/cards/sideCard/components/SideCard.vue"
+                  ],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/cards/sideCardEditor/composables/useSideCardEditor.ts",
+                    "@/features/timer/cards/countdown/definitions/cardDataType.ts"
+                  ],
+                  "style_imports": []
+                },
+                "CountdownFlow.vue": {
+                  "vue_imports": [
+                    "@/core/classic/cards/sideCardEditor/layouts/SideCardEditorFlowNavigator.vue"
+                  ],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/frame/main/utils/timeUtils.ts",
+                    "@/features/timer/cards/_type/definitions/cardType.ts",
+                    "@/features/timer/cards/countdown/definitions/cardDataType.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "definitions": {
+                "cardDataType.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/features/timer/cards/_type/definitions/cardDataType.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "_type": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "TimerCardSelector.vue": {
+                  "vue_imports": [
+                    "@/core/classic/cards/sideCardEditor/layouts/SideCardEditorFlowSelector.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "definitions": {
+                "cardDataType.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCard/definitions/cardDataType.ts",
+                    "@/features/timer/cards/_type/definitions/cardType.ts"
+                  ],
+                  "style_imports": []
+                },
+                "cardType.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "timerCardFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts",
+                    "@/features/timer/cards/_type/definitions/cardType.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "cardRegistry.ts": {
+                  "vue_imports": [
+                    "@/features/timer/cards/alarm/components/AlarmCard.vue",
+                    "@/features/timer/cards/count/components/CountCard.vue",
+                    "@/features/timer/cards/countdown/components/CountdownCard.vue",
+                    "@/core/classic/cards/sideCard/components/SideCard.vue"
+                  ],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/cards/sideCard/factories/cardRegistry.ts",
+                    "@/features/timer/cards/_type/definitions/cardType.ts",
+                    "@/features/timer/cards/alarm/definitions/cardDataType.ts",
+                    "@/features/timer/cards/count/definitions/cardDataType.ts",
+                    "@/features/timer/cards/countdown/definitions/cardDataType.ts",
+                    "@/features/timer/cards/_type/definitions/cardDataType.ts"
+                  ],
+                  "style_imports": []
+                },
+                "registries.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCardEditor/factories/cardEditorFlowRegistry.ts",
+                    "@/features/timer/cards/_type/flows/timerCardFlowManager.ts",
+                    "@/core/classic/cards/sideCard/factories/cardRegistry.ts",
+                    "@/features/timer/cards/_type/registries/cardRegistry.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            }
+          },
+          "modules": {
+            "timer": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "TimerMain.vue": {
+                  "vue_imports": [
+                    "@/features/timer/modules/timer/components/TimerMain_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "TimerMain_00.vue": {
+                  "vue_imports": [
+                    "@/features/planManage/modules/_type/ui/ReturnToPlanDashboardButton.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "TimerSub.vue": {
+                  "vue_imports": [
+                    "@/features/timer/modules/timer/components/TimerSub_00.vue"
+                  ],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "TimerSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "timerModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/timer/modules/_type/flows/timerFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "_type": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "timerFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                },
+                "timerModuleFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "registries.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/modules/moduleCard/flows/moduleFlowRegistry.ts",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/timer/modules/_type/flows/timerFlowManager.ts",
+                    "@/features/timer/modules/timer/registries/timerModuleConfig.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            }
+          }
+        },
+        "workshop": {
+          "cards": {
+            "_type": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "registries.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/cards/sideCardEditor/factories/cardEditorFlowRegistry.ts",
+                    "@/core/classic/cards/sideCard/factories/cardRegistry.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            }
+          },
+          "modules": {
+            "connection": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "ConnectionMain.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "ConnectionMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "ConnectionSub.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "ConnectionSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "connectionFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "connectionModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/workshop/modules/connection/flows/connectionFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "function": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "FunctionMain.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "FunctionMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "FunctionSub.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "FunctionSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "functionFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "functionModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/workshop/modules/function/flows/functionFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "thought": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "components": {
+                "ThoughtMain.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "ThoughtMain_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "ThoughtSub.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                },
+                "ThoughtSub_00.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "flows": {
+                "thoughtFlowManager.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "vue",
+                    "@/core/classic/frame/main/definitions/flowManagerTypes.ts"
+                  ],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "thoughtModuleConfig.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "vue",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/workshop/modules/thought/flows/thoughtFlowManager.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            },
+            "_type": {
+              "avatar": {
+                "Avatar.vue": {
+                  "vue_imports": [],
+                  "ts_imports": [],
+                  "style_imports": []
+                }
+              },
+              "registries": {
+                "registries.ts": {
+                  "vue_imports": [],
+                  "ts_imports": [
+                    "@/core/classic/modules/moduleCard/flows/moduleFlowRegistry.ts",
+                    "@/core/classic/modules/moduleCard/factories/moduleRegistry.ts",
+                    "@/features/workshop/modules/thought/flows/thoughtFlowManager.ts",
+                    "@/features/workshop/modules/thought/registries/thoughtModuleConfig.ts",
+                    "@/features/workshop/modules/connection/flows/connectionFlowManager.ts",
+                    "@/features/workshop/modules/connection/registries/connectionModuleConfig.ts",
+                    "@/features/workshop/modules/function/flows/functionFlowManager.ts",
+                    "@/features/workshop/modules/function/registries/functionModuleConfig.ts"
+                  ],
+                  "style_imports": []
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

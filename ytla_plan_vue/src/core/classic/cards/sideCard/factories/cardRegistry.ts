@@ -20,3 +20,11 @@ export const createCardRegistry = <T extends string>(
 export const getCardRegistry = (namespace: CardType): sideCardRegistry | undefined => {
   return sideCardRegistryStore.get(namespace)
 }
+
+export const getAllCardRegistries = (): Map<string, sideCardRegistry> => {
+  return sideCardRegistryStore
+}
+
+export const clearAllCardRegistries = (): void => {
+  sideCardRegistryStore.clear()
+}
