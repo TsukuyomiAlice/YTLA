@@ -15,7 +15,7 @@ version 1.0
 
 Backend Language and Framework: Python-Flask  
 Compatible YTLA Core Version: **classic**  
-Last Updated: 2026-03-18
+Last Updated: 2026-03-20
 
 ## Concept
 
@@ -34,7 +34,7 @@ This module includes documentation standards, templates, and tools to help devel
             - en-US
                 - readme.md
         - rules
-            - rule.md
+            - rule_readme.md
     - api
     - ai_tools
     - caller

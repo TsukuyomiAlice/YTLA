@@ -70,6 +70,10 @@ def get_type_level_template(language: str, type_name: str, core_version='classic
 
 {type_template['dir_structure_text']}
 
+{type_template['history']}
+
+{type_template['history_text'].format(date_string=date_string)}
+
 """
 
 
@@ -112,6 +116,10 @@ def get_subtype_level_template(language: str, feature_name: str, subtype_name: s
 {subtype_template['dir_structure']}
 
 {subtype_template['dir_structure_text']}
+
+{subtype_template['history']}
+
+{subtype_template['history_text'].format(date_string=date_string)}
 
 
 """

@@ -15,7 +15,7 @@ version 1.0
 
 后端语言及开发框架: Python-Flask  
 适用YTLA core版本: **classic**  
-文件更新日期: 2026-03-18
+文件更新日期: 2026-03-20
 
 ## 概念
 
@@ -34,7 +34,7 @@ version 1.0
             - en-US
                 - readme.md
         - rules
-            - rule.md
+            - rule_readme.md
     - api
     - ai_tools
     - caller
