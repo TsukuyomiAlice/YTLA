@@ -1,0 +1,18 @@
+- [x] Checkpoint 1: rule_harness_instructions.md 中 origin.md 规范已更新，包含 `# Dialogue [序号]` 说明
+- [x] Checkpoint 2: rule_harness_instructions.md 中 origin.md 规范包含完整的多轮对话示例
+- [x] Checkpoint 3: rule_harness_instructions.md 中 origin.md 规范包含头部信息说明（仅限 spec 模式）
+- [x] Checkpoint 4: rule_harness_instructions.md 中 origin.md 规范包含头部信息示例
+- [x] Checkpoint 5: rule_harness_instructions.md 中 actions.md 规范已更新，包含 `### USER：Dialogue [序号]` 说明
+- [x] Checkpoint 6: rule_harness_instructions.md 中 actions.md 规范包含 Planning Stage 和 Action Stage 两个场景的示例
+- [x] Checkpoint 7: rule_harness_instructions.md 中已添加 Planning Stage 一次性记录规范
+- [x] Checkpoint 8: rule_harness_instructions.md 中已添加 Action Stage 记录规范（通常分开记录，但相同目标可合并）
+- [x] Checkpoint 9: rule_harness_instructions.md 中包含 Planning Stage 一次性记录示例
+- [x] Checkpoint 10: rule_harness_instructions.md 中包含 Action Stage 分开记录和合并记录示例
+- [x] Checkpoint 11: rule_harness_instructions.md 中已添加 todo 列表操作记录规范
+- [x] Checkpoint 12: rule_harness_instructions.md 中包含 todo 列表操作记录示例
+- [x] Checkpoint 13: rule_harness_instructions.md 中已添加通知用户操作记录规范
+- [x] Checkpoint 14: rule_harness_instructions.md 中包含通知用户操作记录示例
+- [x] Checkpoint 15: rule_harness_instructions.md 中已添加追加需求记录流程的专门说明
+- [x] Checkpoint 16: rule_harness_instructions.md 的文档版本号和最后更新日期已更新
+- [x] Checkpoint 17: 所有 P0 任务已完成
+- [x] Checkpoint 18: 所有验收标准已满足

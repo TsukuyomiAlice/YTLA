@@ -4,7 +4,7 @@
 
 如果本文档内容与其它文档中存在冲突，以本文档要求为优先.
 
-**当你看到这份文档并且正处于/spec或/plan模式时，部分文件指令的执行方式必须遵循本文档的要求执行**
+**当你看到这份文档并且正处于/spec或/plan模式时，必须即刻开始 Start Stage**
 
 在2.2章节同样存在以下内容
 
@@ -31,18 +31,20 @@
 - **规划先行** - 先规划再执行，确保变更可控
 - **子代理协作** - 合理使用子代理实现任务分解和并行处理
 - **验证驱动** - 每个任务都有明确的验收标准
+- **过程可追溯** - 通过 actions.md 记录完整的执行过程
 
 ## 2. Harness 模式启动引导
 
 ### 2.1 启动引导流程
 
-在进入 Harness 模式前，AI 必须先思考并明确：
+在读取到 rule\_harness\_instructions.md 文档后，即刻开始 **Start Stage**：
 
-1. **目标模组位置** - 确认用户指定的目标模组目录路径
-2. **目标生成文件的位置** - 确认需要生成或更新的文档/文件位于哪个目录
-3. **任务类型** - 确定是明确类别文件任务还是跨多个不同类别文件任务
-4. **PRD 目录构建验证** - 在创建任何文件前，先检查并构建目标 docs/tasks 目录
-5. **文档存放规则** - 根据任务类型确定 PRD 文档的存放位置
+**Start Stage（启动阶段）**：
+1. **思考分析** - 理解用户需求，确定目标模组位置和任务类型
+2. **探索代码库** - 分析当前代码库状态
+3. **检索已有 PRD** - 在目标模组的 docs/tasks 区域内查找是否已存在相关 PRD 文档
+4. **创建 PRD 目录** - 验证并创建目标 docs/tasks 目录
+5. **进入 Planning Stage** - 建立 PRD 目录后进入规划阶段
 
 ### 2.2 PRD 文档位置规定
 
@@ -55,9 +57,9 @@
 
 **示例**：
 
-- 目标模组：`\YTLA\ytla_plan\features\feature_maker\modules\documents`
+- 目标模组：`\[项目路径]/\[目标模组路径]`
 - 任务：维护 readme.md 文档
-- 正确的 PRD 目录：`\YTLA\ytla_plan\features\feature_maker\modules\documents\docs\tasks\PRD_20260320_readme_维护documents模块readme文档\`
+- 正确的 PRD 目录：`\[项目路径]/\[目标模组路径]/docs/tasks/PRD_20260320_readme_维护documents模块readme文档\`
 
 **错误示例**：
 
@@ -66,25 +68,35 @@
 
 ## 3. 工作模式
 
-### 3.1 Spec Mode（规划模式）
+### 3.1 三个阶段概述
+
+Harness 模式包含三个连续的阶段：
+
+1. **Start Stage（启动阶段）** - 检索已有 PRD、创建 PRD 目录
+2. **Planning Stage（规划阶段）** - 生成规划文档（origin.md、spec.md、tasks.md、checklist.md、actions.md）
+3. **Action Stage（执行阶段）** - 执行 tasks.md 中的任务
+
+**重要**：每次执行新的文件操作之前，必须先完成 actions.md 的记录（更新 actions.md 本身不用记录，避免陷入自身死循环）
+
+### 3.2 Spec Mode（规划模式）
 
 **适用场景**：需要详细规划的任务，如新增功能、重构、文档维护等
 
-**工作流程**：
+**工作流程**（Planning Stage）：
 
-1. 分析当前代码库状态
-2. **验证并创建 PRD 目录** - 确保目录存在于正确位置
-3. 生成 PRD (spec.md) - 产品需求文档
-4. 生成 Implementation Plan (tasks.md) - 实现计划
-5. 生成 Verification Checklist (checklist.md) - 验证清单
+1. 生成 Original Requirement (origin.md) - 原始需求文档
+2. 生成 PRD (spec.md) - 产品需求文档
+3. 生成 Implementation Plan (tasks.md) - 实现计划
+4. 生成 Verification Checklist (checklist.md) - 验证清单
+5. 生成 Action Record (actions.md) - 行动记录
 6. 通知用户审查规划文档
-7. 等待用户批准后进入 Agent Mode
+7. 等待用户批准后进入 Action Stage
 
-### 3.2 Agent Mode（执行模式）
+### 3.3 Agent Mode（执行模式）
 
 **适用场景**：已规划好的任务，或简单的单步任务
 
-**工作流程**：
+**工作流程**（Action Stage）：
 
 1. 选择优先级最高的待处理任务
 2. 标记任务为进行中
@@ -95,7 +107,59 @@
 
 ## 4. 规划文档规范
 
-### 4.1 spec.md (Product Requirements Document) 规范
+### 4.1 origin.md (Original Requirements Document) 规范
+
+**必填章节**：  
+- 头部信息
+- 多轮对话记录（每个对话使用 `# Dialogue [序号]` 作为标题）
+- User Requirements - 用户需求
+- Analyze - 需求分析 
+- Evaluation Result - 预估结果
+
+**格式要求**：
+
+```markdown
+Harness Instructions file version: [输入的harness文件的文件名及版本]  
+Author: [harness文件的作者名]
+
+# Original Requirement - 原始需求
+
+# Dialogue 1
+
+## User Requirement: 
+[用户输入的原始内容]
+
+## Analyze：
+[对用户输入内容的需求分析过程，包含以下内容]
+**Given**： [原文中提及的资源]
+**Target**： [用户提到的目标，或用户的指令要求]
+**Evidence**： [用以指明用户实际需求的具体内容]
+
+## Evaluation Result：
+[用户希望获得的产物列表，包含以下内容]
+### [产物名]： [产物的形式]
+
+# Dialogue 2
+
+## User Requirement: 
+[用户追加的需求内容]
+
+## Analyze：
+[对追加需求的分析]
+**Given**： [相关资源]
+**Target**： [追加的目标]
+**Evidence**： [追加需求的具体内容]
+
+## Evaluation Result：
+[追加需求的产物列表]
+```
+
+**多轮对话说明**：
+- 原始需求作为 Dialogue 1，后续追加需求依次编号为 Dialogue 2、Dialogue 3 等
+- 每个 Dialogue 都包含完整的 User Requirement、Analyze 和 Evaluation Result 章节
+- 对话序号从 1 开始递增
+
+### 4.2 spec.md (Product Requirements Document) 规范
 
 **必填章节**：
 
@@ -121,7 +185,7 @@
 - **Notes**: [补充说明]
 ```
 
-### 4.2 tasks.md (Implementation Plan) 规范
+### 4.3 tasks.md (Implementation Plan) 规范
 
 **任务格式要求**：
 
@@ -145,7 +209,7 @@
 - **P1** - 重要但不阻塞，次要功能
 - **P2** - 锦上添花，优化，完善
 
-### 4.3 checklist.md (Verification Checklist) 规范
+### 4.4 checklist.md (Verification Checklist) 规范
 
 **格式要求**：
 
@@ -161,6 +225,146 @@
 - 避免模糊的描述
 - 按逻辑顺序排列
 
+### 4.5 actions.md (Action Record) 规范
+
+**文档用途**：用于记录执行 spec 模式的完整过程，包括思考、目标、工具使用和文件操作
+
+**必填章节**：
+- Start Stage（启动阶段）
+- Planning Stage（规划阶段）
+- Action Stage（执行阶段）
+
+**行动记录项格式要求**：
+
+```markdown
+### ACT-[序号]:
+- **Thought**: [思考内容]
+- **Target**: [执行目标]
+- **Tool**: [使用工具]
+- **Touches**: [读取/生成/修改/删除的文件列表，涉及的实际对象等]
+```
+
+**记录规则**：
+- 每次执行新的文件操作之前，必须先完成 actions.md 的记录
+- **重要**：更新 actions.md 本身的操作不需要记录，避免陷入自身死循环
+- Thought 应该真实记录当时的思考过程
+- Target 应该明确具体
+- Tool 应该列出使用的工具名称
+- Touches 应该列出涉及的文件的完整路径
+
+**用户输入记录规则**：
+- 在 Planning Stage 和 Action Stage 中，用户输入使用 `### USER：Dialogue [序号]` 格式插入
+- 用户输入记录后，继续记录后续操作
+- 对话序号与 origin.md 中的对话序号保持一致
+
+**Planning Stage 一次性记录规则**：
+- 在 Start Stage 完成后，可以一次性记录 origin.md、spec.md、tasks.md、checklist.md 的生成操作
+- 一次性记录后可以连续生成这些文件
+- 一次性记录仅适用于这四个规划文档的初始生成
+
+**Action Stage 记录规则**：
+- Action Stage 通常保持分开记录，每次操作单独记录
+- 相同目标的操作可以合并记录，不限阶段
+- 合并记录时，Thought、Target、Tool、Touches 都应该清晰地反映多个操作
+
+**todo 列表操作记录规则**：
+- todo 列表操作（如 TodoWrite 更新任务状态）也需要记录到 actions.md
+- 使用标准的 ACT- 记录格式
+
+**通知用户操作记录规则**：
+- 通知用户操作也需要记录到 actions.md
+- 使用标准的 ACT- 记录格式
+
+**子代理操作记录规则**：
+- 子代理操作也需要记录到 actions.md
+- 使用标准的 ACT- 记录格式
+
+**相同目标操作合并规则**：
+- 如果多个操作针对相同目标，可以合并记录
+- 合并记录不限阶段（Planning Stage 或 Action Stage 都可以）
+- 合并记录时，Thought 应该说明多个操作的共同目标
+- Tool 应该列出所有使用的工具
+- Touches 应该列出所有涉及的文件
+
+**示例**：
+
+```markdown
+# Action Record - 行动记录
+
+## Start Stage (启动阶段)
+
+### ACT-1:
+- **Thought**: 用户发送了 /spec 命令，需要先探索代码库了解当前状态
+- **Target**: 查看目标模组的目录结构
+- **Tool**: LS
+- **Touches**: [目标模组路径]
+
+---
+
+## Planning Stage (规划阶段)
+
+### USER：Dialogue 1
+[用户原始输入内容]
+
+### ACT-2:
+- **Thought**: Start Stage 已完成，现在一次性记录并生成所有规划文档
+- **Target**: 创建 PRD 目录并生成 origin.md、spec.md、tasks.md、checklist.md
+- **Tool**: RunCommand, Write
+- **Touches**: [目标模组路径]/docs/tasks/PRD_yyyymmdd_[任务描述]
+             [目标模组路径]/docs/tasks/PRD_yyyymmdd_[任务描述]/origin.md
+             [目标模组路径]/docs/tasks/PRD_yyyymmdd_[任务描述]/spec.md
+             [目标模组路径]/docs/tasks/PRD_yyyymmdd_[任务描述]/tasks.md
+             [目标模组路径]/docs/tasks/PRD_yyyymmdd_[任务描述]/checklist.md
+
+### USER：Dialogue 2
+[用户追加需求内容]
+
+### ACT-3:
+- **Thought**: 用户提出了追加需求，需要更新 origin.md 和相关文档
+- **Target**: 更新 origin.md 添加 Dialogue 2，更新其他规划文档
+- **Tool**: Read, Write
+- **Touches**: [目标模组路径]/docs/tasks/PRD_yyyymmdd_[任务描述]/origin.md
+             [目标模组路径]/docs/tasks/PRD_yyyymmdd_[任务描述]/spec.md
+
+### ACT-4:
+- **Thought**: 规划文档已生成完毕，现在需要通知用户审查
+- **Target**: 通知用户审查规划文档
+- **Tool**: [通知用户工具]
+- **Touches**: []
+
+---
+
+## Action Stage (执行阶段)
+
+### ACT-5:
+- **Thought**: 开始执行第一个任务，先标记为进行中
+- **Target**: 标记 Task 1 为进行中
+- **Tool**: TodoWrite
+- **Touches**: []
+
+### ACT-6:
+- **Thought**: 执行 Task 1 的具体内容
+- **Target**: 完成 Task 1 的要求
+- **Tool**: Write, Read
+- **Touches**: [目标文件路径]
+
+### ACT-7:
+- **Thought**: Task 1 已完成，需要更新任务状态
+- **Target**: 标记 Task 1 为已完成
+- **Tool**: TodoWrite
+- **Touches**: []
+
+### USER：Dialogue 3
+[用户在执行阶段提出的追加需求]
+
+### ACT-8:
+- **Thought**: 用户提出了新的需求，需要更新 origin.md 和规划文档
+- **Target**: 更新 origin.md 添加 Dialogue 3，更新相关规划
+- **Tool**: Read, Write
+- **Touches**: [目标模组路径]/docs/tasks/PRD_yyyymmdd_[任务描述]/origin.md
+             [目标模组路径]/docs/tasks/PRD_yyyymmdd_[任务描述]/tasks.md
+```
+
 ## 5. 文档维护工作流
 
 ### 5.1 完整工作流
@@ -168,28 +372,77 @@
 ```
 1. 用户发起请求
    ↓
-2. 分析当前状态（探索代码库）
+2. Start Stage（启动阶段）
+   ├─ 理解需求，探索代码库
+   ├─ 检索已有 PRD 文档
+   ├─ 创建 PRD 目录
+   └─ 进入 Planning Stage
    ↓
-3. 进入 Spec Mode（如需要）
-   ├─ 生成 spec.md
-   ├─ 生成 tasks.md
-   ├─ 生成 checklist.md
-   └─ 通知用户审查
+3. Planning Stage（规划阶段）
+   ├─ 生成 actions.md（记录整个过程）
+   ├─ 一次性记录 origin.md、spec.md、tasks.md、checklist.md
+   ├─ 连续生成这些规划文档
+   ├─ 记录用户追加需求（如有）
+   ├─ 通知用户审查规划文档
+   └─ 等待用户批准
    ↓
 4. 用户批准规划
    ↓
-5. 进入 Agent Mode
+5. Action Stage（执行阶段）
    ├─ 选择 P0 任务
-   ├─ 委派给子代理（如需要）
+   ├─ 标记任务为进行中
+   ├─ 如需复杂任务，委派给子代理
    ├─ 执行任务
    ├─ 验证任务
    ├─ 更新任务状态
-   └─ 重复直到完成
+   ├─ 记录用户追加需求（如有）
+   ├─ 重复直到完成
+   └─ 更新 actions.md
    ↓
 6. 最终验证（运行 checklist）
    ↓
 7. 完成并总结
 ```
+
+### 5.2 追加需求记录流程
+
+**适用场景**：
+- Planning Stage 用户批准前提出的追加需求
+- Action Stage 执行过程中提出的追加需求
+- Action Stage 执行完成后提出的追加需求
+
+**记录流程**：
+
+```
+1. 用户提出追加需求
+   ↓
+2. 在 actions.md 中插入用户输入记录
+   ├─ 使用 `### USER：Dialogue [序号]` 格式
+   ├─ 序号与 origin.md 保持一致
+   └─ 插入到对应阶段（Planning Stage 或 Action Stage）
+   ↓
+3. 在 origin.md 中添加新的 Dialogue 章节
+   ├─ 标题使用 `# Dialogue [序号]`
+   ├─ 包含完整的 User Requirement、Analyze、Evaluation Result
+   └─ 序号从之前的最大值递增
+   ↓
+4. 更新相关规划文档（根据需要）
+   ├─ 更新 spec.md（如有功能需求变更）
+   ├─ 更新 tasks.md（如有任务变更）
+   ├─ 更新 checklist.md（如有验证点变更）
+   └─ 记录所有更新操作到 actions.md
+   ↓
+5. 继续执行（如需）
+   ├─ 如在 Planning Stage，继续等待用户批准
+   ├─ 如在 Action Stage，继续执行任务或更新任务
+   └─ 记录后续操作到 actions.md
+```
+
+**注意事项**：
+- 追加需求必须同时记录在 origin.md 和 actions.md 中
+- actions.md 中的用户输入记录必须使用 `### USER：Dialogue [序号]` 格式
+- 对话序号必须与 origin.md 中的序号保持一致
+- 追加需求后的规划文档更新也必须记录到 actions.md
 
 ## 6. 子代理使用规范
 
@@ -252,6 +505,9 @@
 
 - [ ] PRD 目录创建在目标模组的 docs/tasks 下，而非其他位置
 - [ ] PRD 目录命名符合规范：PRD\_yyyymmdd\_\[文件]\_\[任务描述]
+- [ ] origin.md 包含所有必填章节
+- [ ] origin.md 头部信息已添加
+- [ ] origin.md 多轮对话使用 `# Dialogue [序号]` 格式
 - [ ] spec.md 包含所有必填章节
 - [ ] 每个目标都有对应的验收标准
 - [ ] 验收标准使用 Given/When/Then 格式
@@ -262,6 +518,10 @@
 - [ ] 任务依赖关系正确
 - [ ] 每个任务都有测试要求
 - [ ] checklist.md 检查点完整且可验证
+- [ ] actions.md 已创建且包含三个阶段
+- [ ] actions.md 中的行动记录项格式正确
+- [ ] Planning Stage 使用了一次性记录方式（如适用）
+- [ ] Start Stage 已完整执行并记录
 
 ### 7.2 执行阶段检查清单
 
@@ -271,6 +531,11 @@
 - [ ] 每个任务完成后进行验证
 - [ ] 测试要求都已满足
 - [ ] 任务完成后更新 checklist.md
+- [ ] 执行过程及时记录到 actions.md
+- [ ] todo 列表操作已记录
+- [ ] 通知用户操作已记录
+- [ ] 用户追加需求已记录（如有）
+- [ ] actions.md 中用户输入使用 `### USER：Dialogue [序号]` 格式（如有）
 
 ### 7.3 最终验收检查清单
 
@@ -280,6 +545,8 @@
 - [ ] 验收标准都已满足
 - [ ] 没有引入新的问题
 - [ ] 文档已同步更新
+- [ ] actions.md 完整记录了整个执行过程
+- [ ] 用户追加需求已完整记录（如有）
 - [ ] 用户需求已满足
 
 ## 8. 最佳实践
@@ -292,14 +559,22 @@
 - **合理分解** - 任务粒度要适中，既不过大也不过小
 - **优先级正确** - 先做关键路径上的任务
 - **一次性生成** - 修改或创建 PRD 文档时，优先使用 Write 工具一次性完整生成，避免逐行修改和反复调用 Edit 工具
+- **Planning Stage 一次性记录** - 在 Start Stage 完成后，可以一次性记录 origin.md、spec.md、tasks.md、checklist.md 的生成操作
+- **及时记录** - 在每次文件操作前先更新 actions.md
+- **记录追加需求** - 用户提出的追加需求必须同时记录在 origin.md 和 actions.md 中
 
 ### 8.2 执行最佳实践
 
-- **一次一个** - 一次只执行一个任务
+- **一次一个** - 一次只执行一个任务，完成一个再做下一个
 - **及时更新** - 任务状态要及时更新
 - **合理委派** - 复杂任务委派给子代理
 - **验证驱动** - 完成任务后立即验证
 - **渐进式** - 完成一个任务再进入下一个
+- **记录过程** - 执行过程及时记录到 actions.md
+- **记录 todo 操作** - todo 列表操作也要记录
+- **记录通知操作** - 通知用户操作也要记录
+- **相同目标合并记录** - 针对相同目标的多个操作可以合并记录
+- **Action Stage 分开记录** - Action Stage 通常保持分开记录，除非目标相同
 
 ## 9. 常见陷阱和避免方法
 
@@ -320,6 +595,18 @@
 ❌ **陷阱**：逐行修改 PRD 文档，反复调用 Edit 工具，导致执行效率低下和文件版本混淆\
 ✅ **避免**：修改或创建 PRD 文档时，优先使用 Read 工具读取完整文件，然后使用 Write 工具一次性完整写入新内容。如果文件已存在，先 Read 完整内容，再用 Write 完整写入更新后的内容。
 
+❌ **陷阱**：忘记记录 actions.md，或记录不完整\
+✅ **避免**：在每次文件操作前先更新 actions.md，确保记录完整
+
+❌ **陷阱**：记录 actions.md 时也记录对 actions.md 本身的更新，导致无限循环\
+✅ **避免**：更新 actions.md 本身的操作不需要记录
+
+❌ **陷阱**：用户追加需求只记录在一个文档中，导致过程不完整\
+✅ **避免**：追加需求必须同时记录在 origin.md（使用 `# Dialogue [序号]`）和 actions.md（使用 `### USER：Dialogue [序号]`）中
+
+❌ **陷阱**：Planning Stage 每个文件生成都单独记录，效率低下\
+✅ **避免**：在 Start Stage 完成后，可以一次性记录 origin.md、spec.md、tasks.md、checklist.md 的生成操作，然后连续生成这些文件
+
 ### 9.2 执行阶段陷阱
 
 ❌ **陷阱**：同时执行多个任务，导致混乱\
@@ -331,6 +618,15 @@
 ❌ **陷阱**：任务完成后不验证，导致后期发现问题\
 ✅ **避免**：每个任务完成后立即验证
 
+❌ **陷阱**：只记录文件操作，不记录 todo 列表和通知用户操作\
+✅ **避免**：actions.md 需要记录所有操作类型，包括文件操作、todo 列表操作、通知用户操作
+
+❌ **陷阱**：相同目标的操作分开记录，导致 actions.md 冗长\
+✅ **避免**：如果多个操作针对相同目标，可以合并记录，不限阶段
+
+❌ **陷阱**：Action Stage 也使用一次性记录，导致过程不清晰\
+✅ **避免**：Action Stage 通常保持分开记录，除非目标相同的操作可以合并
+
 ## 10. 提示词参考库
 
 ### 10.1 Spec Mode 提示词
@@ -339,15 +635,27 @@
 你现在处于 Spec Mode。
 
 请按照以下流程操作：
-1. 研究当前代码库状态，理解用户需求
-2. 生成 PRD (spec.md) - 产品需求文档
-3. 生成 Implementation Plan (tasks.md) - 实现计划
-4. 生成 Verification Checklist (checklist.md) - 验证清单
-5. 通知用户审查规划文档
+1. 立即进入 Start Stage：
+   - 研究当前代码库状态，理解用户需求
+   - 检索是否已存在相关 PRD 文档
+   - 创建 PRD 目录
+   - 开始记录 actions.md
+2. 进入 Planning Stage：
+   - 在 origin.md 开头添加 harness 文件版本和作者信息
+   - 在 origin.md 中使用 `# Dialogue [序号]` 记录多轮对话
+   - 一次性记录 origin.md、spec.md、tasks.md、checklist.md 的生成操作
+   - 连续生成这些规划文档
+   - 在 actions.md 中使用 `### USER：Dialogue [序号]` 记录用户输入
+   - 持续更新 actions.md
+3. 通知用户审查规划文档
 
 请使用中文编写所有规划文档。
 
-重要提示：创建或修改规划文档时，优先使用 Write 工具一次性完整生成，不要逐行修改。
+重要提示：
+- 创建或修改规划文档时，优先使用 Write 工具一次性完整生成，不要逐行修改
+- 每次文件操作前先更新 actions.md（更新 actions.md 本身除外）
+- Planning Stage 可以一次性记录 origin.md、spec.md、tasks.md、checklist.md 的生成操作
+- 用户追加需求需要同时记录在 origin.md（`# Dialogue [序号]`）和 actions.md（`### USER：Dialogue [序号]`）
 ```
 
 ### 10.2 Agent Mode 提示词
@@ -361,9 +669,16 @@
 3. 如需复杂任务，委派给子代理
 4. 执行任务并进行验证
 5. 更新任务状态
-6. 重复直到所有任务完成
+6. 更新 actions.md（记录 todo 操作和通知用户操作）
+7. 重复直到所有任务完成
 
 请确保一次只执行一个任务，完成后再进入下一个。
+
+重要提示：
+- 每次文件操作前先更新 actions.md（更新 actions.md 本身除外）
+- Action Stage 通常保持分开记录，除非相同目标的操作可以合并
+- todo 列表操作和通知用户操作也需要记录到 actions.md
+- 用户追加需求需要同时记录在 origin.md（`# Dialogue [序号]`）和 actions.md（`### USER：Dialogue [序号]`）
 ```
 
 ## 附录
@@ -378,6 +693,11 @@
 | PRD                 | Product Requirements Document，产品需求文档 |
 | subagent            | 子代理，由主代理委派任务的代理                      |
 | Acceptance Criteria | 验收标准，用于验证任务是否完成                      |
+| Start Stage         | 启动阶段，用于检索已有 PRD 和创建 PRD 目录          |
+| Planning Stage      | 规划阶段，用于生成规划文档                          |
+| Action Stage        | 执行阶段，用于执行已规划的任务                      |
+| Action Record       | 行动记录，用于记录执行过程的文档（actions.md）        |
+| Dialogue            | 对话，用于记录用户的多轮需求输入                      |
 
 ### B. 参考资源
 
@@ -388,6 +708,6 @@
 
 ***
 
-**文档版本**: 1.2\
-**最后更新**: 2026-03-20\
+**文档版本**: 1.4\
+**最后更新**: 2026-03-23\
 **维护者**: Official

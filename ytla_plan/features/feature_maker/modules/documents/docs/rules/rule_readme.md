@@ -113,7 +113,8 @@ yyyy-mm-dd
 ### 3.6 文件结构部分规范
 
 - 列出完整的文件和目录
-  - 特别地, 在documents/tasks中的部分，只需要列出文件夹列表就可以了。里面会重复大量的spec.md/task.md/checklist.md
+  - 特别地, 在documents/tasks中的部分，只需要列出PRD目录列表就可以了。里面会重复大量的origin.md/spec.md/task.md/checklist.md则不需要
+  - 在列出tasks目录时，不要忘记把最新生成的PRD目录也列出来
 - 使用缩进表示层级
 - 准确反映当前实际文件结构
 - 按字母顺序或逻辑顺序排列

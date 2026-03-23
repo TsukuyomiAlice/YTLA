@@ -1,0 +1,9 @@
+- [x] Checkpoint 1: docs/tech 目录已创建
+- [x] Checkpoint 2: Tech 文档位于 docs/tech/dungeonMaster.md
+- [x] Checkpoint 3: 文档包含模块概述章节
+- [x] Checkpoint 4: 文档包含文件结构说明
+- [x] Checkpoint 5: 文档包含核心组件说明
+- [x] Checkpoint 6: 文档作者名为 "Official"
+- [x] Checkpoint 7: 文档文件更新日期为 2026-03-23
+- [x] Checkpoint 8: 文档内容与代码实现一致
+- [x] Checkpoint 9: 文档结构清晰、逻辑合理
