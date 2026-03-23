@@ -15,7 +15,7 @@ version 1.0
 
 Frontend Language and Framework: Vue3, typescript, Vite  
 Applicable YTLA core version: **classic**  
-File Update Date: 2026-03-19
+File Update Date: 2026-03-20
 
 ## Concepts
 
@@ -54,6 +54,8 @@ SideCard is the core module for side card rendering and interaction, developed b
       - readme.md
   - tech/
     - tech.md
+  - tasks/
+    - PRD_20260320_readme_维护sideCard模块readme文档/
 - factories/
   - cardRegistry.ts
   - cardRegistryHelper.ts
@@ -92,3 +94,11 @@ SideCard is the core module for side card rendering and interaction, developed b
   - ContainerTags.vue
 - readme.md
 
+## Changelog
+
+### 2026-03-20
+
+- Updated feature package directory to ensure all files are included
+- Updated file update date to 2026-03-20
+- Added changelog
+- Listed PRD folder under documents/tasks/, excluding the md files inside are not listed

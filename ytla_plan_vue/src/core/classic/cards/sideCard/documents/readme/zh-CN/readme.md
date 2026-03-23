@@ -15,7 +15,7 @@ version 1.0
 
 前端语言及开发框架: Vue3, typescript, Vite  
 适用YTLA core版本: **classic**  
-文件更新日期: 2026-03-19
+文件更新日期: 2026-03-20
 
 ## 概念
 
@@ -54,6 +54,8 @@ SideCard 是侧边卡片渲染和交互核心模块，基于 Vue3+TypeScript+Vit
       - readme.md
   - tech/
     - tech.md
+  - tasks/
+    - PRD_20260320_readme_维护sideCard模块readme文档/
 - factories/
   - cardRegistry.ts
   - cardRegistryHelper.ts
@@ -92,3 +94,11 @@ SideCard 是侧边卡片渲染和交互核心模块，基于 Vue3+TypeScript+Vit
   - ContainerTags.vue
 - readme.md
 
+## 变更记录
+
+### 2026-03-20
+
+- 更新特性包目录，确保包含所有文件
+- 更新文件更新日期为 2026-03-20
+- 添加变更记录
+- 在 documents/tasks/ 下列出 PRD 文件夹，不包含里面的 md 文件
