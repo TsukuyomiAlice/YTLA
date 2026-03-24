@@ -2,18 +2,18 @@
 
 ## 0. 非常重要，必须阅读
 
-仅当你阅读到本文档时，如果本文档内容与其它文档/IDE默认指令 存在冲突，**以本文档要求为准**.
+0.1 仅当你阅读到本文档时，如果本文档内容与其它文档/IDE默认指令 存在冲突，**以本文档要求为准**.
 
-**当你看到这份文档并且正处于/spec或/plan模式时，必须即刻开始本文档里提到的 Start Stage**
+0.2 **当你看到这份文档并且正处于/spec或/plan模式时，必须即刻开始本文档里提到的 Start Stage**
 
-在2.2章节同样存在以下内容
+0.3 在2.2章节同样存在以下内容
 
 新生成的PRD文档和目录，需要放在下列指定位置：
 
-- **对有明确类别的指定生成内容的任务**（如指定生成/更新readme.md）： **目标模组（子模组）下的** docs(documents)/tasks/PRD_yyyymmdd_\[文件]_\[任务描述]/目录下
-- **跨多个不同类别文件的任务(如同时涉及到process / script / ui ，而非单一概念的readme.md文档)**：在对应上位的 docs(documents)/tasks/PRD_yyyymmdd_\[任务描述]目录
+- **对有明确类别的指定生成内容的任务**（如指定生成/更新readme.md）： **目标模组（子模组）下的** docs(documents)/tasks/PRD\_yyyymmdd\_\[文件]\_\[任务描述]/目录下
+- **跨多个不同类别文件的任务(如同时涉及到process / script / ui ，而非单一概念的readme.md文档)**：在对应上位的 docs(documents)/tasks/PRD\_yyyymmdd\_\[任务描述]目录
 
-检索是否存在已有的PRD文档时，也需要在 **目标模组（子模组）下的** docs(documents)/tasks/区域内查找
+检索是否存在已有的PRD文档时，也需要在 **目标模组（子模组）下的** docs/tasks/区域内查找
 
 ## 1. 总述
 
@@ -23,7 +23,7 @@
 - 适用栈: 包括前后端
 - 适用语言类型和框架: 全部
 - 指定规范目录：docs / documents（根据框架不同）
-- 指定规范文档：harness_instructions.md
+- 指定规范文档：harness\_instructions.md
 
 ### 1.2 设计理念
 
@@ -37,7 +37,7 @@
 
 ### 2.1 启动引导流程
 
-在读取到 rule_harness_instructions.md 文档后，即刻开始 **Start Stage**：
+在读取到 rule\_harness\_instructions.md 文档后，即刻开始 **Start Stage**：
 
 **Start Stage（启动阶段）**：
 
@@ -53,10 +53,10 @@
 
 新生成的PRD文档和目录，需要放在下列指定位置：
 
-- **对有明确指定生成内容的任务**（如指定生成/更新readme.md）： **目标模组（子模组）下的** docs(documents)/tasks/PRD_yyyymmdd_\[文件]_\[任务描述]/目录下
-- **跨多个文件的任务**：在对应上位的 docs(documents)/tasks/PRD_yyyymmdd_\[任务描述]目录
+- **对有明确指定生成内容的任务**（如指定生成/更新readme.md）： **目标模组（子模组）下的** docs(documents)/tasks/PRD\_yyyymmdd\_\[文件]\_\[任务描述]/目录下
+- **跨多个文件的任务**：在对应上位的 docs(documents)/tasks/PRD\_yyyymmdd\_\[任务描述]目录
 
-检索是否存在已有的PRD文档时，也需要在 **目标模组（子模组）下的** docs(documents)/tasks/区域内查找
+检索是否存在已有的PRD文档时，也需要在 **目标模组（子模组）下的** docs/tasks/区域内查找
 
 **示例**：
 
@@ -275,6 +275,21 @@ Harness Instructions file Author: [harness文件的作者名]
 - Touches 应该列出涉及的文件的完整路径
 - 更新 actions.md 时，采用追加方式在文件末尾添加新内容，不要覆盖整个文件
 
+**临时生成文本存储规范**：
+
+- 当 AI 生成了包含大规模文本的非目标文件时，允许 AI 将相关内容存储在 PRD 目录下
+- 临时文件命名格式为：`temp_[AI自行设计标题].md`
+- 标题应能清晰反映文件内容
+- 临时文件只记录在当前 PRD 目录下
+- **重要**：sub agent 生成临时文档时，必须在同目录（当前任务所在的 PRD 目录）下生成，确保文档位置不混乱
+
+**过程文件列表规范**：
+
+- 在 actions.md 文档标题下方，新增 "Generated Procedure Files List  过程文件列表" 章节
+- 该章节用于记录 AI 生成的大规模文本内容文件的文件名（不包含路径）
+- 每次新生成中途分析文档时，都用 SearchReplace 更新这个章节里的内容
+- 文件名列表按生成顺序排列
+
 **用户输入记录规则**：
 
 - 在 Planning Stage 和 Action Stage 中，用户输入使用 `### USER：Dialogue [序号]` 格式插入
@@ -295,8 +310,9 @@ Harness Instructions file Author: [harness文件的作者名]
 
 **todo 列表操作记录规则**：
 
-- todo 列表操作（如 TodoWrite 更新任务状态）也需要记录到 actions.md
+- Todo 列表在第一次生成时必须记录在 actions.md 里，并且带上完整的 task 内容
 - 使用标准的 ACT- 记录格式
+- 更新 todo 列表状态时也要记录到 actions.md
 
 **通知用户操作记录规则**：
 
@@ -311,8 +327,9 @@ Harness Instructions file Author: [harness文件的作者名]
 
 **子代理操作记录规则**：
 
-- 子代理操作也需要记录到 actions.md
+- sub-agent 的调用操作必须明确地被记录在 actions.md 里
 - 使用标准的 ACT- 记录格式
+- 记录应包含子代理的任务描述和目标
 
 **相同目标操作合并规则**：
 
@@ -326,6 +343,13 @@ Harness Instructions file Author: [harness文件的作者名]
 
 ```markdown
 # Action Record - 行动记录
+
+## Generated Procedure Files List  过程文件列表
+
+- temp_initial_analysis.md
+- temp_code_review_notes.md
+
+---
 
 ## Start Stage (启动阶段)
 
@@ -379,59 +403,76 @@ Harness Instructions file Author: [harness文件的作者名]
 - **Touches**: []
 
 ### ACT-6:
+- **Thought**: Task 1 比较复杂，需要委派给子代理执行
+- **Target**: 委派 Task 1 给子代理执行
+- **Tool**: search, Skill
+- **Touches**: []
+- **Subagent Task**: 描述：添加临时文件规范
+任务：在 rule_harness_instructions.md 中添加临时文件存储和命名规范
+返回语言：zh-CN
+
+### ACT-7:
 - **Thought**: 执行 Task 1 的具体内容
 - **Target**: 完成 Task 1 的要求
 - **Tool**: Write, Read
 - **Touches**: [目标文件路径]
 
-### ACT-7:
+### ACT-8:
 - **Thought**: Task 1 已完成，需要更新任务状态
 - **Target**: 标记 Task 1 为已完成
 - **Tool**: TodoWrite
-- **Touches": []
+- **Touches**: []
 
-### ACT-8:
+### ACT-9:
 - **Thought**: 需要向用户追问某些细节以便继续执行
 - **Target**: 记录追问操作并向用户提问
 - **Tool**: AskUserQuestion
-- **Touches": []
+- **Touches**: []
 
 ### USER：Dialogue 3
 [用户在执行阶段提出的追加需求或对追问的回复]
 
-### ACT-9:
+### ACT-10:
 - **Thought**: 用户提出了新的需求，需要更新 origin.md 和规划文档
 - **Target**: 更新 origin.md 添加 Dialogue 3，更新相关规划
 - **Tool**: Read, Edit
-- **Touches": [目标模组路径]/docs/tasks/PRD_yyyymmdd_[任务描述]/origin.md
+- **Touches**: [目标模组路径]/docs/tasks/PRD_yyyymmdd_[任务描述]/origin.md
              [目标模组路径]/docs/tasks/PRD_yyyymmdd_[任务描述]/tasks.md
 
-### ACT-10:
-- **Thought": 所有任务已执行完毕，现在需要向用户确认任务是否全部完成
-- **Target": 记录确认操作并向用户提问
-- **Tool": AskUserQuestion
-- **Touches": []
+### ACT-11:
+- **Thought**: 所有任务已执行完毕，现在需要向用户确认任务是否全部完成
+- **Target**: 记录确认操作并向用户提问
+- **Tool**: AskUserQuestion
+- **Touches**: []
 
 ### USER：Dialogue 4
 [用户确认任务已完成]
 
-### ACT-11:
-- **Thought": 用户已确认任务完成，需要更新 tasks.md 第一行为"已完成"
-- **Target": 更新 tasks.md 进度标记
-- **Tool": Read, Edit
-- **Touches": [目标模组路径]/docs/tasks/PRD_yyyymmdd_[任务描述]/tasks.md
+### ACT-12:
+- **Thought**: 用户已确认任务完成，需要更新 tasks.md 第一行为"已完成"
+- **Target**: 更新 tasks.md 进度标记
+- **Tool**: Read, Edit
+- **Touches**: [目标模组路径]/docs/tasks/PRD_yyyymmdd_[任务描述]/tasks.md
 ```
 
 ### 4.6 PRD 文档更新规则
 
 **文档分类和更新方式**：
 
-- **spec.md、tasks.md、checklist.md**：优先使用 write 覆盖的方式更新
-- **origin.md、actions.md**：由于新的内容不会对旧的内容产生影响，所以总是在文档末尾换行添加
+- **spec.md、tasks.md、checklist.md**：优先使用 Write 覆盖的方式更新
+- **origin.md、actions.md**：由于新的内容不会对旧的内容产生影响，所以总是在文档末尾通过SearchReplace的方式换行添加
+  - 仅限于在origin.md、action.md中，为了便于定位，在每次生成追加文本时，最后添加一行
+  ```markdown
+  spec mode logging
+  ```
+  用来表示文末。在执行替换检索时，以这行文字作为检索关键字并检索，可以准确定位末尾的位置
 
 **说明**：
-- spec.md、tasks.md、checklist.md 文档内容经常需要整体修改，使用 write 覆盖方式可以确保文档的一致性和完整性
-- origin.md、actions.md 文档主要用于记录历史过程，追加方式可以保留完整的历史记录
+
+- spec.md、tasks.md、checklist.md 文档内容经常需要整体修改，使用 Write 覆盖方式可以确保文档的一致性和完整性
+- origin.md、actions.md 文档主要用于记录历史过程，通过SearchReplace的追加方式可以保留完整的历史记录
+- Write和SearchReplace的使用没有绝对严格的控制。如果可以精确定位文本位置，且修改量不大，那么使用SearchReplace也可以
+- 唯一的例外是，如果发现文档内容出现了遗漏、乱序等严重的记录问题，那么必须Write重写
 
 ## 5. 文档维护工作流
 
@@ -615,7 +656,7 @@ Harness Instructions file Author: [harness文件的作者名]
 ### 7.1 规划阶段检查清单
 
 - [ ] PRD 目录创建在目标模组的 docs/tasks 下，而非其他位置
-- [ ] PRD 目录命名符合规范：PRD_yyyymmdd_\[文件]_\[任务描述]
+- [ ] PRD 目录命名符合规范：PRD\_yyyymmdd\_\[文件]\_\[任务描述]
 - [ ] origin.md 包含所有必填章节
 - [ ] origin.md 头部信息已添加
 - [ ] origin.md 多轮对话使用 `# Dialogue [序号]` 格式
@@ -632,6 +673,7 @@ Harness Instructions file Author: [harness文件的作者名]
 - [ ] checklist.md 检查点完整且可验证
 - [ ] actions.md 已创建且包含三个阶段
 - [ ] actions.md 中的行动记录项格式正确
+- [ ] actions.md 中已包含 "Generated Procedure Files List  过程文件列表" 章节
 - [ ] Planning Stage 使用了一次性记录方式（如适用）
 - [ ] Start Stage 已完整执行并记录
 
@@ -650,6 +692,8 @@ Harness Instructions file Author: [harness文件的作者名]
 - [ ] 用户追加需求已记录（如有）
 - [ ] actions.md 中用户输入使用 `### USER：Dialogue [序号]` 格式（如有）
 - [ ] 更新 origin.md 和 actions.md 时使用追加方式
+- [ ] 临时生成文本按规范存储在 PRD 目录下
+- [ ] 过程文件列表已及时更新（如有临时文件生成）
 
 ### 7.3 最终验收检查清单
 
@@ -679,6 +723,7 @@ Harness Instructions file Author: [harness文件的作者名]
 - **及时记录** - 在每次操作前(包括但不限于文件操作、用户询问操作、发起子代理操作等)先更新 actions.md
 - **记录追加需求** - 用户提出的追加需求必须同时记录在 origin.md 和 actions.md 中
 - **tasks.md 进度标记** - 新创建的 tasks.md 第一行必须添加 "本任务进度: 未完成"
+- **临时文件规范** - 生成大规模临时文本时，按规范存储在 PRD 目录下并记录到 actions.md 的过程文件列表中
 
 ### 8.2 执行最佳实践
 
@@ -688,7 +733,8 @@ Harness Instructions file Author: [harness文件的作者名]
 - **验证驱动** - 完成任务后立即验证
 - **渐进式** - 完成一个任务再进入下一个
 - **记录过程** - 执行过程及时记录到 actions.md
-- **记录 todo 操作** - todo 列表操作也要记录
+- **记录 todo 操作** - todo 列表操作也要记录，并且在新建 todo 列表时，列出列表内每一项 task 的内容
+- **记录 SubAgent 操作** - 发起SubAgent操作也要记录
 - **记录通知操作** - 通知用户操作也要记录
 - **记录提问操作** - 向用户发起提问前必须先记录到 actions.md
 - **相同目标合并记录** - 针对相同目标的多个操作可以合并记录
@@ -696,6 +742,7 @@ Harness Instructions file Author: [harness文件的作者名]
 - **追加写入** - 更新 origin.md 和 actions.md 时，优先使用追加方式在文件末尾添加新内容，不要覆盖整个文件
 - **任务完成确认** - 所有任务执行完毕后，必须主动向用户确认任务是否全部完成
 - **更新进度标记** - 用户确认完成后，更新 tasks.md 第一行为 "本任务进度: 已完成"
+- **临时文件管理** - 生成临时文件后立即更新 actions.md 的过程文件列表
 
 ## 9. 常见陷阱和避免方法
 
@@ -716,8 +763,8 @@ Harness Instructions file Author: [harness文件的作者名]
 ❌ **陷阱**：对 spec.md、tasks.md、checklist.md 文档逐行修改，反复调用 Edit 工具，导致执行效率低下和文件版本混淆\
 ✅ **避免**：修改或创建 spec.md、tasks.md、checklist.md 文档时，优先使用 Read 工具读取完整文件，然后使用 Write 工具一次性完整写入新内容。如果文件已存在，先 Read 完整内容，再用 Write 完整写入更新后的内容。
 
-❌ **陷阱**：对 origin.md、actions.md 文档使用 write 覆盖方式更新，导致历史记录丢失\
-✅ **避免**：更新 origin.md、actions.md 文档时，总是采用追加方式在文件末尾添加新内容，不要覆盖整个文件（初始创建除外）
+❌ **陷阱**：更新 origin.md 或 actions.md 时使用覆盖写入，导致历史记录丢失\
+✅ **避免**：更新这两个文档时，总是使用SearchReplace方式在文件末尾检索spec mode logging以替换添加新内容（初始创建除外）
 
 ❌ **陷阱**：忘记记录 actions.md，或记录不完整\
 ✅ **避免**：在每次文件操作前先更新 actions.md，确保记录完整
@@ -733,6 +780,9 @@ Harness Instructions file Author: [harness文件的作者名]
 
 ❌ **陷阱**：忘记在 tasks.md 第一行添加进度标记\
 ✅ **避免**：新创建的 tasks.md 第一行必须添加 "本任务进度: 未完成"
+
+❌ **陷阱**：忘记在 actions.md 中添加 "Generated Procedure Files List  过程文件列表" 章节\
+✅ **避免**：创建 actions.md 时，在文档标题下方立即添加过程文件列表章节
 
 ### 9.2 执行阶段陷阱
 
@@ -757,14 +807,23 @@ Harness Instructions file Author: [harness文件的作者名]
 ❌ **陷阱**：向用户发起提问前没有记录到 actions.md\
 ✅ **避免**：提问操作必须在执行前记录到 actions.md，使用标准的 ACT- 格式
 
+❌ **陷阱**：todo 列表的具体Task 没有记录到 actions.md\
+✅ **避免**：todo 列表的具体Task必须在发起 todo 列表之前记录到 actions.md，使用标准的 ACT- 格式
+
 ❌ **陷阱**：更新 origin.md 或 actions.md 时使用覆盖写入，导致历史记录丢失\
-✅ **避免**：更新这两个文档时，总是使用追加方式在文件末尾添加新内容（初始创建除外）
+✅ **避免**：更新这两个文档时，总是使用SearchReplace方式在文件末尾检索spec mode logging以替换添加新内容（初始创建除外）
+
+❌ **陷阱**：更新 origin.md 或 actions.md 时出现了乱序，为了节约时间不管文档问题继续直接更新\
+✅ **避免**：如果发生了文档记录顺序混乱，应该使用Write重写整个文档
 
 ❌ **陷阱**：所有任务执行完毕后直接结束，没有向用户确认是否完成\
 ✅ **避免**：任务执行完毕后，必须主动向用户发起提问，确认任务是否全部完成
 
 ❌ **陷阱**：用户确认完成后，忘记更新 tasks.md 第一行的进度标记\
 ✅ **避免**：用户确认完成后，必须更新 tasks.md 第一行为 "本任务进度: 已完成"
+
+❌ **陷阱**：生成临时文件后忘记更新 actions.md 的过程文件列表\
+✅ **避免**：每次新生成临时文件后，立即使用 SearchReplace 更新过程文件列表章节
 
 ## 10. 提示词参考库
 
@@ -785,6 +844,7 @@ Harness Instructions file Author: [harness文件的作者名]
    - 一次性记录 origin.md、spec.md、tasks.md、checklist.md 的生成操作
    - 连续生成这些规划文档（tasks.md 第一行必须添加"本任务进度: 未完成"）
    - 在 actions.md 中使用 `### USER：Dialogue [序号]` 记录用户输入
+   - 在 actions.md 中添加 "Generated Procedure Files List  过程文件列表" 章节
    - 持续更新 actions.md（使用追加方式）
 3. 通知用户审查规划文档
 
@@ -792,10 +852,11 @@ Harness Instructions file Author: [harness文件的作者名]
 
 重要提示：
 - 对 spec.md、tasks.md、checklist.md 文档，优先使用 Write 工具一次性完整生成，不要逐行修改
-- 对 origin.md、actions.md 文档，使用追加方式在文件末尾添加新内容
+- 对 origin.md、actions.md 文档，使用替换方式在文件末尾添加新内容，且以"spec mode logging"作为文本末尾标记
 - 每次文件操作前先更新 actions.md（更新 actions.md 本身除外）
 - Planning Stage 可以一次性记录 origin.md、spec.md、tasks.md、checklist.md 的生成操作
 - 用户追加需求需要同时记录在 origin.md（`# Dialogue [序号]`）和 actions.md（`### USER：Dialogue [序号]`）
+- 生成临时文件时，按 temp_[标题].md 格式存储在 PRD 目录下，并记录到 actions.md 的过程文件列表中
 ```
 
 ### 10.2 Agent Mode 提示词
@@ -818,12 +879,13 @@ Harness Instructions file Author: [harness文件的作者名]
 
 重要提示：
 - 对 spec.md、tasks.md、checklist.md 文档，优先使用 Write 工具一次性完整生成，不要逐行修改
-- 对 origin.md、actions.md 文档，使用追加方式在文件末尾添加新内容
+- 对 origin.md、actions.md 文档，使用替换方式在文件末尾添加新内容，且以"spec mode logging"作为文本末尾标记
 - 每次文件操作前先更新 actions.md（更新 actions.md 本身除外）
 - Action Stage 通常保持分开记录，除非相同目标的操作可以合并
 - todo 列表操作和通知用户操作也需要记录到 actions.md
 - 用户追加需求需要同时记录在 origin.md（`# Dialogue [序号]`）和 actions.md（`### USER：Dialogue [序号]`）
 - 向用户发起提问前，必须先记录到 actions.md
+- 生成临时文件时，按 temp_[标题].md 格式存储在 PRD 目录下，并立即更新 actions.md 的过程文件列表
 ```
 
 ## 附录
@@ -845,7 +907,9 @@ Harness Instructions file Author: [harness文件的作者名]
 | Dialogue            | 对话，用于记录用户的多轮需求输入                     |
 | 追加写入                | 在文件末尾添加新内容，而非覆盖整个文件                  |
 | 进度标记                | tasks.md 第一行的"本任务进度: \[已完成/未完成]"标记   |
-| 覆盖写入                | 使用 Write 工具完全覆盖文件内容                      |
+| 覆盖写入                | 使用 Write 工具完全覆盖文件内容                  |
+| 临时文件                | 以 temp_ 开头，用于存储大规模临时文本的文件           |
+| 过程文件列表              | actions.md 中记录临时文件名称的章节                  |
 
 ### B. 参考资源
 
@@ -856,6 +920,6 @@ Harness Instructions file Author: [harness文件的作者名]
 
 ***
 
-**文档版本**: 1.61\
-**最后更新**: 2026-03-23\
+**文档版本**: 1.7\
+**最后更新**: 2026-03-24\
 **维护者**: Official
