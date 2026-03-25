@@ -1,0 +1,7 @@
+- [x] Checkpoint 1: rule_harness_instructions.md 已添加 AI 追问记录规范
+- [x] Checkpoint 2: rule_harness_instructions.md 已添加文档追加写入规范
+- [x] Checkpoint 3: rule_harness_instructions.md 已添加 tasks.md 进度标记规范
+- [x] Checkpoint 4: rule_harness_instructions.md 已添加任务完成确认流程规范
+- [x] Checkpoint 5: 本 PRD 的 tasks.md 第一行已正确添加进度标记
+- [x] Checkpoint 6: 所有规划文档（origin.md、spec.md、tasks.md、checklist.md、actions.md）已完整生成
+- [x] Checkpoint 7: 所有验收标准都有对应的任务实现

@@ -1,0 +1,7 @@
+- [x] Checkpoint 1: 根目录 readme.md 概念部分已填充，1-3 句话简明清晰
+- [x] Checkpoint 2: 根目录 readme.md 文件结构部分完整，使用缩进表示层级
+- [x] Checkpoint 3: 所有 readme 文档的作者名都是 "Tsukuyomi Alice"
+- [x] Checkpoint 4: 所有 readme 文档的文件更新日期都是 2026-03-23
+- [x] Checkpoint 5: zh-CN/readme.md 内容与根目录 readme.md 一致
+- [x] Checkpoint 6: en-US/readme.md 英文翻译准确，内容与中文版一致
+- [x] Checkpoint 7: 根目录 readme.md 已添加变更记录部分
