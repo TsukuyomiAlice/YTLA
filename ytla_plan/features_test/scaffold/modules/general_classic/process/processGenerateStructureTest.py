@@ -24,4 +24,27 @@ processGenerateStructure.process_generate_structure(False, 'scaffold', 'modules'
 processGenerateStructure.process_generate_structure(False, 'scaffold', 'modules', 'general_classic', True, False)
 """
 
-processGenerateStructure.process_generate_structure(False, 'relax', 'cards', 'wordle', True, False)
+"""
+Test case 3: classic_vue3 - sidecard type (_type)
+"""
+# processGenerateStructure.process_generate_structure(False, 'test_classic', 'cards', '', True, True)
+
+"""
+Test case 4: classic_vue3 - sidecard (specific implementation)
+"""
+# processGenerateStructure.process_generate_structure(False, 'test_classic', 'cards', 'test_sidecard', True, True)
+
+"""
+Test case 5: classic_vue3 - module type (_type)
+"""
+# processGenerateStructure.process_generate_structure(False, 'test_classic', 'modules', '', True, True)
+
+"""
+Test case 6: classic_vue3 - module (specific implementation)
+"""
+# processGenerateStructure.process_generate_structure(False, 'test_classic', 'modules', 'test_module', True, True)
+
+"""
+Original test case
+"""
+processGenerateStructure.process_generate_structure(False, 'relax', 'cards', 'bingo', False, True)
