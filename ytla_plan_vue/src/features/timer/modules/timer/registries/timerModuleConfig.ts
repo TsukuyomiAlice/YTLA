@@ -1,6 +1,6 @@
 import { defineAsyncComponent } from 'vue'
 import type { ModuleRegistry } from '@/core/classic/modules/moduleCard/factories/moduleRegistry.ts'
-import { timerModuleFlowManager } from '@/features/timer/modules/_type/flows/timerFlowManager.ts'
+import { timerModuleFlowManager } from '@/features/timer/modules/timer/flows/timerModuleFlowManager.ts'
 
 export const timerModuleConfig = <ModuleRegistry> {
   moduleType: 'timer',

@@ -23,7 +23,6 @@ sidecard_generators = [
 module_type_generators = [
     ("script_classic_vue3_module_type_avatar", "create_avatar_file"),
     ("script_classic_vue3_module_type_locales", "create_locales_files"),
-    ("script_classic_vue3_module_type_registries", "create_registries_file"),
 ]
 
 module_generators = [

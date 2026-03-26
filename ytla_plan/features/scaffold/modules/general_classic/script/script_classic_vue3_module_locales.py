@@ -19,15 +19,17 @@ def create_locales_files(base_path, module_type, module_sub_type):
     dir_path = Path(base_path) / module_type / "modules" / module_sub_type / "locales"
     dir_path.mkdir(parents=True, exist_ok=True)
 
+    sub = '' if module_sub_type == '_type' else 'sub'
+
     en_content = f'''{{
-  "{module_sub_type}_subtype_name": "{module_sub_type}(按语种填写)",
-  "{module_sub_type}_subtype_description": "(这里填入你的定义)"
+  "{sub}type_name": "{module_sub_type}(according to the language)",
+  "{sub}type_description": "(add your definition)"
 }}
 '''
 
     zh_content = f'''{{
-  "{module_sub_type}_subtype_name": "{module_sub_type}(按语种填写)",
-  "{module_sub_type}_subtype_description": "(这里填入你的定义)"
+  "{sub}type_name": "{module_sub_type}(按语种填写)",
+  "{sub}type_description": "(这里填入你的定义)"
 }}
 '''
 
