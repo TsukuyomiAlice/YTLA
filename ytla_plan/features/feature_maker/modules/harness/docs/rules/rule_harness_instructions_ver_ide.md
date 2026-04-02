@@ -43,10 +43,10 @@
 
 1. **思考分析** - 理解用户需求，确定目标模组位置和任务类型
 2. **探索代码库** - 分析当前代码库状态
-3. **检索已有 PRD** - 在目标模组的 docs/tasks 区域内查找是否已存在相关 PRD 文档
+3. **检索已有 PRD** - 在目标模组的 docs(documents)/tasks 区域内查找是否已存在相关 PRD 文档
    - 检查方法：查看 PRD 目录下的 tasks.md 第一行是否包含 "本任务进度: 已完成" 或不存在该行
    - 如果显示 "已完成" 或不存在该行，则视为该 PRD 工程已完成
-4. **创建 PRD 目录** - 验证并创建目标 docs/tasks 目录
+4. **创建 PRD 目录** - 验证并创建目标 docs(documents)/tasks 目录
 5. **进入 Planning Stage** - 建立 PRD 目录后进入规划阶段
 
 ### 2.2 PRD 文档位置规定
@@ -56,13 +56,13 @@
 - **对有明确指定生成内容的任务**（如指定生成/更新readme.md）： **目标模组（子模组）下的** docs(documents)/tasks/PRD\_yyyymmdd\_\[文件]\_\[任务描述]/目录下
 - **跨多个文件的任务**：在对应上位的 docs(documents)/tasks/PRD\_yyyymmdd\_\[任务描述]目录
 
-检索是否存在已有的PRD文档时，也需要在 **目标模组（子模组）下的** docs/tasks/区域内查找
+检索是否存在已有的PRD文档时，也需要在 **目标模组（子模组）下的** docs(documents)/tasks/区域内查找
 
 **示例**：
 
 - 目标模组：`\[项目路径]/\[目标模组路径]`
 - 任务：维护 readme.md 文档
-- 正确的 PRD 目录：`\[项目路径]/\[目标模组路径]/docs/tasks/PRD_20260320_readme_维护documents模块readme文档\`
+- 正确的 PRD 目录：`\[项目路径]/\[目标模组路径]/docs(documents)/tasks/PRD_20260320_readme_维护documents模块readme文档\`
 
 **错误示例**：
 

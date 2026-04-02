@@ -1,56 +1,35 @@
 <template>
-  <button class="cancel-btn" @click="handleClick" :title="title">
+  <button class="cancel-btn" @click="handleClick" :aria-label="computedAriaLabel" :title="computedTitle">
     <slot></slot>
   </button>
 </template>
 
 <script setup lang="ts">
-defineProps<{
+import type { ButtonCancelOptions } from '../composables/useButtonCancel.ts'
+import { useButtonCancel } from '../composables/useButtonCancel.ts'
+import type { Ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { computed } from 'vue'
+
+const { t } = useI18n()
+
+const props = defineProps<{
+  ariaLabel?: string
   title?: string
+  options?: Ref<ButtonCancelOptions> | ButtonCancelOptions
 }>()
 
 const emit = defineEmits<{
   (e: 'click'): void
 }>()
 
-const handleClick = () => {
-  emit('click')
-}
+const defaultAriaLabel = computed(() => t('classic.cards.sideCardEditor.ButtonCancel.Cancel'))
+const computedAriaLabel = computed(() => props.ariaLabel || defaultAriaLabel.value)
+const computedTitle = computed(() => props.title || defaultAriaLabel.value)
+
+const { handleClick } = useButtonCancel(emit, props.options)
 </script>
 
-<style lang="scss" scoped>
-.cancel-btn {
-  flex: 1 1 calc(var(--max-button-width, 15%) - var(--gap-size, 1rem));
-  min-width: var(--min-button-size, 5rem);
-  max-width: var(--max-button-width, 15%);
-  aspect-ratio: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.75rem;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  transform: scale(0.95);
-  position: static;
-  margin: 0.5rem;
-  z-index: 10;
-  padding: 0.5rem 0.75rem;
-  background: #e74c3c;
-  color: white;
-  border: none;
-  font-size: calc(var(--min-button-size, 5rem) * 0.5);
-
-  &:hover {
-    background: #c0392b;
-    transform: scale(1.05);
-  }
-}
-
-@media (max-width: 480px) {
-  .cancel-btn {
-    padding: 0.4rem 0.6rem;
-    font-size: 1em;
-  }
-}
+<style scoped lang="scss">
+@use '../styles/button-cancel';
 </style>

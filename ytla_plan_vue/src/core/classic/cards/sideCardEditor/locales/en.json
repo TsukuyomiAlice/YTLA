@@ -5,5 +5,20 @@
   "Save": "Save",
   "Add": "Add",
   "Prev": "Prev",
-  "Next": "Next"
+  "Next": "Next",
+  "ButtonAction": {
+    "Cancel": "Cancel operation",
+    "Prev": "Previous step operation",
+    "Next": "Next step operation",
+    "Submit": "Submit operation",
+    "Scale": "Scale operation"
+  },
+  "ButtonCancel": {
+    "Cancel": "Cancel operation",
+    "ScaleUp": "Zoom in",
+    "ScaleDown": "Zoom out"
+  },
+  "ButtonScale": {
+    "Scale": "Scale operation"
+  }
 }
