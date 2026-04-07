@@ -1,17 +1,17 @@
 # UI组件AI生成规范文档 (rule\_ui\_instructions.md)
 
-## 适用性调整
-
-本文档的适用范围针对目标元件进行调整:
-
-- 新建ui元件: 完全适用本规则
-- 对已有ui元件进行修改: 优先进行文件目录调整。对于内部内容的调整，应谨慎考虑其调用情况、实际效果、方法名和文件名变动带来的次生影响
-
 ## 概述与适用范围
 
 ### 文档概述
 
 本文档定义了YTLA项目中UI组件的AI生成规范，基于项目现有架构最佳实践和通用组件设计模式。本规范提供了完整的组件生成流程、代码模板、命名规则和AI提示词模板，旨在确保新生成的UI组件符合项目统一架构和编码规范。
+
+### 适用性调整
+
+本文档的适用范围针对目标元件进行调整:
+
+- 新建ui元件: 完全适用本规则
+- 对已有ui元件进行修改: 优先进行文件目录调整。对于内部内容的调整，应谨慎考虑其调用情况、实际效果、方法名和文件名变动带来的次生影响
 
 ### 规范范围限制
 
@@ -25,13 +25,14 @@
 
 - 图标文件 (avatar)
 - 主组件文件（components）
-- 类型定义文件（definitions）
 - 布局文件（layouts）
 - 服务文件（services）
 - 存储文件（stores）
 - 工厂文件（factories）
 - 流程文件（flows）
 - 注册表文件（registries）
+
+**注意**：类型定义文件（definitions）虽然不在规范生成范围内，但UI组件在需要时可以从definitions目录导入类型定义。
 
 ### 核心原则
 
@@ -249,16 +250,24 @@ defineProps<{
 
 <script setup lang="ts">
 // ============================================================================
-// 关注点分离说明
+// 关注点分离说明（非常重要！）
 // ============================================================================
-// .vue 文件职责：
+//
+// 【核心原则】Vue文件仅负责视图，逻辑必须在TS文件中实现
+//
+// .vue 文件职责（仅包含以下内容）：
 //   - 仅包含 HTML 模板（template 部分）
 //   - 仅包含导入语句（script 部分）
 //   - 仅包含样式导入（style 部分）
 //
 // 不应该在 .vue 文件中：
-//   - 直接编写业务逻辑（应在 composables 中）
-//   - 直接编写样式代码（应在 styles 文件中）
+//   - 直接编写业务逻辑（必须在 composables 的 .ts 文件中）
+//   - 直接编写样式代码（必须在 styles 的 .scss 文件中）
+//   - 定义响应式数据（必须在 composables 中）
+//   - 定义计算属性（必须在 composables 中）
+//   - 定义方法（必须在 composables 中）
+//
+// 重构目标：让代码的格式与结构完全符合本文档设计的规范
 // ============================================================================
 
 // ============================================================================
@@ -323,6 +332,17 @@ const { /* 解构需要的数据和方法 */ } = useComponentLogic(props, emit)
 </template>
 
 <script setup lang="ts">
+// ============================================================================
+// 关注点分离示例
+// ============================================================================
+// 本文件仅包含：
+// 1. 导入语句（类型定义 + 组合式函数）
+// 2. defineProps 和 defineEmits 定义
+// 3. 从组合式函数解构数据和方法
+//
+// 所有逻辑都在 useButtonSubmit.ts 中实现
+// ============================================================================
+
 // 导入 Props 和 Emits 类型（从外部 definitions 文件）
 import type { ButtonSubmitProps, ButtonSubmitEmits } from './definitions/ButtonSubmitType'
 
@@ -370,6 +390,16 @@ interface UseButtonSubmitOptions {
   emit: (event: keyof ButtonSubmitEmits, ...args: any[]) => void
 }
 
+// ============================================================================
+// 逻辑实现说明
+// ============================================================================
+// 所有业务逻辑都在这里实现：
+// - 响应式数据定义
+// - 计算属性定义
+// - 方法定义
+// - 副作用处理
+// ============================================================================
+
 export const useButtonSubmit = (props: ButtonSubmitProps, options: UseButtonSubmitOptions) => {
   const { emit } = options
 
@@ -412,6 +442,22 @@ export const useButtonSubmit = (props: ButtonSubmitProps, options: UseButtonSubm
 //    import type { LocalType } from './definitions/[组件名]Type'
 //
 // 组之间空一行，组内按字母顺序排序
+// ============================================================================
+
+// ============================================================================
+// 职责说明
+// ============================================================================
+// 本文件负责实现所有业务逻辑：
+// 1. 导入类型定义
+// 2. 导入工具函数
+// 3. 定义composable参数接口
+// 4. 定义返回值接口
+// 5. 实现主函数逻辑
+// 6. 定义内部响应式数据
+// 7. 定义计算属性
+// 8. 定义操作方法
+// 9. 定义副作用监听
+// 10. 返回公共接口
 // ============================================================================
 
 // 1. 导入类型定义
@@ -565,20 +611,17 @@ export const useButtonSubmit = (props: ButtonSubmitProps = {}) => {
 }
 ```
 
-### 类型导入规范
+### 类型导入规范（摘要）
 
-#### 概述与适用范围
+类型导入规范已在前面的代码模板部分详细说明，这里仅提供快速参考：
 
-本规范定义了YTLA项目中类型定义文件的导入规范，确保类型导入的一致性、可维护性和IDE支持。
-
-#### 导入路径规范
-
-##### 绝对导入路径规范
-
-对于跨模块的类型导入，使用绝对路径（基于项目根目录的别名）。
+**核心规则**：
+1. **类型优先**：使用 `import type` 导入纯类型
+2. **绝对导入**：跨模块使用 `@/` 前缀（`@/definitions/xxx`）
+3. **相对导入**：同模块优先使用同级目录 `./` 前缀
+4. **路径限制**：相对路径不超过两层，ui目录下组件只能在该组件目录下调用
 
 **路径别名定义（在 tsconfig.json 中）**:
-
 ```json
 {
   "compilerOptions": {
@@ -588,86 +631,6 @@ export const useButtonSubmit = (props: ButtonSubmitProps = {}) => {
     }
   }
 }
-```
-
-**绝对导入规则**:
-
-1. **跨模块导入**：使用 `@/*` 别名导入类型定义
-2. **同模块导入**：优先使用相对路径
-3. **深度限制**：相对路径超过 `../..` 时改用绝对路径
-4. **类型优先**：类型导入使用 `type` 关键字明确标识
-
-**绝对导入示例**:
-
-```typescript
-// ✅ 推荐：使用类型导入
-import type { User, UserProfile } from '@/definitions/domain/user'
-import type { ButtonProps, ButtonEmits } from '@/definitions/ui/components'
-
-// ✅ 推荐：同时导入类型和值
-import { useUserStore } from '@/stores/user'
-import type { UserState } from '@/stores/user'
-
-// ❌ 不推荐：不使用类型关键字
-import { User, UserProfile } from '@/definitions/domain/user'
-```
-
-##### 相对导入路径规范
-
-对于同一模块内的类型导入，优先使用同级目录的相对路径。
-
-**相对导入规则**:
-
-1. **同级目录**：使用 `./` 前缀
-2. **父级目录**：使用 `../` 前缀，最多不超过两层
-3. **类型优先**：同样使用 `type` 关键字
-4. **文件扩展名**：省略 `.ts`、`.vue` 等扩展名
-5. **ui 目录限制**：ui 目录下的组件只能在该组件目录下调用，不允许跨级调用
-
-**相对导入示例**:
-
-```typescript
-// ✅ 同级文件导入
-import type { LocalConfig } from './config'
-import type { FormValidation } from './validation'
-
-// ✅ 父级目录导入（一层）
-import type { BaseProps } from '../base'
-import type { ComponentState } from '../state'
-
-// ✅ 混合导入（类型和值）
-import { validateForm } from './validation'
-import type { ValidationResult } from './validation'
-
-// ❌ 不推荐：过深的相对路径（改用绝对路径）
-import type { CoreType } from '../../../definitions/core/base'
-```
-
-##### 导入语句格式规范
-
-导入语句按以下顺序分组，组之间空一行：
-
-1. 第三方库导入
-2. 绝对路径导入（别名）
-3. 相对路径导入
-
-每组内部按字母顺序排序。
-
-**导入格式示例**:
-
-```typescript
-// 1. 第三方库
-import { ref, computed } from 'vue'
-import { useRouter } from 'vue-router'
-
-// 2. 绝对路径导入
-import type { User, UserProfile } from '@/definitions/domain/user'
-import type { ButtonProps } from '@/definitions/ui/components'
-import { useUserStore } from '@/stores/user'
-
-// 3. 相对路径导入
-import type { LocalState } from './state'
-import { formatDate } from './utils'
 ```
 
 ## 生成流程与步骤
@@ -708,9 +671,147 @@ import { formatDate } from './utils'
 
 ## 重构已存在UI元件
 
+### 重构目标与核心原则
+
+**重构的首要目标**：让代码的格式与结构完全符合本文档设计的规范
+
+**核心重构原则**：
+1. **关注点分离**：Vue文件仅负责视图，逻辑必须移动到TS文件
+2. **职责清晰**：
+   - `.vue`文件：仅包含HTML模板、导入语句、样式导入
+   - `.ts`文件（composables）：包含所有业务逻辑、响应式数据、计算属性、方法
+   - `.scss`文件（styles）：包含所有样式代码
+3. **向后兼容**：在可能的情况下保持向后兼容性
+4. **逐步迁移**：分步骤进行，每一步都确保可编译和可运行
+
 ### 重构适用性说明
 
 本文档不仅适用于新建UI元件，也适用于重构已存在的UI元件。对于重构操作，应特别注意文件目录调整、方法名和文件名变动带来的次生影响。
+
+### 重构前后对比示例
+
+#### 场景：关注点分离重构
+
+**重构前（不推荐）- 逻辑在Vue文件中**：
+
+```vue
+<template>
+  <button @click="handleClick" :disabled="isDisabled">
+    {{ buttonText }}
+  </button>
+</template>
+
+<script setup lang="ts">
+import { ref, computed } from 'vue'
+
+const props = defineProps<{
+  label: string
+  disabled?: boolean
+}>()
+
+const emit = defineEmits<{
+  click: []
+}>()
+
+// ❌ 不应该在Vue文件中定义响应式数据
+const isLoading = ref(false)
+
+// ❌ 不应该在Vue文件中定义计算属性
+const buttonText = computed(() => {
+  return isLoading.value ? '加载中...' : props.label
+})
+
+// ❌ 不应该在Vue文件中定义方法
+const isDisabled = computed(() => props.disabled || isLoading.value)
+
+const handleClick = () => {
+  if (isDisabled.value) return
+  isLoading.value = true
+  setTimeout(() => {
+    emit('click')
+    isLoading.value = false
+  }, 1000)
+}
+</script>
+
+<style scoped>
+/* ❌ 不应该在Vue文件中编写样式代码 */
+button {
+  padding: 8px 16px;
+  background: blue;
+  color: white;
+}
+</style>
+```
+
+**重构后（推荐）- 逻辑在TS文件中**：
+
+```vue
+<template>
+  <button @click="handleClick" :disabled="isDisabled">
+    {{ buttonText }}
+  </button>
+</template>
+
+<script setup lang="ts">
+// ✅ 仅导入类型
+import type { ButtonDemoProps, ButtonDemoEmits } from './definitions/ButtonDemoType'
+
+// ✅ 仅导入组合式函数
+import { useButtonDemo } from './composables/useButtonDemo'
+
+// ✅ 仅定义Props和Emits
+const props = defineProps<ButtonDemoProps>()
+const emit = defineEmits<ButtonDemoEmits>()
+
+// ✅ 从组合式函数获取所有逻辑
+const { isDisabled, buttonText, handleClick } = useButtonDemo(props, { emit })
+</script>
+
+<style scoped lang="scss">
+// ✅ 仅导入样式文件
+@use './styles/button-demo';
+</style>
+```
+
+**配套的 useButtonDemo.ts**：
+
+```typescript
+import { ref, computed } from 'vue'
+import type { ButtonDemoProps, ButtonDemoEmits } from './definitions/ButtonDemoType'
+
+interface UseButtonDemoOptions {
+  emit: (event: keyof ButtonDemoEmits, ...args: any[]) => void
+}
+
+// ✅ 所有逻辑在TS文件中实现
+export const useButtonDemo = (props: ButtonDemoProps, options: UseButtonDemoOptions) => {
+  const { emit } = options
+
+  const isLoading = ref(false)
+
+  const buttonText = computed(() => {
+    return isLoading.value ? '加载中...' : props.label
+  })
+
+  const isDisabled = computed(() => props.disabled || isLoading.value)
+
+  const handleClick = () => {
+    if (isDisabled.value) return
+    isLoading.value = true
+    setTimeout(() => {
+      emit('click')
+      isLoading.value = false
+    }, 1000)
+  }
+
+  return {
+    isDisabled,
+    buttonText,
+    handleClick
+  }
+}
+```
 
 ### 重构工作流程
 
@@ -720,6 +821,7 @@ import { formatDate } from './utils'
    - 命名规范化：将不符合命名规则的组件重命名
    - 目录重构：调整文件组织结构
    - 接口优化：改进组件Props/Emits设计
+   - **关注点分离：将Vue文件中的逻辑移动到TS文件**（最重要！）
    - 性能优化：提升组件性能
 2. **分析现有代码**：全面了解待重构组件的实现
 3. **识别调用关系**：搜索代码库中所有引用该组件的文件
@@ -741,6 +843,7 @@ import { formatDate } from './utils'
    - 文件重命名：使用 git mv 保持历史记录
    - 目录调整：按新结构移动文件
    - 代码更新：修改组件实现
+   - **逻辑迁移：将Vue文件中的逻辑移动到composables的TS文件**
 3. **更新引用**：更新所有调用方的导入和使用
 4. **保持可编译**：每一步都确保代码可编译
 
@@ -961,6 +1064,7 @@ export const useButtonSubmit = (props: ButtonSubmitProps = {}) => {
 5. 使用组合式函数处理逻辑
 6. 提供明确的类型注解
 7. 遵循导入规范：第三方库 → 绝对路径 → 相对路径
+8. **重要**：Vue文件仅负责视图，所有逻辑必须在composables的TS文件中实现
 
 ## 样式部分要求
 1. 使用 `<style scoped lang="scss">` 语法
@@ -1006,6 +1110,7 @@ export const useButtonSubmit = (props: ButtonSubmitProps = {}) => {
 4. 使用onMounted/onBeforeUnmount处理生命周期
 5. 使用项目现有的工具函数（如usePersistence）
 6. 遵循导入规范：第三方库 → 绝对路径 → 相对路径
+7. **重要**：所有业务逻辑都在这里实现，Vue文件仅负责视图
 
 ## 错误处理
 1. 包含错误状态管理
@@ -1070,7 +1175,7 @@ export const useButtonSubmit = (props: ButtonSubmitProps = {}) => {
 ## 项目上下文
 - **项目**：YTLA Vue 3 项目
 - **技术栈**：Vue 3 + TypeScript + SCSS + Composition API
-- **重构目标**：[具体重构目标，如重命名、目录调整、接口优化等]
+- **重构目标**：让代码的格式与结构符合文档设计的规范，实现关注点分离，Vue文件仅负责视图
 
 ## 现有组件信息
 - **现有组件名**：[现有组件名，如SubmitButton]
@@ -1082,6 +1187,10 @@ export const useButtonSubmit = (props: ButtonSubmitProps = {}) => {
 1. **向后兼容性**：[是否需要保持向后兼容]
 2. **影响范围**：[已知的影响范围和调用方]
 3. **特殊约束**：[任何特殊的重构约束]
+4. **核心要求**：
+   - Vue文件仅负责视图（HTML模板、导入语句、样式导入）
+   - 所有逻辑必须移动到composables的TS文件中
+   - 样式代码必须在styles的SCSS文件中
 
 ## 重构内容
 [详细描述需要重构的具体内容]
@@ -1168,7 +1277,22 @@ export const useButtonSubmit = (props: ButtonSubmitProps = {}) => {
      ```
    - **验证方法**：检查导入语句的顺序和分组
 
-#### 4. 功能验证
+#### 4. 关注点分离验证（最重要！）
+
+1. ✅ **Vue文件职责验证**：验证Vue文件是否仅负责视图
+   - **标准**：Vue文件应仅包含：
+     - HTML模板（template部分）
+     - 导入语句（script部分）
+     - 样式导入（style部分）
+   - **验证方法**：检查Vue文件中是否包含业务逻辑、响应式数据定义、计算属性定义、方法定义等
+2. ✅ **逻辑实现位置验证**：验证逻辑是否在TS文件中实现
+   - **标准**：所有业务逻辑、响应式数据、计算属性、方法都应在composables的TS文件中实现
+   - **验证方法**：检查composables文件中是否包含所有逻辑实现
+3. ✅ **样式实现位置验证**：验证样式是否在SCSS文件中实现
+   - **标准**：所有样式代码都应在styles的SCSS文件中实现，Vue文件仅导入样式文件
+   - **验证方法**：检查Vue文件的style部分是否仅包含导入语句
+
+#### 5. 功能验证
 
 1. ✅ **Props接口定义验证**：验证Props是否有完整的TypeScript接口定义
    - **标准**：使用 `interface` 定义Props，提供默认值
@@ -1190,7 +1314,7 @@ export const useButtonSubmit = (props: ButtonSubmitProps = {}) => {
    - **示例**：搜索代码库确认所有引用该组件的文件都已处理
    - **验证方法**：检查重构影响分析文档和调用方更新记录
 
-#### 5. 样式验证
+#### 6. 样式验证
 
 1. ✅ **SCSS样式规范验证**：验证是否使用SCSS并遵循规范
    - **标准**：使用 `<style scoped lang="scss">`，导入相关样式文件
@@ -1203,7 +1327,7 @@ export const useButtonSubmit = (props: ButtonSubmitProps = {}) => {
    - **示例**：样式文件应使用BEM命名，如`&.--loading`修饰符表示加载状态
    - **验证方法**：检查样式是否使用BEM命名和响应式技术
 
-#### 6. 重构专项验证
+#### 7. 重构专项验证
 
 1. ✅ **组件接口兼容性验证**：验证重构后组件的公共接口是否保持向后兼容
    - **标准**：重构后组件的Props、Emits、Slots接口应保持向后兼容，避免破坏性变更
@@ -1237,6 +1361,7 @@ export const useButtonSubmit = (props: ButtonSubmitProps = {}) => {
 | **绝对导入**  | 使用路径别名的导入方式                      |
 | **相对导入**  | 使用 `./` 或 `../` 的导入方式            |
 | **路径别名**  | `tsconfig.json` 中配置的导入路径简写       |
+| **关注点分离** | 视图、逻辑、样式分离明确，Vue文件仅负责视图，逻辑在TS文件中 |
 
 ### 外部资源
 
@@ -1249,9 +1374,8 @@ export const useButtonSubmit = (props: ButtonSubmitProps = {}) => {
 
 **文档信息**
 
-- 生成时间：2026年4月2日
-- 基于版本：项目UI组件规范（20260402）
+- 生成时间：2026年4月7日
+- 基于版本：项目UI组件规范（20260407）
 - 适用场景：YTLA项目UI组件AI生成与重构
 - 文件位置：rule\_ui\_instructions.md
 - 规范范围：仅限ui目录下的vue文件、相关的composables和styles文件
-
