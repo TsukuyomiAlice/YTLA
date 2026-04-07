@@ -12,42 +12,13 @@
 </template>
 
 <script setup lang="ts">
-import { useButtonAction } from '../composables/useButtonAction.ts'
-import { useI18n } from 'vue-i18n'
-import { computed } from 'vue'
+import type { ButtonActionProps, ButtonActionEmits } from '../definitions/ButtonActionType'
+import { useButtonAction } from '../composables/useButtonAction'
 
-const { t } = useI18n()
+const props = defineProps<ButtonActionProps>()
+const emit = defineEmits<ButtonActionEmits>()
 
-const props = defineProps<{
-  type?: 'cancel' | 'prev' | 'next' | 'submit'
-  disabled?: boolean
-  ariaLabel?: string
-  title?: string
-}>()
-
-const emit = defineEmits<{
-  (e: 'click'): void
-}>()
-
-const defaultAriaLabel = computed(() => {
-  switch (props.type) {
-    case 'cancel':
-      return t('classic.cards.sideCardEditor.ButtonAction.Cancel')
-    case 'prev':
-      return t('classic.cards.sideCardEditor.ButtonAction.Prev')
-    case 'next':
-      return t('classic.cards.sideCardEditor.ButtonAction.Next')
-    case 'submit':
-      return t('classic.cards.sideCardEditor.ButtonAction.Submit')
-    default:
-      return t('classic.cards.sideCardEditor.ButtonAction.Submit')
-  }
-})
-
-const computedAriaLabel = computed(() => props.ariaLabel || defaultAriaLabel.value)
-const computedTitle = computed(() => props.title || defaultAriaLabel.value)
-
-const { handleClick } = useButtonAction(emit)
+const { computedAriaLabel, computedTitle, handleClick } = useButtonAction(props, emit)
 </script>
 
 <style scoped lang="scss">
