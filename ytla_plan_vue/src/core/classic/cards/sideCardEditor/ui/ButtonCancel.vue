@@ -8,10 +8,7 @@
 import type { ButtonCancelOptions } from '../composables/useButtonCancel.ts'
 import { useButtonCancel } from '../composables/useButtonCancel.ts'
 import type { Ref } from 'vue'
-import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
-
-const { t } = useI18n()
 
 const props = defineProps<{
   ariaLabel?: string
@@ -23,7 +20,7 @@ const emit = defineEmits<{
   (e: 'click'): void
 }>()
 
-const defaultAriaLabel = computed(() => t('classic.cards.sideCardEditor.ButtonCancel.Cancel'))
+const defaultAriaLabel = computed(() => 'Cancel')
 const computedAriaLabel = computed(() => props.ariaLabel || defaultAriaLabel.value)
 const computedTitle = computed(() => props.title || defaultAriaLabel.value)
 

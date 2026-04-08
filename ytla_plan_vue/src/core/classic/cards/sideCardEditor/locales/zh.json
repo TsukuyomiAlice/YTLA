@@ -5,20 +5,5 @@
   "Save": "保存",
   "Add": "添加",
   "Prev": "上一步",
-  "Next": "下一步",
-  "ButtonAction": {
-    "Cancel": "取消操作",
-    "Prev": "上一步操作",
-    "Next": "下一步操作",
-    "Submit": "提交操作",
-    "Scale": "缩放操作"
-  },
-  "ButtonCancel": {
-    "Cancel": "取消操作",
-    "ScaleUp": "放大",
-    "ScaleDown": "缩小"
-  },
-  "ButtonScale": {
-    "Scale": "缩放操作"
-  }
+  "Next": "下一步"
 }

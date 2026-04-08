@@ -7,10 +7,7 @@
 
 <script setup lang="ts">
 import { useButtonScale } from '../composables/useButtonScale'
-import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
-
-const { t } = useI18n()
 
 const props = defineProps<{
   icon: string
@@ -24,7 +21,7 @@ const emit = defineEmits<{
   (e: 'click'): void
 }>()
 
-const defaultAriaLabel = computed(() => props.label || t('classic.cards.sideCardEditor.ButtonScale.Scale'))
+const defaultAriaLabel = computed(() => props.label || 'Scale')
 const computedAriaLabel = computed(() => props.ariaLabel || defaultAriaLabel.value)
 const computedTitle = computed(() => props.title || defaultAriaLabel.value)
 

@@ -91,7 +91,7 @@
               >{{ name }}
               </div>
             </h3>
-            <h3>{{ $t(`${moduleType}.type_name`) }}&nbsp;&nbsp;-&nbsp;&nbsp;{{ $t(`${moduleType}.${moduleSubType}_subtype_name`) }}</h3>
+            <h3>{{ $t(`${moduleType}.modules._type.type_name`) }}&nbsp;&nbsp;-&nbsp;&nbsp;{{ $t(`${moduleType}.modules.${moduleSubType}.subtype_name`) }}</h3>
           </div>
         </div>
 
@@ -145,20 +145,20 @@
             class="rect-button gray"
             @click="handleDeactivate"
           >
-            {{ $t('planManage.modules.planDashBoard.PlanDashBoardSub_00_100') }}
+            {{ $t('planManage.modules.planDashboard.sub_00_100') }}
           </button>
           <button
             v-if="activeFlag === '0'"
             class="rect-button green"
             @click="handleReactivate"
           >
-            {{ $t('planManage.modules.planDashBoard.PlanDashBoardSub_00_101') }}
+            {{ $t('planManage.modules.planDashboard.sub_00_101') }}
           </button>
           <button
             class="rect-button red"
             @click="handleClose"
           >
-            {{ $t('planManage.modules.planDashBoard.PlanDashBoardSub_00_102') }}
+            {{ $t('planManage.modules.planDashboard.sub_00_102') }}
           </button>
         </div>
 
