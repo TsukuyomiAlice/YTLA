@@ -5,26 +5,17 @@
 </template>
 
 <script setup lang="ts">
-import type { ButtonCancelOptions } from '../composables/useButtonCancel.ts'
-import { useButtonCancel } from '../composables/useButtonCancel.ts'
+import type { ButtonCancelProps, ButtonCancelEmits } from '../definitions/ButtonCancelType'
 import type { Ref } from 'vue'
-import { computed } from 'vue'
+import { useButtonCancel } from '../composables/useButtonCancel.ts'
 
-const props = defineProps<{
-  ariaLabel?: string
-  title?: string
-  options?: Ref<ButtonCancelOptions> | ButtonCancelOptions
+const props = defineProps<ButtonCancelProps & {
+  options?: Ref<import('../definitions/ButtonCancelType').ButtonCancelOptions> | import('../definitions/ButtonCancelType').ButtonCancelOptions
 }>()
 
-const emit = defineEmits<{
-  (e: 'click'): void
-}>()
+const emit = defineEmits<ButtonCancelEmits>()
 
-const defaultAriaLabel = computed(() => 'Cancel')
-const computedAriaLabel = computed(() => props.ariaLabel || defaultAriaLabel.value)
-const computedTitle = computed(() => props.title || defaultAriaLabel.value)
-
-const { handleClick } = useButtonCancel(emit, props.options)
+const { handleClick, computedAriaLabel, computedTitle } = useButtonCancel(props, emit, props.options)
 </script>
 
 <style scoped lang="scss">

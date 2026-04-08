@@ -1,21 +1,17 @@
-import type { Ref } from 'vue'
-
-export interface ButtonCancelOptions {
-  confirmDialog?: {
-    enabled: boolean
-    title?: string
-    message?: string
-    confirmText?: string
-    cancelText?: string
-  }
-}
+import type { Ref, ComputedRef } from 'vue'
+import { computed } from 'vue'
+import type { ButtonCancelProps, ButtonCancelEmits, ButtonCancelOptions } from '../definitions/ButtonCancelType'
 
 export interface UseButtonCancelReturn {
   handleClick: () => void | Promise<void>
+  defaultAriaLabel: ComputedRef<string>
+  computedAriaLabel: ComputedRef<string>
+  computedTitle: ComputedRef<string>
 }
 
 export const useButtonCancel = (
-  emit: (e: 'click') => void,
+  props: ButtonCancelProps,
+  emit: ButtonCancelEmits,
   options?: Ref<ButtonCancelOptions> | ButtonCancelOptions
 ): UseButtonCancelReturn => {
   const handleClick = async () => {
@@ -33,7 +29,14 @@ export const useButtonCancel = (
     emit('click')
   }
 
+  const defaultAriaLabel = computed(() => 'Cancel')
+  const computedAriaLabel = computed(() => props.ariaLabel || defaultAriaLabel.value)
+  const computedTitle = computed(() => props.title || defaultAriaLabel.value)
+
   return {
-    handleClick
+    handleClick,
+    defaultAriaLabel,
+    computedAriaLabel,
+    computedTitle
   }
 }

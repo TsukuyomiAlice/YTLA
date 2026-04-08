@@ -1,0 +1,11 @@
+- [x] ButtonCancelType.ts 文件已创建，包含 ButtonCancelProps、ButtonCancelEmits、ButtonCancelOptions 完整类型定义
+- [x] useButtonCancel.ts 已重构，从 definitions 导入类型，composables 文件中无类型定义
+- [x] ButtonCancel.vue 已重构，从 definitions 导入类型，仅包含模板、导入语句和样式导入
+- [x] ButtonScaleType.ts 文件已创建，包含 ButtonScaleProps、ButtonScaleEmits 完整类型定义
+- [x] useButtonScale.ts 已重构，从 definitions 导入类型，composables 文件中无类型定义
+- [x] ButtonScale.vue 已重构，从 definitions 导入类型，仅包含模板、导入语句和样式导入
+- [x] 所有实现方式与 ButtonAction 保持一致
+- [x] TypeScript 编译检查无错误
+- [x] 所有导入路径正确解析
+- [x] 所有现有功能正常工作
+- [x] 代码符合项目编码规范

@@ -6,26 +6,13 @@
 </template>
 
 <script setup lang="ts">
+import type { ButtonScaleProps, ButtonScaleEmits } from '../definitions/ButtonScaleType'
 import { useButtonScale } from '../composables/useButtonScale'
-import { computed } from 'vue'
 
-const props = defineProps<{
-  icon: string
-  label?: string
-  showLabel?: boolean
-  ariaLabel?: string
-  title?: string
-}>()
+const props = defineProps<ButtonScaleProps>()
+const emit = defineEmits<ButtonScaleEmits>()
 
-const emit = defineEmits<{
-  (e: 'click'): void
-}>()
-
-const defaultAriaLabel = computed(() => props.label || 'Scale')
-const computedAriaLabel = computed(() => props.ariaLabel || defaultAriaLabel.value)
-const computedTitle = computed(() => props.title || defaultAriaLabel.value)
-
-const { handleClick } = useButtonScale(emit)
+const { handleClick, computedAriaLabel, computedTitle } = useButtonScale(props, emit)
 </script>
 
 <style lang="scss" scoped>
