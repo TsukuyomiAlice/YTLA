@@ -26,6 +26,7 @@
 - 图标文件 (avatar)
 - 主组件文件（components）
 - 布局文件（layouts）
+- 语言文件（locales）
 - 服务文件（services）
 - 存储文件（stores）
 - 工厂文件（factories）
@@ -277,26 +278,20 @@ defineProps<{
 //    import { ref, computed } from 'vue'
 //    import { useRouter } from 'vue-router'
 //
-// 2. 绝对路径导入 - 类型定义（第二组）
-//    import type { SomeType } from '@/definitions/xxx'
-//    import type { ComponentProps, ComponentEmits } from './definitions/[组件名]Type'
+// 2. 相对路径导入 - 类型定义（第二组）
+//    import type { ComponentProps, ComponentEmits } from '../definitions/[组件名]Type'
 //
-// 3. 绝对路径导入 - 公共模块（第二组）
-//    import { useXxx } from '@/composables/useXxx'
-//    import { useXxxStore } from '@/store/xxx'
-//    import { XxxService } from '@/services/xxx'
-//
-// 4. 相对路径导入 - 本模块（第三组）
-//    import { useComponentLogic } from './composables/useComponentLogic'
+// 3. 相对路径导入 - 本模块（第三组）
+//    import { useComponentLogic } from '../composables/useComponentLogic'
 //
 // 组之间空一行，组内按字母顺序排序
 // ============================================================================
 
 // 导入 Props 和 Emits 类型（从外部 definitions 文件）
-import type { ComponentProps, ComponentEmits } from './definitions/[组件名]Type'
+import type { ComponentProps, ComponentEmits } from '../definitions/[组件名]Type'
 
 // 导入组合式函数（从外部 composables 文件）
-import { useComponentLogic } from './composables/useComponentLogic'
+import { useComponentLogic } from '../composables/useComponentLogic'
 
 // 定义 Props 和 Emits，使用 withDefaults 提供默认值
 const props = withDefaults(defineProps<ComponentProps>(), {
@@ -310,7 +305,7 @@ const { /* 解构需要的数据和方法 */ } = useComponentLogic(props, emit)
 
 <style scoped lang="scss">
 // 仅导入样式文件，不编写具体样式代码
-@use './styles/component';
+@use '../styles/component';
 </style>
 ```
 
@@ -344,10 +339,10 @@ const { /* 解构需要的数据和方法 */ } = useComponentLogic(props, emit)
 // ============================================================================
 
 // 导入 Props 和 Emits 类型（从外部 definitions 文件）
-import type { ButtonSubmitProps, ButtonSubmitEmits } from './definitions/ButtonSubmitType'
+import type { ButtonSubmitProps, ButtonSubmitEmits } from '../definitions/ButtonSubmitType'
 
 // 导入组合式函数（从外部 composables 文件）
-import { useButtonSubmit } from './composables/useButtonSubmit'
+import { useButtonSubmit } from '../composables/useButtonSubmit'
 
 // 定义 Props 和 Emits
 const props = defineProps<ButtonSubmitProps>()
@@ -359,8 +354,8 @@ const { isLoading, isDisabled, label, handleSubmit } = useButtonSubmit(props, { 
 
 <style scoped lang="scss">
 // 仅导入样式文件，具体样式在 styles 目录中
-@use './styles/ui-button';
-@use './styles/button-submit';
+@use '../styles/ui-button';
+@use '../styles/button-submit';
 </style>
 ```
 
@@ -384,7 +379,7 @@ export type ButtonSubmitEmits = {
 ```typescript
 // composables/useButtonSubmit.ts
 import { computed } from 'vue'
-import type { ButtonSubmitProps, ButtonSubmitEmits } from './definitions/ButtonSubmitType'
+import type { ButtonSubmitProps, ButtonSubmitEmits } from '../definitions/ButtonSubmitType'
 
 interface UseButtonSubmitOptions {
   emit: (event: keyof ButtonSubmitEmits, ...args: any[]) => void
@@ -430,16 +425,8 @@ export const useButtonSubmit = (props: ButtonSubmitProps, options: UseButtonSubm
 // 1. 第三方库导入（第一组）
 //    import { ref, computed } from 'vue'
 //
-// 2. 绝对路径导入 - 类型定义（第二组）
-//    import type { SomeType } from '@/definitions/xxx'
-//
-// 3. 绝对路径导入 - 公共模块（第二组）
-//    import { useXxx } from '@/composables/useXxx'
-//    import { useXxxStore } from '@/store/xxx'
-//    import { XxxService } from '@/services/xxx'
-//
-// 4. 相对路径导入 - 本模块（第三组）
-//    import type { LocalType } from './definitions/[组件名]Type'
+// 2. 相对路径导入 - 本模块（第三组）
+//    import type { LocalType } from '../definitions/[组件名]Type'
 //
 // 组之间空一行，组内按字母顺序排序
 // ============================================================================
@@ -478,12 +465,8 @@ export const useButtonSubmit = (props: ButtonSubmitProps, options: UseButtonSubm
 // 第三方库导入
 import { ref, computed, watch } from 'vue'
 
-// 绝对路径导入 - 核心类型
-import type { AsyncFunction, VoidFunction } from '@/definitions/core/base'
-import type { ErrorHandler } from '@/definitions/core/errors'
-
 // 相对路径导入 - 本模块类型
-import type { ButtonSubmitProps } from './definitions/ButtonSubmitType'
+import type { ButtonSubmitProps } from '../definitions/ButtonSubmitType'
 
 interface ButtonSubmitProps {
   initialLoading?: boolean
@@ -534,8 +517,8 @@ export const useButtonSubmit = (props: ButtonSubmitProps = {}) => {
 //    @use '@/styles/mixins';
 //
 // 3. 相对路径导入 - 本模块样式（第三组）
-//    @use './variables';
-//    @use './styles/shared';
+//    @use '../variables';
+//    @use '../styles/shared';
 //
 // 注意：使用 @use 而不是 @import，优先使用别名导入
 // ============================================================================
@@ -770,7 +753,7 @@ const { isDisabled, buttonText, handleClick } = useButtonDemo(props, { emit })
 
 <style scoped lang="scss">
 // ✅ 仅导入样式文件
-@use './styles/button-demo';
+@use '../styles/button-demo';
 </style>
 ```
 
@@ -1270,10 +1253,10 @@ export const useButtonSubmit = (props: ButtonSubmitProps = {}) => {
      ```typescript
      // 1. 第三方库
      import { ref } from 'vue'
-     // 2. 绝对路径
-     import type { ButtonProps } from '@/definitions/ui/components'
+     // 2. 相对路径
+     import type { ButtonProps } from '../definitions/uiComponentName'
      // 3. 相对路径
-     import { useButtonSubmit } from './composables/useButtonSubmit'
+     import { useButtonSubmit } from '../composables/useButtonSubmit'
      ```
    - **验证方法**：检查导入语句的顺序和分组
 
