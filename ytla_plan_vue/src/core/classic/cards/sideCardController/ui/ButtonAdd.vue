@@ -12,7 +12,7 @@
 <script setup lang="ts">
 import { useButtonAdd } from '../composables/useButtonAdd'
 
-const props = withDefaults(defineProps<{
+withDefaults(defineProps<{
   icon: string
   title: string
   isActive?: boolean
@@ -24,7 +24,7 @@ const emit = defineEmits<{
   (e: 'click'): void
 }>()
 
-const { icon, title, isActive, handleClick } = useButtonAdd(props, { emit })
+const { handleClick } = useButtonAdd(emit)
 </script>
 
 <style scoped lang="scss">
