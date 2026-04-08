@@ -191,9 +191,6 @@ export type ButtonSubmitEmits = {
 import { computed } from 'vue'
 import type { ButtonSubmitProps, ButtonSubmitEmits } from '../definitions/ButtonSubmitType'
 
-interface UseButtonSubmitOptions {
-  emit: (event: keyof ButtonSubmitEmits, ...args: any[]) => void
-}
 
 // ============================================================================
 // 逻辑实现说明
@@ -277,11 +274,6 @@ import { ref, computed, watch } from 'vue'
 
 // 相对路径导入 - 本模块类型
 import type { ButtonSubmitProps } from '../definitions/ButtonSubmitType'
-
-interface ButtonSubmitProps {
-  initialLoading?: boolean
-  initialDisabled?: boolean
-}
 
 export const useButtonSubmit = (props: ButtonSubmitProps = {}) => {
   const isLoading = ref(props.initialLoading || false)

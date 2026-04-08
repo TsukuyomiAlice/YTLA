@@ -1,0 +1,8 @@
+- [x] Checkpoint 1: 完成sideCardController现有代码结构分析
+- [x] Checkpoint 2: ButtonAdd.vue重构完成，仅包含视图和导入
+- [x] Checkpoint 3: 创建或更新useButtonAdd.ts组合式函数
+- [x] Checkpoint 4: 创建或更新button-add.scss样式文件
+- [x] Checkpoint 5: 组件命名符合"元件类型+功能描述"规范
+- [x] Checkpoint 6: TypeScript编译检查通过
+- [x] Checkpoint 7: 组件功能正常工作，无回归问题
+- [x] Checkpoint 8: 确定SideCardController主组件的处理方案

@@ -1,8 +1,8 @@
 <template>
   <button
     class="add-button"
-    :class="{ active: isActive }"
-    @click="handleClick"
+    :class="{ '--active': isActive }"
+    @click.stop="handleClick"
     :title="title"
   >
     <span class="icon">{{ icon }}</span>
@@ -10,6 +10,8 @@
 </template>
 
 <script setup lang="ts">
+import { useButtonAdd } from '../composables/useButtonAdd'
+
 const props = withDefaults(defineProps<{
   icon: string
   title: string
@@ -22,11 +24,9 @@ const emit = defineEmits<{
   (e: 'click'): void
 }>()
 
-const handleClick = () => {
-  emit('click')
-}
+const { icon, title, isActive, handleClick } = useButtonAdd(props, { emit })
 </script>
 
 <style scoped lang="scss">
-@use '../styles/side-card-controller';
+@use '../styles/button-add';
 </style>

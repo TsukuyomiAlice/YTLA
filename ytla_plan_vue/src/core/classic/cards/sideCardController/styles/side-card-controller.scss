@@ -31,39 +31,6 @@
   flex-wrap: nowrap;
 }
 
-.add-button {
-  flex-shrink: 0;
-  padding: 0.5rem 0.75rem;
-  font-size: 1.2em;
-  background: #f0f2f5;
-  border: 1px solid #ddd;
-  border-radius: 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-  transition: all 0.3s;
-
-  &:hover {
-    background: #e1e4e8;
-    transform: translateY(-1px);
-  }
-
-  .icon {
-    font-size: 1.2em;
-  }
-
-  .text {
-    font-size: 0.9em;
-    color: #444;
-  }
-}
-
-.add-button.active {
-  background: #e1e4e8;
-  box-shadow: inset 0 0.1rem 0.25rem rgba(0, 0, 0, 0.1);
-}
-
 .add-now-btn {
   background: #f39c12;
   color: white;
