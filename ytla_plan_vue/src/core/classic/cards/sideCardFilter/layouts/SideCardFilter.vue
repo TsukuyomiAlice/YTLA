@@ -1,19 +1,23 @@
 <template>
   <div class="filter-group">
-    <FilterInput
+    <BarFilterInput
       :value="filterValue"
       :handle-input="handleFilterInput"
+      :placeholder="$t('classic.cards.sideCardFilter.hint')"
     />
-    <ButtonClear :handle-clear="clearFilter" />
+    <ButtonFilterClear
+      :handle-clear="clearFilter"
+      :label="$t('classic.cards.sideCardFilter.clear')"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
-import type { SideCardFilterProps } from '@/core/classic/cards/sideCardFilter/definitions/sideCardFilterType.ts'
-import FilterInput from '@/core/classic/cards/sideCardFilter/ui/FilterInput.vue'
-import ButtonClear from '@/core/classic/cards/sideCardFilter/ui/ButtonClear.vue'
+import { useSideCardFilter } from '../composables/useSideCardFilter'
+import BarFilterInput from '../ui/BarFilterInput.vue'
+import ButtonFilterClear from '../ui/ButtonFilterClear.vue'
 
-defineProps<SideCardFilterProps>()
+const { filterValue, handleFilterInput, clearFilter } = useSideCardFilter()
 </script>
 
 <style scoped lang="scss">
