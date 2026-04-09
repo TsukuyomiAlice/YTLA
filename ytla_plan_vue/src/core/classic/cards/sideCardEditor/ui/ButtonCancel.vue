@@ -6,16 +6,12 @@
 
 <script setup lang="ts">
 import type { ButtonCancelProps, ButtonCancelEmits } from '../definitions/ButtonCancelType'
-import type { Ref } from 'vue'
-import { useButtonCancel } from '../composables/useButtonCancel.ts'
+import { useButtonCancel } from '../composables/useButtonCancel'
 
-const props = defineProps<ButtonCancelProps & {
-  options?: Ref<import('../definitions/ButtonCancelType').ButtonCancelOptions> | import('../definitions/ButtonCancelType').ButtonCancelOptions
-}>()
-
+const props = defineProps<ButtonCancelProps>()
 const emit = defineEmits<ButtonCancelEmits>()
 
-const { handleClick, computedAriaLabel, computedTitle } = useButtonCancel(props, emit, props.options)
+const { handleClick, computedAriaLabel, computedTitle } = useButtonCancel(props, emit)
 </script>
 
 <style scoped lang="scss">

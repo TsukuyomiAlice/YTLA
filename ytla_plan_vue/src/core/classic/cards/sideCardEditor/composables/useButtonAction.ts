@@ -1,9 +1,9 @@
 import { computed } from 'vue'
-import type { ButtonActionProps } from '../definitions/ButtonActionType'
+import type { ButtonActionProps, ButtonActionEmits } from '../definitions/ButtonActionType'
 
 export const useButtonAction = (
   props: ButtonActionProps,
-  emit: (e: 'click') => void
+  emit: ButtonActionEmits
 ) => {
 
   const defaultAriaLabel = computed(() => {

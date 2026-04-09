@@ -1,6 +1,9 @@
+import type { Ref } from 'vue'
+
 export interface ButtonCancelProps {
   ariaLabel?: string
   title?: string
+  options?: Ref<ButtonCancelOptions> | ButtonCancelOptions
 }
 
 export type ButtonCancelEmits = {

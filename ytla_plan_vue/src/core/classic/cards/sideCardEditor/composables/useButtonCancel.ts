@@ -1,21 +1,12 @@
-import type { Ref, ComputedRef } from 'vue'
 import { computed } from 'vue'
-import type { ButtonCancelProps, ButtonCancelEmits, ButtonCancelOptions } from '../definitions/ButtonCancelType'
-
-export interface UseButtonCancelReturn {
-  handleClick: () => void | Promise<void>
-  defaultAriaLabel: ComputedRef<string>
-  computedAriaLabel: ComputedRef<string>
-  computedTitle: ComputedRef<string>
-}
+import type { ButtonCancelProps, ButtonCancelEmits } from '../definitions/ButtonCancelType'
 
 export const useButtonCancel = (
   props: ButtonCancelProps,
-  emit: ButtonCancelEmits,
-  options?: Ref<ButtonCancelOptions> | ButtonCancelOptions
-): UseButtonCancelReturn => {
+  emit: ButtonCancelEmits
+) => {
   const handleClick = async () => {
-    const opts = options && 'value' in options ? options.value : options
+    const opts = props.options && 'value' in props.options ? props.options.value : props.options
 
     if (opts?.confirmDialog?.enabled) {
       const confirmed = window.confirm(

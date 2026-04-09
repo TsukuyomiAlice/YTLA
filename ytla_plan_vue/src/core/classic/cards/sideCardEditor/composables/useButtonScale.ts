@@ -1,18 +1,10 @@
-import type { ComputedRef } from 'vue'
 import { computed } from 'vue'
-import type { ButtonScaleProps } from '../definitions/ButtonScaleType'
-
-export interface UseButtonScaleReturn {
-  handleClick: () => void
-  defaultAriaLabel: ComputedRef<string>
-  computedAriaLabel: ComputedRef<string>
-  computedTitle: ComputedRef<string>
-}
+import type { ButtonScaleProps, ButtonScaleEmits } from '../definitions/ButtonScaleType'
 
 export const useButtonScale = (
   props: ButtonScaleProps,
-  emit: (e: 'click') => void
-): UseButtonScaleReturn => {
+  emit: ButtonScaleEmits
+) => {
   const handleClick = () => {
     emit('click')
   }

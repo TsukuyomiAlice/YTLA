@@ -16,5 +16,5 @@ const { handleClick, computedAriaLabel, computedTitle } = useButtonScale(props, 
 </script>
 
 <style lang="scss" scoped>
-@use '../styles/button-scale.scss' as *;
+@use '../styles/button-scale';
 </style>

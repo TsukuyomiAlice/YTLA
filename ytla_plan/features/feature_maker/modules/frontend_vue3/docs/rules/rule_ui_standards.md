@@ -4,6 +4,31 @@
 
 本文档专注于提供 Vue3/TS/SCSS 规范文档的示例，展示怎么具体编写代码。
 
+### UI 组件使用场景
+
+UI 组件存在两种使用场景：
+
+**场景一：UI 作为主组件的子组件**
+- UI 作为 component 或 layout 下的子组件存在
+- 主组件已有完整的 prop 和 emit 设计
+- UI 直接通过 props 接收主组件的数据和方法
+- 不需要自己的 composable（除非有纯视图级别的逻辑）
+- 示例：sideCard 模块中的 ButtonPin.vue
+
+**场景二：UI 作为独立组件**
+- UI 先于主组件设计，需要自己提供定义接口
+- 有完整的 props 和 emits 定义
+- 使用自己的 composable 处理逻辑
+- 可以独立使用和测试
+- 示例：sideCardController 模块中的 ButtonAdd.vue
+
+**判断指南**
+- 是否专门为某个特定主组件设计？是→场景一，否→场景二
+- 主组件是否已有完整的状态管理和逻辑？是→场景一，否→场景二
+- 是否需要在多个上下文中独立使用？是→场景二，否→场景一
+
+两种场景都是规范允许的，选择哪种取决于具体的设计需求。
+
 ## 代码模板与示例
 
 ### .vue组件模板
@@ -973,9 +998,9 @@ export const useButtonSubmit = (props: ButtonSubmitProps = {}) => {
 
 **文档信息**
 
-- 生成时间：2026年4月8日
-- 基于版本：项目UI组件规范（20260407）
+- 生成时间：2026年4月9日
+- 基于版本：项目UI组件规范（20260409）
 - 适用场景：YTLA项目UI组件AI生成与重构 - 代码示例
-- 文件位置：temp\_rule\_ui\_standards.md
+- 文件位置：rule\_ui\_standards.md
 - 规范范围：Vue3/TS/SCSS代码示例
 
