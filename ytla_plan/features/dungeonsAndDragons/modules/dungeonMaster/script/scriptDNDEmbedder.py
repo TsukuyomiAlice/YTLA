@@ -6,7 +6,7 @@ import hashlib
 from typing import List, Dict, Optional, Tuple
 
 # 导入自定义模块
-from core.classic.frame import pdfProcessor, chromaDBConnector, loggerConfig
+from core.classic.frame._type.func import pdfProcessor, chromaDBConnector, loggerConfig
 
 
 class DNDEmbedder:
