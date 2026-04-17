@@ -1,0 +1,10 @@
+- [x] Checkpoint 1: 重构章节开头有明确的重构目标说明，强调让代码格式与结构符合文档规范
+- [x] Checkpoint 2: 文档中有专门强调关注点分离原则的内容
+- [x] Checkpoint 3: Vue组件模板中有醒目的关注点分离说明
+- [x] Checkpoint 4: 文档明确说明Vue文件仅负责视图
+- [x] Checkpoint 5: 文档列出Vue文件应包含的具体内容（HTML模板、导入语句、样式导入）
+- [x] Checkpoint 6: 文档明确说明逻辑应在composables的TS文件中实现
+- [x] Checkpoint 7: 有重构前后的代码对比示例
+- [x] Checkpoint 8: 文档格式正确，无语法错误
+- [x] Checkpoint 9: 所有修改位置正确，逻辑连贯
+- [x] Checkpoint 10: 所有验收标准都已满足

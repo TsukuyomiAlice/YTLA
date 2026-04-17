@@ -1,0 +1,10 @@
+- [x] Checkpoint 1: temp_summary_sidecard.md 文档完整，包含 _type 目录说明，不含 docs 内容
+- [x] Checkpoint 2: temp_summary_module.md 文档完整，包含 _type 目录说明，不含 docs 内容
+- [x] Checkpoint 3: 用户已确认两份小结文档
+- [x] Checkpoint 4: SideCard _type 目录相关脚本已生成（avatar, definitions, locales, registries）
+- [x] Checkpoint 5: SideCard 具体功能实现目录相关脚本已生成（avatar, components, composables, definitions, flows, locales, registries, services, stores, styles）
+- [x] Checkpoint 6: Module _type 目录相关脚本已生成（avatar, locales, registries）
+- [x] Checkpoint 7: Module 具体功能实现目录相关脚本已生成（avatar, components, flows, locales, registries）
+- [x] Checkpoint 8: 所有脚本文件命名符合规范：script_classic_vue3_[模组类型]_[目录名].py
+- [x] Checkpoint 9: 脚本生成的空模板代码符合项目规范
+- [x] Checkpoint 10: 所有脚本文件位于正确的目录：d:\YTLA\ytla_plan\features\scaffold\modules\general_classic\script

@@ -6,7 +6,7 @@ export function loadModuleRegistries(): void {
   console.groupCollapsed('[loadModuleRegistries] Starting to load module registries')
   console.time('[loadModuleRegistries] Total time')
 
-  const moduleMap = import.meta.glob('@/features/**/modules/_type/registries/registries.ts', { eager: true })
+  const moduleMap = import.meta.glob('@/features/**/modules/**/registries/registries.ts', { eager: true })
   const totalModules = Object.keys(moduleMap).length
 
   console.debug(`[loadModuleRegistries] Found ${totalModules} module registry files`)
@@ -23,7 +23,7 @@ export function loadModuleRegistries(): void {
   console.timeEnd('[loadModuleRegistries] Total time')
 
   const store = getAllModuleRegistries()
-  
+
   if (store.size > 0) {
     console.debug(`[loadModuleRegistries] Successfully loaded ${store.size} module registries`)
     store.forEach((registry, moduleSubType) => {

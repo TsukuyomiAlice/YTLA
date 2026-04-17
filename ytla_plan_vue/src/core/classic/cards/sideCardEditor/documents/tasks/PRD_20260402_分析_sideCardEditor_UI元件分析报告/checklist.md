@@ -1,0 +1,22 @@
+# SideCardEditor UI组件规范化 - Verification Checklist
+
+- [x] Checkpoint 1: styles/button-cancel.scss文件已创建且包含ButtonCancel.vue的所有样式
+- [x] Checkpoint 2: ButtonCancel.vue已删除内联样式并使用@use导入button-cancel.scss
+- [x] Checkpoint 3: ButtonCancel.vue的视觉表现与修改前完全一致
+- [x] Checkpoint 4: styles/button-scale.scss文件已创建且包含ButtonScale.vue的所有样式
+- [x] Checkpoint 5: ButtonScale.vue已删除内联样式并使用@use导入button-scale.scss
+- [x] Checkpoint 6: ButtonScale.vue的视觉表现与修改前完全一致
+- [x] Checkpoint 7: composables/useButtonAction.ts文件已创建
+- [x] Checkpoint 8: ButtonAction.vue已导入并使用useButtonAction
+- [x] Checkpoint 9: composables/useButtonCancel.ts文件已创建
+- [x] Checkpoint 10: ButtonCancel.vue已导入并使用useButtonCancel
+- [x] Checkpoint 11: composables/useButtonScale.ts文件已创建
+- [x] Checkpoint 12: ButtonScale.vue已导入并使用useButtonScale
+- [x] Checkpoint 13: ButtonAction.vue已添加aria-label属性
+- [x] Checkpoint 14: ButtonCancel.vue已添加aria-label属性
+- [x] Checkpoint 15: ButtonScale.vue已添加aria-label属性
+- [x] Checkpoint 16: 所有ARIA标签允许通过props覆盖默认值
+- [x] Checkpoint 17: TypeScript编译无错误
+- [x] Checkpoint 18: 所有文件命名符合rule_ui_instructions.md规范
+- [x] Checkpoint 19: 目录结构符合规范要求
+- [x] Checkpoint 20: 合规性评分达到95%以上

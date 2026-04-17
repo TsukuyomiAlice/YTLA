@@ -4,24 +4,21 @@
     :class="type"
     @click="handleClick"
     :disabled="disabled"
+    :aria-label="computedAriaLabel"
+    :title="computedTitle"
   >
     <slot></slot>
   </button>
 </template>
 
 <script setup lang="ts">
-defineProps<{
-  type?: 'cancel' | 'prev' | 'next' | 'submit'
-  disabled?: boolean
-}>()
+import type { ButtonActionProps, ButtonActionEmits } from '../definitions/ButtonActionType'
+import { useButtonAction } from '../composables/useButtonAction'
 
-const emit = defineEmits<{
-  (e: 'click'): void
-}>()
+const props = defineProps<ButtonActionProps>()
+const emit = defineEmits<ButtonActionEmits>()
 
-const handleClick = () => {
-  emit('click')
-}
+const { computedAriaLabel, computedTitle, handleClick } = useButtonAction(props, emit)
 </script>
 
 <style scoped lang="scss">

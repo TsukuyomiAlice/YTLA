@@ -1,0 +1,10 @@
+- [x] Checkpoint 1: 所有 script_classic_vue3_*.py 脚本已修改，去掉了 if __name__ == "__main__" 执行段
+- [x] Checkpoint 2: constGenerators_vue3.py 已创建在 general_classic/const/ 目录
+- [x] Checkpoint 3: constGenerators_vue3.py 包含 sidecard 和 module 的生成器列表
+- [x] Checkpoint 4: processGenerateFile_vue3.py 已创建在 general_classic/process/ 目录
+- [x] Checkpoint 5: processGenerateFile_vue3.py 能根据 structure 和 sub_type_name 调用相应的生成器
+- [x] Checkpoint 6: processGenerateStructure.py 已修改，集成了 processGenerateFile_vue3.py
+- [x] Checkpoint 7: processGenerateStructure.py 从 config.py 读取语言环境配置
+- [x] Checkpoint 8: processGenerateStructureTest.py 已添加 classic_vue3 的测试用例
+- [x] Checkpoint 9: 测试用例包含 sidecard 和 module 类型的测试
+- [x] Checkpoint 10: 所有测试能正常运行

@@ -1,7 +1,9 @@
 # encode = utf-8
 
+from ytla_plan import config
 from features.scaffold.modules.backend_python_flask.process.processGenerateStructure import generate_python_structure
 from features.scaffold.modules.frontend_vue3.process.processGenerateStructure import generate_vue3_structure
+from features.scaffold.modules.general_classic.process.processGenerateFile_vue3 import generate_classic_vue3_files
 
 
 def process_generate_structure(is_core: bool = False,
@@ -9,7 +11,7 @@ def process_generate_structure(is_core: bool = False,
                                gen_backend: bool = False, gen_frontend: bool = False):
     """
     Process structure generation for core_classic
-    core_classic will use backend_python and frontend_vue3
+    core_classic will use backend_python and frontend_vue3 (classic_vue3 for classic core)
     :param is_core: Whether it's a core or feature (y/n, default n)
     :param type_name: Type category / core version name
     :param structure: Structure type (cards / modules for feature, while cards, modules, plans, frame, users for core)
@@ -42,7 +44,10 @@ def process_generate_structure(is_core: bool = False,
 
         # Generate frontend structure
         if gen_frontend:
-            frontend_result = generate_vue3_structure(is_core, structure, type_name, sub_type_name)
+            if config.FRONTEND_VERSION == 'vue3':
+                frontend_result = generate_vue3_structure(is_core, structure, type_name, sub_type_name)
+                if config.CORE_VERSION == 'classic':
+                    frontend_result = generate_classic_vue3_files(is_core, structure, type_name, sub_type_name)
 
         # Return combined result
         return {

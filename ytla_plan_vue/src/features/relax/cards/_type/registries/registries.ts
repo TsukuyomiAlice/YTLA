@@ -3,5 +3,5 @@ import { createCardRegistry } from '@/core/classic/cards/sideCard/factories/card
 
 import { relaxCardEditorFlowManager } from '@/features/relax/cards/_type/flows/relaxCardFlowManager.ts'
 createCardEditorFlowRegistry('relax', relaxCardEditorFlowManager)
-import { relaxCardConfig } from '@/features/relax/cards/_type/registries/relaxCardConfig.ts'
+import { relaxCardConfig } from '@/features/relax/cards/_type/registries/cardRegistry.ts'
 createCardRegistry('relax', relaxCardConfig)
