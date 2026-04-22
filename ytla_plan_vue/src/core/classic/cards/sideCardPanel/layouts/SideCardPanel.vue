@@ -18,12 +18,11 @@
 </template>
 
 <script setup lang="ts">
-import { nextTick, watch } from 'vue'
-import { useSideCardPanel } from '@/core/classic/cards/sideCardPanel/composables/useSideCardPanel.ts'
-import { useSideCardPanelLayout } from '@/core/classic/cards/sideCardPanel/composables/useSideCardPanelLayout.ts'
-import { getCardRegistry } from '@/core/classic/cards/sideCard/factories/cardRegistry.ts'
+import { useSideCardPanel } from '@/core/classic/cards/sideCardPanel/composables/useSideCardPanel'
+import { useSideCardPanelLayout } from '@/core/classic/cards/sideCardPanel/composables/useSideCardPanelLayout'
+import { getCardRegistry } from '@/core/classic/cards/sideCard/factories/cardRegistry'
 import ContainerMasonryGrid from '@/core/classic/cards/sideCardPanel/ui/ContainerMasonryGrid.vue'
-import type { CardData } from '@/core/classic/cards/sideCard/definitions/cardDataType.ts'
+import type { CardData } from '@/core/classic/cards/sideCard/definitions/cardDataType'
 
 const {
   activeCards,
@@ -35,8 +34,6 @@ const {
 const {
   isMasonrySupported,
   orderedCards,
-  debouncedUpdate,
-  visibleCards,
   cardOrder
 } = useSideCardPanelLayout()
 
@@ -49,16 +46,6 @@ const getCardProps = (card: CardData) => {
   const registry = getCardRegistry(card.card_type)
   return registry ? registry.getCardProps(card) : {}
 }
-
-watch(activeCards, () => {
-  nextTick(() => {
-    debouncedUpdate()
-  })
-}, { deep: true })
-
-watch(visibleCards, () => {
-  nextTick(debouncedUpdate)
-}, { deep: true, immediate: true })
 </script>
 
 <style lang="scss" scoped>

@@ -1,8 +1,8 @@
-import { computed, nextTick, watch, ref, onMounted } from 'vue'
-import { useMasonryLayout } from '@/core/classic/frame/main/composables/useMasonryLayout.ts'
-import { useCardStore } from '@/core/classic/cards/sideCard/stores/cardStore.ts'
-import { usePersistence } from '@/core/classic/frame/main/composables/usePersistence.ts'
-import type { CardData } from '@/core/classic/cards/sideCard/definitions/cardDataType.ts'
+import { computed, nextTick, watch, ref, onMounted, onBeforeUnmount } from 'vue'
+import { useMasonryLayout } from '@/core/classic/frame/main/composables/useMasonryLayout'
+import { useCardStore } from '@/core/classic/cards/sideCard/stores/cardStore'
+import { usePersistence } from '@/core/classic/frame/main/composables/usePersistence'
+import type { CardData } from '@/core/classic/cards/sideCard/definitions/cardDataType'
 
 export const useSideCardPanelLayout = () => {
   const isMasonrySupported = ref(false)
@@ -13,6 +13,7 @@ export const useSideCardPanelLayout = () => {
   const { debouncedUpdate } = useMasonryLayout()
   const cardStore = useCardStore()
   const visibleCards = computed(() => cardStore.filteredCards)
+  const activeCards = computed(() => cardStore.activeCards)
 
   const cardOrder = ref<number[]>([])
   const cardShownOrder = ref<number[]>([])
@@ -97,10 +98,37 @@ export const useSideCardPanelLayout = () => {
     })
   })
 
+  // Watch 逻辑移到这里
+  let unwatchActiveCards: (() => void) | null = null
+  let unwatchVisibleCards: (() => void) | null = null
+
+  const setupWatchers = () => {
+    unwatchActiveCards = watch(activeCards, () => {
+      nextTick(() => {
+        debouncedUpdate()
+      })
+    }, { deep: true })
+
+    unwatchVisibleCards = watch(visibleCards, () => {
+      nextTick(debouncedUpdate)
+    }, { deep: true, immediate: true })
+  }
+
+  const cleanupWatchers = () => {
+    if (unwatchActiveCards) unwatchActiveCards()
+    if (unwatchVisibleCards) unwatchVisibleCards()
+  }
+
   onMounted(async () => {
     document.addEventListener('drop', handleDrop)
     await initializeOrder()
+    setupWatchers()
     await nextTick(debouncedUpdate)
+  })
+
+  onBeforeUnmount(() => {
+    document.removeEventListener('drop', handleDrop)
+    cleanupWatchers()
   })
 
   return {
@@ -110,6 +138,7 @@ export const useSideCardPanelLayout = () => {
     handleDrop,
     debouncedUpdate,
     visibleCards,
+    activeCards,
     isInitializing,
     initializeOrder,
     updateShownOrder
