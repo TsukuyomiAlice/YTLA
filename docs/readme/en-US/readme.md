@@ -10,7 +10,8 @@
 
 ### Official
 
-version 1.0
+version 1.0 - pre  
+** There are still something not being refactored. 
 
 File Update Date: 2026-2-11
 

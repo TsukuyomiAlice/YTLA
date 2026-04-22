@@ -4,27 +4,77 @@
  <a href="./docs/readme/en-US/readme.md"> English </a>
 </p>
 
-# YTLA (Your T&L Assistant)
+# YTLA - Your T&L Assistant
 
-## Updated 2026-3-18
-The refactor is coming up and the first formal version will be released soon.  
+### An Application Platform Framework with Web OS Vision
 
-## Updated 2026-2-27
-The author noticed that the repository is being monitored by an automated system (5-minute clones).  
-If you are the operator, please leave a note in Issues, thank you.
+### Official
 
-## Important information
+version 1.0 - pre  
+** There are still something not being refactored. 
 
-### This project is under great scale refactoring.  
-It is normal that build problems will be occurred in some releases.  
-Please Kindly Wait for the Refactoring to Finish.   
-  
-### The version control will also be changed after the refactoring.
-The formal version will be released soon.  
-The first formal version will be named as classic-1.0  
+File Update Date: 2026-2-11
 
-### Notice: The features in current project will be removed to other repositories.
-You will receive further instructions about how to get those features in the formal version.
+## Open Code, Free Addition
 
-## Please click the links at the top of the MD file to read the new version of YTLA introduction.
-## Thank you for your visit and please kindly leave your feedback.
+The project is completely open source, all code is publicly available in source code form.  
+Therefore, you can customize it according to your needs.  
+Before doing so, please read this document to ensure you have a sufficient understanding of the project's framework.
+
+## Concepts
+
+### Self-driven, Autonomous, Free
+
+This is a self-driven platform framework.  
+With the help of generative AI and combined with mature engineering standards, it reliably adds and extends the functions users want.  
+The 'T' and 'L' in the product name are not defined — this is left for users to actively define.  
+Thus, this platform will provide users with highly free application scenarios.
+
+### Highly Modular
+
+Functions under the framework will be provided to users in two different modules.  
+**Modules** provide users with complete functions  
+**Cards** provide users with convenient, instant interactions  
+Modules can be combined in one or more **Plans** to provide users with exclusive workbenches for various needs.
+
+### Highly Customizable
+
+The framework separates front-end and back-end, with detailed and flexible architectural design.  
+Combined with semantic definitions, the framework can be implemented in multiple programming languages.  
+Specific architectural split definitions can ensure that the framework can have the same running effect in different programming languages.
+
+## Framework Directory
+
+- YTLA (this framework)
+    - docs (readme.md)
+    - frontend
+        - docs
+        - core
+        - features
+    - backend
+        - docs
+        - core
+        - features
+    - readme.md
+
+## Using This Framework
+
+#### Tip
+
+Currently, this framework uses vue3 and python-flask. More languages are expected to be used in the future.
+
+```bash
+# Clone the project
+git clone https://github.com/TsukuyomiAlice/YTLA
+
+# Backend dependency installation
+cd ytla_plan
+pip install -r requirements.txt
+
+# Frontend dependency installation
+cd ../ytla_plan_vue
+npm install
+
+# Start development environment
+npm run dev & flask run
+```
