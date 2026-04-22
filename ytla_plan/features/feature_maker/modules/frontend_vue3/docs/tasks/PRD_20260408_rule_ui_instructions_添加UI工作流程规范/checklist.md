@@ -1,6 +1,0 @@
-- [x] Checkpoint 1: rule_ui_instructions.md 中添加了 UI 工作流程调整章节
-- [x] Checkpoint 2: 定义了读取 rule_ui_instructions.md 时的特殊处理流程
-- [x] Checkpoint 3: 规范了 Planning Stage 中的 UI 需求分析步骤
-- [x] Checkpoint 4: 定义了 ui_checklist.md 的标准格式和内容要求
-- [x] Checkpoint 5: 规范了 Action Stage 中使用 ui_checklist.md 作为核对清单的要求
-- [x] Checkpoint 6: 文档格式和风格与现有文档一致
