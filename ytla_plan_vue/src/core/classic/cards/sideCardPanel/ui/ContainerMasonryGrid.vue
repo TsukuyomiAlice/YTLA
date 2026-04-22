@@ -7,9 +7,9 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
-  isMasonrySupported: boolean
-}>()
+import type { ContainerMasonryGridProps } from '../definitions/sideCardPanelType'
+
+const props = defineProps<ContainerMasonryGridProps>()
 </script>
 
 <style lang="scss" scoped>
