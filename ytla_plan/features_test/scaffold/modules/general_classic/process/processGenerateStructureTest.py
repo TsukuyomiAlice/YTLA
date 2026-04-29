@@ -47,4 +47,4 @@ Test case 6: classic_vue3 - module (specific implementation)
 """
 Original test case
 """
-processGenerateStructure.process_generate_structure(False, 'relax', 'modules', 'bingo', False, True)
+processGenerateStructure.process_generate_structure(False, 'scaffold', 'modules', 'create_card', False, True)

@@ -1,0 +1,22 @@
+{
+  "subtype_name": "创建卡片",
+  "subtype_description": "生成新的卡片模块",
+  "title": "创建卡片脚手架",
+  "label_is_core": "Core模块",
+  "label_is_feature": "Feature模块",
+  "label_version": "版本",
+  "label_type_name": "类型名称",
+  "label_sub_type_name": "子类型名称",
+  "label_gen_backend": "生成后端",
+  "label_gen_frontend": "生成前端",
+  "button_submit": "生成",
+  "button_reset": "重置",
+  "msg_loading": "正在生成...",
+  "msg_success": "生成成功！",
+  "msg_error": "生成失败：{error}",
+  "validation_type_name_required": "请输入类型名称",
+  "sub_00_000": "关于卡片创建",
+  "sub_00_001": "使用此工具快速创建新的卡片模块",
+  "sub_00_002": "生成的后端路径：{path}",
+  "sub_00_003": "生成的前端路径：{path}"
+}

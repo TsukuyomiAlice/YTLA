@@ -1,0 +1,22 @@
+{
+  "subtype_name": "Create Card",
+  "subtype_description": "Generate new card module",
+  "title": "Create Card Scaffold",
+  "label_is_core": "Core Module",
+  "label_is_feature": "Feature Module",
+  "label_version": "Version",
+  "label_type_name": "Type Name",
+  "label_sub_type_name": "Sub Type Name",
+  "label_gen_backend": "Generate Backend",
+  "label_gen_frontend": "Generate Frontend",
+  "button_submit": "Generate",
+  "button_reset": "Reset",
+  "msg_loading": "Generating...",
+  "msg_success": "Generation successful!",
+  "msg_error": "Generation failed: {error}",
+  "validation_type_name_required": "Please enter type name",
+  "sub_00_000": "About Card Creation",
+  "sub_00_001": "Use this tool to quickly create new card modules",
+  "sub_00_002": "Generated backend path: {path}",
+  "sub_00_003": "Generated frontend path: {path}"
+}
