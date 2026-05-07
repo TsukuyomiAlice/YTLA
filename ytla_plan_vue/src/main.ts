@@ -15,6 +15,7 @@ app.use(i18n)
 //// registry ////
 import '@/core/classic/busline/startup/registries/systemRegistry.ts'
 import '@/core/classic/busline/startup/registries/featuresRegistry.ts'
+import '@/core/classic/busline/navigator/registries/navigatorRegistry.ts'
 
 
 //// initialize layout

@@ -1,6 +1,0 @@
-- [x] Write 方法规则定义已添加到 rule_harness_instructions.md 文档中
-- [x] 规则明确说明 spec.md、tasks.md、checklist.md 使用 write 覆盖方式更新
-- [x] 规则明确说明 origin.md、actions.md 使用末尾换行追加方式更新
-- [x] “常见陷阱和避免方法”章节已梳理和修订，与新的 write 方法规则一致
-- [x] 更新后的文档与现有 Harness 工程规范保持兼容
-- [x] 文档整体结构和风格保持连贯
