@@ -22,11 +22,11 @@
       </div>
 
       <div class="form-group">
-        <label>类型名称 <span style="color: red;">*</span></label>
+        <label>{{ typeLabel }} <span style="color: red;">*</span></label>
         <input
           type="text"
           v-model="scaffoldStore.typeName"
-          placeholder="输入类型名称"
+          :placeholder="placeholderText"
         />
         <div v-if="validationError" class="error-msg">{{validationError}}</div>
       </div>
@@ -75,9 +75,17 @@ import { computed } from 'vue'
 
 const scaffoldStore = useScaffoldModuleStore()
 
+const typeLabel = computed(() => {
+  return scaffoldStore.isCore ? '模块名称' : '类型名称'
+})
+
+const placeholderText = computed(() => {
+  return scaffoldStore.isCore ? '输入模块名称' : '输入类型名称'
+})
+
 const validationError = computed(() => {
   if (!scaffoldStore.typeName.trim()) {
-    return '请输入类型名称'
+    return scaffoldStore.isCore ? '请输入模块名称' : '请输入类型名称'
   }
   return ''
 })

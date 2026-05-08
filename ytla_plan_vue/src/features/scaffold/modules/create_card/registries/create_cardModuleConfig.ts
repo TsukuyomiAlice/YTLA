@@ -5,11 +5,11 @@ import { create_cardModuleFlowManager } from '@/features/scaffold/modules/create
 export const create_cardModuleConfig = <ModuleRegistry> {
   moduleType: 'scaffold',
   moduleSubType: 'create_card',
-  moduleConcept: 'create_card',
-  mainComponent: defineAsyncComponent(() => 
+  moduleConcept: 'space',
+  mainComponent: defineAsyncComponent(() =>
     import('@/features/scaffold/modules/create_card/components/Create_cardMain.vue')
   ),
-  subComponent: defineAsyncComponent(() => 
+  subComponent: defineAsyncComponent(() =>
     import('@/features/scaffold/modules/create_card/components/Create_cardSub.vue')
   ),
   displayMode: 7,

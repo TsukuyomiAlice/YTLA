@@ -25,14 +25,15 @@ export const useScaffoldCardStore = defineStore('scaffoldCard', {
       this.isLoading = true
       this.error = null
       try {
-        const response = await scaffoldCardService.generateScaffold({
+        const requestData = {
           isCore: this.isCore,
-          typeName: this.typeName,
-          structure: 'cards',
+          typeName: this.isCore ? 'classic' : this.typeName,
+          structure: this.isCore ? this.typeName : 'cards',
           subTypeName: this.subTypeName,
           genBackend: this.genBackend,
           genFrontend: this.genFrontend
-        })
+        }
+        const response = await scaffoldCardService.generateScaffold(requestData)
         this.result = response.data
       } catch (error) {
         this._handleError(error, '脚手架生成失败')

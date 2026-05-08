@@ -14,13 +14,3 @@ export class NavigatorModuleFlowManager implements ModuleFlowManager {
     return this.flows.get(flowName) || []
   }
 }
-
-export const navigatorModuleFlowManager = new NavigatorModuleFlowManager()
-
-navigatorModuleFlowManager.registerFlow('navigator-main-steps', [
-  defineAsyncComponent(() => import('@/core/classic/busline/navigator/components/NavigatorMain_00.vue')),
-])
-
-navigatorModuleFlowManager.registerFlow('navigator-sub-steps', [
-  defineAsyncComponent(() => import('@/core/classic/busline/navigator/components/NavigatorSub_00.vue')),
-])

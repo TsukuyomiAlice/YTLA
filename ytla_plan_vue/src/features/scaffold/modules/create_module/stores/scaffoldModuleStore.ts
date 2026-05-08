@@ -25,14 +25,15 @@ export const useScaffoldModuleStore = defineStore('scaffoldModule', {
       this.isLoading = true
       this.error = null
       try {
-        const response = await scaffoldModuleService.generateScaffold({
+        const requestData = {
           isCore: this.isCore,
-          typeName: this.typeName,
-          structure: 'modules',
+          typeName: this.isCore ? 'classic' : this.typeName,
+          structure: this.isCore ? this.typeName : 'modules',
           subTypeName: this.subTypeName,
           genBackend: this.genBackend,
           genFrontend: this.genFrontend
-        })
+        }
+        const response = await scaffoldModuleService.generateScaffold(requestData)
         this.result = response.data
       } catch (error) {
         this._handleError(error, '脚手架生成失败')

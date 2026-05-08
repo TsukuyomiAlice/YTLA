@@ -5,11 +5,11 @@ import { create_moduleModuleFlowManager } from '@/features/scaffold/modules/crea
 export const create_moduleModuleConfig = <ModuleRegistry> {
   moduleType: 'scaffold',
   moduleSubType: 'create_module',
-  moduleConcept: 'create_module',
-  mainComponent: defineAsyncComponent(() => 
+  moduleConcept: 'space',
+  mainComponent: defineAsyncComponent(() =>
     import('@/features/scaffold/modules/create_module/components/Create_moduleMain.vue')
   ),
-  subComponent: defineAsyncComponent(() => 
+  subComponent: defineAsyncComponent(() =>
     import('@/features/scaffold/modules/create_module/components/Create_moduleSub.vue')
   ),
   displayMode: 7,
