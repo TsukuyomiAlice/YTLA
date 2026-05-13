@@ -5,11 +5,14 @@ from flask_cors import CORS
 from core.classic.frame.initiate.dao import daoInitiator
 from core.classic.frame.router.process.processRouter import register_dynamic_blueprints
 from core.classic.cards.sideCard.process.processCardHandlerFactory import CardHandlerFactory
+from core.classic.frame.database.process.processDatabaseSqlite import initialize as initialize_db_config
 
 app = Flask(__name__)
 app.config.from_object('ytla_plan.config')
 CORS(app, resources={r"/*": {"origins": "*"}})
 
+# 初始化数据库配置加载器
+initialize_db_config()
 register_dynamic_blueprints(app)
 CardHandlerFactory.load_and_register_handlers()
 

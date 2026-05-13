@@ -7,7 +7,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { usePanelStore } from '@/core/classic/frame/panel/stores/panelStore.ts'
+import { usePanelStore } from '@/core/classic/modules/modulePanel/stores/panelStore.ts'
 
 const panelStore = usePanelStore()
 const storedData = computed(() => {

@@ -96,7 +96,7 @@ const emit = defineEmits<{
   (e: 'edit', id: number): void
 }>()
 
-import { usePanelStore } from '@/core/classic/frame/panel/stores/panelStore.ts'
+import { usePanelStore } from '@/core/classic/modules/modulePanel/stores/panelStore.ts'
 import { useModuleProcessStore } from '@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts'
 const startEditing = (planId: number) => {
   const panelStore = usePanelStore()

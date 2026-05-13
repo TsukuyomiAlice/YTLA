@@ -1,6 +1,6 @@
 import { ref, computed, watch } from 'vue'
 import { useModuleProcessStore } from '@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts'
-import { usePanelStore } from '@/core/classic/frame/panel/stores/panelStore.ts'
+import { usePanelStore } from '@/core/classic/modules/modulePanel/stores/panelStore.ts'
 import { useModuleCardStore } from '@/core/classic/modules/moduleCard/stores/moduleCardStore.ts'
 
 export const useModuleCard = (props: any, emit: any) => {

@@ -12,7 +12,7 @@ import { usePlanCardStore } from '@/core/classic/plans/planCard/stores/planCardS
 const planStore = usePlanCardStore()
 import { useModuleProcessStore } from '@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts'
 const moduleProcessStore = useModuleProcessStore()
-import { usePanelStore } from '@/core/classic/frame/panel/stores/panelStore.ts'
+import { usePanelStore } from '@/core/classic/modules/modulePanel/stores/panelStore.ts'
 const panelStore = usePanelStore()
 
 const handleAddPlan = async () => {

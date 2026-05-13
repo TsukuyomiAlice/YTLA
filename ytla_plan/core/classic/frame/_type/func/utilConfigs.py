@@ -2,6 +2,8 @@
 import logging
 import os
 
+from ytla_plan import config
+
 """
 " ################
 " YTLA CONFIG FILE
@@ -32,20 +34,9 @@ def get_db_folder_path():
     Retrieve the database directory path with system-appropriate separators
 
     Returns:
-        str: Platform-dependent path using native filesystem separators
-        - POSIX systems: Uses forward slashes (/)
-        - Windows: Uses backslashes (\\)
-
-    Note:
-        The actual storage location differs by OS, but the relative
-        path structure remains consistent
+        str: config.DATA_SOURCE_PATH
     """
-    s = '/YTLA_DATAS'
-    if os.name == 'posix':
-        s = '/YTLA_DATAS/ytla_plan'
-    if os.name == 'nt':
-        s = 'D:\\YTLA_DATA\\ytla_plan'
-    return s
+    return config.DATA_SOURCE_PATH
 
 
 db_folder_path = get_db_folder_path()
@@ -56,7 +47,8 @@ db_files = {
     "ytla_user": "ytla_user.db",
     "life_plan": "life_plan.db",
     "language_cefr": "language_cefr.db",
-    "language_dictionary_oxford": "Oxford 8th.db"
+    "language_dictionary_oxford": "Oxford 8th.db",
+    "fund": "fund.db"
 }
 
 ''' 

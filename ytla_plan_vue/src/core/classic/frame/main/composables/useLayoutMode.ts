@@ -1,6 +1,6 @@
 import { watchEffect } from 'vue'
 import { useLayoutStore } from '@/core/classic/frame/main/services/layoutStore.ts'
-import { usePanelStore } from '@/core/classic/frame/panel/stores/panelStore.ts'
+import { usePanelStore } from '@/core/classic/modules/modulePanel/stores/panelStore.ts'
 import { getModuleConfig } from '@/core/classic/modules/moduleCard/factories/moduleRegistry.ts'
 
 export function useLayoutMode() {

@@ -23,6 +23,9 @@ CORE_VERSION = 'classic'
 BACKEND_VERSION = 'python'
 FRONTEND_VERSION = 'vue3'
 
+# Outer data source settings
+DATA_SOURCE_PATH = 'D:\\YTLA_DATA\\ytla_plan'
+
 """
 " Upload configuration
 " YOU CAN ADJUST THE VALUES BUT

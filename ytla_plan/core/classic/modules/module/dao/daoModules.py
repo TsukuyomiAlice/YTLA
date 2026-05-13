@@ -2,7 +2,7 @@
 
 import json
 
-from core.classic.frame._type.func import sqliteConnector
+from core.classic.frame.database.func import sqliteConnector
 
 """
 (Temporary) Database path is specified below.

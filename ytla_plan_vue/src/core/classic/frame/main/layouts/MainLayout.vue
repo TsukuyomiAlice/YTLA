@@ -53,7 +53,7 @@
 </template>
 
 <script setup lang="ts">
-import PanelLayer from '@/core/classic/frame/panel/layouts/PanelLayer.vue'
+import PanelLayer from '@/core/classic/modules/modulePanel/layouts/PanelLayer.vue'
 import SideCardLayer from '@/core/classic/cards/sideCardLayer/layouts/SideCardLayer.vue'
 import ModuleLayer from '@/core/classic/modules/moduleCard/layouts/ModuleLayer.vue'
 import { usePersistence } from '@/core/classic/frame/main/composables/usePersistence.ts'

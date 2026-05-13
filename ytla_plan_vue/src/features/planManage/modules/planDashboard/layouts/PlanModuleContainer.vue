@@ -67,7 +67,7 @@ const emit = defineEmits<{
   (e: 'deleteGroup', name: string): void
 }>()
 
-import { useModuleGroup } from '@/core/classic/modules/moduleCard/composables/useModuleGroup.ts'
+import { useModuleGroup } from '@/features/planManage/modules/planDashboard/composables/useModuleGroup.ts'
 
 const {
   isEditing, tempName,

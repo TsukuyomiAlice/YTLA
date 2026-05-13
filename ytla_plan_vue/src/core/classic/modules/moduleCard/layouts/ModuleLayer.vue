@@ -93,7 +93,7 @@ const toggleExpandStyle = computed(() => {
 })
 
 // panel store
-import { usePanelStore } from '@/core/classic/frame/panel/stores/panelStore.ts'
+import { usePanelStore } from '@/core/classic/modules/modulePanel/stores/panelStore.ts'
 
 const panelStore = usePanelStore()
 const { activeModuleSubType } = storeToRefs(panelStore)

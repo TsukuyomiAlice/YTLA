@@ -22,7 +22,7 @@ import { useLayoutStore } from '@/core/classic/frame/main/services/layoutStore.t
 const layoutStore = useLayoutStore()
 layoutStore.initialize()
 
-import { usePanelStore } from '@/core/classic/frame/panel/stores/panelStore.ts'
+import { usePanelStore } from '@/core/classic/modules/modulePanel/stores/panelStore.ts'
 const panelStore = usePanelStore()
 panelStore.initializeAllPlans().then(() => panelStore.watchPlanStatus())
 

@@ -1,5 +1,5 @@
 import { ref, type Component } from 'vue'
-import { usePanelStore } from '@/core/classic/frame/panel/stores/panelStore.ts'
+import { usePanelStore } from '@/core/classic/modules/modulePanel/stores/panelStore.ts'
 
 type StepConfig = Component[]
 export type FrameType = 'main' | 'sub'
