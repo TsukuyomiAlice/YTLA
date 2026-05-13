@@ -1,16 +1,16 @@
 # coding=utf-8
 
-from ..dao import (daoFundHistory, daoFundInfo, daoCurrencyFundList,
-                           daoTransactionHistory,
-                           daoAnalyzeTransactionBalance, daoAnalyzeTransactionOriginalSerial,
-                           daoAnalyzeTransactionMatchSerial, daoAnalyzeTransactionMatchSerialRemain,
-                           daoAnalyzeTransactionMatchQuantitative)
-from ..script import scriptFundInfo
+from ...fund_info.dao import daoFundHistory, daoFundInfo, daoCurrencyFundList
+from ...fund_info.script import scriptFundInfo
+from ..dao import (
+    daoTransactionHistory,
+    daoAnalyzeTransactionBalance, daoAnalyzeTransactionOriginalSerial,
+    daoAnalyzeTransactionMatchSerial, daoAnalyzeTransactionMatchSerialRemain,
+    daoAnalyzeTransactionMatchQuantitative)
 from ytla_plan.core.classic.frame._type.func import timeFormat
 
 
 def analyze(code):
-
     daoAnalyzeTransactionMatchSerial.clear_records(code)
 
     share_accuracy = scriptFundInfo.get_share_accuracy(code)
@@ -250,7 +250,7 @@ def analyze(code):
                 status = '99'
             else:
                 if match_transaction_first_id != match_transaction_id:
-                    daoAnalyzeTransactionMatchSerial.update_status_by_label(code, match_transaction_label,  '20')
+                    daoAnalyzeTransactionMatchSerial.update_status_by_label(code, match_transaction_label, '20')
                     (daoAnalyzeTransactionMatchSerial.
                      update_status_by_first_transaction_id(code, match_transaction_first_id, '10'))
                     status = '01'
@@ -289,7 +289,6 @@ def analyze(code):
 
 
 def analyze_remain(code):
-
     daoAnalyzeTransactionMatchSerialRemain.clear_records(code)
     fund_name = daoFundInfo.fund_info_select(code)[0][1]
 
@@ -360,7 +359,6 @@ def analyze_remain(code):
 
 
 def analyze_quantity(code):
-
     share_accuracy = scriptFundInfo.get_share_accuracy(code)
 
     old_record = daoAnalyzeTransactionMatchQuantitative.select_quantity_info(code)

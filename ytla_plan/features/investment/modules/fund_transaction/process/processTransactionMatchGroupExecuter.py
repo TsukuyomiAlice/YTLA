@@ -1,5 +1,5 @@
 # encode = utf-8
 
-import processTransactionMatchGroup
+from ..process import processTransactionMatchGroup
 
 # processTransactionMatchGroup.execute('167301')

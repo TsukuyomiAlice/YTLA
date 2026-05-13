@@ -2,8 +2,6 @@
 import logging
 import os
 
-from ytla_plan import config
-
 """
 " ################
 " YTLA CONFIG FILE
@@ -24,32 +22,6 @@ proxies = {
     'https': 'http://192.168.71.118:20172'
 }
 
-''' 
-Database Configuration 
-'''
-
-
-def get_db_folder_path():
-    """
-    Retrieve the database directory path with system-appropriate separators
-
-    Returns:
-        str: config.DATA_SOURCE_PATH
-    """
-    return config.DATA_SOURCE_PATH
-
-
-db_folder_path = get_db_folder_path()
-
-# Database file paths
-db_files = {
-    "temp_test": "temp_test.db",
-    "ytla_user": "ytla_user.db",
-    "life_plan": "life_plan.db",
-    "language_cefr": "language_cefr.db",
-    "language_dictionary_oxford": "Oxford 8th.db",
-    "fund": "fund.db"
-}
 
 ''' 
 Logging Configuration 

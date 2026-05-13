@@ -1,7 +1,7 @@
 # coding=utf-8
 
-from ytla_fund.dao import daoTransactionHistory, daoAnalyzeTransactionOriginalSerial
-from ytla_fund.script import scriptFundInfo
+from ..dao import daoTransactionHistory, daoAnalyzeTransactionOriginalSerial
+from ...fund_info.script import scriptFundInfo
 
 
 def analyze(code):

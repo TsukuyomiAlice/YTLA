@@ -1,7 +1,8 @@
 # coding=utf-8
 # 检索交易
-from ytla_fund.dao import daoTransactionHistory, daoFundHistory, daoCurrencyFundList
-from ytla_fund.script import scriptFundInfo, scriptFundHistory
+from ..dao import daoTransactionHistory
+from ...fund_info.dao import daoFundHistory, daoCurrencyFundList
+from ...fund_info.script import scriptFundInfo, scriptFundHistory
 
 """
 交易种类

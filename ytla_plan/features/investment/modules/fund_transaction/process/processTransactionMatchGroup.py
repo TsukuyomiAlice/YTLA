@@ -2,7 +2,8 @@
 import os
 
 from ytla_plan.core.classic.frame._type.func import utilConfigs
-from ..dao import daoFundHistory, daoFundInfo, daoTransactionHistory
+from ...fund_info.dao import daoFundHistory, daoFundInfo
+from ..dao import daoTransactionHistory
 
 def _slash():
     s = '/'

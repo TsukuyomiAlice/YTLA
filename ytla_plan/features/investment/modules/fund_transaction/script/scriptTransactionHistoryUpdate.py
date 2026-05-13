@@ -1,6 +1,6 @@
 # encode = utf-8
 
-from ytla_fund.dao import daoTransactionHistory
+from ..dao import daoTransactionHistory
 
 
 def execute():

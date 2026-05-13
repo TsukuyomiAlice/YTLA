@@ -1,8 +1,9 @@
 # encode = utf-8
 
-from ytla_fund.dao import daoTransactionHistory, daoCurrencyFundList
-from ytla_fund.script import scriptFundHistory
-from ytla_fund.process import processTransactionMatchGroup
+from ..dao import daoTransactionHistory
+from ...fund_info.dao import daoCurrencyFundList
+from ...fund_info.script import scriptFundHistory
+from ..process import processTransactionMatchGroup
 
 # 保持关注的基金列表
 # 即便清仓了也保持关注
