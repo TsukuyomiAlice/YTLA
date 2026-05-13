@@ -1,4 +1,5 @@
 {
-  "subtype_name": "投资",
-  "subtype_description": "扩大你的财富"
+  "type_name": "投资",
+  "type_description": "扩大你的财富",
+  "return_button_001": "返回计划仪表盘"
 }

@@ -6,7 +6,7 @@ from core.classic.frame.database.func import sqliteConnector
 （暂时）数据库路径指定在下方
 如果有独立的数据库连接，可以在此处添加
 """
-db_name = 'Fund'
+db_name = 'fund'
 table_name = "FUND_HISTORY"
 
 
@@ -145,7 +145,7 @@ def fund_history_get_latest_price(code, transaction_date):
     sql = f"SELECT CURRENT_PRICE FROM FUND_HISTORY WHERE CODE = '{code}' AND TRANSACTION_DATE = '{transaction_date}'"
     res = execute_cursor(sql)
     if len(res) > 0:
-        return res[0][0]
+        return res[0]['CURRENT_PRICE']
     else:
         return 0
 
@@ -185,7 +185,7 @@ def fund_history_get_share_change_ratio(code, transaction_date):
           f"and SHARE_CHANGE_RATIO > 0 order by TRANSACTION_DATE desc limit 1"
     res = execute_cursor(sql)
     if len(res) > 0:
-        return res[0][0]
+        return res[0]['SHARE_CHANGE_RATIO']
     else:
         return 1
 
@@ -223,17 +223,17 @@ def get_fund_history_full_list(code):
 
 
 def get_fund_moving_average(code, transaction_date, limits):
-    sql_1 = f"SELECT COUNT(*) FROM FUND_HISTORY WHERE " \
+    sql_1 = f"SELECT COUNT(*) AS COUNT FROM FUND_HISTORY WHERE " \
             f"CODE = '{code}' AND TRANSACTION_DATE <= '{transaction_date}' " \
             f"ORDER BY TRANSACTION_DATE DESC LIMIT {str(limits)}"
     res_1 = execute_cursor(sql_1)
-    sql_2 = f"SELECT SUM(CURRENT_PRICE), SUM(ORIGIN_PRICE) FROM " \
+    sql_2 = f"SELECT SUM(CURRENT_PRICE) AS SUM_CURRENT_PRICE, SUM(ORIGIN_PRICE) AS SUM_ORIGIN_PRICE FROM " \
             f"(SELECT CURRENT_PRICE, ORIGIN_PRICE FROM FUND_HISTORY WHERE " \
             f"CODE = '{code}' AND TRANSACTION_DATE <= '{transaction_date}' " \
             f"ORDER BY TRANSACTION_DATE DESC LIMIT {str(limits)})"
     res_2 = execute_cursor(sql_2)
     if len(res_1) > 0:
-        return [res_1[0][0], res_2[0][0], res_2[0][1]]
+        return [res_1[0]['COUNT'], res_2[0]['SUM_CURRENT_PRICE'], res_2[0]['SUM_ORIGIN_PRICE']]
     else:
         return [0, 0, 0]
 

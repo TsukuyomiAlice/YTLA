@@ -90,14 +90,14 @@ class Instance:
     def get_instance_by_pk(self):
         db_res = transaction_history_select_id(self.transaction_id)
         if len(db_res) == 1:
-            self.code = db_res[0][1]
-            self.fund_name = db_res[0][2]
-            self.transaction_date = db_res[0][3]
-            self.transaction_type = db_res[0][4]
-            self.amount = db_res[0][5]
-            self.share = db_res[0][6]
-            self.price = db_res[0][7]
-            self.transaction_fee = db_res[0][8]
+            self.code = db_res[0]['CODE']
+            self.fund_name = db_res[0]['FUND_NAME']
+            self.transaction_date = db_res[0]['TRANSACTION_DATE']
+            self.transaction_type = db_res[0]['TRANSACTION_TYPE']
+            self.amount = db_res[0]['TOTAL_PRICE']
+            self.share = db_res[0]['SHARE']
+            self.price = db_res[0]['UNIT_PRICE']
+            self.transaction_fee = db_res[0]['TRANSACTION_FEE']
 
 
 def instance_list(pk_list: list):
@@ -113,7 +113,7 @@ def instance_list_by_code(code: str):
     pk_list = get_transaction_list(code)
     if len(pk_list) > 0:
         for i in range(len(pk_list)):
-            pk_list[i] = pk_list[i][0]
+            pk_list[i] = pk_list[i]['TRANSACTION_ID']
     return instance_list(pk_list)
 
 
@@ -128,7 +128,7 @@ def transaction_history_generate_id():
     """
     sql = f"SELECT TRANSACTION_ID FROM {table_name} ORDER BY TRANSACTION_ID DESC LIMIT 1"
     res = execute_cursor(sql)
-    transaction_id = 1 if len(res) == 0 else res[0][0] + 1
+    transaction_id = 1 if len(res) == 0 else res[0]['TRANSACTION_ID'] + 1
     return transaction_id
 
 
@@ -310,10 +310,10 @@ def transaction_fund_code_get():
 
 
 def check_share_change_records(code, transaction_date, transaction_id):
-    sql = f"SELECT COUNT(*) FROM TRANSACTION_HISTORY WHERE " \
+    sql = f"SELECT COUNT(*) AS COUNT FROM TRANSACTION_HISTORY WHERE " \
           f"CODE = '{code}' AND TRANSACTION_TYPE = '28' AND " \
           f"TRANSACTION_DATE = '{transaction_date}' and transaction_id < {transaction_id}"
-    res = execute_cursor(sql)[0][0]
+    res = execute_cursor(sql)[0]['COUNT']
     return res
 
 

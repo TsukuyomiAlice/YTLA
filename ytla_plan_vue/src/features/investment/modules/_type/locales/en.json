@@ -1,4 +1,5 @@
 {
   "type_name": "Investment",
-  "type_description": "Enrich your wealth."
+  "type_description": "Enrich your wealth.",
+  "return_button_001": "Return to plan dashboard"
 }

@@ -2,7 +2,7 @@
 
 import json
 
-from core.classic.modules.module.dao import daoModules
+from ..dao import daoModules
 from core.classic.frame._type.func.loggerConfig import process_log
 
 
@@ -112,7 +112,8 @@ def module_router(data, mode, module_id=0):
                           'dmd', 'whiteboard', 'ganttChart', 'backlog', 'kanban',
                           'dashboard', 'risk', 'burndownChart', 'property', 'features',
                           'rating','dictionary','assessment','vocabulary','readings','learning',
-                          'sphere', 'matrix', 'create_card', 'create_module']
+                          'sphere', 'matrix', 'create_card', 'create_module',
+                          'fund_info', 'fund_transaction']
         if data['module_sub_type'] not in valid_subtypes:
             return {'success': False, 'error': f'无效模组类型: {data["module_sub_type"]}'}
 

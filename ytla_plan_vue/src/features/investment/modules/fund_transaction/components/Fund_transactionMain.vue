@@ -1,11 +1,27 @@
 <template>
-  <Fund_transactionMain_00 />
+  <ModuleFlowNavigator
+    ref="flowNavigator"
+    module-type="fund_transaction"
+    flow-name="fund_transaction-main-steps"
+    frame-type="main"
+    @next-step="handleNext"
+    @prev-step="handlePrev"
+  />
 </template>
 
 <script setup lang="ts">
-import Fund_transactionMain_00 from '@/features/investment/modules/fund_transaction/components/Fund_transactionMain_00.vue'
-</script>
+import { ref } from 'vue'
+import ModuleFlowNavigator from '@/core/classic/modules/moduleCard/layouts/ModuleFlowNavigator.vue'
 
+const flowNavigator = ref<InstanceType<typeof ModuleFlowNavigator>>()
+
+const handleNext = () => {
+  flowNavigator.value?.handleNext()
+}
+const handlePrev = () => {
+  flowNavigator.value?.handlePrev()
+}
+</script>
 <style scoped lang="scss">
 
 </style>

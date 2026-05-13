@@ -2,7 +2,7 @@
 import os
 
 from ytla_plan.core.classic.frame._type.func import utilConfigs
-from ...fund_info.dao import daoFundHistory, daoFundInfo
+from ytla_plan.features.investment.modules.fund_info.dao import daoFundHistory, daoFundInfo
 from ..dao import daoTransactionHistory
 
 def _slash():
@@ -46,6 +46,35 @@ class Instance:
         self.analyze_group_profit_amount: float = 0
         self.analyze_group_profit_share: float = 0
 
+    def to_dict(self):
+        return {
+            'transaction_id': self.transaction_id,
+            'code': self.code,
+            'fund_name': self.fund_name,
+            'transaction_date': self.transaction_date,
+            'transaction_type': self.transaction_type,
+            'transaction_price': self.transaction_price,
+            'transaction_amount': self.transaction_amount,
+            'transaction_share': self.transaction_share,
+            'transaction_profit': self.transaction_profit,
+            'transaction_profit_pct': self.transaction_profit_pct,
+            'transaction_base_price': self.transaction_base_price,
+            'transaction_base_amount': self.transaction_base_amount,
+            'transaction_base_share': self.transaction_base_share,
+            'transaction_profit_to_base': self.transaction_profit_to_base,
+            'transaction_profit_pct_to_base': self.transaction_profit_pct_to_base,
+            'order_id': self.order_id,
+            'memo': self.memo,
+            'analyze_transaction_profit': self.analyze_transaction_profit,
+            'transaction_profit_amount': self.transaction_profit_amount,
+            'transaction_profit_share': self.transaction_profit_share,
+            'analyze_transaction_profit_pct': self.analyze_transaction_profit_pct,
+            'analyze_transaction_type': self.analyze_transaction_type,
+            'analyze_transaction_stage': self.analyze_transaction_stage,
+            'analyze_group_profit_amount': self.analyze_group_profit_amount,
+            'analyze_group_profit_share': self.analyze_group_profit_share
+        }
+
 
 class InstanceForProfit:
 
@@ -55,6 +84,15 @@ class InstanceForProfit:
         self.profit_share: float = 0
         self.total_profit_amount: float = 0
         self.total_profit_share: float = 0
+
+    def to_dict(self):
+        return {
+            'date': self.date,
+            'profit_amount': self.profit_amount,
+            'profit_share': self.profit_share,
+            'total_profit_amount': self.total_profit_amount,
+            'total_profit_share': self.total_profit_share
+        }
 
 
 class InstanceForBrief:
@@ -76,6 +114,25 @@ class InstanceForBrief:
         self.short_position_share: float = 0
         self.short_position_amount: float = 0
 
+    def to_dict(self):
+        return {
+            'code': self.code,
+            'fund_name': self.fund_name,
+            'last_transaction_date': self.last_transaction_date,
+            'latest_price': self.latest_price,
+            'holding_amount': self.holding_amount,
+            'holding_share': self.holding_share,
+            'holding_average_price': self.holding_average_price,
+            'shown_amount': self.shown_amount,
+            'shown_share': self.shown_share,
+            'profit_in_amount': self.profit_in_amount,
+            'profit_in_share': self.profit_in_share,
+            'long_position_amount': self.long_position_amount,
+            'long_position_share': self.long_position_share,
+            'short_position_share': self.short_position_share,
+            'short_position_amount': self.short_position_amount
+        }
+
 
 def analyze_transaction_match_group(code):
     fund_info = daoFundInfo.Instance(code)
@@ -95,8 +152,8 @@ def analyze_transaction_match_group(code):
     share_change_date = '9999-10-31'
     share_change_ratio = 1
     if len(share_change_ratio_list) > 0:
-        share_change_date = share_change_ratio_list[share_change_ratio_node][0]
-        share_change_ratio = share_change_ratio_list[share_change_ratio_node][1]
+        share_change_date = share_change_ratio_list[share_change_ratio_node]['TRANSACTION_DATE']
+        share_change_ratio = share_change_ratio_list[share_change_ratio_node]['SHARE_CHANGE_RATIO']
 
     # transaction_history_list
     transaction_history_list = daoTransactionHistory.instance_list_by_code(code)
@@ -172,8 +229,8 @@ def analyze_transaction_match_group(code):
 
             if len(share_change_ratio_list) > share_change_ratio_node + 1:
                 share_change_ratio_node = share_change_ratio_node + 1
-                share_change_date = share_change_ratio_list[share_change_ratio_node][0]
-                share_change_ratio = share_change_ratio_list[share_change_ratio_node][1]
+                share_change_date = share_change_ratio_list[share_change_ratio_node]['TRANSACTION_DATE']
+                share_change_ratio = share_change_ratio_list[share_change_ratio_node]['SHARE_CHANGE_RATIO']
             else:
                 share_change_date = '9999-10-31'
 
@@ -695,7 +752,7 @@ def analyze_transaction_match_group(code):
         if transaction_history_node < len(transaction_history_list):
             current_transaction_date = transaction_history_list[transaction_history_node].transaction_date
 
-    latest_price = round((daoFundHistory.fund_history_select_latest_price(code)[0][0] * ratio), 4)
+    latest_price = round((daoFundHistory.fund_history_select_latest_price(code)[0]['CURRENT_PRICE'] * ratio), 4)
     brief.latest_price = latest_price
     for transaction_list in match_list:
         if ((transaction_list[-1].analyze_transaction_type == 'BUY' and
@@ -835,7 +892,7 @@ def analyze_continuous_history(code):
     ratio = 1
     flg = True
     for i in range(len(fund_history_list)):
-        if fund_history_list[i][3] > 0 and not flg:
+        if fund_history_list[i]['FLUCTUATION'] > 0 and not flg:
             if counter < 10:
                 sell_side[counter].append(round((ratio * 100 - 100), 2))
             else:
@@ -843,22 +900,22 @@ def analyze_continuous_history(code):
             flg = True
             if len(latest_lists) == 7:
                 latest_lists.pop(0)
-            latest_lists.append([fund_history_list[i - counter + 1][0], counter, round((ratio * 100 - 100), 2)])
+            latest_lists.append([fund_history_list[i - counter + 1]['TRANSACTION_DATE'], counter, round((ratio * 100 - 100), 2)])
             counter = 0
             ratio = 1
-        if fund_history_list[i][3] < 0 and flg:
+        if fund_history_list[i]['FLUCTUATION'] < 0 and flg:
             if counter < 10:
                 buy_side[counter].append(round((ratio * 100 - 100), 2))
             else:
                 buy_side[10].append(round((ratio * 100 - 100), 2))
             if len(latest_lists) == 7:
                 latest_lists.pop(0)
-            latest_lists.append([fund_history_list[i - counter + 1][0], counter, round((ratio * 100 - 100), 2)])
+            latest_lists.append([fund_history_list[i - counter + 1]['TRANSACTION_DATE'], counter, round((ratio * 100 - 100), 2)])
             flg = False
             counter = 0
             ratio = 1
         counter += 1
-        ratio = ratio * (1 + fund_history_list[i][3] / 100)
+        ratio = ratio * (1 + fund_history_list[i]['FLUCTUATION'] / 100)
 
     if flg:
         if counter < 10:
@@ -871,7 +928,7 @@ def analyze_continuous_history(code):
         else:
             sell_side[10].append(round((ratio * 100 - 100), 2))
     latest_lists.pop(0)
-    latest_lists.append([fund_history_list[-counter][0], counter, round((ratio * 100 - 100), 2)])
+    latest_lists.append([fund_history_list[-counter]['TRANSACTION_DATE'], counter, round((ratio * 100 - 100), 2)])
     buy_side_grades = [0 for _ in range(11)]
     sell_side_grades = [0 for _ in range(11)]
     for part in buy_side:

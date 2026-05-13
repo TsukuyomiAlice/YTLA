@@ -84,11 +84,11 @@ class Instance:
     def get_instance_by_pk(self):
         db_res = fund_info_select(self.code)
         if len(db_res) == 1:
-            self.fund_name = db_res[0][1]
-            self.fund_type = db_res[0][2]
-            self.ratio = db_res[0][3]
-            self.share_accuracy = db_res[0][4]
-            self.fee_free_limit = db_res[0][5]
+            self.fund_name = db_res[0]['NAME']
+            self.fund_type = db_res[0]['FUND_TYPE']
+            self.ratio = db_res[0]['RATIO']
+            self.share_accuracy = db_res[0]['SHARE_ACCURACY']
+            self.fee_free_limit = db_res[0]['FEE_FREE_LIMIT']
 
 
 def instance_list(pk_list: list):
@@ -111,7 +111,7 @@ def fund_info_select(code):
     :param code:
     :return:
     """
-    sql = f"SELECT CODE, NAME, FUND_TYPE, RATIO, SHARE_ACCURACY, FEE_FREE_LIMIT FROM FUND_INFO WHERE CODE = '{code}'"
+    sql = f"SELECT CODE, NAME, FUND_TYPE, RATIO, SHARE_ACCURACY, FEE_FREE_LIMIT FROM {table_name} WHERE CODE = '{code}'"
     res = execute_cursor(sql)
     return res
 
@@ -123,7 +123,7 @@ def fund_info_insert(code, name):
     :param name:
     :return:
     """
-    sql = f"INSERT INTO FUND_INFO (CODE, NAME, RATIO, SHARE_ACCURACY, FEE_FREE_LIMIT) VALUES (" \
+    sql = f"INSERT INTO {table_name} (CODE, NAME, RATIO, SHARE_ACCURACY, FEE_FREE_LIMIT) VALUES (" \
           f"'{code}', '{name}', 1, 2, 0)"
     res = execute_cursor(sql)
     return res
@@ -136,7 +136,7 @@ def fund_info_update(code, name):
     :param name:
     :return:
     """
-    sql = f"UPDATE FUND_INFO SET NAME = '{name}' WHERE CODE = '{code}'"
+    sql = f"UPDATE {table_name} SET NAME = '{name}' WHERE CODE = '{code}'"
     res = execute_cursor(sql)
     return res
 
@@ -151,7 +151,7 @@ def fund_info_insert_full(code, name, fund_type, ratio, share_accuracy, fee_free
     :param share_accuracy:
     :return:
     """
-    sql = f"INSERT INTO FUND_INFO (CODE, NAME, FUND_TYPE, RATIO, SHARE_ACCURACY, FEE_FREE_LIMIT) VALUES (" \
+    sql = f"INSERT INTO {table_name} (CODE, NAME, FUND_TYPE, RATIO, SHARE_ACCURACY, FEE_FREE_LIMIT) VALUES (" \
           f"'{code}', '{name}', '{fund_type}', {str(ratio)}, {str(share_accuracy)}, {str(fee_free_limit)})"
     res = execute_cursor(sql)
     return res
@@ -164,7 +164,7 @@ def fund_info_update_ratio(code, ratio):
     :param ratio:
     :return:
     """
-    sql = f"UPDATE FUND_INFO SET RATIO = {ratio} WHERE CODE = '{code}'"
+    sql = f"UPDATE {table_name} SET RATIO = {ratio} WHERE CODE = '{code}'"
     res = execute_cursor(sql)
     return res
 
@@ -176,6 +176,6 @@ def fund_info_update_accuracy(code, accuracy):
     :param accuracy:
     :return:
     """
-    sql = f"UPDATE FUND_INFO SET SHARE_ACCURACY = {accuracy} WHERE CODE = '{code}'"
+    sql = f"UPDATE {table_name} SET SHARE_ACCURACY = {accuracy} WHERE CODE = '{code}'"
     res = execute_cursor(sql)
     return res
