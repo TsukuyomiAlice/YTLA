@@ -3,7 +3,7 @@
     <div v-if="fundInfo" class="card-content">
       <h2 class="fund-name">{{ fundInfo.name }}</h2>
       <div class="fund-code">{{ fundInfo.code }}</div>
-      
+
       <div class="info-grid">
         <div class="info-item">
           <span class="label">最新净值</span>
@@ -49,7 +49,7 @@ defineProps<Props>()
 .fund-info-card {
   background: white;
   border-radius: 12px;
-  padding: 24px;
+  padding: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
   .card-content {
@@ -67,13 +67,13 @@ defineProps<Props>()
 
     .info-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 6px;
 
       .info-item {
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 6px;
 
         .label {
           font-size: 14px;

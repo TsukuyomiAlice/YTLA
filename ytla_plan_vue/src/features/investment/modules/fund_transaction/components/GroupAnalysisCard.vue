@@ -240,6 +240,8 @@ const toggleExpand = () => {
   padding: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow-x: auto;
+  min-width: 0;
+  flex-shrink: 0;
 
   .card-header {
     display: flex;

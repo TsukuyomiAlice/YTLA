@@ -900,7 +900,7 @@ def analyze_continuous_history(code):
             flg = True
             if len(latest_lists) == 7:
                 latest_lists.pop(0)
-            latest_lists.append([fund_history_list[i - counter + 1]['TRANSACTION_DATE'], counter, round((ratio * 100 - 100), 2)])
+            latest_lists.append([fund_history_list[i - counter]['TRANSACTION_DATE'], counter , round((ratio * 100 - 100), 2)])
             counter = 0
             ratio = 1
         if fund_history_list[i]['FLUCTUATION'] < 0 and flg:
@@ -910,7 +910,7 @@ def analyze_continuous_history(code):
                 buy_side[10].append(round((ratio * 100 - 100), 2))
             if len(latest_lists) == 7:
                 latest_lists.pop(0)
-            latest_lists.append([fund_history_list[i - counter + 1]['TRANSACTION_DATE'], counter, round((ratio * 100 - 100), 2)])
+            latest_lists.append([fund_history_list[i - counter]['TRANSACTION_DATE'], counter, round((ratio * 100 - 100), 2)])
             flg = False
             counter = 0
             ratio = 1

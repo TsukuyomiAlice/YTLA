@@ -1,7 +1,7 @@
 # coding=utf-8
 from core.classic.frame._type.func.loggerConfig import process_log
 from core.classic.frame.router.instance.instanceProcessToRoutes import Response
-from features.investment.modules.fund_transaction.process import processTransactionMatchGroup
+from ..process import processTransactionMatchGroup
 
 
 @process_log

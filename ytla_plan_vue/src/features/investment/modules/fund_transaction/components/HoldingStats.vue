@@ -2,7 +2,7 @@
   <div class="holding-stats">
     <div v-if="brief" class="stats-content">
       <h3 class="section-title">持仓统计</h3>
-      
+
       <div class="stats-grid">
         <div class="stats-column">
           <div class="stat-item">
@@ -35,7 +35,7 @@
         <div class="stats-column">
           <div class="stat-item">
             <span class="label">基金运行天数</span>
-            <span class="value">--</span>
+            <span class="value">{{ history?.length || 0 }} 天</span>
           </div>
           <div class="stat-item">
             <span class="label">当前实际持有金额</span>
@@ -87,6 +87,7 @@ interface Props {
     short_position_share: number
     short_position_amount: number
   } | null | undefined
+  history?: Array<any>
 }
 
 defineProps<Props>()
@@ -96,8 +97,9 @@ defineProps<Props>()
 .holding-stats {
   background: white;
   border-radius: 12px;
-  padding: 24px;
+  padding: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
 
   .stats-content {
     .section-title {
@@ -142,7 +144,7 @@ defineProps<Props>()
           &.loss {
             color: #4caf50;
           }
-          
+
           &.zero {
             color: #333;
           }

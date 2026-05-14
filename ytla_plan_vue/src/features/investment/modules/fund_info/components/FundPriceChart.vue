@@ -22,7 +22,8 @@ import {
   TitleComponent,
   TooltipComponent,
   LegendComponent,
-  GridComponent
+  GridComponent,
+  DataZoomComponent
 } from 'echarts/components'
 
 use([
@@ -31,7 +32,8 @@ use([
   TitleComponent,
   TooltipComponent,
   LegendComponent,
-  GridComponent
+  GridComponent,
+  DataZoomComponent
 ])
 
 interface Props {
@@ -53,11 +55,12 @@ const chartOption = computed(() => {
   const dates = props.history.map(item => item.transaction_date)
   const prices = props.history.map(item => item.current_price)
 
+  // 计算显示范围，默认显示最近250天
+  const totalDays = dates.length
+  const displayDays = Math.min(totalDays, 250)
+  const startIdx = totalDays - displayDays
+
   return {
-    title: {
-      text: '基金净值走势',
-      left: 'center'
-    },
     tooltip: {
       trigger: 'axis',
       formatter: (params: any) => {
@@ -84,6 +87,20 @@ const chartOption = computed(() => {
       type: 'value',
       scale: true
     },
+    dataZoom: [
+      {
+        type: 'inside',
+        startValue: startIdx,
+        endValue: totalDays - 1
+      },
+      {
+        type: 'slider',
+        startValue: startIdx,
+        endValue: totalDays - 1,
+        height: 25,
+        bottom: 5
+      }
+    ],
     series: [
       {
         name: '净值',
@@ -115,12 +132,13 @@ const chartOption = computed(() => {
 <style scoped lang="scss">
 .fund-price-chart {
   background: white;
-  border-radius: 12px;
-  padding: 24px;
+  border-radius: 8px;
+  padding: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
 
   .chart {
-    height: 400px;
+    height: 420px;
     width: 100%;
   }
 

@@ -19,13 +19,18 @@
 
     <!-- 内容区域 -->
     <div v-if="hasData" class="content-area">
-      <div class="fund-info-container">
+      <div class="left-panel">
         <FundInfoCard :fund-info="fundInfoStore.fundInfo" />
-        <FundPriceChart :history="fundInfoStore.fundHistory" />
+        <div class="left-scroll-content">
+          <FundPriceChart :history="fundInfoStore.fundHistory" />
+          <HoldingStats 
+            :brief="transactionStore.transactionData?.brief" 
+            :history="fundInfoStore.fundHistory"
+          />
+          <ContinuousStats :continuous-history="transactionStore.transactionData?.continuous_history" />
+        </div>
       </div>
-      <div class="fund-transaction-container">
-        <HoldingStats :brief="transactionStore.transactionData?.brief" />
-        <ContinuousStats :continuous-history="transactionStore.transactionData?.continuous_history" />
+      <div class="right-panel">
         <GroupAnalysisCard
           v-for="(group, index) in transactionStore.transactionData?.match_list || []"
           :key="index"
@@ -54,8 +59,8 @@ const fundCodeInput = ref('')
 
 const isLoading = computed(() => fundInfoStore.isLoading || transactionStore.isLoading)
 const error = computed(() => fundInfoStore.error || transactionStore.error)
-const hasData = computed(() => 
-  (fundInfoStore.fundInfo !== null || fundInfoStore.fundHistory.length > 0) || 
+const hasData = computed(() =>
+  (fundInfoStore.fundInfo !== null || fundInfoStore.fundHistory.length > 0) ||
   transactionStore.transactionData !== null
 )
 
@@ -72,13 +77,13 @@ const handleSearch = async () => {
 
 <style scoped lang="scss">
 .investment-container {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 20px;
 
   .fund-input-section {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 10px;
     margin-bottom: 20px;
 
@@ -125,7 +130,38 @@ const handleSearch = async () => {
   }
 
   .content-area {
-    min-height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    height: calc(100vh - 200px);
+  }
+
+  .left-panel,
+  .right-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .left-panel {
+    .left-scroll-content {
+      flex: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  .right-panel {
+    overflow-y: auto;
+  }
+
+  .left-panel > *,
+  .right-panel > * {
+    flex-shrink: 0;
   }
 }
 

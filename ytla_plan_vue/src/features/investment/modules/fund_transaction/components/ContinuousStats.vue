@@ -69,7 +69,7 @@
               :key="`grade-${index}`"
               class="table-cell"
             >
-              {{ getGradeLabel(index) }}%
+              {{ getGradeLabel(index) }}
             </div>
           </div>
           <div class="table-row">
@@ -178,8 +178,9 @@ const getGradeLabel = (index: number) => {
 .continuous-stats {
   background: white;
   border-radius: 12px;
-  padding: 24px;
+  padding: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
 
   .stats-content {
     .section-title {
@@ -206,10 +207,10 @@ const getGradeLabel = (index: number) => {
           display: flex;
           flex-direction: column;
           align-items: center;
-          padding: 12px 20px;
+          padding: 8px 12px;
           background: #f5f5f5;
           border-radius: 8px;
-          min-width: 100px;
+          min-width: 80px;
 
           .flow-date {
             font-size: 12px;
@@ -257,6 +258,7 @@ const getGradeLabel = (index: number) => {
         background: #f5f5f5;
         border-radius: 8px;
         overflow: hidden;
+        overflow-x: auto;
 
         .table-row {
           display: flex;

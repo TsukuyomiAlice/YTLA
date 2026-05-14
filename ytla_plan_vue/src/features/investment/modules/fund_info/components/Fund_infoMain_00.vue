@@ -51,13 +51,13 @@ const handleSearch = async () => {
 
 <style scoped lang="scss">
 .investment-container {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 20px;
 
   .fund-input-section {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 10px;
     margin-bottom: 20px;
 
