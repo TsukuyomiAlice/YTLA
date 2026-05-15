@@ -75,7 +75,7 @@ const handleEdit = () => {
     name: props.name,
     tags: props.tags,
     description: props.description,
-    card_sub_type: 'sample1',
+    card_sub_type: 'sample3',
     sample_data_1: props.sampleData1,
     sample_data_2: props.sampleData2,
     sample_data_3: props.sampleData3,

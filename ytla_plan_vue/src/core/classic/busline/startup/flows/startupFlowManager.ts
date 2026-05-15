@@ -16,11 +16,3 @@ export class StartupModuleFlowManager implements ModuleFlowManager {
 }
 
 export const startupModuleFlowManager = new StartupModuleFlowManager()
-
-startupModuleFlowManager.registerFlow('startup-main-steps', [
-  defineAsyncComponent(() => import('@/features/busline/modules/startup/components/StartupMain_00.vue')),
-])
-
-startupModuleFlowManager.registerFlow('startup-sub-steps', [
-  defineAsyncComponent(() => import('@/features/busline/modules/startup/components/StartupSub_00.vue')),
-])

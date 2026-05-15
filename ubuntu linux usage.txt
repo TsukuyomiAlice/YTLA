@@ -1,0 +1,19 @@
+# 1. grant the access permission
+chmod +x start_backend.sh start_frontend.sh start_all.sh stop_all.sh
+
+# 2.dependencies
+cd ytla_plan
+pip3 install -r requirements.txt
+
+cd ../ytla_plan_vue
+npm install
+
+# 3.start service (in background)
+./start_all.sh
+
+# 3. start service (in terminal to monitor logs)
+./start_backend.sh   # in one terminal
+./start_frontend.sh  # in another terminal
+
+# 4. stop service  
+./stop_all.sh
