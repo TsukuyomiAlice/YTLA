@@ -2,6 +2,7 @@
 import os
 import sys
 import subprocess
+import shutil
 import http.server
 import socketserver
 
@@ -54,49 +55,31 @@ def main():
         sys.exit(1)
     
     os.chdir(frontend_dir)
-    current_dir = os.getcwd()
-    print(f"\n[1/4] Current working directory: {current_dir}")
+    print(f"\n[1/5] Current working directory: {os.getcwd()}")
     
-    if not os.path.exists(dist_dir):
-        print("\n[2/4] dist directory not found, starting build...")
-        
-        print("\nInstalling dependencies...")
-        if not run_command("npm install"):
-            input("Press Enter to exit...")
-            sys.exit(1)
-        
-        print("\nBuilding frontend...")
-        if not run_command("npm run build"):
-            input("Press Enter to exit...")
-            sys.exit(1)
+    print("\n[2/5] Cleaning existing dist directory...")
+    if os.path.exists(dist_dir):
+        shutil.rmtree(dist_dir)
+        print(f"Removed existing dist directory")
     else:
-        print("\n[2/4] dist directory already exists, skipping build")
+        print("No existing dist directory to clean")
+    
+    print("\n[3/5] Installing dependencies...")
+    if not run_command("npm install"):
+        input("Press Enter to exit...")
+        sys.exit(1)
+    
+    print("\n[4/5] Building frontend...")
+    if not run_command("npm run build"):
+        input("Press Enter to exit...")
+        sys.exit(1)
     
     if not os.path.exists(dist_dir):
         print(f"\nERROR: Build failed, dist directory not created")
         input("Press Enter to exit...")
         sys.exit(1)
     
-    print("\n[3/4] Checking dist/index.html...")
-    index_path = os.path.join(dist_dir, 'index.html')
-    if os.path.exists(index_path):
-        with open(index_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-            if 'src="/src/main.ts"' in content:
-                print("WARNING: index.html still references src/main.ts!")
-                print("Build may have issues.")
-            else:
-                print("OK: index.html references look correct")
-                # Show script tags
-                for line in content.split('\n'):
-                    if 'script' in line:
-                        print(f"  {line.strip()}")
-    else:
-        print(f"ERROR: {index_path} not found")
-        input("Press Enter to exit...")
-        sys.exit(1)
-    
-    print(f"\n[4/4] Starting static server on port {port}...")
+    print("\n[5/5] Starting static server on port {port}...")
     print(f"Changing to dist directory: {dist_dir}")
     os.chdir(dist_dir)
     print(f"Current directory: {os.getcwd()}")

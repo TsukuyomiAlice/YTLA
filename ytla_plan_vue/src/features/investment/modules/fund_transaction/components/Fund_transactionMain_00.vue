@@ -20,12 +20,12 @@
     <!-- 内容区域 -->
     <div v-if="hasData" class="content-area">
       <div class="left-panel">
-        <FundInfoCard :fund-info="fundInfoStore.fundInfo" />
+        <FundInfoCard :fund-info="localFundInfo" />
         <div class="left-scroll-content">
-          <FundPriceChart :history="fundInfoStore.fundHistory" />
-          <HoldingStats 
-            :brief="transactionStore.transactionData?.brief" 
-            :history="fundInfoStore.fundHistory"
+          <FundPriceChart :history="localFundHistory" />
+          <HoldingStats
+            :brief="transactionStore.transactionData?.brief"
+            :fund-days="transactionStore.transactionData?.continuous_history?.fund_days"
           />
           <ContinuousStats :continuous-history="transactionStore.transactionData?.continuous_history" />
         </div>
@@ -44,23 +44,48 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { useFundInfoStore } from '@/features/investment/modules/fund_info/stores/fundInfoStore.ts'
 import { useFundTransactionStore } from '@/features/investment/modules/fund_transaction/stores/fundTransactionStore.ts'
+import { FundInfoService } from '@/features/investment/modules/fund_info/services/fundInfoService.ts'
 import FundInfoCard from '@/features/investment/modules/fund_info/components/FundInfoCard.vue'
 import FundPriceChart from '@/features/investment/modules/fund_info/components/FundPriceChart.vue'
 import HoldingStats from '@/features/investment/modules/fund_transaction/components/HoldingStats.vue'
 import ContinuousStats from '@/features/investment/modules/fund_transaction/components/ContinuousStats.vue'
 import GroupAnalysisCard from '@/features/investment/modules/fund_transaction/components/GroupAnalysisCard.vue'
 
-const fundInfoStore = useFundInfoStore()
+const API_BASE = import.meta.env.VITE_API_BASE
+const fundInfoService = new FundInfoService(API_BASE)
+
 const transactionStore = useFundTransactionStore()
 
 const fundCodeInput = ref('')
 
-const isLoading = computed(() => fundInfoStore.isLoading || transactionStore.isLoading)
-const error = computed(() => fundInfoStore.error || transactionStore.error)
+// 本地状态，不依赖另一个store
+const localFundInfo = ref<null | {
+  code: string
+  name: string
+  fund_type: string
+  ratio: number
+  share_accuracy: number
+  fee_free_limit: number
+  latest_price: number
+}>(null)
+
+const localFundHistory = ref<Array<{
+  transaction_date: string
+  current_price: number
+  origin_price: number
+  fluctuation: number
+  share_change_ratio: number
+  share_change_note: string
+}>>([])
+
+const localIsLoading = ref(false)
+const localError = ref<null | string>(null)
+
+const isLoading = computed(() => localIsLoading.value || transactionStore.isLoading)
+const error = computed(() => localError.value || transactionStore.error)
 const hasData = computed(() =>
-  (fundInfoStore.fundInfo !== null || fundInfoStore.fundHistory.length > 0) ||
+  (localFundInfo.value !== null || localFundHistory.value.length > 0) ||
   transactionStore.transactionData !== null
 )
 
@@ -68,10 +93,40 @@ const handleSearch = async () => {
   const code = fundCodeInput.value.trim()
   if (!code) return
 
-  await Promise.all([
-    fundInfoStore.loadAllData(code),
-    transactionStore.fetchTransactionAnalysis(code)
-  ])
+  // 清空所有旧数据
+  localFundInfo.value = null
+  localFundHistory.value = []
+  localError.value = null
+  transactionStore.clear()
+
+  // 两个请求并行
+  localIsLoading.value = true
+  try {
+    await Promise.all([
+      // 直接调用服务获取基金信息
+      (async () => {
+        const infoResponse = await fundInfoService.getFundInfo(code)
+        if (infoResponse.success && infoResponse.data) {
+          localFundInfo.value = infoResponse.data
+        } else {
+          localError.value = infoResponse.message || '获取基金信息失败'
+        }
+
+        const historyResponse = await fundInfoService.getFundHistory(code)
+        if (historyResponse.success && historyResponse.data) {
+          localFundHistory.value = historyResponse.data
+        } else if (!localError.value) {
+          localError.value = historyResponse.message || '获取历史净值失败'
+        }
+      })(),
+      // 调用transaction store获取交易分析
+      transactionStore.fetchTransactionAnalysis(code)
+    ])
+  } catch (err) {
+    localError.value = err instanceof Error ? err.message : '加载失败'
+  } finally {
+    localIsLoading.value = false
+  }
 }
 </script>
 

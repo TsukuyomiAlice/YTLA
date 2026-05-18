@@ -38,6 +38,7 @@ export const useFundTransactionStore = defineStore('fundTransaction', {
     } | null,
     isLoading: false,
     error: null as string | null,
+    expandedIndex: null as number | null,
   }),
   actions: {
     setFundCode(code: string) {
@@ -45,6 +46,7 @@ export const useFundTransactionStore = defineStore('fundTransaction', {
     },
 
     async fetchTransactionAnalysis(code: string) {
+      this.clear()
       this.isLoading = true
       this.error = null
       try {
@@ -60,6 +62,25 @@ export const useFundTransactionStore = defineStore('fundTransaction', {
       } finally {
         this.isLoading = false
       }
+    },
+
+    toggleExpandedIndex(index: number) {
+      if (this.expandedIndex === index) {
+        this.expandedIndex = null
+      } else {
+        this.expandedIndex = index
+      }
+    },
+
+    getSelectedGroup() {
+      if (this.expandedIndex === null || !this.transactionData) return null
+      return this.transactionData.match_list[this.expandedIndex] || null
+    },
+
+    clear() {
+      this.transactionData = null
+      this.expandedIndex = null
+      this.error = null
     },
 
     _handleError(error: unknown, defaultMsg: string) {

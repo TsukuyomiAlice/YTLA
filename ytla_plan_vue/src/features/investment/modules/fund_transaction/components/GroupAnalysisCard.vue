@@ -31,7 +31,7 @@
             <th>浮盈(%)</th>
           </tr>
         </thead>
-        <tbody v-show="isExpanded">
+        <tbody v-if="isExpanded">
           <template v-for="(tx, txIndex) in group" :key="txIndex">
             <tr class="tx-row" :class="{ 'latest-tx': txIndex === group.length - 1 }">
               <td>{{ txIndex + 1 }}</td>
@@ -83,7 +83,7 @@
             </tr>
           </template>
         </tbody>
-        <tbody v-show="!isExpanded && lastAnalyzedTx">
+        <tbody v-else-if="lastAnalyzedTx">
           <tr class="tx-row latest-tx">
             <td>{{ lastAnalyzedTxIndex + 1 }}</td>
             <td>{{ lastAnalyzedTx?.transaction_id }}</td>
@@ -139,7 +139,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { computed } from 'vue'
+import { useFundTransactionStore } from '@/features/investment/modules/fund_transaction/stores/fundTransactionStore.ts'
 
 interface Transaction {
   transaction_id: number
@@ -172,11 +173,16 @@ interface Transaction {
 interface Props {
   group: Transaction[]
   index: number
+  forceExpand?: boolean
 }
 
-const props = defineProps<Props>()
+const props = withDefaults(defineProps<Props>(), {
+  forceExpand: false
+})
 
-const isExpanded = ref(false)
+const transactionStore = useFundTransactionStore()
+
+const isExpanded = computed(() => props.forceExpand || transactionStore.expandedIndex === props.index)
 
 const lastTx = computed(() => props.group[props.group.length - 1])
 
@@ -229,7 +235,9 @@ const statusText = computed(() => {
 })
 
 const toggleExpand = () => {
-  isExpanded.value = !isExpanded.value
+  if (!props.forceExpand) {
+    transactionStore.toggleExpandedIndex(props.index)
+  }
 }
 </script>
 

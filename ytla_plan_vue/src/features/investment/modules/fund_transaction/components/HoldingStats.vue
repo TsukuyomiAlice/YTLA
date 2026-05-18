@@ -35,7 +35,7 @@
         <div class="stats-column">
           <div class="stat-item">
             <span class="label">基金运行天数</span>
-            <span class="value">{{ history?.length || 0 }} 天</span>
+            <span class="value">{{ fundDays || 0 }} 天</span>
           </div>
           <div class="stat-item">
             <span class="label">当前实际持有金额</span>
@@ -87,7 +87,7 @@ interface Props {
     short_position_share: number
     short_position_amount: number
   } | null | undefined
-  history?: Array<any>
+  fundDays?: number
 }
 
 defineProps<Props>()

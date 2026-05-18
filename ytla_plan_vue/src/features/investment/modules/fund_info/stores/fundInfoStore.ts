@@ -33,6 +33,7 @@ export const useFundInfoStore = defineStore('fundInfo', {
     },
 
     async fetchFundInfo(code: string) {
+      this.clear()
       this.isLoading = true
       this.error = null
       try {
@@ -72,6 +73,12 @@ export const useFundInfoStore = defineStore('fundInfo', {
         this.fetchFundInfo(code),
         this.fetchFundHistory(code)
       ])
+    },
+
+    clear() {
+      this.fundInfo = null
+      this.fundHistory = []
+      this.error = null
     },
 
     _handleError(error: unknown, defaultMsg: string) {
