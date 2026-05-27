@@ -260,7 +260,7 @@ def transaction_history_update(transaction_id, transaction_type, total_price, sh
           f"SHARE = {str(share)}, " \
           f"UNIT_PRICE = {str(unit_price)}, " \
           f"TRANSACTION_FEE = {str(transaction_fee)} " \
-          f"WHERE ID = {str(transaction_id)}"
+          f"WHERE TRANSACTION_ID = {str(transaction_id)}"
     res = execute_cursor(sql)
     return res
 
