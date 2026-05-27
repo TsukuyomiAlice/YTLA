@@ -2,7 +2,7 @@
 
 # 选择调用
 import json
-from ytla_fund.dao import daoFundHistory
+from ..dao import daoFundHistory
 """
 数据处理部分
 """

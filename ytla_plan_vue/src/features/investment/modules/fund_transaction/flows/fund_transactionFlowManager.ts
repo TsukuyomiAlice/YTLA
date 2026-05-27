@@ -18,9 +18,9 @@ export class Fund_transactionModuleFlowManager implements ModuleFlowManager {
 export const fund_transactionModuleFlowManager = new Fund_transactionModuleFlowManager()
 
 fund_transactionModuleFlowManager.registerFlow('fund_transaction-main-steps', [
-  defineAsyncComponent(() => import('@/features/investment/modules/fund_transaction/components/Fund_transactionMain_00.vue')),
+  defineAsyncComponent(() => import('@/features/investment/modules/fund_transaction/components/Fund_transactionMain_02.vue')),
 ])
 
 fund_transactionModuleFlowManager.registerFlow('fund_transaction-sub-steps', [
-  defineAsyncComponent(() => import('@/features/investment/modules/fund_transaction/components/Fund_transactionSub_00.vue')),
+  defineAsyncComponent(() => import('@/features/investment/modules/fund_transaction/components/Fund_transactionSub_02.vue')),
 ])

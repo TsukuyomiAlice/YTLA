@@ -1,6 +1,6 @@
 import { defineAsyncComponent } from 'vue'
 import type { ModuleRegistry } from '@/core/classic/modules/moduleCard/factories/moduleRegistry.ts'
-import { sampleModuleFlowManager } from '@/features/sample/modules/_type/flows/sampleModuleFlowManager.ts'
+import { sampleModuleFlowManager } from '@/features/sample/modules/sample/flows/sampleModuleFlowManager.ts'
 
 export const sampleModuleConfig = <ModuleRegistry> {
   moduleType: 'sample',

@@ -17,9 +17,9 @@ def get_history(code):
     last_date_string = "1989-01-01"
     res = 0
     if len(last_date):
-        count = timeFormat.diff_date(time.strftime("%Y-%m-%d", time.localtime()), last_date[0][0])
+        count = timeFormat.diff_date(time.strftime("%Y-%m-%d", time.localtime()), last_date[0]['TRANSACTION_DATE'])
         last_date_string = (
-                datetime.datetime.strptime(last_date[0][0], "%Y-%m-%d") + datetime.timedelta(days=1)).strftime(
+                datetime.datetime.strptime(last_date[0]['TRANSACTION_DATE'], "%Y-%m-%d") + datetime.timedelta(days=1)).strftime(
             "%Y-%m-%d")
     else:
         fst_trial = requestLsjz.request(code, 1, 1, "", "")
