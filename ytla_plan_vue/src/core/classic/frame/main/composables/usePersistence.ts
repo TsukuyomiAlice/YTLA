@@ -1,37 +1,10 @@
-import { ref } from 'vue'
-import { getModuleConfig, type ModuleRegistry } from '@/core/classic/modules/moduleCard/factories/moduleRegistry.ts'
+import type { PanelContentState } from '@/core/classic/busline/persistence/definitions/persistenceTypes.ts'
 
-//// PanelContentState
-export type PanelContentState = {
-  displayMode: number
-  moduleType: string
-  globalFrame: {
-    currentStep: number
-    componentState: Record<string, unknown>
-  }
-  mainFrame: {
-    currentStep: number
-    componentState: Record<string, unknown>
-  }
-  subFrame: {
-    currentStep: number
-    componentState: Record<string, unknown>
-  }
-}
-
-function createDefaultPanelState(moduleType: string): PanelContentState {
-  const moduleConfig = getModuleConfig(moduleType) as ModuleRegistry
-  const displayMode = moduleConfig?.displayMode || 1
-  return {
-    displayMode: displayMode,
-    moduleType: moduleType,
-    globalFrame: { currentStep: 0, componentState: {} },
-    mainFrame: { currentStep: 0, componentState: {} },
-    subFrame: { currentStep: 0, componentState: {} }
-  } as PanelContentState
-}
+export type { PanelContentState }
+import { persistenceStore } from '@/core/classic/busline/persistence/services/persistenceStore.ts'
 
 //// PersistenceSchema
+// 保留旧类型定义供未迁移的调用方引用
 type PersistenceSchema = {
   layout: {
     swapped: boolean
@@ -65,83 +38,10 @@ type PersistenceSchema = {
   }
 }
 
-function createBaseStructure(): PersistenceSchema {
-  return {
-    layout: {
-      swapped: false,
-      sidebarVisible: false,
-      layoutSwapped: false,
-      userLanguage: 'en',
-      hasPlan: false
-    },
-    cards: {
-      pinned: {},
-      expanded: {},
-      order: []
-    },
-    planCards: {
-      pinned: {},
-      order: []
-    },
-    plans: {
-      plan_manage: {
-        currentModule: 'planManage',
-        modules: {
-          planManage: createDefaultPanelState('planManage'),
-          welcome: createDefaultPanelState('welcome'),
-          settings: createDefaultPanelState('settings')
-        }
-      }
-    }
-  }
-}
-
-//// initStorage
-const PERSISTENCE_KEY = 'ytla_persistence'
-
-function initStorage(): PersistenceSchema {
-  const raw = localStorage.getItem(PERSISTENCE_KEY)
-  if (raw) {
-    try {
-      return JSON.parse(raw)
-    } catch {
-      return createBaseStructure()
-    }
-  }
-  return createBaseStructure()
-}
-
-//// usePersistence
-const storage = ref<PersistenceSchema>(initStorage())
-
+//// usePersistence — 委托到新的 persistenceStore
 export function usePersistence() {
-
-  const savePersistence = () => {
-    localStorage.setItem(PERSISTENCE_KEY, JSON.stringify(storage.value))
+  return {
+    getPersistence: persistenceStore.get.bind(persistenceStore),
+    setPersistence: persistenceStore.set.bind(persistenceStore),
   }
-
-  const getPersistence = <K extends keyof PersistenceSchema>(
-    module: K,
-    key?: keyof PersistenceSchema[K]
-  ): any => {
-    if (!key) return storage.value[module]
-    return storage.value[module][key]
-  }
-
-  const setPersistence = <K extends keyof PersistenceSchema>(
-    module: K,
-    updates: Partial<PersistenceSchema[K]>
-  ) => {
-    if (module === 'plans') {
-      for (const key in updates) {
-        if (updates[key as keyof PersistenceSchema[K]] === undefined) {
-          delete storage.value[module][key]
-        }
-      }
-    }
-    storage.value[module] = { ...storage.value[module], ...updates }
-    savePersistence()
-  }
-
-  return { getPersistence, setPersistence }
 }
