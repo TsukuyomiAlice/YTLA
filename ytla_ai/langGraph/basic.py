@@ -83,14 +83,14 @@ model_with_tools = llm_1.bind_tools(tools=tools)
 
 # ====================
 @tool
-def compare(a: int, b: int) -> int:
+def compare(a: int, b: int) -> str:
     """比较两个数的大小"""
     if a > b:
-        return f"{a}大于{b}"
+        return f"{str(a)}大于{str(b)}"
     elif a < b:
-        return f"{a}小于{b}"
+        return f"{str(a)}小于{str(b)}"
     else:
-        return f"{a}等于{b}"
+        return f"{str(a)}等于{str(b)}"
 
 tools_2 = [compare]
 tool_2_node = ToolNode(tools_2)

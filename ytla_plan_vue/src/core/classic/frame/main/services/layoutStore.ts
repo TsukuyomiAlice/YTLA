@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { usePersistence } from '@/core/classic/frame/main/composables/usePersistence.ts'
+import { usePersistence } from '@/core/classic/frame/persistence/composables/usePersistence.ts'
 
 const { getPersistence, setPersistence } = usePersistence()
 

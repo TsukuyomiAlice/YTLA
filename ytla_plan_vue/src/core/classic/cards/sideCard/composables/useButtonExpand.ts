@@ -1,7 +1,7 @@
 import { ref, watch } from 'vue'
 import type { SideCardEmits, SideCardProps } from '@/core/classic/cards/sideCard/definitions/sideCardType.ts'
 
-import { usePersistence } from '@/core/classic/frame/main/composables/usePersistence.ts'
+import { usePersistence } from '@/core/classic/frame/persistence/composables/usePersistence.ts'
 const { getPersistence, setPersistence } = usePersistence()
 
 export const useButtonExpand = (props: SideCardProps, emit: SideCardEmits) => {

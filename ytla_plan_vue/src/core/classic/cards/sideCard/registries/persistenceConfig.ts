@@ -1,4 +1,4 @@
-import { createPersistenceNamespace } from '@/core/classic/busline/persistence/factories/persistenceRegistry.ts'
+import { createPersistenceNamespace } from '@/core/classic/frame/persistence/factories/persistenceRegistry.ts'
 
 createPersistenceNamespace({
   namespace: 'cards',

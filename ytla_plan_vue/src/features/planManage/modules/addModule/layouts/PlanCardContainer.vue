@@ -25,7 +25,7 @@ import { usePlanContainer } from '@/core/classic/plans/planCard/composables/useP
 import { useMasonryLayout } from '@/core/classic/frame/main/composables/useMasonryLayout.ts'
 import { getPlanCardRegistry } from '@/core/classic/plans/planCard/factories/planCardRegistry.ts'
 import { usePlanCardStore } from '@/core/classic/plans/planCard/stores/planCardStore.ts'
-import { usePersistence } from '@/core/classic/frame/main/composables/usePersistence.ts'
+import { usePersistence } from '@/core/classic/frame/persistence/composables/usePersistence.ts'
 
 const isMasonrySupported = ref(false)
 const userAgent = navigator.userAgent.toLowerCase()

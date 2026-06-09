@@ -1,7 +1,7 @@
 import { computed, nextTick, watch, ref, onMounted, onBeforeUnmount } from 'vue'
 import { useMasonryLayout } from '@/core/classic/frame/main/composables/useMasonryLayout'
 import { useCardStore } from '@/core/classic/cards/sideCard/stores/cardStore'
-import { usePersistence } from '@/core/classic/frame/main/composables/usePersistence'
+import { usePersistence } from '@/core/classic/frame/persistence/composables/usePersistence.ts'
 import type { CardData } from '@/core/classic/cards/sideCard/definitions/cardDataType'
 
 export const useSideCardPanelLayout = () => {

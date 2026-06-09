@@ -1,5 +1,5 @@
-import { createPersistenceNamespace } from '@/core/classic/busline/persistence/factories/persistenceRegistry.ts'
-import type { PersistenceNamespace } from '@/core/classic/busline/persistence/definitions/persistenceTypes.ts'
+import { createPersistenceNamespace } from '@/core/classic/frame/persistence/factories/persistenceRegistry.ts'
+import type { PersistenceNamespace } from '@/core/classic/frame/persistence/definitions/persistenceTypes.ts'
 
 createPersistenceNamespace({
   namespace: 'plans',

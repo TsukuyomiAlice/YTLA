@@ -1,7 +1,7 @@
 import { loadCardRegistries } from '@/core/classic/cards/sideCard/factories/cardRegistryLoader'
 import { loadCardEditorFlowRegistries } from '@/core/classic/cards/sideCardEditor/factories/cardEditorFlowRegistryLoader'
 import { loadModuleRegistries } from '@/core/classic/modules/moduleCard/factories/moduleRegistryLoader'
-import { loadPersistenceRegistries } from '@/core/classic/busline/persistence/factories/persistenceRegistryLoader'
+import { loadPersistenceRegistries } from '@/core/classic/frame/persistence/factories/persistenceRegistryLoader'
 
 console.groupCollapsed('[featuresRegistry] Starting to load feature domain registry files')
 console.time('[featuresRegistry] Total time')

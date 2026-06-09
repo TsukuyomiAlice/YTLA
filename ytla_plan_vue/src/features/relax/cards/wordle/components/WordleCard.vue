@@ -287,14 +287,14 @@ const resetGame = () => {
 
   &.correct {
     background: #6aaa64;
-    border-color: #6aaa64;
     color: white;
+    border-color: #6aaa64;
   }
 
   &.present {
+    color: white;
     background: #c9b458;
     border-color: #c9b458;
-    color: white;
   }
 
   &.absent {

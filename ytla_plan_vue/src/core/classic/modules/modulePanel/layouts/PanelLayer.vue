@@ -32,7 +32,7 @@ import { usePlanCardStore } from '@/core/classic/plans/planCard/stores/planCardS
 import { useModuleProcessStore } from '@/core/classic/modules/moduleCard/stores/moduleProcessStore.ts'
 import { useModuleLoader } from '@/core/classic/modules/modulePanel/composables/useModuleLoader.ts'
 import { computed } from 'vue'
-import { usePersistence } from '@/core/classic/frame/main/composables/usePersistence.ts'
+import { usePersistence } from '@/core/classic/frame/persistence/composables/usePersistence.ts'
 
 const planPanels = computed(() => panelStore.planPanels)
 
