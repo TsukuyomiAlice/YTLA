@@ -1,0 +1,169 @@
+# =============================================================================
+# UI组件规范 - 形式化约束定义
+# =============================================================================
+# 本文件与 rule_ui_instructions.md（自然语言规则）、rule_ui_standards.md（代码示例）
+# 共同构成完整的规则体系。
+#
+# 自然语言 → 描述意图和原理（"为什么"）
+# 代码示例 → 展示符合规则的实现（"怎么做"）
+# 形式化约束 → 提供可执行、可验证的规则（"是什么"）
+# =============================================================================
+
+# 元信息
+schema_version: "1.0"
+applies_to_doc: "rule_ui_instructions.md"
+applies_to_section: "命名规则"
+created: "2026-06-15"
+
+# =============================================================================
+# 约束定义
+# =============================================================================
+# 每条约束的结构：
+#   id:         唯一标识符，用于引用和错误报告
+#   description: 人类可读的描述
+#   type:       约束类型（regex | enum | structure | existence | guideline）
+#     - regex:     正则表达式匹配
+#     - enum:     从枚举列表中取值
+#     - structure: 目录/文件结构检查
+#     - existence: 配套文件存在性检查
+#     - guideline: 不可自动检查的设计原则（保持自然语言形式）
+#   target:     约束作用的目标
+#   rule:       约束规则的具体定义
+#   error_level: 违反时的严重级别（error | warning | info）
+#   rationale:   存在此约束的理由（减少歧义）
+# =============================================================================
+
+constraints:
+
+  # ---------------------------------------------------------------------------
+  # 1. 组件命名约束
+  # ---------------------------------------------------------------------------
+  - id: "naming-component-pattern"
+    description: "组件名必须符合'元件类型 + 功能描述'的 PascalCase 命名模式"
+    type: "regex"
+    target: "component_name"
+    rule: "^(Container|Bar|Button|Panel|Layer|Card)[A-Z][a-zA-Z]+$"
+    error_level: "error"
+    rationale: "消除命名顺序歧义（如 SubmitButton→错误，ButtonSubmit→正确），确保组件名可读且类型前置"
+
+  - id: "naming-component-type-enum"
+    description: "元件类型必须从预定义列表中选择，不得自行发明元件类型"
+    type: "enum"
+    target: "component_type"
+    rule:
+      values:
+        - name: "Container"
+          description: "包裹和组织其他UI元素的布局容器"
+        - name: "Bar"
+          description: "显示单行文本内容的水平区域"
+        - name: "Button"
+          description: "用户交互的点击操作元素"
+        - name: "Panel"
+          description: "承载多个相关组件或功能的区域"
+        - name: "Layer"
+          description: "整体页面布局容器"
+        - name: "Card"
+          description: "展示独立信息单元的自包含组件"
+    error_level: "error"
+    rationale: "防止随意创造新元件类型导致体系膨胀，所有组件类型应在六个预定义类型中选取"
+
+  - id: "naming-component-function-clarity"
+    description: "功能描述部分应使用明确的业务术语，避免过于通用的命名"
+    type: "guideline"
+    target: "component_function_name"
+    rule: "不应使用 Generic、Common、Normal、Default 等无信息量的词作为功能描述"
+    error_level: "warning"
+    rationale: "Submit 比 Button 更具体地描述了功能，Layout 比 Container 更具体地描述了角色"
+
+  # ---------------------------------------------------------------------------
+  # 2. 文件命名约束
+  # ---------------------------------------------------------------------------
+  - id: "file-vue-pascalcase"
+    description: "Vue 组件文件必须使用 PascalCase 命名"
+    type: "regex"
+    target: "vue_filename"
+    rule: "^[A-Z][a-zA-Z0-9]+\\.vue$"
+    error_level: "error"
+    rationale: "Vue 单文件组件与 PascalCase 组件名保持一致的行业惯例"
+
+  - id: "file-composable-use-prefix"
+    description: "组合式函数（composable）文件必须以 use 前缀开头，使用 camelCase"
+    type: "regex"
+    target: "composable_filename"
+    rule: "^use[A-Z][a-zA-Z0-9]*\\.ts$"
+    error_level: "error"
+    rationale: "遵循 Vue 3 composable 命名惯例，use 前缀标识该文件为可组合逻辑"
+
+  - id: "file-style-kebabcase"
+    description: "样式文件必须使用 kebab-case 命名"
+    type: "regex"
+    target: "style_filename"
+    rule: "^[a-z][a-z0-9]*(-[a-z][a-z0-9]*)*\\.scss$"
+    error_level: "error"
+    rationale: "SCSS 文件使用 kebab-case 是前端社区的普遍约定"
+
+  # ---------------------------------------------------------------------------
+  # 3. 目录结构约束
+  # ---------------------------------------------------------------------------
+  - id: "structure-required-directories"
+    description: "每个 UI 组件目录下必须包含 ui/、composables/、styles/ 三个目录"
+    type: "structure"
+    target: "component_directory"
+    rule:
+      required: ["ui", "composables", "styles"]
+      optional: ["definitions", "services", "store", "utils"]
+    error_level: "error"
+    rationale: "确保关注点分离的执行——视图、逻辑、样式各有其位"
+
+  - id: "structure-file-completeness"
+    description: "每个 .vue 组件文件至少对应一个 composable 文件和一个 .scss 样式文件"
+    type: "existence"
+    target: "component_directory"
+    rule:
+      component_glob: "ui/*.vue"
+      companion_globs:
+        - "composables/use*.ts"
+        - "styles/*.scss"
+      match_mode: "name_prefix"   # 配套文件应以组件名的 kebab-case 版本为前缀
+    error_level: "warning"
+    rationale: "防止缺少配套文件导致的运行时错误或样式缺失"
+
+  # ---------------------------------------------------------------------------
+  # 4. 目录内文件依赖约束
+  # ---------------------------------------------------------------------------
+  - id: "dependency-definitions-justification"
+    description: "definitions 目录存在当且仅当类型需要被多个文件复用"
+    type: "guideline"
+    target: "definitions_directory"
+    rule: "若有 definitions/ 文件，应至少有 2 个文件从该文件导入类型（否则应直接在组件内 defineProps 定义）"
+    error_level: "warning"
+    rationale: "防止不必要的 definitions 文件增加维护成本"
+
+# =============================================================================
+# 附录：约束类型说明
+# =============================================================================
+# type: regex
+#   用途：文件名、组件名等字符串模式匹配
+#   示例：组件名必须匹配 ^(Container|Bar|Button|Panel|Layer|Card)[A-Z][a-zA-Z]+$
+#   验证方式：Python re.match() / JS RegExp.test()
+#
+# type: enum
+#   用途：从有限列表中取值
+#   示例：元件类型必须属于 [Container, Bar, Button, Panel, Layer, Card]
+#   验证方式：成员检查
+#
+# type: structure
+#   用途：目录/文件结构检查
+#   示例：组件目录必须包含 ui/, composables/, styles/
+#   验证方式：os.path.exists() / fs.existsSync()
+#
+# type: existence
+#   用途：配套文件存在性检查
+#   示例：每个 .vue 文件至少有一个对应的 .ts 和 .scss 文件
+#   验证方式：按命名约定 glob 匹配
+#
+# type: guideline
+#   用途：不可自动检查但应尽量遵循的设计原则
+#   示例：功能描述应使用明确的业务术语
+#   验证方式：AI 代理手动判断
+# =============================================================================

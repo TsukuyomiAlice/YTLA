@@ -1,5 +1,7 @@
 # UI组件AI生成规范文档 (rule_ui_instructions.md)
 
+> **配套形式化约束**: 同目录下的 `rule_ui_schema.yaml` 提供可执行、可验证的形式化约束。自然语言规则描述意图和原理，形式化约束提供确定性的检查依据。AI 代理在阅读本文档时应同时加载该文件。
+
 ## AI代理工作流程调整
 
 ### 文档定位与使用说明
@@ -225,6 +227,24 @@ UI 组件存在两种使用场景：
   - `component.scss` (主样式)
   - `button-submit.scss` (按钮样式)
   - `container-layout.scss` (容器样式)
+
+### 命名规则 - 约束摘要
+
+以下为命名规则对应的形式化约束，定义在 `rule_ui_schema.yaml` 中：
+
+| ID | 约束 | 检查方式 | 级别 |
+|---|---|---|---|
+| `naming-component-pattern` | 组件名匹配 `^(Container\|Bar\|Button\|Panel\|Layer\|Card)[A-Z][a-zA-Z]+$` | 正则 | error |
+| `naming-component-type-enum` | 元件类型 ∈ {Container, Bar, Button, Panel, Layer, Card} | 枚举 | error |
+| `file-vue-pascalcase` | `.vue` 文件名匹配 `^[A-Z][a-zA-Z0-9]+\.vue$` | 正则 | error |
+| `file-composable-use-prefix` | `.ts` 文件名匹配 `^use[A-Z][a-zA-Z0-9]*\.ts$` | 正则 | error |
+| `file-style-kebabcase` | `.scss` 文件名匹配 `^[a-z][a-z0-9]*(-[a-z][a-z0-9]*)*\.scss$` | 正则 | error |
+| `structure-required-directories` | 组件目录必须包含 `ui/`、`composables/`、`styles/` | 结构检查 | error |
+| `structure-file-completeness` | 每个 `.vue` 至少对应一个 `use*.ts` 和一个 `.scss` | 存在性 | warning |
+| `naming-component-function-clarity` | 功能描述应使用明确的业务术语（避免 Generic 等） | guideline | warning |
+| `dependency-definitions-justification` | definitions 存在当且仅当类型被多文件复用 | guideline | warning |
+
+> **说明**: `error` 级别约束可由工具自动检查；`guideline` 级别的设计原则保持自然语言形式，由 AI 代理根据上下文判断。
 
 ## 文件结构与组织
 

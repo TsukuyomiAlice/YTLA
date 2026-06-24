@@ -1,10 +1,11 @@
 # encode = utf-8
 
+import math
 import time
 import datetime
 from ytla_plan.core.classic.frame._type.func import timeFormat
-from ..dao import daoFundHistory
-from ..api import requestLsjz, requestLsjzModify
+from ytla_plan.features.investment.modules.fund_info.dao import daoFundHistory
+from ytla_plan.features.investment.modules.fund_info.api import requestLsjz, requestLsjzModify
 
 
 def get_history(code):
@@ -26,7 +27,16 @@ def get_history(code):
         count = requestLsjzModify.modify_total_count(fst_trial)
     today_string = time.strftime("%Y-%m-%d", time.localtime())
     if count:
-        trial = requestLsjz.request(code, 1, count, last_date_string, today_string)
-        requestLsjzModify.modify(trial, code)
-        res = count
+        if count > 20:
+            total_pages = math.ceil(count / 20)
+            for page in range(1, total_pages + 1):
+                trial = requestLsjz.request(code, page, 20, "", "")
+                requestLsjzModify.modify(trial, code)
+                if page < total_pages:
+                    time.sleep(2)
+            res = count
+        else:
+            trial = requestLsjz.request(code, 1, count, last_date_string, today_string)
+            requestLsjzModify.modify(trial, code)
+            res = count
     return res
