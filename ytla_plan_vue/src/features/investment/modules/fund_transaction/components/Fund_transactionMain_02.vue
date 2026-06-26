@@ -27,7 +27,9 @@
             :brief="transactionStore.transactionData?.brief"
             :fund-days="transactionStore.transactionData?.continuous_history?.fund_days"
           />
-          <ContinuousStats :continuous-history="transactionStore.transactionData?.continuous_history" />
+          <ContinuousStats
+            :continuous-history="transactionStore.transactionData?.continuous_history"
+          />
         </div>
       </div>
       <div class="right-panel">
@@ -51,10 +53,12 @@ import FundPriceChart from '@/features/investment/modules/fund_info/components/F
 import HoldingStats from '@/features/investment/modules/fund_transaction/components/HoldingStats.vue'
 import ContinuousStats from '@/features/investment/modules/fund_transaction/components/ContinuousStats.vue'
 import GroupAnalysisCard from '@/features/investment/modules/fund_transaction/components/GroupAnalysisCard.vue'
+import { usePanelStore } from '@/core/classic/modules/modulePanel/stores/panelStore.ts'
 
 const API_BASE = import.meta.env.VITE_API_BASE
 const fundInfoService = new FundInfoService(API_BASE)
 
+const panelStore = usePanelStore()
 const transactionStore = useFundTransactionStore()
 
 const fundCodeInput = ref('')
@@ -70,23 +74,27 @@ const localFundInfo = ref<null | {
   latest_price: number
 }>(null)
 
-const localFundHistory = ref<Array<{
-  transaction_date: string
-  current_price: number
-  origin_price: number
-  fluctuation: number
-  share_change_ratio: number
-  share_change_note: string
-}>>([])
+const localFundHistory = ref<
+  Array<{
+    transaction_date: string
+    current_price: number
+    origin_price: number
+    fluctuation: number
+    share_change_ratio: number
+    share_change_note: string
+  }>
+>([])
 
 const localIsLoading = ref(false)
 const localError = ref<null | string>(null)
 
 const isLoading = computed(() => localIsLoading.value || transactionStore.isLoading)
 const error = computed(() => localError.value || transactionStore.error)
-const hasData = computed(() =>
-  (localFundInfo.value !== null || localFundHistory.value.length > 0) ||
-  transactionStore.transactionData !== null
+const hasData = computed(
+  () =>
+    localFundInfo.value !== null ||
+    localFundHistory.value.length > 0 ||
+    transactionStore.transactionData !== null,
 )
 
 const handleSearch = async () => {
@@ -102,6 +110,9 @@ const handleSearch = async () => {
   // 两个请求并行
   localIsLoading.value = true
   try {
+    // 从 panelStore 获取当前 plan_id 和 module_id
+    const planId = Number.parseInt(panelStore.activePanel.split('_')[1])
+    const moduleId = Number.parseInt(panelStore.activeModuleId)
     await Promise.all([
       // 直接调用服务获取基金信息
       (async () => {
@@ -120,7 +131,7 @@ const handleSearch = async () => {
         }
       })(),
       // 调用transaction store获取交易分析
-      transactionStore.fetchTransactionAnalysis(code)
+      transactionStore.fetchTransactionAnalysis(planId, moduleId, code),
     ])
   } catch (err) {
     localError.value = err instanceof Error ? err.message : '加载失败'

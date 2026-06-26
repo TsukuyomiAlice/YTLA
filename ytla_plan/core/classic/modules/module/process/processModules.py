@@ -113,7 +113,8 @@ def module_router(data, mode, module_id=0):
                           'dashboard', 'risk', 'burndownChart', 'property', 'features',
                           'rating','dictionary','assessment','vocabulary','readings','learning',
                           'sphere', 'matrix', 'create_card', 'create_module',
-                          'fund_info', 'fund_transaction']
+                          'fund_info', 'fund_transaction',
+                          'data_miner', 'data_manager']
         if data['module_sub_type'] not in valid_subtypes:
             return {'success': False, 'error': f'无效模组类型: {data["module_sub_type"]}'}
 

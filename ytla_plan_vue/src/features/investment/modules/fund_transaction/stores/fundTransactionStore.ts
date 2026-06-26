@@ -45,12 +45,12 @@ export const useFundTransactionStore = defineStore('fundTransaction', {
       this.fundCode = code
     },
 
-    async fetchTransactionAnalysis(code: string) {
+    async fetchTransactionAnalysis(plan_id: number, module_id: number, code: string) {
       this.clear()
       this.isLoading = true
       this.error = null
       try {
-        const response = await fundTransactionService.getTransactionAnalysis(code)
+        const response = await fundTransactionService.getTransactionAnalysis(plan_id, module_id, code)
         if (response.success && response.data) {
           this.transactionData = response.data
           this.fundCode = code

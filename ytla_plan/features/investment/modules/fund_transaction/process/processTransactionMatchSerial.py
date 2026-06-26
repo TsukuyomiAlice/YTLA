@@ -10,8 +10,8 @@ from ..dao import (
 from ytla_plan.core.classic.frame._type.func import timeFormat
 
 
-def analyze(code):
-    daoAnalyzeTransactionMatchSerial.clear_records(code)
+def analyze(plan_id, module_id, code):
+    daoAnalyzeTransactionMatchSerial.clear_records(plan_id, module_id, code)
 
     share_accuracy = scriptFundInfo.get_share_accuracy(code)
 
@@ -24,7 +24,7 @@ def analyze(code):
         share_change_date = share_change_ratio_list[share_change_ratio_node][0]
         share_change_ratio = share_change_ratio_list[share_change_ratio_node][1]
 
-    transaction_records = daoTransactionHistory.transaction_history_select_asc(code)
+    transaction_records = daoTransactionHistory.transaction_history_select_asc(plan_id, module_id, code)
     '''
     [0] TRANSACTION_ID
     [1] CODE
@@ -47,13 +47,13 @@ def analyze(code):
         transaction_amount = round(transaction_record[4], 2)
         transaction_share = round(transaction_record[5], share_accuracy)
 
-        latest_label = daoAnalyzeTransactionMatchSerial.get_latest_label(code)
+        latest_label = daoAnalyzeTransactionMatchSerial.get_latest_label(plan_id, module_id, code)
         label = latest_label + 1
 
         # share change
         while transaction_date >= share_change_date:
             transaction_share_change_list = (daoAnalyzeTransactionMatchSerial.
-                                             select_active_transactions(code, share_change_date))
+                                             select_active_transactions(plan_id, module_id, code, share_change_date))
             # [0] TRN_DATE, [1] TRN_TYPE [2] TRN_SHARE [3] TRN_AMOUNT
             # [4] TRN_REMAIN_SHARE [5] TRN_GAINED_AMOUNT
             # [6] LABEL [7] FIRST_TRN_ID [8] FIRST_TRN_DATE [9] TRN_ID [10] STATUS
@@ -62,11 +62,11 @@ def analyze(code):
                 new_price = round(abs((transaction[3] / new_share)), 4)
 
                 if transaction[10] == '00':
-                    daoAnalyzeTransactionMatchSerial.update_status_by_label(code, transaction[6], '10')
+                    daoAnalyzeTransactionMatchSerial.update_status_by_label(plan_id, module_id, code, transaction[6], '10')
                 if transaction[10] == '01':
-                    daoAnalyzeTransactionMatchSerial.update_status_by_label(code, transaction[6], '20')
+                    daoAnalyzeTransactionMatchSerial.update_status_by_label(plan_id, module_id, code, transaction[6], '20')
 
-                daoAnalyzeTransactionMatchSerial.insert_record(code, name, share_change_date, transaction[1],
+                daoAnalyzeTransactionMatchSerial.insert_record(plan_id, module_id, code, name, share_change_date, transaction[1],
                                                                new_price, transaction[2], transaction[3],
                                                                new_share, transaction[5], label,
                                                                transaction[7], transaction[8], transaction[9],
@@ -82,11 +82,11 @@ def analyze(code):
 
         if transaction_type in ('01', '08', '09') and transaction_share != 0:
 
-            match_transaction = daoAnalyzeTransactionMatchSerial.match_transaction_amount(code, transaction_amount,
+            match_transaction = daoAnalyzeTransactionMatchSerial.match_transaction_amount(plan_id, module_id, code, transaction_amount,
                                                                                           "'01'")
             if len(match_transaction) == 0:
                 match_transaction = (daoAnalyzeTransactionMatchSerial.
-                                     match_transaction_amount_remain(code, transaction_amount, "'01'"))
+                                     match_transaction_amount_remain(plan_id, module_id, code, transaction_amount, "'01'"))
             '''
             [0] LABEL
             [1] TRN_ID
@@ -107,11 +107,11 @@ def analyze(code):
                 match_transaction_gained_amount = match_transaction[0][7]
 
             else:
-                match_transaction = daoAnalyzeTransactionMatchSerial.match_transaction_amount(code, transaction_amount,
+                match_transaction = daoAnalyzeTransactionMatchSerial.match_transaction_amount(plan_id, module_id, code, transaction_amount,
                                                                                               "'00', '10'")
                 if len(match_transaction) == 0:
                     match_transaction = (daoAnalyzeTransactionMatchSerial.
-                                         match_transaction_amount_remain(code, transaction_amount, "'00', '10'"))
+                                         match_transaction_amount_remain(plan_id, module_id, code, transaction_amount, "'00', '10'"))
 
                 if len(match_transaction) > 0:
                     match_transaction_label = match_transaction[0][0]
@@ -122,7 +122,7 @@ def analyze(code):
                     match_transaction_remain_share = match_transaction[0][6]
                     match_transaction_gained_amount = match_transaction[0][7]
                     current_transaction_type = (daoAnalyzeTransactionMatchSerial.
-                                                check_transaction_type(code, match_transaction_first_id))
+                                                check_transaction_type(plan_id, module_id, code, match_transaction_first_id))
                     if len(current_transaction_type) > 0:
                         if current_transaction_type[0][0] in ('AMOUNT_BUY', 'SHARE_BUY'):
                             match_transaction = []
@@ -150,25 +150,25 @@ def analyze(code):
                 transaction_type_str = transaction_type_str + '*'
 
             if transaction_remain_share >= 0 and transaction_gained_amount >= 0:
-                daoAnalyzeTransactionMatchSerial.update_status_by_label(code, match_transaction_label, '20')
-                daoAnalyzeTransactionMatchSerial.update_status_by_first_transaction_id(code, match_transaction_first_id,
+                daoAnalyzeTransactionMatchSerial.update_status_by_label(plan_id, module_id, code, match_transaction_label, '20')
+                daoAnalyzeTransactionMatchSerial.update_status_by_first_transaction_id(plan_id, module_id, code, match_transaction_first_id,
                                                                                        '90')
                 status = '99'
             else:
                 if match_transaction_first_id != match_transaction_id:
-                    daoAnalyzeTransactionMatchSerial.update_status_by_label(code, match_transaction_label, '20')
+                    daoAnalyzeTransactionMatchSerial.update_status_by_label(plan_id, module_id, code, match_transaction_label, '20')
                     (daoAnalyzeTransactionMatchSerial.
-                     update_status_by_first_transaction_id(code, match_transaction_first_id, '10'))
+                     update_status_by_first_transaction_id(plan_id, module_id, code, match_transaction_first_id, '10'))
                     status = '01'
                 if match_transaction_first_id == match_transaction_id and match_transaction_id != 0:
                     (daoAnalyzeTransactionMatchSerial.
-                     update_status_by_first_transaction_id(code, match_transaction_first_id, '10'))
+                     update_status_by_first_transaction_id(plan_id, module_id, code, match_transaction_first_id, '10'))
                     status = '01'
                 if match_transaction_id == 0:
                     match_transaction_id = transaction_id
                     match_transaction_first_id = transaction_id
                     status = '00'
-            daoAnalyzeTransactionMatchSerial.insert_record(code, name, transaction_date, transaction_type_str,
+            daoAnalyzeTransactionMatchSerial.insert_record(plan_id, module_id, code, name, transaction_date, transaction_type_str,
                                                            transaction_price, transaction_share, transaction_amount,
                                                            transaction_remain_share, transaction_gained_amount,
                                                            label,
@@ -177,11 +177,11 @@ def analyze(code):
 
         if transaction_type in ('11', '18', '19') and transaction_amount != 0:
 
-            match_transaction = daoAnalyzeTransactionMatchSerial.match_transaction_share(code, transaction_share,
+            match_transaction = daoAnalyzeTransactionMatchSerial.match_transaction_share(plan_id, module_id, code, transaction_share,
                                                                                          "'01'")
             if len(match_transaction) == 0:
                 match_transaction = (daoAnalyzeTransactionMatchSerial.
-                                     match_transaction_share_remain(code, transaction_share, "'01'"))
+                                     match_transaction_share_remain(plan_id, module_id, code, transaction_share, "'01'"))
             '''
             [0] LABEL
             [1] TRN_ID
@@ -202,11 +202,11 @@ def analyze(code):
                 match_transaction_gained_amount = match_transaction[0][7]
 
             else:
-                match_transaction = daoAnalyzeTransactionMatchSerial.match_transaction_share(code, transaction_share,
+                match_transaction = daoAnalyzeTransactionMatchSerial.match_transaction_share(plan_id, module_id, code, transaction_share,
                                                                                              "'00', '10'")
                 if len(match_transaction) == 0:
                     match_transaction = (daoAnalyzeTransactionMatchSerial.
-                                         match_transaction_share_remain(code, transaction_share, "'00', '10'"))
+                                         match_transaction_share_remain(plan_id, module_id, code, transaction_share, "'00', '10'"))
                 if len(match_transaction) > 0:
                     match_transaction_label = match_transaction[0][0]
                     match_transaction_id = match_transaction[0][1]
@@ -216,7 +216,7 @@ def analyze(code):
                     match_transaction_remain_share = match_transaction[0][6]
                     match_transaction_gained_amount = match_transaction[0][7]
                     current_transaction_type = (daoAnalyzeTransactionMatchSerial.
-                                                check_transaction_type(code, match_transaction_first_id))
+                                                check_transaction_type(plan_id, module_id, code, match_transaction_first_id))
                     if len(current_transaction_type) > 0:
                         if current_transaction_type[0][0] in ('AMOUNT_SELL', 'SHARE_SELL'):
                             match_transaction = []
@@ -244,25 +244,25 @@ def analyze(code):
                 transaction_type_str = transaction_type_str + '*'
 
             if transaction_remain_share >= 0 and transaction_gained_amount >= 0:
-                daoAnalyzeTransactionMatchSerial.update_status_by_label(code, match_transaction_label, '20')
-                daoAnalyzeTransactionMatchSerial.update_status_by_first_transaction_id(code, match_transaction_first_id,
+                daoAnalyzeTransactionMatchSerial.update_status_by_label(plan_id, module_id, code, match_transaction_label, '20')
+                daoAnalyzeTransactionMatchSerial.update_status_by_first_transaction_id(plan_id, module_id, code, match_transaction_first_id,
                                                                                        '90')
                 status = '99'
             else:
                 if match_transaction_first_id != match_transaction_id:
-                    daoAnalyzeTransactionMatchSerial.update_status_by_label(code, match_transaction_label, '20')
+                    daoAnalyzeTransactionMatchSerial.update_status_by_label(plan_id, module_id, code, match_transaction_label, '20')
                     (daoAnalyzeTransactionMatchSerial.
-                     update_status_by_first_transaction_id(code, match_transaction_first_id, '10'))
+                     update_status_by_first_transaction_id(plan_id, module_id, code, match_transaction_first_id, '10'))
                     status = '01'
                 if match_transaction_first_id == match_transaction_id and match_transaction_id != 0:
                     (daoAnalyzeTransactionMatchSerial.
-                     update_status_by_first_transaction_id(code, match_transaction_first_id, '10'))
+                     update_status_by_first_transaction_id(plan_id, module_id, code, match_transaction_first_id, '10'))
                     status = '01'
                 if match_transaction_id == 0:
                     match_transaction_id = transaction_id
                     match_transaction_first_id = transaction_id
                     status = '00'
-            daoAnalyzeTransactionMatchSerial.insert_record(code, name, transaction_date, transaction_type_str,
+            daoAnalyzeTransactionMatchSerial.insert_record(plan_id, module_id, code, name, transaction_date, transaction_type_str,
                                                            transaction_price, transaction_share, transaction_amount,
                                                            transaction_remain_share, transaction_gained_amount,
                                                            label,
@@ -271,7 +271,7 @@ def analyze(code):
 
         if transaction_type in ('38', '39'):
             transaction_type_str = 'PROFIT_SHARE'
-            daoAnalyzeTransactionMatchSerial.insert_record(code, name, transaction_date, transaction_type_str,
+            daoAnalyzeTransactionMatchSerial.insert_record(plan_id, module_id, code, name, transaction_date, transaction_type_str,
                                                            transaction_price, transaction_share, transaction_amount,
                                                            transaction_share, 0,
                                                            label,
@@ -280,7 +280,7 @@ def analyze(code):
 
         if transaction_type in ('48', '49'):
             transaction_type_str = 'PROFIT_AMOUNT'
-            daoAnalyzeTransactionMatchSerial.insert_record(code, name, transaction_date, transaction_type_str,
+            daoAnalyzeTransactionMatchSerial.insert_record(plan_id, module_id, code, name, transaction_date, transaction_type_str,
                                                            transaction_price, transaction_share, transaction_amount,
                                                            0, transaction_amount,
                                                            label,
@@ -288,8 +288,8 @@ def analyze(code):
                                                            transaction_id, '99')
 
 
-def analyze_remain(code):
-    daoAnalyzeTransactionMatchSerialRemain.clear_records(code)
+def analyze_remain(plan_id, module_id, code):
+    daoAnalyzeTransactionMatchSerialRemain.clear_records(plan_id, module_id, code)
     fund_name = daoFundInfo.fund_info_select(code)[0][1]
 
     price_accuracy = scriptFundInfo.get_ratio(code)
@@ -297,7 +297,7 @@ def analyze_remain(code):
 
     latest_price = round((daoFundHistory.fund_history_select_latest_price(code)[0][0] * price_accuracy), 4)
 
-    remain_transactions = daoAnalyzeTransactionMatchSerial.select_active_transactions(code, '9999-12-31')
+    remain_transactions = daoAnalyzeTransactionMatchSerial.select_active_transactions(plan_id, module_id, code, '9999-12-31')
     # [0] TRN_DATE, [1] TRN_TYPE [2] TRN_SHARE [3] TRN_AMOUNT
     # [4] TRN_REMAIN_SHARE [5] TRN_GAINED_AMOUNT
     # [6] LABEL [7] FIRST_TRN_ID [8] FIRST_TRN_DATE [9] TRN_ID [10] STATUS
@@ -334,7 +334,7 @@ def analyze_remain(code):
         frs_profit_pct = trn_profit_pct
 
         if status == '01':
-            first_transaction = daoAnalyzeTransactionMatchSerial.select_first_transaction(code, frs_trn_id)[0]
+            first_transaction = daoAnalyzeTransactionMatchSerial.select_first_transaction(plan_id, module_id, code, frs_trn_id)[0]
             frs_type = first_transaction[1]
             frs_share = first_transaction[2]
             frs_amount = first_transaction[3]
@@ -349,7 +349,7 @@ def analyze_remain(code):
                 frs_profit = round((frs_amount / latest_price - frs_share), share_accuracy)
                 frs_profit_pct = round((frs_profit / frs_share * 100), 2)
 
-        daoAnalyzeTransactionMatchSerialRemain.insert(code, fund_name, latest_price,
+        daoAnalyzeTransactionMatchSerialRemain.insert(plan_id, module_id, code, fund_name, latest_price,
                                                       trn_type, trn_price, trn_share, trn_amount,
                                                       trn_profit, trn_profit_pct,
                                                       trn_remain_share, trn_gained_amount,
@@ -358,22 +358,22 @@ def analyze_remain(code):
                                                       trn_date, frs_date, trn_id)
 
 
-def analyze_quantity(code):
+def analyze_quantity(plan_id, module_id, code):
     share_accuracy = scriptFundInfo.get_share_accuracy(code)
 
-    old_record = daoAnalyzeTransactionMatchQuantitative.select_quantity_info(code)
-    current_holding = daoAnalyzeTransactionBalance.select_current_holding(code)
+    old_record = daoAnalyzeTransactionMatchQuantitative.select_quantity_info(plan_id, module_id, code)
+    current_holding = daoAnalyzeTransactionBalance.select_current_holding(plan_id, module_id, code)
     name = current_holding[0][0]
     holding_share = current_holding[0][1]
     holding_amount = current_holding[0][2]
-    returning_amount = (daoTransactionHistory.transaction_sum(code, "'11'")[1] +
-                        daoTransactionHistory.transaction_sum(code, "'18'")[1])
+    returning_amount = (daoTransactionHistory.transaction_sum(plan_id, module_id, code, "'11'")[1] +
+                        daoTransactionHistory.transaction_sum(plan_id, module_id, code, "'18'")[1])
     shown_amount = round(holding_amount + returning_amount, 2)
     if len(old_record) > 0:
         fee_free_limit = old_record[0][0]
 
         fee_free_date = timeFormat.calculate_date(timeFormat.get_today(), -fee_free_limit)
-        fee_free_share = round((daoAnalyzeTransactionOriginalSerial.get_sum_remain_share(code, fee_free_date)), 2)
+        fee_free_share = round((daoAnalyzeTransactionOriginalSerial.get_sum_remain_share(plan_id, module_id, code, fee_free_date)), 2)
 
         daily_amount = 0
         daily_share = 0
@@ -384,63 +384,63 @@ def analyze_quantity(code):
             if fee_free_limit == 30:
                 daily_amount = round((holding_amount / 22), 2)
                 daily_share = round((holding_share / 22), share_accuracy)
-        daoAnalyzeTransactionMatchQuantitative.update_daily_quantity(code, holding_share, fee_free_share,
+        daoAnalyzeTransactionMatchQuantitative.update_daily_quantity(plan_id, module_id, code, holding_share, fee_free_share,
                                                                      holding_amount, shown_amount,
                                                                      daily_share, daily_amount)
     else:
-        daoAnalyzeTransactionMatchQuantitative.insert_new(code, name, holding_share, holding_amount, shown_amount)
+        daoAnalyzeTransactionMatchQuantitative.insert_new(plan_id, module_id, code, name, holding_share, holding_amount, shown_amount)
 
 
-def update_transaction_priority():
-    code_priority_list = daoAnalyzeTransactionMatchQuantitative.select_code_priority_list()
+def update_transaction_priority(plan_id, module_id):
+    code_priority_list = daoAnalyzeTransactionMatchQuantitative.select_code_priority_list(plan_id, module_id)
     priority = 0
     for code in code_priority_list:
         priority = priority + 1
-        daoAnalyzeTransactionMatchSerialRemain.update_transaction_priority(code[0], priority)
+        daoAnalyzeTransactionMatchSerialRemain.update_transaction_priority(plan_id, module_id, code[0], priority)
 
 
-def analyze_balance(code):
-    daoAnalyzeTransactionBalance.clear_records(code)
+def analyze_balance(plan_id, module_id, code):
+    daoAnalyzeTransactionBalance.clear_records(plan_id, module_id, code)
     fund_name = scriptFundInfo.get_name(code)
 
     price_ratio = scriptFundInfo.get_ratio(code)
     share_accuracy = scriptFundInfo.get_share_accuracy(code)
     current_price = round((daoFundHistory.fund_history_select_latest_price(code)[0][0] * price_ratio), 4)
 
-    buy = daoTransactionHistory.transaction_sum(code, "'01', '08', '09'")
-    sell = daoTransactionHistory.transaction_sum(code, "'11', '18', '19'")
-    share_change = daoTransactionHistory.transaction_sum(code, "'21', '28', '29'")
-    profit_share = daoTransactionHistory.transaction_sum(code, "'31', '38', '39'")
+    buy = daoTransactionHistory.transaction_sum(plan_id, module_id, code, "'01', '08', '09'")
+    sell = daoTransactionHistory.transaction_sum(plan_id, module_id, code, "'11', '18', '19'")
+    share_change = daoTransactionHistory.transaction_sum(plan_id, module_id, code, "'21', '28', '29'")
+    profit_share = daoTransactionHistory.transaction_sum(plan_id, module_id, code, "'31', '38', '39'")
 
     holding_share = round((buy[0] - sell[0] + share_change[0] + profit_share[0]), share_accuracy)
     current_amount = round((holding_share * current_price), 2)
 
     holding_original_amount = 0
-    open_transactions = daoAnalyzeTransactionOriginalSerial.get_open_transactions(code)
+    open_transactions = daoAnalyzeTransactionOriginalSerial.get_open_transactions(plan_id, module_id, code)
     # LABEL, TRN_BUY_IN_ID, TRN_BUY_IN_DATE, TRN_REMAIN_SHARE, TRN_GAINED_AMOUNT
     for open_transaction in open_transactions:
-        open_transaction_price = daoAnalyzeTransactionOriginalSerial.get_transaction_price(code, open_transaction[1])
+        open_transaction_price = daoAnalyzeTransactionOriginalSerial.get_transaction_price(plan_id, module_id, code, open_transaction[1])
         holding_original_amount = round(holding_original_amount +
                                         round((open_transaction_price * price_ratio * open_transaction[3]), 2), 2)
     holding_avg_price = 0
     if holding_share > 0:
         holding_avg_price = round((holding_original_amount / holding_share), 4)
 
-    match_profit = daoAnalyzeTransactionMatchSerial.select_sum_profit(code)
+    match_profit = daoAnalyzeTransactionMatchSerial.select_sum_profit(plan_id, module_id, code)
     match_share_profit = round(match_profit[0], share_accuracy)
     match_amount_profit = round(match_profit[1], 2)
 
-    match_share_hold = round(daoAnalyzeTransactionMatchSerialRemain.get_sum_share(code, '>'), share_accuracy)
-    match_share_sold = round(daoAnalyzeTransactionMatchSerialRemain.get_sum_share(code, '<'), 2)
-    match_amount_hold = round(daoAnalyzeTransactionMatchSerialRemain.get_sum_amount(code, '>'), share_accuracy)
-    match_amount_paid = round(daoAnalyzeTransactionMatchSerialRemain.get_sum_amount(code, '<'), 2)
+    match_share_hold = round(daoAnalyzeTransactionMatchSerialRemain.get_sum_share(plan_id, module_id, code, '>'), share_accuracy)
+    match_share_sold = round(daoAnalyzeTransactionMatchSerialRemain.get_sum_share(plan_id, module_id, code, '<'), 2)
+    match_amount_hold = round(daoAnalyzeTransactionMatchSerialRemain.get_sum_amount(plan_id, module_id, code, '>'), share_accuracy)
+    match_amount_paid = round(daoAnalyzeTransactionMatchSerialRemain.get_sum_amount(plan_id, module_id, code, '<'), 2)
 
     if daoCurrencyFundList.check_if_currency_fund(code):
         current_price = 1
         holding_avg_price = 1
         current_amount = holding_share
 
-    daoAnalyzeTransactionBalance.insert(code, fund_name, current_price, current_amount,
+    daoAnalyzeTransactionBalance.insert(plan_id, module_id, code, fund_name, current_price, current_amount,
                                         holding_share, holding_avg_price,
                                         match_share_profit, match_amount_profit,
                                         match_share_hold, match_amount_paid, match_share_sold, match_amount_hold)

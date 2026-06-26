@@ -6,7 +6,7 @@ from core.classic.frame.database.func import sqliteConnector
 （暂时）数据库路径指定在下方
 如果有独立的数据库连接，可以在此处添加
 """
-db_name = 'Fund'
+db_name = 'fund'
 table_name = "CURRENCY_FUND_LIST"
 
 

@@ -3,9 +3,11 @@ export class FundTransactionService {
 
   /**
    * 获取基金交易分析数据
+   * @param plan_id 计划ID
+   * @param module_id 模块ID
    * @param code 基金代码
    */
-  async getTransactionAnalysis(code: string): Promise<{
+  async getTransactionAnalysis(plan_id: number, module_id: number, code: string): Promise<{
     success: boolean
     data?: {
       brief: {
@@ -73,7 +75,7 @@ export class FundTransactionService {
     const response = await fetch(`${this.API_BASE}/fund_transaction/analysis`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ code })
+      body: JSON.stringify({ plan_id, module_id, code })
     })
     if (!response.ok) throw new Error('获取交易分析失败')
     return response.json()

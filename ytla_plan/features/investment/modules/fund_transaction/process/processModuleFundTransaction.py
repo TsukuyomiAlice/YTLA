@@ -7,10 +7,12 @@ from . import processTransactionMatchGroup
 
 
 @process_log
-def get_transaction_analysis(code):
+def get_transaction_analysis(plan_id, module_id, code):
     """获取基金交易分析数据
 
     Args:
+        plan_id: 计划ID
+        module_id: 模块ID
         code: 基金代码
 
     Returns:
@@ -18,7 +20,7 @@ def get_transaction_analysis(code):
     """
     response = Response()
     try:
-        brief, match_list_sorted, profit_list = processTransactionMatchGroup.analyze_transaction_match_group(code)
+        brief, match_list_sorted, profit_list = processTransactionMatchGroup.analyze_transaction_match_group(plan_id, module_id, code)
         continuous_history = processTransactionMatchGroup.analyze_continuous_history(code)
 
         # 构建返回数据
@@ -56,11 +58,11 @@ def get_transaction_analysis(code):
 
 
 @process_log
-def update_transaction(transaction_id, code, transaction_date, transaction_type, amount, share, price, transaction_fee):
+def update_transaction(plan_id, module_id, transaction_id, code, transaction_date, transaction_type, amount, share, price, transaction_fee):
     response = Response()
     try:
-        daoTransactionHistory.transaction_history_full_update(
-            transaction_id, code, transaction_date, transaction_type, 
+        daoTransactionHistory.transaction_history_update(
+            plan_id, module_id, transaction_id, transaction_type, 
             amount, share, price, transaction_fee
         )
         response.success = True
@@ -72,10 +74,10 @@ def update_transaction(transaction_id, code, transaction_date, transaction_type,
 
 
 @process_log
-def get_transactions(code):
+def get_transactions(plan_id, module_id, code):
     response = Response()
     try:
-        transactions = daoTransactionHistory.transaction_history_select(code)
+        transactions = daoTransactionHistory.transaction_history_select(plan_id, module_id, code)
         # 转换数据格式
         data = []
         for t in transactions:
@@ -99,10 +101,10 @@ def get_transactions(code):
 
 
 @process_log
-def get_transaction(transaction_id):
+def get_transaction(plan_id, module_id, transaction_id):
     response = Response()
     try:
-        transaction = daoTransactionHistory.transaction_history_select_id(transaction_id)
+        transaction = daoTransactionHistory.transaction_history_select_id(plan_id, module_id, transaction_id)
         if len(transaction) == 1:
             t = transaction[0]
             response.data = {
@@ -124,12 +126,12 @@ def get_transaction(transaction_id):
 
 
 @process_log
-def add_transaction(code, transaction_date, transaction_type, amount, share, price, transaction_fee):
+def add_transaction(plan_id, module_id, code, transaction_date, transaction_type, amount, share, price, transaction_fee):
     response = Response()
     try:
         # 使用 scriptTransactionHistory 来处理交易记录的添加
         transaction_id = scriptTransactionHistory.log_on(
-            code, transaction_date, transaction_type, amount, share, price, transaction_fee
+            plan_id, module_id, code, transaction_date, transaction_type, amount, share, price, transaction_fee
         )
         response.data = {'transaction_id': transaction_id}
         response.success = True
@@ -141,10 +143,10 @@ def add_transaction(code, transaction_date, transaction_type, amount, share, pri
 
 
 @process_log
-def delete_transaction(transaction_id):
+def delete_transaction(plan_id, module_id, transaction_id):
     response = Response()
     try:
-        daoTransactionHistory.transaction_history_delete(transaction_id)
+        daoTransactionHistory.transaction_history_delete(plan_id, module_id, transaction_id)
         response.success = True
         response.msg = '删除成功'
     except Exception as e:

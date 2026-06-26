@@ -47,4 +47,4 @@ Test case 6: classic_vue3 - module (specific implementation)
 """
 Original test case
 """
-processGenerateStructure.process_generate_structure(False, 'feature_maker', 'modules', 'feature_viewer', True, True)
+processGenerateStructure.process_generate_structure(False, 'data_power', 'modules', 'data_manager', True, True)

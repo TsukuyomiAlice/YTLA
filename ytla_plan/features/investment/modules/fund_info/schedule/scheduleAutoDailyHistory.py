@@ -11,12 +11,9 @@ def auto_schedule():
 """
 
 
-def schedule():
-    fund_code_list = daoTransactionHistory.transaction_fund_code_get()
+def schedule(plan_id, module_id):
+    fund_code_list = daoTransactionHistory.transaction_fund_code_get(plan_id, module_id)
     for code in fund_code_list:
         scriptFundHistory.get_history(code['CODE'])
     # scheduleAndScript.show_current_time()
 
-
-if __name__ == '__main__':
-    schedule()

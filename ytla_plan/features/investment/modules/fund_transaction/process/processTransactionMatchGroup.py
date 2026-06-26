@@ -134,7 +134,7 @@ class InstanceForBrief:
         }
 
 
-def analyze_transaction_match_group(code):
+def analyze_transaction_match_group(plan_id, module_id, code):
     fund_info = daoFundInfo.Instance(code)
     fund_info.get_instance_by_pk()
     fund_name = fund_info.fund_name
@@ -156,7 +156,7 @@ def analyze_transaction_match_group(code):
         share_change_ratio = share_change_ratio_list[share_change_ratio_node]['SHARE_CHANGE_RATIO']
 
     # transaction_history_list
-    transaction_history_list = daoTransactionHistory.instance_list_by_code(code)
+    transaction_history_list = daoTransactionHistory.instance_list_by_code(plan_id, module_id, code)
     brief.last_transaction_date = transaction_history_list[-1].transaction_date
 
     transaction_history_node = 0
@@ -948,7 +948,7 @@ def analyze_continuous_history(code):
     return buy_side, sell_side, len(fund_history_list), buy_side_grades, sell_side_grades, latest_lists
 
 
-def analyze_report_output(code: str, order: int, brief: InstanceForBrief, match_list: list):
+def analyze_report_output(plan_id, module_id, code: str, order: int, brief: InstanceForBrief, match_list: list):
     fund_info = daoFundInfo.Instance(code)
     fund_info.get_instance_by_pk()
     fund_name = fund_info.fund_name.replace('/', '-')
@@ -1120,9 +1120,9 @@ def analyze_report_output(code: str, order: int, brief: InstanceForBrief, match_
         f.close()
 
 
-def execute(code):
-    res = analyze_transaction_match_group(code)
-    analyze_report_output(code, 0, res[0], res[1])
+def execute(plan_id, module_id, code):
+    res = analyze_transaction_match_group(plan_id, module_id, code)
+    analyze_report_output(plan_id, module_id, code, 0, res[0], res[1])
     return res[0]
 
 

@@ -12,7 +12,7 @@ table_name = "PLAN_PERSISTENCE"
 class DBConnector:
 
     def __init__(self, plan_id: int):
-        self.db_name = f"plan_{str(plan_id)}"
+        self.plan_id = plan_id
         self.create_table()
 
     def execute_cursor(self, sql, params=None):
@@ -30,7 +30,7 @@ class DBConnector:
         """
         if params is None:
             params = []
-        res = sqliteConnector.execute_cursor_with_db(self.db_name, sql, params)
+        res = sqliteConnector.execute_cursor_plan(self.plan_id, sql, params)
         return res
 
     def drop_table(self):

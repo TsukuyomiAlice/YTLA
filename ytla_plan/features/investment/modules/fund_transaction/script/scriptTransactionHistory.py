@@ -48,23 +48,23 @@ code_profit_fund_success = "49"
 """
 
 
-def get_single(code):
-    transaction_id = daoTransactionHistory.transaction_history_get_id(code)[0][0]
+def get_single(plan_id, module_id, code):
+    transaction_id = daoTransactionHistory.transaction_history_get_id(plan_id, module_id, code)[0][0]
     return transaction_id
 
 
-def get_unconfirmed(code):
-    transaction_id_list = daoTransactionHistory.transaction_history_get_id_all(code)
+def get_unconfirmed(plan_id, module_id, code):
+    transaction_id_list = daoTransactionHistory.transaction_history_get_id_all(plan_id, module_id, code)
     return transaction_id_list
 
 
-def get_all(code):
-    transactions = daoTransactionHistory.transaction_history_select(code)
+def get_all(plan_id, module_id, code):
+    transactions = daoTransactionHistory.transaction_history_select(plan_id, module_id, code)
     return transactions
 
 
-def get_single_from_transaction_id(transaction_id):
-    transaction = daoTransactionHistory.transaction_history_select_id(transaction_id)
+def get_single_from_transaction_id(plan_id, module_id, transaction_id):
+    transaction = daoTransactionHistory.transaction_history_select_id(plan_id, module_id, transaction_id)
     return transaction
 
 
@@ -74,7 +74,7 @@ def get_single_from_transaction_id(transaction_id):
 
 
 # 插入一条完整的交易记录
-def log_on(code, transaction_date, transaction_type, amount, share, price, transaction_fee):
+def log_on(plan_id, module_id, code, transaction_date, transaction_type, amount, share, price, transaction_fee):
     amount = round(float(amount), 2)
     share = round(float(share), 4)
     price = round(float(price), 4)
@@ -101,51 +101,51 @@ def log_on(code, transaction_date, transaction_type, amount, share, price, trans
         price = 1
 
     # 执行插入
-    daoTransactionHistory.transaction_history_new_full_insert(code, transaction_date, transaction_type, amount, share,
+    daoTransactionHistory.transaction_history_new_full_insert(plan_id, module_id, code, transaction_date, transaction_type, amount, share,
                                                               price, transaction_fee, fund_name)
-    transaction_id = daoTransactionHistory.transaction_history_get_id(code)[0][0]
+    transaction_id = daoTransactionHistory.transaction_history_get_id(plan_id, module_id, code)[0][0]
     return transaction_id
 
 
 # 插入一条只包含买入总金额的数据
-def pre_buy_in(code, transaction_date, total_price):
+def pre_buy_in(plan_id, module_id, code, transaction_date, total_price):
     total_price = round(total_price, 2)
     # 执行插入
-    daoTransactionHistory.transaction_history_new_insert(code, transaction_date, code_buy_in, total_price, 0)
-    transaction_id = daoTransactionHistory.transaction_history_get_id(code)[0][0]
+    daoTransactionHistory.transaction_history_new_insert(plan_id, module_id, code, transaction_date, code_buy_in, total_price, 0)
+    transaction_id = daoTransactionHistory.transaction_history_get_id(plan_id, module_id, code)[0][0]
     return transaction_id
 
 
 # 插入一条只包含卖出总份额的记录
-def pre_sell_out(code, transaction_date, share):
+def pre_sell_out(plan_id, module_id, code, transaction_date, share):
     share = round(share, 4)
     # 执行插入
-    daoTransactionHistory.transaction_history_new_insert(code, transaction_date, code_sell_out, 0, share)
-    transaction_id = daoTransactionHistory.transaction_history_get_id(code)[0][0]
+    daoTransactionHistory.transaction_history_new_insert(plan_id, module_id, code, transaction_date, code_sell_out, 0, share)
+    transaction_id = daoTransactionHistory.transaction_history_get_id(plan_id, module_id, code)[0][0]
     return transaction_id
 
 
 # 插入一条份额变动记录
-def pre_share_change(code, transaction_date, share):
+def pre_share_change(plan_id, module_id, code, transaction_date, share):
     share = round(share, 4)
     # 执行插入
-    daoTransactionHistory.transaction_history_new_insert(code, transaction_date, code_share_change, 0, share)
-    transaction_id = daoTransactionHistory.transaction_history_get_id(code)[0][0]
+    daoTransactionHistory.transaction_history_new_insert(plan_id, module_id, code, transaction_date, code_share_change, 0, share)
+    transaction_id = daoTransactionHistory.transaction_history_get_id(plan_id, module_id, code)[0][0]
     return transaction_id
 
 
 # 关于分红的处理比较复杂，先生成一条空记录，然后再更新所有字段会比较好
 # 可能会知道总分红金额，所以留下金额字段可输入，不知道就输入0就可以了
-def pre_profit(code, transaction_date, total_price):
+def pre_profit(plan_id, module_id, code, transaction_date, total_price):
     total_price = round(total_price, 2)
     # 执行插入
-    daoTransactionHistory.transaction_history_new_insert(code, transaction_date, code_profit_fund, total_price, 0)
-    transaction_id = daoTransactionHistory.transaction_history_get_id(code)[0][0]
+    daoTransactionHistory.transaction_history_new_insert(plan_id, module_id, code, transaction_date, code_profit_fund, total_price, 0)
+    transaction_id = daoTransactionHistory.transaction_history_get_id(plan_id, module_id, code)[0][0]
     return transaction_id
 
 
-def maintain_add_fund_name():
-    code_list = daoTransactionHistory.select_plain_fund_name_list()
+def maintain_add_fund_name(plan_id, module_id):
+    code_list = daoTransactionHistory.select_plain_fund_name_list(plan_id, module_id)
     for code in code_list:
         fund_name = scriptFundInfo.get_name(code[0])
-        daoTransactionHistory.update_fund_name(code[0], fund_name)
+        daoTransactionHistory.update_fund_name(plan_id, module_id, code[0], fund_name)

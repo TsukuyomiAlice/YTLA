@@ -17,7 +17,7 @@ class DBConnector:
             plan_id (int): ID of the plan
             module_id (int): ID of the module
         """
-        self.db_name = f"plan_{str(plan_id)}"
+        self.plan_id = plan_id
         self.table_name = f"MODULE_{str(module_id)}"
         self.create_table()
 
@@ -37,7 +37,7 @@ class DBConnector:
         """
         if params is None:
             params = []
-        res = sqliteConnector.execute_cursor_with_db(self.db_name, sql, params)
+        res = sqliteConnector.execute_cursor_plan(self.plan_id, sql, params)
         return res
 
     def drop_table(self):

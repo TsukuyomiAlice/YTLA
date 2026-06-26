@@ -4,14 +4,14 @@ from ..dao import daoTransactionHistory, daoAnalyzeTransactionOriginalSerial
 from ...fund_info.script import scriptFundInfo
 
 
-def analyze(code):
+def analyze(plan_id, module_id, code):
 
-    daoAnalyzeTransactionOriginalSerial.clear_records(code)
+    daoAnalyzeTransactionOriginalSerial.clear_records(plan_id, module_id, code)
 
     price_accuracy = scriptFundInfo.get_ratio(code)
     share_accuracy = scriptFundInfo.get_share_accuracy(code)
 
-    transaction_records = daoTransactionHistory.transaction_history_select_asc(code)
+    transaction_records = daoTransactionHistory.transaction_history_select_asc(plan_id, module_id, code)
     '''
     [0] TRANSACTION_ID
     [1] CODE
@@ -34,14 +34,14 @@ def analyze(code):
         transaction_amount = round(transaction_record[4], 2)
         transaction_share = round(transaction_record[5], share_accuracy)
 
-        latest_label = daoAnalyzeTransactionOriginalSerial.get_latest_label(code)
+        latest_label = daoAnalyzeTransactionOriginalSerial.get_latest_label(plan_id, module_id, code)
         label = latest_label + 1
 
         if transaction_type in ('01', '08', '09') and transaction_share != 0:
             transaction_type_str = 'BUY'
             if transaction_type == '01':
                 transaction_type_str = 'BUY*'
-            daoAnalyzeTransactionOriginalSerial.insert_record(code, name,
+            daoAnalyzeTransactionOriginalSerial.insert_record(plan_id, module_id, code, name,
                                                               transaction_date, transaction_type_str, transaction_price,
                                                               transaction_share, transaction_amount,
                                                               0, 0,
@@ -56,7 +56,7 @@ def analyze(code):
             transaction_share_remain = transaction_share
             transaction_amount_remain = transaction_amount
 
-            open_transactions = daoAnalyzeTransactionOriginalSerial.get_open_transactions(code)
+            open_transactions = daoAnalyzeTransactionOriginalSerial.get_open_transactions(plan_id, module_id, code)
             '''
             [0] LABEL
             [1] TRANSACTION_BUY_IN_ID
@@ -98,7 +98,7 @@ def analyze(code):
                         transaction_share_remain = 0
                         status = 0
 
-                    daoAnalyzeTransactionOriginalSerial.insert_record(code, name,
+                    daoAnalyzeTransactionOriginalSerial.insert_record(plan_id, module_id, code, name,
                                                                       transaction_date, transaction_type_str,
                                                                       transaction_price,
                                                                       transaction_share, transaction_amount,
@@ -111,7 +111,7 @@ def analyze(code):
                                                                       open_transaction_buy_in_date,
                                                                       transaction_id,
                                                                       status)
-                    daoAnalyzeTransactionOriginalSerial.update_status(code, open_transaction_label, '1')
+                    daoAnalyzeTransactionOriginalSerial.update_status(plan_id, module_id, code, open_transaction_label, '1')
                     label = label + 1
 
         if transaction_type in ('28', '29', '38', '39', '48', '49'):
@@ -130,7 +130,7 @@ def analyze(code):
             if transaction_type in ('48', '49'):
                 transaction_type_str = 'PROFIT_AMOUNT'
 
-            open_transactions = daoAnalyzeTransactionOriginalSerial.get_open_transactions(code)
+            open_transactions = daoAnalyzeTransactionOriginalSerial.get_open_transactions(plan_id, module_id, code)
             for open_transaction in open_transactions:
                 # open_transaction_label = open_transaction[0]
                 # open_transaction_buy_in_id = open_transaction[1]
@@ -179,7 +179,7 @@ def analyze(code):
                         transaction_gained_amount = round((open_transaction_gained_amount + transaction_amount_remain),
                                                           2)
 
-                daoAnalyzeTransactionOriginalSerial.insert_record(code, name,
+                daoAnalyzeTransactionOriginalSerial.insert_record(plan_id, module_id, code, name,
                                                                   transaction_date, transaction_type_str,
                                                                   transaction_price,
                                                                   transaction_share, transaction_amount,
@@ -192,5 +192,5 @@ def analyze(code):
                                                                   open_transaction_buy_in_date,
                                                                   transaction_id,
                                                                   '0')
-                daoAnalyzeTransactionOriginalSerial.update_status(code, open_transaction_label, '1')
+                daoAnalyzeTransactionOriginalSerial.update_status(plan_id, module_id, code, open_transaction_label, '1')
                 label = label + 1
