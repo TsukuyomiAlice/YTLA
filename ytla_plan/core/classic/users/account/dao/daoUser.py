@@ -1,7 +1,7 @@
 # encode = utf-8
 from core.classic.frame.database.func import sqliteConnector
 
-db_name = 'YTLA_USER'
+db_name = 'ytla_user'
 
 """
 Documentation:

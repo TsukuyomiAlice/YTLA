@@ -1,4 +1,5 @@
 {
   "type_name": "数据力量",
-  "type_description": "数据分析工具包"
+  "type_description": "数据分析工具包",
+  "return_button_001": "返回计划仪表盘"
 }

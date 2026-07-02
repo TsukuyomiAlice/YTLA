@@ -1,4 +1,4 @@
 {
-  "subtype_name": "feature_viewer(按语种填写)",
-  "subtype_description": "(这里填入你的定义)"
+  "subtype_name": "特性浏览器",
+  "subtype_description": "查看特性的内部构造"
 }

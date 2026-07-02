@@ -1,5 +1,3 @@
-# encode = utf-8
-
 """
 " YTLA Configuration File
 " Version: 1.0.0
@@ -33,7 +31,7 @@ DATA_SOURCE_PATH = 'D:\\YTLA_DATA\\ytla_plan'
 """
 
 # Upload folder
-UPLOAD_FOLDER = 'D:\\YTLA_DATA\\ytla_plan'
+UPLOAD_FOLDER = 'D:\\YTLA_DATA\\ytla_plan\\uploads'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'ico'}
 MAX_CONTENT_LENGTH = 5 * 1024 * 1024 * 1024
 

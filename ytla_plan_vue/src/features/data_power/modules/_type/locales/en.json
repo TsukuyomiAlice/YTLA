@@ -1,4 +1,5 @@
 {
   "type_name": "Data Power",
-  "type_description": "Data analyze toolkits"
+  "type_description": "Data analyze toolkits",
+  "return_button_001": "Return to plan dashboard"
 }

@@ -1,0 +1,13 @@
+- [ ] Checkpoint 1: `dataManagerService.ts` 已创建，包含 getFiles/uploadFile/deleteFile 三个方法，API 路径与后端匹配
+- [ ] Checkpoint 2: `dataManagerStore.ts` 已创建，包含文件列表状态管理、loading/error 状态、以及 fetchFiles/uploadFile/deleteFile actions
+- [ ] Checkpoint 3: `Data_managerMain_00.vue` 可展示文件列表（文件名、大小、上传时间、所属模块）
+- [ ] Checkpoint 4: `Data_managerMain_00.vue` 对每个文件提供删除按钮，点击后可删除
+- [ ] Checkpoint 5: `Data_managerMain_00.vue` 正确处理 loading、空数据、错误状态
+- [ ] Checkpoint 6: `_type/ui/ReturnToPlanDashboardButton.vue` 已创建，可正常返回 dashboard
+- [ ] Checkpoint 7: `Data_managerSub_00.vue` 包含返回 dashboard 按钮（使用本地 ReturnToPlanDashboardButton）
+- [ ] Checkpoint 8: `Data_managerSub_00.vue` 包含文件上传功能（文件选择 + 上传按钮）
+- [ ] Checkpoint 9: 上传成功后 main 区域文件列表自动刷新
+- [ ] Checkpoint 10: `locales/zh.json` 和 `locales/en.json` 添加了文件管理相关的 UI 标签
+- [ ] Checkpoint 11: 代码格式和风格与 investment/fund_info 模块一致（Service → Store → Component 模式）
+- [ ] Checkpoint 12: 组件使用 `<script setup lang="ts">` 和 scoped SCSS
+spec mode logging

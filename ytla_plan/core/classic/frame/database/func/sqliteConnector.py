@@ -102,6 +102,7 @@ def sqlite_cursor(database_path, sql, params):
     Features:
     - Establishes database connection and creates cursor
     - Automatic transaction commit/rollback handling
+    - Auto-creates parent directories and database file if not exists
     - Ensures resource cleanup (connection/cursor closure)
     - Error logging and exception handling
 
@@ -111,6 +112,9 @@ def sqlite_cursor(database_path, sql, params):
     :return: List[Dict] - Query results as list of dictionaries (empty list for non-SELECT)
     :raises sqlite3.Error: Propagates exceptions after logging
     """
+    db_dir = os.path.dirname(database_path)
+    if db_dir and not os.path.exists(db_dir):
+        os.makedirs(db_dir, exist_ok=True)
     conn = sqlite3.connect(database_path)
     res = []
     try:

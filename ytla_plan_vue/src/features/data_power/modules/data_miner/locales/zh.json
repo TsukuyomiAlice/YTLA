@@ -1,0 +1,30 @@
+{
+  "subtype_name": "数据矿工",
+  "subtype_description": "上传数据，挖掘价值",
+  "main": {
+    "title": "数据挖掘与处理",
+    "loading": "加载中...",
+    "no_files": "暂无文件",
+    "col_filename": "文件名",
+    "col_module_id": "模组ID",
+    "col_source": "数据来源",
+    "col_size": "大小",
+    "col_time": "生成时间",
+    "col_action": "操作",
+    "analyze_btn": "分析",
+    "view_btn": "查看",
+    "delete_btn": "删除",
+    "processing": "文件分析中..."
+  },
+  "sub": {
+    "return_btn": "返回主面板",
+    "loading": "加载中...",
+    "no_content": "暂无数据",
+    "table_title": "数据表格",
+    "json_title": "JSON 数据"
+  },
+  "confirm_delete": "确认删除该文件？",
+  "delete_success": "文件已删除",
+  "process_success": "文件分析完成",
+  "processing": "文件分析中..."
+}

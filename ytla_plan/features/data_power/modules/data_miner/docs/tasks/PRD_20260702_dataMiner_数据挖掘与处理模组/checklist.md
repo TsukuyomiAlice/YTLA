@@ -1,0 +1,15 @@
+- [x] Checkpoint 1: `routes/routeDataMiner.py` 已创建，包含 `data_miner_bp` Blueprint 和三條 API 路由（GET source_files、POST process、GET processed_files）
+- [x] Checkpoint 2: `dao/daoDataMiner.py` 已创建，包含从 DataFrame 创建 sqlite 表并写入数据的通用方法
+- [x] Checkpoint 3: `script/scriptDataMiner.py` 已创建，支持 xlsx/xls、csv、json、db/sqlite/sqlite3 四种文件类型读取和粗分
+- [x] Checkpoint 4: `process/processDataMiner.py` 已创建，包含 get_source_files、process_file、get_processed_files 三个核心方法（方法名 process_file 而非 process_data_file，功能一致）
+- [x] Checkpoint 5: FR-1 列出原始数据文件列表已实现 - 仅筛选 module_sub_type 为 data_manager 的模块
+- [x] Checkpoint 6: FR-2 分析处理数据文件已实现 - 支持四种文件类型的完整处理流程（读取→清洗→输出）
+- [x] Checkpoint 7: FR-3 列出已处理数据文件已实现 - 筛选 data_miner 模块下的 .db 和 .json 文件
+- [x] Checkpoint 8: FR-4 不同文件类型使用对应的分析方案 - script 层按文件类型分发
+- [x] Checkpoint 9: FR-5 数据清洗规则已实现 - 空值处理、列名标准化、重复行处理
+- [x] Checkpoint 10: 输出文件路径格式正确 - `{DATA_SOURCE_PATH}/plan_{plan_id}/module_{module_id}/{timestamp}/{sanitized_filename}.db|.json`
+- [x] Checkpoint 11: 关系型数据输出为 .db 文件，非关系型数据输出为 .json 文件
+- [x] Checkpoint 12: 安全性校验已实现 - 路径穿越检测、源文件存在性校验、不支持的源文件类型校验
+- [x] Checkpoint 13: 所有 API 使用 `@router_log` 和 `@process_log` 装饰器记录日志
+- [x] Checkpoint 14: AC-1~AC-12 所有验收标准满足要求
+spec mode logging
