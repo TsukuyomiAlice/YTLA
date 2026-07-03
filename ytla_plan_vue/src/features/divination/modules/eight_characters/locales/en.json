@@ -1,1 +1,82 @@
-{"": ""}
+{
+  "subtype_name": "Eight Characters",
+  "subtype_description": "Ba Zi analysis and history management",
+
+  "main": {
+    "title": "Eight Characters Analysis",
+    "convert_section": {
+      "title": "Solar to Ba Zi",
+      "year": "Year",
+      "month": "Month",
+      "day": "Day",
+      "hour_branch": "Hour Branch (Optional)",
+      "no_hour": "Not Specified",
+      "gender": "Gender",
+      "no_gender": "Not Specified",
+      "male": "Male",
+      "female": "Female",
+      "convert_button": "Convert"
+    },
+    "clear_button": "Clear",
+    "origin_analysis": "Origin Analysis",
+    "input_section": {
+      "title": "Input Information",
+      "birthday": "Birth Date",
+      "birth_hour": "Birth Hour",
+      "gender": "Gender",
+      "male": "Male",
+      "female": "Female",
+      "eight_characters": "Eight Characters",
+      "year_pillar": "Year Pillar",
+      "month_pillar": "Month Pillar",
+      "day_pillar": "Day Pillar",
+      "hour_pillar": "Hour Pillar",
+      "luck_cycle": "Luck Cycle",
+      "fleet_year": "Fleet Year",
+      "year_to_ganzhi": "or enter year",
+      "analyze_button": "Start Analysis",
+      "calculating": "Calculating..."
+    },
+    "result_section": {
+      "title": "Analysis Result",
+      "eight_characters": "Four Pillars",
+      "ten_gods": "Ten Gods (Origin)",
+      "luck_ten_gods": "Ten Gods (Luck Cycle)",
+      "fleet_ten_gods": "Ten Gods (Fleet Year)",
+      "luck_cycle_analysis": "Luck Cycle Analysis",
+      "fleet_year_analysis": "Fleet Year Analysis",
+      "summary": "Summary Notes",
+      "luck_cycle_table": "Luck Cycle Table",
+      "fleet_years_table": "Fleet Years Table",
+      "luck_index": "No.",
+      "luck_ganzhi": "Gan-Zhi",
+      "luck_age_range": "Age",
+      "luck_year_range": "Period",
+      "heaven_stem": "Heaven Stem",
+      "earth_branch": "Earth Branch",
+      "pillar_year": "Year",
+      "pillar_month": "Month",
+      "pillar_day": "Day",
+      "pillar_hour": "Hour",
+      "origin_analysis": "Start Analysis",
+      "origin_only": "Origin Only",
+      "luck_only": "Origin + Luck Cycle",
+      "fleet_full": "Origin + Luck + Fleet"
+    },
+    "error": {
+      "fetch_failed": "Failed to fetch data",
+      "analysis_failed": "Analysis failed, please try again",
+      "input_required": "Please complete all required fields"
+    },
+    "loading": "Analyzing, please wait..."
+  },
+
+  "sub": {
+    "title": "History Records",
+    "empty": "No history records yet",
+    "delete_confirm": "Are you sure you want to delete this record?",
+    "delete_success": "Deleted successfully",
+    "delete_failed": "Failed to delete",
+    "load_failed": "Failed to load history records"
+  }
+}

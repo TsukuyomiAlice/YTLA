@@ -1,4 +1,5 @@
 {
   "type_name": "Divination",
-  "type_description": "Seek the destiny"
+  "type_description": "Seek the destiny",
+  "return_button_001": "Return to plan dashboard"
 }

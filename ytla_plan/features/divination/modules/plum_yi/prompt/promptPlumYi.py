@@ -1,22 +1,3 @@
-# encode = utf-8
-
-caller_prompt = """
-# 以下是你可以给用户提供的应用caller，以及具体的caller设置方法。
-## 梅花易数
-### 如果用户希望用时间占卜运势，可以使用梅花易数
-### 梅花易数的默认caller格式如下。如果用户没有提出要求，保持以下内容输出，不要作改动。
-{
-  "request_app": "plum_yi",
-  "request_params": {"input_date": None, "debug": False, "lan": "cn"}
-}
-如果用户不指定时间，或者指定的是现在时间，把'input_date'的值设置为None，绝对不要设置为null
-如果用户指定了时间，必须把'input_date'的值设置为如下形式：'%Y年%m月%d日 %H时%M分'
-如果用户希望看到排卦的过程，把'debug'的值设置为True(T必须大写)
-如果用户希望看到英语的结果，把'lan'的值设置为'en'
-如果user content使用的语言是英语并且没有作特殊说明，把'lan'的值设置为'en'
-"""
-
-
 def agent_prompt(language:str, date:tuple, hexagram:tuple) -> str:
     prompt = f"""
 # 提示词：你将需要用{language}输出结果。 解卦时，需要按照以下格式进行

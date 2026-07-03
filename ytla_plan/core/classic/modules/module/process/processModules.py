@@ -112,9 +112,11 @@ def module_router(data, mode, module_id=0):
                           'dmd', 'whiteboard', 'ganttChart', 'backlog', 'kanban',
                           'dashboard', 'risk', 'burndownChart', 'property', 'features',
                           'rating','dictionary','assessment','vocabulary','readings','learning',
-                          'sphere', 'matrix', 'create_card', 'create_module',
+                          'sphere', 'matrix',
+                          'create_card', 'create_module',
                           'fund_info', 'fund_transaction',
-                          'data_miner', 'data_manager']
+                          'data_miner', 'data_manager',
+                          'eight_characters', 'plum_yi', 'xiao_liu_ren']
         if data['module_sub_type'] not in valid_subtypes:
             return {'success': False, 'error': f'无效模组类型: {data["module_sub_type"]}'}
 

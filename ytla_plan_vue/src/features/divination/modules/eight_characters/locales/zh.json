@@ -1,1 +1,82 @@
-{"": ""}
+{
+  "subtype_name": "八字排盘",
+  "subtype_description": "八字分析、历史记录管理",
+
+  "main": {
+    "title": "八字排盘分析",
+    "convert_section": {
+      "title": "公历转八字",
+      "year": "年",
+      "month": "月",
+      "day": "日",
+      "hour_branch": "时辰（可选）",
+      "no_hour": "不指定",
+      "gender": "性别",
+      "no_gender": "不指定",
+      "male": "男",
+      "female": "女",
+      "convert_button": "转换"
+    },
+    "clear_button": "清空",
+    "origin_analysis": "原局分析",
+    "input_section": {
+      "title": "输入信息",
+      "birthday": "出生日期",
+      "birth_hour": "出生时辰",
+      "gender": "性别",
+      "male": "男",
+      "female": "女",
+      "eight_characters": "八字",
+      "year_pillar": "年柱",
+      "month_pillar": "月柱",
+      "day_pillar": "日柱",
+      "hour_pillar": "时柱",
+      "luck_cycle": "大运",
+      "fleet_year": "流年",
+      "year_to_ganzhi": "或输入年份",
+      "analyze_button": "开始分析",
+      "calculating": "推算中..."
+    },
+    "result_section": {
+      "title": "分析结果",
+      "eight_characters": "四柱八字",
+      "ten_gods": "十神分析（原局）",
+      "luck_ten_gods": "十神分析（大运）",
+      "fleet_ten_gods": "十神分析（流年）",
+      "luck_cycle_analysis": "大运分析",
+      "fleet_year_analysis": "流年分析",
+      "summary": "综合批注",
+      "luck_cycle_table": "大运排盘表",
+      "fleet_years_table": "流年表",
+      "luck_index": "大运",
+      "luck_ganzhi": "干支",
+      "luck_age_range": "年龄",
+      "luck_year_range": "年份区间",
+      "heaven_stem": "天干",
+      "earth_branch": "地支",
+      "pillar_year": "年",
+      "pillar_month": "月",
+      "pillar_day": "日",
+      "pillar_hour": "时",
+      "origin_analysis": "开始分析",
+      "origin_only": "仅原局",
+      "luck_only": "原局 + 大运",
+      "fleet_full": "原局 + 大运 + 流年"
+    },
+    "error": {
+      "fetch_failed": "获取数据失败",
+      "analysis_failed": "分析失败，请重试",
+      "input_required": "请填写完整的八字信息"
+    },
+    "loading": "分析中，请稍候..."
+  },
+
+  "sub": {
+    "title": "历史记录",
+    "empty": "暂无历史记录",
+    "delete_confirm": "确认删除此记录？",
+    "delete_success": "删除成功",
+    "delete_failed": "删除失败",
+    "load_failed": "加载历史记录失败"
+  }
+}

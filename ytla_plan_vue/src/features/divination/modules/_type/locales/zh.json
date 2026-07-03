@@ -1,4 +1,5 @@
 {
   "type_name": "占卜",
-  "type_description": "探寻命运"
+  "type_description": "探寻命运",
+  "return_button_001": "返回计划仪表盘"
 }
