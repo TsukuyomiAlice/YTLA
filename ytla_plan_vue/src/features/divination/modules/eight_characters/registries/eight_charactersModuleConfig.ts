@@ -6,12 +6,12 @@ export const eight_charactersModuleConfig = <ModuleRegistry> {
   moduleType: 'divination',
   moduleSubType: 'eight_characters',
   moduleConcept: 'space',
-  mainComponent: defineAsyncComponent(() => 
+  mainComponent: defineAsyncComponent(() =>
     import('@/features/divination/modules/eight_characters/components/Eight_charactersMain.vue')
   ),
-  subComponent: defineAsyncComponent(() => 
+  subComponent: defineAsyncComponent(() =>
     import('@/features/divination/modules/eight_characters/components/Eight_charactersSub.vue')
   ),
-  displayMode: 7,
+  displayMode: 5,
   flowManager: eight_charactersModuleFlowManager
 }

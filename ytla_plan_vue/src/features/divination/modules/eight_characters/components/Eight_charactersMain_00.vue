@@ -1,5 +1,7 @@
 <template>
   <div class="ec-main">
+    <div class="ec-main__columns">
+      <div class="ec-main__column ec-main__column--left">
     <h2 class="ec-main__title">{{ $t('divination.modules.eight_characters.main.title') }}</h2>
 
     <!-- 状态消息 -->
@@ -115,7 +117,7 @@
             </select>
             <select v-model="hourPillar.earth_branch" class="ec-main__select">
               <option value="" disabled>--</option>
-              <option v-for="opt in hourBranchOptions" :key="opt.value" :value="opt.value">{{ opt.label }}</option>
+              <option v-for="opt in simpleHourBranchOptions" :key="opt.value" :value="opt.value">{{ opt.label }}</option>
             </select>
           </div>
         </div>
@@ -133,19 +135,14 @@
       </div>
     </section>
 
-    <!-- 加载状态 -->
-    <div v-if="store.isLoading" class="ec-main__loading">
-      {{ $t('divination.modules.eight_characters.main.loading') }}
-    </div>
-
     <!-- 错误提示 -->
     <div v-if="store.error" class="ec-main__error">
       {{ store.error }}
       <button class="ec-main__dismiss-btn" @click="store.clearError()">✕</button>
     </div>
 
-    <!-- 大运流年交互区（转换后立即显示） -->
-    <section v-if="luckCycleGroups.length > 0" class="ec-main__result-section">
+        <!-- 大运流年交互区（转换后立即显示） -->
+        <section v-if="luckCycleGroups.length > 0" class="ec-main__result-section">
       <h3 class="ec-main__section-title">{{ $t('divination.modules.eight_characters.main.result_section.luck_cycle_table') || '大运流年排盘' }}</h3>
 
       <!-- 大运流年表格 -->
@@ -202,9 +199,16 @@
       </table>
     </section>
 
+    <!-- 加载状态 -->
+    <div v-if="store.isLoading" class="ec-main__loading">
+      {{ $t('divination.modules.eight_characters.main.loading') }}
+    </div>
+      </div><!-- /ec-main__column--left -->
+
     <!-- 分析结果 -->
-    <section v-if="store.analysisResult" class="ec-main__result-section">
-      <h3 class="ec-main__section-title">{{ $t('divination.modules.eight_characters.main.result_section.title') }}</h3>
+    <div class="ec-main__column ec-main__column--right">
+      <section v-if="store.analysisResult" class="ec-main__result-section">
+        <h3 class="ec-main__section-title">{{ $t('divination.modules.eight_characters.main.result_section.title') }}</h3>
 
       <!-- 四柱八字展示 -->
       <div class="ec-main__result-block">
@@ -445,6 +449,8 @@
         <p class="ec-main__analysis-text ec-main__summary-text">{{ summaryText }}</p>
       </div>
     </section>
+      </div><!-- /ec-main__column--right -->
+    </div><!-- /ec-main__columns -->
   </div>
 </template>
 
@@ -523,6 +529,12 @@ const hourBranchOptions = [
   { value: '戌', label: '戌时 (19:00 - 21:00)' },
   { value: '亥', label: '亥时 (21:00 - 23:00)' },
 ]
+
+// 输入区域时柱地支选项（不带24小时制提示）
+const simpleHourBranchOptions = hourBranchOptions.map(opt => ({
+  value: opt.value,
+  label: opt.value,
+}))
 
 // 四柱输入数据
 const yearPillar = reactive({ heaven_stem: '', earth_branch: '' })
@@ -1028,8 +1040,8 @@ watch(
 
   &__pillars {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
     margin-bottom: 1.25rem;
   }
 
@@ -1192,6 +1204,28 @@ watch(
     }
   }
 
+  // ---- 左右双列布局 ----
+  &__columns {
+    display: flex;
+    gap: 16px;
+    height: calc(100vh - 140px);
+    overflow: hidden;
+  }
+
+  &__column {
+    overflow-y: auto;
+    height: 100%;
+
+    &--left {
+      flex: 0 0 50%;
+    }
+
+    &--right {
+      flex: 0 0 50%;
+      min-width: 0;
+    }
+  }
+
   // ---- 结果区域 ----
   &__result-section {
     margin-top: 1rem;
@@ -1281,19 +1315,20 @@ watch(
   // 十神网格
   &__ten-gods-grid {
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+    flex-wrap: nowrap;
+    gap: 6px;
   }
 
   &__ten-god-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 16px;
+    padding: 8px 10px;
     background: white;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    min-width: 72px;
+    flex: 1;
+    min-width: 0;
   }
 
   &__ten-god-name {
